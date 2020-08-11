@@ -23,8 +23,73 @@
 % Rotating Objects and Captions
 \usepackage{hvfloat}
 
-\newtheorem{proposition}[theorem]{Proposição}
-\newtheorem{exercise}[theorem]{Exercício}
+\usepackage{natbib}
+\usepackage[brazilian]{cleveref}
+\crefname{lstlisting}{lista}{listas}
+\Crefname{lstlisting}{Lista}{Listas}
+
+% equation stuff
+\usepackage{nicefrac}
+%\usepackage{cancel}
+
+% BEGIN - listings - code in LaTeX
+\usepackage{listings}
+\renewcommand\lstlistingname{Lista}
+\lstset{
+  language=octave,
+  breaklines=true,
+  postbreak=\mbox{$\hookrightarrow$\space},
+  basicstyle=\linespread{1}\small\ttfamily,
+  %numbers=left,
+  numbers=none,
+  %frame=lines,
+  xleftmargin=0.5cm,
+  frame=none,
+  framexleftmargin=0.5em,
+  framexrightmargin=0.5em,
+  %backgroundcolor=\color{light-gray},
+  showstringspaces=false,
+  upquote=true,
+  commentstyle=\color{gray},
+  %morecomment=[f][\color{gray}][28]{\#},
+  morecomment=[l]{\#\#},
+  literate=%
+           {á}{{\'a}}1
+           {í}{{\'i}}1
+           {é}{{\'e}}1
+           {ú}{{\'u}}1
+           {ó}{{\'o}}1
+           {à}{{\`a}}1
+           {ã}{{\~a}}1
+           {õ}{{\~o}}1
+           {â}{{\^a}}1
+           {ê}{{\^e}}1
+           {ô}{{\^o}}1
+           {ç}{{\c{c}}}1
+           {Á}{{\'A}}1
+           {Í}{{\'I}}1
+           {É}{{\'E}}1
+           {Ú}{{\'U}}1
+           {Ó}{{\'O}}1
+           {À}{{\`A}}1
+           {Ã}{{\~A}}1
+           {Õ}{{\~O}}1
+           {Â}{{\^A}}1
+           {Ê}{{\^E}}1
+           {Ô}{{\^O}}1
+           {Ç}{{\c{C}}}1
+}
+% END - listings
+
+\patchcmd{\theorem}{Theorem}{Teorema}{}{}
+\patchcmd{\corollary}{Corollary}{Corolário}{}{}
+\patchcmd{\lemma}{Lemma}{Lema}{}{}
+\patchcmd{\proposition}{Proposition}{Proposição}{}{}
+\patchcmd{\axiom}{Axiom}{Axioma}{}{}
+\patchcmd{\example}{Example}{Exemplo}{}{}
+\patchcmd{\definition}{Definition}{Definição}{}{}
+\patchcmd{\remark}{Remark}{Observação}{}{}
+
 \newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
 \newcommand*{\proofbreak}{\hfill ...\usebeamertemplate{proof end}\framebreak\usebeamertemplate{proof begin}{\scriptsize\color{gray}continuação...}\\}
 \newcommand*{\examplebreak}{\hfill ...\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}{\scriptsize\color{gray}continuação...}\\}
@@ -116,7 +181,13 @@
 \frame[allowframebreaks]{\begin{footnotesize}\tableofcontents\end{footnotesize}}
 
 
+% introdução
 \input{introducao/intro.tex}
+\input{introducao/informacao.tex}
+\input{introducao/entropiabinaria.tex}
+
+
+
 
 
 \bibliographystyle{apalike}
