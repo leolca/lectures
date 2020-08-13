@@ -1,0 +1,316 @@
+\subsection{Estatística Suficiente}
+\begin{frame}[allowframebreaks]
+  \frametitle{Estatística T}
+
+  \begin{example}
+  Seja $X_1, X_2, \ldots, X_N$, $X_i \in \{0,1\}$ uma sequência i.i.d. de arremessos de moeda,
+  $p(X=1)=\theta = 1 - P(X=0)$.
+
+  Faça $T(X_1,\ldots,X_N) = \sum_{i=1}^{^N} X_i$, contagem do número de \textit{caras}.
+
+  Dizemos que $T$ é uma \textbf{estatística} da amostra.
+  \end{example}
+  
+  \begin{itemize}
+  \item De forma geral, uma estatística é uma função de uma coleção de variáveis aleatórias
+        (e.g., uma média empírica, uma variância empírica, ou um máximo empírico, etc)
+  \item Uma estatística é por sua vez uma v.a.
+  \item Uma boa estatística possui informação útil sobre as amostras, enquanto uma 
+        estatística ruim não (por exemplo $T(X_1, \ldots, X_N)=X_1)$.
+  \item As estatísticas costumam ser chamadas de `características' no contexto de reconhecimento
+        de padrões e aprendizado de máquina.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Ensaio de Bernoulli}
+  \begin{itemize}
+  \item Considere a estatística de contagem citada anteriormente. 
+  \item Uma vez que sabemos a estatística, a probabilidade de uma sequência pode ser expressa
+        sem fazer referência à $\theta$ (parâmetro que caracteriza a distribuição).
+        \begin{multline}
+        p(x_1,\ldots,x_N|T(x_1,\ldots,x_N),\theta) = p(x_1,\ldots,x_N|T(x_1,\ldots,x_N)) \\
+        = \begin{cases} 
+                \frac{1}{{N \choose k}} &  \sum_i x_i = k \\
+                0       & \text{caso contrário}
+        \end{cases}
+        \end{multline}
+  \item Em outras palavras: $X_{1:N} \independent \theta | T(X_{1:N})$.
+  \item Isto implica na cadeia de Markov: $\theta \rightarrow T(X_{1:N}) \rightarrow X_{1:N}$
+  \item Por outro lado, sabemos que $T(X_{1:N})$ é uma função de $X_{1:N}$.
+  \item Desta forma, também temos a seguinte cadeia de Markov: $\theta \rightarrow X_{1:N} \rightarrow T(X_{1:N})$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Desigualdade de Processamento de Dados e Estatística}
+  \begin{itemize}
+  \item cadeia de Markov (A): $\theta \rightarrow T(X_{1:N}) \rightarrow X_{1:N}$.
+  \item pela desigualdade de processamento de dados em (A) teremos: $I(\theta;T(X_{1:N})) \geq I(\theta;X_{1:N})$.
+  \item cadeia de Markov (B): $\theta \rightarrow X_{1:N} \rightarrow T(X_{1:N})$.
+  \item pela desigualdade de processamento de dados em (B) teremos: $I(\theta;X_{1:N}) \geq I(\theta;T(X_{1:N}))$.
+  \item então, (A) e (B) $\Rightarrow$ $I(\theta;X_{1:N}) = I(\theta;T(X_{1:N}))$, e nenhuma 
+        informação é perdida sobre $\theta$ indo de $X_{1:N}$ para $T(X_{1:N})$.
+  \end{itemize}
+  
+  \begin{definition}[Estatística Suficiente]
+  Uma função $T(\cdot)$ é dita ser uma estatística suficiente em relação à família
+  $\{f_{\theta} (x)\}$ se $X$ é independente de $\theta$ dado $T(X)$ para qualquer
+  distribuição em $\theta$ (i.e. $\theta \rightarrow T(X) \rightarrow X$ forma uma
+  cadeia de Markov). Então 
+  \begin{equation}
+  I(\theta ; X) = I(\theta ; T(X)) \ \forall \theta
+  \end{equation}
+  Uma estatística suficiente preserva a informação mútua e reciprocamente
+  \begin{equation}
+  X \independent \theta | T(X)
+  \end{equation}
+  \end{definition}
+  \begin{itemize}
+  \item i.e., uma cadeira de Markov (A) é condição suficiente para suficiência de uma estatística.
+  \item uma estatística suficiente é utilizada para estimar os parâmetros a partir dos dados:
+  no limite em que temos infinitos dados, teremos uma estimativa exata (consistência assintótica).
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Estatística Suficiente}
+  \begin{example}
+  Seja $X_1, \ldots, X_N$, $X_i \in \{0,1\}$, uma sequência i.i.d. de lances de uma moeda 
+  com parâmetro $\theta = Pr(X_i=1)$. Dado $N$, o número de 1's é uma estatística suficiente
+  para $\theta$.
+  \begin{equation}
+  T(X_1, \ldots, X_N) = \sum_{i=1}^{N} X_i
+  \end{equation}
+  Dado $T$, todas as sequências com o mesmo número de 1's são igualmente prováveis e independentes
+  do parâmetro $\theta$.
+
+  \examplebreak
+
+  Existem ${N \choose k}$ sequências de comprimento $N$ com $k$ 1's e são todas equiprováveis.
+  $Pr(X_{1:N} = x_{1:N}) = \theta^k (1-\theta)^{N-k}$. Então
+  \begin{equation}
+  Pr\{(X_1,\ldots,X_N)=(x_1,\ldots,x_N) | \sum_{i=1}^N X_i = k\} = 
+        \begin{cases} 
+                \frac{1}{{N \choose k}} &  \text{ se } \sum_i x_i = k \\
+                0       & \text{caso contrário}
+        \end{cases}
+  \end{equation}
+  Temos então que $\theta \rightarrow \sum X_i \rightarrow (X_1,\ldots,X_N)$ forma uma cadeia de Markov
+  e $T$ é uma estatística suficiente para $\theta$ (dado $\sum X_i$, a sequência $(X_1,\ldots,X_N)$ é
+  estatisticamente independente de $\theta$).
+  \end{example}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Teorema da Fatoração de Fisher-Neyman}
+  \begin{theorem}[Teorema da Fatoração de Fisher-Neyman]
+  Se a função densidade de probabilidade é $f_\theta (x)$, então $T$ é suficiente para $\theta$
+  se e somente se podemos encontrar funções não-negativas $g$ e $h$ tais que
+  \begin{equation}
+  f_\theta (x) = h(x) g_\theta (T(x)) ,
+  \end{equation}
+  i.e., a densidade $f$ pode ser fatorada em um produto tal que um fator $h$ não depende de $\theta$
+  e o outro fator, que depende de $\theta$, dependerá de $x$ apenas por meios de $T(X)$.
+  \end{theorem}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Estatística Suficiente}
+        \begin{theorem}[Estatística Suficiente]
+        $T(\cdot)$ é suficiente para $\theta$ sse a probabilidade $p(x_{1:N}|\theta)$
+        pode ser escrita como o produto
+        \begin{equation}
+        p(x_{1:N}|\theta) = g(T,\Theta)h(x_{1:N})
+        \end{equation}
+        \end{theorem}
+
+        \begin{eqnarray}
+        p(x_{1:N}|\theta) &=& g(T,\Theta)h(x_{1:N}) \nonumber \\
+                        &=& g(T,\Theta)h(x_{1:N}, T(x_{1:N}))
+        \end{eqnarray}
+
+        \framebreak
+
+        \begin{definition}[Independencia Condicional]
+        Dadas três variáveis aleatórias $A,B,C$, temos que $A\independent B \vert C$ sse
+        existem funções $g$ e $h$ tais que $p(a,b,c)$ possa ser reescrita na forma
+                \begin{equation}
+                p(a,b,c) = g(a,c) h(b,c)
+                \end{equation}
+        \end{definition}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Estatística Suficiente}
+  \begin{example}
+        Se $X$ possui distribuição normal com média $\theta$ e variância $1$
+        \begin{equation}
+        f_\theta (x) = \frac{1}{\sqrt{2\pi}} e^{-(x-\theta)^2/2} = N(\theta,1)
+        \end{equation}
+        e $X_1,\ldots,X_n$ são tiradas de forma independente de acordo com esta distribuição.
+        Uma estatística suficiente para $\theta$ é a média amostral
+        \begin{equation}
+        \overline{X_n} = \frac{1}{n} \sum_{i=1}^{n} X_i
+        \end{equation}
+
+        \examplebreak
+	\vspace{-6ex}
+        \begin{eqnarray}
+        f_\theta (x_1,\ldots,x_n) &=& \left( \frac{1}{\sqrt{2\pi}} \right)^n e^{-\frac{1}{2} \sum_{i=1}^n (x_i - \theta)^2} \nonumber \\
+                &=& \left( \frac{1}{\sqrt{2\pi}} \right)^n e^{-\frac{1}{2} \sum_{i=1}^n x_i^2} e^{\sum_{i=1}^n (x_i \theta - \theta^2/2)} \nonumber \\
+                &=& \left( \frac{1}{\sqrt{2\pi}} \right)^n e^{-\frac{1}{2} \sum_{i=1}^n x_i^2} e^{\theta n \left( \frac{1}{n} \sum_{i=1}^n x_i - \frac{\theta}{2} \right)} \nonumber \\
+                &=& \underbrace{ \left( \frac{1}{\sqrt{2\pi}} \right)^n e^{-\frac{1}{2} \sum_{i=1}^n x_i^2} }_{h(x_1,\ldots,x_n)} \underbrace{ e^{\theta n \left( T(X_{1:n}) - \frac{\theta}{2} \right)} }_{g_\theta (T(x_{1:n}))}
+        \end{eqnarray}
+        Então, pelo teorema de Fisher-Neyman, podemos concluir que a média amostral é uma estatística
+        suficiente para $\theta$ quando $X$ possui distribuição normal.
+  \end{example}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Tipo da Amostra}
+  \begin{example}
+  Seja $X_1, \ldots, X_N \equiv X_{1:N}$ uma amostra de comprimento $N$ de uma variável aleatória
+  discreta D-ária. Então $x_i \in \mathcal{X}$, o tamanho do alfabeto é $D=\vert \mathcal{X} \vert$,
+  e $\mathcal{X} = \{a_1, \ldots , a_D\}$.
+
+  Define-se uma estatística: o histograma empírico da amostra.
+        \begin{equation}
+        P_{x_{1:N}} \triangleq \left( \frac{N(a_1|x_{1:N})}{N} , \frac{N(a_2|x_{1:N})}{N} , \ldots , \frac{N(a_D|x_{1:N})}{N}  \right) ,
+        \end{equation}
+  onde $N(a_i|x_{1:N})$ é a contagem do número de ocorrências do símbolo $a_i$ na amostra $x_{1:N}$.
+  O histograma é uma estatística, já que é uma função da amostra. É uma estatística suficiente?
+
+  \examplebreak
+  Para o caso em que $D=2$, temos o teste de Bernoulli visto anteriormente. Para $D$ qualquer, temos
+        \begin{eqnarray}
+        p(x_{1:N}|P_{x_{1:N}},\theta) &=& 
+                \begin{cases}
+                \frac{1}{{N \choose {N_1, N_2, \ldots, N_D}}} & \text{ se } \forall i , N_i = N P_{x_{1:N}}(a_i) \\
+                0       & \text{ caso contrário,}
+                \end{cases} \nonumber \\
+                &=& p(x_{1:N} \vert P_{x_{1:N}})
+        \end{eqnarray}
+        onde temos o coeficiente multinomial 
+        ${n \choose {k_1, k_2, \ldots, k_m}} = \frac{n!}{k_1! k_2! \ldots k_m!}$. 
+        Podemos observar que $p(x_{1:N}|P_{x_{1:N}},\theta) = p(x_{1:N}|P_{x_{1:N}})$, ou seja, 
+        é independente de $\theta$.
+
+  Então $X_{1:N} \independent \theta \vert P_{x_{1:N}}$, então $P_{x_{1:N}}$ é uma estatística suficiente.
+  \end{example}
+\end{frame}
+\note{
+        Teorema Multinomial
+        \begin{equation}
+        (x_1 + x_2 + \ldots + x_m)^n = \sum_{k_1 + k_2 + \ldots + k_m = n} {n \choose {k_1, k_2, \ldots, k_m}} \prod_{1 \leq t \leq m} x_t^{k_t}
+        \end{equation}
+}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Caso Binário - Suficiência do Tipo}
+  \begin{example}
+        \begin{itemize}
+                \item $X_i \in \{0,1\}$, $T(x_{1:N}) = $ número de $1$s em $x_{1:N}$.
+                \item A probabilidade conjunta:
+                \begin{equation}
+                p(x_{1:N},T(x_{1:N}),\theta) = \prod_{a \in \mathcal{X}} p(a)^{N(a|x_{1:N})} = p(0)^{ N(0|x_{1:N})} p(1)^{N(1|x_{1:N})}
+                \end{equation}
+                \item Evento $\{x_{1:N},T(x_{1:n})=k\}$ quando $k$ é o verdadeiro número de $1$s em $x_{1:N}$ 
+                e é o mesmo que o evento $\{x_{1:n}\}$. Quando $k$ não é o número de $1$s, temos probabilidade 
+                zero (impossível).
+        \end{itemize}
+        \examplebreak
+        \begin{itemize}
+                \item Marginal $p(\theta, T(x_{1:N})=k)$:
+                \begin{eqnarray}
+                p(\theta, T(x_{1:N})=k) &=& \sum_{x_{1:N}} p(x_{1:N}, T(x_{1:N})=k, \theta) \nonumber \\
+                        &=& \sum_{x_{1:N} : T(x_{1:N})=k} p(x_{1:N}, T(x_{1:N})=k, \theta) \nonumber \\
+                        &=& {N \choose k} p(0)^{N-k} p(1)^k
+                \end{eqnarray}
+        \end{itemize}
+        \examplebreak
+        \begin{itemize}
+                \item A probabilidade conjunta
+                        \begin{equation}
+                        p(x_{1:N},T(x_{1:N}),\theta) = p(0)^{ N(0|x_{1:N})} p(1)^{N(1|x_{1:N})}
+                        \end{equation}
+                \item A marginal
+                        \begin{equation}
+                        p(\theta, T(x_{1:N})=k) = {N \choose k} p(0)^{N-k} p(1)^k
+                        \end{equation}
+                \item Então
+                        \begin{equation}
+                        p(x_{1:N} \vert T, \Theta) = \frac{p(x_{1:N},T,\Theta)}{p(T,\Theta)} = 
+                                \begin{cases}
+                                \frac{1}{{N \choose k}} & \text{ se } \sum_i x_i = k \\
+                                0       & \text{caso contrário}
+                                \end{cases}
+                        \end{equation}
+        \end{itemize}
+  \end{example}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Estatística Mínima Suficiente}
+        \begin{definition}
+        Uma estatística $T(X)$ é uma estatística mínima suficiente em relação a $\{p_\theta(x)\}$
+        se ela for uma função de todas as demais estatísticas suficientes $U$.
+        \end{definition}
+        \begin{itemize}
+        \item Sabemos pela definição de $T$ mínima e qualquer outra estatística suficiente $U$ que
+                $\theta \rightarrow X_{1:N} \rightarrow U(X_{1:N}) \rightarrow T(X_{1:N})$
+        \item Interpretando com relação à desigualdade do processamento de dados, temos
+                \begin{equation}
+                \theta \rightarrow T(X) \rightarrow U(X) \rightarrow X
+                \end{equation}
+        \item A estatística mínima suficiente $T$ fornece qualquer outra estatística $U$ 
+                independente do parâmetro $\theta$.
+        \item O fato de que é uma estatística significa que
+                $p(X|T,U,\theta) = p(X|T,U) = p(X|T)$, o que significa que $T$ é,
+                para todos propósitos, uma substituto estatístico mínimo para $\theta$
+                no cálculo da probabilidade.
+        \end{itemize}   
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Estatística Suficiente}
+  \begin{example}[Entropia Condicional Nula]
+  Mostre que se $H(Y|X)=0$, então $Y$ é uma função de $X$, i.e., para todo $x$ com $p(x)>0$,
+  existe apenas um possível valor de $y$ com $p(x,y)>0$.
+
+  \textit{solução}
+
+  Assuma que existe $x$, digamos $x_0$, e dois valores diferentes de $y$, digamos $y_1$ e $y_2$,
+  tal que $p(x_0,y_1) > 0$ e $p(x_0,y_2)>0$. Então a marginal é $p(x_0) \geq p(x_0,y_1) + p(x_0,y_2) > 0$.
+  Temos também
+  \begin{equation}
+  p(y_1|x_0) = \frac{p(x_0,y_1)}{p(x_0)} \text{ e } p(y_2|x_0) = \frac{p(x_0,y_2)}{p(x_0)}
+  \end{equation}
+  então ambos $p(y_1|x_0)$ e $p(y_2|x_0)$ não são iguais a $0$ (zero) ou $1$ (um).
+%
+  \examplebreak
+  \vspace{-0.7cm}
+  \begin{eqnarray}
+  H(Y|X) &=& E[H(Y|X)] \nonumber \\
+        &=& - \sum_x p(x) H(Y|X=x) \nonumber \\
+        &=& - \sum_x p(x) \sum_y p(y|x) \log p(y|x) \nonumber \\
+        &\geq& - p(x_0) \sum_y p(y|x_0) \log p(y|x_0) \nonumber \\
+        &\geq& - \underbrace{p(x_0)}_{>0} [ \underbrace{p(y_1|x_0)}_{>0} \underbrace{\log p(y_1|x_0)}_{<0} + \underbrace{p(y_2|x_0)}_{>0} \underbrace{\log p(y_2|x_0)}_{<0} ] \nonumber \\
+        &>& 0
+  \end{eqnarray}
+
+  \examplebreak
+
+  Então, a entropia condicional $H(Y|X)$ é nula se e somente se $Y$ for uma função de $X$.
+  Se $Y$ for uma função de $X$, teremos $p(y_1|x_0) = 0 \text{ ou } 1$, ou seja, a probabilidade
+  $p(y_i|x_0)$ será igual a $1$ apenas para um $y_i$ e zero para os demais.
+
+  \end{example}
+\end{frame}
+
+
+
+

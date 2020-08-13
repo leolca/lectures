@@ -141,10 +141,10 @@
   onde $\epsilon$ é arbitrariamente pequeno, já que $n$ é arbitrariamente grande.
 
   Usando agora a propriedade desejada de monotonicidade de $A(n)$, teremos
-  \begin{align}
-  A(s^m) &\leq A(t^n) &\leq A(s^{(m+1)}) \\
+  \begin{alignat}{3}
+  A(s^m) &\leq A(t^n) &\leq A(s^{(m+1)}) \nonumber \\
   mA(s) &\leq nA(t) &\leq (m+1)A(s)
-  \end{align}
+  \end{alignat}
 
   Dividindo a expressão acima por $nA(s)$, teremos
   \begin{equation}
@@ -161,7 +161,7 @@
   \end{equation}
   Como $\epsilon$ é arbitrariamente pequeno, no limite teremos
   \begin{eqnarray}
-  \frac{A(t)}{A(s)} &=& \frac{\log t}{\log s} \\
+  \frac{A(t)}{A(s)} &=& \frac{\log t}{\log s} \nonumber \\
   A(t) &=& \frac{A(s)}{\log s} \log t = K \log t ,
   \end{eqnarray}
   onde $K$ deve ser positivo, de forma que $A(n)$ seja monótona crescente.
@@ -172,12 +172,12 @@
   com probabilidades $p_1, \ldots, p_n$, e para uma $i$-ésima dada escolha, realizar uma
   nova escolha dentre $n_i$ opções igualmente prováveis. Teremos então:
   \begin{eqnarray}
-  \overbrace{ K \log \left( \sum n_i \right) }^{A\left( \sum n_i \right)} &=& H(p_1, \ldots, p_n) + \overbrace{ K \log n_i }^{A(n_i)}\\
+  \overbrace{ K \log \left( \sum n_i \right) }^{A\left( \sum n_i \right)} &=& H(p_1, \ldots, p_n) + \overbrace{ K \log n_i }^{A(n_i)} \nonumber \\
   K \underbrace{\left( \sum p_i \right)}_{=1} \log \left( \sum n_i \right) &=& H(p_1, \ldots, p_n) + K \underbrace{\left( \sum p_i \right)}_{=1} \log n_i .
   \end{eqnarray}  
   E assim,
   \begin{eqnarray}
-  H(p_1, \ldots, p_n) &=& K\left[ \left( \sum p_i \right) \log \left( \sum n_i \right) - \left( \sum p_i \right) \log n_i \right] \\
+  H(p_1, \ldots, p_n) &=& K\left[ \left( \sum p_i \right) \log \left( \sum n_i \right) - \left( \sum p_i \right) \log n_i \right] \nonumber \\
         &=& -K \sum p_i \log \frac{n_i}{\sum n_i} = -K \sum p_i \log p_i . \qed
   \end{eqnarray} 
 \end{frame}

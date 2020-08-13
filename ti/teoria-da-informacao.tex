@@ -18,6 +18,16 @@
 \setbeamerfont{frametitle}{size=\small}
 \beamertemplatenavigationsymbolsempty
 
+%%%%%%%%%%%%%%%%%%%%%
+% defining frametitle
+\setbeamertemplate{frametitle}{%
+    \nointerlineskip%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.0ex]{frametitle}
+        \hspace*{2.5ex}\insertframetitle%
+    \end{beamercolorbox}%
+}
+%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand{\hrefcolor}[2]{\textcolor{BlueGreen}{\href{#1}{#2}}}
 
 % Rotating Objects and Captions
@@ -30,7 +40,11 @@
 
 % equation stuff
 \usepackage{nicefrac}
-%\usepackage{cancel}
+\usepackage{cancel}
+
+% table diagonal box
+\usepackage{diagbox}
+\usepackage{makecell}
 
 % BEGIN - listings - code in LaTeX
 \usepackage{listings}
@@ -81,6 +95,17 @@
 }
 % END - listings
 
+%\usepackage{amsthm}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{corollary}{Corollary}
+%\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{axiom}{Axiom}
+%\newtheorem{example}{Example}
+%\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\usepackage{etoolbox}
 \patchcmd{\theorem}{Theorem}{Teorema}{}{}
 \patchcmd{\corollary}{Corollary}{Corolário}{}{}
 \patchcmd{\lemma}{Lemma}{Lema}{}{}
@@ -89,6 +114,18 @@
 \patchcmd{\example}{Example}{Exemplo}{}{}
 \patchcmd{\definition}{Definition}{Definição}{}{}
 \patchcmd{\remark}{Remark}{Observação}{}{}
+
+%\patchcmd{\theorem}{Theorem}{Teorema}{}{}
+%\patchcmd{\corollary}{Corollary}{Corolário}{}{}
+%\patchcmd{\lemma}{Lemma}{Lema}{}{}
+%\patchcmd{\proposition}{Proposition}{Proposição}{}{}
+%\patchcmd{\axiom}{Axiom}{Axioma}{}{}
+%\patchcmd{\example}{Example}{Exemplo}{}{}
+%\patchcmd{\definition}{Definition}{Definição}{}{}
+%\patchcmd{\remark}{Remark}{Observação}{}{}
+
+%\newtheorem{exercise}[theorem]{Exercício}
+
 
 \newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
 \newcommand*{\proofbreak}{\hfill ...\usebeamertemplate{proof end}\framebreak\usebeamertemplate{proof begin}{\scriptsize\color{gray}continuação...}\\}
@@ -172,14 +209,35 @@
 %%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%
+\newenvironment{inlineitemize}{%
+ \let\par\relax%
+ \def\item{\usebeamertemplate{itemize item}\hspace{1mm}}
+ \leavevmode%
+}{}
+
+\newenvironment{inlineenumerate}{%
+ \let\par\relax%
+ \setcounter{enumi}{1}%
+ \def\item{\usebeamertemplate{enumerate  item} \stepcounter{enumi}}%
+ \leavevmode%
+}{%
+ \setcounter{enumi}{0}%
+}
+%%%%%%%%%%%%%%%%%
+
+
+
+
 \title[Teoria da Informação]{Teoria da Informação}
 \author[Prof. Leonardo Araújo]{Prof. Leonardo Araújo}
 \date{}
 
+
 \begin{document}
 \frame{\titlepage}
 
-\frame{\centering \includegraphics[width=0.4\textwidth]{images/qrcode-ti.pdf} \\ \url{https://github.com/leolca/lectures/raw/master/ti/teoria-da-informacao.pdf}}
+\frame{\centering \includegraphics[width=0.4\textwidth]{images/qrcode-ti.pdf} \\ \url{https://sites.google.com/site/leolca/teaching/information-theory}}
 
 \frame[allowframebreaks]{\begin{footnotesize}\tableofcontents\end{footnotesize}}
 
@@ -189,9 +247,14 @@
 % entropia
 \input{entropia/entropia.tex}
 \input{entropia/entropiabinaria.tex}
-
-
-
+\input{entropia/entropia-conjunta.tex}
+\input{entropia/entropia-propriedades.tex}
+\input{entropia/informacao-mutua.tex}
+\input{entropia/medida.tex}
+\input{entropia/entropia-propriedades-2.tex}
+\input{entropia/des-proc-dados.tex}
+\input{entropia/estatistica.tex}
+\input{entropia/fano.tex}
 
 
 \bibliographystyle{apalike}
