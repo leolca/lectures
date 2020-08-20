@@ -1,0 +1,256 @@
+\documentclass[10pt,notes,compress,aspectratio=169]{beamer}
+\usepackage[brazil]{babel}  
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usefonttheme[onlymath]{serif}
+\usepackage{beamerthemesplit}
+\usetheme{Antibes}
+
+\beamersetuncovermixins{\opaqueness<1->{25}}{\opaqueness<2->{15}}
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate item}{\insertenumlabel)}
+\setbeamertemplate{enumerate subitem}{\insertenumlabel-\insertsubenumlabel)}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{mini frames}{}
+\setbeamertemplate{navigation symbols}{}
+\setbeamerfont{block title}{size=\scriptsize}
+\setbeamerfont{frametitle}{size=\small}
+\beamertemplatenavigationsymbolsempty
+
+%%%%%%%%%%%%%%%%%%%%%
+% defining frametitle
+\setbeamertemplate{frametitle}{%
+    \nointerlineskip%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.0ex]{frametitle}
+        \hspace*{2.5ex}\insertframetitle%
+    \end{beamercolorbox}%
+}
+%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\hrefcolor}[2]{\textcolor{BlueGreen}{\href{#1}{#2}}}
+
+% Rotating Objects and Captions
+\usepackage{hvfloat}
+
+\usepackage{natbib}
+\usepackage[brazilian]{cleveref}
+\crefname{lstlisting}{lista}{listas}
+\Crefname{lstlisting}{Lista}{Listas}
+
+% equation stuff
+\usepackage{nicefrac}
+\usepackage{cancel}
+
+% table diagonal box
+\usepackage{diagbox}
+\usepackage{makecell}
+
+% tables
+\usepackage{booktabs}
+
+% BEGIN - listings - code in LaTeX
+\usepackage{listings}
+\renewcommand\lstlistingname{Lista}
+\lstset{
+  language=octave,
+  breaklines=true,
+  postbreak=\mbox{$\hookrightarrow$\space},
+  basicstyle=\linespread{1}\small\ttfamily,
+  %numbers=left,
+  numbers=none,
+  %frame=lines,
+  xleftmargin=0.5cm,
+  frame=none,
+  framexleftmargin=0.5em,
+  framexrightmargin=0.5em,
+  %backgroundcolor=\color{light-gray},
+  showstringspaces=false,
+  upquote=true,
+  commentstyle=\color{gray},
+  %morecomment=[f][\color{gray}][28]{\#},
+  morecomment=[l]{\#\#},
+  literate=%
+           {á}{{\'a}}1
+           {í}{{\'i}}1
+           {é}{{\'e}}1
+           {ú}{{\'u}}1
+           {ó}{{\'o}}1
+           {à}{{\`a}}1
+           {ã}{{\~a}}1
+           {õ}{{\~o}}1
+           {â}{{\^a}}1
+           {ê}{{\^e}}1
+           {ô}{{\^o}}1
+           {ç}{{\c{c}}}1
+           {Á}{{\'A}}1
+           {Í}{{\'I}}1
+           {É}{{\'E}}1
+           {Ú}{{\'U}}1
+           {Ó}{{\'O}}1
+           {À}{{\`A}}1
+           {Ã}{{\~A}}1
+           {Õ}{{\~O}}1
+           {Â}{{\^A}}1
+           {Ê}{{\^E}}1
+           {Ô}{{\^O}}1
+           {Ç}{{\c{C}}}1
+}
+% END - listings
+
+%\usepackage{amsthm}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{corollary}{Corollary}
+%\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{axiom}{Axiom}
+%\newtheorem{example}{Example}
+%\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\usepackage{etoolbox}
+\patchcmd{\theorem}{Theorem}{Teorema}{}{}
+\patchcmd{\corollary}{Corollary}{Corolário}{}{}
+\patchcmd{\lemma}{Lemma}{Lema}{}{}
+\patchcmd{\proposition}{Proposition}{Proposição}{}{}
+\patchcmd{\axiom}{Axiom}{Axioma}{}{}
+\patchcmd{\example}{Example}{Exemplo}{}{}
+\patchcmd{\definition}{Definition}{Definição}{}{}
+\patchcmd{\remark}{Remark}{Observação}{}{}
+
+%\patchcmd{\theorem}{Theorem}{Teorema}{}{}
+%\patchcmd{\corollary}{Corollary}{Corolário}{}{}
+%\patchcmd{\lemma}{Lemma}{Lema}{}{}
+%\patchcmd{\proposition}{Proposition}{Proposição}{}{}
+%\patchcmd{\axiom}{Axiom}{Axioma}{}{}
+%\patchcmd{\example}{Example}{Exemplo}{}{}
+%\patchcmd{\definition}{Definition}{Definição}{}{}
+%\patchcmd{\remark}{Remark}{Observação}{}{}
+
+%\newtheorem{exercise}[theorem]{Exercício}
+
+
+\newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
+\newcommand*{\proofbreak}{\hfill ...\usebeamertemplate{proof end}\framebreak\usebeamertemplate{proof begin}{\scriptsize\color{gray}continuação...}\\}
+\newcommand*{\examplebreak}{\hfill ...\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}{\scriptsize\color{gray}continuação...}\\}
+\newcommand*{\exercisebreak}{\hfill ...\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}{\scriptsize\color{gray}continuação...}\\}
+\newcommand*{\lemmabreak}{\hfill ...\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}{\scriptsize\color{gray}continuação...}\\}
+\newcommand*{\blockbreak}{\hfill ...\usebeamertemplate{block end}\framebreak\usebeamertemplate{block begin}{\scriptsize\color{gray}continuação...}\\}
+\newcommand*{\definitionbreak}{\hfill ...\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}{\scriptsize\color{gray}continuação...}\\}
+
+% math symbols
+
+% symbol for independet
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+% Real Numbers
+\newcommand\RealNumber{{\rm I\!R}}
+% Expected value, Variance and Covariance
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+%%%%%%%%%%%%%%%%%
+% math cancel to (down arrow)
+\makeatletter
+% #1, #2 offset of label   #6 extra width to clear arrowhead
+% #3, #4 vector direction  #7 superscript label style
+% #5 vector width          #8 superscript label
+\def\cantox@vector#1#2#3#4#5#6#7#8{%
+  \dimen@.5\p@
+  \setbox\z@\vbox{\boxmaxdepth.5\p@
+   \hbox{\kern-1.2\p@\kern#1\dimen@$#7{#8}\m@th$}}%
+  \ifx\canto@fil\hidewidth  \wd\z@\z@ \else \kern-#6\unitlength \fi
+  \ooalign{%
+    \canto@fil$\m@th \CancelColor
+    \vcenter{\hbox{\dimen@#6\unitlength \kern\dimen@
+      \multiply\dimen@#4\divide\dimen@#3 \vrule\@depth\dimen@\@width\z@
+      \vector(#3,-#4){#5}%
+    }}_{\raise-#2\dimen@\copy\z@\kern-\scriptspace}$%
+    \canto@fil \cr
+    \hfil \box\@tempboxa \kern\wd\z@ \hfil \cr}}
+\def\bcancelto#1#2{\let\canto@vector\cantox@vector\cancelto{#1}{#2}}
+\makeatother
+%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%
+% left-right arrow
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%
+% commands to resume enumeration across frames 
+\newcounter{sauvegardeenumi}
+\newcommand{\asuivre}{\setcounter{sauvegardeenumi}{\theenumi}}
+\newcommand{\suite}{\setcounter{enumi}{\thesauvegardeenumi}}
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% underbrase - font size no change
+\newcommand*{\KeepStyleUnderBrace}[1]{%
+  \mathop{%
+    \mathchoice
+    {\underbrace{\displaystyle#1}}%
+    {\underbrace{\textstyle#1}}%
+    {\underbrace{\scriptstyle#1}}%
+    {\underbrace{\scriptscriptstyle#1}}%
+  }\limits
+}
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% math operators
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Tr}{Tr}
+%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%
+\newenvironment{inlineitemize}{%
+ \let\par\relax%
+ \def\item{\usebeamertemplate{itemize item}\hspace{1mm}}
+ \leavevmode%
+}{}
+
+\newenvironment{inlineenumerate}{%
+ \let\par\relax%
+ \setcounter{enumi}{1}%
+ \def\item{\usebeamertemplate{enumerate  item} \stepcounter{enumi}}%
+ \leavevmode%
+}{%
+ \setcounter{enumi}{0}%
+}
+%%%%%%%%%%%%%%%%%
+
+
+
+
+\title[Processamento de Áudio e Vídeo]{Processamento de Áudio e Vídeo}
+\author[Prof. Leonardo Araújo]{Prof. Leonardo Araújo}
+\date{}
+
+
+\begin{document}
+\frame{\titlepage}
+
+\frame{\centering \includegraphics[width=0.4\textwidth]{images/qrcode-aev.pdf} \\ \url{https://sites.google.com/site/leolca/teaching/multimedia-signal-processing}}
+
+\frame[allowframebreaks]{\begin{footnotesize}\tableofcontents\end{footnotesize}}
+
+% introdução
+\input{introducao/intro.tex}
+\input{introducao/basicos.tex}
+
+\bibliographystyle{apalike}
+\bibliography{bibliografia}
+\label{bibliografia}
+
+\end{document}
+
