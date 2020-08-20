@@ -33,7 +33,11 @@
 % Rotating Objects and Captions
 \usepackage{hvfloat}
 
+% bibliography stuff
 \usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography*
+
 \usepackage[brazilian]{cleveref}
 \crefname{lstlisting}{lista}{listas}
 \Crefname{lstlisting}{Lista}{Listas}
@@ -247,6 +251,12 @@
 % introdução
 \input{introducao/intro.tex}
 \input{introducao/basicos.tex}
+% quantização escalar
+\input{quantizacao/quantizacaoescalar.tex}
+\input{quantizacao/performance.tex}
+\input{quantizacao/companding.tex}
+\input{quantizacao/quantizacao-vetorial.tex}
+
 
 \bibliographystyle{apalike}
 \bibliography{bibliografia}
