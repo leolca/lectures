@@ -3,7 +3,7 @@
 \begin{frame}%[allowframebreaks]
   \frametitle{Teoria da Informação e Codificação}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}%[<+->]
     \item Surgiu em 1948 com a publicação do trabalho ``The Mathematical Theory of Communications'' \cite{shannon1948}.
     \item Teoria da Informação lida com as limitações teóricas e potencialidades de sistemas de comunicação.
     \item O que é informação? Como mensurar?
@@ -64,6 +64,48 @@
     \end{itemize}
 }
 
+
+\begin{frame}%[allowframebreaks]
+\begin{table}[]
+\begin{tabular}{lll}\toprule
+  & \begin{tabular}[c]{@{}l@{}}Compressão\\ (codificação de fonte)\\ eficiência\end{tabular} & 
+    \begin{tabular}[c]{@{}l@{}}Correção de Erros\\ (codificação de canal)\\ confiabilidade\end{tabular} \\
+\midrule
+\begin{tabular}[c]{@{}l@{}}Teoria da\\ Informação\\ (matemática)\end{tabular} & 
+    \begin{tabular}[c]{@{}l@{}}Compressão sem\\ perdas: teorema da\\ codificação de fonte\end{tabular} & 
+    \begin{tabular}[c]{@{}l@{}}Teorema da\\ Codificação de Canal\end{tabular} \\
+\midrule
+\begin{tabular}[c]{@{}l@{}}Métodos de\\ Codificação\\ (algoritmo)\end{tabular} & 
+    \begin{tabular}[c]{@{}l@{}}Códigos Simbólicos:\\ código de Huffman\\ Códigos de Fluxo:\\ Codificação\\ Aritmética,\\ Lempel-Ziv\end{tabular} & 
+    \begin{tabular}[c]{@{}l@{}}Códigos de Hamming,\\ Códigos BCH Códigos\\ Turbo Códigos de\\ Gallager\end{tabular} \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+\note{
+    \begin{description}
+	\item[Huffman (1952)] sem perdas; ótimo (dentre os códigos de símbolos); simples implementação; PNG, JPEG, MPEG, WinZip, GZip, MP3, AAC.
+	\item[Codificação Aritmética (1978, patente IBM)] Peter Elias (1963): trabalho não publicado; problema: precisão infinita (solucionado, Jorma Rissanen e Richard Pasco, 1976)
+	    patentes (IBM, todas já expiraram); JPEG, JBIG, Skype, PPM, PAQ, DjVu.
+	\item[Lempel-Ziv (1978), Lempel–Ziv–Welch (1984)] assintoticamente ótimo; eficiente e simples de ser implementado; PNG, GIF, PKZip, GZipg, PDF.
+	\item[Códigos de Hamming] verificação de paridade; primeiro código de correção de erros efetivamente bom (1950); RAM (podem ocorrer erros no processo de escrita e leitura), RAID 2.
+	\item[Código de Reed-Solomon (1960)] muitas vezes combinados com códigos convolucionais, por exemplo: RSV (algoritmo de vitterbi);
+	    robusto a erros em rajada; códigos de barra, CD, DVD, Blue-Ray, DSL (telefone), DVB; (Digital Video Broadcasting), RAID 6, comunicação satélite e 
+	    sondas espaciais (Voyager 1977, Galileo 1989, Cassini-Huygens; 1997, Pathfinder 1996, MER 2003).
+    \end{description}
+}
+\note{
+    \begin{description}
+	\item[códigos Turbo (1993)] 3G, 4G, LTE, WiMax, Mars Reconnaissance Orbiter (MRO) 2005.
+	\item[códigos Gallager: low-density parity-check (LDPC)] Robert G. Gallager, MIT (1960), não eram práticos para os computadores da época;
+	    David J. C. MacKay e Radford M. Neal (1996); 10Gb/s Ethernet, WiFi 802.11 N, Internet por rede elétrica ITU-T G.hn, DVB-S2 (tv via satélite), China Mobile Multimedia
+	    Broadcasting (CMMB) transmissão multimídia via satélite para aparelhos móveis.
+    \end{description}
+}
+
+
+
+
 \begin{frame}%[allowframebreaks]
   \frametitle{Código Morse}
   \hvFloat[floatPos=htb,capPos=right,capVPos=bottom,objectPos=c]{figure}{\includegraphics[trim=0cm 0cm 0cm 3.5cm,clip=true,width=0.45\textwidth]{images/International_Morse_Code.pdf}}
@@ -81,7 +123,7 @@
 
 \begin{frame}%[allowframebreaks]
   \frametitle{Compressão}
-  \begin{itemize}[<+->]
+  \begin{itemize}%[<+->]
   \item Compressão é importante para utilizarmos melhor os recursos disponíveis.
   \item Shannon mostrou que o limite para a representação é a entropia.
   \end{itemize}
