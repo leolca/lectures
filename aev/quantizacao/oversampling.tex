@@ -204,18 +204,239 @@
   (para $M=4$ podemos utilizar um bit a menos e obter a mesma acurácia na representação do sinal).
 \end{frame}
 
-\begin{frame}[allowframebreaks]
+\begin{frame}%[allowframebreaks]
   \frametitle{Conversão A/D com \textit{Noise Shaping}}
-   a
+  O objetivo em da técncia de \textit{noise shaping} é modificar a conversão A/D para que a 
+  densidade espectral de potência do ruído de quantização não seja uniforme, de forma que 
+  a maior parte de sua potência fique fora da faixa $|\omega| < \pi/M$.
 \end{frame}
 
-%\begin{frame}%[allowframebreaks]
-%  \frametitle{}
-%\end{frame}
+\begin{frame}[allowframebreaks]
+  \frametitle{Conversão A/D com \textit{Noise Shaping}}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/oppenheim_fig461.png}
+  \caption{Sistema para conversão A/D com \textit{oversampling} e \textit{Noise Shaping} \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig461}
+  \end{figure}
+ 
+  \framebreak
 
-%\begin{frame}%[allowframebreaks]
-%  \frametitle{}
-%\end{frame}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/oppenheim_fig462.png}
+  \caption{Modelo de ruído aditivo \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig462}
+  \end{figure}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/oppenheim_fig463.png}
+  \caption{Simplificação \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig463}
+  \end{figure}
+
+  \framebreak
+
+  Sejam $H_x(z)$ a funcção de transferência de $x[n]$ para $y[n]$ e $H_e(z)$ a função de $e[n]$ para $y[n]$ .
+
+  \begin{equation}
+  H_x(z) = 1
+  \end{equation}
+
+  \begin{equation}
+  H_e(z) = (1 - z^{-1}).
+  \end{equation}
+
+  Consequently
+  \begin{equation}
+  y_x [n] = x[n]
+  \end{equation}
+ 
+  \begin{equation}
+  \hat{e} [n] = e[n] - e[n-1] 
+  \end{equation}
+
+  A saída $y[n]$ poderá ser representada por 
+  \begin{equation}
+  y [n] = x[n] + \hat{e} [n]
+  \end{equation}
+
+  \framebreak
+
+  A densidade espectral de potência do ruído de quantização $\hat{e} [n]$ presente em $y[n]$ é
+  \begin{eqnarray}
+  \Phi_{\hat{e}\hat{e}} (e^{j\omega}) &=& \sigma_e^2 |H_e (e^{j\omega})|^2 \nonumber \\
+                                      &=& \sigma_e^2 [2 \sin(\omega/2) ]^2 .
+  \end{eqnarray}
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/oppenheim_fig464.png}
+  \caption{Densidade espectral de potência do ruído de quantização com \textit{noise shaping} \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig464}
+  \end{figure}
+
+  \framebreak
+
+  Densidade espectral de potência após do \textit{downsampling}.
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/oppenheim_fig465.png}
+  \caption{Densidade espectral de potência final \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig465}
+  \end{figure}
+
+  \framebreak
+
+  A potência do sinal $x_{da}[n]$ é
+  \begin{equation}
+  P_{da} = \varepsilon \{ x^2_{da}[n] \} = \varepsilon \{ x^2[n] \} = \varepsilon \{ x_a^2(t) \} .
+  \end{equation}
+  A potência do ruído de quantização final na saída é
+  \begin{equation}
+P_{de} = \frac{1}{2\pi} \int_{-\pi}^{\pi} \Phi_{x_{de} x_{de}} (e^{j\omega}) d\omega = \frac{1}{2\pi} \frac{\Delta^2}{12 M} \int_{-\pi}^{\pi} \left( 2 \sin \left( \frac{\omega}{2M} \right) \right)^2 d\omega
+  \end{equation}
+  Podemos assumir que $M$ é suficientemente grande e assim
+  \begin{equation}
+  \sin \left( \frac{\omega}{2M} \right) \approx \frac{\omega}{2M} ,
+  \end{equation}
+  Assim, poderemos considerar
+  \begin{equation} 
+  \label{eq-Pde-M}
+  P_{de} = \frac{1}{36} \frac{\Delta^2 \pi^2}{M^3} .
+  \end{equation}
+
+  \framebreak
+
+  Usando \Cref{eq-Pde-M}, teremos uma relação de compromisso entre o fator de sobre-amostragem $M$
+  e o tamanho do passo de quantização $\Delta$.
+
+  \vspace{2ex}
+  Para obter uma determinada potência $P_{de}$ devemos ter
+  \begin{equation}
+  B = - \frac{3}{2} \log_2 M + \log_2 (\pi/6) - \frac{1}{2} \log_2 P_{de} + \log_2 X_m .
+  \end{equation}
+
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/oppenheim_tab41.png}
+  \caption{Economia de bits \citep{oppenheim2009}.}
+  \label{fig:oppenheim_tab41}
+  \end{figure}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/oppenheim_fig466.png}
+  \caption{Estratégia incorporando um segundo estágio \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig466}
+  \end{figure}
+
+  \framebreak
+
+  Utilizando um segundo estágio ($p=2$), a função de transferência será da forma
+  \begin{equation}
+  H_e (z) = (1 - z^{-1})^2 , 
+  \end{equation}
+  e a densidade espectral de potência na saída em $y[n]$ será
+  \begin{equation}
+  \Phi_{\hat{e}\hat{e}} (e^{j\omega}) = \sigma_e^2 [2 \sin (\omega /2)]^4 .
+  \end{equation}
+
+  \vspace{2ex}
+  De forma geral, para $p$ estágios, teremos
+  \begin{equation}
+  \Phi_{\hat{e}\hat{e}} (e^{j\omega}) = \sigma_e^2 [2 \sin (\omega /2)]^{2p} .
+  \end{equation}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/oppenheim_tab42.png}
+  \caption{Redução no número de bits no quantizador para diferentes configurações \citep{oppenheim2009}.}
+  \label{fig:oppenheim_tab42}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{\textit{Oversampling} e \textit{Noise Shaping} na Conversão D/A}
+
+  A técnica de \textit{Oversampling} e \textit{Noise Shaping} pode ser utilizada na
+  conversão D/A quando utiliza-se um conversor D/A mais simples, com menos bits.
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/oppenheim_fig467.png}
+  \caption{Utilizanção do \textit{oversampling} com um conversor D/A simples \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig467}
+  \end{figure}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/oppenheim_fig468.png}
+  \caption{Sistema de \textit{noise shaping} de primeira ordem \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig468}
+  \end{figure}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/oppenheim_fig469.png}
+  \caption{Modelo de ruído aditivo para o quantizador \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig469}
+  \end{figure}
+
+  \framebreak
+
+  A função de transferência de $\hat{y}[n]$ para $y[n]$ é $H_y(z)=1$ e
+  a função $H_e(z)$, de $e[n]$ para $y[n]$, é $H_e(z) = 1 - z^{-1}$.
+  
+  A densidade espectral de potência, na saída, da componente relativa ao ruído de quantização $\hat{e}[n]$ será
+  \begin{equation}
+  \Phi_{\hat{e}\hat{e}} (e^{j\omega}) = \sigma_e^2 (2 \sin \omega / 2)^2 ,
+  \end{equation}
+  onde $\sigma_e^2 = \Delta^2 / 12$.
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.3\textwidth]{images/oppenheim_fig470.png}
+  \caption{Densidade espectral de potência do sinal e ruído de quantização, na saída \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig470}
+  \end{figure}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.65\textwidth]{images/oppenheim_fig470cd.png}
+  \caption{Detalhe: densidade espectral de potência do ruído de quantização, na saída \citep{oppenheim2009}.}
+  \label{fig:oppenheim_fig470}
+  \end{figure}
+
+  \framebreak
+
+  Aplicando a técnica em multi-estágio, podemos obter na saída um espectro da forma
+  \begin{equation}
+  \Phi_{\hat{e}\hat{e}} (e^{j\omega}) = \sigma_e^{2} (2 \sin \omega /2)^{2p},
+  \end{equation}
+  empurrando ainda mais o ruído para altas frequências, podendo assim relaxar 
+  as condições sobre o filtro de reconstrução.
+
+\end{frame}
 
 %\begin{frame}%[allowframebreaks]
 %  \frametitle{}
