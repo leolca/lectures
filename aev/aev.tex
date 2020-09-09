@@ -18,6 +18,31 @@
 \setbeamerfont{frametitle}{size=\small}
 \beamertemplatenavigationsymbolsempty
 
+
+\newtranslation[to=brazil]{Section}{Seção}
+% section page at begin section
+\AtBeginSection{\frame{\sectionpage}}
+
+% define new section page style
+\defbeamertemplate{section page}{mine}[1][]{%
+  \begin{centering}
+    {\usebeamerfont{section name}\usebeamercolor[fg]{section name}#1}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+\setbeamertemplate{section page}[mine]
+
+
+% avoind numbering in first slide (allowframebreak)
+% numbering from the second slide
+\setbeamertemplate{frametitle continuation}{%
+    \ifnum\insertcontinuationcount>1
+    \insertcontinuationcount
+    \fi}
+
 %%%%%%%%%%%%%%%%%%%%%
 % defining frametitle
 \setbeamertemplate{frametitle}{%
@@ -27,6 +52,8 @@
     \end{beamercolorbox}%
 }
 %%%%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\definecolor{BlueGreen}{cmyk}{0.8,0,0.5,0.3}
 
 \newcommand{\hrefcolor}[2]{\textcolor{BlueGreen}{\href{#1}{#2}}}
 
@@ -276,17 +303,24 @@
 \input{jpeg/jpeg.tex}
 % PCA
 \input{pca/pca.tex}
-
 % Wavelets
-
+\input{wavelets/wavelets.tex}
 % Codificação de Vídeo
 
+% Aquisição de imagem
+
 % Visão
+\input{visao/visao.tex}
 
 % Audição
 
+% Espaços de cores
 
+% Fala
 
+% Espaços vetoriais (slides semi prontos)
+
+% OCR
 
 \bibliographystyle{apalike}
 \bibliography{bibliografia}
