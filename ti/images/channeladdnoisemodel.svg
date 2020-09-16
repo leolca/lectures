@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="34.860119mm"
+   height="16.113255mm"
+   viewBox="0 0 123.52011 57.094209"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="channeladdnoisemodel.svg">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath3531"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3533"
+         d="m 0,0 362.839,0 0,20.523 L 0,20.523 0,0 Z" />
+    </clipPath>
+    <linearGradient
+       id="linearGradient3549"
+       gradientUnits="userSpaceOnUse"
+       y2="0"
+       x2="362.83939"
+       y1="0"
+       x1="0">
+      <stop
+         id="stop3551"
+         offset="0"
+         style="stop-opacity:1;stop-color:#3333b3" />
+      <stop
+         id="stop3553"
+         offset="1"
+         style="stop-opacity:1;stop-color:#000000" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3575"
+       gradientUnits="userSpaceOnUse"
+       y2="3.9851"
+       x2="0"
+       y1="0"
+       x1="0">
+      <stop
+         id="stop3577"
+         offset="0"
+         style="stop-opacity:1;stop-color:#ffffff" />
+      <stop
+         id="stop3579"
+         offset="1"
+         style="stop-opacity:1;stop-color:#808080" />
+    </linearGradient>
+    <clipPath
+       id="clipPath3587"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3589"
+         d="m 0,0 180.588,0 0,88.9927 L 0,88.9927 0,0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath3591"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3593"
+         d="m 0,88.993 180.588,0 L 180.588,0 0,0 0,88.993 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath3595"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3597"
+         d="m 0,88.993 180.588,0 L 180.588,0 0,0 0,88.993 Z" />
+    </clipPath>
+    <radialGradient
+       id="radialGradient3683"
+       gradientUnits="userSpaceOnUse"
+       r="2.5697"
+       cy="2.5697"
+       cx="2.5697"
+       fy="3.6656001"
+       fx="1.67305">
+      <stop
+         id="stop3685"
+         offset="0"
+         style="stop-opacity:1;stop-color:#e0e0f4" />
+      <stop
+         id="stop3687"
+         offset="0.797"
+         style="stop-opacity:1;stop-color:#6666c6" />
+      <stop
+         id="stop3689"
+         offset="1.59401"
+         style="stop-opacity:1;stop-color:#24247d" />
+      <stop
+         id="stop3691"
+         offset="2.1918"
+         style="stop-opacity:1;stop-color:#191959" />
+      <stop
+         id="stop3693"
+         offset="2.5697"
+         style="stop-opacity:1;stop-color:#ffffff" />
+    </radialGradient>
+    <radialGradient
+       id="radialGradient3811"
+       gradientUnits="userSpaceOnUse"
+       r="2.5697"
+       cy="2.5697"
+       cx="2.5697"
+       fy="3.6656001"
+       fx="1.67305">
+      <stop
+         id="stop3813"
+         offset="0"
+         style="stop-opacity:1;stop-color:#e0e0f4" />
+      <stop
+         id="stop3815"
+         offset="0.797"
+         style="stop-opacity:1;stop-color:#6666c6" />
+      <stop
+         id="stop3817"
+         offset="1.59401"
+         style="stop-opacity:1;stop-color:#24247d" />
+      <stop
+         id="stop3819"
+         offset="2.1918"
+         style="stop-opacity:1;stop-color:#191959" />
+      <stop
+         id="stop3821"
+         offset="2.5697"
+         style="stop-opacity:1;stop-color:#ffffff" />
+    </radialGradient>
+    <radialGradient
+       id="radialGradient3859"
+       gradientUnits="userSpaceOnUse"
+       r="2.5697"
+       cy="2.5697"
+       cx="2.5697"
+       fy="3.6656001"
+       fx="1.67305">
+      <stop
+         id="stop3861"
+         offset="0"
+         style="stop-opacity:1;stop-color:#e0e0f4" />
+      <stop
+         id="stop3863"
+         offset="0.797"
+         style="stop-opacity:1;stop-color:#6666c6" />
+      <stop
+         id="stop3865"
+         offset="1.59401"
+         style="stop-opacity:1;stop-color:#24247d" />
+      <stop
+         id="stop3867"
+         offset="2.1918"
+         style="stop-opacity:1;stop-color:#191959" />
+      <stop
+         id="stop3869"
+         offset="2.5697"
+         style="stop-opacity:1;stop-color:#ffffff" />
+    </radialGradient>
+    <radialGradient
+       id="radialGradient3935"
+       gradientUnits="userSpaceOnUse"
+       r="2.5697"
+       cy="2.5697"
+       cx="2.5697"
+       fy="3.6656001"
+       fx="1.67305">
+      <stop
+         id="stop3937"
+         offset="0"
+         style="stop-opacity:1;stop-color:#e0e0f4" />
+      <stop
+         id="stop3939"
+         offset="0.797"
+         style="stop-opacity:1;stop-color:#6666c6" />
+      <stop
+         id="stop3941"
+         offset="1.59401"
+         style="stop-opacity:1;stop-color:#24247d" />
+      <stop
+         id="stop3943"
+         offset="2.1918"
+         style="stop-opacity:1;stop-color:#191959" />
+      <stop
+         id="stop3945"
+         offset="2.5697"
+         style="stop-opacity:1;stop-color:#ffffff" />
+    </radialGradient>
+    <radialGradient
+       id="radialGradient4007"
+       gradientUnits="userSpaceOnUse"
+       r="2.5697"
+       cy="2.5697"
+       cx="2.5697"
+       fy="3.6656001"
+       fx="1.67305">
+      <stop
+         id="stop4009"
+         offset="0"
+         style="stop-opacity:1;stop-color:#e0e0f4" />
+      <stop
+         id="stop4011"
+         offset="0.797"
+         style="stop-opacity:1;stop-color:#6666c6" />
+      <stop
+         id="stop4013"
+         offset="1.59401"
+         style="stop-opacity:1;stop-color:#24247d" />
+      <stop
+         id="stop4015"
+         offset="2.1918"
+         style="stop-opacity:1;stop-color:#191959" />
+      <stop
+         id="stop4017"
+         offset="2.5697"
+         style="stop-opacity:1;stop-color:#ffffff" />
+    </radialGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.6652984"
+     inkscape:cx="68.70135"
+     inkscape:cy="23.878448"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1364"
+     inkscape:window-height="726"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-296.77908,-444.15915)">
+    <g
+       id="g4899">
+      <g
+         transform="matrix(0.6946,0,0,-0.6946,312.28313,471.41345)"
+         id="g3585" />
+      <text
+         y="455.6297"
+         x="327.5163"
+         id="text3605"
+         style="font-variant:normal;font-weight:normal;font-size:12.00824451px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3607"
+           y="455.6297"
+           x="327.5163">Z</tspan>
+      </text>
+      <text
+         y="457.42996"
+         x="335.71381"
+         id="text3609"
+         style="font-variant:normal;font-weight:normal;font-size:8.77314472px;font-family:CMMI8;-inkscape-font-specification:CMMI8;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3611"
+           y="457.42996"
+           x="335.71381">i</tspan>
+      </text>
+      <text
+         y="455.6297"
+         x="342.77103"
+         id="text3613"
+         style="font-variant:normal;font-weight:normal;font-size:12.00824451px;font-family:CMSY10;-inkscape-font-specification:CMSY10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3615"
+           y="455.6297"
+           x="342.77103">∼</tspan>
+      </text>
+      <text
+         y="455.6297"
+         x="355.43973"
+         id="text3617"
+         style="font-variant:normal;font-weight:normal;font-size:12.00824451px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3619"
+           y="455.6297"
+           x="355.43973">N</tspan>
+      </text>
+      <text
+         y="455.6297"
+         x="366.40326"
+         id="text3621"
+         style="font-variant:normal;font-weight:normal;font-size:12.00824451px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3623"
+           sodipodi:role="line"
+           y="455.6297"
+           x="366.40326 371.07446">(0</tspan>
+      </text>
+      <text
+         y="455.6297"
+         x="377.07858"
+         id="text3625"
+         style="font-variant:normal;font-weight:normal;font-size:12.00824451px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3627"
+           sodipodi:role="line"
+           y="455.6297"
+           x="377.07858 382.42224">,σ</tspan>
+      </text>
+      <text
+         y="450.67047"
+         x="389.70605"
+         id="text3629"
+         style="font-variant:normal;font-weight:normal;font-size:8.77314472px;font-family:CMR8;-inkscape-font-specification:CMR8;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3631"
+           y="450.67047"
+           x="389.70605">2</tspan>
+      </text>
+      <text
+         y="455.6297"
+         x="394.91693"
+         id="text3633"
+         style="font-variant:normal;font-weight:normal;font-size:12.00824451px;font-family:CMR10;-inkscape-font-specification:CMR10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3635"
+           y="455.6297"
+           x="394.91693">)</tspan>
+      </text>
+      <g
+         transform="matrix(0.6946,0,0,-0.6946,296.42141,507.10231)"
+         clip-path="url(#clipPath3591)"
+         id="g3639">
+        <text
+           transform="matrix(1,0,0,-1,0,11.5312)"
+           style="font-variant:normal;font-weight:normal;font-size:17.28800011px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text3641">
+          <tspan
+             x="0"
+             y="0"
+             id="tspan3643">X</tspan>
+        </text>
+      </g>
+      <text
+         y="500.89362"
+         x="306.3703"
+         id="text3645"
+         style="font-variant:normal;font-weight:normal;font-size:8.77314472px;font-family:CMMI8;-inkscape-font-specification:CMMI8;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3647"
+           y="500.89362"
+           x="306.3703">i</tspan>
+      </text>
+      <text
+         y="499.09274"
+         x="411.71243"
+         id="text3649"
+         style="font-variant:normal;font-weight:normal;font-size:12.00824451px;font-family:CMMI10;-inkscape-font-specification:CMMI10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3651"
+           y="499.09274"
+           x="411.71243">Y</tspan>
+      </text>
+      <text
+         y="500.89294"
+         x="418.6842"
+         id="text3653"
+         style="font-variant:normal;font-weight:normal;font-size:8.77314472px;font-family:CMMI8;-inkscape-font-specification:CMMI8;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3655"
+           y="500.89294"
+           x="418.6842">i</tspan>
+      </text>
+      <g
+         transform="matrix(0.6946,0,0,-0.6946,296.42141,507.10231)"
+         clip-path="url(#clipPath3595)"
+         id="g3659">
+        <text
+           transform="matrix(1,0,0,-1,32.6011,8.9395)"
+           style="font-variant:normal;font-weight:normal;font-size:36.64519882px;font-family:CMSY10;-inkscape-font-specification:CMSY10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text3661">
+          <tspan
+             x="0 46.832565 85.5299"
+             y="0"
+             sodipodi:role="line"
+             id="tspan3663">→⊕→</tspan>
+        </text>
+      </g>
+      <text
+         y="478.20251"
+         x="351.41663"
+         id="text3665"
+         style="font-variant:normal;font-weight:normal;font-size:25.45375443px;font-family:CMSY10;-inkscape-font-specification:CMSY10;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none">
+        <tspan
+           id="tspan3667"
+           y="478.20251"
+           x="351.41663">↓</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

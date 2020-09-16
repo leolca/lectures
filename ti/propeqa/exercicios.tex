@@ -1,0 +1,489 @@
+\subsection{Exercícios}
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 1}
+
+  \begin{exercise}[Desigualdade de Markov e Desigualdade de Chebyshev]
+  \begin{enumerate}[a)]
+  \item \emph{(Desigualdade de Markov)} Para qualquer v.a. não negativa $X$ e qualquer $\delta > 0$, mostre que
+	\begin{equation}
+	\Pr \left( X \geq \delta \right) \leq \frac{\E X}{\delta} .
+	\end{equation} 
+ 	Mostre uma v.a. para a qual teremos igualdade na equação acima.
+  \end{enumerate}
+
+  \exercisebreak
+
+  \textbf{solução}: 
+  Se $X$ possui distribuição $f(x)$, então
+  \begin{eqnarray}
+  \E X &=& \int_0^\infty x f(x) \mathrm{d}x = \int_0^\delta x f(x) \mathrm{d}x + \int_\delta^\infty x f(x) \mathrm{d}x \nonumber \\
+	&\geq& \int_\delta^\infty x f(x) \mathrm{d}x \nonumber \\
+	&\geq& \int_\delta^\infty \delta f(x) \mathrm{d}x \nonumber \\
+	&=& \delta \Pr \left( X \geq \delta \right) .
+  \end{eqnarray}
+
+  \exercisebreak
+  Podemos assim concluir que
+  \begin{equation}
+  \Pr \left( X \geq \delta \right) \leq \frac{\E X}{\delta} .
+  \end{equation}
+
+
+  \exercisebreak
+  \begin{enumerate}[b)]
+  \item \emph{(Desigualdade de Chebyshev)} 
+	Seja $Y$ uma v.a. com média $\mu$ e variância $\sigma^2$. Façamos $X = (Y - \mu)^2$.
+	Mostre que para qualquer $\varepsilon > 0$, 
+	\begin{equation}
+	\Pr \left( \vert Y - \mu \vert > \varepsilon \right) \leq \frac{\sigma^2}{\varepsilon^2} .
+	\end{equation}
+  \end{enumerate}
+
+  \exercisebreak
+
+  \textbf{solução}:
+
+  Utilizando a desigualdade de Markov com $X = (Y - \mu)^2$ e $\delta = \varepsilon^2$, temos
+  \begin{equation}
+  \Pr \left( (Y-\mu)^2 \geq \varepsilon^2 \right) \leq \frac{\E (Y-\mu)^2}{\varepsilon^2} = \frac{\sigma^2}{\varepsilon^2}
+  \end{equation}
+  Vamos utilizar também que $\Pr \left( (Y-\mu)^2 > \varepsilon^2 \right) \leq \Pr \left( (Y-\mu)^2 \geq \varepsilon^2 \right)$
+  e $\Pr \left( (Y-\mu)^2 > \varepsilon^2 \right) = \Pr \left( \vert Y - \mu \vert > \varepsilon \right)$. Assim teremos
+  \begin{equation}
+  \Pr \left( \vert Y - \mu \vert > \varepsilon \right) \leq \frac{\sigma^2}{\varepsilon^2} ,
+  \end{equation}
+  como queríamos demonstrar.
+
+  \exercisebreak
+  \begin{enumerate}[c)]
+  \item \emph{(Lei fraca dos grandes números)}
+  Seja $Z_1, Z_2, \ldots, Z_n$ uma sequência de v.a. i.i.d. com média $\mu$ e variância $\sigma^2$.
+  Seja $\overline{Z_n} = \frac{1}{n} \sum_{i=1}^{n} Z_i$, a média amostral. Mostre que
+  \begin{equation}
+  \Pr \left( \vert \overline{Z_n} - \mu \vert > \varepsilon \right) \leq \frac{\sigma^2}{n \varepsilon^2} .
+  \end{equation}
+  Então teremos $\Pr \left( \vert \overline{Z_n} - \mu \vert > \varepsilon \right) \rightarrow 0$ quando 
+  $n \rightarrow \infty$, sendo esta a lei fraca dos grandes números.
+  \end{enumerate}
+
+  \exercisebreak
+
+  \textbf{solução}:
+
+  Vamos utilizar a desigualdade de Chebyshev com $Y = \overline{Z_n}$, observado que 
+  $\E \overline{Z_n} = \mu$ e $\Var (\overline{Z_n}) = \frac{\sigma^2}{n}$
+  (i.e. $\overline{Z_n}$ é a soma de $n$ v.a. i.i.d. $\frac{Z_i}{n}$, cada uma com 
+  variância $\frac{\sigma^2}{n^2}$). Teremos assim
+  \begin{equation}
+  \Pr \left( \vert \overline{Z_n} - \mu \vert > \varepsilon  \right) \leq \frac{\sigma^2}{n \varepsilon^2} .
+  \end{equation}
+
+  A desigualdade de Chebyshev é utilizada para provar a propriedade da equipartição assintótica (ver teorema \ref{thm-prop-eqp-ass}).
+  \end{exercise}
+% ver pg 82 Mackay
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 7}
+  \begin{exercise}[PEA e codificação de fonte]
+  Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com 
+  probabilidade $p(1)=0.005$ e $p(0) = 0.995$. Os dígitos são tomados em grupo de 100 e 
+  uma palavra binária é fornecida para cada sequência de 100 dígitos contendo três ou menos uns.
+
+  \exercisebreak
+  \begin{enumerate}[a)]
+  \item Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo
+	necessário para fornecer código para todas as sequências com três ou menos uns (1s).
+  \end{enumerate}
+
+  \textbf{solução}
+ 
+  O número de sequências binárias de 100 bits com três ou menos uns é dado por
+  \begin{equation}
+  {100 \choose 0} + {100 \choose 1} + {100 \choose 2} + {100 \choose 3} = 1 + 100 + 4950 + 161700 = 166751
+  \end{equation}
+  \exercisebreak
+  Considerando que os códigos terão todos o mesmo comprimento, que deverá ser 
+  $\lceil \log 166751 \rceil = 18$. Note que $H(0.005) = 0.0454$, logo para uma sequência de 100 símbolos
+  teremos $4.5$ bits de entropia, que é bem menor do que os 18 bits encontrados.
+
+
+  \exercisebreak
+  \begin{enumerate}[b)]
+  \item Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.
+  \end{enumerate}
+  \textbf{solução}
+  
+  Devemos considerar aqui as sequências com mais de 3 uns. A probabilidade observarmos uma sequência para a
+  qual não existe código associado é igual a um menos a probabilidade de observármos uma sequência para a 
+  qual existe código associado, ou seja,
+  \begin{equation}
+  1 - \sum_{i=0}^{3} {100 \choose i} (0.005)^i (0.995)^{100-i} = 1 - 0.60577 - 0.30441 - 0.01243 = 0.00167.
+  \end{equation}
+
+
+  \exercisebreak
+  \begin{enumerate}[c)]
+  \item Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte
+	para a qual nenhum código foi associado. Compare este limite com o valor calculado no item anterior.
+  \end{enumerate}
+  \textbf{solução}
+
+  Para a v.a. $S_n$ que representa a soma das v.a. i.i.d. $X_1, \ldots, X_n$, a desigualdade de Chebyschev
+  afirma que 
+  \begin{equation}
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \end{equation} 
+  onde $\mu$ e $\sigma^2$ representam a média e variância de $X_i$ (logo, $n\mu$ e $n\sigma^2$ são
+  a média e variância de $S_n$). 
+  \exercisebreak
+  No problema em questão temos $n=100$, $\mu=0.005$ e $\sigma^2 = (0.005)(0.995)$.
+  Note que $S_{100} \geq 4$ se e somente se $\vert S_{100} - 100(0.005) \vert \geq 3.5$. Devemos então
+  escolher $\epsilon = 3.5$. Então
+  \begin{equation}
+  \Pr \left( S_{100} \geq 4 \right)  \leq  \frac{100 (0.005) (0.995)}{(3.5)^2} \approx 0.04061 .
+  \end{equation} 
+
+  O limite encontrado é maior do que a real probabilidade $0.00167$.
+ 
+  \end{exercise}
+\end{frame}
+
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 8}
+  \begin{exercise}[Comportamento limite do produto]
+  Seja a v.a.
+  \begin{equation}
+  X = \begin{cases} 1 , \quad \text{com probabilidade } \frac{1}{2} \\
+		2, \quad \text{com probabilidade } \frac{1}{4} \\
+		3, \quad \text{com probabilidade } \frac{1}{4} 
+	 \end{cases} .
+  \end{equation}
+  Sejam $X_1, X_2, \ldots$ com a mesma distribuição. Encontre o comportamento limite do produto
+  \begin{equation}
+  P_n = (X_1 X_2 \ldots X_n)^{\frac{1}{n}} .
+  \end{equation}
+
+  \exercisebreak  
+
+  \textbf{solução}
+  
+  Tirando o logaritmo de $P_n$ teremos
+  \begin{equation}
+  \log P_n = \frac{1}{n} \sum_{i=1}^{n} \log X_i \rightarrow \E \log X  
+  \end{equation}
+  com probabilidade 1, pela lei forte dos grandes números. Então $P_n \rightarrow 2^{\E \log X}$
+  com probabilidade 1. $\E \log X = \frac{1}{2} \log 1 + \frac{1}{4} \log 2 + \frac{1}{4} \log 3 = \frac{1}{4} \log 6$.
+  Logo, $P_n \rightarrow 2^{\frac{1}{4} \log 6} = 1.565$.
+
+
+  \end{exercise}
+\end{frame}
+
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 9}
+  \begin{exercise}[Prop. da Eq. Ass.]
+  Seja $X_1, X_2, \ldots$ v.a. independentes identicamente distribuídas com distribuição $p(x)$, $x \in \{1,2,\ldots,m\}$.
+  Então $p(x_1, x_2, \ldots, x_n) = \prod_{i=1}^{n} p(x_i)$. Sabemos que 
+  $-\frac{1}{n} \log p(X_1, X_2, \ldots, X_n) \rightarrow H(X)$ em probabilidade.
+  Seja $q(x_1, x_2, \ldots, x_n) = \prod_{i=1}^n q(x_i)$, onde $q$ é outra função massa de probabilidade em $\{1,2,\ldots,m\}$.
+
+  \exercisebreak
+  \begin{enumerate}[a)]
+  \item Avalie $\lim - \frac{1}{n} \log q(X_1, X_2, \ldots, X_n)$, onde $X_1, X_2, \ldots$ são i.i.d. $\sim p(x)$.
+  \end{enumerate}
+
+  \textbf{solução}
+
+  Como $X_1,X_2,\ldots,X_n$ são i.i.d., então também serão $q(X_1), q(X_2), \ldots, q(X_n)$. Poderemos
+  assim aplicar a lei forte dos grandes números
+
+  \exercisebreak
+  \begin{eqnarray}
+  \lim - \frac{1}{n} \log q(X_1, X_2, \ldots, X_n) &=& \lim - \frac{1}{n} \sum \log q(X_i) \nonumber \\
+		&=& - \E \log q(X) \nonumber \\
+		&=& - \sum p(x) \log q(x) \nonumber \\
+		&=& \sum p(x) \log \frac{p(x)}{q(x)} - \sum p(x) \log p(x) \nonumber \\
+		&=& D(p \mid\mid q) + H(p).
+  \end{eqnarray}
+
+  \exercisebreak
+  \begin{enumerate}[b)]
+  \item Agora avalia o limite da razão do logarítmo da verossimilhança 
+	$\frac{1}{n} \log \frac{q(X_1, \ldots, X_n)}{p(X_1, \ldots, X_n)}$ quando
+	$X_1,X_2,\ldots$ são i.i.d. $\sim p(x)$. Então a chance de favorecer $q$ é exponencialmente
+	pequena quando $p$ é verdadeiro.
+  \end{enumerate}
+
+  \exercisebreak
+  \textbf{solução}
+
+  Utilizando novamente a lei forte dos grandes números, teremos
+  \begin{eqnarray}
+  \lim - \frac{1}{n} \log \frac{q(X_1, X_2, \ldots, X_n)}{p(X_1, X_2, \ldots, X_n)} &=& \lim - \frac{1}{n} \sum \log \frac{q(X_i)}{p(X_i)} \nonumber \\
+	&=& - \E \left( \log \frac{q(X)}{p(X)} \right) = - \sum p(x) \log \frac{q(X)}{p(X)} \nonumber \\
+	&=& \sum p(x) \log \frac{p(X)}{q(X)} \nonumber \\
+	&=& D(p \mid \mid q)
+  \end{eqnarray}
+
+  \end{exercise}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 11}
+  \begin{exercise}[Prova do Teorema]
+  Seja $X_1, X_2, \ldots, X_n$ i.i.d. $\sim p(x)$. Seja $B_{\delta}^{(n)} \subset \mathcal{X}^n$ tal que
+  $\Pr \left( B_{\delta}^{(n)}  \right) > 1 - \delta$. Fixe $\epsilon < \frac{1}{2}$.
+
+  \begin{enumerate}[a)]
+  \item Dados dois subconjuntos $A$ e $B$, tais que, $\Pr(A) > 1 - \epsilon_1$ e $\Pr (B) > 1 - \epsilon_2$,
+	mostre que $\Pr(A \cap B) > 1 - \epsilon_1 - \epsilon_2$. Então $\Pr \left( A_{\epsilon}^{(n)} \cap B_{\delta}^{(n)}  \right) \geq 1 - \epsilon - \delta$.
+  \end{enumerate}
+
+  \exercisebreak
+  \textbf{solução}
+
+  Seja $A^{c}$ o complemento de $A$. Então
+  \begin{equation}
+  \Pr \left( A^{c} \cup B^{c} \right) \leq P(A^c) + P(B^c) .
+  \end{equation}
+  Como $\Pr(A) \geq 1 - \epsilon_1$, $\Pr(A^c) \leq \epsilon_1$. De forma similiar, $\Pr(B^c) \leq \epsilon_2$. 
+  Então
+  \begin{eqnarray}
+  \Pr (A \cap B) &=& 1 - \Pr (A^c \cup B^c) \nonumber \\
+	&\geq& 1 - \Pr(A^c) - \Pr(B^c) \nonumber \\
+	&\geq& 1 - \epsilon_1 - \epsilon_2 .
+  \end{eqnarray}
+
+  \exercisebreak
+  \begin{enumerate}[b)]
+  \item Justifique os passos.
+  \end{enumerate}
+ 
+  \textbf{solução}
+  \vspace{-0.5cm}
+  \begin{eqnarray}
+  1 - \epsilon - \delta &\leq& \Pr \left( A_{\epsilon}^{(n)} \cap B_{\delta}^{(n)} \right) \nonumber \\
+		&& \text{\scriptsize utilizando o item anterior do exercício} \nonumber \nonumber \\
+		&=& \sum_{A_{\epsilon}^{(n)} \cap B_{\delta}^{(n)}} p(x^n) \nonumber \\
+		&& \text{\scriptsize definição de prob. de um conj.} \nonumber  \\
+		&\leq& \sum_{A_{\epsilon}^{(n)} \cap B_{\delta}^{(n)}} 2^{-n(H-\epsilon)} \\
+		&& \text{\scriptsize limite da prob. dos elementos no conj. típico} \nonumber
+  \end{eqnarray}
+  
+  \exercisebreak
+
+  \begin{eqnarray}
+  1 - \epsilon - \delta &\leq& \sum_{A_{\epsilon}^{(n)} \cap B_{\delta}^{(n)}} 2^{-n(H-\epsilon)} \nonumber \\
+		&=& \vert A_{\epsilon}^{(n)} \cap B_{\delta}^{(n)}  \vert 2^{-n(H-\epsilon)} \nonumber \\
+		&\leq& \vert B_{\delta}^{(n)}  \vert 2^{-n(H-\epsilon)} \nonumber \\
+		&& \text{\scriptsize pois } { \small  \left( A_{\epsilon}^{(n)} \cap B_{\delta}^{(n)} \right) \subseteq B_{\delta}^{(n)}} .
+  \end{eqnarray}
+
+
+  \end{exercise}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 3 - \textit{Piece of Cake}}
+  \begin{exercise}[Piece of Cake]
+  Um bolo é partido em dois, conforme as proporções abaixo. 
+  \begin{equation}
+  P = \begin{cases} \left( \frac{2}{3}, \frac{1}{3} \right), \quad \text{com prob.} \frac{3}{4} , \\
+	\left( \frac{2}{5}, \frac{3}{5} \right), \quad \text{com prob.} \frac{1}{4} .
+	\end{cases}
+  \end{equation}
+  A maior metade é escolhida e a menor descartada. A metade é subsequentemente redividida seguindo as
+  mesmas regras. Exemplo: o primeiro corte pode resultar em uma fatia de tamanho $\frac{3}{5}$,
+  um novo corte poderia resultar em um pedaço de tamanho $\left(\frac{3}{5}\right) \left(\frac{2}{3}\right)$,
+  e assim por diante, 
+
+  Qual é o tamanho, até a primeira ordem do expoente, do pedaço de bolo remanescente após $n$ cortes sucessivos?
+
+
+  \exercisebreak
+  \textbf{solução}
+  Vamos chamar de $C_i$ a fração do pedaço de bolo decorrente do $i$-ésimo corte, e chamaremos 
+  de $T_n$ a fração remanescente do bolo após $n$ cortes. Teremos então $T_n = C_1 C_2 \ldots C_n = \prod_{i=1}^{n} C_i$.
+
+  Temos que
+  \vspace{-2em}
+  \begin{eqnarray}
+  \lim \frac{1}{n} \log T_n &=& \lim \frac{1}{n} \sum_{i=1}^{n} \log C_i \nonumber \\
+	&& \parbox{15em}{\small{pela lei forte dos grandes números e como $C_i$ são i.i.d. teremos}} \nonumber \\
+	&=& \E \left[ \log C_1 \right] \nonumber \\
+	&=& \frac{3}{4} \log \frac{2}{3} + \frac{1}{4} \log \frac{3}{5} = -0.62296.
+  \end{eqnarray}
+
+  Teremos então $ T_n \rightarrow 2^{n \E \left[ \log C_1 \right]} $.
+
+  \end{exercise}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 10 - \textit{Random box size}}
+  \begin{exercise}[Tamanho da caixa aleatória]
+  Uma caixa retangular aleatória $n$ dimensional com lados $X_1, \ldots, X_n$ é construída.
+  O volume desta caixa é $V_n = \prod_{i=1}^{n} X_i$. O comprimento de aresta de um cubo 
+  $n$ dimensional com mesmo volume que a caixa aleatória é dado por $l = V_n^{1/n}$.
+  Seja $X_1, X_2, \ldots$ v.a. i.i.d. com distribuição uniforme em $[0,1]$.
+  Encontre o limite $\lim_{n \rightarrow \infty} V_n^{1/n}$ e compare com $\left( \E V_n \right)^{1/n}$.
+  Veremos que o valor esperado do comprimento da aresta não captura a idéia do volume da caixa.
+  A média geométrica, ao invés da média aritmética, caracteriza o comportamento de produtos.
+
+  \exercisebreak
+  \textbf{solução} O volume da caixa $V_n = \prod_{i=1}^{n} X_i$ é uma v.a., já que $X_i$ são v.a.
+  $\sim \mathit{u}(0,1)$. $V_n$ tende a $0$ quando $n \rightarrow \infty$.
+
+  Utilizando a lei forte dos grandes números e o fato de $X_i$ serem i.i.d., temos
+  \begin{eqnarray}
+  \ln V_n^{1/n} &=& \frac{1}{n} \ln V_n \nonumber \\
+	&=& \frac{1}{n} \sum \ln X_i \rightarrow \E \left[ \ln (X) \right]
+  \end{eqnarray}
+  \vspace{-1em}
+  Temos ainda que
+  \begin{equation}
+  \E \left[ \ln (X) \right] = \int_0^1 \ln x \mathrm{d}x = \left. \left(x \ln x - x \right)\right|_{p=0}^{p=1} =  -1 .
+  \end{equation}
+
+  \exercisebreak
+  \begin{eqnarray}
+  \lim_{n \rightarrow \infty} V_n^{1/n} &=& \lim_{n \rightarrow \infty} e^{\frac{1}{n} \ln V_n} \nonumber \\
+	&& \parbox{15em}{\small{como $e^x$ é uma função contínua}} \nonumber \\
+	&=& e^{\lim_{n \rightarrow \infty} \frac{1}{n} \ln V_n} = e^{-1} < \frac{1}{2} .
+  \end{eqnarray}
+  $\frac{1}{2}$ é a média aritmética da v.a. e $\frac{1}{e}$ é a média geométrica.
+  O volume esperado da caixa é $\E(V_n) = \prod_{i=1}^{n} \E X_i = \left(\frac{1}{2}\right)^n$.
+
+  \end{exercise}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Exercício 13 - Cálculo do conjunto típico}
+  \begin{exercise}[Cálculo do conjunto típico]
+  Considere uma sequência i.i.d. de v.a. binárias $X_1, \ldots, X_n$ com distribuição $\text{Bern}(p)$
+  onde $p=0.6$, ou seja, $\Pr(X_i = 1) = 0.6$ (logo, $\Pr(X_i = 0) = 0.4$).
+
+  \begin{enumerate}[a)]
+  \item Calcule $H(X)$
+  \end{enumerate}
+  \textbf{solução}
+  \begin{equation}
+  H(X) = H(p) = -0.6 \log 0.6 -0.4 \log 0.4 = 0.97095 \text{bits}.
+  \end{equation}
+
+  \exercisebreak
+  \begin{enumerate}[a)]
+  \setcounter{enumi}{1}
+  \item Considere $n=25$ e $\epsilon=0.1$. Quais sequências pertencem ao conjunto típico $A_{\epsilon}^{(n)}$?
+  Qual é a probabilidade do conjunto típico? Quantos elementos pertencem ao conjunto típico?
+  \end{enumerate}
+  \textbf{solução}
+  Pela definição, o conjunto típico é o conjunto das sequências em que $-\frac{1}{n} \log p(x^n)$ está
+  no intervalo $(H(X)-\epsilon,H(X)+\epsilon)$, isto é, $(0.87095,1.07095)$. A probabilidade de uma sequência
+  depende do seu histograma empírico, neste caso, do número de ocorrências de 1 e 0, sendo dada por
+  \begin{equation}
+  p(x^n) = p^k (1-p)^{n-k}, 
+  \end{equation}
+  onde $k$ é o número de ocorrências de 1. Vamos resolver computacionalmente:
+  \exercisebreak
+  \begin{semiverbatim}
+  >> p=0.6;
+
+  >> H=-p*log2(p)-(1-p)*log2(1-p);
+
+  >> eps=0.1; n=25;
+
+  >> for k=0:n, 
+
+	pn=p\^{ }k*(1-p)\^{ }(n-k); 
+	lpn=-(1/n)*log2(pn); 
+
+	if lpn>H-eps \&\& lpn<H+eps, disp(k); endif; 
+
+     endfor;
+
+   11
+   12
+   13
+   14
+   15
+   16
+   17
+   18
+   19
+  \end{semiverbatim}
+  \exercisebreak
+  Agora que determinamos quais sequências pertencem ao conjunto típico, podemos calcular a probabilidade deste conjunto.
+  \begin{equation}
+  \Pr(A_{\epsilon}^{(n)}) = \sum_{k=11}^{19} {n \choose k} p^k (1-p)^{n-k} .
+  \end{equation}
+  \exercisebreak
+  Iremos novamente resolver computacionalmente.
+  \begin{semiverbatim}
+  >> PA=0; 
+
+  >> for k=0:n, 
+ 
+	pn=p\^{}k*(1-p)\^{}(n-k); lpn=-(1/n)*log2(pn); 
+
+	if lpn>H-eps \&\& lpn<H+eps, 
+
+		PA+=nchoosek(n,k)*pn; 
+
+	endif; 
+
+     endfor; 
+  >> PA =  0.93625
+  \end{semiverbatim}
+  Note que o valor de $\Pr(A_{\epsilon}^{(n)})$ encontrado é maior do que $1-\epsilon$, ou seja,
+  $n$ dado é grande suficiente para garantir que $\Pr(A_{\epsilon}^{(n)}) > 1-\epsilon$.
+  \exercisebreak
+  O número de sequências no conjunto típico, ou seja, o tamanho do conjunto é dado por
+  \begin{equation}
+  \vert A_{\epsilon}^{(n)} \vert = \sum_{k=11}^{19} {n \choose k} 
+  \end{equation}
+  \begin{semiverbatim}
+  >> TA=0; 
+
+  for k=0:n, 
+
+     pn=p\^{}k*(1-p)\^{}(n-k); lpn=-(1/n)*log2(pn); 
+
+     if lpn>H-eps \&\& lpn<H+eps, TA+=nchoosek(n,k); endif; 
+
+  endfor; TA
+
+  TA =  26366510
+  \end{semiverbatim}
+  \exercisebreak
+  Podemos ainda calcular os limites do tamanho deste conjunto:
+  \begin{equation}
+  (1-\epsilon)2^{n(H(X)-\epsilon)} \leq \vert A_{\epsilon}^{(n)} \vert \leq 2^{n(H(X)+\epsilon)} .
+  \end{equation}
+  \begin{semiverbatim}  
+  >> ll=(1-eps)*2\^{}(n*(H-eps))
+
+  ll =  3226999.15174967
+
+  >> LL=2\^{}(n*(H+eps))
+
+  LL =  114737747.617766
+
+  >> TA > ll \&\& TA < LL
+
+  ans =  1
+  \end{semiverbatim}
+
+
+  \end{exercise}
+\end{frame}

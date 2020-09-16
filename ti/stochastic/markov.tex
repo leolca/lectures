@@ -1,0 +1,195 @@
+\subsection{Passeio Aleatório}
+\begin{frame}[allowframebreaks]
+  \frametitle{Caminhada do Bêbado}
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.25\textwidth]{images/randomwalk.pdf}
+        \caption{Passeio aleatório (Wikipedia).}
+        \label{fig:random_walk_2d}
+        \end{figure}
+
+  Vamos considerar aqui o exemplo do passeio aleatório sobre um grafo com pesos.
+  \begin{itemize}
+  \item Assuma uma distribuição estacionária irredutível e aperiódica.
+  \item Considere o grafo $G=(V,E)$ com $m$ nós rotulados $\{1, 2, \ldots, m\}$ e arestas entre os nós com pesos $w_{ij} \geq 0$ 
+	(aresta entre o nó $i$ e o nó $j$). Teremos $w_{ij} = w_{ji}$ e $w_{ij}=0$ se não existe aresta entre os nós $i$ e $j$.
+
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.3\textwidth]{images/grafo.pdf}
+        \label{fig:grafo}
+        \end{figure}
+
+  \item O andar do bêbado (\textit{random walk}) $\{ X_n \}$, $X_n \in \{1,2,\ldots,m\}$, é uma sequência de vértices de um grafo.
+  \item Dado $X_n = i$, o próximo vértice $j$ será escolhido dentre aqueles nós conectados com $i$ com probabilidade proporcional
+	ao peso conectando os vértices $i$ e $j$, i.e., $p_{ij}$ será dado por
+	\begin{equation}
+	p_{ij} = \frac{w_{ij}}{\sum_j w_{ij}} = \frac{w_{ij}}{w_i}
+	\end{equation}
+	onde $w_i \triangleq \sum_j w_{ij}$ (peso total das arestas que saem do nó $i$).
+  \item A soma de todos os pesos, de todas as arestas será dada por
+	\begin{equation}
+	w = \sum_{i,j : j > i} w_{ij}
+	\end{equation}
+  \item Note que $\sum_i w_i = \sum_{i,j} w_{ij} = 2w$.
+  \item Vamos supor que a distribuição estacionária é dada por $\mu_i = \frac{w_i}{2w}$, o que poderemos
+	checar verificando a equação $\mu^T = \mu^T P$:
+	\begin{equation}
+	\begin{pmatrix} \mu_1 & \mu_2 & \ldots & \mu_m \end{pmatrix} =  
+		\begin{pmatrix} \mu_1 & \mu_2 & \ldots & \mu_m \end{pmatrix}
+ 		\begin{pmatrix}
+		p_{11} & p_{12} & \ldots & p_{1m} \\
+		p_{21} & p_{22} & \ldots & p_{2m} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		p_{m1} & p_{m2} & \ldots & p_{mm}
+		\end{pmatrix}
+	\end{equation}
+	ou seja,
+	\begin{equation}
+	\forall j, \quad \sum_i \mu_i p_{ij} = \sum_i \frac{w_i}{2w} \frac{w_{ij}}{w_i} = \sum_i \frac{1}{2w} w_{ij} = \frac{w_j}{2w} = \mu_j
+	\end{equation}
+  \item $\mu_j = \frac{w_j}{2w}$ : esta distribuição estacionária possui uma interessante propriedade de localização:
+	ela depende apenas dos pesos locais (conectados ao nó em questão) e do total dos pesos; desta forma, ela não 
+	sofrerá alteração se os pesos de uma outra parte do grafo (com arestas não ligadas ao nó $i$) 
+	sofrerem alteração sem alterar a soma dos pesos.
+  \item Note que a cadeia é aperiódica, já que $w_{ii} = 0$, como evidenciado abaixo
+	\begin{eqnarray}
+	2w &=& \sum_i w_i = \sum_{i,j} w_{ij} = \sum_{i,j : i=j} w_{i,j} + \sum_{i,j : i>j} w_{i,j} + \sum_{i,j : i<j} w_{i,j}  \nonumber \\
+	&=& \sum_{i,j : i=j} w_{i,j} + w + w = \sum_{i,j : i=j} w_{i,j} + 2w
+	\end{eqnarray}
+ 	logo, $\sum_{i,j : i=j} w_{i,j} = 0 \Rightarrow w_{ii} = 0$.
+  \item A taxa de entropia para este passeio aleatório será dada por
+	\begin{eqnarray}
+	H(\mathcal{X}) &=& H(X_2 \mid X_1) = -\sum_i \mu_i \sum_j p_{ij} \log p_{ij} \nonumber \\
+		&=& - \sum_i \frac{w_i}{2w} \sum_j \frac{w_{ij}}{w_i} \log \frac{w_{ij}}{w_i} = - \sum_{i,j} \frac{w_{ij}}{2w} \log \frac{w_{ij}}{w_i} \nonumber \\
+		&=& - \sum_{i,j} \frac{w_{ij}}{2w} \log \left( \frac{w_{ij}}{w_i} \frac{2w}{2w} \right) \nonumber \\
+		&=& - \sum_{i,j} \frac{w_{ij}}{2w} \log \frac{w_{ij}}{2w} - \sum_{i,j} \frac{w_{ij}}{2w} \log \frac{2w}{w_i} \nonumber \\
+		&=& H\left( \ldots,\frac{w_{ij}}{2w} , \ldots \right) - H\left( \ldots,\frac{w_{i}}{2w} , \ldots \right) 
+	\end{eqnarray}
+	onde o primeiro termo representa a incerteza sob todas arestas e o segundo termo representa a incerteza sob todos os nós em condição estacionária
+	($w_i/2w=\mu_i$).
+
+	Se todas arestas possuírem o mesmo peso, sendo $E_i$ o número de arestas emanando do nó $i$, e $E$
+	o número total de arestas, teremos
+	\begin{equation}
+	H(\mathcal{X}) = \log (2E) - H \left( \frac{E_1}{2E}, \frac{E_2}{2E}, \ldots, \frac{E_m}{2E} \right) .
+	\end{equation}
+  \end{itemize}
+\end{frame}
+
+
+\subsection{Cadeia Oculta de Markov}
+\begin{frame}[allowframebreaks]
+  \frametitle{Modelo de Markov}
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\textwidth]{images/mm.pdf}
+        \label{fig:mm}
+        \end{figure}
+  Para o modelo de Markov de primeira ordem, temos que dois estados são independentes quando um intermediário é dado, por exemplo:
+	\begin{equation}
+	Y_5 \independent Y_3 \mid Y_4 \text{ ou então } Y_4 \independent Y_1 \mid Y_{2:3} \text{ ou } Y_4 \independent Y_1 \mid Y_2
+	\end{equation}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Cadeia Oculta Markov}
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\textwidth]{images/hmm.pdf}
+        \label{fig:hmm}
+        \end{figure}
+  Na cadeia oculta de Markov, dizemos que um observação é gerada por um estado independente de outras observações ou estados passados.
+  Por exemplo:
+	\begin{equation}
+        X_3 \independent X_1 \mid Y_3
+        \end{equation}
+
+  \framebreak
+
+  \begin{itemize}
+  \item Seja $Y_1, Y_2, \ldots, Y_n$ uma cadeia de Markov estacionária.
+  \item Seja $X_{1:n}$ uma função aleatória desta cadeia de Markov, i.e.,
+	\begin{equation}
+	X_i = \phi_N (Y_i) = \begin{cases}
+				\phi_1 (Y_i) \quad \text{com prob. } p_1(Y_i) \\
+				\phi_2 (Y_i) \quad \text{com prob. } p_2(Y_i) \\
+				\vdots \\
+				\phi_m (Y_i) \quad \text{com prob. } p_m(Y_i) 
+				\end{cases}
+	\end{equation}
+	onde $N \in \{1,2,\ldots,m\}$ é uma variável aleatória.
+  \item Note que o processo estocástico $X_1,X_2,\ldots$ não forma uma cadeia de Markov. Sequer a Markovidade de primeira ordem é satisfeita.
+	Por exemplo: não podemos falar que $X_4 \independent X_1 \mid X_{2:3}$, 
+	mesmo conhecendo $X_{2:3}$, $X_1$ ainda pode ser necessário para determinar $X_4$.
+  \item Se $\{Y_i\}_i$ é estacionário, então $\{X_i\}_i$ é um processo estacionário.
+  \item A taxa de entropia do processo $\{X_i\}_i$ pode ser calculada
+	\begin{equation}
+	H(\mathcal{X}) = \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}, \ldots, X_1) 
+	\end{equation}
+	mas iremos calcular os limites inferior e superior, o que é mais simples.
+  \item Limite superior:
+	\begin{eqnarray}
+	H(X_n \mid X_{n-1}, \ldots, X_1) &=& H(X_{n+1} \mid X_{n}, \ldots, X_2) \nonumber \\
+		&\geq& H(X_{n+1} \mid X_{n}, \ldots, X_2, X_1) \nonumber \\
+		&=& H(X_{n+2} \mid X_{n+1}, \ldots, X_2) \nonumber \\
+		&\geq& H(X_{n+2} \mid X_{n+1}, \ldots, X_2, X_1) \nonumber \\
+		&\geq& \ldots \geq H(\mathcal{X})
+	\end{eqnarray}
+  \item Limite inferior:
+	\begin{eqnarray}
+	H(X_n \mid X_{n-1}, \ldots, X_2, Y_1) = H(X_n \mid X_{n-1}, \ldots, X_2, X_1,Y_1) \nonumber \\
+		\text{já que } X_n \independent X_1 \mid Y_1 \nonumber \\
+		= H(X_n \mid X_{n-1}, \ldots, X_2, X_1,Y_1,Y_0,Y_{-1},\ldots,Y_{-k}) \\
+		\text{já que } X_n \independent Y_0 \mid Y_1 \text{ e } X_n \independent Y_{-1} \mid Y_1 \text{ etc...} \nonumber \\
+		= H(X_n \mid X_{n-1}, \ldots, X_2, X_1,Y_1,Y_0,Y_{-1},\ldots,Y_{-k},X_0,\ldots,X_{-k}) \nonumber \\
+		\text{pelo mesmo motivo} \nonumber \\
+		\leq H(X_n \mid X_{n-1}, \ldots, X_2, X_1,X_0,\ldots,X_{-k}) \nonumber \\
+		\text{condicionar reduz a entropia} \nonumber \\
+		= H(X_{n+k+1} \mid X_{n+k}, \ldots, X_1) \\
+		\text{estacionariedade} \nonumber 
+	\end{eqnarray}
+ 	Desta forma temos o limite inferior:
+	\begin{equation}
+	H(X_n \mid X_{n-1}, \ldots, X_2, Y_1) \leq H(\mathcal{X})
+	\end{equation}
+  \item Os limites para a taxa de informação em uma HMM são dados 
+	\begin{equation}
+        H(X_n \mid X_{n-1}, \ldots, X_1, Y_1) \leq H(\mathcal{X}) \leq H(X_n \mid X_{n-1}, \ldots, X_1)
+	\end{equation}
+  \end{itemize}
+
+
+  \framebreak
+
+  \begin{theorem}[teorema do confronto (sanduíche)]
+  \begin{equation}
+  H(X_n \mid X_{n-1}, \ldots , X_1) - H(X_n \mid X_{n-1}, \ldots, X_1, Y_1) \rightarrow 0
+  \end{equation}
+  \end{theorem}
+
+  \begin{proof}
+  \begin{eqnarray}
+  H(X_n \mid X_{n-1}, \ldots , X_1) - H(X_n \mid X_{n-1}, \ldots, X_1, Y_1)  \nonumber \\
+	= I(X_n ; Y_1 \mid X_{n-1}, \ldots, X_1) \leq H(Y_1)
+  \end{eqnarray}
+  Temos também que $I(Y_1 ; X_1, \ldots, X_n) \leq H(Y_1)$, para todo $n$.
+  \proofbreak
+  Utilizando a regra da cadeira da informação mútua ($I(X;Y,Z) = I(X;Z) + I(X;Y|Z)$), e tirando o limite, teremos
+  \begin{eqnarray}
+  \lim_{n \rightarrow \infty} I(Y_1 ; X_1, \ldots, X_n) =  \lim_{n \rightarrow \infty} \sum_{i=1}^n I(Y_1;X_i \mid X_{1:i-1}) \nonumber \\
+	= \sum_{i=1}^\infty I(Y_1;X_i \mid X_{1:i-1}) \leq H(Y_1) < \infty
+  \end{eqnarray} 
+  Então o resultado da soma infinita é uma constante, isto significa que os termos $\rightarrow 0$ quando $n \rightarrow \infty$.
+  Logo, cada um dos termos $I(Y_1;X_i \mid X_{1:i-1}) \rightarrow 0$ quando $n \rightarrow \infty$.
+  \end{proof}
+
+  \framebreak
+
+  Ao final, temos que
+  \begin{equation}
+  \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}, \ldots, X_1, Y_1) = H(\mathcal{X}) = \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}, \ldots, X_1)
+  \end{equation}
+\end{frame}
+

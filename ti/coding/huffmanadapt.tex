@@ -1,0 +1,261 @@
+\subsection{Revisão Huffman}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Codificação de Huffman}
+  \begin{itemize}
+  \item Codificação de Huffman é uma codificação de símbolo. Um símbolo é codificado por vez.
+  \item A codificação de Huffman é ótima para comprimentos inteiros.
+  \item De forma geral, cada símbolo do alfabeto da fonte deve ser codificado por um número inteiro de bits 
+	formando uma palavra.
+  \item Para distribuições que não são D-ádicas, podemos estar utilizando um bit extra por símbolo, na média.
+  \item Em alguns casos, precisaremo de longos blocos para ter benefício, ou seja, codificar em blocos.
+  \item Será necessário computar e armazenar $p(x_{1:n})$.
+  \item Para um alfabeto de tamanho $\vert \mathcal{X} \vert$ será necessário armazenar/calcular 
+	$\vert \mathcal{X} \vert^n$ probabilidades.
+  \item Existem problemas na estimação de $p(x_{1:n})$ (esparsividade e latência). 
+	Será necessário utilizar técnicas de \textit{smoothing}.
+  \item Para Huffman teremos
+	\begin{equation}
+	H(X) \leq L_{\text{Huffman}} \leq H(X)+1
+	\end{equation}
+  \item Para Huffman em blocos
+	\begin{equation}
+        H(X) \leq L_{\text{Huffman em blocos}} \leq H(X)+1
+        \end{equation}
+  \item Se $H(X_{1:n})$ é pequeno, um bit extra é significante.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{As Probabilidade se Alteram}
+  \begin{itemize}
+  \item Processos sequenciais reais não são estacionários. Muitas vezes é razoável supor que os processos
+	são `localmente estacionários', ou seja, para uma determinada janela do tempo poderemos considerar
+	que o processo é governado por uma distribuição $p(x)$ fixa.
+  \item Huffman assume que $p(x)$ é fixo. Se a distribuição muda para $p'(x)$ em outro instante do tempo
+	sabemos que agora a codificação será sub-ótima e o preço pago por utilizar a distribuição errada
+	é dado por $D(p'(x) \mid \mid p(x))$ bits por símbolo, onde $p'(x)$ será a distribuição correta
+	para esta nova janela no tempo.
+  \item Possível solução para o problema:
+	\begin{itemize}
+	\item Recalcular Huffman utilizando a nova distribuição (ou estimação desta) para cada período.
+		Esta solução é ineficiente pois implica em retransmitir o codebook a cada intervalo,
+		sendo para tanto necessário aguardar um período para estimar a nova distribuição e então 
+		recalcular Huffman.
+	\item Podemos fazer um método de Huffman adaptativo.
+	\end{itemize} 
+  \end{itemize}
+\end{frame}
+
+
+\subsection{Huffman Adaptativo}
+\begin{frame}[allowframebreaks]
+  \frametitle{Huffman Adaptativo}
+  \begin{itemize}
+  \item A cada símbolo codificado e transmitido iremos recalcular as frequências de ocorrências 
+	(e assim as probabilidades estimadas) e inserir símbolos na árvore de Huffman ou alterar
+	a árvore, caso necessário.
+  \item Codificador e Decodificador trabalham realizando as mesmas alterações (\textit{lockstep}).
+  \item É necessário um símbolo extra NYT para indicar que teremos uma nova folha na árvore, um
+	símbolo que não foi transmitido previamente.
+  \end{itemize}
+
+  \begin{example}
+  Vamos considerar a sequência $aabcdad$ no alfabeto $\{a,b,\ldots\}$ a ser codificada utilizando
+  Huffman Adaptativo.
+  
+  Tabele com código fixo dos símbolos, sem utilizar a codificação de Huffman:
+
+	\begin{tabular}{ll}
+	símbolo & código \\ \hline
+	a	& 000	\\
+	b	& 001	\\
+	c	& 010	\\
+	d	& 011 	\\
+	$\vdots$& $\vdots$
+	\end{tabular}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff3.pdf}
+                \label{fig:ahuff3}
+                \end{figure}
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff4.pdf}
+                \label{fig:ahuff4}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff5.pdf}
+                \label{fig:ahuff5}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff6.pdf}
+                \label{fig:ahuff6}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff7.pdf}
+                \label{fig:ahuff7}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff8.pdf}
+                \label{fig:ahuff8}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff9.pdf}
+                \label{fig:ahuff9}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff10.pdf}
+                \label{fig:ahuff10}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff11.pdf}
+                \label{fig:ahuff11}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff12.pdf}
+                \label{fig:ahuff12}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff13.pdf}
+                \label{fig:ahuff13}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff14.pdf}
+                \label{fig:ahuff14}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff15.pdf}
+                \label{fig:ahuff15}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff16.pdf}
+                \label{fig:ahuff16}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff17.pdf}
+                \label{fig:ahuff17}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff18.pdf}
+                \label{fig:ahuff18}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff19.pdf}
+                \label{fig:ahuff19}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff20.pdf}
+                \label{fig:ahuff20}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff21.pdf}
+                \label{fig:ahuff21}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff22.pdf}
+                \label{fig:ahuff22}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff23.pdf}
+                \label{fig:ahuff23}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff24.pdf}
+                \label{fig:ahuff24}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff25.pdf}
+                \label{fig:ahuff25}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff26.pdf}
+                \label{fig:ahuff26}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff27.pdf}
+                \label{fig:ahuff27}
+                \end{figure}
+
+  \examplebreak
+                \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/ahuff28.pdf}
+                \label{fig:ahuff28}
+                \end{figure}
+
+  \end{example}
+\end{frame}
+

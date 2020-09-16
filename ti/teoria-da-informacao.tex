@@ -27,7 +27,8 @@
     \end{beamercolorbox}%
 }
 %%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{color}
+\definecolor{BlueGreen}{cmyk}{0.8,0,0.5,0.3}
 \newcommand{\hrefcolor}[2]{\textcolor{BlueGreen}{\href{#1}{#2}}}
 
 % Rotating Objects and Captions
@@ -41,6 +42,13 @@
 % equation stuff
 \usepackage{nicefrac}
 \usepackage{cancel}
+
+% multi-do
+\usepackage{multido}
+
+% write algorithm
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
 % table diagonal box
 \usepackage{diagbox}
@@ -98,6 +106,21 @@
 }
 % END - listings
 
+% arydshln - Draw dash-lines in array/tabular
+\usepackage{arydshln}
+
+% adjust general LaTeX material in several way
+\usepackage{adjustbox}
+
+%\usepackage{multirow,graphicx,array}
+\newcommand*\rot{\rotatebox{90}}
+
+% flexible mechanism for giving coloured panels behind specified columns in a table
+\usepackage{colortbl}
+
+\usepackage{multirow}
+
+
 %\usepackage{amsthm}
 %\newtheorem{theorem}{Theorem}
 %\newtheorem{corollary}{Corollary}
@@ -127,8 +150,7 @@
 %\patchcmd{\definition}{Definition}{Definição}{}{}
 %\patchcmd{\remark}{Remark}{Observação}{}{}
 
-%\newtheorem{exercise}[theorem]{Exercício}
-
+\newtheorem{exercise}{Exercício}
 
 \newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
 \newcommand*{\proofbreak}{\hfill ...\usebeamertemplate{proof end}\framebreak\usebeamertemplate{proof begin}{\scriptsize\color{gray}continuação...}\\}
@@ -241,6 +263,9 @@
 \frame{\titlepage}
 
 \frame{\centering \includegraphics[width=0.4\textwidth]{images/qrcode-ti.pdf} \\ \url{https://sites.google.com/site/leolca/teaching/information-theory}}
+\frame{\centering \includegraphics[width=0.4\textwidth]{images/qrcode-slides.pdf} \\ \url{https://github.com/leolca/lectures/blob/master/ti/teoria-da-informacao.pdf}}
+
+
 
 \frame[allowframebreaks]{\begin{footnotesize}\tableofcontents\end{footnotesize}}
 
@@ -261,8 +286,28 @@
 % propriedade da equipartição assintótica / conjunto típico
 \input{propeqa/propeqa.tex}
 \input{propeqa/propconjtipo.tex}
-
-
+\input{propeqa/exercicios.tex}
+% método de tipos
+\input{tipos/method-types.tex}
+% processos estocásticos
+\input{stochastic/stochastic.tex}
+\input{stochastic/markov.tex}
+% códigos
+\input{coding/coding.tex}
+\input{coding/huffman.tex}
+\input{coding/shannon-fano-elias.tex}
+% huffman adaptativo
+%\input{coding/huffmanadapt.tex}
+\input{coding/acoding.tex}
+\input{coding/lempelziv.tex}
+% capacidade de canal
+\input{canal/capcanal.tex}
+% codigos de correcao de erro
+\input{correrro/codes.tex}
+% entropia diferencial
+\input{continuo/contdifentropy.tex}
+% canal gaussiano
+\input{continuo/gausschannel.tex}
 
 
 \bibliographystyle{apalike}
