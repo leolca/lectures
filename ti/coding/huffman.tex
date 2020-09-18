@@ -143,8 +143,8 @@
 	A partição I é aquela que fornece a pergunta com maior entropia.
   \item Temos
 	\begin{eqnarray}
-	H(X \mid Y_2, Y_1) &=& H(X,Y_2 \mid Y_1) - H(Y_2 \mid Y_1) \\
-			&=& H(X \mid Y_1) - H(Y_2 \mid Y_1) \\
+	H(X \mid Y_2, Y_1) &=& H(X,Y_2 \mid Y_1) - H(Y_2 \mid Y_1) \nonumber \\
+			&=& H(X \mid Y_1) - H(Y_2 \mid Y_1) \nonumber \\
 			&=& H(X) - H(Y_2 \mid Y_1) - H(Y_1)
 	\end{eqnarray}
   \item Abordagem gulosa: a cada passo escolhemos o que nos parece melhor, as escolhas futuras terão que lidar
@@ -229,7 +229,7 @@
   \item O comprimento das palavras em um código Huffman não são sempre $\leq \lceil \log 1/p_i \rceil$ (comprimento de Shannon).
   \end{itemize}
 
-  \begin{example}
+  \begin{example}[\citep{bilmes2013}]
   \begin{itemize}
   \item $\mathcal{X} = \{1,2,3,4,5\}$ com probabilidades $(1/4, 1/4, 1/5, 3/20, 3/20)$.
 
