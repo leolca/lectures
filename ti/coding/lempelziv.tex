@@ -39,8 +39,285 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Compressão LZ}
+\subsection{LZ77}
 
+\begin{frame}[allowframebreaks]
+  \frametitle{Compressão Lempel Ziv (LZ77)}
+ 
+  \bibentry{ziv1977}
+ 
+  \begin{itemize}
+  \item O princípio deste método é utilizar o que foi visto anteriormente pelo codificador para codificar os dados de entrada.
+  \item Utiliza uma janela deslizante dividida em
+  \begin{enumerate}
+  \item \textit{search buffer} (comprimento de algumas centenas de bytes)
+  \item \textit{look-ahead buffer} (dezenas de bytes)
+  \end{enumerate}
+  \end{itemize}
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/sliding_window_lz77.png}
+  \caption{Codificação LZ77 - janela deslizante \citep{salomon2007}.}
+  \label{fig:sliding_window_lz77}
+  \end{figure}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.65\textwidth]{images/lz77_schema.png}
+  \caption{Codificação LZ77 \citep{salomon2007}.}
+  \label{fig:lz77_schema}
+  \end{figure}
+
+  \framebreak
+
+  O codificador varre o \textit{buffer} de busca (da direita para a esquerda) à procura
+  de um \textit{match} para o primeiro símbolo no \textit{look-ahead buffer} (no exemplo em questão o símbolo \textbf{e}).
+  O codificador encontra o \textbf{e} da palavra \textbf{easily}. Este \textbf{e} está a uma distância
+  de 8 do final do \textit{buffer} de busca. O codificador busca a maior sequência igual (\textit{match}), no
+  caso em tela, encontra a sequência \textbf{eas} de comprimento 3. O codificador continua a busca 
+  no símbolos passados. No exemplo dado, o codificador encontra outra correspondência (\textit{match}) 
+  a uma distância de 16 e, mais uma vez, a maior sequência igual será também de comprimento 3.
+  O codificador seleciona a sequência igual mais longa ou, em caso de empate, a última encontrada (para simplificar o codificador).
+  Como houve empate no exemplo será gerado o \textit{token} (16, 3, e) constituído por:
+  deslocamento (\textit{offset}), comprimento (\textit{length}) e próximo símbolo (\textit{next symbol}) no
+  \textit{buffer} de busca.
+  As janelas são então deslocadas para a direita $n+1$ posições, onde $n$ é comprimento do último \textit{match} encontrado.
+  No nosso exemplo, $n=3$.
+
+  \framebreak
+
+  Se, por um lado, utilizar o último \textit{match} simplifica o codificador, por não ter de manter registro de 
+  todos os \textit{matches} encontrados, por outro lado, gera valores de \textit{offset} grandes na saída.
+  Isto não parece ser vantajoso. Se selecionarmos o primeiro \textit{match}, teremos valores de \textit{offset}
+  pequenos na saída. É possível então seguir a compressão LZ77 por uma codificação Huffman, onde os \textit{offset} menores
+  serão codificados por palavras menores. Este método foi proposto por Bernd Herd, sendo conhecido como LZH.
+
+  \framebreak
+
+  Os primeiros 5 passos na codificação do exemplo são apresentadas a seguir:
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/lz77_5steps.png}
+  \caption{Passos do LZ77 \citep{salomon2007}.}
+  \label{fig:lz77_5steps}
+  \end{figure}
+
+  \framebreak
+
+  \textbf{token}: (\textit{offset, length, symbol})
+  
+  O tamanho do \textit{token} é: tamanho do \textit{offset} + tamanho do comprimento + tamanho do símbolo.
+  
+  \begin{itemize}
+  \item tamanho do \textit{offset} = $\lceil log_2 S \rceil$, onde $S$ é o comprimento do \textit{buffer} de busca (tipicamente de 10 a 12 bits)
+  \item tamanho do comprimento = $\lceil log_2 (L-1) \rceil$, onde $L$ é o tamanho do \textit{buffer} de \textit{look-ahead} (tipicamente 5 bits)
+  \item tamanho do símbolo = $\lceil log_2 A \rceil$, onde $A$ é o tamanho do alfabeto (tipicamente 8 bits)
+  \end{itemize}
+
+  Tamanho total do \textit{token} típico é 11 + 5 + 8 = 24 bits.
+
+  \framebreak 
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/lz77_token_ex01.png}
+  %\caption{.}
+  \label{fig:lz77_token_ex01}
+  \end{figure}
+  cria o \textit{token} (3,4,``\underline{\ }'').
+
+  \vspace{2ex}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/lz77_token_ex02.png}
+  %\caption{.}
+  \label{fig:lz77_token_ex02}
+  \end{figure}
+  cria o \textit{token} (1,9,A).
+
+  \framebreak
+
+  O decodificador é bem mais simples.
+  Precisa manter um \textit{buffer}, com mesmo tamanho que a janela do codificador:
+  \begin{enumerate}
+  \item decodificador recebe um \textit{token};
+  \item encontra uma correspondência no seu \textit{buffer};
+  \item escreve na saída a correspondência encontrada e terceiro campo do \textit{token};
+  \item desloca a \textit{string} encontrada e o terceiro campo para dentro do \textit{buffer}.
+  \end{enumerate}
+
+  \begin{itemize}
+  \item o método assume implicitamente que padrões ocorrem próximos.
+  \item O método básico do LZ77 foi melhorado em diversas maneiras aos logo dos anos 80 e 90:
+        \begin{itemize}
+        \item utilização de campos de \textit{offset} e comprimento com tamanhos variáveis no \textit{token};
+        \item aumentar o comprimento de ambos \textit{buffers};
+        \item mover todo o texto na janela para a esquerda após cada correspondência encontrada;
+        \item substituir a janela linear por uma janela circular;
+        \item adicionar um bit extra (\textit{flag}) a cada \textit{token}, eliminando o terceiro campo;
+        \item busca com \textit{Deflate algorithm} utilizando \textit{hash table} para encontrar correspondências.
+        \end{itemize}
+  \end{itemize}
+
+\end{frame}  
+
+
+\subsection{LZ78}
+\begin{frame}[allowframebreaks] 
+  \frametitle{LZ78}
+
+  \bibentry{ziv1978}
+
+  \vspace{1ex}
+  LZ78 é também conhecido como LZ2.
+
+  O LZ78 não utiliza \textit{buffer} de busca, nem \textit{look-ahead buffer}, ou janela deslizante,
+  ao invés, utiliza um dicionário com as strings encontradas previamente.
+
+  \begin{itemize}
+  \item dicionário começa vazio (ou quase vazio);
+  \item o tamanho do dicionário é limitado pela quantidade de memória disponível;
+  \item o codificador escreve na saída \textit{tokens} com dois campos (ponteiro para o dicionário e um símbolo);
+  \item cada \textit{token} corresponde a uma \textit{string} de símbolos na entrada;
+  \item esta \textit{string} é adicionada ao dicionário após o \textit{token} ser escrito no fluxo de dados comprimido;
+  \item nada é apagado do dicionário (dicionário tende a crescer rapidamente e ocupar toda memória).
+  \end{itemize}
+
+  \framebreak
+
+  Funcionamento do LZ78:
+  \begin{itemize}
+  \item O dicionário começa com uma \textit{string} vazia (\texttt{null}) na posição zero.
+  \item À medida que os símbolos são codificados, strings são adicionadas no dicionário,
+  \item O próximo símbolo \textbf{x} é lido no fluxo de dados de entrada.
+  \item Procura-se por \textbf{x} no dicionário.
+  \item Se não for encontrado, adiciona-o ao dicionário e gera o seguinte \textit{token} na saída: \textbf{(0, x)}
+  \item Se for encontrado, o próximo símbolo \textbf{y} é lido e procura-se no dicionário pela \textit{string} de
+        dois símbolos \textbf{xy}.
+  \item Se não for encontrado, a \textit{string} \textbf{xy} é adicionada à próxima posição disponível no dicionário e o 
+        \textit{token} \textbf{(37, y)} é escrito na saída, onde \textbf{37} é a posição no dicionário onde encontrou-se
+        a \textit{string} \textbf{x} (por exemplo).
+  \end{itemize}  
+
+
+  \framebreak
+  Estrutura em árvore.
+  \begin{itemize}
+  \item Uma boa estrutura de dados para o dicionário é uma árvore.
+  \item A árvore começa com a \textit{string} vazia na raiz.
+  \item Todas strings que começam com a \textit{string} vazia (strings para as quais o ponteiro de \textit{token} é zero) são adicionadas
+        como filhos da raiz.
+  \item Considerando um alfabeto de símbolos de 8-bits, existem 256 símbolos diferentes, então em princípio, cada nó
+        da árvore pode ter até 256 filhos.
+  \end{itemize} 
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/lz78_example.png}
+  \caption{Exemplo \citep{salomon2007}.}
+  \label{fig:lz78_example}
+  \end{figure}
+ 
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/lz78_tree_example.png}
+  \caption{Exemplo \citep{salomon2007}.}
+  \label{fig:lz78_tree_example}
+  \end{figure}
+
+ 
+\end{frame}
+
+\subsection{LZW}
+\begin{frame}[allowframebreaks]
+  \frametitle{LZW}
+  
+  \bibentry{welch1984} 
+  \vspace{2ex} 
+
+  LZW é uma variação popular do LZ78, desenvolvida por Terry Welch em 1984. 
+  
+  \vspace{2ex}
+  A sua principal característica é eliminar o segundo campo do \textit{token}.
+  (um \textit{token} do LZW consiste em apenas um ponteiro para o dicionário)
+
+  \vspace{2ex}
+  O método LZW começa inicializando o dicionário com todos os símbolos do alfabeto.
+  Símbolos de 8 bits: 256 entradas.
+
+  \framebreak
+
+  O princípio do LZW é que o codificador recebe os símbolos um a um e acumula-os formando uma \textit{string} \textbf{I}.
+  \begin{itemize}
+  \item Após cada símbolo ser recebido na entrada e concatenado formando \textbf{I},
+        busca-se no dicionário pela \textit{string} \textbf{I}.
+  \item Enquanto \textbf{I} for encontrado no dicionário, o processo continua.
+  \item Em certo momento, ao adicionar o próximo símbolo \textbf{x} a busca falhará, ou seja,
+        a \textit{string} \textbf{I} está no dicionário, mas a \textit{string} \textbf{Ix} não está.
+  \item o codificador 
+    \begin{itemize}
+    \item escreve na saída o ponteiro a localização da \textit{string} \textbf{I} no dicionário 
+    \item acrescenta a \textit{string} \textbf{Ix} na próxima posição livre do dicionário
+    \item inicializa a \textit{string} de busca \textbf{I} como sendo o símbolo \textbf{x}. 
+    \end{itemize}
+  \end{itemize}  
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/lzw_example.png}
+  \caption{Exemplo \citep{salomon2007}.}
+  \label{fig:lzw_example}
+  \end{figure}
+
+  \framebreak
+
+  \begin{enumerate}
+  \item Inicializa o dicionário: as posições 0 a 255 conterão todos os 256 bytes possíveis.
+  \item A primeira entrada é o símbolo \textbf{s}. Este é encontrado no dicionário (na posição 115, já que 
+        é o valor do código ASCII para \textbf{s}). O próximo símbolo na entrada é \textbf{i}, mas
+        \textbf{si} não está no dicionário. O codificado fará o seguinte: (1) a saída será 115,
+        (2) salva a \textit{string} \textbf{si} na próxima posição disponível no dicionário (256),
+        e (3) inicializa a \textit{string} de busca \textbf{I} com o símbolo \textbf{i}.
+   \item O próximo símbolo na entrada do codificador é \textbf{r}, porém a \textit{string} \textbf{ir} 
+        não está no dicionário. O codificador (1) emite na saída 105 (código ASCII para \textbf{i}),
+        (2) salva \textbf{ir} na próxima posição disponível no dicionário (257), e (3) inicializa
+        \textbf{I} com o símbolo \textbf{r}.
+   \end{enumerate}
+
+   \framebreak
+
+   \begin{columns}[T]
+   \column{.33\textwidth}
+   \includegraphics[width=0.9\textwidth]{images/lzw_encoding01.png}
+   \column{.33\textwidth}
+   \includegraphics[width=0.9\textwidth]{images/lzw_encoding02.png}
+   \column{.33\textwidth}
+   \includegraphics[width=0.9\textwidth]{images/lzw_encoding03.png}
+   \end{columns}
+   \citep{salomon2007}
+
+   \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.65\textwidth]{images/lzw_dictionary.png}
+  \caption{Dicionário final. Exemplo \citep{salomon2007}.}
+  \label{fig:lzw_dictionary}
+  \end{figure}
+
+\end{frame}
+
+
+\subsection{Análise da compressão Lempel Ziv}
 \begin{frame}[allowframebreaks]
   \frametitle{Compressão Lempel Ziv}
 
@@ -62,14 +339,14 @@
 	\begin{tabular}{lcccccccc}
 	frase   & a 	& \textvisiblespace 	& c 	& as 	& a\textvisiblespace 	& ca 	& i 	& u \\
 	posição & 1 	& 2			& 3 	& 4 	& 5 			& 6 	& 7 	& 8 \\
-	código  & (0,a) & (0,\textvisiblespace) & (0,c) & (1,s) & (1,\textvisiblespace)	& (3,a) & (0,i) & (0,u) 
+	token   & (0,a) & (0,\textvisiblespace) & (0,c) & (1,s) & (1,\textvisiblespace)	& (3,a) & (0,i) & (0,u) 
 	\end{tabular}
 
   \item exemplo binário: `1011010100010 ...' \\
 	\begin{tabular}{lcccccccc}
         frase   & 1	& 0	& 11	& 01	& 010	& 00	& 10	\\ 
 	posição & 1 	& 2 	& 3 	& 4	& 5	& 6 	& 7	\\
-	código  & (0,1) & (0,0) & (1,1) & (2,1) & (4,0) & (2,0) & (1,0) 
+	token   & (0,1) & (0,0) & (1,1) & (2,1) & (4,0) & (2,0) & (1,0) 
 	\end{tabular}
 
   \item De forma geral, à medida que a codificação se procede, os ponteiros referenciam
@@ -95,7 +372,7 @@
         \begin{tabular}{lcccccccc} 
         frase   & 1       & 0       & 11      & 01      & 010     & 00      & 10    \\
         posição & 1       & 2       & 3       & 4       & 5       & 6       & 7     \\
-        código  & (0,1)   & (0,0)   & (1,1)   & (2,1)   & (4,0)   & (2,0)   & (1,0) \\
+        token   & (0,1)   & (0,0)   & (1,1)   & (2,1)   & (4,0)   & (2,0)   & (1,0) \\
 	código  & (000,1) & (000,0) & (001,1) & (010,1) & (100,0) & (010,0) & (001,0 ) 
         \end{tabular}
 	}
@@ -254,7 +531,7 @@ Definition of \textbf{parse}:
 	\begin{equation}
 	c(n) = c(n_k) \leq \sum_{j=1}^k 2^j = 2^{k+1} - 2 < 2^{k+1} < \frac{n_k}{k-1} = \frac{n}{k-1} ,
 	\end{equation}
-	onde utilizamos $\sum_{j=1}^k 2^j = 2^{k+1}$, como visto anteriormente, e $\frac{n_k}{k-1} > 2^{k+1}$,
+	onde utilizamos $\sum_{j=1}^k 2^j = 2^{k+1} - 2$, como visto anteriormente, e $\frac{n_k}{k-1} > 2^{k+1}$,
 	pois
 
 	\proofbreak
@@ -317,7 +594,7 @@ Definition of \textbf{parse}:
 	\item como $n \geq n_k = (k-1)2^{k+1} + 2 > 2^k$, teremos $k < \log n$
 		\begin{eqnarray}
 		n &\geq& n_k = (k-1)2^{k+1} + 2 \nonumber \\
-			&=& \underbrace{(k-1)}_{\geq 1} 2 2^k + 2 > 2^k .
+			&=& \underbrace{(k-1)}_{\geq 1} 2 \times 2^k + 2 > 2^k .
 	%		&=& k 2^{k+1} - 2 \underbrace{ (2^k - 1) }_{\geq 1 \atop \text{já que } k \geq 1 } \\
 	%		&>& k 2^{k+1} > 2^{k+1} > 2^k
 		\end{eqnarray}
@@ -348,7 +625,7 @@ Definition of \textbf{parse}:
 	\begin{eqnarray}
 	k - 1 &>& \log n - \log( \log n + 2 ) - 3 \nonumber \\
 		&=& \left( 1 - \frac{\log( \log n + 2 ) + 3}{\log n} \right) \log n \nonumber \\
-		&\geq& \left( 1 - \frac{\log( 2 \log n ) + 3}{\log n} \right) \log n \quad {\small n \geq 4 \Rightarrow \log n \geq 2} \nonumber \\
+		&\geq& \left( 1 - \frac{\log( 2 \log n ) + 3}{\log n} \right) \log n \quad {\small \text{, utilizando \ } n \geq 4 \Rightarrow \log n \geq 2} \nonumber \\
 		&=& \left( 1 - \frac{\log( \log n ) + 4}{\log n} \right) \log n = \left( 1 - \epsilon_n \right) \log n 
 	\end{eqnarray}
 	onde
