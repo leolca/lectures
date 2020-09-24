@@ -889,7 +889,7 @@ independente de como é utilizado (isto, para qualquer distribuição sobre $W$)
   \end{equation}
   e assim
   \begin{equation}
-  \vert A_{\epsilon}^{(n)} \vert \leq (1 - \epsilon) 2^{n(H(X,Y)-\epsilon)}
+  \vert A_{\epsilon}^{(n)} \vert \geq (1 - \epsilon) 2^{n(H(X,Y)-\epsilon)}
   \end{equation}
 
   \end{proof}
@@ -1151,7 +1151,7 @@ independente de como é utilizado (isto, para qualquer distribuição sobre $W$)
   \vspace{-0.5cm}
   \begin{eqnarray}
   \sum_{\mathcal{C}} \Pr(\mathcal{C}) \lambda_w(\mathcal{C}) &=& \sum_{ x^n(1), \ldots, x^n(2^{nR}) } \text{coisa} \nonumber \\
-	&& \text{somatório com } \underbrace{2^n \cdots 2^n}_{2^{nR} \text{vezes}} = 2^{n2^R} \text{termos} \nonumber \\
+	&& \text{somatório com } \underbrace{2^n \cdots 2^n}_{2^{nR} \text{vezes}} = 2^{n2^{nR}} \text{termos} \nonumber \\
   	&=& 
   \sum_{ \substack{ x^n(1), \ldots, x^n(w-1),  \\ x^n(w+1), \ldots, x^n(2^{nR}) } } \sum_{x^n (w)} \text{coisa} 
   \end{eqnarray}
@@ -1168,8 +1168,9 @@ independente de como é utilizado (isto, para qualquer distribuição sobre $W$)
  
   \vspace{-0.5cm} 
   \begin{eqnarray}
-  \sum_{\mathcal{C}} \Pr(\mathcal{C}) \lambda_w(\mathcal{C}) &=& \nonumber \\
-  \underbrace{ \sum_{ \substack{ x^n(1), \ldots, x^n(w-1),  \\ x^n(w+1), \ldots, x^n(2^{nR}) } } \underbrace{p\left( \substack{ x^n(1), \ldots, x^n(w-1), \\ x^n(w+1), \ldots, x^n(2^{nR}) } \right)}_{\prod_{i \neq w} \Pr(x^n(i)) } }_{=1}  \sum_{x^n (w)} \substack{ \Pr\left( g(Y^n) \neq w \mid X^n = x^n(w) \right) \\ \Pr\left( x^n(w) \right) } &=& 
+  & & \\
+  \sum_{\mathcal{C}} \Pr(\mathcal{C}) \lambda_w(\mathcal{C}) &=&  \nonumber \\
+  \underbrace{ \sum_{ \substack{ x^n(1), \ldots, x^n(w-1),  \\ x^n(w+1), \ldots, x^n(2^{nR}) } } \underbrace{p\left( \substack{ x^n(1), \ldots, x^n(w-1), \\ x^n(w+1), \ldots, x^n(2^{nR}) } \right)}_{\prod_{i \neq w} \Pr(x^n(i)) } }_{=1}  \sum_{x^n (w)} \Pr\left( g(Y^n) \neq w \mid X^n = x^n(w) \right)  \Pr\left( x^n(w) \right)  &=&  \nonumber
   \end{eqnarray}
   O primeiro termo é igual à $1$ pois corresponde à soma dos termos de uma distribuição conjunta ($2^{nR}-1$ termos).
 
@@ -1239,7 +1240,7 @@ independente de como é utilizado (isto, para qualquer distribuição sobre $W$)
 
                 \begin{figure}[h!]
                 \centering
-                \includegraphics[width=0.8\textwidth]{images/mesmap.pdf}
+                \includegraphics[width=0.6\textwidth]{images/mesmap.pdf}
                 \label{fig:mesmap}
                 \end{figure}
 
@@ -1247,7 +1248,7 @@ independente de como é utilizado (isto, para qualquer distribuição sobre $W$)
 		\vspace{-0.25cm}
                 \begin{figure}[h!]
                 \centering
-                \includegraphics[width=0.6\textwidth]{images/codmap.pdf}
+                \includegraphics[width=0.4\textwidth]{images/codmap.pdf}
                 \label{fig:codmap}
                 \end{figure}
   \proofbreak

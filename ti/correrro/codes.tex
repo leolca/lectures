@@ -43,7 +43,7 @@
                 \begin{figure}[h!]
                 \centering
                 \includegraphics[width=0.4\textwidth]{images/repeatingcode2.png}
-		\caption{Código de repetição com $k=2$ ($d_H = 1$).}
+		\caption{Código de repetição com $k=2$ ($d_H = 2$).}
                 \label{fig:repeatingcode2}
                 \end{figure}
 
@@ -353,7 +353,7 @@ corrigir um único erro.
 
                 \begin{figure}[h!]
                 \centering
-                \includegraphics[width=0.65\textwidth]{images/venhamm2.pdf}
+                \includegraphics[width=0.5\textwidth]{images/venhamm2.pdf}
                 \label{fig:venhamm2}
                 \end{figure}
 
@@ -507,7 +507,9 @@ corrigir um único erro.
     \item A matriz geradora será
         \begin{equation}
         G = 
-        \begin{pmatrix}
+	\left(
+        \begin{array}{ccc;{2pt/2pt}c}
+        %\begin{pmatrix}
         1 & 0 & 0 & 0 \\
         0 & 1 & 0 & 0 \\
         0 & 0 & 1 & 0 \\
@@ -516,7 +518,9 @@ corrigir um único erro.
         1 & 0 & 1 & 1 \\
         1 & 1 & 0 & 1 \\ \hdashline[2pt/2pt]
 	1 & 1 & 1 & 0
-        \end{pmatrix}.
+        %\end{pmatrix}.
+	\end{array}
+	\right).
         \end{equation}
 
     \item A matriz de verificação de paridade será
