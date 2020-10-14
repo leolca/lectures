@@ -193,3 +193,171 @@
   \end{equation}
 \end{frame}
 
+
+\subsection{Modelos de Ehrenfest}
+\begin{frame}[allowframebreaks]
+  \frametitle{Modelos de Ehrenfest}
+
+Paul Ehrenfest propôs um modelo simples para a troca de calor ou moléculas entre
+dois corpos isolados. Neste modelo da cadeia de Ehrenfest iremos considerar a troca de
+moléculas de gás entre dois compartimentos, rotulados por 0 e 1,
+conforme apresentado na Figura \ref{fig:ehrenfes}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/ehrenfest.png}
+  \caption{Modelo de Ehrenfest.}
+  \label{fig:ehrenfes}
+\end{figure}
+
+Iremos denotar por $X_k$ o número de partículas no compartimento 1 no instante $k$.
+$X_k$ descreve o estado atual do sistema. Temos um processo estocástico gerando $X_{1:n}$,
+onde $X_k \in \{0,1,\ldots,m\}$.
+
+\framebreak 
+
+Supondo que no instante $k$ o compartimento 1 possua $i$ partículas ($X_k = i$).
+O modelo de Ehrenfest nos fornece:
+\begin{eqnarray}
+\Pr(X_{k+1} = i+1 | X_k = i) &=& \frac{m - i}{m} , \nonumber  \\
+\Pr(X_{k+1} = i-1 | X_k = i) &=& \frac{i}{m} .
+\end{eqnarray}
+
+Neste modelo a propriedade de Markov é satisfeita:
+\begin{eqnarray}
+\Pr(X_{n+1} = i+1 | X_0 = i_0, X_1 = i_1, \ldots, X_{n-1} = i_{n-1}, X_n = i) &=& \Pr(X_{n+1} = i+1 | X_n = i) , \nonumber \\
+\Pr(X_{n+1} = i-1 | X_0 = i_0, X_1 = i_1, \ldots, X_{n-1} = i_{n-1}, X_n = i) &=& \Pr(X_{n+1} = i-1 | X_n = i) . \nonumber
+\end{eqnarray}
+A distribuição condicional não depende de $n$, desta forma, temos um processo estocástico homogêneo. 
+A cadeia de Markov poderá então ser descrita por uma matriz de transição fixa $P = [p_{ij}]_{ij}$.
+
+\framebreak
+
+Para $m = 4$ teremos a cadeia de Markov representada pelo grafo a seguir:
+\begin{center}
+\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=3cm]
+\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+\node[state]    (0)               {$0$};
+\node[state]    (1)[right of=0]   {$1$};
+\node[state]    (2)[right of=1]   {$2$};
+\node[state]    (3)[right of=2]   {$3$};
+\node[state]    (4)[right of=3]   {$4$};
+\path
+(0) edge[bend left,above]   node{$1$}    (1)
+(1) edge[bend left,below]   node{$1/4$}  (0)
+(1) edge[bend left,above]   node{$3/4$}  (2)
+(2) edge[bend left,below]   node{$1/2$}  (1)
+(2) edge[bend left,above]   node{$1/2$}  (3)
+(3) edge[bend left,below]   node{$3/4$}  (2)
+(3) edge[bend left,above]   node{$1/4$}  (4)
+(4) edge[bend left,below]   node{$1$}    (3) ;
+% edge[loop left]     node{$p^2$}         (1) ;
+\end{tikzpicture}
+\end{center}
+
+
+\framebreak
+\begin{equation}
+\mathbf{P} = 
+\begin{blockarray}{cccccc}
+0 & 1 & 2 & 3 & 4 \\
+\begin{block}{(ccccc)c}
+  0   & 1   & 0   & 0   & 0   & 0 \\
+  1/4 & 0   & 3/4 & 0   & 0   & 1 \\
+  0   & 1/2 & 0   & 1/2 & 0   & 2 \\
+  0   & 0   & 3/4 & 0   & 1/4 & 3 \\
+  0   & 0   & 0   & 1   & 0   & 4 \\
+\end{block}
+\end{blockarray}
+\end{equation}
+
+
+\framebreak
+
+A distribuição de estado estacionário é tal que $\mathbf{\mu}^T P = \mathbf{\mu}^T$, com $\sum_i \mu_i = 1$.
+
+\begin{eqnarray}
+\mathbf{\mu}^T P &=& \mathbf{\mu}^T \nonumber \\
+\mathbf{\mu}^T (P-I) &=& 0 \nonumber \\
+\mathbf{\mu}^T Q &=& 0 
+\end{eqnarray}
+
+Teremos aqui
+\begin{equation}
+Q = \begin{pmatrix} 
+-1  &  1  & 0   & 0   & 0   \\
+1/4 & -1  & 3/4 & 0   & 0   \\
+0   & 1/2 & -1  & 1/2 & 0   \\
+0   & 0   & 3/4 & -1  & 1/4 \\
+0   & 0   & 0   & 1   & -1
+\end{pmatrix} .
+\end{equation}
+
+
+\framebreak
+
+Vamos incorporar a condição $\sum_i \mu_i = 1$ fazendo:
+\begin{equation}
+\tilde{Q} = \begin{pmatrix} 
+-1  &  1  & 0   & 0   & 1 \\
+1/4 & -1  & 3/4 & 0   & 1 \\
+0   & 1/2 & -1  & 1/2 & 1 \\
+0   & 0   & 3/4 & -1  & 1 \\
+0   & 0   & 0   & 1   & 1
+\end{pmatrix} ,
+\end{equation}
+e o novo sistema de equações será
+\begin{equation}
+\mathbf{\mu}^T \tilde{Q} = (0, 0, 0, 1) .
+\label{eq-novo-sistema}
+\end{equation}
+
+
+\framebreak
+Para solucionar a Equação \ref{eq-novo-sistema}, iremos pós multiplicar ambos os lados
+pela matriz inversa de $\tilde{Q}$,
+\begin{equation}
+\mathbf{\mu}^T = (0, 0, 0, 1) \tilde{Q}^{-1} ,
+\end{equation}
+obtendo assim 
+\begin{equation}
+\mathbf{\mu}^T = \left( \frac{1}{16}, \frac{1}{4}, \frac{6}{16}, \frac{1}{4}, \frac{1}{16} \right)
+\end{equation}
+
+
+\framebreak
+
+A taxa de entropia para um cadeia de Markov de primeira ordem
+estacionária será dada da seguinte forma
+  \begin{eqnarray}
+  H(\mathcal{X}) &=& H'(\mathcal{X}) = \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}, \ldots, X_1) \nonumber \\
+        &=& \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}) \nonumber \\
+        && \text{dado que é Markov de 1a ordem} \nonumber \\
+        &=& H(X_2 \mid X_1) \quad \text{(estacionário)} \nonumber \\
+        &=& - \sum_{x_2, x_1} p(x_2, x_1) \log p(x_2 \mid x_1) = \sum_i \mu_i \left[ - \sum_j p_{ij} \log p_{ij} \right] \nonumber \\
+        &=& \sum_i \mu_i H( \mathbf{p_i} )
+  \end{eqnarray}
+onde $\mu$ é a distribuição estacionária,
+$p_{ij}$ a probabilidade de transição de $i$ para $j$ (elementos da matriz $P$)
+e $\mathbf{p_i}$ a $i$-ésima linha da matriz $P$ (as probabilidades de transição à partir
+do estado $i$).
+
+\framebreak
+
+Para o exemplo em questão:
+\begin{eqnarray}
+  H(\mathcal{X}) &=& \mu_1 H(\mathbf{p_1}) + \mu_2 H(\mathbf{p_2}) + \mu_3 H(\mathbf{p_3}) +
+        \mu_4 H(\mathbf{p_4}) + \mu_5 H(\mathbf{p_5}) \nonumber \\
+        &=& \frac{1}{16} H(0,1,0,0,0) + \frac{1}{4} H(\frac{1}{4}, 0, \frac{3}{4}, 0, 0) + 
+                \frac{6}{16} H(0, \frac{1}{2}, 0, \frac{1}{2}, 0) + 
+                \frac{1}{4} H(0, 0, \frac{3}{4}, 0, \frac{1}{4}) \nonumber \\
+            && + \frac{1}{16} H(0, 0, 0, 1, 0) \nonumber \\
+        &=& 0 + 2 \times \frac{1}{4} \left( \frac{1}{4} \log 4 + \frac{3}{4} \log \frac{4}{3} \right) +
+                \frac{6}{16} + 0 \nonumber \\
+        &=& \frac{1}{2} \left( \frac{1}{2} + \frac{3}{2} - \frac{3}{4} \log 3  \right) + \frac{6}{16} \nonumber \\
+        &=& 1 - \frac{3}{8} \log 3 + \frac{6}{16} = \frac{11}{8} - \frac{3}{8} \log 3 = 0.78064
+\end{eqnarray}
+
+
+\end{frame}
+
