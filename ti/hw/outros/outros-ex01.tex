@@ -1,0 +1,70 @@
+\subsection{$\ln x \leq x - 1$ e $\ln x \geq 1 - \frac{1}{x}$}
+
+
+\begin{questions}
+\question{
+Mostre as seguintes desigualdades abaixo, utilizando para tanto a expansão em série de Taylor.
+
+\begin{parts}
+\part
+$\ln x \leq x - 1$, para $x>0$;
+\part
+$\ln x \geq 1 - \frac{1}{x}$, para $x>0$
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+  \begin{proof}
+    Considerando $f(x) = \ln x$ temos que
+  \begin{equation}
+  f^{(k)}(x) = (-1)^{k-1} \frac{(k-1)!}{x^k} .
+  \end{equation}
+
+  A série de Taylor de uma função $f(\cdot)$ em torno de um ponto $x_0$ é dada por
+  \begin{equation}
+  f(x) = \sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x - x_0)^k .
+  \end{equation}
+
+  Desta forma, a série de Taylor de $f(x) = \ln x$ em torno de $x_0 = 1$ será dada por
+  \begin{equation}
+  f(x) = \sum_{k=1}^{\infty} (-1)^{k-1} \frac{(x-1)^k}{k} .
+  \end{equation}
+
+  A função $f(\cdot)$ pode ser representada por
+  \begin{equation}
+  f(x) = f_n(x) + E_n(x) ,
+  \end{equation}
+  onde $f_n$ é a expansão em série de Taylor até o termo de ordem $n$ e
+  $E_n$ o erro associado ao truncamento da série em $n$ termos.
+  Teremos que 
+  \begin{equation}
+  E_n (x) = \frac{f^{(n+1)} (\xi)}{(n+1)!} (x - x_0)^{(n+1)} ,
+  \end{equation} 
+  onde $\xi \in [x, x_0]$.
+
+  Se tomarmos a aproximação apenas com o primeiro termo ($n=1$), teremos
+  \begin{equation}
+  \ln x = (x - 1) + E_1(x) ,
+  \end{equation}
+  onde $E_1(x) = (-1) (x-1)^2/2 < 0$, logo
+  \begin{equation}\label{eq-dlnx1}
+  \ln x \leq x - 1 .
+  \end{equation}
+
+  \end{proof}
+
+\part
+  \begin{proof}
+  Considere a expressão acima, dada na \Cref{eq-dlnx1} e aplique para $\nicefrac{1}{x}$, obtendo assim:
+  \begin{eqnarray}
+  \ln \frac{1}{x} &\leq \frac{1}{x} - 1 \nonumber \\
+  - \ln x &\leq \frac{1}{x} - 1 \nonumber \\        
+  \ln x &\geq 1 - \frac{1}{x}
+  \end{eqnarray}
+  \end{proof}
+
+\end{parts}
+\end{solution}
+\end{questions}

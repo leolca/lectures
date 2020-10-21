@@ -1,0 +1,58 @@
+\subsection{O estatístico e o canal}
+% cover thomas q1
+\begin{questions}
+\question{
+É dado um canal de comunicação com as probabilidades de transição
+$p(y\vert x)$ e a capacidade de canal $C = \max_{p(x)} I(X;Y)$.
+Um estatístico resolveu ajudar e propôs processar a saída através de uma
+determinada função $\tilde{Y} = g(Y)$. Ele alega que isto irá 
+melhorar a capacidade do canal estritamente.
+
+\begin{parts}
+\part 
+
+Mostre que ele está errado.
+
+\part 
+
+Sob quais condições ele não irá estritamente diminuir a capacidade?
+
+
+\end{parts}
+ 
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+
+Ao adotar $\tilde{Y} = g(Y)$, teremos $X \rightarrow Y \rightarrow \tilde{Y}$, 
+formando uma cadeia de Markov. Poderemos assim aplicar a desigualdade de processamento
+de dados
+\begin{equation}
+I(X;Y) \geq I(X;\tilde{Y}) .
+\end{equation}
+
+Seja $\tilde{p}(x)$ a distribuição em $x$ que maximiza $I(X;\tilde{Y})$, fornecendo
+a capacidade do canal $\tilde{C}$ entre $X$ e $\tilde{Y}$, teremos:
+\begin{eqnarray}
+C &=& \max_{p(x)} I(X;Y) \\
+        &\geq& I(X;Y)_{p(x)=\tilde{p}(x)} \text{(onde $\tilde{p}$ é a dist. que max. $I(X;\tilde{Y})$)} \\
+        &\geq& I(X;\tilde{Y})_{p(x)=\tilde{p}(x)} \text{ (utilizando a desigualdade de proc. de dados)}\\
+        &=& \max_{p(x)} I(X;\tilde{Y}) = \tilde{C}.
+\end{eqnarray}
+Logo, qualquer processamento subsequente sobre $Y$ que for realizado não irá aumentar a capacidade do canal.
+
+
+\part 
+
+Para que não ocorra uma diminuição da capacidade de canal, deveremos ter igualdades
+na sequência de desigualdades acima. Para isso será necessário ter igualdade na
+desigualdade de processamento de dados, ou seja, $I(X;Y) = I(X;\tilde{Y})$.
+Isto ocorrerá quando, dada a distribuição $\tilde{p}(x)$ que maximiza $I(X;\tilde{Y})$,
+tivermos a seguinte cadeia de Markov $X \rightarrow \tilde{Y} \rightarrow Y$.
+
+
+\end{parts}
+\end{solution}
+\end{questions}

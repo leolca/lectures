@@ -1,0 +1,31 @@
+\subsection{Unívocos e instantâneos}
+
+\begin{questions}
+% harvard / HW3_ES250_sol_a.pdf
+
+\question{
+Quais dos seguintes códigos são univocamente decodificáveis e quais são instantâneos?
+\begin{parts}
+\part $C_1 = \{ 11, 01, 0\}$
+\part $C_2 = \{ 00, 01, 100, 101, 11\}$
+\part $C_3 = \{ 0, 10, 110, 1110, \ldots \}$
+\part $C_4 = \{ 0, 00, 000, 0000\}$
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+Este código é unicamente decodificável (livre de sufixo), mas não é instantâneo (livre de prefixo).
+Verifique que satisfaz a desigualdade de Kraft: $2^{-2} + 2^{-2} + 2^{-1} = 1 \leq 1$.
+\part
+Este código é instantâneo (livre de prefixo) e por conseguinte unicamente decodificável.
+O código satisfaz Kraft: $2^{-2} + 2^{-2} + 2^{-3} + 2^{-3} + 2^{-2} = 1 \leq 1$.
+\part
+Código instantâneo. Satisfaz Kraft: $2^{-1} + 2^{-2} + 2^{-3} + 2^{-4} + \ldots = 1 \leq 1$.
+
+\part
+Este código não é unicamente decodificável, sequer instantâneo.
+\end{parts}
+\end{solution}
+\end{questions}

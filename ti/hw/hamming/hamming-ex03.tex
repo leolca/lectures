@@ -1,0 +1,104 @@
+\subsection{Código de Hamming ternário}
+
+\begin{questions}
+\question{
+Considere o código de Hamming ternário (4,2,2) em que as palavras 
+possuem comprimento 4, sendo formadas por 2 símbolos de dados e 2 símbolos de paridade. 
+A matriz geradora deste código e a matriz de verificação de paridade são dadas a seguir,
+
+\noindent\begin{minipage}{.5\linewidth}
+\begin{equation}
+   G^T = 
+   \begin{pmatrix}
+   1 & 0 & 1 & 1\\
+   0 & 1 & 1 & 2
+   \end{pmatrix},
+\end{equation}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation}
+   H = 
+   \begin{pmatrix}
+   2 & 2 & 1 & 0 \\
+   2 & 1 & 0 & 1 
+   \end{pmatrix} .
+\end{equation}
+\end{minipage}
+
+Escreva as equações para os símbolos de paridade e as equações de verificação de paridade. 
+Faça 3 exemplos de utilização deste código (com casos em que a decodificação será bem
+sucedida, mesmo na presença de ruído, e casos em que a decodificação falhará): 
+defina os símbolos de dados;
+calcule os símbolos de paridade; suponhas um ruído aditivo (que altere um ou dois símbolos);
+some o ruído à palavra gerada pelo código; calcule a síndrome; faça a decodificação,
+evidenciando os casos em que é possível detectar e corrigir erro, casos em que é possível 
+apenas detectar erro, e casos em que o erro passa desapercebido.
+
+
+}
+
+\begin{solution}
+Seja $x_1$ e $x_2$ os símbolos de dados, $x = [x_1 x_2 x_3 x_4]$ será a palavra código, 
+em que os símbolos $x_3$ e $x_4$ são dados pelas seguintes equações:
+\begin{equation}
+x_3 = x1 + x_2 \pmod{3} \quad \text{e}
+\end{equation}
+\begin{equation}
+x_4 = x1 + 2 x_2 \pmod{3} .
+\end{equation}
+As equações de verificação de paridade são:
+\begin{equation}
+2 x_1 + 2 x_2 + x_3 \pmod{3} = 0 \quad \text{e}
+\end{equation}
+\begin{equation}
+2 x_1 + x_2 + x_4 \pmod{3} = 0 .
+\end{equation}
+
+\textbf{exemplo 1}\\
+Suponha que $x_1 = 0$ e $x_2 = 1$. A palavra de código será $x = [0 1 1 2]$.
+\begin{itemize} 
+\item Considere o ruído aditivo $r = [1 0 0 0]$. Neste caso, teremos $y = x + r \pmod{3} = [1 1 1 2]$.
+A síndrome será calculada por $s = Hy = [2 2]$. Podemos verificar que $s$ é igual à primeira coluna de
+$H$. Logo podemos corrigir o erro: $\hat{x} = y - [1 0 0 0] = [0 1 1 2] = x$.
+
+\item Considere o ruído aditivo $r = [2 0 0 0]$. Teremos $y = x + r \pmod{3} = [2 1 1 2]$.
+A síndrome será $s = Hy = [1 2]$. Não há coluna em $H$ igual à $s$, logo é possível detectar o
+erro, mas não é possível corrigi-lo.
+
+\item Considere o ruído aditivo $r = [0 1 0 0]$. Teremos $y = x + r \pmod{3} = [0 2 1 2]$.
+A síndrome será $s = Hy = [2 1]$. Podemos verificar que $s$ é igual à segunda coluna de $H$.
+Faremos $\hat{x} = y - [0 1 0 0] = [0 1 1 2] = x$.
+
+\item Considere o ruído aditivo $r = [0 2 0 0]$. Teremos $y = x + r \pmod{3} = [0 0 1 2]$.
+A síndrome será $s = Hy = [1 2]$. Não há coluna em $H$ igual à $s$, logo é possível detectar o
+erro, mas não é possível corrigi-lo.
+\end{itemize}
+
+\textbf{exemplo 2}\\
+Suponha que $x_1 = 2$ e $x_2 = 1$. A palavra de código será $x = [2 1 0 1]$.
+\begin{itemize}
+\item Considere o ruído aditivo $r = [0 0 0 1]$. Neste caso, teremos $y = x + r \pmod{3} = [2 1 0 2]$.
+A síndrome será calculada por $s = Hy = [0 1]$. Podemos verificar que $s$ é igual à ultima coluna de
+$H$. Logo podemos corrigir o erro: $\hat{x} = y - [0 0 0 1] = [2 1 0 1] = x$.
+
+\item Considere o ruído aditivo $r = [1 0 0 1]$. Teremos $y = x + r \pmod{3} = [0 1 0 2]$.
+A síndrome será $s = Hy = [1 0]$. Encontramos $s$ igual à terceira coluna em $H$.
+Ao aplicar a correção teremos: $\hat{x} = y - [0 0 1 0] = [0 1 2 2]$. Fornecendo
+assim $\hat{x}_1 = 0$ e $\hat{x}_2 = 1$, o que está errado. Este erro passa desapercebido.
+
+\item Considere o ruído aditivo $r = [0 2 0 0]$. Teremos $y = x + r \pmod{3} = [2 0 0 1]$.
+A síndrome será $s = Hy = [1 2]$. Não há coluna em $H$ igual à $s$, logo é possível detectar o
+erro, mas não é possível corrigi-lo.
+
+\end{itemize}
+% http://www.maths.manchester.ac.uk/~pas/code/solutions/sol4a
+% http://users.math.msu.edu/users/jhall/classes/codenotes/Linear.pdf
+% https://www.math.lsu.edu/~adkins/m4023/4023f11ps7a.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% http://www.ece.tufts.edu/~maivu/ES250/HW4_ES250_sol_a.pdf
+% http://www.eit.lth.se/fileadmin/eit/courses/eit080/InfoTheorySH/InfoTheoryPart2b.pdf
+
+
+\end{solution}
+
+\end{questions}

@@ -1,0 +1,66 @@
+\subsection{Propriedade da Equipartição Assintótica e Codificação de Fonte} 
+
+\begin{questions}
+\question{
+Uma fonte discreta sem memória emite uma sequência de dígitos binários estatisticamente independentes 
+com probabilidades $p(1)=0.005$ e $p(0)=0.995$. Os dígitos são tomados $100$ a cada vez e uma palavra 
+de código (\emph{codeword}) binária é fornecido para cada sequência de $100$ dígitos contendo três ou menos uns.
+
+\begin{parts}
+\part
+Assumindo que todas as palavras de código possuem o mesmo comprimento, encontre o menor comprimento 
+necessário para fornecer palavras de código para todas as sequências com três ou menos uns.
+
+\part 
+Calcule a probabilidade de se observar uma sequência produzida pela fonte para a qual não foi associada nenhuma palavra de código.
+
+\part 
+Utilize a desigualdade de Chebyshev para encontrar o limite de se observar uma sequência da fonte para 
+a qual nenhuma palavra código foi associada. Compare este limite com a probabilidade calculada no item anterior.
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+O número de sequências binárias com 3 ou menos uns é
+\begin{equation}
+{100 \choose 0} + {100 \choose 1} + {100 \choose 2} + {100 \choose 3} = 1 + 100 + 4950 + 161700 = 166751 .
+\end{equation}
+Para codificar por uma palavra binárias as sequências de comprimento 100 com 3 ou menos uns,
+serão necessários $\lceil \log 166751 \rceil = 18$ bits.
+Note que $H(0.005) = 0.0454$ e $18$ bits é consideravelmente maior que $4.5$ bits de entropia
+para sequências de tamanho $100$.
+
+
+\part
+A probabilidade de se observar uma sequência produzida pela fonte para a qual não foi
+associada nenhuma palavra de código é equivalente à soma da probabilidade das sequências
+com mais de 3 uns, ou então, um menos a probabilidade das sequências com 3 ou menos uns.
+\begin{eqnarray}
+\sum_{i=4}^{100} {100 \choose i} (0.005)^i (0.995)^{100-i} &=& 1 - \sum_{i=0}^{3} {100 \choose i} (0.005)^i (0.995)^{100-i} \nonumber \\
+        &=& 1 - (0.60577 + 0.30441 + 0.7572 + 0.01243) \nonumber \\
+	&=& 1 - 0.99833 = 0.00167 .
+\end{eqnarray}
+
+
+\part 
+No caso em que uma v.a. $S_n$ é a soma de $n$ v.a.s i.i.d. $X_1, \ldots, X_n$,
+a desigualdade de Chebyshev afirma que
+\begin{equation}
+\Pr ( |S_n - n \mu| \geq \epsilon ) \leq \frac{n \sigma^2}{\epsilon^2} ,
+\end{equation}
+onde $\mu$ e $\sigma^2$ são a média e variância de $X_i$, respectivamente.
+(Desta forma, $n\mu$ e $n\sigma^2$ são a média e variância de $S_n$).
+No problema em questão temos: $n=100$, $\mu=0.005$ e $\sigma^2 = (0.005)(0.995)$.
+As sequência que não serão codificadas são aquelas em que $S_n \geq 4$.
+Note que teremos $S_n \geq 4$ se e somente se $|S_{100} - 100 (0.005)| \geq 3.5$.
+Devemos pois escolher $\epsilon = 3.5$, assim
+\begin{equation}
+\Pr(S_{100} \geq 4) \leq \frac{100 (0.005)(0.995)}{(3.5)^2} \approx 0.04061 .
+\end{equation}
+Verificamos assim que o limite é bem maior que o valor da probabilidade de $0.00167$.
+
+\end{parts}
+\end{solution}
+\end{questions}

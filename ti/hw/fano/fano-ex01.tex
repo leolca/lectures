@@ -1,0 +1,83 @@
+\subsection{Desigualdade de Fano}
+% ex 2.32 Cover Thomas
+
+\begin{questions}
+\question{
+Para uma dado canal de comunicação, $X$ é emitido pela fonte e $Y$ é recebido pelo receptor.
+É dada a seguinte probabilidade conjunta $(X,Y)$:
+\begin{center}
+\begin{tabular}{c|ccc}
+\diagbox{X}{Y} & 1 & 2 & 3 \\ 
+\hline 
+1 & $\frac{1}{6}$  & $\frac{1}{12}$ & $\frac{1}{12}$ \\ 
+2 & $\frac{1}{12}$ & $\frac{1}{6}$  & $\frac{1}{12}$ \\ 
+3 & $\frac{1}{12}$ & $\frac{1}{12}$ & $\frac{1}{6}$
+\end{tabular}
+\end{center}
+Considere $\widehat{X}(Y)$ um estimador para $X$ (baseado em $Y$) e $P_e = \textmd{Pr}\{\widehat{X}(Y) \neq X\}$.
+
+\begin{parts}
+\part
+Encontre o estimador $\widehat{X}(Y)$ que fornece a menor probabilidade de erro e calcule $P_e$ associado.
+
+\part
+Avalie a desigualdade de Fano para este problema e compare os resultados.
+
+\end{parts}
+}
+
+
+\begin{solution}
+\begin{parts}
+\part
+  O melhor estimador é $\widehat{X}(Y) = Y$.
+
+  A probabilidade de erro para este estimador será dada por
+  \begin{eqnarray}
+  P_e &=& \textmd{Pr}\{\widehat{X}(Y) \neq X\} = 1 - \textmd{Pr}\{\widehat{X}(Y) = X\} \nonumber \\
+        &=& 1 - \left( \textmd{Pr}\{Y = 1, X = 1\} + \textmd{Pr}\{Y = 2, X = 2\} + \textmd{Pr}\{Y = 3, X = 3\} \right) \nonumber \\
+        &=& 1 - \left( 3 \times \frac{1}{6} \right) \nonumber \\
+        &=& \frac{1}{2}
+  \end{eqnarray}
+
+\part
+  Desigualdade de Fano:
+  \begin{equation}
+  P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+  \end{equation}
+
+  Precisamos calcular $H(X|Y)$. Para tanto precisamos calcular a marginal $p(y)$ e a condicional $p(x|y)$.
+  Temos que $p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)$ e 
+  $p(x|y) = \frac{p(x,y)}{p(y)}$:
+
+
+  \begin{center}
+  \begin{tabular}{c|ccc}
+  \diagbox{X}{Y} & 1 & 2 & 3 \\
+  \hline 
+  1 & $\frac{1}{2}$  & $\frac{1}{4}$ & $\frac{1}{4}$ \\
+  2 & $\frac{1}{4}$ & $\frac{1}{2}$  & $\frac{1}{4}$ \\
+  3 & $\frac{1}{4}$ & $\frac{1}{4}$ & $\frac{1}{2}$
+  \end{tabular}
+  \end{center}
+
+ 
+  \begin{eqnarray}
+  H(X|Y) &=& \sum_{y} p(y) H(X | Y = y) \nonumber \\
+        &=& - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \nonumber \\
+        &=& - 3 \times \frac{1}{3} \left( 2 \times \frac{1}{2} \log \frac{1}{2} + \frac{1}{4} \log \frac{1}{4} \right) \nonumber \\
+        &=& - \left( - 1  - \frac{1}{2} \right) = \frac{3}{2} = 1.5  
+  \end{eqnarray}
+
+  Teremos assim
+  \begin{equation}
+  P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{1.5 -1}{\log(3-1)} = 0.5
+  \end{equation}
+ 
+  Verificamos assim que o estimador dado anteriormente realmente fornece a menor probabilidade de erro, 
+  o que é comprovado pela desigualdade de Fano. 
+
+\end{parts}
+
+\end{solution}
+\end{questions}

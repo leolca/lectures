@@ -1,0 +1,68 @@
+\subsection{Códigos binários}
+
+\begin{questions}
+\question{
+São dados os seguintes códigos binários:
+$C_{I} = \{0, 00, 10, 10\}$,
+$C_{II} = \{0, 00, 000, 0000\}$,
+$C_{III} = \{00, 01, 10, 000\}$,
+$C_{IV} = \{00, 01, 10, 11\}$ e
+$C_{V} = \{0, 10, 110, 111\}$.
+Caracterize os códigos segundo aos seguintes critérios, justificando sua resposta:
+\begin{parts}
+\part é um código singular ou não singular?;
+\part é um código univocamente decodificável?;
+\part satisfaz a desigualdade de Kraft?;
+\part é um código de prefixo?
+\part caso o código não seja de prefixo, é possível obter um código de prefixo com o mesmo
+comprimento esperado?
+\end{parts}
+}
+
+
+\begin{solution}
+\begin{parts}
+\part 
+O código $C_{I} = \{0, 00, 10, 10\}$ é singular, pois 
+existe mais de um símbolo codificado com a mesma palavra ($00$ e $10$).
+Este código não é por conseguinte univocamente decodificável e sequer de prefixo.
+Além disso, não satisfaz a desigualdade de Kraft: $\sum_i 2^{- l_i} = 2^{-1} + 2^{-2} + 2^{-2} + 2^{-2} = 5/4 > 1$.
+Não é possível obter um código de prefixo com o mesmo comprimento esperado.
+
+\part 
+O código $C_{II} = \{0, 00, 000, 0000\}$ é não-singular,
+pois cada símbolo é codificado por uma palavra distinta. Este código não
+é univocamente decodificável, pois uma sequência de bits formada pelo resultado
+da codificação por um sequência de símbolos pode ser decodificada de mais de uma maneira.
+Supondo que os símbolos sejam $x_1, x_2, x_3, x_4$, respectivamente, a sequência
+$x_1 x_2$, por exemplo poderia ser decodificada como $x_1 x_1 x_1$ ou como $x_3$.
+Além disso, este código não satisfaz a condição de prefixo pois uma palavra é prefixo de outro
+($0$ é prefixo de $00$, $000$ e $0000$; $00$ é prefixo de $000$ e $0000$; e $000$ é prefixo de $0000$).
+Este código satisfaz a desigualdade de Kraft:  $\sum_i 2^{- l_i} = 2^{-1} + 2^{-2} + 2^{-3} + 2^{-4} = \frac{15}{16} \leq 1$.
+É possível obter um código de prefixo com o mesmo comprimento esperado, pois os 
+comprimentos satisfazem a desigualdade de Kraft, e na demonstração do teorema de Kraft
+vimos um algoritmo para criar tal código.
+
+\part 
+O código $C_{III} = \{00, 01, 10, 000\}$ é não-singular, pois cada símbolo é codificado por uma palavra distinta.
+Não é univocamente decodificável. Por exemplo, a sequência $x_1 x_1 x_1$ será codificada como
+$000000$, que poderá ser decodificada como $x_1 x_1 x_1$ ou $x_4 x_4$.
+O código não satisfaz a condição de prefixo: $00$ é prefixo de $000$.
+Este código satisfaz a desigualdade de Kraft: $\sum_i 2^{- l_i} = 2^{-2} + 2^{-2} + 2^{-2} + 2^{-3} = \frac{7}{8} \leq 1$.
+É possível obter um código de prefixo com o mesmo comprimento esperado, pois os
+comprimentos satisfazem a desigualdade de Kraft, e na demonstração do teorema de Kraft
+vimos um algoritmo para criar tal código.
+
+\part 
+O código $C_{IV} = \{00, 01, 10, 11\}$ é não-singular, univocamente decodificável e satisfaz
+a condição de prefixo. Satisfaz, por conseguinte, a desigualdade de Kraft: 
+$\sum_i 2^{- l_i} = 2^{-2} + 2^{-2} + 2^{-2} +2^{-2} = 1 \leq 1$.
+
+\part 
+$C_{V} = \{0, 10, 110, 111\}$ é não-singular, univocamente decodificável e satisfaz
+a condição de prefixo. Satisfaz, por conseguinte, a desigualdade de Kraft: 
+$\sum_i 2^{- l_i} = 2^{-1} + 2^{-2} + 2^{-3} +2^{-3} = 1 \leq 1$.
+
+\end{parts}
+\end{solution}
+\end{questions}

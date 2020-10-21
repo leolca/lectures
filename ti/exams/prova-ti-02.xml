@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-02/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q1 : tipo_tipo01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mrow><mn>1</mn><mo>:</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">X_{1:n}</annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∈</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle></mrow><annotation encoding="application/x-tex">X_i \in \mathcal{X}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> é i.i.d. e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∼</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">X_i \sim p</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">\forall i</annotation></semantics></math>. Com relação ao conjunto típico <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><annotation encoding="application/x-tex">A_{\epsilon}^{( n )}</annotation></semantics></math> podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mo>−</mo><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{-nH}</annotation></semantics></math>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>1</mn><mo>−</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon</annotation></semantics></math> e assim podemos afirmar que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1</annotation></semantics></math>.</li>
+<li>O tamanho do conjunto típico é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{nH}</annotation></semantics></math> que usualmente é bem menor do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert \mathcal{X}^n \vert</annotation></semantics></math>.</li>
+<li>O número de tipos cresce polinomialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> e o número de sequências cresce exponencialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>. Eventualmente, para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\leq n(H + \epsilon) + 2</annotation></semantics></math> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">|</mo><mo>≪</mo><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O número de bits necessário para codificar as sequências no conjunto típico é maior do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>H</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">nH + 2</annotation></semantics></math> bits.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O conjunto típico é o conjunto das sequências mais prováveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q1 : tipo_tipo01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mrow><mn>1</mn><mo>:</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">X_{1:n}</annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∈</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle></mrow><annotation encoding="application/x-tex">X_i \in \mathcal{X}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> é i.i.d. e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∼</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">X_i \sim p</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">\forall i</annotation></semantics></math>. Com relação ao conjunto típico <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><annotation encoding="application/x-tex">A_{\epsilon}^{( n )}</annotation></semantics></math> podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mo>−</mo><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{-nH}</annotation></semantics></math>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>1</mn><mo>−</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon</annotation></semantics></math> e assim podemos afirmar que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1</annotation></semantics></math>.</li>
+<li>O tamanho do conjunto típico é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{nH}</annotation></semantics></math> que usualmente é bem menor do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert \mathcal{X}^n \vert</annotation></semantics></math>.</li>
+<li>O número de tipos cresce polinomialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> e o número de sequências cresce exponencialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>. Eventualmente, para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\leq n(H + \epsilon) + 2</annotation></semantics></math> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">|</mo><mo>≪</mo><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O número de bits necessário para codificar as sequências no conjunto típico é maior do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>H</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">nH + 2</annotation></semantics></math> bits.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O conjunto típico é o conjunto das sequências mais prováveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q1 : tipo_tipo01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mrow><mn>1</mn><mo>:</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">X_{1:n}</annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∈</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle></mrow><annotation encoding="application/x-tex">X_i \in \mathcal{X}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> é i.i.d. e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∼</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">X_i \sim p</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">\forall i</annotation></semantics></math>. Com relação ao conjunto típico <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><annotation encoding="application/x-tex">A_{\epsilon}^{( n )}</annotation></semantics></math> podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mo>−</mo><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{-nH}</annotation></semantics></math>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>1</mn><mo>−</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon</annotation></semantics></math> e assim podemos afirmar que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1</annotation></semantics></math>.</li>
+<li>O tamanho do conjunto típico é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{nH}</annotation></semantics></math> que usualmente é bem menor do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert \mathcal{X}^n \vert</annotation></semantics></math>.</li>
+<li>O número de tipos cresce polinomialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> e o número de sequências cresce exponencialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>. Eventualmente, para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\leq n(H + \epsilon) + 2</annotation></semantics></math> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O número de bits necessário para codificar as sequências no conjunto típico é maior do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>H</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">nH + 2</annotation></semantics></math> bits.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">|</mo><mo>≪</mo><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O conjunto típico é o conjunto das sequências mais prováveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q1 : tipo_tipo01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mrow><mn>1</mn><mo>:</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">X_{1:n}</annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∈</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle></mrow><annotation encoding="application/x-tex">X_i \in \mathcal{X}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> é i.i.d. e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∼</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">X_i \sim p</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">\forall i</annotation></semantics></math>. Com relação ao conjunto típico <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><annotation encoding="application/x-tex">A_{\epsilon}^{( n )}</annotation></semantics></math> podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mo>−</mo><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{-nH}</annotation></semantics></math>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>1</mn><mo>−</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon</annotation></semantics></math> e assim podemos afirmar que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1</annotation></semantics></math>.</li>
+<li>O tamanho do conjunto típico é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{nH}</annotation></semantics></math> que usualmente é bem menor do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert \mathcal{X}^n \vert</annotation></semantics></math>.</li>
+<li>O número de tipos cresce polinomialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> e o número de sequências cresce exponencialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>. Eventualmente, para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\leq n(H + \epsilon) + 2</annotation></semantics></math> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O número de bits necessário para codificar as sequências no conjunto típico é maior do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>H</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">nH + 2</annotation></semantics></math> bits.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O conjunto típico é o conjunto das sequências mais prováveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">|</mo><mo>≪</mo><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q1 : tipo_tipo01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mrow><mn>1</mn><mo>:</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">X_{1:n}</annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∈</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle></mrow><annotation encoding="application/x-tex">X_i \in \mathcal{X}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> é i.i.d. e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∼</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">X_i \sim p</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">\forall i</annotation></semantics></math>. Com relação ao conjunto típico <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><annotation encoding="application/x-tex">A_{\epsilon}^{( n )}</annotation></semantics></math> podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mo>−</mo><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{-nH}</annotation></semantics></math>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>1</mn><mo>−</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon</annotation></semantics></math> e assim podemos afirmar que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1</annotation></semantics></math>.</li>
+<li>O tamanho do conjunto típico é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>2</mn><mrow><mi>n</mi><mi>H</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 2^{nH}</annotation></semantics></math> que usualmente é bem menor do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert \mathcal{X}^n \vert</annotation></semantics></math>.</li>
+<li>O número de tipos cresce polinomialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> e o número de sequências cresce exponencialmente em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>. Eventualmente, para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\leq n(H + \epsilon) + 2</annotation></semantics></math> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">|</mo><mo>≪</mo><mo stretchy="false" form="postfix">|</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Quando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O conjunto típico é o conjunto das sequências mais prováveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+O número de bits necessário para codificar as sequências no conjunto típico é maior do que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>H</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">nH + 2</annotation></semantics></math> bits.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>A</mi><mi>ϵ</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)</annotation></semantics></math>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-02/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R1 Q2 : tipo_tipo02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha uma fonte com alfabeto de tamanho <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\vert \mathcal{X} \vert = 4</annotation></semantics></math> e com distribuição <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)</annotation></semantics></math>. Considere sequências de comprimento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=6</annotation></semantics></math>. Quantos tipos existem? Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> abaixo? Qual é a probabilidade de uma sequência deste tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>?</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>3</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_{x_{1:6}} = \left( \frac{3}{6}, \frac{2}{6}, \frac{1}{6}, 0 \right) .
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.01} </li>
+<li> Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=60:0.01} </li>
+<li> Qual é a probabilidade de uma sequência do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.0009765625:1e-05} </li>
+<li> Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.05859375:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de tipos é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><msub><mstyle mathvariant="script"><mi>𝒫</mi></mstyle><mi>n</mi></msub><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mi>n</mi><mo>+</mo><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>4</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>9</mn><mn>3</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mn>9</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>6</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>9</mn><mo>×</mo><mn>8</mn><mo>×</mo><mn>7</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>84</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert \mathcal{P}_n \vert &amp;= {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} \\
+    &amp;= {6 + 4 - 1 \choose 4 - 1} = {9 \choose 3} = \frac{9!}{3! 6!} = \frac{9 \times 8 \times 7}{3 \times 2} = 84.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>O tamanho da classe de tipo é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mrow><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>…</mi><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>6</mn><mrow><mn>3</mn><mspace width="0.222em"></mspace><mn>2</mn><mspace width="0.222em"></mspace><mn>1</mn><mspace width="0.222em"></mspace><mn>0</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mrow><mn>6</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>2</mn><mi>!</mi><mn>1</mn><mi>!</mi><mn>0</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mn>60</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert T(P) \vert &amp;= { n \choose nP(a_1) \ nP(a_2) \ \ldots \ nP(a_n) } \\
+        &amp;= { 6 \choose 3 \ 2 \ 1 \ 0 } \\
+        &amp;= \frac{6!}{3! 2! 1! 0!} = 60.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade de uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">x_{1:6}</annotation></semantics></math> do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><msubsup><mi>p</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>n</mi><mn>2</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>3</mn><msub><mi>n</mi><mn>3</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>4</mn><msub><mi>n</mi><mn>4</mn></msub></msubsup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>1</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>0</mn></msup><mo>×</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.0009765625</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+ \Pr(x_{1:6}) &amp;= p_1^{n_1} \times p_2^{n_2} \times p_3^{n_3} \times p_4^{n_4} \\
+        &amp;= \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{4}\right)^{2} \times \left(\frac{1}{8}\right)^{1} \times \left(\frac{1}{8}\right)^{0} \times \\
+        &amp;= \left(\frac{1}{2}\right)^{10} = 0.0009765625.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade da classe de tipo é dada pela soma das probabilidades de todas as sequências na classe de tipo. Como todas as sequências na classe de tipo possuem a mesma probabilidade, basta multiplicar o tamanho da classe de tipo pela probabilidade de uma sequência do tipo: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>60</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.05859375</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\Pr(T(P_{x_{1:6}})) &amp;= \Pr(x_{1:6}) \times  \vert T(P) \vert = 60 \times \left(\frac{1}{2}\right)^{10} = 0.05859375.
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">\vert T(P_{x_{1:6}}) \vert = 84</annotation></semantics></math> </li>
+<li> Para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo>∈</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x_{1:6} \in T(P_{x_{1:6}})</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">p_{x_{1:6}} = 60</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.0009765625</mn></mrow><annotation encoding="application/x-tex">P(T(P_{x_{1:6}})) = 0.0009765625</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.05859375</mn></mrow><annotation encoding="application/x-tex">\Pr(T(P_{x_{1:6}})) = 0.05859375</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R2 Q2 : tipo_tipo02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha uma fonte com alfabeto de tamanho <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\vert \mathcal{X} \vert = 4</annotation></semantics></math> e com distribuição <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)</annotation></semantics></math>. Considere sequências de comprimento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=6</annotation></semantics></math>. Quantos tipos existem? Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> abaixo? Qual é a probabilidade de uma sequência deste tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>?</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>3</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_{x_{1:6}} = \left( \frac{3}{6}, \frac{2}{6}, \frac{1}{6}, 0 \right) .
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.01} </li>
+<li> Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=60:0.01} </li>
+<li> Qual é a probabilidade de uma sequência do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.0009765625:1e-05} </li>
+<li> Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.05859375:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de tipos é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><msub><mstyle mathvariant="script"><mi>𝒫</mi></mstyle><mi>n</mi></msub><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mi>n</mi><mo>+</mo><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>4</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>9</mn><mn>3</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mn>9</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>6</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>9</mn><mo>×</mo><mn>8</mn><mo>×</mo><mn>7</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>84</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert \mathcal{P}_n \vert &amp;= {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} \\
+    &amp;= {6 + 4 - 1 \choose 4 - 1} = {9 \choose 3} = \frac{9!}{3! 6!} = \frac{9 \times 8 \times 7}{3 \times 2} = 84.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>O tamanho da classe de tipo é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mrow><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>…</mi><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>6</mn><mrow><mn>3</mn><mspace width="0.222em"></mspace><mn>2</mn><mspace width="0.222em"></mspace><mn>1</mn><mspace width="0.222em"></mspace><mn>0</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mrow><mn>6</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>2</mn><mi>!</mi><mn>1</mn><mi>!</mi><mn>0</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mn>60</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert T(P) \vert &amp;= { n \choose nP(a_1) \ nP(a_2) \ \ldots \ nP(a_n) } \\
+        &amp;= { 6 \choose 3 \ 2 \ 1 \ 0 } \\
+        &amp;= \frac{6!}{3! 2! 1! 0!} = 60.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade de uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">x_{1:6}</annotation></semantics></math> do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><msubsup><mi>p</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>n</mi><mn>2</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>3</mn><msub><mi>n</mi><mn>3</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>4</mn><msub><mi>n</mi><mn>4</mn></msub></msubsup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>1</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>0</mn></msup><mo>×</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.0009765625</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+ \Pr(x_{1:6}) &amp;= p_1^{n_1} \times p_2^{n_2} \times p_3^{n_3} \times p_4^{n_4} \\
+        &amp;= \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{4}\right)^{2} \times \left(\frac{1}{8}\right)^{1} \times \left(\frac{1}{8}\right)^{0} \times \\
+        &amp;= \left(\frac{1}{2}\right)^{10} = 0.0009765625.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade da classe de tipo é dada pela soma das probabilidades de todas as sequências na classe de tipo. Como todas as sequências na classe de tipo possuem a mesma probabilidade, basta multiplicar o tamanho da classe de tipo pela probabilidade de uma sequência do tipo: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>60</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.05859375</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\Pr(T(P_{x_{1:6}})) &amp;= \Pr(x_{1:6}) \times  \vert T(P) \vert = 60 \times \left(\frac{1}{2}\right)^{10} = 0.05859375.
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">\vert T(P_{x_{1:6}}) \vert = 84</annotation></semantics></math> </li>
+<li> Para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo>∈</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x_{1:6} \in T(P_{x_{1:6}})</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">p_{x_{1:6}} = 60</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.0009765625</mn></mrow><annotation encoding="application/x-tex">P(T(P_{x_{1:6}})) = 0.0009765625</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.05859375</mn></mrow><annotation encoding="application/x-tex">\Pr(T(P_{x_{1:6}})) = 0.05859375</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R3 Q2 : tipo_tipo02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha uma fonte com alfabeto de tamanho <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\vert \mathcal{X} \vert = 4</annotation></semantics></math> e com distribuição <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)</annotation></semantics></math>. Considere sequências de comprimento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=6</annotation></semantics></math>. Quantos tipos existem? Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> abaixo? Qual é a probabilidade de uma sequência deste tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>?</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>3</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_{x_{1:6}} = \left( \frac{3}{6}, \frac{2}{6}, \frac{1}{6}, 0 \right) .
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.01} </li>
+<li> Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=60:0.01} </li>
+<li> Qual é a probabilidade de uma sequência do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.0009765625:1e-05} </li>
+<li> Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.05859375:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de tipos é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><msub><mstyle mathvariant="script"><mi>𝒫</mi></mstyle><mi>n</mi></msub><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mi>n</mi><mo>+</mo><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>4</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>9</mn><mn>3</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mn>9</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>6</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>9</mn><mo>×</mo><mn>8</mn><mo>×</mo><mn>7</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>84</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert \mathcal{P}_n \vert &amp;= {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} \\
+    &amp;= {6 + 4 - 1 \choose 4 - 1} = {9 \choose 3} = \frac{9!}{3! 6!} = \frac{9 \times 8 \times 7}{3 \times 2} = 84.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>O tamanho da classe de tipo é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mrow><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>…</mi><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>6</mn><mrow><mn>3</mn><mspace width="0.222em"></mspace><mn>2</mn><mspace width="0.222em"></mspace><mn>1</mn><mspace width="0.222em"></mspace><mn>0</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mrow><mn>6</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>2</mn><mi>!</mi><mn>1</mn><mi>!</mi><mn>0</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mn>60</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert T(P) \vert &amp;= { n \choose nP(a_1) \ nP(a_2) \ \ldots \ nP(a_n) } \\
+        &amp;= { 6 \choose 3 \ 2 \ 1 \ 0 } \\
+        &amp;= \frac{6!}{3! 2! 1! 0!} = 60.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade de uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">x_{1:6}</annotation></semantics></math> do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><msubsup><mi>p</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>n</mi><mn>2</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>3</mn><msub><mi>n</mi><mn>3</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>4</mn><msub><mi>n</mi><mn>4</mn></msub></msubsup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>1</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>0</mn></msup><mo>×</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.0009765625</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+ \Pr(x_{1:6}) &amp;= p_1^{n_1} \times p_2^{n_2} \times p_3^{n_3} \times p_4^{n_4} \\
+        &amp;= \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{4}\right)^{2} \times \left(\frac{1}{8}\right)^{1} \times \left(\frac{1}{8}\right)^{0} \times \\
+        &amp;= \left(\frac{1}{2}\right)^{10} = 0.0009765625.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade da classe de tipo é dada pela soma das probabilidades de todas as sequências na classe de tipo. Como todas as sequências na classe de tipo possuem a mesma probabilidade, basta multiplicar o tamanho da classe de tipo pela probabilidade de uma sequência do tipo: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>60</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.05859375</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\Pr(T(P_{x_{1:6}})) &amp;= \Pr(x_{1:6}) \times  \vert T(P) \vert = 60 \times \left(\frac{1}{2}\right)^{10} = 0.05859375.
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">\vert T(P_{x_{1:6}}) \vert = 84</annotation></semantics></math> </li>
+<li> Para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo>∈</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x_{1:6} \in T(P_{x_{1:6}})</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">p_{x_{1:6}} = 60</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.0009765625</mn></mrow><annotation encoding="application/x-tex">P(T(P_{x_{1:6}})) = 0.0009765625</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.05859375</mn></mrow><annotation encoding="application/x-tex">\Pr(T(P_{x_{1:6}})) = 0.05859375</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R4 Q2 : tipo_tipo02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha uma fonte com alfabeto de tamanho <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\vert \mathcal{X} \vert = 4</annotation></semantics></math> e com distribuição <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)</annotation></semantics></math>. Considere sequências de comprimento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=6</annotation></semantics></math>. Quantos tipos existem? Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> abaixo? Qual é a probabilidade de uma sequência deste tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>?</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>3</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_{x_{1:6}} = \left( \frac{3}{6}, \frac{2}{6}, \frac{1}{6}, 0 \right) .
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.01} </li>
+<li> Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=60:0.01} </li>
+<li> Qual é a probabilidade de uma sequência do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.0009765625:1e-05} </li>
+<li> Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.05859375:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de tipos é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><msub><mstyle mathvariant="script"><mi>𝒫</mi></mstyle><mi>n</mi></msub><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mi>n</mi><mo>+</mo><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>4</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>9</mn><mn>3</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mn>9</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>6</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>9</mn><mo>×</mo><mn>8</mn><mo>×</mo><mn>7</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>84</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert \mathcal{P}_n \vert &amp;= {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} \\
+    &amp;= {6 + 4 - 1 \choose 4 - 1} = {9 \choose 3} = \frac{9!}{3! 6!} = \frac{9 \times 8 \times 7}{3 \times 2} = 84.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>O tamanho da classe de tipo é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mrow><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>…</mi><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>6</mn><mrow><mn>3</mn><mspace width="0.222em"></mspace><mn>2</mn><mspace width="0.222em"></mspace><mn>1</mn><mspace width="0.222em"></mspace><mn>0</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mrow><mn>6</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>2</mn><mi>!</mi><mn>1</mn><mi>!</mi><mn>0</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mn>60</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert T(P) \vert &amp;= { n \choose nP(a_1) \ nP(a_2) \ \ldots \ nP(a_n) } \\
+        &amp;= { 6 \choose 3 \ 2 \ 1 \ 0 } \\
+        &amp;= \frac{6!}{3! 2! 1! 0!} = 60.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade de uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">x_{1:6}</annotation></semantics></math> do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><msubsup><mi>p</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>n</mi><mn>2</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>3</mn><msub><mi>n</mi><mn>3</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>4</mn><msub><mi>n</mi><mn>4</mn></msub></msubsup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>1</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>0</mn></msup><mo>×</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.0009765625</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+ \Pr(x_{1:6}) &amp;= p_1^{n_1} \times p_2^{n_2} \times p_3^{n_3} \times p_4^{n_4} \\
+        &amp;= \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{4}\right)^{2} \times \left(\frac{1}{8}\right)^{1} \times \left(\frac{1}{8}\right)^{0} \times \\
+        &amp;= \left(\frac{1}{2}\right)^{10} = 0.0009765625.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade da classe de tipo é dada pela soma das probabilidades de todas as sequências na classe de tipo. Como todas as sequências na classe de tipo possuem a mesma probabilidade, basta multiplicar o tamanho da classe de tipo pela probabilidade de uma sequência do tipo: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>60</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.05859375</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\Pr(T(P_{x_{1:6}})) &amp;= \Pr(x_{1:6}) \times  \vert T(P) \vert = 60 \times \left(\frac{1}{2}\right)^{10} = 0.05859375.
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">\vert T(P_{x_{1:6}}) \vert = 84</annotation></semantics></math> </li>
+<li> Para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo>∈</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x_{1:6} \in T(P_{x_{1:6}})</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">p_{x_{1:6}} = 60</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.0009765625</mn></mrow><annotation encoding="application/x-tex">P(T(P_{x_{1:6}})) = 0.0009765625</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.05859375</mn></mrow><annotation encoding="application/x-tex">\Pr(T(P_{x_{1:6}})) = 0.05859375</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R5 Q2 : tipo_tipo02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha uma fonte com alfabeto de tamanho <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\vert \mathcal{X} \vert = 4</annotation></semantics></math> e com distribuição <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)</annotation></semantics></math>. Considere sequências de comprimento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=6</annotation></semantics></math>. Quantos tipos existem? Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> abaixo? Qual é a probabilidade de uma sequência deste tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>?</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>3</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_{x_{1:6}} = \left( \frac{3}{6}, \frac{2}{6}, \frac{1}{6}, 0 \right) .
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.01} </li>
+<li> Qual é o tamanho da classe de tipo do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=60:0.01} </li>
+<li> Qual é a probabilidade de uma sequência do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.0009765625:1e-05} </li>
+<li> Qual é a probabilidade da classe de tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>? {1:NUMERICAL:=0.05859375:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de tipos é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><msub><mstyle mathvariant="script"><mi>𝒫</mi></mstyle><mi>n</mi></msub><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mi>n</mi><mo>+</mo><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow><mrow><mo stretchy="false" form="postfix">|</mo><mstyle mathvariant="script"><mi>𝒳</mi></mstyle><mo stretchy="false" form="postfix">|</mo><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>4</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>9</mn><mn>3</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mn>9</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>6</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>9</mn><mo>×</mo><mn>8</mn><mo>×</mo><mn>7</mn></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>84</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert \mathcal{P}_n \vert &amp;= {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} \\
+    &amp;= {6 + 4 - 1 \choose 4 - 1} = {9 \choose 3} = \frac{9!}{3! 6!} = \frac{9 \times 8 \times 7}{3 \times 2} = 84.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>O tamanho da classe de tipo é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mrow><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>…</mi><mspace width="0.222em"></mspace><mi>n</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>6</mn><mrow><mn>3</mn><mspace width="0.222em"></mspace><mn>2</mn><mspace width="0.222em"></mspace><mn>1</mn><mspace width="0.222em"></mspace><mn>0</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mrow><mn>6</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mn>2</mn><mi>!</mi><mn>1</mn><mi>!</mi><mn>0</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mn>60</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\vert T(P) \vert &amp;= { n \choose nP(a_1) \ nP(a_2) \ \ldots \ nP(a_n) } \\
+        &amp;= { 6 \choose 3 \ 2 \ 1 \ 0 } \\
+        &amp;= \frac{6!}{3! 2! 1! 0!} = 60.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade de uma sequência <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">x_{1:6}</annotation></semantics></math> do tipo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><msubsup><mi>p</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>n</mi><mn>2</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>3</mn><msub><mi>n</mi><mn>3</mn></msub></msubsup><mo>×</mo><msubsup><mi>p</mi><mn>4</mn><msub><mi>n</mi><mn>4</mn></msub></msubsup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>1</mn></msup><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>0</mn></msup><mo>×</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.0009765625</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+ \Pr(x_{1:6}) &amp;= p_1^{n_1} \times p_2^{n_2} \times p_3^{n_3} \times p_4^{n_4} \\
+        &amp;= \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{4}\right)^{2} \times \left(\frac{1}{8}\right)^{1} \times \left(\frac{1}{8}\right)^{0} \times \\
+        &amp;= \left(\frac{1}{2}\right)^{10} = 0.0009765625.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>A probabilidade da classe de tipo é dada pela soma das probabilidades de todas as sequências na classe de tipo. Como todas as sequências na classe de tipo possuem a mesma probabilidade, basta multiplicar o tamanho da classe de tipo pela probabilidade de uma sequência do tipo: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>60</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.05859375</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\Pr(T(P_{x_{1:6}})) &amp;= \Pr(x_{1:6}) \times  \vert T(P) \vert = 60 \times \left(\frac{1}{2}\right)^{10} = 0.05859375.
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">\vert T(P_{x_{1:6}}) \vert = 84</annotation></semantics></math> </li>
+<li> Para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub><mo>∈</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x_{1:6} \in T(P_{x_{1:6}})</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">p_{x_{1:6}} = 60</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.0009765625</mn></mrow><annotation encoding="application/x-tex">P(T(P_{x_{1:6}})) = 0.0009765625</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>P</mi><msub><mi>x</mi><mrow><mn>1</mn><mo>:</mo><mn>6</mn></mrow></msub></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.05859375</mn></mrow><annotation encoding="application/x-tex">\Pr(T(P_{x_{1:6}})) = 0.05859375</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-02/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R1 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">p(1) = 0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.998</mn></mrow><annotation encoding="application/x-tex">p(0) = 0.998</annotation></semantics></math>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mn>50</mn><mo>+</mo><mn>1225</mn><mo>+</mo><mn>19600</mn><mo>+</mo><mn>230300</mn><mo>+</mo><mn>2118760</mn><mo>=</mo><mn>2369936</mn></mrow><annotation encoding="application/x-tex">
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+</annotation></semantics></math> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⌈</mo><mo>log</mo><mn>2369936</mn><mo stretchy="false" form="postfix">⌉</mo><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">\lceil \log 2369936 \rceil = 22</annotation></semantics></math> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.020814</mn></mrow><annotation encoding="application/x-tex">H(0.002) = 0.020814</annotation></semantics></math>, ou seja, o limite seriam <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>×</mo><mn>0.020814</mn><mo>=</mo><mn>1.0407</mn></mrow><annotation encoding="application/x-tex">50 \times 0.020814 = 1.0407</annotation></semantics></math>, valor bem menor que os <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>22</mn><annotation encoding="application/x-tex">22</annotation></semantics></math> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>6</mn></mrow><mn>50</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>0.90475</mn><mo>+</mo><mn>0.090656</mn><mo>+</mo><mn>0.0044510</mn><mo>+</mo><mn>0.00014272</mn><mo>+</mo><mn>0.0000033606</mn><mo>+</mo><mn>0.000000061959</mn><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>Para a v.a. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math> que representa a soma das v.a. i.i.d. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1, \ldots, X_n</annotation></semantics></math>, a desigualdade de Chebyschev afirma que <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mi>n</mi></msub><mo>−</mo><mi>n</mi><mi>μ</mi><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mi>ϵ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><msup><mi>ϵ</mi><mn>2</mn></msup></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  </annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>σ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\sigma^2</annotation></semantics></math> representam a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> (logo, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">n\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n\sigma^2</annotation></semantics></math> são a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>).</p>
+<p>No problema em questão temos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">n=50</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">\mu=0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma^2 = (0.002)(0.998)</annotation></semantics></math>. Note que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">S_{50} \geq 6</annotation></semantics></math> se e somente se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mn>50</mn></msub><mo>−</mo><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\vert S_{50} - 50(0.002) \vert \geq 5.9</annotation></semantics></math>. Devemos então escolher <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\epsilon = 5.9</annotation></semantics></math>. Então <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>5.9</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mn>0.0028670</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}</annotation></semantics></math></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R2 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">p(1) = 0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.998</mn></mrow><annotation encoding="application/x-tex">p(0) = 0.998</annotation></semantics></math>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mn>50</mn><mo>+</mo><mn>1225</mn><mo>+</mo><mn>19600</mn><mo>+</mo><mn>230300</mn><mo>+</mo><mn>2118760</mn><mo>=</mo><mn>2369936</mn></mrow><annotation encoding="application/x-tex">
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+</annotation></semantics></math> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⌈</mo><mo>log</mo><mn>2369936</mn><mo stretchy="false" form="postfix">⌉</mo><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">\lceil \log 2369936 \rceil = 22</annotation></semantics></math> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.020814</mn></mrow><annotation encoding="application/x-tex">H(0.002) = 0.020814</annotation></semantics></math>, ou seja, o limite seriam <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>×</mo><mn>0.020814</mn><mo>=</mo><mn>1.0407</mn></mrow><annotation encoding="application/x-tex">50 \times 0.020814 = 1.0407</annotation></semantics></math>, valor bem menor que os <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>22</mn><annotation encoding="application/x-tex">22</annotation></semantics></math> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>6</mn></mrow><mn>50</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>0.90475</mn><mo>+</mo><mn>0.090656</mn><mo>+</mo><mn>0.0044510</mn><mo>+</mo><mn>0.00014272</mn><mo>+</mo><mn>0.0000033606</mn><mo>+</mo><mn>0.000000061959</mn><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>Para a v.a. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math> que representa a soma das v.a. i.i.d. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1, \ldots, X_n</annotation></semantics></math>, a desigualdade de Chebyschev afirma que <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mi>n</mi></msub><mo>−</mo><mi>n</mi><mi>μ</mi><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mi>ϵ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><msup><mi>ϵ</mi><mn>2</mn></msup></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  </annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>σ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\sigma^2</annotation></semantics></math> representam a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> (logo, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">n\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n\sigma^2</annotation></semantics></math> são a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>).</p>
+<p>No problema em questão temos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">n=50</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">\mu=0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma^2 = (0.002)(0.998)</annotation></semantics></math>. Note que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">S_{50} \geq 6</annotation></semantics></math> se e somente se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mn>50</mn></msub><mo>−</mo><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\vert S_{50} - 50(0.002) \vert \geq 5.9</annotation></semantics></math>. Devemos então escolher <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\epsilon = 5.9</annotation></semantics></math>. Então <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>5.9</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mn>0.0028670</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}</annotation></semantics></math></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R3 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">p(1) = 0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.998</mn></mrow><annotation encoding="application/x-tex">p(0) = 0.998</annotation></semantics></math>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mn>50</mn><mo>+</mo><mn>1225</mn><mo>+</mo><mn>19600</mn><mo>+</mo><mn>230300</mn><mo>+</mo><mn>2118760</mn><mo>=</mo><mn>2369936</mn></mrow><annotation encoding="application/x-tex">
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+</annotation></semantics></math> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⌈</mo><mo>log</mo><mn>2369936</mn><mo stretchy="false" form="postfix">⌉</mo><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">\lceil \log 2369936 \rceil = 22</annotation></semantics></math> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.020814</mn></mrow><annotation encoding="application/x-tex">H(0.002) = 0.020814</annotation></semantics></math>, ou seja, o limite seriam <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>×</mo><mn>0.020814</mn><mo>=</mo><mn>1.0407</mn></mrow><annotation encoding="application/x-tex">50 \times 0.020814 = 1.0407</annotation></semantics></math>, valor bem menor que os <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>22</mn><annotation encoding="application/x-tex">22</annotation></semantics></math> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>6</mn></mrow><mn>50</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>0.90475</mn><mo>+</mo><mn>0.090656</mn><mo>+</mo><mn>0.0044510</mn><mo>+</mo><mn>0.00014272</mn><mo>+</mo><mn>0.0000033606</mn><mo>+</mo><mn>0.000000061959</mn><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>Para a v.a. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math> que representa a soma das v.a. i.i.d. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1, \ldots, X_n</annotation></semantics></math>, a desigualdade de Chebyschev afirma que <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mi>n</mi></msub><mo>−</mo><mi>n</mi><mi>μ</mi><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mi>ϵ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><msup><mi>ϵ</mi><mn>2</mn></msup></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  </annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>σ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\sigma^2</annotation></semantics></math> representam a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> (logo, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">n\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n\sigma^2</annotation></semantics></math> são a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>).</p>
+<p>No problema em questão temos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">n=50</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">\mu=0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma^2 = (0.002)(0.998)</annotation></semantics></math>. Note que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">S_{50} \geq 6</annotation></semantics></math> se e somente se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mn>50</mn></msub><mo>−</mo><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\vert S_{50} - 50(0.002) \vert \geq 5.9</annotation></semantics></math>. Devemos então escolher <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\epsilon = 5.9</annotation></semantics></math>. Então <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>5.9</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mn>0.0028670</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}</annotation></semantics></math></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R4 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">p(1) = 0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.998</mn></mrow><annotation encoding="application/x-tex">p(0) = 0.998</annotation></semantics></math>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mn>50</mn><mo>+</mo><mn>1225</mn><mo>+</mo><mn>19600</mn><mo>+</mo><mn>230300</mn><mo>+</mo><mn>2118760</mn><mo>=</mo><mn>2369936</mn></mrow><annotation encoding="application/x-tex">
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+</annotation></semantics></math> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⌈</mo><mo>log</mo><mn>2369936</mn><mo stretchy="false" form="postfix">⌉</mo><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">\lceil \log 2369936 \rceil = 22</annotation></semantics></math> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.020814</mn></mrow><annotation encoding="application/x-tex">H(0.002) = 0.020814</annotation></semantics></math>, ou seja, o limite seriam <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>×</mo><mn>0.020814</mn><mo>=</mo><mn>1.0407</mn></mrow><annotation encoding="application/x-tex">50 \times 0.020814 = 1.0407</annotation></semantics></math>, valor bem menor que os <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>22</mn><annotation encoding="application/x-tex">22</annotation></semantics></math> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>6</mn></mrow><mn>50</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>0.90475</mn><mo>+</mo><mn>0.090656</mn><mo>+</mo><mn>0.0044510</mn><mo>+</mo><mn>0.00014272</mn><mo>+</mo><mn>0.0000033606</mn><mo>+</mo><mn>0.000000061959</mn><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>Para a v.a. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math> que representa a soma das v.a. i.i.d. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1, \ldots, X_n</annotation></semantics></math>, a desigualdade de Chebyschev afirma que <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mi>n</mi></msub><mo>−</mo><mi>n</mi><mi>μ</mi><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mi>ϵ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><msup><mi>ϵ</mi><mn>2</mn></msup></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  </annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>σ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\sigma^2</annotation></semantics></math> representam a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> (logo, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">n\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n\sigma^2</annotation></semantics></math> são a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>).</p>
+<p>No problema em questão temos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">n=50</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">\mu=0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma^2 = (0.002)(0.998)</annotation></semantics></math>. Note que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">S_{50} \geq 6</annotation></semantics></math> se e somente se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mn>50</mn></msub><mo>−</mo><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\vert S_{50} - 50(0.002) \vert \geq 5.9</annotation></semantics></math>. Devemos então escolher <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\epsilon = 5.9</annotation></semantics></math>. Então <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>5.9</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mn>0.0028670</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}</annotation></semantics></math></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R5 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">p(1) = 0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.998</mn></mrow><annotation encoding="application/x-tex">p(0) = 0.998</annotation></semantics></math>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mn>50</mn><mo>+</mo><mn>1225</mn><mo>+</mo><mn>19600</mn><mo>+</mo><mn>230300</mn><mo>+</mo><mn>2118760</mn><mo>=</mo><mn>2369936</mn></mrow><annotation encoding="application/x-tex">
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+</annotation></semantics></math> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⌈</mo><mo>log</mo><mn>2369936</mn><mo stretchy="false" form="postfix">⌉</mo><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">\lceil \log 2369936 \rceil = 22</annotation></semantics></math> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.020814</mn></mrow><annotation encoding="application/x-tex">H(0.002) = 0.020814</annotation></semantics></math>, ou seja, o limite seriam <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>×</mo><mn>0.020814</mn><mo>=</mo><mn>1.0407</mn></mrow><annotation encoding="application/x-tex">50 \times 0.020814 = 1.0407</annotation></semantics></math>, valor bem menor que os <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>22</mn><annotation encoding="application/x-tex">22</annotation></semantics></math> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>6</mn></mrow><mn>50</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>5</mn></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>50</mn><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>50</mn><mo>−</mo><mi>k</mi></mrow></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>0.90475</mn><mo>+</mo><mn>0.090656</mn><mo>+</mo><mn>0.0044510</mn><mo>+</mo><mn>0.00014272</mn><mo>+</mo><mn>0.0000033606</mn><mo>+</mo><mn>0.000000061959</mn><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+</annotation></semantics></math></p>
+<p>Para a v.a. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math> que representa a soma das v.a. i.i.d. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1, \ldots, X_n</annotation></semantics></math>, a desigualdade de Chebyschev afirma que <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mi>n</mi></msub><mo>−</mo><mi>n</mi><mi>μ</mi><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mi>ϵ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><msup><mi>ϵ</mi><mn>2</mn></msup></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  </annotation></semantics></math> onde <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>σ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\sigma^2</annotation></semantics></math> representam a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> (logo, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">n\mu</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n\sigma^2</annotation></semantics></math> são a média e variância de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>).</p>
+<p>No problema em questão temos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">n=50</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>0.002</mn></mrow><annotation encoding="application/x-tex">\mu=0.002</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma^2 = (0.002)(0.998)</annotation></semantics></math>. Note que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">S_{50} \geq 6</annotation></semantics></math> se e somente se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">|</mo><msub><mi>S</mi><mn>50</mn></msub><mo>−</mo><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">|</mo><mo>≥</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\vert S_{50} - 50(0.002) \vert \geq 5.9</annotation></semantics></math>. Devemos então escolher <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mn>5.9</mn></mrow><annotation encoding="application/x-tex">\epsilon = 5.9</annotation></semantics></math>. Então <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>Pr</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>S</mi><mn>50</mn></msub><mo>≥</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mrow><mn>50</mn><mo stretchy="false" form="prefix">(</mo><mn>0.002</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0.998</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>5.9</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mn>0.0028670</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}</annotation></semantics></math></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+</quiz>

@@ -1,0 +1,87 @@
+\subsection{Caminhada do Pombo}
+
+\begin{questions}
+\question{
+        Suponha que um pombo esteja andando em um tabuleiro unidimensional infinito.
+        Este tabuleiro pode ser representado pelo conjunto dos números inteiros.
+        Em cada instante o pombo dá um passo e muda de posição, 
+        podendo ir para frente (um passo em direção aos números positivos) ou 
+        para trás (um passo em direção aos números negativos).
+        O pombo muda de direção com probabilidade $p=0.25$.
+        Suponha que o estado inicial seja $X_0 = 0$. O primeiro passo pode ser
+        para frente ou para trás, com igual probabilidade.
+        Um exemplo típico de caminhada deste pombo sobre o tabuleiro seria:
+        \begin{equation}
+        (X_0, X_1, X_2, \ldots ) = (0, 1, 2, 3, 4, 3, 2, 1, 0, -1, -2, -1, 0, 1, 0, \ldots)
+        \end{equation}
+\begin{parts}
+\part 
+Calcule o valor aproximado da entropia da sequência de comprimento $n+1$, $H(X_0, X_1, \ldots, X_n)$, para $n=1001$.
+
+\part 
+Calcule a taxa de entropia para a caminhada do pombo.
+
+\part
+Qual é o número esperado de passos que o pombo dá em uma direção antes de mudar de direção?
+\textit{dica:} $\sum_{k=0}^{\infty} k r^k = \nicefrac{r}{(1-r)^2}$.
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+        Pela regra da cadeia temos
+        \begin{eqnarray}
+        H(X_{0:n}) &=& \sum_{i=0}^{n} H(X_i | X_{0:i-1}) \\
+                        &=& H(X_0) + H(X_1 | X_0) + \sum_{i=2}^{n} H(X_i | X_{i-2:i-1})
+        \end{eqnarray}
+        Onde utilizamos que a caminhada do pombo sobre o tabuleiro é uma
+        cadeia de Markov de segunda ordem, visto que o próximo estado $X_i$ depende
+        apenas dos dois estados anteriores $X_{i-1}$ e $X_{i-2}$, ou seja,
+        $H(X_i | X_{0:i-1}) = H(X_i | X_{i-2:i-1})$ para $i \geq 2$.
+        
+        O enunciado do problema fornece: $H(X_0) = 0$, pois o estado inicial é
+        determinístico; $H(X_1 | X_0) = H(\nicefrac{1}{2}) = 1$, já que o primeiro passo
+        é igualmente provável para qualquer um dos dois lados; 
+        e $H(X_i | X_{i-2:i-1}) = H(\nicefrac{1}{4}, \nicefrac{3}{4}) = 2 - \nicefrac{3}{4}\log 3$ 
+        pois a probabilidade de mudar de direção é dada $p=0.25$.
+%       -1/4 log 1/4 - 3/4 log 3/4
+%       1/4 log 4 + 3/4 log 4/3
+%       1/2 + 3/4 (2 - log 3)
+%       1/2 + 3/2 - 3/4 log 3
+%       2 - 3/4 log 3  
+
+        Assim teremos
+        \begin{eqnarray}
+        H(X_{0:n}) &=& 1 + (n-1) (2 - \nicefrac{3}{4}\log 3) \\
+        H(X_{0:1001}) &=& 1 + 1000 \times 0.811 = 812 .
+        \end{eqnarray}
+
+
+
+\part
+        A taxa de entropia é dada por
+        \begin{eqnarray}
+        \lim_{n \rightarrow \infty} \frac{H(X_{0:n})}{n+1} &=& \lim_{n \rightarrow \infty} \frac{1 + (n-1) (2 - \nicefrac{3}{4}\log 3)}{n+1} \\
+                        &=& (2 - \nicefrac{3}{4}\log 3) = 0.811
+        \end{eqnarray}
+
+
+\part
+    Seja $K$ o número de passos antes de inverter a direção.
+    Queremos calcular $\E[K]$. 
+    \begin{eqnarray}
+    \E[K] &=& \sum_{k=1}^{\infty} k \Pr(K=k) \\
+                &=& \sum_{k=1}^{\infty} k (\nicefrac{3}{4})^{k-1} (\nicefrac{1}{4})  \\
+                &=& \frac{1}{4} \frac{1}{(1 - \nicefrac{3}{4})^2} = 4
+    \end{eqnarray}
+    onde utilizamos que
+    \begin{eqnarray}
+    \sum_{k=1}^{\infty} k r^{k-1} &=& \frac{1}{r} \sum_{k=1}^{\infty} k r^{k} \\
+                &=& \frac{1}{r} \frac{r}{(1-r)^2} = \frac{1}{(1-r)^2} .
+    \end{eqnarray}
+
+\end{parts}
+\end{solution}
+\end{questions}

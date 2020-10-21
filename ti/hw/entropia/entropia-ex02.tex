@@ -1,0 +1,36 @@
+\subsection{$H(X,Y|Z) = H(X|Z) + H(Y|X,Z)$}
+
+\begin{questions}
+\question{
+Mostre que
+\begin{equation}
+H(X,Y|Z) = H(X|Z) + H(Y|X,Z) .
+\end{equation}
+}
+
+
+
+\begin{solution}
+
+Temos que
+\begin{equation}
+p(x,y \vert z) = p(x \vert z) p(y \vert x, z) ,
+\end{equation}
+logo, tomando $- \log$ de ambos os lados, temos
+\begin{equation}
+-\log p(x,y \vert z) = - \log p(x \vert z) - \log p(y \vert x, z) .
+\end{equation}
+Vamos agora tomar o valor esperado em relação a distribuição conjunta,
+\begin{eqnarray}
+- E_{(x,y,z)} \left[ \log p(x,y \vert z) \right] &=& E_{(x,y,z)} \left[ \log p(x \vert z) \right] - E_{(x,y,z)} \left[ \log p(y \vert x, z) \right] \nonumber \\
+        &=& - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} \sum_{z \in \mathcal{Z}} p(x,y,z)  \log p(x \vert z) - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} \sum_{z \in \mathcal{Z}} p(x,y,z) \log p(y \vert x, z) \nonumber \\
+        &=& - \sum_{x \in \mathcal{X}} \sum_{z \in \mathcal{Z}} \log p(x \vert z) \sum_{y \in \mathcal{Y}} p(x,y,z)  \nonumber \\
+	 && - \sum_{x \in \mathcal{X}} \sum_{z \in \mathcal{Z}} p(x,z) \sum_{y \in \mathcal{Y}} p(y \vert x, z) \log p(y \vert x, z) \nonumber \\
+        &=& - \sum_{x \in \mathcal{X}} \sum_{z \in \mathcal{Z}} p(x,z) \log p(x \vert z) + \sum_{x \in \mathcal{X}} \sum_{z \in \mathcal{Z}} p(x,z) H(Y \vert X=x, Z=z) \nonumber \\
+        &=& H(X \vert Z) + H(Y \vert X, Z)
+\end{eqnarray}
+
+\end{solution}
+
+
+\end{questions}

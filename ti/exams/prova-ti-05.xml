@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-05/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R1 Q1 : canal_canal01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o canal Z com entrada e saída binária e probabilidades de transição dadas pela matriz <span class="math display">\[
+Q =
+\begin{pmatrix}
+1 &amp; 0 \\
+\frac{1}{2} &amp; \frac{1}{2} 
+\end{pmatrix} 
+\quad \quad x,y \in \{0,1\} .
+\]</span></p>
+<p>Determine a capacidade deste canal e a distribuição maximizadora na entrada.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C=\)</span> {2:NUMERICAL:=0.3219281:0.01} </li>
+<li> <span class="math inline">\(Pr(X=0)=\)</span> {1:NUMERICAL:=0.6:0.01} </li>
+<li> <span class="math inline">\(Pr(X=1)=\)</span> {1:NUMERICAL:=0.4:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><br />
+<img src="@@PLUGINFILE@@/canal-z.png" /></p>
+<p><span class="math display">\[
+I(X;Y) = H(Y) - H(Y|X)
+\]</span></p>
+<p><span class="math display">\[
+H(Y) = H\left( \Pr(Y=1) \right) = H\left( \frac{1}{2} Pr(X=1) \right) = H\left(\frac{p}{2}\right)
+\]</span></p>
+<p>Teremos assim: <span class="math display">\[
+\begin{align}
+I(X;Y) &amp;= H(Y) - H(Y|X) = H\left(\frac{p}{2}\right) - p \\
+       &amp;= - \frac{p}{2} \log \frac{p}{2} - \left(1 - \frac{p}{2}\right) \log \left(1 - \frac{p}{2}\right) - p 
+\end{align}
+\]</span></p>
+<p>Queremos <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, ou seja, <span class="math display">\[
+\begin{align}
+\frac{\partial I}{\partial p} 
+        &amp;= - \frac{1}{2} \log \frac{p}{2} - \frac{p}{2} \frac{2}{p} \frac{1}{2} + \frac{1}{2} \log \left( 1 - \frac{p}{2} \right) - \left( 1- \frac{p}{2} \right) \frac{1}{1 - \frac{p}{2}} \left(-\frac{1}{2}\right) - 1 \\
+        &amp;= \frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1
+\end{align}
+\]</span></p>
+<p>Fazendo <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, teremos <span class="math display">\[
+\begin{align}
+\frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1 &amp;= 0 \\
+\log \frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 2 \\
+\frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 4 \\
+1 - \frac{p}{2} &amp;= 2 p \\
+p &amp;= \frac{2}{5}  
+\end{align}
+\]</span></p>
+<p>Teremos então <span class="math display">\[
+\begin{align}
+C &amp;= \max_p I(X;Y) = H\left(\frac{1}{5}\right) - \frac{2}{5} \\
+ &amp;= \frac{1}{5} \log 5 -\frac{4}{5} \log \frac{4}{5} - \frac{2}{5} = \frac{1}{5} \log 5 + \frac{4}{5} \log 5 -\frac{4}{5} \times 2 - \frac{2}{5} \\
+ &amp;= \log 5 - 2
+\end{align}
+\]</span></p>
+<p>A distribuição que maximiza a informação mútua é <span class="math inline">\(\left( \frac{3}{5} , \frac{2}{5}\right)\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C = \log 5 - 2 = 0.3219281\)</span> </li>
+<li> <span class="math inline">\(Pr(X=0) = \frac{3}{5} = 0.6\)</span> </li>
+<li> <span class="math inline">\(Pr(X=1) = \frac{2}{5} = 0.4\)</span> </li>
+</ol>
+</p>]]></text>
+<file name="canal-z.png" encoding="base64">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</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R2 Q1 : canal_canal01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o canal Z com entrada e saída binária e probabilidades de transição dadas pela matriz <span class="math display">\[
+Q =
+\begin{pmatrix}
+1 &amp; 0 \\
+\frac{1}{2} &amp; \frac{1}{2} 
+\end{pmatrix} 
+\quad \quad x,y \in \{0,1\} .
+\]</span></p>
+<p>Determine a capacidade deste canal e a distribuição maximizadora na entrada.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C=\)</span> {2:NUMERICAL:=0.3219281:0.01} </li>
+<li> <span class="math inline">\(Pr(X=0)=\)</span> {1:NUMERICAL:=0.6:0.01} </li>
+<li> <span class="math inline">\(Pr(X=1)=\)</span> {1:NUMERICAL:=0.4:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><br />
+<img src="@@PLUGINFILE@@/canal-z.png" /></p>
+<p><span class="math display">\[
+I(X;Y) = H(Y) - H(Y|X)
+\]</span></p>
+<p><span class="math display">\[
+H(Y) = H\left( \Pr(Y=1) \right) = H\left( \frac{1}{2} Pr(X=1) \right) = H\left(\frac{p}{2}\right)
+\]</span></p>
+<p>Teremos assim: <span class="math display">\[
+\begin{align}
+I(X;Y) &amp;= H(Y) - H(Y|X) = H\left(\frac{p}{2}\right) - p \\
+       &amp;= - \frac{p}{2} \log \frac{p}{2} - \left(1 - \frac{p}{2}\right) \log \left(1 - \frac{p}{2}\right) - p 
+\end{align}
+\]</span></p>
+<p>Queremos <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, ou seja, <span class="math display">\[
+\begin{align}
+\frac{\partial I}{\partial p} 
+        &amp;= - \frac{1}{2} \log \frac{p}{2} - \frac{p}{2} \frac{2}{p} \frac{1}{2} + \frac{1}{2} \log \left( 1 - \frac{p}{2} \right) - \left( 1- \frac{p}{2} \right) \frac{1}{1 - \frac{p}{2}} \left(-\frac{1}{2}\right) - 1 \\
+        &amp;= \frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1
+\end{align}
+\]</span></p>
+<p>Fazendo <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, teremos <span class="math display">\[
+\begin{align}
+\frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1 &amp;= 0 \\
+\log \frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 2 \\
+\frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 4 \\
+1 - \frac{p}{2} &amp;= 2 p \\
+p &amp;= \frac{2}{5}  
+\end{align}
+\]</span></p>
+<p>Teremos então <span class="math display">\[
+\begin{align}
+C &amp;= \max_p I(X;Y) = H\left(\frac{1}{5}\right) - \frac{2}{5} \\
+ &amp;= \frac{1}{5} \log 5 -\frac{4}{5} \log \frac{4}{5} - \frac{2}{5} = \frac{1}{5} \log 5 + \frac{4}{5} \log 5 -\frac{4}{5} \times 2 - \frac{2}{5} \\
+ &amp;= \log 5 - 2
+\end{align}
+\]</span></p>
+<p>A distribuição que maximiza a informação mútua é <span class="math inline">\(\left( \frac{3}{5} , \frac{2}{5}\right)\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C = \log 5 - 2 = 0.3219281\)</span> </li>
+<li> <span class="math inline">\(Pr(X=0) = \frac{3}{5} = 0.6\)</span> </li>
+<li> <span class="math inline">\(Pr(X=1) = \frac{2}{5} = 0.4\)</span> </li>
+</ol>
+</p>]]></text>
+<file name="canal-z.png" encoding="base64">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</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R3 Q1 : canal_canal01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o canal Z com entrada e saída binária e probabilidades de transição dadas pela matriz <span class="math display">\[
+Q =
+\begin{pmatrix}
+1 &amp; 0 \\
+\frac{1}{2} &amp; \frac{1}{2} 
+\end{pmatrix} 
+\quad \quad x,y \in \{0,1\} .
+\]</span></p>
+<p>Determine a capacidade deste canal e a distribuição maximizadora na entrada.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C=\)</span> {2:NUMERICAL:=0.3219281:0.01} </li>
+<li> <span class="math inline">\(Pr(X=0)=\)</span> {1:NUMERICAL:=0.6:0.01} </li>
+<li> <span class="math inline">\(Pr(X=1)=\)</span> {1:NUMERICAL:=0.4:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><br />
+<img src="@@PLUGINFILE@@/canal-z.png" /></p>
+<p><span class="math display">\[
+I(X;Y) = H(Y) - H(Y|X)
+\]</span></p>
+<p><span class="math display">\[
+H(Y) = H\left( \Pr(Y=1) \right) = H\left( \frac{1}{2} Pr(X=1) \right) = H\left(\frac{p}{2}\right)
+\]</span></p>
+<p>Teremos assim: <span class="math display">\[
+\begin{align}
+I(X;Y) &amp;= H(Y) - H(Y|X) = H\left(\frac{p}{2}\right) - p \\
+       &amp;= - \frac{p}{2} \log \frac{p}{2} - \left(1 - \frac{p}{2}\right) \log \left(1 - \frac{p}{2}\right) - p 
+\end{align}
+\]</span></p>
+<p>Queremos <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, ou seja, <span class="math display">\[
+\begin{align}
+\frac{\partial I}{\partial p} 
+        &amp;= - \frac{1}{2} \log \frac{p}{2} - \frac{p}{2} \frac{2}{p} \frac{1}{2} + \frac{1}{2} \log \left( 1 - \frac{p}{2} \right) - \left( 1- \frac{p}{2} \right) \frac{1}{1 - \frac{p}{2}} \left(-\frac{1}{2}\right) - 1 \\
+        &amp;= \frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1
+\end{align}
+\]</span></p>
+<p>Fazendo <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, teremos <span class="math display">\[
+\begin{align}
+\frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1 &amp;= 0 \\
+\log \frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 2 \\
+\frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 4 \\
+1 - \frac{p}{2} &amp;= 2 p \\
+p &amp;= \frac{2}{5}  
+\end{align}
+\]</span></p>
+<p>Teremos então <span class="math display">\[
+\begin{align}
+C &amp;= \max_p I(X;Y) = H\left(\frac{1}{5}\right) - \frac{2}{5} \\
+ &amp;= \frac{1}{5} \log 5 -\frac{4}{5} \log \frac{4}{5} - \frac{2}{5} = \frac{1}{5} \log 5 + \frac{4}{5} \log 5 -\frac{4}{5} \times 2 - \frac{2}{5} \\
+ &amp;= \log 5 - 2
+\end{align}
+\]</span></p>
+<p>A distribuição que maximiza a informação mútua é <span class="math inline">\(\left( \frac{3}{5} , \frac{2}{5}\right)\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C = \log 5 - 2 = 0.3219281\)</span> </li>
+<li> <span class="math inline">\(Pr(X=0) = \frac{3}{5} = 0.6\)</span> </li>
+<li> <span class="math inline">\(Pr(X=1) = \frac{2}{5} = 0.4\)</span> </li>
+</ol>
+</p>]]></text>
+<file name="canal-z.png" encoding="base64">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</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R4 Q1 : canal_canal01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o canal Z com entrada e saída binária e probabilidades de transição dadas pela matriz <span class="math display">\[
+Q =
+\begin{pmatrix}
+1 &amp; 0 \\
+\frac{1}{2} &amp; \frac{1}{2} 
+\end{pmatrix} 
+\quad \quad x,y \in \{0,1\} .
+\]</span></p>
+<p>Determine a capacidade deste canal e a distribuição maximizadora na entrada.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C=\)</span> {2:NUMERICAL:=0.3219281:0.01} </li>
+<li> <span class="math inline">\(Pr(X=0)=\)</span> {1:NUMERICAL:=0.6:0.01} </li>
+<li> <span class="math inline">\(Pr(X=1)=\)</span> {1:NUMERICAL:=0.4:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><br />
+<img src="@@PLUGINFILE@@/canal-z.png" /></p>
+<p><span class="math display">\[
+I(X;Y) = H(Y) - H(Y|X)
+\]</span></p>
+<p><span class="math display">\[
+H(Y) = H\left( \Pr(Y=1) \right) = H\left( \frac{1}{2} Pr(X=1) \right) = H\left(\frac{p}{2}\right)
+\]</span></p>
+<p>Teremos assim: <span class="math display">\[
+\begin{align}
+I(X;Y) &amp;= H(Y) - H(Y|X) = H\left(\frac{p}{2}\right) - p \\
+       &amp;= - \frac{p}{2} \log \frac{p}{2} - \left(1 - \frac{p}{2}\right) \log \left(1 - \frac{p}{2}\right) - p 
+\end{align}
+\]</span></p>
+<p>Queremos <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, ou seja, <span class="math display">\[
+\begin{align}
+\frac{\partial I}{\partial p} 
+        &amp;= - \frac{1}{2} \log \frac{p}{2} - \frac{p}{2} \frac{2}{p} \frac{1}{2} + \frac{1}{2} \log \left( 1 - \frac{p}{2} \right) - \left( 1- \frac{p}{2} \right) \frac{1}{1 - \frac{p}{2}} \left(-\frac{1}{2}\right) - 1 \\
+        &amp;= \frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1
+\end{align}
+\]</span></p>
+<p>Fazendo <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, teremos <span class="math display">\[
+\begin{align}
+\frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1 &amp;= 0 \\
+\log \frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 2 \\
+\frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 4 \\
+1 - \frac{p}{2} &amp;= 2 p \\
+p &amp;= \frac{2}{5}  
+\end{align}
+\]</span></p>
+<p>Teremos então <span class="math display">\[
+\begin{align}
+C &amp;= \max_p I(X;Y) = H\left(\frac{1}{5}\right) - \frac{2}{5} \\
+ &amp;= \frac{1}{5} \log 5 -\frac{4}{5} \log \frac{4}{5} - \frac{2}{5} = \frac{1}{5} \log 5 + \frac{4}{5} \log 5 -\frac{4}{5} \times 2 - \frac{2}{5} \\
+ &amp;= \log 5 - 2
+\end{align}
+\]</span></p>
+<p>A distribuição que maximiza a informação mútua é <span class="math inline">\(\left( \frac{3}{5} , \frac{2}{5}\right)\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C = \log 5 - 2 = 0.3219281\)</span> </li>
+<li> <span class="math inline">\(Pr(X=0) = \frac{3}{5} = 0.6\)</span> </li>
+<li> <span class="math inline">\(Pr(X=1) = \frac{2}{5} = 0.4\)</span> </li>
+</ol>
+</p>]]></text>
+<file name="canal-z.png" encoding="base64">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</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R5 Q1 : canal_canal01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o canal Z com entrada e saída binária e probabilidades de transição dadas pela matriz <span class="math display">\[
+Q =
+\begin{pmatrix}
+1 &amp; 0 \\
+\frac{1}{2} &amp; \frac{1}{2} 
+\end{pmatrix} 
+\quad \quad x,y \in \{0,1\} .
+\]</span></p>
+<p>Determine a capacidade deste canal e a distribuição maximizadora na entrada.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C=\)</span> {2:NUMERICAL:=0.3219281:0.01} </li>
+<li> <span class="math inline">\(Pr(X=0)=\)</span> {1:NUMERICAL:=0.6:0.01} </li>
+<li> <span class="math inline">\(Pr(X=1)=\)</span> {1:NUMERICAL:=0.4:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><br />
+<img src="@@PLUGINFILE@@/canal-z.png" /></p>
+<p><span class="math display">\[
+I(X;Y) = H(Y) - H(Y|X)
+\]</span></p>
+<p><span class="math display">\[
+H(Y) = H\left( \Pr(Y=1) \right) = H\left( \frac{1}{2} Pr(X=1) \right) = H\left(\frac{p}{2}\right)
+\]</span></p>
+<p>Teremos assim: <span class="math display">\[
+\begin{align}
+I(X;Y) &amp;= H(Y) - H(Y|X) = H\left(\frac{p}{2}\right) - p \\
+       &amp;= - \frac{p}{2} \log \frac{p}{2} - \left(1 - \frac{p}{2}\right) \log \left(1 - \frac{p}{2}\right) - p 
+\end{align}
+\]</span></p>
+<p>Queremos <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, ou seja, <span class="math display">\[
+\begin{align}
+\frac{\partial I}{\partial p} 
+        &amp;= - \frac{1}{2} \log \frac{p}{2} - \frac{p}{2} \frac{2}{p} \frac{1}{2} + \frac{1}{2} \log \left( 1 - \frac{p}{2} \right) - \left( 1- \frac{p}{2} \right) \frac{1}{1 - \frac{p}{2}} \left(-\frac{1}{2}\right) - 1 \\
+        &amp;= \frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1
+\end{align}
+\]</span></p>
+<p>Fazendo <span class="math inline">\(\frac{\partial I}{\partial p} = 0\)</span>, teremos <span class="math display">\[
+\begin{align}
+\frac{1}{2} \log \frac{1 - \frac{p}{2}}{\frac{p}{2}} - 1 &amp;= 0 \\
+\log \frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 2 \\
+\frac{1 - \frac{p}{2}}{\frac{p}{2}} &amp;= 4 \\
+1 - \frac{p}{2} &amp;= 2 p \\
+p &amp;= \frac{2}{5}  
+\end{align}
+\]</span></p>
+<p>Teremos então <span class="math display">\[
+\begin{align}
+C &amp;= \max_p I(X;Y) = H\left(\frac{1}{5}\right) - \frac{2}{5} \\
+ &amp;= \frac{1}{5} \log 5 -\frac{4}{5} \log \frac{4}{5} - \frac{2}{5} = \frac{1}{5} \log 5 + \frac{4}{5} \log 5 -\frac{4}{5} \times 2 - \frac{2}{5} \\
+ &amp;= \log 5 - 2
+\end{align}
+\]</span></p>
+<p>A distribuição que maximiza a informação mútua é <span class="math inline">\(\left( \frac{3}{5} , \frac{2}{5}\right)\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(C = \log 5 - 2 = 0.3219281\)</span> </li>
+<li> <span class="math inline">\(Pr(X=0) = \frac{3}{5} = 0.6\)</span> </li>
+<li> <span class="math inline">\(Pr(X=1) = \frac{2}{5} = 0.4\)</span> </li>
+</ol>
+</p>]]></text>
+<file name="canal-z.png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAALsAAABRCAIAAAAFLUDZAAAAA3NCSVQICAjb4U/gAAAAGXRFWHRTb2Z0d2FyZQBnbm9tZS1zY3JlZW5zaG907wO/PgAACUxJREFUeJztnHtIk98fxz9q6CQ107Kr9cXMaykmLi2R8oZFJkZ284JBzSIpLHP9EWiB4j+WiOC10kQKb+S0wgycC3SxksqZYeLmJfOynGY6b9t+fzw/hjRTn+3xOW6e11/zbOc57z69n8/Zc87nzECpVAIGs2wMUQvA6BjYMRhyYMdgyIEdgyEHdgyGHNgxGHJgx2DIgR2DIcc6msf7/Pnz48ePJyYmQkNDw8LCaB5db0AYRlpzjEAg8Pb2BgB7e/vY2NiHDx/SObregDiMShoJCQmJjY0lXpeUlFhYWMhkMjoF6Adow0ifY+bm5kxMTKqrq4k/x8fHDQwMuFwubQL0A+RhpG9WGhwcnJ6etrW1Jf40MzOztLTs6emhTYB+gDyM9DlmZmYGABgMhqrF1NSUaFyclJQUgzUDm81eoTBSBX2OsbS0BACpVKpqGRkZIRoXJyUlhbaUi4qXL186ODikpaWlpqauUBipgr6na0tLy127drW0tBw6dAgA2tvbp6am3NzcaBOwOpFKpXfu3Glra3vx4oWzs/OSn0cfRjrvpLt37zo6Oo6MjMjl8qioKB8fHzpHJ/j27VtMTExCQgL9Q6tTVlb233//paeny+Xy5fdCG0ZaHSOTycLCwkxNTa2srJydnb9//07n6CqkUmlcXBySoVX09/efOnUqJCSku7ubbF+0YaTVMQQ/fvzo6OhQKBT0D02A1jEKhaK4uHjPnj15eXnaXAdVGOneJQCA7du30z/oKqGrq4vFYllZWTU1NdnY2GhzKWRhpNmhyBkcHLxy5cr+/fsLCwvpHHd2djYzM9Pe3r6yspLOcSnHQInPEqw8ra2tly9fdnBwyMzMtLKyQi1HKxDMSmuK2dnZBw8eFBUVZWdnBwQEoJZDAbg+ZgVpbm729PTs7+//8OGDftgFcI5ZISYnJ+/fv19XV1dYWMhkMlHLoRKcY6inrq7O3d0dAN6/f69ndgGcY6hldHSUzWYLhcLq6moXFxfUclYEnGMoo6amhslk2tnZ8Xg8fbUL4BxDCQMDA/Hx8X/+/Kmvr9+9ezdqOSsLzjFaoVQqnz596uvrGxwc/Pr1a723CyyYY4RCIZ/PZzAYUVFR6u+Ojo5WVFQAQFhY2ObNm1dc4CpGJBKxWCwGg9HY2Lhjxw7UcpamtLRUJpN5eXkRX8zVefXqVX9/v729/ZEjR/55FfVlYIlEsmXLFgAoKChQfzc6OhoA/P39EW4lIkcul+fl5dnb21dUVKDWQoKMjAwAsLW1HR0dVX+Xz+cbGRmtW7fu48ePi1xk4X2lqqoqALCwsOjp6ZnfzuFwAMDMzEwkEmmhXLdpbW09ePBgdHS0RCJBrYUccrnc19cXAC5evPjXWzKZzMnJCQCSk5MXv8g/dyLPnTsHAEFBQaqWX79+bd26FQBycnK0kK3DzMzMpKenOzk51dfXo9aiIZ2dnevXrweA2tra+e2JiYkA4OHhMTMzs/gV/ukY1dykKuM4f/48AAQEBKzN+aipqWnfvn0sFmt8fBy1Fq3Izs4GgG3bto2MjBAtzc3NhoaGxsbGX758WbL7YtUOxNxkbm7e3d1NvDYzMxOLxdQI1x0mJibYbLa7uzufz0ethQIUCoW/vz8AREZGKpVKmUzm6OgIAGlpacvpvkR9DDE3+fn5EeU/ubm5FEjWKbhcrouLC5vNnpqaQq2FMsRisbm5OQBUVVXdunULAJhM5tzc3HL6LuEY1dwEAIGBgVSo1RmkUimLxfLx8REKhai1UE9BQQEAbNy40dDQkMFgtLe3L7Pj0jV4J0+eJBzT2NionUj0LP8bGIfD2bt3b3p6+jLvPF3k2LFjxP9sRkbG8nst4ZjKykrVys3Ro0d16DvvX6dM8vLysrKy4uPjw8PDFz+l/PPnz9OnT/v5+XV0dNCiFBlv374FACMjI1JnXxZzjEQiIb6+pKenEy9067l6/pmBGzduEC9EItHNmzf/1aWsrIyo8tehe0NjGhoaCMeQ6rWYY86ePQsAwcHBSqWS2Bkgnpu0kkkjKseMjY0RC1MKhYLFYn39+lX9w11dXUFBQSdOnOjr66NZJyoodgwxH81f9o2IiFAZSCdQOebZs2fEg3FSUlJDQ8NfH1Mt+ZeXl9MvEiFUOmZ4eJiYhuZvLQ0NDW3atAkAaD63oRnzT5kkJCQoFIqcnBwmk3njxo2SkhLVx4RCobe3d0REhM4t+WsPlY45c+bMgunk+fPnALBhw4be3l4NZaKgtLRUvVG15P/mzRv6Ja0GKHNMeXn5gtuQBOHh4QBw/PhxDWWuDlpaWjw9PfVgyV8bqHGMaj7Kz89fsMPAwABxRquoqEhDpUiZnJxks9lubm7Nzc2otSBGM8esrTORPB7v6tWroaGh9+7dMzExQS1HJ1krdb5jY2NJSUkCgaCkpOTAgQOo5egwa6LOt7a21svLy87OTiAQYLtoiZ7nmMHBwdu3b4vF4traWgcHB9Ry9AF9zjHl5eWHDx/29fVtbGzEdqEK/cwxYrE4Li7O2NiYy+Xu3LkTtRy9Qt9yjFKpzM/PDwwMjIyMrKmpwXahHL3KMZ2dnZcuXbKxseHz+cSGBoZy9MQxc3NzGRkZT548ycrKCg4ORi1Hn9GHWenTp08+Pj5dXV0CgYBCu6yptU0SrMTyM20QS/5OTk7qNQzLR71aTyQScTic5RTsrUFodczExMS7d+8yMzNTU1O1vxqPx3N1daWkyn/Baj3lUgV7qKA2jGSh1THXrl2ztrZ2dXUlu/v1F6Ojo9evX/fw8Fj8hPDyUa/WUy5asIcWqsKoGbQ6higtqKmp0eafSqzeUlvlr16tp/xHwd5qgJIwagytz0pmZmbadB8aGkpMTBSLxRwOhzjGRwlDQ0PJyclNTU2PHj1qa2sjqptzc3O5XO709HRfX9+Cv4qCEC3DqC30m1Szm4Oo8s/MzCR1VIIsC1brrU7WRI7RjN7eXhaLZWJiwuPxVvrH+C9cuLCi19cH6Dcp2ZsjJiYGdZDoY8mfb9E4jFShAzmmuLi4uLgYtQrM/6HVMdPT0+Pj479//wYAiUQCANbW1gYGBnRq0AMQh5HOhEb8nsB8hoeH6RSgH6AN49qqDMdojz7sRGLoBDsGQw7sGAw5sGMw5MCOwZADOwZDDuwYDDmwYzDkwI7BkAM7BkMO7BgMOf4HwEzbCIdjaEkAAAAASUVORK5CYII=</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-05/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="shortanswer">
+<name>
+<text> R1 Q2 : canal_hamming01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o código de Hamming (7,4,3) seguindo a convenção estabelecida nas aulas, onde os 4 primeiros bits são bits de dados e os últimos 3 bits são bits verificadores de paridade.</p>
+<p>Suponha que uma sequência de símbolos em Hexadecimal (0-9ABCDEF) foi enviada pela fonte, utilizando o código de Hamming. Cada símbolo Hexadecimal é representado por sua sequência binária correspondente. O receptor recebeu a seguinte sequência: 01011001000011111001.</p>
+<p>Determine a sequência Hexadecimal (use maiúsculas) enviada pela fonte (não utilize nenhum caractere separando os símbolos).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Vamos primeiramente separa os grupos de 7 bits (palavras do código de Hamming 743): 0101100, 1000011, 111001.</p>
+<p>Para cada uma demas iremos calcular a síndrome e corrigir:</p>
+<p><span class="math inline">\(s_1 = [1 1 0]^T\)</span>: (3a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o 3 bit e assim obter: 0111100. Bits de dados 0111 (hex=7).</p>
+<p><span class="math inline">\(s_2 = [0 0 0]^T\)</span>: (não houve erro).</p>
+<p>Bits enviados: 1000011. Bits de dados 1000 (hex=8).</p>
+<p><span class="math inline">\(s_3 = [0 0 1]^T\)</span>: (7a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o último bit e assim obter: 111000. Bits de dados 1110 (hex=E).</p>
+<p>A sequência produzida pela fonte foi: 78E.</p>
+<ol type = "a">
+<li> Sequência produzida pela fonte: 78E. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<usecase>0</usecase>
+<answer fraction="100" format="moodle_auto_format">
+<text>
+78E
+</text>
+</answer>
+</question>
+
+
+<question type="shortanswer">
+<name>
+<text> R2 Q2 : canal_hamming01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o código de Hamming (7,4,3) seguindo a convenção estabelecida nas aulas, onde os 4 primeiros bits são bits de dados e os últimos 3 bits são bits verificadores de paridade.</p>
+<p>Suponha que uma sequência de símbolos em Hexadecimal (0-9ABCDEF) foi enviada pela fonte, utilizando o código de Hamming. Cada símbolo Hexadecimal é representado por sua sequência binária correspondente. O receptor recebeu a seguinte sequência: 01011001000011111001.</p>
+<p>Determine a sequência Hexadecimal (use maiúsculas) enviada pela fonte (não utilize nenhum caractere separando os símbolos).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Vamos primeiramente separa os grupos de 7 bits (palavras do código de Hamming 743): 0101100, 1000011, 111001.</p>
+<p>Para cada uma demas iremos calcular a síndrome e corrigir:</p>
+<p><span class="math inline">\(s_1 = [1 1 0]^T\)</span>: (3a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o 3 bit e assim obter: 0111100. Bits de dados 0111 (hex=7).</p>
+<p><span class="math inline">\(s_2 = [0 0 0]^T\)</span>: (não houve erro).</p>
+<p>Bits enviados: 1000011. Bits de dados 1000 (hex=8).</p>
+<p><span class="math inline">\(s_3 = [0 0 1]^T\)</span>: (7a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o último bit e assim obter: 111000. Bits de dados 1110 (hex=E).</p>
+<p>A sequência produzida pela fonte foi: 78E.</p>
+<ol type = "a">
+<li> Sequência produzida pela fonte: 78E. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<usecase>0</usecase>
+<answer fraction="100" format="moodle_auto_format">
+<text>
+78E
+</text>
+</answer>
+</question>
+
+
+<question type="shortanswer">
+<name>
+<text> R3 Q2 : canal_hamming01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o código de Hamming (7,4,3) seguindo a convenção estabelecida nas aulas, onde os 4 primeiros bits são bits de dados e os últimos 3 bits são bits verificadores de paridade.</p>
+<p>Suponha que uma sequência de símbolos em Hexadecimal (0-9ABCDEF) foi enviada pela fonte, utilizando o código de Hamming. Cada símbolo Hexadecimal é representado por sua sequência binária correspondente. O receptor recebeu a seguinte sequência: 01011001000011111001.</p>
+<p>Determine a sequência Hexadecimal (use maiúsculas) enviada pela fonte (não utilize nenhum caractere separando os símbolos).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Vamos primeiramente separa os grupos de 7 bits (palavras do código de Hamming 743): 0101100, 1000011, 111001.</p>
+<p>Para cada uma demas iremos calcular a síndrome e corrigir:</p>
+<p><span class="math inline">\(s_1 = [1 1 0]^T\)</span>: (3a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o 3 bit e assim obter: 0111100. Bits de dados 0111 (hex=7).</p>
+<p><span class="math inline">\(s_2 = [0 0 0]^T\)</span>: (não houve erro).</p>
+<p>Bits enviados: 1000011. Bits de dados 1000 (hex=8).</p>
+<p><span class="math inline">\(s_3 = [0 0 1]^T\)</span>: (7a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o último bit e assim obter: 111000. Bits de dados 1110 (hex=E).</p>
+<p>A sequência produzida pela fonte foi: 78E.</p>
+<ol type = "a">
+<li> Sequência produzida pela fonte: 78E. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<usecase>0</usecase>
+<answer fraction="100" format="moodle_auto_format">
+<text>
+78E
+</text>
+</answer>
+</question>
+
+
+<question type="shortanswer">
+<name>
+<text> R4 Q2 : canal_hamming01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o código de Hamming (7,4,3) seguindo a convenção estabelecida nas aulas, onde os 4 primeiros bits são bits de dados e os últimos 3 bits são bits verificadores de paridade.</p>
+<p>Suponha que uma sequência de símbolos em Hexadecimal (0-9ABCDEF) foi enviada pela fonte, utilizando o código de Hamming. Cada símbolo Hexadecimal é representado por sua sequência binária correspondente. O receptor recebeu a seguinte sequência: 01011001000011111001.</p>
+<p>Determine a sequência Hexadecimal (use maiúsculas) enviada pela fonte (não utilize nenhum caractere separando os símbolos).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Vamos primeiramente separa os grupos de 7 bits (palavras do código de Hamming 743): 0101100, 1000011, 111001.</p>
+<p>Para cada uma demas iremos calcular a síndrome e corrigir:</p>
+<p><span class="math inline">\(s_1 = [1 1 0]^T\)</span>: (3a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o 3 bit e assim obter: 0111100. Bits de dados 0111 (hex=7).</p>
+<p><span class="math inline">\(s_2 = [0 0 0]^T\)</span>: (não houve erro).</p>
+<p>Bits enviados: 1000011. Bits de dados 1000 (hex=8).</p>
+<p><span class="math inline">\(s_3 = [0 0 1]^T\)</span>: (7a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o último bit e assim obter: 111000. Bits de dados 1110 (hex=E).</p>
+<p>A sequência produzida pela fonte foi: 78E.</p>
+<ol type = "a">
+<li> Sequência produzida pela fonte: 78E. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<usecase>0</usecase>
+<answer fraction="100" format="moodle_auto_format">
+<text>
+78E
+</text>
+</answer>
+</question>
+
+
+<question type="shortanswer">
+<name>
+<text> R5 Q2 : canal_hamming01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere o código de Hamming (7,4,3) seguindo a convenção estabelecida nas aulas, onde os 4 primeiros bits são bits de dados e os últimos 3 bits são bits verificadores de paridade.</p>
+<p>Suponha que uma sequência de símbolos em Hexadecimal (0-9ABCDEF) foi enviada pela fonte, utilizando o código de Hamming. Cada símbolo Hexadecimal é representado por sua sequência binária correspondente. O receptor recebeu a seguinte sequência: 01011001000011111001.</p>
+<p>Determine a sequência Hexadecimal (use maiúsculas) enviada pela fonte (não utilize nenhum caractere separando os símbolos).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Vamos primeiramente separa os grupos de 7 bits (palavras do código de Hamming 743): 0101100, 1000011, 111001.</p>
+<p>Para cada uma demas iremos calcular a síndrome e corrigir:</p>
+<p><span class="math inline">\(s_1 = [1 1 0]^T\)</span>: (3a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o 3 bit e assim obter: 0111100. Bits de dados 0111 (hex=7).</p>
+<p><span class="math inline">\(s_2 = [0 0 0]^T\)</span>: (não houve erro).</p>
+<p>Bits enviados: 1000011. Bits de dados 1000 (hex=8).</p>
+<p><span class="math inline">\(s_3 = [0 0 1]^T\)</span>: (7a coluna de <span class="math inline">\(H\)</span>).</p>
+<p>Devemos trocar o último bit e assim obter: 111000. Bits de dados 1110 (hex=E).</p>
+<p>A sequência produzida pela fonte foi: 78E.</p>
+<ol type = "a">
+<li> Sequência produzida pela fonte: 78E. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<usecase>0</usecase>
+<answer fraction="100" format="moodle_auto_format">
+<text>
+78E
+</text>
+</answer>
+</question>
+
+</quiz>

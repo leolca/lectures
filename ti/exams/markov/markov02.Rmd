@@ -1,0 +1,75 @@
+```{r data generation, echo = FALSE, results = "hide"}
+mu <- c(1/4, 1/4, 1/4, 1/4)
+lab <- seq.int(length(mu))-1
+txentr <- 1.7925
+txz <- 19.925
+```
+
+Question
+========
+Seja $X_1$ uniformemente distribuído sobre os estados $\{0,1,2,3\}$. Seja $\{X_i\}_{1}^{\infty}$ uma cadeia de Markov
+onde a probabilidade de continuar no mesmo estado é $1/2$ e a probabilidade de transição para um estado diferente é
+a mesma para todos os estados.
+
+1. Calcule a distribuição de estado estacionário para $\{X_i\}_{1}^{\infty}$ ($\mu_0$, $\mu_1$, $\mu_2$, $\mu_3$). 
+2. Calcule a taxa de entropia $H(\mathcal{X})$.
+3. Seja um processo derivado $Z_1, Z_2, \ldots, Z_n$ onde
+$$
+\begin{align}
+        Z_1 &= X_1 \nonumber & \\
+        Z_i &= (X_i + X_{i-1})\mod{4} , & \quad  i=2, \ldots, n
+\end{align}
+$$
+Determine $H(Z_1,Z_2,\ldots,Z_n)$ para $n=11$.
+
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(c(paste("$\\mu_{", lab, "} =$", sep = ""), "$H(\\mathcal{X})=$", "$H(Z_1,Z_2,\\ldots,Z_{11})=$"), markup = "markdown")
+```
+
+Solution
+========
+
+Pela simetria podemos concluir que todos os estados terão igual probabilidade no estado estacionário,
+desta forma, teremos $\mu_{0} = \mu_{1} = \mu_{2} = \mu_{3} = 1/4$. 
+Podemos verificar que tal distribuição é tal que $\mu^{(2)} = \mu^{(1)} P$.
+
+Como $\{X_n\}$ é uma cadeia de Markov estacionária, teremos que a taxa de entropia será dada por
+$$
+\begin{align}
+\lim_{n \rightarrow \infty}\frac{1}{n}H(X_1, \ldots, X_n) &= H(X_2 | X_1) \\
+        &= \sum_{k=0}^{3} \Pr(X_1 = k) H(X_2 | X_1 = k) \\
+        &= 4 \times \frac{1}{4} \times H\left( \frac{1}{2}, \frac{1}{6}, \frac{1}{6}, \frac{1}{6} \right) \\
+        &= \frac{1}{2} + \frac{3}{6} \log 6 = 1 + \frac{1}{2} \log 3 = 1.7925 .
+\end{align}
+$$
+
+Como $X \in \{0,1,2,3\}$, teremos que existe uma função injetora de $(X_1,X_2,\ldots,X_n)$ em 
+$(Z_1,Z_2,\ldots,Z_n)$ (eles são *one-to-one*). Desta forma, fazendo uso da 
+regra da cadeia da entropia, podemos escrever
+$$
+\begin{align} 
+H(Z_1,Z_2,\ldots,Z_n) &= H(X_1,X_2,\ldots,X_n) \\
+        &= \sum_{k=1}^{n} H(X_k | X_1, \ldots X_{k-1}) \\
+        &= H(X_1) + \sum_{k=2}^{n} H(X_k | X_{k-1}) \\
+        &= H(X_1) + (n-1) H(X_2 | X_1) \\
+        &= \log 4 + (n-1) \times (1 + \frac{1}{2} \log 3) 
+\end{align}
+$$
+Para $n=11$ teremos:
+$$
+H(Z_1,Z_2,\ldots,Z_n) = 2 + 10 \times (1 + \frac{1}{2} \log 3) = 19.925
+$$
+
+```{r solutionlist, echo = FALSE, results = "asis"}
+answerlist(c(paste("$\\mu_{", lab, "} = ", format(mu), "$", sep = ""), paste("$H(\\mathcal{X}) = ", format(txentr),"$", sep = ""), paste("$H(Z_1,Z_2,\\ldots,Z_{11}) = ",format(txz),"$", sep="")), markup = "markdown")
+```
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num|num|num
+exsolution: 0.25|0.25|0.25|0.25|1.7925|19.925
+exname: ex-markov
+extol: 0.001
+expoints: 1|1|1|1|4|4

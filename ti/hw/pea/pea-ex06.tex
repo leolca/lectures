@@ -1,0 +1,150 @@
+\subsection{Tipicidade nas provas}
+% ~/ee/ufsj/2017_02/ti/provas/prova01-resolucao.tex
+
+\begin{questions}
+\question{
+Suponha que uma turma com 30 alunos realizou uma prova com 7 questões de múltipla escolha
+onde cada questão possuía 7 alternativas. Suponha que os alunos não tenham estudado e, sem 
+saber resolver as questões, resolveram marcar aleatoriamente (sem preferência por nenhuma opção
+e sem nenhum critério para escolher as opções) as respostas
+
+\begin{parts}
+\part
+Calcule a probabilidade de que todos  os alunos tenham acertado no mínimo 4 questões.
+
+\part
+Foi observado que os alunos, sem apresentar a resolução de nenhuma das questões, 
+acertaram no mínimo 4 questões. Utilizando os seu conhecimentos da Propriedade da Equipartição 
+Assintótica, podemos concluir que esta observação pertence ou não ao conjunto típico? Por que?
+(considere apenas uma aproximação, uma vez que o conjunto típico surge quando observamos
+sequências arbitrariamente longas, ou seja, é um comportamento assintótico)
+
+\part
+Podemos concluir que este grupo de aluno utilizou-se de algum meio ilícito para obter as
+respostas das questões? Qual é o grau de confiabilidade desta conclusão?
+
+\part
+Explique o que é o conjunto típico e quais resultados seriam resultados típicos para esta prova,
+considerando que os alunos escolheram aleatoriamente as respostas.
+(Não é necessário realizar as contas, apenas deixe indicado como resolver a questão).
+
+\end{parts}
+}
+
+\begin{solution}
+Em cada questão o aluno pode acertar ou errar, então podemos ver o resultado
+de cada questão como uma realização de um experimento de Bernoulli com $p=1/7$,
+uma vez que as opções de cada questão possuem a mesma probabilidade de serem escolhidas,
+ou seja, teremos uma probabilidade de $1/7$ para o acerto e $6/7$ para o erro.
+Um resultado dos 30 exames pode ser visto como uma sequência de comprimento $N=30 \times 7 = 210$
+(30 alunos e 7 questões por prova) de v.a. i.i.d., $X_{1:N}$, onde $X_i \sim \text{Bern}(p)$, $\forall i$,
+ou então como uma realização de uma v.a. Binomial, $X \sim \text{Bin}(N,k)$, onde $N$ é
+o número de experimentos de Bernoulli e $k$ o número de sucessos.
+
+\begin{parts}
+\part
+Para calcular a probabilidade de que todos os alunos tenham acertado no mínimo
+4 questões a esmo, devemos somar a probabilidade de todas as observações que satisfazem
+esta condição, ou seja, todas as sequências de $N$ realizações do ensaio de Bernoulli
+onde ocorram $30 \times 4 = 120$ ou mais sucessos, ou seja, a probabilidade da v.a.
+binomial assumir um valor igual ou superior a $120$.
+
+\begin{equation}
+\Pr(\textmd{\# acertos} \geq 4) = \Pr(X \geq 120) = \sum_{k=120}^{N} {N \choose k} p^{k}(1-p)^{N-k} = 4.4\times 10^{-47} .
+\end{equation}
+
+\part
+Esta observação não pertence ao conjunto típico. As sequências típicas são aquelas
+que apresentam aproximadamente $N \times p = 30$ sucessos e $N \times (1-p) = 180$ falhas.
+Como a variância de uma v.a. Binomial é $\Var(X) = Np(1-p) = 180/7 \approx 25,7$, então
+o desvio padrão será $\sigma \approx 5$. Para uma distribuição Gaussiana, sabemos que
+ao tomar 3 desvios padrões acima e abaixo da média nos confere 99\% de probabilidade.
+Para o caso Binomial não é muito diferente. Esperamos então que, ao tomar as
+os casos com 15 a 45 sucessos ($30 - 3 \times 5$ e $30 + 3 \times 5$) teremos aproximadamente
+toda a probabilidade. Desta forma, podemos considerar como observações típicas aquelas em que observamos
+de 15 a 45 sucessos. Uma observação com 120 sucessos ou mais está bem distante do que é típico.
+
+De forma mais rigorsa, devemos definir $\epsilon$, por exemplo $\epsilon = 0.1$.
+Dado este valor de $\epsilon$ as sequências típicas serão aquelas que satisfazem
+\begin{equation}
+H(X)-\epsilon \leq -\frac{1}{n} \log p(x_{1:n}) \leq H+\epsilon .
+\end{equation}
+Utilizando o seguinte código podemos determinar quais são estas sequências:
+\begin{verbatim}
+>> n=210; p=1/7; eps=0.1;
+>> H=-p*log2(p)-(1-p)*log2(1-p);
+>> for k=0:n, 
+       pn=p^k*(1-p)^(n-k); 
+       lpn=-(1/n)*log2(pn); 
+       if lpn>H-eps && lpn<H+eps, disp(k);endif; 
+   endfor;
+\end{verbatim}
+e assim concluímos que as as sequências com $k \in [22,38]$ pertencem ao conjunto típico.
+
+
+\part
+Sim. Não é factível observar tantos sucessos. Podemos afirmar com praticamente 100\%
+de certeza que algo ilícito ocorreu (considerando os valores de .
+
+Se considerarmos o conjunto típico $A_{\epsilon}^{(n)}$
+como o conjunto das sequências com 5 a 45 sucessos, teremos
+\begin{equation}
+\Pr(A_{\epsilon}^{(n)}) = \sum_{k=15}^{45} {N \choose k} p^{k}(1-p)^{N-k} = 0.99768 ,
+\end{equation}
+ou seja, a probabilidade do conjunto não-típcio é $0.002$. Se usarmos 4 desvios padrões,
+ao invés de 3, como feito anteriormente, passaremos a ter $\Pr(A_{\epsilon}^{(n)}) = 0.99991$,
+e assim a probabilidade do conjunto não-típico será $0.00009$.
+
+Realizando os cálculos com $\epsilon=0.1$, teremos
+\begin{equation}
+\Pr(A_{\epsilon}^{(n)}) = \sum_{k=22}^{38} {N \choose k} p^{k}(1-p)^{N-k} = 0.90735 ,
+\end{equation}
+ou seja, podemos confirmar que $\Pr(A_{\epsilon}^{(n)}) > 1 - \epsilon$.
+
+\begin{verbatim}
+>> n=210; p=1/7; eps=0.1; PA=0;
+>> H=-p*log2(p)-(1-p)*log2(1-p);
+>> for k=0:n, 
+        pn=p^k*(1-p)^(n-k); 
+        lpn=-(1/n)*log2(pn); 
+        if lpn>H-eps && lpn<H+eps,
+           PA+=nchoosek(n,k)*pn; 
+        endif; 
+   endfor;
+\end{verbatim}
+
+
+\part
+Conjunto típico é o menor conjunto que detém `toda' a probabilidade. As sequências típicas
+são aquelas que possuem probabilidade de $2^{-nH}$, onde $n$ é o comprimento da sequência
+e $H$ a entropia da fonte. No caso em questão, seriam resultados típicos observações
+com aproximadamente 30 sucessos. Como mostrado acima, considerando as sequências com
+15 a 45 sucessos, este conjunto deterá mais de 99\% da probabilidade.
+Se utilizarmos o $\epsilon = 0.1$, consideraremos as sequências com 22 a 38 sucessos com típicas,
+resultando em um conjunto com probabilidade maior que 90\%.
+
+A título de informação, para ganhar na megasena é necessário acertar um jogo de 6 números
+escolhido dentre os números de 1 a 60. O número de possíveis jogos na megasena é
+\begin{equation}
+{60 \choose 6} = 50063860
+\end{equation}
+Como todos os jogos são equiprováveis, a chance de ganhar na megasena com um jogo é
+de 1 em 50063860, ou seja, $1.99 \times 10^{-8}$.
+A probabilidade de observarmos 4 ou mais acertos nas questões dos 30 alunos é menor
+do que a probabilidade de ganhar 6 vezes na megasena.
+
+\begin{verbatim}
+>> Pmegasena = 1/50063860;
+>> P=0; 
+>> for k=120:n, 
+       pn=p^k*(1-p)^(n-k); 
+       P+=nchoosek(n,k)*pn; 
+   endfor;
+>> log(P)/log(Pmegasena)
+ans =  6.0202
+\end{verbatim}
+
+
+\end{parts}
+\end{solution}
+\end{questions}

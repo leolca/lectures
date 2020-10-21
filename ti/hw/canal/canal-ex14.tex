@@ -1,0 +1,72 @@
+\subsection{Canais em cascata}
+% http://www.ece.tufts.edu/~maivu/ES250/HW4_ES250_sol_a.pdf
+% questao 7
+\begin{questions}
+\question{
+Considere o canal de comunicação apresentado na figura abaixo, um canal
+constituído pela concatenação de um canal binário simétrico, com capacidade $C_1$,
+e um canal binário com apagamento, com capacidade $C_2$.
+Mostre que a capacidade do canal resultante será $C = C_1 C_2$.
+(dica: pela concavidade e simetria da entropia é possível inferir de forma simples
+qual é a distribuição em $X$ que leva ao máximo da informação mútua).
+
+   \begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.6\textwidth]{../images/canalbse.pdf}
+   \caption{Canal de comunicação.}
+   \label{fig:canalbse}
+   \end{figure}
+
+}
+
+\begin{solution}
+\begin{eqnarray}
+C = \max_{p(x)} I(X;\tilde{Y}) = \max_{p(x)} \left( H(\tilde{Y}) - H(\tilde{Y}|X) \right)
+\end{eqnarray}
+
+Vamos considerar $X \sim \text{Ber}(\pi)$.
+
+Para determinar $H(\tilde{Y})$ devemos calcular a distribuição em $\tilde{Y}$.
+\begin{align}
+\Pr(\tilde{Y} = 0) &= (1-\alpha) ( \pi p + (1-\pi)(1-p) ) \nonumber \\
+\Pr(\tilde{Y} = e) &= \alpha \nonumber \\
+\Pr(\tilde{Y} = 1) &= (1-\alpha) ( (1-\pi) p + \pi (1-p) ) ,
+\end{align}
+assim, teremos
+\begin{equation}
+H(\tilde{Y}) = H\left( (1-\alpha) ( \pi p + (1-\pi)(1-p) ), \alpha , (1-\alpha) ( (1-\pi) p + \pi (1-p) ) \right).
+\end{equation}
+
+Para determinar $H(\tilde{Y}|X)$ devemos determinar as seguintes probabilidades condicionais:
+\begin{align}
+\Pr(\tilde{Y} = 0 |X = 0) &= (1-p)(1-\alpha) \nonumber \\
+\Pr(\tilde{Y} = e |X = 0) &= \alpha \nonumber \\
+\Pr(\tilde{Y} = 1 |X = 0) &= p (1-\alpha) \nonumber \\
+\Pr(\tilde{Y} = 0 |X = 1) &= p(1-\alpha) \nonumber \\
+\Pr(\tilde{Y} = e |X = 1) &= \alpha \nonumber \\
+\Pr(\tilde{Y} = 1 |X = 1) &= (1-p) (1-\alpha) .
+\end{align}
+Assim teremos
+\begin{align}
+H(\tilde{Y} |X = 0) &= H\left( (1-p)(1-\alpha), \alpha, p (1-\alpha) \right) , \nonumber \\
+H(\tilde{Y} |X = 1) &= H\left( p(1-\alpha), \alpha, (1-p) (1-\alpha) \right) \text{ e} \nonumber \\
+H(\tilde{Y} |X ) &= (1-\pi) H(\tilde{Y} |X = 0) + \pi H(\tilde{Y} |X = 1) .
+\end{align}
+
+Pela concavidade e simetria de $H$ podemos concluir que a informação mútua será máxima
+quando $\pi = \frac{1}{2}$. Teremos assim
+\begin{align}
+H(\tilde{Y})\bigg\rvert_{\pi = \frac{1}{2}} &= H\left( \frac{1}{2} (1-\alpha), \alpha, \frac{1}{2} (1-\alpha) \right) \nonumber \\
+H(\tilde{Y} |X )\bigg\rvert_{\pi = \frac{1}{2}} &= H\left( (1-p)(1-\alpha), \alpha, p(1-\alpha) \right) .
+\end{align}
+Teremos então
+\begin{align}
+C &= H\left( \frac{1}{2} (1-\alpha), \alpha, \frac{1}{2} (1-\alpha) \right) - H\left( (1-p)(1-\alpha), \alpha, p(1-\alpha) \right)  \nonumber \\
+  &= - (1-\alpha) \log \frac{(1-\alpha)}{2} - \alpha \log \alpha + \nonumber \\
+  & (1-p)(1-\alpha) \log \left( (1-p)(1-\alpha) \right) + \alpha \log \alpha + p(1-\alpha) \log \left( p(1-\alpha) \right) \nonumber \\
+  &= (1-\alpha) \left( 1 + p\log p + (1-p) \log (1-p) \right) \nonumber \\
+  &= (1-\alpha) \left( 1 - H(p) \right) = C_1 C_2 \qed
+\end{align}
+
+\end{solution}
+\end{questions}

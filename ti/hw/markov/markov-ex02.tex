@@ -1,0 +1,148 @@
+\subsection{Cadeia de Markov}
+% harvard / HW2_ES250_sol_a
+
+\begin{questions}
+\question{
+Seja $X_1$ uniformemente distribuído sobre os estados $\{0,1,2\}$. Seja $\{X_i\}_{1}^{\infty}$ 
+uma cadeia de Markov com matriz de transição $P$, ou seja, $P(X_{n+1}=j \vert X_n = i) = P_{ij}$, $i,j \in \{0,1,2\}$.
+\begin{equation}
+        P = [P_{ij}] = 
+        \begin{bmatrix} 
+        \frac{1}{2} & \frac{1}{4} & \frac{1}{4} \\
+        \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\
+        \frac{1}{4} & \frac{1}{4} & \frac{1}{2} 
+        \end{bmatrix}
+\end{equation}
+
+\begin{parts}
+\part $\{X_n\}$ é estacionária?
+
+\part Calcule $\lim_{n \rightarrow \infty}\frac{1}{n}H(X_1, \ldots, X_n)$. 
+
+\part
+Considere agora um processo derivado $Z_1, Z_2, \ldots, Z_n$ onde
+\begin{eqnarray}
+        Z_1 = X_1 \nonumber & \\
+        Z_i = (X_i - X_{i-1})\mod{3} , & \quad  i=2, \ldots, n
+\end{eqnarray}
+Desta forma $Z^n$ codifica as transições ao invés dos estados.
+
+Encontre $H(Z_1,Z_2,\ldots,Z_n)$.
+
+\part 
+Encontre $H(Z_n)$ e $H(X_n)$, para $n \geq 2$.
+
+\part
+Encontre $H(Z_n \vert Z_{n-1})$, para $n \geq 2$.
+
+\part
+$Z_{n-1}$ e $Z_{n}$ são independentes para $n \geq 2$?
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+Seja $\mu_n$ a função massa de probabilidade no instante $n$. No instante $n=1$
+temos $\mu_1 = (1/3, 1/3, 1/3)$. No instante seguinte, teremos
+
+\begin{eqnarray}
+\mu_2 &=& \mu_1 P \\
+        &=& \left( \frac{1}{3} \times \frac{1}{2} + \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{4} , \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{2} + \frac{1}{3} \times \frac{1}{4}, \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{2}  \right) \nonumber \\
+        &=& \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right) = \mu_1 .
+\end{eqnarray}
+
+Da mesma forma podemos constatar que $\mu_n = (1/3, 1/3, 1/3)$ para todo $n$ e assim
+$\{X_n\}$ é estacionário.
+
+
+\part
+Como $\{X_n\}$ é uma cadeia de Markov estacionária, teremos
+\begin{eqnarray} 
+\lim_{n \rightarrow \infty}\frac{1}{n}H(X_1, \ldots, X_n) &=& H(X_2 | X_1) \nonumber \\
+        &=& \sum_{k=0}^{2} \Pr(X_1 = k) H(X_2 | X_1 = k) \nonumber \\
+        &=& 3 \times \frac{1}{3} \times H\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{4} \right) \nonumber \\
+        &=& \frac{3}{2} .
+\end{eqnarray}
+
+
+\part
+Como $X \in \{0,1,2\}$, teremos que existe uma função injetora de $(X_1,X_2,\ldots,X_n)$ em
+$(Z_1,Z_2,\ldots,Z_n)$ (eles são \textit{one-to-one}). Desta forma, fazendo uso da
+regra da cadeia da entropia, podemos escrever
+\begin{eqnarray} 
+H(Z_1,Z_2,\ldots,Z_n) &=& H(X_1,X_2,\ldots,X_n) \nonumber \\
+        &=& \sum_{k=1}^{n} H(X_k | X_1, \ldots X_{k-1}) \nonumber \\
+        &=& H(X_1) + \sum_{k=2}^{n} H(X_k | X_{k-1}) \nonumber \\
+        &=& H(X_1) + (n-1) H(X_2 | X_1) \nonumber \\
+        &=& \log 3 + (n-1) \times \frac{3}{2}
+\end{eqnarray}
+
+\part 
+Como $\{X_n\}$ é estacionário com $\mu_n = (1/3, 1/3, 1/3)$,
+\begin{equation}
+H(X_n) = H(X_1) = H\left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right) = \log 3 .
+\end{equation}
+
+Teremos $Z_n = 0$ quando $(X_n = 0, X_{n-1} = 0)$, $(X_n = 1, X_{n-1} = 1)$,
+$(X_n = 2, X_{n-1} = 2)$, assim
+$\Pr(Z_n = 0) = \frac{1}{3} \times \frac{1}{2} + \frac{1}{3} \times \frac{1}{2} + \frac{1}{3} \times \frac{1}{2} = \frac{1}{2}$.
+
+Teremos $Z_n = 1$ quando $(X_n = 1, X_{n-1} = 0)$, $(X_n = 2, X_{n-1} = 1)$,
+$(X_n = 0, X_{n-1} = 2)$, assim
+$\Pr(Z_n = 1) = \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{4} = \frac{1}{4}$.
+
+Teremos $Z_n = 2$ quando $(X_n = 2, X_{n-1} = 0)$, $(X_n = 0, X_{n-1} = 1)$,
+$(X_n = 1, X_{n-1} = 2)$, assim
+$\Pr(Z_n = 2) = \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{4} + \frac{1}{3} \times \frac{1}{4} = \frac{1}{4}$.
+
+Para $n \geq 2$ temos
+\begin{equation}
+Z_n = \begin{cases} 
+0, \quad \frac{1}{2}; \\
+1, \quad \frac{1}{4}; \\
+2, \quad \frac{1}{4}.
+\end{cases}
+\end{equation}
+Desta forma, $H(Z_n) = H\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{4} \right) = \frac{3}{2}$.
+
+
+
+\part 
+Devido à simetria de $P$, $\Pr(Z_n | Z_{n-1}) = \Pr(Z_n)$ para $n \geq 2$.
+Pois, podemos verificar que $Z_n$ depende apenas de $X_n$ e $X_{n-1}$, sendo
+independente de $X_{n-2}$.
+
+\begin{center}
+\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=3cm]
+\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+\node[state]    (1)               {$1$};
+\node[state]    (2)[right of=1]   {$2$};
+\coordinate (Middle) at ($(1)!0.5!(2)$);
+\node[state]    (0)[above of=Middle]  {$0$};
+\path
+(1) edge[bend left,above]  node{$1/4$}  (2)
+(1) edge[loop left]        node{$1/2$}  (1)
+(1) edge[bend left,left]   node{$1/4$}  (0)
+(2) edge[bend left,below]  node{$1/4$}  (1)
+(2) edge[loop right]       node{$1/2$}  (2)
+(2) edge[bend left,right]  node{$1/4$}  (0)
+(0) edge[bend left,left]   node{$1/4$}  (1)
+(0) edge[bend left,right]  node{$1/4$}  (2)
+(0) edge[loop above]       node{$1/2$}  (0)
+;
+\end{tikzpicture}
+\end{center}
+
+Desta forma, $H(Z_n | Z_{n-1}) = H(Z_n) = \frac{3}{2}$.
+
+
+
+\part 
+Sim, pois $H(Z_n | Z_{n-1}) = H(Z_n)$.
+
+\end{parts}
+\end{solution}
+\end{questions}
+

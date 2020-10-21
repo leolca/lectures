@@ -1,0 +1,36 @@
+\subsection{Entropia Máxima e Mínima}
+\begin{questions}
+\question{
+ Qual é o menor e o maior valor para $H(p_1, p_2, \ldots, p_n) = H(p)$? 
+Encontre os vetores $p$ de dimensão $n$ que forneçam o máximo e o mínimo. Justifique sua resposta.
+}
+
+\begin{solution}
+
+A entropia será máxima quando a distribuição da fonte for uniforme, ou seja, $p_1 = p_2 = \ldots = p_n = 1/n$,
+onde $n = \vert \mathcal{X} \vert$, a cardinalidade do alfabeto da v.a. $X \sim p$.
+
+\begin{eqnarray}
+    H(X) - \log n &=& - \sum_x p(x) \log p(x)  - \log n \underbrace{\sum_x p(x)}_{=1} \nonumber \\
+        &=& - \sum_x p(x) \log p(x) - \sum_x p(x) \log n \nonumber \\
+        &=& - \sum_x p(x) \log p(x) n \nonumber \\
+        &=& \frac{1}{\ln 2} \sum_x p(x) \ln \frac{1}{p(x) n} \nonumber \\
+        &\leq& \frac{1}{\ln 2} \sum_x p(x) \left[ \frac{1}{p(x) n} -1 \right] \nonumber \\
+        &=& \frac{1}{\ln 2} \left[ \underbrace{\sum_x \frac{1}{n}}_{\sum_{x \in \mathcal{X}} \frac{1}{n} = n \frac{1}{n} = 1} - \underbrace{\sum_x p(x)}_{=1} \right] = 0
+\end{eqnarray}
+Logo, $H(X) - \log n \leq 0$ e assim $H(X) \leq \log n = \log \vert \mathcal{X} \vert$.
+A igualdade ocorrerá quando todos os eventos forem equiprováveis, ou seja, quando $X$ possuir distribuição uniforme.
+
+O limite inferior da entropia é $0$ (zero), ou seja, $H(X) \geq 0$, com igualdade sse $p$ for uma distribuição
+tal que existe apenas um evento possível, isto é, todos os $p_i$'s, exceto um, são nulos.
+A distribuição $p$ é da forma $(1, 0, 0, \ldots, 0)$, $(0, 1, 0, \ldots, 0)$, $\ldots$, $(0, 0, 0, \ldots, 1)$,
+assim teremos, 
+\begin{equation}
+ H(X) =  - \sum_x p(x) \log p(x) = 0 \log 0 + \ldots + 0 \log 0 + 1 \log 1 = 0 .
+\end{equation}
+Para os demais casos, teremos $p_i > 0$, $\forall 1 \leq i \leq n$, sendo assim, para cada um dos termos
+de $H(X)$, teremos $-p_i \log p_i > 0$ e consequentemente $H(X) > 0$.
+
+
+\end{solution}
+\end{questions}

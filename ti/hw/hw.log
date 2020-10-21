@@ -1,0 +1,3312 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.26)  20 OCT 2020 19:26
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**hw.tex
+(./hw.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/exam/exam.cls
+Document Class: exam 2017/12/17 Version 2.603 by Philip Hirschhorn
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+\@extrawidth=\skip49
+\@rightmargin=\skip50
+\@extrahead=\skip51
+\@extrafoot=\skip52
+\run@exhd=\skip53
+\fp@exhd=\skip54
+\run@exft=\skip55
+\fp@exft=\skip56
+\covrun@exhd=\skip57
+\covfp@exhd=\skip58
+\covrun@exft=\skip59
+\covfp@exft=\skip60
+\c@num@coverpages=\count175
+\c@latest@ques=\count176
+\c@ques@end=\count177
+\c@last@object=\count178
+\c@incmp@ques=\count179
+\c@next@ques=\count180
+\c@next@page=\count181
+\c@tmp@hlfcntr=\count182
+\c@ifpos@cntr=\count183
+\c@question=\count184
+\c@partno=\count185
+\c@subpart=\count186
+\c@subsubpart=\count187
+\c@choice=\count188
+\c@numpoints=\count189
+\c@numbonuspoints=\count190
+\c@pointsof@thisquestion=\count191
+\c@bonuspointsof@thisquestion=\count192
+\c@numquestions=\count193
+\c@numparts=\count194
+\c@numsubparts=\count195
+\c@numsubsubparts=\count196
+\c@Curr@Page=\count197
+\c@@pagepoints=\count198
+\c@@pagebonuspoints=\count199
+\c@pageof@pagepoints=\count266
+\c@pageof@pagebonuspoints=\count267
+\c@latest@points=\count268
+\c@latest@bonuspoints=\count269
+\pageinfo@commands=\toks14
+\temp@toks=\toks15
+\pagepoint@commands=\toks16
+\point@toks=\toks17
+\c@ques@object=\count270
+\marginpointssep=\skip61
+\rightpointsmargin=\skip62
+\choice@toks=\toks18
+\answerlinelength=\skip63
+\answerskip=\skip64
+\answerclearance=\skip65
+\fillinlinelength=\skip66
+\linefillheight=\skip67
+\linefillthickness=\skip68
+\dottedlinefillheight=\skip69
+\gridsize=\skip70
+\gridlinewidth=\skip71
+\minboxheight=\skip72
+\c@@iterator=\count271
+\@cellwidth=\skip73
+\c@tbl@points=\count272
+\c@tbl@bonuspoints=\count273
+\c@pq@index=\count274
+\c@pq@index@pts=\count275
+\c@pq@index@bpts=\count276
+\c@num@cols=\count277
+\c@num@rows=\count278
+\c@current@row=\count279
+\c@cols@done=\count280
+\exam@box=\box45
+\saved@totalleftmargin=\dimen135
+\@sollistdepth=\count281
+\exam@FrameRule=\dimen136
+\exam@FrameSep=\dimen137
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count282
+\U@D=\dimen138
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count283
+)
+Package babel Info: \l@brazil = using hyphenrules for portuguese
+(babel)             (\language3) on input line 113.
+Package babel Info: Making " an active character on input line 145.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip74
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen139
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count284
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count285
+\leftroot@=\count286
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count287
+\DOTSCASE@=\count288
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box46
+\strutbox@=\box47
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count289
+\c@MaxMatrixCols=\count290
+\dotsspace@=\muskip16
+\c@parentequation=\count291
+\dspbrk@lvl=\count292
+\tag@help=\toks22
+\row@=\count293
+\column@=\count294
+\maxfields@=\count295
+\andhelp@=\toks23
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks24
+\multlinegap=\skip75
+\multlinetaggap=\skip76
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip77
+\thm@postskip=\skip78
+\thm@headsep=\skip79
+\dth@everypar=\toks31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks32
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen150
+\Hy@linkcounter=\count296
+\Hy@pagecounter=\count297
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count298
+\pdfmajorversion=\count299
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count300
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen151
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count301
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count302
+\c@Item=\count303
+\c@Hfootnote=\count304
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count305
+\c@bookmark@seq@number=\count306
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip80
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip81
+\bibsep=\skip82
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count307
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2019/08/20 v0.3c Improved picture commands (HjG,RN,JT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks33
+\@arclen=\dimen154
+\@arcrad=\dimen155
+\@tempdimd=\dimen156
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count308
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count309
+\FP@xia=\count310
+\FP@xib=\count311
+\FP@xfa=\count312
+\FP@xfb=\count313
+\FP@rega=\count314
+\FP@regb=\count315
+\FP@regs=\count316
+\FP@times=\count317
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count318
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count319
+\calc@Bcount=\count320
+\calc@Adimen=\dimen157
+\calc@Bdimen=\dimen158
+\calc@Askip=\skip83
+\calc@Bskip=\skip84
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count321
+\calc@Cskip=\skip85
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen159
+\ar@mcellbox=\box48
+\extrarowheight=\dimen160
+\NC@list=\toks34
+\extratabsurround=\skip86
+\backup@length=\skip87
+\ar@cellbox=\box49
+)
+\diagbox@boxa=\box50
+\diagbox@boxb=\box51
+\diagbox@boxm=\box52
+\diagbox@wd=\dimen161
+\diagbox@ht=\dimen162
+\diagbox@insepl=\dimen163
+\diagbox@insepr=\dimen164
+\diagbox@outsepl=\dimen165
+\diagbox@outsepr=\dimen166
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen167
+\captionmargin@=\dimen168
+\captionwidth=\dimen169
+\caption@tempdima=\dimen170
+\caption@indent=\dimen171
+\caption@parindent=\dimen172
+\caption@hangindent=\dimen173
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count322
+\c@continuedfloat=\count323
+Package caption Info: hyperref package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip88
+\plpartopsep=\skip89
+\plitemsep=\skip90
+\plparsep=\skip91
+\pl@lab=\toks35
+)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip92
+\L@UnitsRaiseTextstyle=\skip93
+\L@UnitsRaiseScriptstyle=\skip94
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/usr/share/texlive/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen174
+\dashlinegap=\dimen175
+\adl@box=\box53
+\adl@height=\dimen176
+\adl@heightsave=\dimen177
+\adl@depth=\dimen178
+\adl@depthsave=\dimen179
+\adl@finaldepth=\dimen180
+\adl@columns=\count324
+\adl@ncol=\count325
+\adl@currentcolumn=\count326
+\adl@currentcolumnsave=\count327
+\adl@totalheight=\count328
+\adl@totalheightsave=\count329
+\adl@dash=\count330
+\adl@gap=\count331
+\adl@cla=\count332
+\adl@clb=\count333
+\adl@everyvbox=\toks36
+\adl@LTpagetotal=\dimen181
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count334
+\lst@gtempboxa=\box54
+\lst@token=\toks37
+\lst@length=\count335
+\lst@currlwidth=\dimen182
+\lst@column=\count336
+\lst@pos=\count337
+\lst@lostspace=\dimen183
+\lst@width=\dimen184
+\lst@newlines=\count338
+\lst@lineno=\count339
+\lst@maxwidth=\dimen185
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count340
+\lst@skipnumbers=\count341
+\lst@framebox=\box55
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+\c@inlineenum=\count342
+\c@inlineenumroman=\count343
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tikz-qtree/tikz-qtree.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks38
+\pgfutil@tempdima=\dimen186
+\pgfutil@tempdimb=\dimen187
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box56
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks41
+))
+\pgf@x=\dimen188
+\pgf@y=\dimen189
+\pgf@xa=\dimen190
+\pgf@ya=\dimen191
+\pgf@xb=\dimen192
+\pgf@yb=\dimen193
+\pgf@xc=\dimen194
+\pgf@yc=\dimen195
+\pgf@xd=\dimen196
+\pgf@yd=\dimen197
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count344
+\c@pgf@countb=\count345
+\c@pgf@countc=\count346
+\c@pgf@countd=\count347
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
+\pgf@sys@id@count=\count348
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count349
+\pgfsyssoftpath@bigbuffer@items=\count350
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen198
+\pgfmath@count=\count351
+\pgfmath@box=\box57
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count352
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen199
+\pgf@picmaxx=\dimen256
+\pgf@picminy=\dimen257
+\pgf@picmaxy=\dimen258
+\pgf@pathminx=\dimen259
+\pgf@pathmaxx=\dimen260
+\pgf@pathminy=\dimen261
+\pgf@pathmaxy=\dimen262
+\pgf@xx=\dimen263
+\pgf@xy=\dimen264
+\pgf@yx=\dimen265
+\pgf@yy=\dimen266
+\pgf@zx=\dimen267
+\pgf@zy=\dimen268
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen269
+\pgf@path@lasty=\dimen270
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen271
+\pgf@shorten@start@additional=\dimen272
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count353
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen273
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen274
+\pgf@pt@y=\dimen275
+\pgf@pt@temp=\dimen276
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen277
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen278
+\pgf@sys@shading@range@num=\count354
+\pgf@shadingcount=\count355
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box61
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box62
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen279
+\pgf@nodesepend=\dimen280
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen281
+\pgffor@skip=\dimen282
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count356
+\pgfplotmarksize=\dimen283
+)
+\tikz@lastx=\dimen284
+\tikz@lasty=\dimen285
+\tikz@lastxsaved=\dimen286
+\tikz@lastysaved=\dimen287
+\tikz@lastmovetox=\dimen288
+\tikz@lastmovetoy=\dimen289
+\tikzleveldistance=\dimen290
+\tikzsiblingdistance=\dimen291
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count357
+\tikznumberofchildren=\count358
+\tikznumberofcurrentchild=\count359
+\tikz@fig@count=\count360
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count361
+\pgfmatrixcurrentcolumn=\count362
+\pgf@matrix@numberofcolumns=\count363
+)
+\tikz@expandcount=\count364
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/tikz-qtree/pgftree.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tikz-qtree/pgfsubpic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tikz-qtree/pgfsubpic.tex
+\pgf@subpicminx=\dimen292
+\pgf@subpicminy=\dimen293
+\pgf@subpicmaxx=\dimen294
+\pgf@subpicmaxy=\dimen295
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tikz-qtree/pgftree.tex
+\levelsep=\dimen296
+\subtreesep=\dimen297
+\smuggle@levelsep=\dimen298
+\smuggle@subtreesep=\dimen299
+\this@levelsep=\dimen300
+\this@subtreesep=\dimen301
+\pgftree@childx=\dimen302
+\pgftree@savechildx=\dimen303
+\pgftree@childy=\dimen304
+\pgftree@savechildy=\dimen305
+\pgftree@childi=\count365
+\pgftree@savechildi=\count366
+\pgftree@level=\count367
+\pgftree@depth=\dimen306
+\pgf@subpic@hbox@children=\box67
+\pgf@subpic@minx@children=\dimen307
+\pgf@subpic@miny@children=\dimen308
+\pgf@subpic@maxx@children=\dimen309
+\pgf@subpic@maxy@children=\dimen310
+\pgftree@lastchildx=\dimen311
+\pgftree@lastchildy=\dimen312
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tikz-qtree/tikz-qtree.tex
+\@result=\toks50
+\child@list=\toks51
+\root@node=\toks52
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodepartlowerbox=\box68
+\pgfnodeparttwobox=\box69
+\pgfnodepartthreebox=\box70
+\pgfnodepartfourbox=\box71
+\pgfnodeparttwentybox=\box72
+\pgfnodepartnineteenbox=\box73
+\pgfnodeparteighteenbox=\box74
+\pgfnodepartseventeenbox=\box75
+\pgfnodepartsixteenbox=\box76
+\pgfnodepartfifteenbox=\box77
+\pgfnodepartfourteenbox=\box78
+\pgfnodepartthirteenbox=\box79
+\pgfnodeparttwelvebox=\box80
+\pgfnodepartelevenbox=\box81
+\pgfnodeparttenbox=\box82
+\pgfnodepartninebox=\box83
+\pgfnodeparteightbox=\box84
+\pgfnodepartsevenbox=\box85
+\pgfnodepartsixbox=\box86
+\pgfnodepartfivebox=\box87
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen313
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/blkarray/blkarray.sty
+Package: blkarray 2015/02/27 v0.07 Block array (dpc)
+\c@BAenumi=\count368
+\BA@col=\count369
+\BA@block@cnt=\count370
+\BA@final@box=\box88
+\BA@first@box=\box89
+\BA@colsep=\dimen314
+\BA@ftn=\toks53
+\BAextrarowheight=\dimen315
+\BAextraheightafterhline=\dimen316
+\BAarrayrulewidth=\dimen317
+\BAdoublerulesep=\dimen318
+\BAfootskip=\dimen319
+\BA@dashbox=\box90
+\BA@ddashbox=\box91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count371
+\l__pdf_internal_box=\box92
+)
+(./hw.aux
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@2' multiply defined.
+
+
+LaTeX Warning: Label `question@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@7' multiply defined.
+
+
+LaTeX Warning: Label `part@1@7@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:q1a' multiply defined.
+
+
+LaTeX Warning: Label `fig:q1a@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:canal' multiply defined.
+
+
+LaTeX Warning: Label `fig:canal@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@2' multiply defined.
+
+
+LaTeX Warning: Label `question@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5' multiply defined.
+
+
+LaTeX Warning: Label `part@1@5@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6' multiply defined.
+
+
+LaTeX Warning: Label `part@1@6@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@7' multiply defined.
+
+
+LaTeX Warning: Label `part@1@7@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4' multiply defined.
+
+
+LaTeX Warning: Label `part@1@4@cref' multiply defined.
+
+)
+\openout1 = `hw.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count372
+\scratchdimen=\dimen320
+\scratchbox=\box93
+\nofMPsegments=\count373
+\nofMParguments=\count374
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count375
+\MPscratchDim=\dimen321
+\MPnumerator=\count376
+\makeMPintoPDFobject=\count377
+\everyMPtoPDFconversion=\toks55
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box94
+Package hyperref Info: Link coloring OFF on input line 217.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count378
+)
+LaTeX Info: Redefining \ref on input line 217.
+LaTeX Info: Redefining \pageref on input line 217.
+LaTeX Info: Redefining \nameref on input line 217.
+
+(./hw.out) (./hw.out)
+\@outlinefile=\write4
+\openout4 = `hw.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count379
+ ABD: EveryShipout initializing macros
+<../images/logoufsj.pdf, id=344, 189.63756pt x 190.32133pt>
+File: ../images/logoufsj.pdf Graphic file (type pdf)
+<use ../images/logoufsj.pdf>
+Package pdftex.def Info: ../images/logoufsj.pdf  used on input line 218.
+(pdftex.def)             Requested size: 27.41406pt x 27.51021pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/logoufsj.pdf>] (
+./hw.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [2])
+\tf@toc=\write5
+\openout5 = `hw.toc'.
+
+
+(./entropia/entropia-ex01.tex [3]) (./entropia/entropia-ex02.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[4]) (./jensen/jensen-ex01.tex) (./entropia/entropia-ex03.tex
+Overfull \vbox (17.29472pt too high) detected at line 40
+ []
+
+[5]) (./divergencia/divergencia-ex01.tex [6]) (./entropia/entropia-ex04.tex
+[7]
+<../images/info-set.pdf, id=518, 240.38127pt x 112.75018pt>
+File: ../images/info-set.pdf Graphic file (type pdf)
+<use ../images/info-set.pdf>
+Package pdftex.def Info: ../images/info-set.pdf  used on input line 102.
+(pdftex.def)             Requested size: 173.26949pt x 81.27295pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 103.
+See the caption package documentation for explanation.
+
+[8]) (./outros/outros-ex01.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathop' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathgroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\symoperators' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\leq' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathop' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathgroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\symoperators' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\geq' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\endgroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@over' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[9 <../images/info-set.pdf>]) (./entropia/entropia-ex05.tex [10])
+(./entropia/entropia-ex06.tex
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 23.
+
+[11]) (./entropia/entropia-ex07.tex [12]) (./entropia/entropia-ex08.tex)
+(./entropia/entropia-ex09.tex
+Underfull \vbox (badness 1253) detected at line 37
+ []
+
+[13]) (./entropia/entropia-ex10.tex [14]) (./fano/fano-ex01.tex [15])
+(./fano/fano-ex02.tex
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+42.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 144.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+145.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+<../images/errorentropy.pdf, id=649, 462.52798pt x 346.89601pt>
+File: ../images/errorentropy.pdf Graphic file (type pdf)
+<use ../images/errorentropy.pdf>
+Package pdftex.def Info: ../images/errorentropy.pdf  used on input line 165.
+(pdftex.def)             Requested size: 216.59018pt x 162.44301pt.
+ [16] [17] [18 <../images/errorentropy.pdf>]) (./entropia/entropia-ex11.tex
+<../images/dicelurian.pdf, id=713, 462.52798pt x 346.89601pt>
+File: ../images/dicelurian.pdf Graphic file (type pdf)
+<use ../images/dicelurian.pdf>
+Package pdftex.def Info: ../images/dicelurian.pdf  used on input line 71.
+(pdftex.def)             Requested size: 216.59018pt x 162.44301pt.
+ [19])
+(./entropia/entropia-ex12.tex
+Overfull \hbox (61.41676pt too wide) in paragraph at lines 10--10
+[][][][]$\T1/cmtt/m/n/8 http : / / g1 . globo . com / politica / noticia / 2016
+ / 01 / governo-[]faz-[]estudo-[]sobre-[]impacto-[]da-[]liberacao-[]de-[]cassin
+o-[]e-[]bingo-[]no-[]brasil .
+ []
+
+<../images/niquel.pdf, id=742, 462.52798pt x 346.89601pt>
+File: ../images/niquel.pdf Graphic file (type pdf)
+<use ../images/niquel.pdf>
+Package pdftex.def Info: ../images/niquel.pdf  used on input line 129.
+(pdftex.def)             Requested size: 216.59018pt x 162.44301pt.
+[20 <../images/dicelurian.pdf>] [21]) (./entropia/entropia-ex13.tex [22 <../ima
+ges/niquel.pdf>]) (./entropia/entropia-ex14.tex) (./entropia/entropia-ex15.tex
+<../images/quantizador.pdf, id=822, 219.50194pt x 63.95476pt>
+File: ../images/quantizador.pdf Graphic file (type pdf)
+<use ../images/quantizador.pdf>
+Package pdftex.def Info: ../images/quantizador.pdf  used on input line 14.
+(pdftex.def)             Requested size: 117.43875pt x 34.2169pt.
+
+[23 <../images/quantizador.pdf>]) (./entropia/entropia-ex16.tex
+Overfull \hbox (13.18408pt too wide) in paragraph at lines 71--73
+[]\T1/cmr/m/n/10 Podemos tam-bém de-mons-trar uti-li-zando a de-si-gual-dade de
+ Jen-sen e sem uti-li-zar a não-negatividade
+ []
+
+[24] [25]) (./fano/fano-ex03.tex
+Overfull \vbox (9.35869pt too high) detected at line 79
+ []
+
+[26]) (./entropia/entropia-ex17.tex [27]) (./entropia/entropia-ex18.tex
+[28]) (./fano/fano-ex04.tex [29]) (./divergencia/divergencia-ex02.tex [30]pdfTe
+X warning (ext4): destination with the same identifier (name{equation.1.121}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55     \begin{eqnarray}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{equation.1.121}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55     \begin{eqnarray}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{equation.1.121}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55     \begin{eqnarray}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{equation.1.121}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55     \begin{eqnarray}
+                         ) (./divergencia/divergencia-ex03.tex [31])
+(./entropia/entropia-ex19.tex [32]) (./outros/outros-ex02.tex [33])
+(./pea/pea-ex01.tex [34]) (./pea/pea-ex02.tex [35]) (./pea/pea-ex03.tex
+[36] [37] [38] [39] [40]) (./pea/pea-ex04.tex [41pdfTeX warning (ext4): destina
+tion with the same identifier (name{inlineenumroman.1}) has been already used, 
+duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.26 
+     pdfTeX warning (ext4): destination with the same identifier (name{inlineen
+umroman.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.26 
+     ] [42]) (./pea/pea-ex05.tex) (./pea/pea-ex06.tex [43] [44] [45])
+(./pea/pea-ex07.tex [46]) (./pea/pea-ex08.tex [47] [48]) (./pea/pea-ex09.tex
+[49]) (./outros/outros-ex03.tex [50]) (./markov/markov-ex01.tex [51])
+(./markov/markov-ex02.tex [52]
+Overfull \hbox (17.04843pt too wide) in paragraph at lines 71--74
+[]\T1/cmr/m/n/10 Como $\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 2 f\OT1/cmr/m/n/10 0
+\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OMS/cm
+sy/m/n/10 g$\T1/cmr/m/n/10 , te-re-mos que existe uma fun-ção in-je-tora de $\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]; X[]; [] ; X[]\OT1/cmr/m/n/10 )$ \T1/cmr/m/
+n/10 em $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Z[]; Z[]; [] ; Z[]\OT1/cmr/m/n/10 )$
+
+ []
+
+[53]) (./markov/markov-ex03.tex
+<../images/ehrenfest.png, id=1464, 301.125pt x 150.5625pt>
+File: ../images/ehrenfest.png Graphic file (type png)
+<use ../images/ehrenfest.png>
+Package pdftex.def Info: ../images/ehrenfest.png  used on input line 15.
+(pdftex.def)             Requested size: 140.92793pt x 70.46571pt.
+ [54 <../images/ehrenfest.png>]
+Overfull \vbox (7.40758pt too high) detected at line 307
+ []
+
+[55] [56] [57] [58]) (./markov/markov-ex04.tex [59] [60] [61])
+(./markov/markov-ex05.tex [62]) (./markov/markov-ex06.tex
+<../images/sunrain.pdf, id=1655, 291.62454pt x 386.40236pt>
+File: ../images/sunrain.pdf Graphic file (type pdf)
+<use ../images/sunrain.pdf>
+Package pdftex.def Info: ../images/sunrain.pdf  used on input line 60.
+(pdftex.def)             Requested size: 64.9744pt x 86.08775pt.
+ [63pdfTeX warning (ext4): destination with the same identifier (name{equation.
+3.252}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.133 \end{solution}
+                     <../images/sunrain.pdf>]) (./markov/markov-ex07.tex
+<../images/catwalk.pdf, id=1678, 154.17601pt x 143.33551pt>
+File: ../images/catwalk.pdf Graphic file (type pdf)
+<use ../images/catwalk.pdf>
+Package pdftex.def Info: ../images/catwalk.pdf  used on input line 15.
+(pdftex.def)             Requested size: 140.92793pt x 131.02165pt.
+
+[64] [65 <../images/catwalk.pdf>] [66]) (./markov/markov-ex08.tex [67] [68])
+(./markov/markov-ex09.tex [69] [70]) (./markov/markov-ex10.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[71]) (./markov/markov-ex11.tex
+Overfull \hbox (4.97647pt too wide) in paragraph at lines 44--54
+[]\T1/cmr/m/n/10 O enun-ci-ado do pro-blema for-nece: $\OML/cmm/m/it/10 H\OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 ) = 0$\T1/cmr/m/n/10 , pois o es
+-tado ini-cial é de-ter-mi-nís-tico; $\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 X[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 ) =
+ []
+
+[72]) (./codigos/codigos-ex01.tex) (./codigos/codigos-ex02.tex [73] [74]
+[75]) (./codigos/codigos-ex03.tex [76]
+Overfull \hbox (14.45085pt too wide) in paragraph at lines 122--123
+[][] 
+ []
+
+) (./codigos/codigos-ex04.tex [77]
+<../images/hufftree.pdf, id=1882, 155.60472pt x 185.00922pt>
+File: ../images/hufftree.pdf Graphic file (type pdf)
+<use ../images/hufftree.pdf>
+Package pdftex.def Info: ../images/hufftree.pdf  used on input line 69.
+(pdftex.def)             Requested size: 64.9744pt x 77.25165pt.
+File: ../images/hufftree.pdf Graphic file (type pdf)
+<use ../images/hufftree.pdf>
+Package pdftex.def Info: ../images/hufftree.pdf  used on input line 123.
+(pdftex.def)             Requested size: 64.9744pt x 77.25165pt.
+<../images/shannofano.pdf, id=1883, 214.50616pt x 239.03372pt>
+File: ../images/shannofano.pdf Graphic file (type pdf)
+<use ../images/shannofano.pdf>
+Package pdftex.def Info: ../images/shannofano.pdf  used on input line 129.
+(pdftex.def)             Requested size: 86.63474pt x 96.54185pt.
+ [78 <../images/hufftree.pdf>] [79 <../images/shannofano.pdf>]) (./codigos/codi
+gos-ex05.tex
+Overfull \hbox (21.80605pt too wide) in paragraph at lines 5--12
+[]\T1/cmr/m/n/10 São da-dos os se-guin-tes có-di-gos bi-ná-rios: $\OML/cmm/m/it
+/10 C[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ;
+ \OT1/cmr/m/n/10 00\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1
+/cmr/m/n/10 10\OMS/cmsy/m/n/10 g$\T1/cmr/m/n/10 , $\OML/cmm/m/it/10 C[] \OT1/cm
+r/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/1
+0 00\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 00
+00\OMS/cmsy/m/n/10 g$\T1/cmr/m/n/10 , $\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 = \
+OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 00\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 01\OML/cm
+m/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 000\OMS/cmsy/m
+/n/10 g$\T1/cmr/m/n/10 ,
+ []
+
+[80]) (./codigos/codigos-ex06.tex
+Overfull \hbox (15.71011pt too wide) in paragraph at lines 96--97
+[][] 
+ []
+
+
+Overfull \hbox (1.67513pt too wide) in paragraph at lines 45--129
+[][]  [] 
+ []
+
+
+Overfull \hbox (25.25058pt too wide) in paragraph at lines 182--183
+[][] 
+ []
+
+
+Overfull \hbox (1.67513pt too wide) in paragraph at lines 139--213
+[][]  [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 238
+ []
+
+[81pdfTeX warning (ext4): destination with the same identifier (name{inlineenum
+.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.238 \end{solution}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{inlineenum.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.238 \end{solution}
+                    ] [82]) (./codigos/codigos-ex07.tex)
+(./codigos/codigos-ex08.tex [83]
+Overfull \hbox (53.48184pt too wide) in paragraph at lines 91--92
+[][] 
+ []
+
+) (./codigos/codigos-ex09.tex [84]
+<../images/acoding.pdf, id=2027, 551.59598pt x 305.91643pt>
+File: ../images/acoding.pdf Graphic file (type pdf)
+<use ../images/acoding.pdf>
+Package pdftex.def Info: ../images/acoding.pdf  used on input line 51.
+(pdftex.def)             Requested size: 346.54561pt x 192.19154pt.
+) (./canal/canal-ex01.tex [85 <../images/acoding.pdf>]
+<../images/2paralell_binarychannel.pdf, id=2050, 202.14452pt x 187.0076pt>
+File: ../images/2paralell_binarychannel.pdf Graphic file (type pdf)
+<use ../images/2paralell_binarychannel.pdf>
+Package pdftex.def Info: ../images/2paralell_binarychannel.pdf  used on input l
+ine 15.
+(pdftex.def)             Requested size: 93.94955pt x 86.91483pt.
+<../images/singlechannel_binarychannel.pdf, id=2051, 201.65048pt x 114.72925pt>
+
+File: ../images/singlechannel_binarychannel.pdf Graphic file (type pdf)
+<use ../images/singlechannel_binarychannel.pdf>
+Package pdftex.def Info: ../images/singlechannel_binarychannel.pdf  used on inp
+ut line 26.
+(pdftex.def)             Requested size: 93.94955pt x 53.45183pt.
+<../images/ternarychannel_binarychannel.pdf, id=2052, 202.47388pt x 267.79451pt
+>
+File: ../images/ternarychannel_binarychannel.pdf Graphic file (type pdf)
+<use ../images/ternarychannel_binarychannel.pdf>
+Package pdftex.def Info: ../images/ternarychannel_binarychannel.pdf  used on in
+put line 37.
+(pdftex.def)             Requested size: 93.94955pt x 124.26164pt.
+<../images/plot01a05.pdf, id=2053, 505.7335pt x 389.21712pt>
+File: ../images/plot01a05.pdf Graphic file (type pdf)
+<use ../images/plot01a05.pdf>
+Package pdftex.def Info: ../images/plot01a05.pdf  used on input line 100.
+(pdftex.def)             Requested size: 123.45726pt x 95.0116pt.
+<../images/plot01a025.pdf, id=2054, 505.7335pt x 389.21712pt>
+File: ../images/plot01a025.pdf Graphic file (type pdf)
+<use ../images/plot01a025.pdf>
+Package pdftex.def Info: ../images/plot01a025.pdf  used on input line 104.
+(pdftex.def)             Requested size: 123.45726pt x 95.0116pt.
+<../images/plot01a0125.pdf, id=2055, 505.7335pt x 389.21712pt>
+File: ../images/plot01a0125.pdf Graphic file (type pdf)
+<use ../images/plot01a0125.pdf>
+Package pdftex.def Info: ../images/plot01a0125.pdf  used on input line 108.
+(pdftex.def)             Requested size: 123.45726pt x 95.0116pt.
+<../images/bech2.pdf, id=2057, 147.60428pt x 87.66461pt>
+File: ../images/bech2.pdf Graphic file (type pdf)
+<use ../images/bech2.pdf>
+Package pdftex.def Info: ../images/bech2.pdf  used on input line 220.
+(pdftex.def)             Requested size: 129.95543pt x 77.18788pt.
+ [86 <../images/2paralell_binarychannel.pdf> <../images/singlechannel_binarycha
+nnel.pdf
+
+pdfTeX warning: pdflatex (file ../images/singlechannel_binarychannel.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+> <../images/ternarychannel_binarychannel.pdf
+
+pdfTeX warning: pdflatex (file ../images/ternarychannel_binarychannel.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>] [87 <../images/plot01a05.pdf> <../images/plot01a025.pdf
+
+pdfTeX warning: pdflatex (file ../images/plot01a025.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <../images/plot01a0125.pdf
+
+pdfTeX warning: pdflatex (file ../images/plot01a0125.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] [88]) (./canal/canal-ex02.tex [89 <../images/bech2.pdf>])
+(./canal/canal-ex03.tex [90]) (./canal/canal-ex04.tex
+<../images/xplusz.pdf, id=2210, 184.95932pt x 113.12102pt>
+File: ../images/xplusz.pdf Graphic file (type pdf)
+<use ../images/xplusz.pdf>
+Package pdftex.def Info: ../images/xplusz.pdf  used on input line 8.
+(pdftex.def)             Requested size: 93.94955pt x 57.45964pt.
+<../images/canalapagamento.pdf, id=2211, 147.60428pt x 87.66461pt>
+File: ../images/canalapagamento.pdf Graphic file (type pdf)
+<use ../images/canalapagamento.pdf>
+Package pdftex.def Info: ../images/canalapagamento.pdf  used on input line 46.
+(pdftex.def)             Requested size: 129.95543pt x 77.18788pt.
+ [91 <../images/xplusz.pdf> <../images/canalapagamento.pdf
+
+pdfTeX warning: pdflatex (file ../images/canalapagamento.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]) (./canal/canal-ex05.tex) (./canal/canal-ex06.tex [92]
+<../images/figure1.pdf, id=2266, 509.24173pt x 385.00815pt>
+File: ../images/figure1.pdf Graphic file (type pdf)
+<use ../images/figure1.pdf>
+Package pdftex.def Info: ../images/figure1.pdf  used on input line 66.
+(pdftex.def)             Requested size: 216.59018pt x 163.7526pt.
+ [93])
+(./canal/canal-ex07.tex [94 <../images/figure1.pdf>]) (./canal/canal-ex08.tex
+<../images/canalbinapag.pdf, id=2310, 282.31473pt x 67.9328pt>
+File: ../images/canalbinapag.pdf Graphic file (type pdf)
+<use ../images/canalbinapag.pdf>
+Package pdftex.def Info: ../images/canalbinapag.pdf  used on input line 13.
+(pdftex.def)             Requested size: 216.59018pt x 52.11768pt.
+
+Underfull \vbox (badness 1028) detected at line 104
+ []
+
+[95 <../images/canalbinapag.pdf>] [96]) (./canal/canal-ex09.tex
+<../images/bech.pdf, id=2333, 147.60428pt x 87.66461pt>
+File: ../images/bech.pdf Graphic file (type pdf)
+<use ../images/bech.pdf>
+Package pdftex.def Info: ../images/bech.pdf  used on input line 39.
+(pdftex.def)             Requested size: 108.29509pt x 64.31833pt.
+ [97 <../images/bech.pdf>]) (./canal/canal-ex10.tex
+<../images/zchannel.pdf, id=2378, 190.31177pt x 66.54147pt>
+File: ../images/zchannel.pdf Graphic file (type pdf)
+<use ../images/zchannel.pdf>
+Package pdftex.def Info: ../images/zchannel.pdf  used on input line 21.
+(pdftex.def)             Requested size: 129.95543pt x 45.44153pt.
+ [98 <../images/zchannel.pdf>])
+(./canal/canal-ex11.tex
+<../images/canal24.pdf, id=2403, 252.5701pt x 131.83401pt>
+File: ../images/canal24.pdf Graphic file (type pdf)
+<use ../images/canal24.pdf>
+Package pdftex.def Info: ../images/canal24.pdf  used on input line 9.
+(pdftex.def)             Requested size: 140.92793pt x 73.56099pt.
+ [99 <../images/canal24.pdf>]
+Overfull \hbox (1.67513pt too wide) in paragraph at lines 116--189
+[][]  $[]$ 
+ []
+
+[100]
+Underfull \vbox (badness 10000) detected at line 192
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 192
+ []
+
+[101]) (./canal/canal-ex12.tex
+<../images/canale.pdf, id=2450, 179.24423pt x 145.45584pt>
+File: ../images/canale.pdf Graphic file (type pdf)
+<use ../images/canale.pdf>
+Package pdftex.def Info: ../images/canale.pdf  used on input line 9.
+(pdftex.def)             Requested size: 140.92793pt x 114.3673pt.
+ [102 <../images/canale.pdf>])
+(./canal/canal-ex13.tex
+<../images/canalm.pdf, id=2470, 193.17578pt x 108.10767pt>
+File: ../images/canalm.pdf Graphic file (type pdf)
+<use ../images/canalm.pdf>
+Package pdftex.def Info: ../images/canalm.pdf  used on input line 9.
+(pdftex.def)             Requested size: 140.92793pt x 78.86844pt.
+
+Underfull \vbox (badness 1789) detected at line 96
+ []
+
+[103 <../images/canalm.pdf>]
+Underfull \vbox (badness 10000) detected at line 96
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 96
+ []
+
+[104]) (./canal/canal-ex14.tex
+<../images/canalbse.pdf, id=2497, 302.72145pt x 133.89801pt>
+File: ../images/canalbse.pdf Graphic file (type pdf)
+<use ../images/canalbse.pdf>
+Package pdftex.def Info: ../images/canalbse.pdf  used on input line 15.
+(pdftex.def)             Requested size: 281.85587pt x 124.6689pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[105] [106 <../images/canalbse.pdf>]) (./canal/canal-ex15.tex
+<../images/c-enc-c.pdf, id=2533, 220.20734pt x 57.02724pt>
+File: ../images/c-enc-c.pdf Graphic file (type pdf)
+<use ../images/c-enc-c.pdf>
+Package pdftex.def Info: ../images/c-enc-c.pdf  used on input line 11.
+(pdftex.def)             Requested size: 234.8775pt x 60.82709pt.
+<../images/bscc.pdf, id=2534, 226.53514pt x 83.34578pt>
+File: ../images/bscc.pdf Graphic file (type pdf)
+<use ../images/bscc.pdf>
+Package pdftex.def Info: ../images/bscc.pdf  used on input line 33.
+(pdftex.def)             Requested size: 140.92793pt x 51.84933pt.
+
+Underfull \vbox (badness 2035) detected at line 62
+ []
+
+[107 <../images/c-enc-c.pdf> <../images/bscc.pdf
+
+pdfTeX warning: pdflatex (file ../images/bscc.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>]) (./canal/canal-ex16.tex
+<../images/canalz.pdf, id=2567, 144.74872pt x 52.55931pt>
+File: ../images/canalz.pdf Graphic file (type pdf)
+<use ../images/canalz.pdf>
+Package pdftex.def Info: ../images/canalz.pdf  used on input line 12.
+(pdftex.def)             Requested size: 187.89912pt x 68.23402pt.
+) (./canal/canal-ex17.tex
+<../images/canalzc.pdf, id=2568, 227.61678pt x 62.70619pt>
+File: ../images/canalzc.pdf Graphic file (type pdf)
+<use ../images/canalzc.pdf>
+Package pdftex.def Info: ../images/canalzc.pdf  used on input line 8.
+(pdftex.def)             Requested size: 258.36668pt x 71.18439pt.
+ [108 <../images/canalz.pdf>]) (./hamming/hamming-ex01.tex [109 <../images/cana
+lzc.pdf>])
+(./hamming/hamming-ex02.tex
+<../images/hamming84.pdf, id=2634, 370.6343pt x 370.6343pt>
+File: ../images/hamming84.pdf Graphic file (type pdf)
+<use ../images/hamming84.pdf>
+Package pdftex.def Info: ../images/hamming84.pdf  used on input line 13.
+(pdftex.def)             Requested size: 155.02pt x 155.02061pt.
+ [110] [111 <../images/hamming84.pdf>] [112])
+(./hamming/hamming-ex03.tex [113]) (./hamming/hamming-ex04.tex [114]
+Overfull \hbox (11.84401pt too wide) in paragraph at lines 40--42
+\T1/cmr/m/n/10 logo, dado que ouve erro na co-mu-ni-ca-ção, a pro-ba-bi-li-dade
+ de cor-ri-gir o erro é de $\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10
+ 39513\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 521
+70 =
+ []
+
+) (./hamming/hamming-ex05.tex [115]) [116]
+This exam contains 86 questions with 198 parts, 0 subparts, and 0 subsubparts.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
+(./hw.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
+
+
+Package rerunfilecheck Warning: File `hw.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `hw.out':
+(rerunfilecheck)             Before: C21025763B870FB1F61E4FD98B9D4458;6186
+(rerunfilecheck)             After:  F36515F21D65192D4CE8F425DBFBB454;6251.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 336.
+ ) 
+Here is how much of TeX's memory you used:
+ 30189 strings out of 483002
+ 543782 string characters out of 5960726
+ 1099608 words of memory out of 5000000
+ 42804 multiletter control sequences out of 15000+600000
+ 555710 words of font info for 89 fonts, out of 8000000 for 9000
+ 83 hyphenation exceptions out of 8191
+ 68i,24n,81p,440b,2278s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
+st, replaced by a fixed one
+
+ </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk
+> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600p
+k> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600
+pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt0900.60
+0pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.6
+00pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.
+600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600
+.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm100
+0.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm07
+00.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1
+000.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
+1200.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x1440.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+rm1000.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+crm0900.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecrm2488.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecbx1000.600pk> </home/leoca/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/pu
+blic/tex-gyre/qhvr.pfb>
+Output written on hw.pdf (116 pages, 1107961 bytes).
+PDF statistics:
+ 3773 PDF objects out of 4296 (max. 8388607)
+ 2911 compressed objects within 30 object streams
+ 1596 named destinations out of 1728 (max. 500000)
+ 855 words of extra memory for PDF output out of 10000 (max. 10000000)
+

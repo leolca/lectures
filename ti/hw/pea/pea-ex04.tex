@@ -1,0 +1,124 @@
+\subsection{Jogo de moeda}
+
+\begin{questions}
+\question{
+Em um determinado jogo de moeda, uma moeda honesta é lançada 100 vezes.
+
+\begin{parts}
+\part
+Estime o limite superior da probabilidade de observarmos uma sequências com
+   \begin{inlineenumroman}
+   \item 60 caras,
+   \item 80 caras.
+   \end{inlineenumroman}
+
+\part 
+Mostre como podemos calcular explicitamente a probabilidade de obtermos uma sequência com
+   \begin{inlineenumroman}
+   \item 60 caras,
+   \item 80 caras
+   \end{inlineenumroman}
+(não é necessário realizar os cálculos).
+
+\part 
+Mostre também como podemos calcular a probabilidade de obtermos uma sequência
+em que o número de caras esteja entre 40 e 60 (não é necessário realizar os cálculos).
+
+\part
+Escreva um algoritmo (Octave/Matlab ou pseudo-código) para calcular esta probabilidade.
+
+\part
+Qual é o problema em se realizar o cálculo explícito (neste caso, justificando a
+utilização do limite)?
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+A probabilidade de uma sequência depende apenas do tipo.
+Um limite superior para a probabilidade da classe de tipo para um
+determinado tipo $P$, considerando uma distribuição subjacente $Q$,
+é dada por
+\begin{equation}
+ Q^n (T(P)) \leq 2^{-n D(P||Q)} .
+ \end{equation}
+ Considerando a moeda honesta, temos que $Q = (\frac{1}{2}, \frac{1}{2})$.
+ Para o item a) temos o tipo $P_a = (0.6, 0.4)$ e para o item b) temos
+ o tipo $P_b = (0.8, 0.2)$. Devemos então calcular as divergências
+ \begin{eqnarray}
+ D(P_a||Q) &=& \frac{3}{5} \log \left( \frac{3}{5} \times 2 \right) + \frac{2}{5} \log \left( \frac{2}{5} \times 2 \right) \nonumber \\
+        &=& \frac{3}{5} \left( 1 + \log 3 - \log 5 \right) + \frac{2}{5} \left( 2 - \log 5 \right) \nonumber \\
+        &=& \frac{7}{5} + \frac{3}{5} \log 3 - \log 5  \approx 0.029049
+\end{eqnarray}
+\begin{equation}
+ Q^n (T(P_a)) \leq 2^{-n D(P_a||Q)} \approx 2^{-2.9049} \approx 0.13352 .
+\end{equation}
+
+\begin{eqnarray}
+D(P_b||Q) &=& \frac{4}{5} \log \left( \frac{4}{5} \times 2 \right) + \frac{1}{5} \log \left( \frac{1}{5} \times 2 \right) \nonumber \\
+        &=& \frac{4}{5} \left( 3 - \log 5 \right) + \frac{1}{5} \left( 1 - \log 5 \right) \nonumber \\
+        &=& \frac{13}{5} - \log 5  \approx 0.27807
+\end{eqnarray}
+\begin{equation}
+ Q^n (T(P_b)) \leq 2^{-n D(P_b||Q)} \approx 2^{-27.807} \approx 4.2585 \times 10^{-9} .
+\end{equation}
+
+\begin{lstlisting}[language=Octave]
+function D = kldivergence(p,q)
+D = sum(p.*log2(p./q));
+endfunction
+
+D = kldivergence([0.6 0.4],[0.5 0.5]);
+2^(-100*D)
+ans =  0.13351
+
+D = kldivergence([0.8 0.2],[0.5 0.5]);
+2^(-100*D)
+ans =    4.2580e-09
+\end{lstlisting}
+
+
+
+\part
+Explicitamente, a probabilidade da classe de tipo é igual à probabilidade de uma sequência deste dado
+tipo vezes o número de sequências deste dado tipo,
+\begin{equation}
+Q^n (T(P_a)) = {100 \choose 60} p^{60} (1-p)^{40} = \frac{100!}{60! 40!} \left( \frac{1}{2} \right)^{100} .
+\end{equation}
+De forma semelhante,
+\begin{equation}
+Q^n (T(P_a)) = {100 \choose 80} p^{80} (1-p)^{20} = \frac{100!}{80! 20!} \left( \frac{1}{2} \right)^{100} .
+\end{equation}
+
+\part 
+A probabilidade de obtermos uma sequência em que o número de caras esteja entre 40 e 60
+é dada por
+\begin{equation}
+P_{40 \leq k \leq 60} = \sum_{k=40}^{60} {100 \choose k} p^{k} (1-p)^{100-k} = \sum_{k=40}^{60} {100 \choose k} \left( \frac{1}{2} \right)^{100}
+\end{equation}
+
+\begin{lstlisting}[language=Octave]
+n=100; p=0; for k = 40:60,  p+=nchoosek(n,k)*(0.5)^n; end;
+p =  0.96480
+\end{lstlisting}
+
+
+
+\part
+Para realizar o cálculo explícito das probabilidades haverá problema de precisão numérica
+quando o valor de $n$ for grande, além do alto custo computacional,
+não sendo possível realizar de forma prática os
+cálculos, justificando assim a utilização do limite para estes casos.
+
+\begin{lstlisting}[language=Octave]
+tic; n=10E4; p=0; 
+for k = 0.4*n:0.6*n,  p+=nchoosek(n,k)*(0.5)^n; end; 
+p, toc
+p = NaN
+Elapsed time is 14.2635 seconds.
+\end{lstlisting}
+
+\end{parts}
+\end{solution}
+\end{questions}

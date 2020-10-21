@@ -1,0 +1,48 @@
+\subsection{Hamming}
+\begin{questions}
+\question{
+Um código de Hamming utiliza palavras de comprimento igual a 7 bits.
+Suponha que esta mensagem, codificada com este código, será enviada
+através de um canal binário simétrico com probabilidade de troca de bit 
+$p=0.1$. Faça o que se pede abaixo.
+\begin{parts}
+\part Determine a taxa deste código.
+\part Calcule a probabilidade de comunicação sem erro.
+\part Calcule a probabilidade de detecção de erro, dado que a comunicação teve erro.
+\part Faça exemplos de codificação, decodificação e decodificação com correção de erro,
+para ilustrar todos os possíveis casos de operação.
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+Trata-se do código de Hamming (7,4,3), utiliza 4 bits de dados e 3 bits de paridade.
+
+\part 
+A taxa do código é $4/7 \approx 0,571$.
+
+\part 
+A comunicação será sem erro se a transmissão for sem erro, ou se for possível
+corrigir o erro. Para o código de Hamming (7,4,3) só é possível detectar e corrigir 
+no máximo um único bit trocado na sequência.
+Para que a transmissão seja sem erro, nenhum bit pode ser trocado. Isto 
+ocorrerá com probabilidade $(1-p)^7 \approx 0,47830$.
+Para que ocorra apenas um erro, a probabilidade será dada por $7 \times p(1-p)^6 \approx 0,37201$.
+Desta forma o percentual de comunicação sem erro será $(1+6p) (1-p)^6 \approx 0,47830 + 0,37201 = 0,85031$.
+
+\part 
+Ocorrerá algum erro com probabilidade $1-0,47830 = 0,52170$. O erro será detectado se
+for de um número ímpar de bits trocados. Desta forma, a probabilidade dos casos em que 
+é detectado erro é dada por
+\begin{equation}
+{7 \choose 1} p (1-p)^6 + {7 \choose 3} p^3 (1-p)^4 + {7 \choose 5} p^5 (1-p)^2 + {7 \choose 7} p^7  \approx 0,39513 ,
+\end{equation}
+logo, dado que ouve erro na comunicação, a probabilidade de corrigir o erro é de $0,39513/0,52170 = 0,75739$
+
+\part 
+Ver exemplos apresentados em aula.
+ 
+\end{parts}
+\end{solution}
+\end{questions}

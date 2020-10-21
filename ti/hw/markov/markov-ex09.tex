@@ -1,0 +1,143 @@
+\begin{questions}
+\question{
+Foi observada uma língua em que são utilizados três símbolos: A, T, H.
+Foram observadas diversas sequências de símbolos produzidas por esta fonte
+e constatou-se que, ao longo das sequências, existe uma probabilidade $\frac{1}{2}$ 
+de se repetir um dado símbolo. Caso não ocorra a repetição,
+haverá igual probabilidade do próximo símbolo ser cada um dos dois remanescentes.
+\begin{parts}
+\part
+Desenhe a cadeia de Markov de primeira ordem que modela este processo estocástico.
+\part
+Como devemos proceder para determinar a distribuição de estado estacionário?
+Qual é a distribuição de estado estacionário?
+\part
+Qual é a taxa de entropia deste processo?
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+\begin{center}
+\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=3cm]
+\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+\node[state]    (1)               {$A$};
+\node[state]    (2)[right of=1]   {$T$};
+\coordinate (Middle) at ($(1)!0.5!(2)$);
+\node[state]    (0)[above of=Middle]  {$H$};
+\path
+(1) edge[bend left,above]  node{$1/4$}  (2)
+(1) edge[loop left]        node{$1/2$}  (1)
+(1) edge[bend left,left]   node{$1/4$}  (0)
+(2) edge[bend left,below]  node{$1/4$}  (1)
+(2) edge[loop right]       node{$1/2$}  (2)
+(2) edge[bend left,right]  node{$1/4$}  (0)
+(0) edge[bend left,left]   node{$1/4$}  (1)
+(0) edge[bend left,right]  node{$1/4$}  (2)
+(0) edge[loop above]       node{$1/2$}  (0)
+;
+\end{tikzpicture}
+\end{center}
+
+
+\part
+A matriz de transição para a cadeia de Markov $\{Y_n\}$ é
+\begin{equation}
+\mathbf{P} = 
+\begin{blockarray}{cccc}
+ & A & T & H \\
+\begin{block}{c(ccc)}
+ A & 1/2 & 1/4 & 1/4 \\
+ T & 1/4 & 1/2 & 1/4 \\
+ H & 1/4 & 1/4 & 1/2 \\
+\end{block}
+\end{blockarray} .
+\end{equation}
+
+Para encontrar a distribuição de estado estacionários,
+queremos encontrar $\mu^T P = \mu^T$, ou seja, $\mu^T (P - I) = 0$
+e iremos denotar $Q = P - I$, assim teremos $\mu^T Q = 0$.
+Para incorporar a condução $\sum_i \mu_i = 1$, iremos substituir
+a última coluna de $Q$ por uma coluna de uns e substituir o último
+elemento do vetor nulo à direita por 1. Teremos assim
+\begin{eqnarray}
+\mu^T \tilde{Q} &=& \begin{pmatrix} 0 & 0 & 1 \end{pmatrix} \\
+\tilde{Q}^T \mu &=& \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \\
+\begin{pmatrix} 
+-1/2 & 1/4 & 1/4 \\
+1/4 & -1/2 & 1/4 \\
+1 & 1 &  1
+\end{pmatrix} 
+\begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix} 
+&=& \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+\end{eqnarray}
+
+Devemos então resolver este sistema.
+\begin{eqnarray}
+\left( \begin{array}{ccc|c}
+-1/2 & 1/4  & 1/4 & 0 \\
+1/4  & -1/2 & 1/4 & 0 \\
+1    &   1  & 1 & 1 \\
+\end{array} \right)\\
+\left( \begin{array}{ccc|c}
+-1/2 & 1/4  & 1/4 & 0 \\
+  0  & -3/8 & 3/8 & 0 \\
+  0  & 3/2  & 3/2 & 1 \\
+\end{array} \right)\\
+\left( \begin{array}{ccc|c}
+-1/2 & 1/4  & 1/4 & 0 \\
+  0  & -3/8 & 3/8 & 0 \\
+  0  &   0  & 3   & 1 \\
+\end{array} \right)\\
+\end{eqnarray}
+Temos então que $\mu_3 = \frac{1}{3}$, $\mu_2 = \mu_3$, logo $\mu_2 = \frac{1}{3}$, e
+$\frac{1}{2} \mu_1 = \frac{1}{4} \mu_2 + \frac{1}{4} \mu_3$, logo $\mu_1 = \frac{1}{3}$.
+Assim, teremos
+\begin{equation}
+\mu^T = \begin{pmatrix} \frac{1}{3} & \frac{1}{3} & \frac{1}{3} \end{pmatrix}  .
+\end{equation}
+Pela simetria também podemos concluir que a distribuição de estado estacionário será
+$\mu = (1/3 1/3 1/3)$.
+
+
+
+Resolvendo com auxílio do Octave, obtemos o mesmo resultados:
+\begin{verbatim}
+P = [0.5 0.25 0.25; 0.25 0.5 0.25; 0.25 0.25 0.5];
+Q = P - eye(3);
+Q2=Q; Q2(:,3)=ones(3,1);
+[0 0 1]*inv(Q2)
+ans =
+   0.33333   0.33333   0.33333
+\end{verbatim}
+
+
+
+\part
+A taxa de entropia para um cadeia de Markov de primeira ordem
+estacionária será dada da seguinte forma
+  \begin{eqnarray}
+  H(\mathcal{X}) &=& H'(\mathcal{X}) = \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}, \ldots, X_1) \\
+        &=& \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}) \\
+        && \text{dado que é Markov de 1a ordem} \nonumber \\
+        &=& H(X_2 \mid X_1) \quad \text{(estacionário)} \\
+        &=& - \sum_{x_2, x_1} p(x_2, x_1) \log p(x_2 \mid x_1) = \sum_i \mu_i \left[ - \sum_j p_{ij} \log p_{ij} \right] \\
+        &=& \sum_i \mu_i H( \mathbf{p_i} )
+  \end{eqnarray}
+onde $\mu$ é a distribuição estacionária,
+$p_{ij}$ a probabilidade de transição de $i$ para $j$ (elementos da matriz $P$)
+e $\mathbf{p_i}$ a $i$-ésima linha da matriz $P$ (as probabilidades de transição à partir
+do estado $i$).
+
+Para o nosso exemplo, teremos
+\begin{eqnarray}
+H(\mathcal{X}) &=& \mu_1 H(\mathbf{p_1}) + \mu_2 H(\mathbf{p_2}) + \mu_3 H(\mathbf{p_3}) = 3 \times \frac{1}{3} H(\mathbf{p_1}) \\
+        &=& H\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{4} \right) \\
+        &=& \frac{1}{2} + 2 \times \frac{1}{4} \times 2 = \frac{3}{2}  \textmd{\ bits} .
+\end{eqnarray}
+
+
+\end{parts}
+\end{solution}
+\end{questions}

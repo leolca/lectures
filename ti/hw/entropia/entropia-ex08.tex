@@ -1,0 +1,25 @@
+\subsection{Processamento de Dados}
+% ex 21 Cover Thomas
+
+\begin{questions}
+\question{
+Considere que $X_1 \rightarrow X_2 \rightarrow X_3 \rightarrow \ldots \rightarrow X_n$ seja uma cadeia de Markov nesta ordem,
+isto é, 
+\begin{equation}
+p(x_1, x_2, \ldots, x_n) = p(x_1) p(x_2|x_1) \ldots p(x_n|x_{n-1}).
+\end{equation}
+Simplifique $I(X_1;X_2;\ldots;X_n)$.
+}
+
+\begin{solution}
+  Pela regra da cadeia da informação mútua, temos
+  \begin{equation}
+  I(X_1; X_2; \ldots; X_n) = I(X_1;X_2) + I(X_1;X_3|X_2) + \ldots + I(X_1;X_n|X_2; \ldots, X_{n-2}) .
+  \end{equation}
+  Pela desigualdade de Markov, o passado e o futuro são independentes, dado o presente. Desta forma,
+  todos os termos da equação anterior são nulos, exceto o termo $I(X_1;X_2)$. Teremos assim
+  \begin{equation}
+  I(X_1; X_2; \ldots; X_n) = I(X_1;X_2) .
+  \end{equation}
+\end{solution}
+\end{questions}

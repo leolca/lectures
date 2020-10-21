@@ -1,0 +1,47 @@
+\subsection{Comprimento esperado (Shannon e Huffman)}
+
+\begin{questions}
+\question{
+    Suponha uma fonte que produza os símbolos do alfabeto
+    $\mathcal{X}=\{A,B,C,D,E\}$ com distribuição
+    $p = (\nicefrac{2}{5}, \nicefrac{1}{5}, \nicefrac{1}{5}, \nicefrac{1}{10}, \nicefrac{1}{10})$.
+    Usando $\log 5 = 2,32$, calcule $H(X)$, $L_s$ e $L_H$ 
+    (entropia da fonte, comprimento esperado do código de Shannon e
+    comprimento esperado do código Huffman, respectivamente).
+}
+
+\begin{solution}
+    A entropia é dada por
+    \begin{eqnarray}
+    H(X) &=& - \nicefrac{2}{5} \log \nicefrac{2}{5} - 2\times \nicefrac{1}{5} \log \nicefrac{1}{5} - 2 \times \nicefrac{1}{10} \log \nicefrac{1}{10} \\
+                &=& \nicefrac{2}{5} (\log 5 - 1) + \nicefrac{2}{5} \log 5 + \nicefrac{1}{5} (\log 5 + 1) \\
+                        &=& \log 5 (\nicefrac{2}{5} + \nicefrac{2}{5} + \nicefrac{1}{5}) - \nicefrac{2}{5} + \nicefrac{1}{5} = \log 5 - \nicefrac{1}{5} = 2,32 - 0,2 = 2,12 .
+    \end{eqnarray}
+    
+    Os comprimentos do código de Shannon são dados por $\lceil - \log p(x) \rceil$.
+    Teremos então os seguintes comprimentos:
+    \begin{equation}
+    l(A) = \lceil - \log \nicefrac{2}{5} \rceil = \lceil \log 5 - 1 \rceil = \lceil 2,32 - 1 \rceil = \lceil 1,32 \rceil = 2
+    \end{equation}
+    \begin{equation}
+    l(B) = l(C) = \lceil - \log \nicefrac{1}{5} \rceil = \lceil \log 5 \rceil = \lceil 2,32  \rceil = 3
+    \end{equation}
+    \begin{equation}
+    l(D) = l(E) = \lceil - \log \nicefrac{1}{10} \rceil = \lceil \log 10 \rceil = \lceil \log 5 + 1 \rceil = \lceil 2,32 + 1 \rceil = \lceil 3,32 \rceil = 4
+    \end{equation}
+    assim o comprimento esperado do código de Shannon será
+    \begin{equation}
+    L_S = \nicefrac{2}{5} \times 2 + 2 \times \nicefrac{1}{5} \times 3 + 2 \times \nicefrac{1}{10} \times 4 = \nicefrac{28}{10} = 2,8
+    \end{equation}
+
+    
+    O código de Huffman será $(A,(B,(C,(D,E))))$ e assim os comprimentos do
+    código de Huffman serão $l(A) = 1$, $l(B) = 2$, $l(C) = 3$ e $l(D)=l(E)=4$.
+    O comprimento esperado deste código será
+    \begin{equation}
+    L_H = \nicefrac{2}{5} \times 1 + \nicefrac{1}{5} \times 2 + \nicefrac{1}{5} \times 3 + 2 \times \nicefrac{1}{10} \times 4 = \nicefrac{22}{10} = 2,2
+    \end{equation}
+
+\end{solution}
+\end{questions}
+

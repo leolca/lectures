@@ -1,0 +1,314 @@
+\subsection{Estimação da pmf}
+
+\begin{questions}
+\question{
+Seja $p$ a função massa de probabilidade (pmf) sob o conjunto $\mathcal{X} = \{a_1, \ldots, a_k \}$
+de cardinalidade finita. Suponha que observamos uma sequência de $n$ amostras
+$x_1, \ldots, x_n$, onde $x_i \in \mathcal{X}$, $1 \leq i \leq n$.
+As amostras são independentes e identicamente distribuídas (i.i.d.),
+
+Quando $n \gg k$, uma forma satisfatória para realizar esta estimação é o histograma
+empírico ou tipo. O tipo $P$ é a proporção relativa de ocorrências de cada símbolo
+de $\mathcal{X}$, sendo definido por
+\begin{equation}
+P(X=a_i) = P_i = \frac{1}{n} \sum_{t=0}^n \mathbf{1} (x_t = a_i) \equiv 
+        \frac{n(a_i|x_{1:n})}{n} = \frac{n_i}{n} \ , i \in \{1, \ldots, k\} ,
+\end{equation}
+onde $\mathbf{1}(\cdot)$ é a função indicadora e, desta forma, $n(a_i|x_{1:n})$
+é o número de ocorrências do símbolo $a_i$ na amostra $x_{1:n}$.
+
+Por outro lado, quando $n$ é pequeno, teremos problema em estimar as probabilidades.
+Laplace foi pioneiro neste assunto, desenvolvendo os estimadores Bayesianos
+(para $k=2$) como forma alternativa ao tipo.
+Durante a II Guerra Mundial, enquanto trabalhava em sistemas para quebrar a criptografia
+alemã, Jack Good e Alan Turing propuseram um método para regularizar o tipo.
+No caso estudado, $k=26$, o número de caracteres do alfabeto, e
+$n \approx 100 \textmd{ a } 1000$.
+
+O tipo, ou distribuição empírica, de uma amostra $x_{1:n}$ é dado por
+\begin{equation}
+P_{x_{1:n}} = \left( \frac{n_1}{n}, \ldots, \frac{n_k}{n} \right) , 
+\quad \textmd{onde} \quad n=\sum_{i=1}^n n_i ,
+\end{equation}
+e $n_i$, para $1 \leq i \leq k$, é o número de ocorrência de cada símbolo
+$a_i$ na amostra. Vamos chamar de $\mathcal{P}^k$ o conjunto de pmfs sobre
+o conjunto de cardinalidade $k$ e $\mathcal{P}^k_n$ o conjunto de tipos com
+denominador $n$ sob um conjunto de cardinalidade $k$.
+A probabilidade, sob $p \in \mathcal{P}^k$, de observarmos uma determinada
+sequência $x_{1:n}$ é dada por
+\begin{equation}
+p(x_1, \ldots, x_n) = \prod_{i=1}^k p_i^{n_i} ,
+\label{eq-prob-seq-n}
+\end{equation}
+onde $p_i$ é a probabilidade do $i$-ésimo símbolo, dada pela pmf $p$
+e $n_i$ é o número de observações do $i$-ésimo símbolo.
+Podemos ainda reescrever a equação da seguinte forma:
+\begin{equation}
+\label{eq-tipo-div-ent}
+p(x_1, \ldots, x_n) = \prod_{i=1}^k p_i^{n_i} = 
+        2^{-n \left(D(P_{x_{1:n}}, p) + H(P_{x_{1:n}}) \right)} ,
+\end{equation}
+onde $D(\cdot,\cdot)$ é a divergência de Kullback-Leibler entre duas distribuições e $H(\cdot)$ é a entropia de Shannon para uma dada distribuição.
+
+\begin{parts}
+\part
+Demonstre a Equação \ref{eq-tipo-div-ent}.
+
+\part
+Mostre que é possível verificar, através da equação \ref{eq-tipo-div-ent},
+que o tipo $P$ é uma esteatítica suficiente para estimar $p$.
+
+\part
+Quando $k$ é grande, podem existir diversos símbolos $1 \leq i \leq k$ para
+os quais $p_i \ll \frac{1}{n}$. Neste caso, com alta probabilidade, observaremos $n_i=0$.
+Desta forma, eventos de baixa probabilidade tendem a ser subestimados e eventos de
+alta probabilidade tendem a ser sobrestimados por $P$. Uma manifestação disso é que
+o valor esperado da entropia do tipo subestima a entropia original da pmf.
+
+Mostre que isto é verdade ($E[H(P)] \leq H(p)$).
+
+\part
+Uma maneira de quantificar isso é dizer que aquilo que é observado deve ser mais provável
+sob a pmf subjacente do que qualquer outro evento.
+Se um determinado tipo é observado, queremos encontrar as prováveis pmf tais que a
+probabilidade de se observar o tipo observado $P$ é maior do que a probabilidade de se
+encontrar um outro tipo qualquer $P'$ sob uma pmf subjacente $q$.
+Considere $f(P,q)$ a probabilidade de se observar o tipo $P$ sob a pmf $q$.
+
+Escreva a equação para $f(P,q)$.
+
+\part
+Vamos chamar de conjunto de máxima verossimilhança $\mathcal{M}$ o conjunto
+formado pelas pmf's $q \in \mathcal{P}^k$ tal que, para um dado tipo $P$,
+a probabilidade de observarmos este tipo sob a pmf subjacente $q$ é maior ou
+igual a probabilidade de observarmos qualquer outro tipo sob a mesma pmf subjacente,
+ou seja, $f(P,q) \geq f(Q,q)$, $\forall Q \in \mathcal{P}_n^k$.
+\begin{equation}
+\mathcal{M}(P) = \{ p \in \mathcal{P}^k \ : \ f(P,q) \geq f(Q,q), \ \forall Q \in \mathcal{P}_n^k\} .
+\end{equation}
+Segundo o critério exposto acima, qualquer uma das pmf's em $\mathcal{M}(P)$
+seria igualmente boa para explicar a observação de um tipo $P$.
+
+Com base em tudo o que foi exposto anteriormente, qual critério poderemos adotar para escolher uma melhor pmf dentre aquelas em $\mathcal{M}(P)$?
+
+\part
+Note que para uma pmf qualquer, deveremos ter
+$p_i \leq 1$, $\forall i \in \{1,\ldots,k\}$ e $\sum_{i=1}^k p_i = 1$.
+O conjunto de pontos em $\mathcal{R}^k$ que satisfaz estas propriedades
+é conhecido como simplex probabilístico (\emph{probability simplex}).
+Os tipos possíveis $Q \in \mathcal{P}_n^k$ são pontos distintos dentro
+deste simplex probabilístico.
+
+Este conjunto de pontos é finito?
+É possível estimar o seu tamanho para um dado alfabeto de cardinalidade $k$
+e sequências de comprimento $n$? Como podemos estimar? (se possível)
+
+\part
+O conjunto de máxima verossimilhança $\mathcal{M}(P)$ para um dado tipo será
+um subconjunto do simplex probabilístico compreendendo todos os pontos do simplex
+que estão mais próximos (segundo a divergência de Kullback-Leibler) de um
+determinado tipo do que de qualquer outro tipo. Estes conjuntos formarão um
+diagrama de Voronoi sobre o simplex probabilístico.
+
+Mostre que $f(P,q) \doteq 2^{-D(P,q)}$, ou seja, a propriedade de
+observarmos um determinado tipo $P$ sob a pmf subjacente $q$ é igual
+até a primeira ordem de expoente à $2^{-D(P,q)}$, onde $D(P,q)$ é a
+divergência de Kullback-Leibler entre o tipo $P$ e a pmf subjacente $q$.
+
+A notação $a_n \doteq b_n$ significa que
+$\lim_{n \rightarrow \infty} \frac{1}{n} \log \frac{a_n}{b_n} = 0$.
+
+
+\end{parts}
+}
+
+Desta forma, para $n$ suficientemente grande, o conjunto de máxima verossimilhança
+associado ao tipo $P$ é dado por
+\begin{equation}
+\mathcal{M}(P) = \{ p \in \mathcal{P}^k \ : \ D(P,q) \leq D(Q,q), \ \forall Q \in \mathcal{P}_n^k \} .
+\end{equation}
+
+Este conjunto possui algumas propriedades uteis e interessantes.
+Seja $P = \left( \frac{n_1}{n}, \ldots, \frac{n_k}{n} \right)$ um tipo,
+os elementos $p = (p_1, \ldots, p_k) \in \mathcal{M}(P)$ devem satisfazer as seguintes propriedades:
+\begin{eqnarray}
+P \ll p \ \ \textmd{i.e.} \ n_i > 0 \Rightarrow p_i > 0 , & \ \forall 1 \leq i \leq k , \nonumber \\
+n_i < n_j \Rightarrow p_i \leq p_j , & \ \forall 1 \leq i, j \leq k , \nonumber \\
+\frac{n}{n+k} P_i \leq p_i \leq P_i + \frac{1}{n} , & \ \forall 1 \leq i \leq k , \nonumber \\
+\Vert p - P \Vert_1 = \sum_{i=1}^k \vert p_i - P_i \vert \leq \frac{2(k-1)}{n} , \nonumber \\
+P \in \mathcal{M}(P) ,
+\end{eqnarray}
+mas nenhum outro tipo com denominador $n$ é um elemento de $\mathcal{M}(P)$.
+Se $x_1, \ldots, x_n$ são amostras independentes com mesma pmf $q \in \mathcal{P}^k$, então o conjunto de máxima verossimilhança definido pelo tipo $P$ é tal que
+\begin{equation}
+\sup_{p \in \mathcal{M}(P)} \Vert p - q \Vert_1 \rightarrow 0 \textmd{ quando } n \rightarrow \infty \textmd{ com probabilidade }1.
+\end{equation}
+
+Toda pmf em $\mathcal{M}(P)$ satisfaz as propriedades acima e será considerada uma desejável estimativa da pmf subjacente, geradora das amostras $x_1,\ldots,x_n$, aquela que satisfizer um critério secundário já que admitimos $\mathcal{M}(P)$ como um conjunto admissível.
+
+Seja $P = \left( \frac{n_1}{n}, \ldots, \frac{n_k}{n} \right)$ um tipo e $\mathcal{M}(P)$ o conjunto de máxima verossimilhança associado. Seja $q = (q_1\ \ldots, q_k)$ uma pmf tal que $P \ll q$. Então existe um único elemento $p\ast \in \mathcal{M}(P)$ tal que
+\begin{equation}
+        D(p\ast, q) = \min_{p \in \mathcal{M}(P)} D(p,q) .
+\end{equation}
+Isto pode ser mostrado pelo fato de $\mathcal{M}(P)$ ser um conjunto convexo e fechado na topologia Euclideana em $\mathcal{P}^k$ e pela convexidade de $p \rightarrow D(p,q)$. Quando $n \gg k$, teremos pouca influência de $q$ na determinação de $p\ast$, visto que o conjunto $\mathcal{M}(P)$ terá pequeno raio. Quando $n \rightarrow 0$, a escolha de $q$ irá influenciar de forma forte $p\ast$.
+
+
+
+
+\begin{solution}
+\begin{parts}
+\part 
+  \begin{proof}
+\begin{eqnarray}
+p(x_1, \ldots, x_n) &=& \prod_{i=1}^{n} p(x_i) = \prod_{a \in \mathcal{X}} p(a)^{n(a \mid x_{1:n})} \nonumber \\
+        &=& \prod_{a \in \mathcal{X}} p(a)^{n P_{x_{1:n}}(a) } = 
+        \prod_{a \in \mathcal{X}} 2^{ \left\{ n P_{x_{1:n}}(a) \log p(a) \right\} } \nonumber \\
+        &=& \prod_{a \in \mathcal{X}} 2^{ n \left\{  
+                P_{x_{1:n}}(a) \log p(a) -P_{x_{1:n}}(a) \log P_{x_{1:n}}(a) + 
+                P_{x_{1:n}}(a) \log P_{x_{1:n}}(a) \right\} } \nonumber \\
+        &=& 2^{n \sum_{a \in \mathcal{X}}  \left( -P_{x_{1:n}}(a) \log \frac{P_{x_{1:n}}(a)}{p(a)} + 
+                P_{x_{1:n}}(a) \log P_{x_{1:n}}(a) \right)  } \nonumber \\
+        &=& 2^{-n \left( D(P_{x_{1:n}} \mid \mid p) + H( P_{x_{1:n}} ) \right) }
+\end{eqnarray}
+  \end{proof}
+
+
+\part
+  Uma função $T(\cdot)$ é dita ser uma estatística suficiente em relação à família
+  $\{f_{\theta} (x)\}$ se $X$ é independente de $\theta$ dado $T(X)$ para qualquer
+  distribuição em $\theta$ (i.e. $\theta \rightarrow T(X) \rightarrow X$ forma uma
+  cadeia de Markov). Então
+  \begin{equation}
+  I(\theta ; X) = I(\theta ; T(X)) \ \forall \theta
+  \end{equation}
+  Uma estatística suficiente preserva a informação mútua e reciprocamente
+  \begin{equation}
+  X \independent \theta | T(X)
+  \end{equation}
+
+Note que a probabilidade de uma sequência $x_{1:n}$ é a mesma para todas
+as sequências de um determinado tipo, conforme verificamos através da
+equação \ref{eq-tipo-div-ent}. Desta forma, a probabilidade de uma sequência
+específica é igual a $1$ sobre o número de sequências de um determinado tipo,
+\begin{equation}
+p(x_{1:n} \vert P_{x_{1:n}}) = \frac{1}{\vert T(P_{x_{1:n}}) \vert} = 
+\begin{cases}
+\frac{1}{{n \choose {n_1, n_2, \ldots, n_k}}} & \text{ se } x_{1:n} \in T(P_{x_{1:n}}) \\
+0 & \text{ caso contrário,}
+\end{cases} 
+\end{equation}
+ou seja, $X_{1:n} \independent p | P_{x_{1:n}}$, e assim temos que o histograma
+empírico é uma estatística suficiente para $p$.
+
+Observe também que $P$ é o estimador de máxima verissimilhança (MLE) de $p$.
+
+Vamos definier a função de verossimilhança,
+\begin{eqnarray}
+l'(p_1, \ldots, p_{k} \vert n_1, \ldots, n_{k}) &=& 
+        p(x_{1:n} \vert P_{x_{1:n}}) \nonumber \\
+        &=& { n \choose n_1 \quad \ldots \quad n_k } \prod_{j=1}^{ k } p_j^{n_j} \nonumber \\
+        &=& \frac{ n! }{ \prod_{i=1}^{ k } n_i!} \prod_{j=1}^{ k } p_j^{n_j} . 
+\end{eqnarray}
+A função de verossimilhança é uma função das probabilidades, dado o histograma empírico.
+Queremos encontrar qual é a distribuição $p$ que maximiza a verossimilhança,
+dada uma observação com um determinado histograma empírico. Ao invés de
+maximizar diretamente a função de verossimilhança, iremos maximizar o logaritmo desta
+função, já que o logaritmo é uma função monotonica crescente.
+\begin{eqnarray}
+l( p_1, \ldots, p_{k} ) &=& \log l'(p_1, \ldots, p_{k} \vert n_1, \ldots, n_{k} ) \nonumber \\
+        &=& \log \left(  \frac{ n! }{ \prod_{i=1}^{k} n_i!} \prod_{j=1}^{k} p_j^{n_j}  \right) \nonumber \\
+        &=& \log n! - \sum_{i=1}^{k} \log n_i! + \sum_{j=1}^{k} \log p_j^{n_j} \nonumber \\
+        &=& \log n! + \sum_{i=1}^{k}  \log \frac{p_i^{n_i}}{n_i!} .
+\end{eqnarray}
+Desejamos maximizar $l( p_1, \ldots, p_{k} )$
+sujeito a $\sum_{i=1}^{k} p_i = 1$.
+Basta utilizar o método dos multiplicadores de Lagrange para incorporar a
+restrição à função que desejamos maximizar,
+\begin{eqnarray}
+L( p_1, \ldots, p_{k} , \lambda ) &=& l( p_1, \ldots, p_{k} ) +
+        \lambda \left( 1 - \sum_{i=1}^{k} p_i \right) \nonumber \\
+        &=& \log n! + \sum_{i=1}^{k}  \log \frac{p_i^{n_i}}{n_i!} +
+        \lambda \left( 1 - \sum_{i=1}^{k} p_i \right) .
+\end{eqnarray}
+A derivada de $L$ em relação a cada um dos parâmetros $p_j$ será dada por
+\begin{eqnarray}
+\frac{\partial L}{\partial p_j} &=& \frac{n_j!}{p_j^{n_k}} \frac{n_j p_j^{n_j -1}}{n_j!} - \lambda \nonumber \\
+        &=& \frac{n_j}{p_j} - \lambda = 0 ,
+\end{eqnarray}
+assim teremos $n_j = \lambda p_j$. Como $\sum_{i=1}^{k} n_i = n$,
+deveremos ter $\lambda = n$, e assim a estimativa para o parâmetro $p_j$ que maximiza
+a verossimilhança será
+\begin{equation}
+\hat{p}_j = \frac{n_j}{N} . 
+\end{equation}
+
+
+\part
+\begin{equation}
+E[H(P)] = - E \left[ \sum_{i=1}^k P_i \log \frac{P_i}{p_i} p_i \right] = - E[D(P,p)] + H(p) \leq H(p).
+\end{equation}
+
+Uma sequência observada deve ser bem provável; caso contrário não iriamos observá-la.
+Uma maneira de quantificar isso é dizer que aquilo que é observado deve ser mais provável
+sob a pmf subjacente do que qualquer outro evento.
+Se um determinado tipo é observado, queremos encontrar as prováveis pmf tais que a
+probabilidade de se observar o tipo observado $P$ é maior do que a probabilidade de se
+encontrar um outro tipo qualquer $P'$ sob uma pmf subjacente $q$.
+Considere $f(P,q)$ a probabilidade de se observar o tipo $P$ sob a pmf $q$.
+
+
+\part
+\begin{equation}
+  f(P,q) = {n \choose n_1 \ldots n_k} \prod_{i=1}^k q_i^{n_i} 
+\end{equation}
+onde ${n \choose n_1 \ldots n_k} = \frac{n!}{n_1! \ldots n_k!}$ é o coeficiente multinomial.
+
+\part 
+Devemos usar o critério da máxima entropia, pois a entropia do tipo subestima a entropia da fonte,
+desta forma vamos selecionar aquela mais próxima de $H(p)$.
+
+
+\part
+O simplex probabilístico é um conjunto infinito de pontos.
+Já os tipos possíveis, fixando $n$ e $k$, formam um conjunto finito
+cujo tamanho é limitado por $(n+1)^k$.
+% (n+1)^|X|
+
+
+\part
+Para qualquer $P \in \mathcal{P}_n$ e qualquer distribuição $Q$, a probabilidade da classe de tipo
+   $T(P)$ sob $Q^n$ é tal que $Q^n(T(P)) \doteq 2^{-n D(P \mid \mid Q)}$. Especificamente, temos os limites
+   \begin{equation}
+   \frac{1}{(n+1)^{\vert \mathcal{X} \vert}} 2^{-n D(P \mid \mid Q)} \leq Q^n(T(P)) \leq 2^{-nD(P \mid \mid Q)}
+   \end{equation}
+
+   \begin{eqnarray}
+   Q^n(T(P)) &=& \sum_{x_{1:n} \in T(P)} Q^n(x_{1:n}) = \sum_{x_{1:n} \in T(P)} 2^{-n (D(P \mid \mid Q) + H(P))} \nonumber \\
+        &=& \vert T(P) \vert 2^{-n (D(P \mid \mid Q) + H(P))}
+   \end{eqnarray}
+   para completar a demonstração, devemos utilizar
+        \begin{equation}
+        \frac{1}{(n+1)^{\vert \mathcal{X} \vert}} 2^{nH(P)} \leq \vert T(P) \vert \leq 2^{nH(P)} .
+        \end{equation}
+
+O limite superior para o tamanho da classe de tipo pode ser obtido da seguinte forma:
+  \begin{eqnarray}
+  1 &\geq& P^{n} (T(P)) = \sum_{x_{1:n} \in T(P)} P^{n} (x_{1:n}) = \sum_{x_{1:n} \in T(P)} 2^{-nH(P)} \nonumber \\
+    &=& \vert T(P) \vert 2^{-nH(P)} .
+  \end{eqnarray}
+
+O limite inferior pode ser obtido fazendo
+  \begin{eqnarray}
+  1 &=& \sum_{Q \in \mathcal{P}_n} P^n (T(Q)) \leq \sum_{Q \in \mathcal{P}_n} \max_{R \in \mathcal{P}_n} P^n (T(R)) \nonumber \\
+         && \text{fazendo } P = \argmax_{R \in \mathcal{P}_n} P^n (T(R)) \text{ teremos } \nonumber \\
+        &=& \sum_{Q \in \mathcal{P}_n} P^n (T(P)) \leq (n+1)^{\vert \mathcal{X} \vert} P^n (T(P)) \nonumber \\
+        &=& (n+1)^{\vert \mathcal{X} \vert} \sum_{x_{1:n} \in T(P)} P^n (x_{1:n}) \nonumber \\
+        &=& (n+1)^{\vert \mathcal{X} \vert} \sum_{x_{1:n} \in T(P)} 2^{-nH(P)} \nonumber \\
+        &=& (n+1)^{\vert \mathcal{X} \vert} \vert T(P) \vert 2^{-nH(P)} 
+  \end{eqnarray}
+
+
+
+\end{parts}
+\end{solution}
+\end{questions}

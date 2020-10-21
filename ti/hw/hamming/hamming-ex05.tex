@@ -1,0 +1,61 @@
+\subsection{Hamming Unicode}
+
+\begin{questions}
+\question{
+No Unicode, a letra `a' possui o ponto de representação \texttt{U+0061}. Este, por sua vez,
+é codificado no UTF-8 como a sequência de 8 bits a seguir: $01100001$.
+\begin{parts}
+\part Utilizando o código de Hamming (7,4,3) codifique esta sequência de bits que representa o caractere `a'
+para serem transmitidos através de um canal ruidoso.
+\part Suponha que um ruído aditivo esteja presente no canal, acarretando a troca dos bits nas posições 3 e 12
+(considerando a sequência completa de bits formada após a codificação de Hamming).
+Utilize a decodificação do código de Hamming para detectar erro na transmissão e corrigi-lo. Mostre como.
+\part ($A \rightarrow B \rightarrow C$) 
+        Suponha que o receptor B trabalha com uma extremidade de bit (\textit{bit endianness})\footnote{
+                Ordenação dos bits, convenção adotada para identificar a posição dos bits em um número binário.
+                LSB 0: o bit menos significativo está no primeira posição. MSB 0: o bit mais significativo
+                está na primeira posição.
+                } 
+        diferente daquela do transmissor A.
+O receptor B recebe a sequência de bits, enviados pelo transmissor A, através de um canal com ruído, 
+e aplica a verificação e correção de erros do código de Hamming. 
+Em seguida transmite os dados, através de um canal sem ruído, para um terceiro C que utiliza a mesma extremidade que
+o transmissor original A da mensagem. Como esta última transmissão foi através de um canal sem ruído, o
+último receptor C não precisa se preocupar com detecção e correção de erros.
+A correção de erros realizada pelo receptor intermediário B danificará os dados, impossibilitando que o 
+receptor final C decodifique corretamente a mensagem? Justifique. 
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+Os dados $0110 | 0001$ darão origem a duas palavras do código de Hamming (7,4,3): 
+$0110011$ e $0001111$ (usando as matrizes vistas em aula) ou $1100110$ e $1101001$ (usando as matrizes criadas pelo algoritmo).
+Estas são dadas pela multiplicação $x=Gp$, onde $p$ são os bits de dados, $x$ a palavra de hamming e $G$ a matriz geradora.
+
+\part 
+O sinal recebido será dado por $y = x + r$, onde $r$ é o ruído aditivo.
+
+Para realizar a verificação e correção de erros devemos calcular a síndrome: $s = Hy$.
+Se a síndrome for nula, não há erro, caso contrário, devemos encontrar a coluna de $H$ igual à síndrome.
+Para corrigir o erro bastará trocar o bit na posição correspondente àquela onde encontramos $s$ em $H$.
+
+Como no exercício em questão temos apenas um erro em cada palavra de Hamming, ao proceder a correção este erro
+será corrigido.
+
+\part 
+O receptor C receberá e decodificará a mensagem sem erro pois B irá corrigir os erros existentes.
+Como B trabalha com a extremidade de bit inversa, ele irá ter a matriz de verificação de paridade invertida, 
+que será utilizada com o vetor de bits invertido. 
+Isto equivale a trocar a ordem das equações de verificação de paridade, o que não muda em nada o funcionamento
+do sistema. Desta forma, tudo funcionará normalmente, porém na ordem inversa.
+Para C isso será transparente e não fará diferença.
+
+Se B não usar a matriz invertida em relação a A, ou seja, B estaria utilizando uma matriz invertida em relação
+ao código de Hamming, teremos erro na decodificação, exceto nos casos em que a palavra transmitida seja um palíndromo.
+
+\end{parts}
+\end{solution}
+\end{questions}

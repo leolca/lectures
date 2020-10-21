@@ -1,0 +1,219 @@
+\subsection{Modelo Genético}
+% https://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/Chapter11.pdf
+
+\begin{questions}
+\question{
+O modelo genético simples de herança de traços (ou fenótipo) 
+em animais consiste em considerar que estes traços são determinados por pares
+de genes. Neste modelo, cada um dos genes de um par pode ser de dois tipos G ou g. 
+Um indivíduo pode ter uma das seguintes combinações: GG, Gg (que é geneticamente
+equivalente a gG) ou gg. Usualmente os tipos GG e Gg são indistinguíveis na aparência.
+Desta forma, dizemos que o gene G domina o gene g. Um indivíduo é chamado \textit{dominante} 
+se possuir os genes GG, \textit{híbrido} se possuir os genes Gg e \textit{recessivo} se
+possuir os genes gg.
+
+No acasalamento de dois animais, a prole herda um gene de cada par de cada um dos seus progenitores.
+A suposição básica em genética é que estes genes são escolhidos aleatoriamente e de forma 
+independente um do outro. Esta suposição determina a probabilidade de ocorrência de cada 
+um dos tipos de prole. A prole de dois pais puramente dominantes deverá ser dominante,
+a prole de dois pais recessivos deverá ser recessiva, e a prole de um dominante e um recessivo
+deverá ser híbrida. 
+
+Vamos considerar agora um processo de reprodução continuada, onde a cada etapa há o acasalamento
+de dois indivíduos produzindo uma nova prole. Para simplificar, vamos inicialmente
+considerar que um indivíduo qualquer se acasalará com um indivíduo híbrido.
+No processo de acasalamento de um híbrido com um dominante, a prole necessariamente terá um
+gene G proveniente do dominante e poderá receber um gene G ou um gene g do indivíduo híbrido,
+com igual probabilidade. Ou seja, a prole será do tipo GG com probabilidade 0.5, Gg com probabilidade 0.5
+e gg com probabilidade 0.
+Considerando agora o acasalamento entre um híbrido e um recessivo, a prole poderá ser
+Gg com probabilidade 0.5 e gg com probabilidade 0.5.
+Por fim, no acasalamento de dois híbridos, a prole poderá ser GG com probabilidade 0.25,
+Gg com probabilidade 0.5 e gg com probabilidade 0.25.
+
+Este processo de acasalamento com um híbrido pode ser descrito através de uma cadeia de Markov,
+onde os estados são o gene da prole, podendo ser GG, Gg e gg. Este processo estocástico é homogêneo,
+então a cadeia de Markov poderá ser descrita pela seguinte matriz
+\begin{equation}
+\mathbf{P} = 
+\begin{blockarray}{cccc}
+ & GG & Gg & gg \\
+\begin{block}{c(ccc)}
+ GG & 0.5  & 0.5 & 0    \\
+ Gg & 0.25 & 0.5 & 0.25 \\
+ gg & 0    & 0.5 & 0.5  \\
+\end{block}
+\end{blockarray} .
+\end{equation}
+
+Suponha que agora o processo continuado de acasalamento seja feito sempre com um
+indivíduo dominante. Neste caso, a matriz de transição será
+\begin{equation}
+\mathbf{P} = 
+\begin{blockarray}{cccc}
+ & GG & Gg & gg \\
+\begin{block}{c(ccc)}
+ GG & 1   & 0   & 0  \\
+ Gg & 0.5 & 0.5 & 0  \\
+ gg & 0   & 1   & 0  \\
+\end{block}
+\end{blockarray} .
+\end{equation}
+
+Vamos supor agora um modelo mais realista. Suponha que temos dois animais, de sexo
+oposto, e suponha que os traço seja independente do sexo. Vamos iniciar o processo
+com dois indivíduos de sexo oposto, este casal irá reproduzir. Vamos selecionar
+dois descendentes e acasalar estes dois, continuando indefinidamente o processo.
+
+Agora, cada estado será representado por um par de indivíduos. Os estados do processo
+serão: $s_1 = (GG,GG)$, $s_2 = (GG,Gg)$, $s_3 = (GG,gg)$, $s_4 = (Gg,Gg)$, $s_5 = (Gg,gg)$ e
+$s_6 = (gg,gg)$.
+
+\begin{parts}
+\part Calcule as probabilidades de transição e encontre a matriz de transição $P$.
+\part Represente a cadeia de Markov através de um grafo.
+\part Determine a distribuição de estado estacionário.
+\part Calcule a taxa de entropia do processo.
+\end{parts}
+
+}
+
+\begin{solution}
+Vamos ilustrar o cálculo das probabilidades de transição a partir do estado $s_2$.
+Quando o processo se encontra neste estado, um dos progenitores é do tipo GG e o
+outro é do tipo Gg. A probabilidade de gerar uma prole dominante é de 1/2.
+Desta forma, a probabilidade de transição para $s_1$ será de 1/4, a probabilidade
+de transição para $s_2$ será de 1/2 e a probabilidade de transição para $s_4$
+será de 1/4.
+
+
+A matriz de transição será da seguinte forma:
+
+\begin{equation}
+\mathbf{P} = 
+\begin{blockarray}{ccccccc}
+ & GG,GG & GG,Gg & GG,gg & Gg,Gg & Gg,gg & gg,gg \\
+\begin{block}{l(cccccc)}
+ GG,GG & 1      & 0    & 0     & 0    & 0    & 0      \\
+ GG,Gg & 0.25   & 0.5  & 0     & 0.25 & 0    & 0      \\
+ GG,gg & 0      & 0    & 0     & 1    & 0    & 0      \\
+ Gg,Gg & 0.0625 & 0.25 & 0.125 & 0.25 & 0.25 & 0.0625 \\ 
+ Gg,gg & 0      & 0    & 0     & 0.25 & 0.5  & 0.25   \\
+ gg,gg & 0      & 0    & 0     & 0    & 0    & 1      \\
+\end{block}
+\end{blockarray} .
+\end{equation}
+
+
+
+\begin{center}
+\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=3cm]
+\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+\node[state]    (s4)                    {$s_4$};
+\node[state]    (s1)[above left of=s4]  {$s_1$};
+\node[state]    (s2)[left of=s4]        {$s_2$};
+\node[state]    (s3)[below of=s4]       {$s_3$};
+\node[state]    (s5)[right of=s4]       {$s_5$};
+\node[state]    (s6)[above right of=s4] {$s_6$};
+\path
+(s2) edge[loop left]         node{$\frac{1}{2}$}    (s2)
+(s5) edge[loop right]        node{$\frac{1}{2}$}    (s5)
+(s4) edge[loop above]        node{$\frac{1}{4}$}    (s4)
+(s1) edge[loop left]         node{$1$}      (s1)
+(s6) edge[loop right]        node{$1$}      (s6)
+(s2) edge[bend left,above]   node{$\frac{1}{4}$}    (s4)
+(s4) edge[bend left,below]   node{$\frac{1}{4}$}    (s2)
+(s2) edge[bend left,left]    node{$\frac{1}{4}$}    (s1)
+(s4) edge[bend right,above right]   node{$\frac{1}{16}$}    (s1)
+(s4) edge[bend left,above left]   node{$\frac{1}{16}$}    (s6)
+(s4) edge[bend right,left]   node{$\frac{1}{8}$}    (s3)
+(s3) edge[bend right,right]  node{$1$}      (s4)    
+(s4) edge[bend left,above]   node{$\frac{1}{4}$}    (s5)
+(s5) edge[bend left,below]   node{$\frac{1}{4}$}    (s4)
+(s5) edge[bend right,right]  node{$\frac{1}{4}$}    (s6)
+;  
+\end{tikzpicture}
+\end{center}
+
+
+\begin{lstlisting}[language=Octave]
+P = [   1 0 0 0 0 0; ...
+        0.25 0.5 0 0.25 0 0; 
+        0 0 0 1 0 0; ...
+        0.0625 0.25 0.125 0.25 0.25 0.0625; ...
+        0 0 0 0.25 0.5 0.25; ...
+        0 0 0 0 0 1];
+Q = P - eye(size(P));
+Q1 = Q;
+Q1(:,end)=ones(size(P,1),1);
+det(Q1)
+ans = 0
+% faríamos como anteriormente, 
+% [zeros(1,size(P,2)-1), 1] * inv(Q1)
+% mas a matriz Q eh singular
+% vamos utilizar então a pseudo-inversa
+[zeros(1,size(P,2)-1), 1] * pinv(Q1)
+ans =
+
+   0.50000   0.00000  -0.00000  -0.00000   0.00000   0.50000
+% simulacao
+mu=rand(1,6); mu=mu/sum(mu); for i=1:1E6, mu = mu*P; end; disp(mu)
+   0.47487   0.00000   0.00000   0.00000   0.00000   0.52513
+
+% utilizando a função criada no exercício anterior
+H = markovEntropyRate(P);
+% H =   -2.2898e-16
+\end{lstlisting}
+
+Podemos verificar que não existe solução única para este problema,
+o que fica explicito quando verificamos que a matriz $P-I$
+é singular, não possuindo assim inversa.
+Qualquer solução da forma $\mu^T = (\mu_1, 0, 0, 0, 0, \mu_6)$
+com $\mu_1 + \mu_6 = 1$ é uma solução válida, o que pode ser
+facilmente verificado realizando a multiplicação $\mu^T P$.
+
+
+Note que, resolver $\mu^T P = \mu^T$ é equivalente a resolver $P^T \mu = \mu$,
+ou seja, buscamos o autovetor de $P^T$ associado ao autovalor $1$.
+Para este caso, o autovalor $1$ possui multiplicidade $2$, e assim
+observamos 2 autovetores associados ao autovalor 1.
+\begin{lstlisting}[language=Octave]
+[V, lambda] = eig(P')
+V =
+
+   1.00000   0.00000   0.00968   0.55780  -0.13608  -0.31623
+   0.00000   0.00000  -0.26548  -0.32553   0.54433   0.63246
+   0.00000   0.00000  -0.34752  -0.06217  -0.27217  -0.00000
+   0.00000   0.00000   0.85912  -0.40238  -0.54433  -0.00000
+   0.00000   0.00000  -0.26548  -0.32553   0.54433  -0.63246
+   0.00000   1.00000   0.00968   0.55780  -0.13608   0.31623
+lambda =
+
+Diagonal Matrix
+
+   1.00000         0         0         0         0         0
+         0   1.00000         0         0         0         0
+         0         0  -0.30902         0         0         0
+         0         0         0   0.80902         0         0
+         0         0         0         0   0.25000         0
+         0         0         0         0         0   0.50000
+\end{lstlisting}
+Se denotarmos por $v_1 = (1,0,0,0,0,0)^T$ e $v_2 = (0,0,0,0,0,1)^T$,
+teremos que qualquer combinação da forma $\mu^T = \alpha v_1 + (1-\alpha)v_2$,
+para $0 \leq \alpha \leq 1$, será uma solução para o problema.
+
+
+Conforme verificamos acima, na solução computacional, uma possível
+distribuição de estado estacionário é
+\begin{equation}
+\mu^T = \left( \frac{1}{2}, 0, 0, 0, 0, \frac{1}{2} \right) .
+\end{equation}
+
+Podemos calcular facilmente a taxa de entropia.
+\begin{eqnarray}
+  H(\mathcal{X}) &=& \sum_i \mu_i H( \mathbf{p_i} ) \nonumber \\
+        &=& \mu_1 H(1,0,0,0,0,0) + 0 + 0 + 0 + 0 + \mu_6 H(0,0,0,0,0,1) = 0 .
+\end{eqnarray} 
+
+\end{solution}
+\end{questions}

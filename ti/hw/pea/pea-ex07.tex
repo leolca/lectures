@@ -1,0 +1,72 @@
+\subsection{Tipo}
+
+\begin{questions}
+\question{
+Suponha uma fonte com alfabeto de tamanho $\vert \mathcal{X} \vert = 4$ e com distribuição 
+$p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)$. 
+Considere sequências de comprimento $n=6$.
+
+\begin{parts}
+\part
+Quantos tipos existem?
+
+\part
+Quantas sequências de comprimento 6 e do tipo $P$ abaixo existem?
+\begin{equation}
+ P_{x_{1:6}} = \left( \frac{3}{6}, \frac{2}{6}, \frac{1}{6}, 0 \right)
+\end{equation}
+
+\part 
+Qual é a probabilidade de uma sequência deste tipo $P$?
+
+\part
+Qual é a probabilidade da classe de tipo $P$?
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+O número de tipos é dado por
+\begin{align}
+\vert \mathcal{P}_n \vert &= {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} \nonumber \\
+        &= {6 + 4 - 1 \choose 4 - 1} = {9 \choose 3} = \frac{9!}{3! 6!} = \frac{9 \times 8 \times 7}{3 \times 2} = 84.
+\end{align}
+
+
+\part
+
+O número de sequências do tipo $P_{x_{1:6}}$ dado é o tamanho da classe de tipo deste
+tipo, dado pelo coeficiente polinomial
+
+\begin{align}
+\vert T(P) \vert &= { n \choose nP(a_1) \ nP(a_2) \ \ldots \ nP(a_n) } \\
+                &= { 6 \choose 3 \ 2 \ 1 \ 0 } \\
+                &= \frac{6!}{3! 2! 1! 0!} = 60.
+\end{align}
+
+
+\part
+A probabilidade de uma sequência $x_{1:6}$ do tipo $P$ é dada por
+\begin{align}
+ \Pr(x_{1:6}) &= p_1^{n_1} \times p_2^{n_2} \times p_3^{n_3} \times p_4^{n_4} \nonumber \\
+            &= \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{4}\right)^{2} \times \left(\frac{1}{8}\right)^{1} \times \left(\frac{1}{8}\right)^{0} \times \nonumber \\
+            &= \left(\frac{1}{2}\right)^{10} = 0.0009765625.
+\end{align}
+
+A probabilidade da classe de tipo é dada pela soma das probabilidades de todas as sequências na
+classe de tipo. Como todas as sequências na classe de tipo possuem a mesma probabilidade, 
+basta multiplicar o tamanho da classe de tipo pela probabilidade de uma sequência do tipo:
+
+\begin{align}
+\Pr(T(P_{x_{1:6}})) &= \Pr(x_{1:6}) \times  \vert T(P) \vert = 60 \times \left(\frac{1}{2}\right)^{10} = 0.05859375.
+\end{align}
+
+
+\end{parts}
+\end{solution}
+
+
+
+\end{questions}

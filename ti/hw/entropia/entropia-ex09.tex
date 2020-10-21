@@ -1,0 +1,38 @@
+\subsection{Mistura aumenta entropia}
+% ex 28 Cover Thomas
+
+\begin{questions}
+\question{
+Mostre que a entropia da distribuição de probabilidade $(p_1, \ldots, p_i, \ldots, p_j, \ldots, p_m)$ é menor do que a entropia
+da distribuição $(p_1, \ldots, \frac{p_i+p_j}{2}, \ldots, \frac{p_i+p_j}{2}, \ldots, p_m)$. Mostre que, em geral, qualquer 
+transferência de probabilidade, que torne a distribuição mais uniforme, aumenta a entropia.
+}
+
+\begin{solution}
+
+  Para este problema iremos utilizar que a função logaritmo é concava para argumento maior que zero, ou seja,
+  \begin{equation}
+  \log(\alpha x_1 + (1-\alpha) x_2) \geq \alpha \log(x_1) + (1 - \alpha) \log(x_2) .
+  \end{equation}
+
+  Temos 
+  \begin{equation}
+  P_1 = (p_1, \ldots, p_i, \ldots, p_j, \ldots, p_m) \text { e }
+  \end{equation}
+
+  \begin{equation}
+  P_2 = (p_1, \ldots, \frac{p_i+p_j}{2}, \ldots, \frac{p_i+p_j}{2}, \ldots, p_m) .
+  \end{equation}
+
+  Queremos mostrar que $H(P_2) \geq H(P_1)$, ou seja, $H(P_2) - H(P_1) \geq 0$.
+  \begin{eqnarray}
+  H(P_2) - H(P_1) &=& - p_1 \log p_1 - \ldots - \frac{p_i+p_j}{2} \log \left( \frac{p_i+p_j}{2} \right) \nonumber \\
+                   && - \frac{p_i+p_j}{2} \log \left( \frac{p_i+p_j}{2} \right) - \ldots - p_m \log p_m \nonumber \\
+                && + p_1 \log p_1 + \ldots + p_i \log p_i + p_j \log p_j + \ldots + p_m \log p_m \nonumber \\
+                &=& - 2 (p_i + p_j) \log \left( \frac{p_i+p_j}{2} \right) + p_i \log p_i + p_j \log p_j \nonumber \\
+                &\geq& - 2 (p_i + p_j) \left( \frac{1}{2} \log p_i + \frac{1}{2} \log p_j \right) + p_i \log p_i + p_j \log p_j \nonumber \\
+                &=& -p_j \log p_i - p_i \log p_j \geq 0
+  \end{eqnarray}
+
+\end{solution}
+\end{questions}

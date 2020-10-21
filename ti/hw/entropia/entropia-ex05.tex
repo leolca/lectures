@@ -1,0 +1,72 @@
+\subsection{Entropia da Soma}
+% ex 18 Cover Thomas
+
+\begin{questions}
+\question{
+  Seja $X$ e $Y$ variáveis aleatórias com valores $x_1, \ldots, x_r$ e $y_1, \ldots, y_s$ respectivamente. Seja $Z = X + Y$.
+
+  \begin{parts}
+  \part
+  Mostre que $H(Z|X) = H(Y|X)$. Argumente que se $X, Y$ são independentes, então $H(Y) \leq H(Z)$ e $H(X) \leq H(Z)$.
+  Desta forma, a adição de variáveis aleatórias independentes traz incerteza.
+
+  \part 
+  Dê um exemplo de variáveis aleatória dependentes em que $H(X) > H(Z)$ e $H(Y) > H(Z)$.
+
+  \part 
+  Sob quais condições temos $H(Z) = H(X) + H(Y)$?
+
+  \end{parts}
+}
+
+
+\begin{solution}
+\begin{parts}
+\part
+  \begin{proof} 
+  \begin{eqnarray}
+  H(Z|X) &=& \sum_x p(x) H(Z|X=x) \nonumber \\
+        &=& - \sum_x p(x) \sum_z p(Z=z|X=x) \log p(Z=z|X=x) \nonumber \\
+        &=& - \sum_x p(x) \sum_y p(Y=z-x|X=x) \log p(Y=z-x|X=x) \nonumber \\
+        &=& - \sum_x p(x) \sum_y p(Y=y|X=x) \log p(Y=y|X=x) \nonumber \\
+        &=& \sum_x p(x) H(Y|X=x) \nonumber \\
+        &=& H(Y|X)
+  \end{eqnarray}
+
+  Se $X \independent Y$, então $H(Y|X)=H(Y)$. Teremos assim
+  \begin{eqnarray}
+  I(X;Z) &\geq& 0 \nonumber \\
+  H(Z) - H(Z|X) &\geq& 0 \nonumber \\
+  H(Z) - H(Y|X) &\geq& 0 \nonumber \\
+  H(Z) - H(Y) &\geq& 0 .
+  \end{eqnarray}
+  Então, $H(Z) \geq H(Y)$.
+  De forma semelhante podemos mostrar que $H(Z) \geq H(X)$.
+  \end{proof}
+
+\part
+  Considere
+  \begin{equation}
+  X = -Y = \begin{cases} 1 & \text{, com probabilidade } \frac{1}{2} \\
+                        0 & \text{, com probabilidade } \frac{1}{2} \end{cases}
+  \end{equation}
+  Neste caso, teremos $H(X)=H(Y)=1$ e $H(Z)=0$, já que $Z=0$ com probabilidade $1$.
+
+
+\part
+  Se $Z$ for uma função de $X$ e $Y$.
+  \begin{equation}
+  H(Z) \leq H(X,Y)
+  \end{equation}
+  sendo que teremos igualdade se $(X,Y)$ for uma função de $Z$.
+
+  \begin{equation}
+  H(X,Y) = H(X) + \underbrace{H(Y|X)}_{ \leq H(Y)} \leq H(X) + H(Y)
+  \end{equation}
+  com igualdade quando $X \independent Y$.
+
+  Se $(X,Y)$ for uma função de $Z$ e $X \independent Y$, teremos $H(Z) = H(X)+H(Y)$.
+
+\end{parts}
+\end{solution}
+\end{questions}

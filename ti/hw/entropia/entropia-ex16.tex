@@ -1,0 +1,130 @@
+\subsection{Entropia Cruzada}
+% ~/ee/ufsj/2016_02/ti/prova/prova01-resolucao.tex 
+% https://en.wikipedia.org/wiki/Cross_entropy
+% https://en.wikipedia.org/wiki/Gibbs%27_inequality
+
+\begin{questions}
+\question{
+A entropia cruzada entre duas distribuições $p$ e $q$, sobre um mesmo alfabeto
+$\mathcal{X}$, mede a número esperado de bits necessários para identificar
+um símbolo do alfabeto se for utilizado um esquema de codificação otimizado
+para a distribuição $q$, onde $q$ é uma estimativa para a real distribuição 
+dos símbolos, $p$. A entropia cruzada de $p$ e $q$ é definida então como
+\begin{equation}
+H(p,q) = E_p \left[ - \log q  \right] .
+\end{equation}
+
+\begin{parts}
+\part Mostre que $H(p,q) = H(p) + D(p||q)$.
+\part Mostre que $H(p,q) \geq 0$.
+\part Mostre que $H(p,u) = \log \vert \mathcal{X} \vert$, onde $u$ é a distribuição uniforme.
+\part Mostre que a entropia da distribuição $p$ é menor ou igual à entropia cruzada de $p$ e $q$
+(desigualdade de Gibbs).
+\part Suponha que $\vert \mathcal{X} \vert = 4$, 
+$p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)$ e $q$ é uniforme.
+Calcule $H(p,q)$, $H(q,p)$, $H(p)$, $H(q)$, $D(p||q)$ e $D(q||p)$. 
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+  \begin{proof}
+        \begin{eqnarray}
+        H(p,q) &=& E_p \left[ - \log q  \right] \nonumber \\
+                &=& - \sum_{x \in \mathcal{X}} p(x) \log q(x) \nonumber \\
+                &=& - \sum_{x \in \mathcal{X}} p(x) \log \left( \frac{p(x) q(x)}{p(x)} \right) \nonumber \\
+                &=& - \sum_{x \in \mathcal{X}} p(x) \log p(x) + \sum_{x \in \mathcal{X}} p(x) \log \left( \frac{p(x)}{q(x)} \right) \nonumber \\
+                &=& H(p) + D(p||q) \qed
+        \end{eqnarray}
+  \end{proof}
+
+\part 
+  \begin{proof}
+        \begin{equation}
+        H(p,q) = \underbrace{H(p)}_{\geq 0} + \underbrace{D(p||q)}_{\geq 0} \geq 0 \qed
+        \end{equation}
+  \end{proof}
+
+\part 
+   \begin{proof}
+        \begin{eqnarray}
+        H(p,u) &=& \underbrace{H(p)}_{= \log \vert \mathcal{X} \vert - D(p||u)} + D(p||u) \nonumber \\
+                &=& \log \vert \mathcal{X} \vert - D(p||u) + D(p||u) \nonumber \\
+                &=& \log \vert \mathcal{X} \vert \qed
+        \end{eqnarray}
+   \end{proof}
+
+\part 
+   \begin{proof}
+        \begin{eqnarray}
+        H(p,q) &=& H(p) + \underbrace{ D(p||q) }_{\geq 0} \nonumber \\
+                &\geq& H(p) \qed
+        \end{eqnarray}
+   \end{proof}
+   Ou seja, teremos
+   \begin{equation}
+    - \sum_{x \in \mathcal{X}} p(x) \log q(x) \geq - \sum_{x \in \mathcal{X}} p(x) \log p(x)
+   \end{equation}
+
+
+  Podemos também demonstrar utilizando a desigualdade de Jensen e sem utilizar a não-negatividade
+  da divergência KL. Vamos supor $X \sim p$ e $Y \sim q$.
+        \begin{eqnarray}
+        - \sum_{x \in \mathcal{X}} p(x) \log p(x) + \sum_{x \in \mathcal{X}} p(x) \log q(x) &=&  
+                \sum_{x \in \mathcal{X}} p(x) \log \frac{q(x)}{p(x)} \nonumber \\
+                &=& E_p \left[ \log \frac{Y}{X} \right] \nonumber \\
+                && \text{como $\log$ é concavo podemos utilizar Jensen} \nonumber \\
+                &\leq& \log E_p \left[ \frac{Y}{X} \right] \nonumber \\
+                &=& \log \sum_{x \in \mathcal{X}} p(x) \frac{q(x)}{p(x)} \nonumber \\
+                &=& \log \sum_{x \in \mathcal{X}} q(x) = \log 1 = 0
+        \end{eqnarray}
+        Temos assim
+        \begin{eqnarray}
+        - \sum_{x \in \mathcal{X}} p(x) \log p(x) &\leq& - \sum_{x \in \mathcal{X}} p(x) \log q(x) \nonumber \\
+        H(p) &\leq& H(p,q) \qed
+        \end{eqnarray} 
+
+\part
+
+        Como $q = u$, podemos utilizar o resultado do item anterior 
+        \begin{equation}
+        H(p,u) = \log \vert \mathcal{X} \vert = \log 4 = 2 .
+        \end{equation}
+
+        Podemos também calcular da seguinte forma:
+        \begin{eqnarray}
+        H(p,q) &=& - \sum_{x \in \mathcal{X}} p(x) \log q(x) \nonumber \\
+                &=& - \frac{1}{2} \log \frac{1}{4} - \frac{1}{4} \log \frac{1}{4} - \frac{1}{8} \log \frac{1}{4} - \frac{1}{8} \log \frac{1}{4} \nonumber \\
+                &=& 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 2
+        \end{eqnarray}
+
+        \begin{eqnarray}
+        H(q,p) &=& - \sum_{x \in \mathcal{X}} q(x) \log p(x) \nonumber \\
+                &=& \frac{1}{4} \log 2 + \frac{1}{4} \log 4 + \frac{1}{4} \log 8 + \frac{1}{4} \log 8 \nonumber \\
+                &=& \frac{1}{4} + \frac{1}{2} + \frac{3}{4} + \frac{3}{4} = \frac{9}{4}
+        \end{eqnarray}
+
+        \begin{eqnarray}
+        H(p) &=& - \sum_{x \in \mathcal{X}} p(x) \log p(x) \nonumber \\
+                &=& \frac{1}{2} \log 2 + \frac{1}{4} \log 4 + \frac{1}{8} \log 8 + \frac{1}{8} \log 8 \nonumber \\
+                &=& \frac{1}{2} + \frac{1}{2} + \frac{3}{8} + \frac{3}{8} = \frac{7}{4}
+        \end{eqnarray}
+
+        \begin{eqnarray}
+        H(q) = 4 \times \frac{1}{4} \log 4 = 2
+        \end{eqnarray}
+
+        \begin{eqnarray}
+        D(p||q) &=& H(p,q) - H(p) \nonumber \\
+                &=& 2 - \frac{7}{4} = \frac{1}{4}
+        \end{eqnarray}
+
+        \begin{eqnarray}
+        D(q||p) &=& H(q,p) - H(q) \\
+                &=& \frac{9}{4} - 2 = \frac{1}{4}
+        \end{eqnarray}
+
+\end{parts}
+\end{solution}
+\end{questions}

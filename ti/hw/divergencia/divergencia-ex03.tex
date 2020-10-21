@@ -1,0 +1,43 @@
+\subsection{Máxima verossimilhança}
+
+\begin{questions}
+\question{
+A distribuição que minimiza a divergência de Kullbach-Leibler (KL) para
+a distribuição empírica é aquela que maximiza a verossimilhança.
+Considere um experimento de Bernoulli em que são observados $n_1$ ocorrências
+de um determinado símbolo (ou evento), por exemplo, $\{X = 1\}$, 
+em uma sequência de $N$ realizações deste experimento.
+Usando divergência de KL mostre como encontrar o parâmetro $\theta$ da distribuição de Bernoulli,
+em que $\theta = Pr(X=1)$, que maximiza a verossimilhança para a sequencia de $N$ observações.
+Determine o valor de $\theta$, da distribuição de Bernoulli, em função de $n_1$ e $N$ que 
+minimize a divergência com a distribuição empírica ($\hat{p} = \left( \frac{n_1}{N}, \frac{N-n_1}{N} \right)$).
+
+}
+
+\begin{solution}
+\begin{equation}
+  D_\mathrm{KL}(\hat{p} \parallel p_\theta) = \sum_{x \in \mathcal{X}} \hat{p}(x) \log \frac{\hat{p}(x)}{p_\theta(x)} 
+\end{equation}
+onde a distribuição empírica é dada por $\hat{p} = \left( \frac{n_1}{N}, \frac{N-n_1}{N} \right)$ e
+a distribuição de Bernoulli é dada por $p_\theta = \left( \theta, 1 - \theta \right)$.
+Teremos então:
+\begin{equation}
+D_\mathrm{KL}(\hat{p} \parallel p_\theta) = \frac{n_1}{N} \log \frac{n_1/N}{\theta} + \frac{N-n_1}{N} \log \frac{(N-n_1)N}{1 - \theta}
+\end{equation}
+Queremos determinar $\theta$ que minimize a $D_\mathrm{KL}$:
+\begin{equation}
+  \argmin_{\theta \in \Theta} D_\mathrm{KL}(\hat{p} \parallel p_\theta) 
+\end{equation}
+Como a divergência é convexa, teremos apenas um ponto de máximo. Basta então encontrar
+o ponto em que a derivada se anula.
+\begin{eqnarray}
+  \frac{\mathrm{d} D_\mathrm{KL}}{\mathrm{d}\theta} &=& \frac{n_1}{N} \frac{\theta}{n_1/N} \frac{-n_1/N}{\theta^2} + \frac{N-n_1}{N} \frac{1-\theta}{(N-n_1)/N} \frac{-(N-n_1)/N}{(1-\theta)^2} = 0  \nonumber \\
+        \frac{n_1}{N} \frac{1}{\theta} &=& \frac{N-n_1}{N} \frac{1}{1-\theta} \nonumber \\
+        \frac{\theta}{1-\theta} &=& \frac{n_1}{N-n_1} \nonumber \\
+        \theta N &=& n_1 \nonumber \\
+        \theta &=& \frac{n_1}{N}
+\end{eqnarray}
+
+
+\end{solution}
+\end{questions}

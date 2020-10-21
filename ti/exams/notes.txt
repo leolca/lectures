@@ -1,0 +1,26 @@
+#### PROVA 01
+library("exams")
+elearn_exam <- c("entropia/entropia01.Rmd", "entropia/entropia02.Rmd", "entropia/entropia03.Rmd", "fano/fano01.Rmd")
+exams2moodle(elearn_exam, n = 3, name = "prova-ti-01", encoding = "UTF-8") 
+exams2html(elearn_exam, n = 3, name = "prova-ti-01", encoding = "UTF-8")  
+
+#### PROVA 02
+elearn_exam <- c("tipo/tipo01.Rmd", "tipo/tipo02.Rmd", "tipo/pea01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "prova-ti-02", encoding = "UTF-8")
+exams2html(elearn_exam, n = 3, name = "prova-ti-02", encoding = "UTF-8")
+
+#### PROVA 03
+elearn_exam <- c("markov/markov01.Rmd", "markov/markov02.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "prova-ti-03", encoding = "UTF-8")
+exams2html(elearn_exam, n = 3, name = "prova-ti-03", encoding = "UTF-8")
+
+#### PROVA 04
+elearn_exam <- c("codigos/codigos01.Rmd", "codigos/codigos02.Rmd", "codigos/codigos03.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "prova-ti-04", encoding = "UTF-8")
+exams2html(elearn_exam, n = 3, name = "prova-ti-04", encoding = "UTF-8")
+
+#### PROVA 05
+elearn_exam <- c("canal/canal01.Rmd","canal/hamming01.Rmd")
+exams2moodle(elearn_exam, n=5, name = "prova-ti-05", encoding = "UTF-8")
+exams2html(elearn_exam, n=1, name = "prova-ti-05", encoding = "UTF-8")
+

@@ -1,0 +1,70 @@
+\subsection{Canal ternário}
+% ~/MC-Projects/prova-ti-201701-01/separate.tex
+
+\begin{questions}
+\question{
+        Considere um canal de comunicação ternário, em que
+        $\mathcal{X} = \mathcal{Y} = \{0,1,2\}$.
+        Sabemos que a probabilidade conjunta $p(x,y)$ quando 
+        $x=y$ é duas vezes maior que a probabilidade conjunta quando
+        $x\neq y$. Considere um estimador $\hat{X}(Y) = Y$. 
+        Utilizando a desigualdade de Fano, encontre um limite para a
+        probabilidade de erro para o estimador dado.
+\begin{choices}
+\correctchoice $P_e \geq \nicefrac{1}{2}$
+\choice $P_e \geq 0$
+\choice $P_e \leq 1$
+\choice $P_e \geq 1$
+\choice $P_e \geq \nicefrac{1}{4}$
+\choice $P_e \leq \nicefrac{3}{4}$
+\choice $P_e \geq \nicefrac{3}{4}$
+\end{choices}
+}
+
+\begin{solution}
+A probabilidade conjunta $(X,Y)$ é
+    
+\begin{center}
+\begin{tabular}{c|ccc}
+\diagbox{X}{Y} & 1 & 2 & 3 \\ 
+\hline 
+1 & $\frac{1}{6}$  & $\frac{1}{12}$ & $\frac{1}{12}$ \\ 
+2 & $\frac{1}{12}$ & $\frac{1}{6}$  & $\frac{1}{12}$ \\ 
+3 & $\frac{1}{12}$ & $\frac{1}{12}$ & $\frac{1}{6}$
+\end{tabular}
+\end{center}
+
+  Desigualdade de Fano:
+  \begin{equation}
+  P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+  \end{equation}
+
+  Precisamos calcular $H(X|Y)$. Para tanto precisamos calcular a marginal $p(y)$ e a condicional $p(x|y)$.
+  Temos que $p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)$ e 
+  $p(x|y) = \frac{p(x,y)}{p(y)}$:
+
+
+\begin{center}
+\begin{tabular}{c|ccc}
+\diagbox{X}{Y} & 1 & 2 & 3 \\
+\hline 
+1 & $\frac{1}{2}$  & $\frac{1}{4}$ & $\frac{1}{4}$ \\
+2 & $\frac{1}{4}$ & $\frac{1}{2}$  & $\frac{1}{4}$ \\
+3 & $\frac{1}{4}$ & $\frac{1}{4}$ & $\frac{1}{2}$
+\end{tabular}
+\end{center}
+ 
+  \begin{eqnarray}
+  H(X|Y) &=& \sum_{y} p(y) H(X | Y = y) \nonumber \\
+        &=& - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \nonumber \\
+        &=& - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \nonumber \\
+        &=& (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{eqnarray}
+
+  Teremos assim
+  \begin{equation}
+  P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\nicefrac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+  \end{equation}
+
+\end{solution}
+\end{questions}

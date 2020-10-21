@@ -1,0 +1,137 @@
+\subsection{Conjunto típico}
+
+\begin{questions}
+\question{
+Considere $M$ a soma dos algarismos do seu número de matrícula
+e $m = 4 + M \mod 3$. Por exemplo, se o número de matrícula é 0123456789, teremos
+$M = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45$ e $m = 4 + 45 \mod 3 = 4 + 0 = 4$. 
+
+Suponha $X_{1:n}$ uma sequência de comprimento $n$, de v.a. i.i.d., em um alfabeto
+$\mathcal{X} = \{1,2,\ldots,m\}$, com distribuição $p$ dada 
+\begin{equation}
+p(X = x) = \begin{cases}
+           \frac{1}{2}   & x = 1, \\
+           \frac{1}{2^2} & x = 2, \\
+           \vdots        &      \\
+           \frac{1}{2^{m-2}} & x = m-2 \\
+           \frac{1}{2^{m-1}} & x = m-1 \textmd{ e } x=m.
+           \end{cases}
+\end{equation}
+Seja $A_{\epsilon}^{(n)}$ o conjunto típico e considere $\epsilon=0.1$ e $n=16$.
+
+\begin{parts}
+\part 
+Determine o limite superior e inferior para o tamanho do conjunto típico.
+
+\part 
+Qual é a sequência mais provável e qual é a menos provável?
+
+\part
+Quantos tipos existem?
+
+\part 
+Qual é o tipo mais provável? Dê um exemplo de sequência deste tipo.
+
+\part 
+Qual é o limite superior e inferior para o tamanho da classe de tipo mais provável?
+
+\part
+Qual é o tamanho da classe de tipo mais provável? Este valor está dentro dos limites encontrados no item anterior?
+\end{parts}
+}
+
+\begin{solution}
+
+\begin{parts}
+\part 
+
+\begin{lstlisting}[language=Octave]
+ m = 4; n = 16; eps = 0.1;
+ p = 2.^(-[1:m]);
+ p(m)=p(m-1);
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=Octave]
+ function H = entropy(p), id=find(p==0); p(id)=[];  H=-sum(p.*log2(p)); endfunction
+ H = entropy(p)
+ L = ceil(2^(n*(H+eps)))
+ l = floor((1-eps)*2^(n*(H-eps)))
+ 2^(n*H)
+\end{lstlisting}
+
+\part 
+Mais provável: sequência com apenas 1.\\
+Menos provável: sequência em que $x$ seja apenas $m$ ou $m-1$.
+
+\part 
+\begin{lstlisting}[language=Octave]
+nchoosek (n + m - 1, m - 1)
+\end{lstlisting}
+
+
+\part
+Aquele com a distribuição mais próximo da distribuição subjacente.
+
+\begin{verbatim}
+m=4 (1 (8), 2 (4), 3 (2), 4 (2)) 
+     ex: [1,2,1,4,1,2,1,1,2,2,4,3,1,1,1,3]
+[8, 4, 2, 2]
+demais: (1 (8), 2 (4), 3 (2), 4 (1), 5 (1)) 
+     ex: [1,2,1,4,1,2,1,1,2,2,5,3,1,1,1,3]
+     [8, 4, 2, 1, 1], [8, 4, 2, 1, 1, 0], [8, 4, 2, 1, 1, 0, 0]
+P = [8, 4, 2, 2]/n
+P = [8, 4, 2, 1, 1]/n
+\end{verbatim}
+
+\part
+\begin{lstlisting}[language=Octave]
+HP = entropy(P)
+LT = 2^(n*HP)
+lT = 2^(n*HP)/((n+1)^m)
+\end{lstlisting}
+
+
+\part
+\begin{lstlisting}[language=Octave]
+function c = multicoeff (n,m), 
+%  Compute the multinomial coefficient using product of binomials
+%
+%       /           \ 
+%       |     n     | 
+%  c =  | k1 ... km |
+%       \           /
+%
+%  c = multicoeff (k)
+%  where k is an array k = [k1 k2 ... km] and 
+%  n is simplicity given by the sum: n = sum(k)
+% 
+%  c = multicoeff (n,m)
+%  computes all multinomials at level n
+%  (m=2 for binomials, m=3 for trinomials, etc)
+
+  if nargin < 2,
+    k = n;
+    c=1; 
+    for i=1:length(k), 
+      c*=bincoeff(sum(k(1:i)),k(i)); 
+    endfor;
+  else
+    r = npermutek([0:n],m);
+    id = find ( sum(r,2) == n);
+    r = r(id,:);
+    c = [];
+    for i = 1:size(r,1),
+      c(i) = multicoeff (r(i,:));
+    endfor
+    c = c';
+  endif 
+endfunction
+
+
+multicoeff (P*n)
+\end{lstlisting}
+
+\end{parts}
+\end{solution}
+\end{questions}

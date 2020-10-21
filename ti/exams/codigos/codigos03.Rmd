@@ -1,0 +1,30 @@
+
+Question
+========
+Considere a variável aleatória $X \sim (0.49, 0.26, 0.12, 0.04, 0.04, 0.03, 0.02)$ no alfabeto $\mathcal{X}=\{1,2,3,4,5,6,7\}$. 
+Calcule a eficiência do código de Huffman para $X$. 
+
+Answerlist
+---------------
+* eficiência = 
+
+Solution
+========
+
+A árvore de Huffman será: $(1,(2,(3,((4,5),(6,7)))))$.
+Os comprimentos serão: $(1,2,3,5,5,5,5)$ e assim o comprimento esperado será $L(C)=1 \times 0.49 + 2 \times 0.26 + 3 \times 0.12 + 5 \times 0.13 = 2.02$.
+A entropia é $H(X) = -(0.49\log(0.49)+0.26\log(0.26)+0.12\log(0.12)+2\times 0.04\log(0.04)+0.03\log(0.03)+0.02 \log(0.02)) = 2.01279$.
+A eficiência então será $\text{Eficiencia} = H/L = 0.99643$.
+
+Answerlist
+----------
+* eficiência = $0.99643$
+
+Meta-information
+================
+exname: codigo-huffman
+extype: num 
+exsolution: 0.99643
+extol: 0.001
+expoints: 1
+

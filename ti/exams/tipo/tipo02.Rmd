@@ -1,0 +1,77 @@
+
+Question
+========
+
+Suponha uma fonte com alfabeto de tamanho $\vert \mathcal{X} \vert = 4$ e com distribuição 
+$p=\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{8} \right)$. 
+Considere sequências de comprimento $n=6$.
+Quantos tipos existem?
+Qual é o tamanho da classe de tipo do tipo $P$ abaixo? 
+Qual é a probabilidade de uma sequência deste tipo $P$?
+Qual é a probabilidade da classe de tipo $P$?
+
+$$
+P_{x_{1:6}} = \left( \frac{3}{6}, \frac{2}{6}, \frac{1}{6}, 0 \right) .
+$$
+
+Answerlist
+---------------
+
+* Quantos tipos existem?
+* Qual é o tamanho da classe de tipo do tipo $P$?
+* Qual é a probabilidade de uma sequência do tipo $P$?
+* Qual é a probabilidade da classe de tipo $P$?
+
+Solution
+========
+O número de tipos é dado por
+$$
+\begin{aligned}
+\vert \mathcal{P}_n \vert &= {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} \\
+	&= {6 + 4 - 1 \choose 4 - 1} = {9 \choose 3} = \frac{9!}{3! 6!} = \frac{9 \times 8 \times 7}{3 \times 2} = 84.
+\end{aligned}
+$$
+
+O tamanho da classe de tipo é dado por
+$$
+\begin{aligned}
+\vert T(P) \vert &= { n \choose nP(a_1) \ nP(a_2) \ \ldots \ nP(a_n) } \\
+		&= { 6 \choose 3 \ 2 \ 1 \ 0 } \\
+		&= \frac{6!}{3! 2! 1! 0!} = 60.
+\end{aligned}
+$$
+
+A probabilidade de uma sequência $x_{1:6}$ do tipo $P$ é dada por
+$$
+\begin{aligned}
+ \Pr(x_{1:6}) &= p_1^{n_1} \times p_2^{n_2} \times p_3^{n_3} \times p_4^{n_4} \\
+	    &= \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{4}\right)^{2} \times \left(\frac{1}{8}\right)^{1} \times \left(\frac{1}{8}\right)^{0} \times \\
+	    &= \left(\frac{1}{2}\right)^{10} = 0.0009765625.
+\end{aligned}
+$$
+
+A probabilidade da classe de tipo é dada pela soma das probabilidades de todas as sequências na
+classe de tipo. Como todas as sequências na classe de tipo possuem a mesma probabilidade, 
+basta multiplicar o tamanho da classe de tipo pela probabilidade de uma sequência do tipo:
+$$
+\begin{aligned}
+\Pr(T(P_{x_{1:6}})) &= \Pr(x_{1:6}) \times  \vert T(P) \vert = 60 \times \left(\frac{1}{2}\right)^{10} = 0.05859375.
+\end{aligned}
+$$
+
+Answerlist
+----------
+* $\vert T(P_{x_{1:6}}) \vert = 84$
+* Para $x_{1:6} \in T(P_{x_{1:6}})$, $p_{x_{1:6}} = 60$
+* $P(T(P_{x_{1:6}})) = 0.0009765625$
+* $\Pr(T(P_{x_{1:6}})) = 0.05859375$
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num
+exsolution: 84|60|0.0009765625|0.05859375
+exname: classe-de-tipo
+extol: 0.01|0.01|0.00001|0.001
+expoints: 1|1|1|1
+

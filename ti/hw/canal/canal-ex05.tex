@@ -1,0 +1,50 @@
+\subsection{Máquina de escrever}
+% harvard HW5_ES250_sol.pdf - q2
+\begin{questions}
+\question{
+Considere uma máquina de escrever com 26 teclas.
+\begin{parts}
+\part 
+Se ao pressionar uma tecla temos como resultado a impressão da letra associada, 
+qual é a capacidade $C$ em bits?
+
+\part 
+Agora suponha que ao pressionar uma tecla podemos ter como resultado a impressão 
+da letra associada ou da letra vizinha (com igual probabilidade). 
+Desta forma $A \rightarrow A \textmd{ ou } B$, $\ldots$, $Z \rightarrow Z \textmd{ ou } A$. 
+Qual é a capacidade agora?
+
+\part 
+Qual é o código de maior taxa, com blocos de comprimento unitário, que você consegue 
+encontrar que alcança probabilidade zero de erro para o canal do item anterior?
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+\begin{eqnarray}
+C &=& \max_{p(x)} I(X;Y) \nonumber \\
+        &=& \max_{p(x)} H(X) - \underbrace{H(X|Y)}_{=0} = \max_{p(x)} H(X) = \log 26 = 1 + \log 13
+\end{eqnarray}
+
+
+\part 
+\begin{eqnarray}
+C &=& \max_{p(x)} I(X;Y) \nonumber \\
+        &=& \max_{p(x)} H(X) - \underbrace{H(X|Y)}_{=H(\frac{1}{2})} = \max_{p(x)} H(X) - 1= \log 26 - 1 = \log 13
+\end{eqnarray}
+
+\part 
+Podemos utilizar um código de blocos de comprimento unitário utilizando as letras alternadas,
+isto é, A, C, E, G, etc. Desta forma não haverá confusão e a taxa deste código será
+\begin{equation}
+R = \frac{\log (\text{num. de palavras})}{\text{tamanho do bloco}} = \frac{\log 13}{1} = \log 13 .
+\end{equation}
+Desta forma, iremos alcançar a capacidade do canal.
+
+
+\end{parts}
+\end{solution}
+\end{questions}

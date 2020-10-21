@@ -1,0 +1,108 @@
+\subsection{Entropia Conjunta}
+
+\begin{questions}
+\question{
+Seja $p(x,y)$ dado por
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+\diagbox{X}{Y} & 0 & 1 \\ 
+\hline 
+0 & 1/3 & 1/3 \\ 
+\hline 
+1 & 0 & 1/3 \\ 
+\hline 
+\end{tabular}
+\end{center}
+Calcule
+
+\begin{parts}
+\part 
+$H(X)$ , $H(Y)$
+
+\part
+$H(X|Y)$ , $H(Y|X)$
+
+\part 
+$H(X,Y)$
+
+\part 
+$H(Y) - H(Y|X)$
+
+\part
+$I(X;Y)$
+
+\part
+Faça um diagrama de Venn para representar as grandezas calculadas acima.
+
+\end{parts}
+}
+
+
+
+\begin{solution}
+\begin{parts}
+\part
+  Para calcular as entropia, precisamos primeiramente calcular as marginais.
+
+  $P(X=0) = \frac{2}{3}$ e $P(X=1) = \frac{1}{3}$.
+  \begin{eqnarray}
+  H(X) &=& - \sum_x p(x) \log p(x) \nonumber \\
+        &=& - \frac{2}{3} \log \frac{2}{3} - \frac{1}{3} \log \frac{1}{3} \nonumber \\
+        &=& 0.38998 + 0.52832 = 0.91830 \text{ bits}.
+  \end{eqnarray}
+
+  $P(Y=0) = \frac{1}{3}$ e $P(Y=1) = \frac{2}{3}$.
+  \begin{equation}
+  H(Y) = 0.91830 \text{ bits}.
+  \end{equation}
+
+\part
+  \begin{eqnarray}
+  H(X|Y) &=& \sum_{y \in \mathcal{Y}} p(y) H(X|Y=y) \nonumber \\
+        &=& \frac{1}{3} H(X|Y=0) + \frac{2}{3} H(X|Y=1) \nonumber \\
+        &=& \frac{1}{3} H\left(1,0\right) +  \frac{2}{3} H\left( \frac{1}{2}, \frac{1}{2} \right) \nonumber \\
+        &=& 0 + \frac{2}{3} = \frac{2}{3}
+  \end{eqnarray}
+  
+  \begin{eqnarray}
+  H(Y|X) &=& \sum_{x \in \mathcal{X}} p(x) H(Y|X=x) \nonumber \\
+        &=& \frac{2}{3} H(Y|X=0) + \frac{1}{3} H(Y|X=1) \nonumber \\
+        &=& \frac{2}{3} H\left( \frac{1}{2}, \frac{1}{2} \right) + \frac{1}{3}  H\left(1,0\right) \nonumber \\
+        &=& \frac{2}{3}
+  \end{eqnarray}
+
+
+\part
+  \begin{equation}
+   H(X,Y) = H(X) + H(Y|X) = 0.91830 + 0.66666 = 1.5850 \text{ bits}
+  \end{equation}
+  \begin{equation}
+   H(X,Y) = H(Y) + H(X|Y) = 0.91830 + 0.66666 = 1.5850 \text{ bits}
+  \end{equation}
+
+
+\part
+  \begin{equation}
+    H(Y) - H(Y|X) = 0.91830 - 0.66666 = 0.25164 \text{ bits}
+  \end{equation}
+
+\part
+  \begin{equation}
+    I(X;Y) = H(Y) - H(Y|X) = 0.25164 \text{ bits}
+  \end{equation}
+
+\part
+\ 
+
+{ 
+\vspace{1ex} 
+\centering
+\includegraphics[width=0.4\textwidth]{../images/info-set.pdf}
+\captionof{figure}{Diagrama de Venn.}\label{fig:venn}
+}
+
+\end{parts}
+\end{solution}
+\end{questions}

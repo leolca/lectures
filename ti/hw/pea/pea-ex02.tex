@@ -1,0 +1,85 @@
+\subsection{Tipos e Classes de Tipos}
+
+\begin{questions}
+\question{
+Sejam $\mathcal{X} = \{0,1\}$ e $\mathcal{Y} = \{a,b\}$ alfabetos de duas fontes. 
+Sejam as distribuições da fonte para $\mathcal{X}$ e $\mathcal{Y}$ tais que $P(X=0)=1/2$ e $P(Y=a)=2/3$. 
+Seja também $\mathcal{Z} = \mathcal{X} \times \mathcal{Y}$, i.e. $z \in \mathcal{Z}$ 
+se $z=(x,y)$ onde $x \in \mathcal{X}$ e $y \in \mathcal{Y}$.
+
+\begin{parts}
+\part 
+Considere qualquer sequência de tamanho 3 tirada de forma i.i.d. de $\mathcal{Z}$. 
+Quantos tipos possíveis existem para sequências com este comprimento?
+
+\part
+Considere a sequência $z=\{ (0,a), (0,b), (0,a), (1,b), (1,a), (1,b) \}$. Calcule o tipo desta sequência.
+Qual é o tamanho da classe de tipo para o tipo encontrado para a sequência $z$?
+Considerando que as duas fontes são independentes, $z$ será uma sequência típica? Por quê?
+Forneça argumentos com base na classe de tipo de $z$. Quão provável é a classe de tipo de $z$?
+
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+Teremos
+\begin{equation}
+\mathcal{Z} = \left\{ (0,a), (0,b), (1,a), (1,b) \right\} ,
+\end{equation}
+e desta forma $\vert \mathcal{Z} \vert = 4$.
+
+O número de tipos para sequências de comprimento $n$ é dado por
+\begin{equation}
+\vert \mathcal{P}_n \vert = { n + \vert \mathcal{Z} \vert - 1  \choose \vert \mathcal{Z} \vert - 1 } .
+\end{equation}
+Para $n=3$ e $\vert \mathcal{Z} \vert = 4$ teremos
+\begin{equation}
+\vert \mathcal{P}_n \vert = { 3 + 4 - 1 \choose 4 - 1} = {6 \choose 3} = \frac{6!}{3! \ 3!} = \frac{6 \times 5 \times 4}{3\times 2 \times 1} = 20 .
+\end{equation}
+
+
+\part
+O tipo da sequência $z=\{ (0,a), (0,b), (0,a), (1,b), (1,a), (1,b) \}$ será
+\begin{equation}
+P_z = \left( \frac{2}{6}, \frac{1}{6}, \frac{1}{6}, \frac{2}{6} \right) .
+\end{equation}
+
+Para este tipo $P_z$, a classe de tipo terá o seguinte tamanho:
+\begin{equation}
+|T(P_z)| = { 6 \choose 2 \ 1 \ 1 \ 2 } = \frac{6!}{2! \ 1! \ 1! \ 2!} = 6 \times 5 \times 3 \times 2 = 180 .
+\end{equation}
+
+A função massa de probabilidade $Q$ para $Z \in \mathcal{Z}$ é $(\frac{1}{3}, \frac{1}{6}, \frac{1}{3}, \frac{1}{6})$.
+A divergência entre $P_z$ e $Q$ é dada por
+\begin{eqnarray}
+D(P_z || Q) &=& \sum p_z \log \frac{p_z}{q} \nonumber \\
+        &=& 2/6 \log \frac{2/6}{1/3} + 1/6 \log \frac{1/6}{1/6} + 1/6 \log \frac{1/6}{1/3} + 2/6 \log \frac{2/6}{1/6} \nonumber \\
+        &=& 2/6 \log 1 + 1/6 \log 1 + 1/6 \log 1/2 + 2/6 \log 2 = 0 + 0 - \frac{1}{6} + \frac{2}{6} = \frac{1}{6} .
+\end{eqnarray}
+Utilizando a seguinte definição para conjunto típico,
+\begin{equation}
+T^{\epsilon}_{Q} = \{ x_{1:n} : D(P_{x_{1:n}} \mid \mid Q) \leq \epsilon \} ,
+\end{equation}
+onde $\epsilon$ usualmente é pequeno, poderemos concluir que as sequências do tipo $P_z$
+não são típicas.
+Em verdade, quando temos $n$ pequeno, não podemos falar efetivamente em sequências típicas,
+umas vez que a tipicidade é um fenômeno assintótico para $n$ grade suficiente, $n \rightarrow \infty$.
+
+A probabilidade da sequência $z$, assim como de todas as sequências do mesmo tipo, será dada por
+\begin{equation}
+Q_z = \frac{1}{3} \times \frac{1}{3} \times \frac{1}{6} \times \frac{1}{3} \times \frac{1}{6} \times \frac{1}{6} = \frac{1}{5832} .
+\end{equation}
+
+A probabilidade da classe de tipo para o tipo $P_z$ será então
+\begin{equation}
+Q^n(T(P_z)) = Q_z |T(P_z)| = \frac{180}{5832} = \frac{5}{162} = 0.03086419753 .
+\end{equation}
+Note que a classe de tipo com maior probabilidade terá uma probabilidade 2 vezes maior
+que a probabilidade encontrada acima.
+
+\end{parts}
+\end{solution}
+\end{questions}

@@ -1,0 +1,85 @@
+\BOOKMARK [1][-]{section.1}{Entropia}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Entropia M\341xima e M\355nima}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{H\(X,Y|Z\) = H\(X|Z\) + H\(Y|X,Z\)}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Sub-estima\347\343o do desvio padr\343o}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Entropia condicional nula}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{M\351trica e Dist\342ncia}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{Entropia Conjunta}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.7}{lnx x - 1 e lnx 1 - 1x}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.8}{Entropia da Soma}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.9}{World Series}{section.1}% 10
+\BOOKMARK [2][-]{subsection.1.10}{Uma Medida de Correla\347\343o}{section.1}% 11
+\BOOKMARK [2][-]{subsection.1.11}{Processamento de Dados}{section.1}% 12
+\BOOKMARK [2][-]{subsection.1.12}{Mistura aumenta entropia}{section.1}% 13
+\BOOKMARK [2][-]{subsection.1.13}{Retirando elementos com e sem reposi\347\343o}{section.1}% 14
+\BOOKMARK [2][-]{subsection.1.14}{Desigualdade de Fano}{section.1}% 15
+\BOOKMARK [2][-]{subsection.1.15}{Canal de comunica\347\343o}{section.1}% 16
+\BOOKMARK [2][-]{subsection.1.16}{Dados de Lurian}{section.1}% 17
+\BOOKMARK [2][-]{subsection.1.17}{Ca\347a N\355quel}{section.1}% 18
+\BOOKMARK [2][-]{subsection.1.18}{Entropia e Informa\347\343o M\372tua}{section.1}% 19
+\BOOKMARK [2][-]{subsection.1.19}{Entropia de um alfabeto}{section.1}% 20
+\BOOKMARK [2][-]{subsection.1.20}{Quantizador}{section.1}% 21
+\BOOKMARK [2][-]{subsection.1.21}{Entropia Cruzada}{section.1}% 22
+\BOOKMARK [2][-]{subsection.1.22}{Probabilidade de Erro}{section.1}% 23
+\BOOKMARK [2][-]{subsection.1.23}{Entropia de uma fonte discreta}{section.1}% 24
+\BOOKMARK [2][-]{subsection.1.24}{Canal tern\341rio}{section.1}% 25
+\BOOKMARK [2][-]{subsection.1.25}{Diverg\352ncia de Jensen-Shannon}{section.1}% 26
+\BOOKMARK [2][-]{subsection.1.26}{M\341xima verossimilhan\347a}{section.1}% 27
+\BOOKMARK [2][-]{subsection.1.27}{Entropia em um jogo de dados}{section.1}% 28
+\BOOKMARK [2][-]{subsection.1.28}{M\351dia dos valores quadr\341ticos}{section.1}% 29
+\BOOKMARK [1][-]{section.2}{Propriedade da Equiparti\347\343o Assint\363tica}{}% 30
+\BOOKMARK [2][-]{subsection.2.1}{Propriedade da Equiparti\347\343o Assint\363tica e Codifica\347\343o de Fonte}{section.2}% 31
+\BOOKMARK [2][-]{subsection.2.2}{Tipos e Classes de Tipos}{section.2}% 32
+\BOOKMARK [2][-]{subsection.2.3}{Estima\347\343o da pmf}{section.2}% 33
+\BOOKMARK [2][-]{subsection.2.4}{Jogo de moeda}{section.2}% 34
+\BOOKMARK [2][-]{subsection.2.5}{C\363digo gen\351tico do DNA}{section.2}% 35
+\BOOKMARK [2][-]{subsection.2.6}{Tipicidade nas provas}{section.2}% 36
+\BOOKMARK [2][-]{subsection.2.7}{Tipo}{section.2}% 37
+\BOOKMARK [2][-]{subsection.2.8}{Conjunto t\355pico}{section.2}% 38
+\BOOKMARK [2][-]{subsection.2.9}{Conjunto t\355pico}{section.2}% 39
+\BOOKMARK [1][-]{section.3}{Processos Estoc\341sticos}{}% 40
+\BOOKMARK [2][-]{subsection.3.1}{Comportamento no limite}{section.3}% 41
+\BOOKMARK [2][-]{subsection.3.2}{Taxa de entropia}{section.3}% 42
+\BOOKMARK [2][-]{subsection.3.3}{Cadeia de Markov}{section.3}% 43
+\BOOKMARK [2][-]{subsection.3.4}{Modelos de Ehrenfest}{section.3}% 44
+\BOOKMARK [2][-]{subsection.3.5}{Modelo Gen\351tico}{section.3}% 45
+\BOOKMARK [2][-]{subsection.3.6}{Taxa de entropia de uma cadeia de Markov de 1a ordem}{section.3}% 46
+\BOOKMARK [2][-]{subsection.3.7}{Previs\343o do tempo}{section.3}% 47
+\BOOKMARK [2][-]{subsection.3.8}{Caminhada do gato}{section.3}% 48
+\BOOKMARK [2][-]{subsection.3.9}{Elei\347\365es}{section.3}% 49
+\BOOKMARK [2][-]{subsection.3.10}{Cadeia de Markov com m estados}{section.3}% 50
+\BOOKMARK [2][-]{subsection.3.11}{Caminhada do Pombo}{section.3}% 51
+\BOOKMARK [1][-]{section.4}{C\363digos}{}% 52
+\BOOKMARK [2][-]{subsection.4.1}{Un\355vocos e instant\342neos}{section.4}% 53
+\BOOKMARK [2][-]{subsection.4.2}{C\363digos e entropia}{section.4}% 54
+\BOOKMARK [2][-]{subsection.4.3}{C\363digo de Huffman}{section.4}% 55
+\BOOKMARK [2][-]{subsection.4.4}{huffman e shannon-fano-elias}{section.4}% 56
+\BOOKMARK [2][-]{subsection.4.5}{C\363digos bin\341rios}{section.4}% 57
+\BOOKMARK [2][-]{subsection.4.6}{L\355ngua Mura}{section.4}% 58
+\BOOKMARK [2][-]{subsection.4.7}{Comprimento esperado \(Shannon e Huffman\)}{section.4}% 59
+\BOOKMARK [2][-]{subsection.4.8}{C\363digo para um alfabeto com 6 s\355mbolos}{section.4}% 60
+\BOOKMARK [2][-]{subsection.4.9}{Estima\347\343o e Codifica\347\343o Aritm\351tica}{section.4}% 61
+\BOOKMARK [1][-]{section.5}{Canal de Comunica\347\343o}{}% 62
+\BOOKMARK [2][-]{subsection.5.1}{Capacidade de Canal}{section.5}% 63
+\BOOKMARK [2][-]{subsection.5.2}{O estat\355stico e o canal}{section.5}% 64
+\BOOKMARK [2][-]{subsection.5.3}{Soma m\363dulo}{section.5}% 65
+\BOOKMARK [2][-]{subsection.5.4}{Canal soma ru\355do}{section.5}% 66
+\BOOKMARK [2][-]{subsection.5.5}{M\341quina de escrever}{section.5}% 67
+\BOOKMARK [2][-]{subsection.5.6}{Capacidade dada matriz}{section.5}% 68
+\BOOKMARK [2][-]{subsection.5.7}{Capacidade dada matriz 2}{section.5}% 69
+\BOOKMARK [2][-]{subsection.5.8}{Canal BSC em cascata com apagamento}{section.5}% 70
+\BOOKMARK [2][-]{subsection.5.9}{Canal de pombos}{section.5}% 71
+\BOOKMARK [2][-]{subsection.5.10}{Canal Z}{section.5}% 72
+\BOOKMARK [2][-]{subsection.5.11}{Canal de Comunica\347\343o}{section.5}% 73
+\BOOKMARK [2][-]{subsection.5.12}{Canal com apagamento 2}{section.5}% 74
+\BOOKMARK [2][-]{subsection.5.13}{Canal de Comunica\347\343o 3}{section.5}% 75
+\BOOKMARK [2][-]{subsection.5.14}{Canais em cascata}{section.5}% 76
+\BOOKMARK [2][-]{subsection.5.15}{Canal bin\341rio sim\351trico em cascata}{section.5}% 77
+\BOOKMARK [2][-]{subsection.5.16}{Canal Z \(gen\351rico\)}{section.5}% 78
+\BOOKMARK [2][-]{subsection.5.17}{Canais Z em cascata}{section.5}% 79
+\BOOKMARK [1][-]{section.6}{C\363digo de Hamming}{}% 80
+\BOOKMARK [2][-]{subsection.6.1}{C\363digo de Hamming \(7, 4, 3\)}{section.6}% 81
+\BOOKMARK [2][-]{subsection.6.2}{C\363digo de Hamming Estendido}{section.6}% 82
+\BOOKMARK [2][-]{subsection.6.3}{C\363digo de Hamming tern\341rio}{section.6}% 83
+\BOOKMARK [2][-]{subsection.6.4}{Hamming}{section.6}% 84
+\BOOKMARK [2][-]{subsection.6.5}{Hamming Unicode}{section.6}% 85

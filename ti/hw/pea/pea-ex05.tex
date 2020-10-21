@@ -1,0 +1,59 @@
+\subsection{Código genético do DNA}
+
+\begin{questions}
+\question{
+        O código genético do DNA pode ser representado por uma 
+        sequência constituídas por letras de um alfabeto
+        $\mathcal{X} = \{A,T,C,G\}$, que representam os 4 tipos
+        de bases nitrogenadas (Adenina, Timina, Citosina e Guanina).
+        Verificou-se que as sequências de comprimento 4 são relevantes
+        nas funções regulatórias dos genes.
+
+        Analisando estas sequências de comprimento 4 sob a ótica do método de tipos,
+        considerando que as probabilidades das bases hidrogenadas são dadas por
+        $q = (\nicefrac{3}{8}, \nicefrac{3}{8}, \nicefrac{1}{8}, \nicefrac{1}{8})$, respectivamente,
+        e assumindo a independência na ocorrência dessas bases hidrogenadas,
+        responda às questões abaixo.
+\begin{parts}
+\part
+Quantos tipos existem?
+
+\part
+    Quantas sequências do tipo $P$ abaixo existem?
+    \begin{equation}
+     P_{x_{1:4}} = \left( \frac{3}{4}, \frac{1}{4}, 0, 0 \right)
+    \end{equation}
+
+\part
+Qual é a probabilidade da classe de tipo para o tipo
+$P_{x_{1:4}} = \left( \nicefrac{3}{4}, \nicefrac{1}{4}, 0, 0 \right)$?
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+    \begin{equation}
+    \vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {7 \choose 3} = \frac{7!}{3! 4!} = 35
+    \end{equation}
+
+\part
+    As sequências onde há 3 ocorrências de A e 1 ocorrência de T são
+    apenas 4, a saber: TAAA, ATAA, AATA, AAAT.
+
+    Podemos também utilizar o coeficiente multinomial
+    \begin{equation}
+    {4 \choose {3, 1, 0, 0}} = \frac{4!}{3! 1! 0! 0!} = 4 .
+    \end{equation}
+
+\part
+    \begin{eqnarray}
+    Q^n(T(P)) &=& |T(P)| q_A^3 q_T = 4 (\nicefrac{3}{8})^3 (\nicefrac{3}{8}) \\
+                &=& 4 (\nicefrac{3}{8})^4
+    \end{eqnarray}
+
+ 
+\end{parts}
+\end{solution}
+\end{questions}

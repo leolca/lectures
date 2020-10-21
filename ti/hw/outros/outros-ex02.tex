@@ -1,0 +1,25 @@
+\subsection{Média dos valores quadráticos}
+% ~/ee/ufsj/2017_02/ti/provas/prova01-resolucao.tex
+
+\begin{questions}
+\question{
+Mostre que a média dos valores quadráticos excede (ou é igual)
+o quadrado da média dos valores. Em qual situação haverá igualdade?
+Justifique todos os passos.
+}
+
+\begin{solution}
+Iremos utilizar a desigualdade de Jensen, utilizando que $f(x) = x^2$ é uma função convexa.
+Suponha que tenhamos $N$ valores, $x_i$, $i=1,\ldots,N$.
+  \begin{proof}
+    \begin{eqnarray}
+    \frac{1}{N} \sum_{i=1}^{N} x_i^2 &=& \sum_x \frac{1}{N} f(x) = \sum_x p(x) f(x) \nonumber \\
+        &\geq& f \left( \sum_x p(x) x \right) = \nonumber \\
+        &=& \left( \sum_{i=1}^{N} \frac{1}{N} x_i \right)^2 = \left( \frac{1}{N} \sum_{i=1}^{N} x_i \right)^2 
+    \end{eqnarray}
+  \end{proof}
+
+Haverá igualdade quando $x_i = 1$, $\forall i$, pois $x=1$ é o único que satisfaz $x^2 = x$.
+Neste caso teremos $\frac{1}{N} \sum_{i=1}^{N} 1^2 = 1$ e $\left( \frac{1}{N} \sum_{i=1}^{N} 1 \right)^2 = 1$.
+\end{solution}
+\end{questions}

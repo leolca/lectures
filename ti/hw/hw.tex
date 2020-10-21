@@ -1,0 +1,336 @@
+\documentclass[answers]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage{natbib}
+\usepackage[brazilian]{cleveref}
+\crefname{lstlisting}{lista}{listas}
+\Crefname{lstlisting}{Lista}{Listas}
+
+\usepackage{diagbox}
+\usepackage{caption}
+
+\usepackage{paralist}
+
+% equation stuff
+\usepackage{nicefrac}
+\usepackage{cancel}
+
+\usepackage{arydshln}
+
+% multi-do
+%\usepackage{multido}
+
+% write algorithm
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+
+% BEGIN - listings - code in LaTeX
+\usepackage{listings}
+\renewcommand\lstlistingname{Lista}
+\lstset{
+  language=octave,
+  breaklines=true,
+  postbreak=\mbox{$\hookrightarrow$\space},
+  basicstyle=\linespread{1}\small\ttfamily,
+  %numbers=left,
+  numbers=none,
+  %frame=lines,
+  xleftmargin=0.5cm,
+  frame=none,
+  framexleftmargin=0.5em,
+  framexrightmargin=0.5em,
+  %backgroundcolor=\color{light-gray},
+  showstringspaces=false,
+  upquote=true,
+  commentstyle=\color{gray},
+  %morecomment=[f][\color{gray}][28]{\#},
+  morecomment=[l]{\#\#},
+  literate=%
+           {á}{{\'a}}1
+           {í}{{\'i}}1
+           {é}{{\'e}}1
+           {ú}{{\'u}}1
+           {ó}{{\'o}}1
+           {à}{{\`a}}1
+           {ã}{{\~a}}1
+           {õ}{{\~o}}1
+           {â}{{\^a}}1
+           {ê}{{\^e}}1
+           {ô}{{\^o}}1
+           {ç}{{\c{c}}}1
+           {Á}{{\'A}}1
+           {Í}{{\'I}}1
+           {É}{{\'E}}1
+           {Ú}{{\'U}}1
+           {Ó}{{\'O}}1
+           {À}{{\`A}}1
+           {Ã}{{\~A}}1
+           {Õ}{{\~O}}1
+           {Â}{{\^A}}1
+           {Ê}{{\^E}}1
+           {Ô}{{\^O}}1
+           {Ç}{{\c{C}}}1
+}
+% END - listings
+
+
+% footer display only page number
+\footer{}{\thepage}{}
+
+% symbol for independet
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+% Real Numbers
+\newcommand\RealNumber{{\rm I\!R}}
+% Expected value, Variance and Covariance
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+%%%%%%%%%%%%%%%%% math operators
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Tr}{Tr}
+%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%
+% math cancel to (down arrow)
+\makeatletter
+% #1, #2 offset of label   #6 extra width to clear arrowhead
+% #3, #4 vector direction  #7 superscript label style
+% #5 vector width          #8 superscript label
+\def\cantox@vector#1#2#3#4#5#6#7#8{%
+  \dimen@.5\p@
+  \setbox\z@\vbox{\boxmaxdepth.5\p@
+  \hbox{\kern-1.2\p@\kern#1\dimen@$#7{#8}\m@th$}}%
+  \ifx\canto@fil\hidewidth  \wd\z@\z@ \else \kern-#6\unitlength \fi
+  \ooalign{%
+     \canto@fil$\m@th \CancelColor
+     \vcenter{\hbox{\dimen@#6\unitlength \kern\dimen@
+        \multiply\dimen@#4\divide\dimen@#3 \vrule\@depth\dimen@\@width\z@
+        \vector(#3,-#4){#5}%
+     }}_{\raise-#2\dimen@\copy\z@\kern-\scriptspace}$%
+     \canto@fil \cr
+     \hfil \box\@tempboxa \kern\wd\z@ \hfil \cr}}
+\def\bcancelto#1#2{\let\canto@vector\cantox@vector\cancelto{#1}{#2}}
+\makeatother
+%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%
+% left-right arrow
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% underbrase - font size no change
+\newcommand*{\KeepStyleUnderBrace}[1]{%
+  \mathop{%
+    \mathchoice
+    {\underbrace{\displaystyle#1}}%
+    {\underbrace{\textstyle#1}}%
+    {\underbrace{\scriptstyle#1}}%
+    {\underbrace{\scriptscriptstyle#1}}%
+  }\limits
+} 
+%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%
+\newcounter{inlineenum}
+\renewcommand{\theinlineenum}{\alph{inlineenum}}
+\newenvironment{inlineenum}
+  {\unskip\ignorespaces\setcounter{inlineenum}{0}%
+     \renewcommand{\item}{\refstepcounter{inlineenum}{\textit{\theinlineenum})~}}}
+       {\ignorespacesafterend}
+
+       \newcounter{inlineenumroman}
+       \renewcommand{\theinlineenumroman}{\roman{inlineenumroman}}
+       \newenvironment{inlineenumroman}
+         {\unskip\ignorespaces\setcounter{inlineenumroman}{0}%
+	    \renewcommand{\item}{\refstepcounter{inlineenumroman}{\textit{\theinlineenumroman})~}}}
+  {\ignorespacesafterend}
+%%%%%%%%%%%%%%%%%
+
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Resolução:}\enspace}
+
+%\pagestyle{headandfoot}\runningheadrule\firstpageheader{Math 115}{First Exam}{July 4, 1776}\runningheader{Math 115}{First Exam, Page \thepage\ of \numpages}{July 4, 1776}\firstpagefooter{}{}{}\runningfooter{}{}{}
+
+\title{Lista de Exercícios de Teoria da Informação}
+\author{Leonardo Araújo}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz-qtree}
+\usepackage{tikz}
+\usetikzlibrary{automata,arrows,positioning,calc}
+
+\usepackage{blkarray}
+
+%%%%%%%%%%%%%%%%%%%%
+% augmented  matrix
+%%%%%%%%%%%%%%%%%%%% 
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand*{\titleTH}{\begingroup% T&H Typography
+\raggedleft
+\vspace*{\baselineskip}
+{\Large Prof. Leonardo Araújo}\\[0.167\textheight]
+{\bfseries Lista de Exercícios}\\[\baselineskip]
+{\textcolor{Red}{\Huge TEORIA DA INFORMAÇÃO}}\\[\baselineskip]
+{\small Engenharia de Telecomunicações}\par
+\vfill
+{\Large Universidade Federal de São João del-Rei \includegraphics[width=2em]{../images/logoufsj.pdf}}\par
+\vspace*{3\baselineskip}
+\newpage
+\endgroup}
+
+
+\begin{document}
+\titleTH
+%\maketitle
+\tableofcontents
+
+\section{Entropia}
+\input{entropia/entropia-ex01.tex}
+\input{entropia/entropia-ex02.tex}
+\input{jensen/jensen-ex01.tex}
+\input{entropia/entropia-ex03.tex}
+\input{divergencia/divergencia-ex01.tex}
+\input{entropia/entropia-ex04.tex}
+\input{outros/outros-ex01.tex}
+\input{entropia/entropia-ex05.tex}
+\input{entropia/entropia-ex06.tex}
+\input{entropia/entropia-ex07.tex}
+\input{entropia/entropia-ex08.tex}
+\input{entropia/entropia-ex09.tex}
+\input{entropia/entropia-ex10.tex}
+\input{fano/fano-ex01.tex}
+\input{fano/fano-ex02.tex}
+\input{entropia/entropia-ex11.tex}
+\input{entropia/entropia-ex12.tex}
+\input{entropia/entropia-ex13.tex}
+\input{entropia/entropia-ex14.tex}
+\input{entropia/entropia-ex15.tex}
+\input{entropia/entropia-ex16.tex}
+\input{fano/fano-ex03.tex}
+\input{entropia/entropia-ex17.tex}
+\input{entropia/entropia-ex18.tex}
+\input{fano/fano-ex04.tex}
+\input{divergencia/divergencia-ex02.tex}
+\input{divergencia/divergencia-ex03.tex}
+\input{entropia/entropia-ex19.tex}
+\input{outros/outros-ex02.tex}
+
+\section{Propriedade da Equipartição Assintótica}
+\input{pea/pea-ex01.tex}
+\input{pea/pea-ex02.tex}
+\input{pea/pea-ex03.tex}
+\input{pea/pea-ex04.tex}
+\input{pea/pea-ex05.tex}
+\input{pea/pea-ex06.tex}
+\input{pea/pea-ex07.tex}
+\input{pea/pea-ex08.tex}
+\input{pea/pea-ex09.tex}
+
+\section{Processos Estocásticos}
+\input{outros/outros-ex03.tex}
+\input{markov/markov-ex01.tex}
+\input{markov/markov-ex02.tex}
+\input{markov/markov-ex03.tex}
+\input{markov/markov-ex04.tex}
+\input{markov/markov-ex05.tex}
+\input{markov/markov-ex06.tex}
+\input{markov/markov-ex07.tex}
+\input{markov/markov-ex08.tex}
+\input{markov/markov-ex09.tex}
+\input{markov/markov-ex10.tex}
+\input{markov/markov-ex11.tex}
+
+\section{Códigos}
+\input{codigos/codigos-ex01.tex}
+\input{codigos/codigos-ex02.tex}
+\input{codigos/codigos-ex03.tex}
+\input{codigos/codigos-ex04.tex}
+\input{codigos/codigos-ex05.tex}
+\input{codigos/codigos-ex06.tex}
+\input{codigos/codigos-ex07.tex}
+\input{codigos/codigos-ex08.tex}
+\input{codigos/codigos-ex09.tex}
+
+\section{Canal de Comunicação}
+\input{canal/canal-ex01.tex}
+\input{canal/canal-ex02.tex}
+\input{canal/canal-ex03.tex}
+\input{canal/canal-ex04.tex}
+\input{canal/canal-ex05.tex}
+\input{canal/canal-ex06.tex}
+\input{canal/canal-ex07.tex}
+\input{canal/canal-ex08.tex}
+\input{canal/canal-ex09.tex}
+\input{canal/canal-ex10.tex}
+\input{canal/canal-ex11.tex}
+\input{canal/canal-ex12.tex}
+\input{canal/canal-ex13.tex}
+\input{canal/canal-ex14.tex}
+\input{canal/canal-ex15.tex}
+\input{canal/canal-ex16.tex}
+\input{canal/canal-ex17.tex}
+
+\section{Código de Hamming}
+\input{hamming/hamming-ex01.tex}
+\input{hamming/hamming-ex02.tex}
+\input{hamming/hamming-ex03.tex}
+\input{hamming/hamming-ex04.tex}
+\input{hamming/hamming-ex05.tex}
+%\input{hamming/hamming-ex06.tex}
+%\input{hamming/hamming-ex07.tex}
+
+
+
+
+
+
+
+
+
+
+% hamming
+%\input{hamming/hamming-ex01.tex}
+
+
+
+
+
+
+
+
+\end{document}

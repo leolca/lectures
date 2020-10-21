@@ -1,0 +1,116 @@
+\subsection{Código para um alfabeto com 6 símbolos}
+
+\begin{questions}
+\question{
+Suponha os seguintes códigos para um alfabeto de 6 símbolos A, B, C, D, E, F.
+
+\begin{center}
+  \begin{tabular}{ l l l}
+  símbolo & C-I  & C-II \\ \hline
+  A       & 00   & 00   \\  
+  B       & 11   & 11   \\  
+  C       & 000  & 001  \\  
+  D       & 011  & 010  \\  
+  E       & 100  & 101  \\  
+  F       & 1011 & 0110 \\
+  \end{tabular}
+\end{center}
+
+Faça o que se pede:
+\begin{parts}
+\part Decodifique a seguinte sequencia binária 00011000, utilizando ambos códigos C-I e C-II.
+\part Caracterize os códigos quanto a: singular, univocamente decodificável, prefixo, satisfaz kraft.
+\part É possível obter um código de prefixo com o mesmo comprimento esperado que o código C-II?
+Justifique. Em caso afirmativo, encontre o código de prefixo.
+\part Utilize o algoritmo de Sardinas-Patterson para verificar quais códigos são decodificáveis.
+\end{parts}
+
+
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+\begin{center}
+  \begin{tabular}{ l l}
+      &  00011000 \\
+C-I   &  ADC ou CBC \\
+C-II  &  AFA \\
+  \end{tabular}
+\end{center}
+
+
+\part 
+\begin{center}
+  \begin{tabular}{ l l l l l}
+      &  singular & univ. dec. & prefixo & kraft \\
+C-I   &  não    & não   & não   & sim \\
+C-II  &  não    & sim   & não   & sim \\
+  \end{tabular}
+\end{center}
+
+
+\part 
+Como visto em aula, dados comprimentos que satisfazem Kraft, podemos utilizá-los para construir um
+código de prefixo. Desta forma obteremos um código com o mesmo comprimento esperado.
+
+Vamos tomar então os comprimentos associados ao código C-II: 2, 2, 3, 3, 3, 4.
+Para cada um deles, iremos associar um nó na árvore binária na profundidade dada pelo valor
+do comprimento e remover todos os descendentes.
+
+Um exemplo de árvore e código de prefixo que iremos obter é apresentado abaixo:
+
+\begin{minipage}[t]{0.45\textwidth}
+\tikzset{every tree node/.style={align=left,anchor=north,minimum width=2em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw, edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         every node/.append style={align=left},
+         level distance=1.5cm}
+\begin{tikzpicture}[level distance=1.5cm,
+  level 1/.style={sibling distance=4cm},
+  level 2/.style={sibling distance=3cm},
+  level 3/.style={sibling distance=2.5cm},
+  level 4/.style={sibling distance=2.5cm},
+  level 5/.style={sibling distance=1.3cm}]
+  \node { }
+    child {
+                node { }
+        child {node { }
+               child { node {} child {node {F} } }
+               child { node {E} }
+        }
+        child {node { }
+               child { node {D} }
+               child { node {C} }
+        }      
+        }
+    child {
+                node { } child {node {B}} child {node {A}}
+    };          
+\end{tikzpicture}
+\end{minipage}
+  \hfill
+\begin{minipage}[t]{0.45\textwidth}
+\centering
+   \begin{tabular}[b]{clc}
+        símbolo & código & comprimento \\ \hline
+        A & 11  & 2 \\
+        B & 10  & 2 \\
+        C & 011 & 3 \\
+        D & 010 & 3 \\
+        E & 001 & 3 \\
+        F & 1111 & 4\\
+   \end{tabular}
+\end{minipage}
+
+
+\part 
+
+O algoritmo pode ser obtido na internet. Busque uma implementação e faça os testes.
+% ~/ee/ufsj/aulas/ti/hw/simulations/sardinas_patterson.py
+\end{parts}
+\end{solution}
+\end{questions}
+
+

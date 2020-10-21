@@ -1,0 +1,50 @@
+\subsection{Soma módulo}
+% bilmes Homework 5 - q2  - similar Harvard HW5_ES250_sol.pdf q4
+
+\begin{questions}
+\question{
+Considere o canal discreto sem memória $Y = (X + Z) \mod 11$, onde
+\begin{equation}
+        Z = \begin{pmatrix}1, & 2, & 3 \\ 1/3, & 1/3, & 1/3 \end{pmatrix}
+\end{equation}
+e $X \in \{0,1,\ldots,10\}$. Considere $Z$ independente de $X$. 
+
+\begin{parts}
+\part 
+Calcule a capacidade do canal.
+
+\part 
+Qual é $p^\ast(x)$ que maximiza?
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+
+Sabemos que $I(X;Y) = H(Y) - H(Y|X)$. E a capacidade de canal é $C = \max_{p(x)} I(X;Y)$.
+Temos que 
+\begin{equation}
+H(Y|X) = H(Z|X) = H(Z) = \log 3 .
+\end{equation}
+Assim,
+\begin{eqnarray}
+C &=& \max_{p(x)} I(X;Y) \nonumber \\
+        &=& \max_{p(x)} H(Y) - \log 3 \nonumber \\
+        &=& \log 11 - \log 3 = \log \frac{11}{3}
+\end{eqnarray}
+onde utilizamos que a informação mútua será máxima quando $Y$ possuir 
+distribuição uniforme e, consequentemente, $X$ também terá distribuição uniforme,
+uma vez que $Y = (X + Z) \mod 11$ e $Z$ possui distribuição uniforme.
+
+
+\part 
+
+Conforme dado acima, a distribuição uniforme é aquela que maximiza a informação mútua entra $X$ e $Y$,
+$p^\ast(x) = \left( \frac{1}{11}, \frac{1}{11}, \ldots, \frac{1}{11} \right)$.
+
+
+\end{parts}
+\end{solution}
+\end{questions}

@@ -1,0 +1,47 @@
+\subsection{Canal Z (genérico)}
+% ~/ee/ufsj/2015_02/ti/provas/midterm2_2010_solutions.pdf
+
+\begin{questions}
+\question{
+  Considere o canal Z, com capacidade $C_Z$, ilustrado abaixo. Considere
+  a seguinte distribuição de entrada: $p(X=0) = q$, $p(X=1)=1-q$.
+  Encontre a equação que deverá ser otimizada para encontrarmos a capacidade deste canal
+  (simplifique a equação ao máximo, mas não é necessário solucioná-la).
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{../images/canalz.pdf}
+  \label{fig:canalz}
+  \end{figure}
+
+  obs.: as características de erro em sistemas ópticos e memória de alguns
+  semicondutores podem ser modeladas através de um canal z.
+
+}
+
+\begin{solution}
+  Devemos encontrar $q$ que maximiza $I(X;Y) = H(Y) - H(Y|X)$. Primeiramente iremos
+  encontrar uma expressão para $I(X;Y)$ em termos de $q$ e $\epsilon$. Vamos tomar
+  a derivada com relação a $q$ e achar o $q$ que faz com que esta derivada seja igual a zero.
+
+  Note que $p(Y=0) = q(1-\epsilon)$ e, por conseguinte, $p(Y=1) =1 - q(1-\epsilon)$, assim,
+  $H(Y) = H( q(1-\epsilon) )$.
+  \begin{align}
+  I(X;Y) &=& H(Y) - H(Y|X) \nonumber \\
+        &=& H( q(1-\epsilon) ) + (1-q) \underbrace{H(Y|X=1)}_{=0} + q \underbrace{H(Y|X=0)}_{=H(\epsilon)} \nonumber \\
+        &=& H( q(1-\epsilon) ) + q H(\epsilon) \nonumber \\
+        &=& -q(1-\epsilon) \log q (1-\epsilon) - (1 - q(1-\epsilon)) \log (1 - q(1-\epsilon)) + \nonumber \\
+        && q H(\epsilon)
+  \end{align}
+  Devemos tomar $\frac{d I(X;Y)}{dq} = 0$ e achar $q$ que satisfaz esta equação.
+
+  \begin{equation}
+  C \approx 1 - \frac{1}{2} H(\epsilon)
+  \end{equation}
+  que será alcançada quando
+  \begin{equation}
+          q = \frac{1}{(1-\epsilon)(1+2^{\nicefrac{H(\epsilon)}{(1-\epsilon)}})}
+  \end{equation}
+
+
+\end{solution}
+\end{questions}

@@ -1,0 +1,86 @@
+\babel@toc {brazil}{}
+\contentsline {section}{\numberline {1}Entropia}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Entropia Máxima e Mínima}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}$H(X,Y|Z) = H(X|Z) + H(Y|X,Z)$}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Sub-estimação do desvio padrão}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Entropia condicional nula}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Métrica e Distância}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Entropia Conjunta}{7}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}$\qopname \relax o{ln}x \leq x - 1$ e $\qopname \relax o{ln}x \geq 1 - \frac {1}{x}$}{9}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Entropia da Soma}{10}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}World Series}{11}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Uma Medida de Correlação}{12}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Processamento de Dados}{13}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Mistura aumenta entropia}{13}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Retirando elementos com e sem reposição}{14}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.14}Desigualdade de Fano}{15}{subsection.1.14}%
+\contentsline {subsection}{\numberline {1.15}Canal de comunicação}{16}{subsection.1.15}%
+\contentsline {subsection}{\numberline {1.16}Dados de Lurian}{19}{subsection.1.16}%
+\contentsline {subsection}{\numberline {1.17}Caça Níquel}{20}{subsection.1.17}%
+\contentsline {subsection}{\numberline {1.18}Entropia e Informação Mútua}{22}{subsection.1.18}%
+\contentsline {subsection}{\numberline {1.19}Entropia de um alfabeto}{23}{subsection.1.19}%
+\contentsline {subsection}{\numberline {1.20}Quantizador}{23}{subsection.1.20}%
+\contentsline {subsection}{\numberline {1.21}Entropia Cruzada}{24}{subsection.1.21}%
+\contentsline {subsection}{\numberline {1.22}Probabilidade de Erro}{26}{subsection.1.22}%
+\contentsline {subsection}{\numberline {1.23}Entropia de uma fonte discreta}{27}{subsection.1.23}%
+\contentsline {subsection}{\numberline {1.24}Canal ternário}{29}{subsection.1.24}%
+\contentsline {subsection}{\numberline {1.25}Divergência de Jensen-Shannon}{30}{subsection.1.25}%
+\contentsline {subsection}{\numberline {1.26}Máxima verossimilhança}{31}{subsection.1.26}%
+\contentsline {subsection}{\numberline {1.27}Entropia em um jogo de dados}{32}{subsection.1.27}%
+\contentsline {subsection}{\numberline {1.28}Média dos valores quadráticos}{33}{subsection.1.28}%
+\contentsline {section}{\numberline {2}Propriedade da Equipartição Assintótica}{34}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Propriedade da Equipartição Assintótica e Codificação de Fonte}{34}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Tipos e Classes de Tipos}{35}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Estimação da pmf}{36}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Jogo de moeda}{41}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Código genético do DNA}{43}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Tipicidade nas provas}{44}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Tipo}{46}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Conjunto típico}{47}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Conjunto típico}{49}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Processos Estocásticos}{51}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Comportamento no limite}{51}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Taxa de entropia}{51}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Cadeia de Markov}{52}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Modelos de Ehrenfest}{54}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Modelo Genético}{59}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Taxa de entropia de uma cadeia de Markov de 1a ordem}{62}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Previsão do tempo}{63}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Caminhada do gato}{64}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Eleições}{67}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Cadeia de Markov com $m$ estados}{71}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Caminhada do Pombo}{72}{subsection.3.11}%
+\contentsline {section}{\numberline {4}Códigos}{73}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Unívocos e instantâneos}{73}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Códigos e entropia}{74}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Código de Huffman}{76}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}huffman e shannon-fano-elias}{78}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Códigos binários}{80}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Língua Mura}{81}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Comprimento esperado (Shannon e Huffman)}{83}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Código para um alfabeto com 6 símbolos}{83}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Estimação e Codificação Aritmética}{85}{subsection.4.9}%
+\contentsline {section}{\numberline {5}Canal de Comunicação}{86}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Capacidade de Canal}{86}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}O estatístico e o canal}{89}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Soma módulo}{90}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Canal soma ruído}{91}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Máquina de escrever}{92}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Capacidade dada matriz}{93}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Capacidade dada matriz 2}{94}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Canal BSC em cascata com apagamento}{95}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Canal de pombos}{97}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}Canal Z}{98}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}Canal de Comunicação}{99}{subsection.5.11}%
+\contentsline {subsection}{\numberline {5.12}Canal com apagamento 2}{102}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}Canal de Comunicação 3}{103}{subsection.5.13}%
+\contentsline {subsection}{\numberline {5.14}Canais em cascata}{105}{subsection.5.14}%
+\contentsline {subsection}{\numberline {5.15}Canal binário simétrico em cascata}{107}{subsection.5.15}%
+\contentsline {subsection}{\numberline {5.16}Canal Z (genérico)}{108}{subsection.5.16}%
+\contentsline {subsection}{\numberline {5.17}Canais Z em cascata}{109}{subsection.5.17}%
+\contentsline {section}{\numberline {6}Código de Hamming}{110}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Código de Hamming (7, 4, 3)}{110}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Código de Hamming Estendido}{110}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Código de Hamming ternário}{113}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Hamming}{114}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Hamming Unicode}{115}{subsection.6.5}%

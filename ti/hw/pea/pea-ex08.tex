@@ -1,0 +1,125 @@
+\subsection{Conjunto típico}
+
+\begin{questions}
+\question{
+Considere uma sequência i.i.d. de variáveis aleatórias $X_1, \ldots, X_n$ em um alfabeto ternário
+$\mathcal{X} = \{0,1,2\}$ com distribuição $p = (0.6, 0.3, 0.1)$.
+\begin{parts}
+\part 
+Calcule $H(X)$.
+
+\part
+  Considere $n=10$, $n=50$, $n=100$, $n=200$, $n=500$ e $n=1000$ e $\epsilon = 0.1$. 
+  Quais sequências pertencem ao conjunto típico $A^{(n)}_{\epsilon}$? (Ou seja, quais tipos)?
+  Quantos tipos existem no conjunto típico?
+  Qual é a probabilidade do conjunto típico? Qual percentual do conjunto de todas as sequências está dentro do conjunto típico?
+  Calcule os limites superiores e inferiores para: i) o tamanho do conjunto típico; e ii) a probabilidade do conjunto típico.
+  Faça uma tabela para comparar os resultados para cada um dos valores de $n$.
+  Verifique se o tamanho do conjunto típico está dentro dos limiares dados na teoria.
+  (dica veja em \url{https://en.wikipedia.org/wiki/Multinomial_theorem} uma forma computacionalmente eficiente de calcular o coeficiente multinomial).
+
+\part
+  Para $n=10$ e $n=20$, faça um gráfico indicando o percentual das sequências do conjunto de todas as sequências que estão em cada uma das
+  classes de tipo contidas no conjunto típico.
+
+
+\end{parts}
+}
+
+
+\begin{solution}
+\begin{parts}
+\part
+  \begin{lstlisting}[language=Octave]
+  p = [0.6 0.3 0.1];
+  H = -sum(p.*log2(p));
+  H = 1.2955 bits
+  \end{lstlisting}
+
+\part
+  \begin{lstlisting}[language=Octave]
+  pxn = p1^k1 * p2^k2 * p3^k3  % onde p1, p2 e p3 são as probabilidades dos símbolos e k1, k2 e k3 o número de ocorrência
+  \end{lstlisting}
+
+  \begin{lstlisting}[language=Octave]
+  eps=0.1; n=10;
+  count=0; 
+  for k1=0:n, for k2=0:n-k1, 
+     pn=p(1)^k1*p(2)^k2*p(3)^(n-k1-k2); 
+     lpn=-(1/n)*log2(pn); 
+     if abs(lpn-H)<eps, 
+        count++; 
+        printf('%d %d %d\n',k1,k2,n-k1-k2); 
+     endif; 
+  endfor; endfor;
+  \end{lstlisting}
+
+  \begin{lstlisting}[language=Octave]
+  count=0; 
+  for k1=0:n, for k2=0:n-k1, 
+      k=[k1, k2, n-k1-k2]; 
+      lpn=-(1/n)*(sum(k.*log2(p))); 
+      if abs(lpn-H)<eps, 
+         count++; 
+         printf('%d %d %d\n',k); 
+      endif; 
+  endfor; endfor; 
+  \end{lstlisting}
+
+  \begin{lstlisting}[language=Octave]
+  % https://en.wikipedia.org/wiki/Multinomial_theorem#Multinomial_coefficients
+  function c=multicoeff (k), 
+      c=1; 
+      for i=1:length(k), 
+          c*=bincoeff(sum(k(1:i)),k(i)); 
+      endfor; 
+  endfunction
+  \end{lstlisting}
+
+  \begin{lstlisting}[language=Octave]
+  n=10; PA=0; count=0; 
+  for k1=0:n, for k2=0:n-k1, 
+      k=[k1, k2, n-k1-k2]; 
+      lpn=-(1/n)*(sum(k.*log2(p))); 
+      pn=p(1)^k1*p(2)^k2*p(3)^(n-k1-k2); 
+      if abs(lpn-H)<eps, 
+         count++; 
+         printf('%d %d %d\n',k); 
+         PA+=pn*multicoeff(k); 
+      endif; 
+  endfor; endfor;
+  \end{lstlisting}
+
+\begin{lstlisting}[language=Octave]
+octave:81> H
+H =  1.2955
+octave:82> eps=0.1;
+octave:83> n=500; PA=0; count=0; 
+for k1=0:n, for k2=0:n-k1, k=[k1, k2, n-k1-k2]; 
+lpn=-(1/n)*(sum(k.*log2(p))); pn=p(1)^k1*p(2)^k2*p(3)^(n-k1-k2); 
+if abs(lpn-H)<eps, count++; PA+=pn*multicoeff(k); endif; endfor; endfor; 
+PA
+PA =  0.99420
+octave:84> n=200; PA=0; count=0; for k1=0:n, for k2=0:n-k1, 
+k=[k1, k2, n-k1-k2]; lpn=-(1/n)*(sum(k.*log2(p))); pn=p(1)^k1*p(2)^k2*p(3)^(n-k1-k2); 
+if abs(lpn-H)<eps, count++; PA+=pn*multicoeff(k); endif; endfor; endfor; 
+PA
+PA =  0.91943
+octave:85> n=100; PA=0; count=0; for k1=0:n, for k2=0:n-k1, 
+k=[k1, k2, n-k1-k2]; lpn=-(1/n)*(sum(k.*log2(p))); pn=p(1)^k1*p(2)^k2*p(3)^(n-k1-k2); 
+if abs(lpn-H)<eps, count++; PA+=pn*multicoeff(k); endif; endfor; endfor; 
+PA
+PA =  0.78298
+octave:86> n=10; PA=0; count=0; for k1=0:n, for k2=0:n-k1, 
+k=[k1, k2, n-k1-k2]; lpn=-(1/n)*(sum(k.*log2(p))); pn=p(1)^k1*p(2)^k2*p(3)^(n-k1-k2); 
+if abs(lpn-H)<eps, count++; PA+=pn*multicoeff(k); endif; endfor; endfor; 
+PA
+PA =  0.21106
+\end{lstlisting}
+
+\part 
+to-do
+
+\end{parts}
+\end{solution}
+\end{questions}

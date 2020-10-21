@@ -1,0 +1,80 @@
+\subsection{Probabilidade de Erro}
+% ~/ee/ufsj/2016_02/ti/prova/prova01-resolucao.tex
+
+\begin{questions}
+\question{
+Considere a seguinte distribuição conjunta em $(X,Y)$:
+
+{
+\centering
+\begin{tabular}{c|ccc}
+$X \backslash Y$ & $a$ & $b$ & $c$ \\ \hline
+$1$ & $1/6$ & $1/12$ & $1/12$ \\
+$2$ & $1/12$ & $1/6$ & $1/12$ \\
+$3$ & $1/12$ & $1/12$ & $1/6$
+\end{tabular}
+}
+
+Seja $\hat{X}(Y)$ um estimador de $X$ baseado em $Y$ e 
+$P_e = \Pr \{ \hat{X}(Y) \neq X \}$.
+
+\begin{parts}
+\part 
+Encontre o estimador $\hat{X}(Y)$ com a menor probabilidade de erro. Calcule a $P_e$ associada.
+\part 
+Calcule o limite dado pela desigualdade de Fano e compare com o resultado anterior.
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+  Por inspeção, podemos verificar que o estimador com menor probabilidade de erro será
+  \begin{equation}
+  \hat{X}(Y) = \begin{cases}
+        1, \quad y = a \\
+        2, \quad y = b \\
+        3, \quad y = c
+        \end{cases}
+  \end{equation}
+
+  A probabilidade de erro é
+  \begin{eqnarray}
+  P_e &=& \Pr \{X=1, Y=b\} + \Pr \{X=1, Y=c\} + \Pr \{X=2, Y=1\} + \Pr \{X=2, Y=c\} + \nonumber \\
+  P_e &=& \Pr \{X=1, Y=b\} + \Pr \{X=1, Y=c\} + \Pr \{X=2, Y=1\} + \Pr \{X=2, Y=c\} + \nonumber \\
+                &&\Pr \{X=3, Y=1\} + \Pr \{X=3, Y=b\} \\
+        &=& 6 \times \frac{1}{12} = \frac{1}{2}
+  \end{eqnarray}
+
+
+\part
+
+  Pela forma forte da desigualdade de Fano, sabemos que 
+  \begin{equation}
+  P_e \geq \frac{H(X|Y) - 1}{\log ( \vert \mathcal{X} \vert - 1)}
+  \end{equation}
+
+
+  Precisamo calcular $H(X|Y)$.
+  \begin{eqnarray}
+  H(X|Y) &=& H(X | Y=a) \Pr\{Y=a\} + H(X | Y=b) \Pr\{Y=b\} + H(X | Y=c) \Pr\{Y=c\} \nonumber \\
+        &=& H\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{4} \right) \Pr\{Y=a\} + 
+                H\left( \frac{1}{4}, \frac{1}{2}, \frac{1}{4} \right) \Pr\{Y=b\} +
+                H\left( \frac{1}{4}, \frac{1}{4}, \frac{1}{2} \right) \Pr\{Y=c\} \nonumber \\
+        &=& H\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{4} \right) \left( \Pr\{Y=a\} + \Pr\{Y=b\} + \Pr\{Y=c\} \right) \nonumber \\
+        &=& H\left( \frac{1}{2}, \frac{1}{4}, \frac{1}{4} \right) \nonumber \\
+        &=& \frac{1}{2} \log 2 + \frac{1}{4} \log 4 + \frac{1}{4} \log 4 = \frac{1}{2} + \frac{1}{2} + \frac{1}{2} = \frac{3}{2}
+  \end{eqnarray}
+
+  Teremos assim
+  \begin{equation}
+  P_e \geq \frac{3/2 - 1}{\log (3 - 1) } = \frac{1}{2}
+  \end{equation}
+
+  Podemos observar que o limite dado pela desigualdade de Fano, neste exemplo, coincide com a
+  probabilidade de erro calculada no item anterior.
+
+\end{parts}
+\end{solution}
+\end{questions}

@@ -1,0 +1,142 @@
+\subsection{Eleições}
+
+\begin{questions}
+\question{
+Em uma eleição para presidente são registradas as intenções de votos para os candidatos.
+Suponha que a eleição conte com dois candidatos $A$ e $B$. 
+São realizadas diversas pesquisas ao longo do processo eleitoral.
+Sabe-se que os eleitores que declararam intenção de voto no candidato $A$, possuem 50\% 
+de chance de continuarem com a mesma intenção de voto na próxima pesquisa.
+Como o candidato $B$ é mais persuasivo e/ou está menos implicado nos esquemas de 
+propina (aparecendo menos nas notícias sobre corrupção), 
+os eleitores que declararam votar em $B$, possuem 75\% de chance de
+permanecer com a mesma intenção de voto na próxima pesquisa.
+Suponha que este processo perdure por um longo período. 
+
+\begin{parts}
+\part
+Calcule a probabilidade de cada um dos candidatos vencer as eleições (se possível).
+
+\part
+Calcule a entropia associada à série de pesquisas eleitorais.
+
+\end{parts}
+}
+
+
+\begin{solution}
+\begin{parts}
+\part
+ 
+A matriz de transição para este problema é da forma
+\begin{equation}
+P = 
+\begin{pmatrix}
+ 1-a & a \\
+  b  & 1-b
+\end{pmatrix} .
+\end{equation}
+
+A distribuição de estado estacionário deve satisfazer $\mu = \mu P$.
+Teremos então as equações
+\begin{eqnarray}
+(1-a) \mu_1 + b \mu_2 &=& \mu_1 \\
+a \mu_1 + (1-b)\mu_2 &=& \mu_2 ,
+\end{eqnarray}
+e assim constatamos que devemos ter $\mu_1 = \frac{b}{a}\mu_2$.
+Além disso, devemos ter $\mu_1 + \mu_2 = 1$,
+e assim podemos concluir que 
+\begin{equation}
+\mu_1 = \frac{b}{a+b} \quad \text{ e } \quad \mu_2 = \frac{a}{a+b}.
+\end{equation}
+No caso em questão, temos $a = \frac{1}{2}$ e $b = \frac{1}{4}$,
+logo $\mu_1 = \frac{\mu_2}{2}$, $\mu_1 = \frac{1}{3}$ e $\mu_2 = \frac{2}{3}$.
+A probabilidade do candidato $A$ vencer as eleições é de 33,3\% e a
+probabilidade do candidato $B$ vencer é de 66,6\%.
+
+\part
+
+Como o processo estocástico em questão é uma cadeia de Markov de 1a ordem estacionária,
+teremos $H(\mathcal{X}) = H(X_2|X_1) = \sum_i \mu_i H(r_i)$, onde $r_i$ representa
+a $i$-ésima linha da matriz de transição.
+\begin{eqnarray}
+H(\mathcal{X}) &=& \mu_1 H(r_1) + \mu_2 H(r_2) = \frac{b}{a+b} H((1-a),a) + \frac{a}{a+b} H(b,(1-b)) \\
+        &=& \frac{1}{3} H\left( \frac{1}{2}, \frac{1}{2} \right) + \frac{2}{3} H\left( \frac{1}{4}, \frac{3}{4} \right) \\
+        &=& \frac{1}{3} + \frac{2}{3} \left( \frac{1}{2} + \frac{3}{4} (2 - \log 3) \right) \\
+        &=& \frac{1}{3} + \frac{4}{3} - \frac{1}{2}\log 3 = \frac{5}{3} - \frac{1}{2}\log 3 \approx 0,87419 .
+\end{eqnarray}
+
+\end{parts}
+\end{solution}
+
+\question{
+Suponha agora que a eleição conte com três candidatos $A$, $B$ e $C$.
+A probabilidade dos eleitores que declararam voto em $A$ continuarem a preferir 
+o candidato $A$ é dada por $p_{A \rightarrow A} = 1/2$, a probabilidade de mudarem
+para o candidato $B$ é $p_{A \rightarrow B} = 1/3$ e de mudarem para o candidato $C$
+é $p_{A \rightarrow C} = 1/6$. De forma semelhante, teremos $p_{B \rightarrow A} = 1/3$,
+$p_{B \rightarrow B} = 1/2$, $p_{B \rightarrow C} = 1/6$, $p_{C \rightarrow A} = 1/6$,
+$p_{C \rightarrow B} = 1/3$ e $p_{C \rightarrow C} = 1/2$.
+
+\begin{parts}
+\part
+Calcule a probabilidade de cada um dos candidatos vencer as eleições (se possível).
+
+\part
+Calcule a entropia associada à série de pesquisas eleitorais.
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+Para este caso teremos a seguinte matriz de transição:
+\begin{equation}
+P = 
+\begin{pmatrix}
+ 1/2 & 1/3 & 1/6 \\
+ 1/3 & 1/2 & 1/6 \\
+ 1/6 & 1/3 & 1/2
+\end{pmatrix} .
+\end{equation}
+
+Iremos então resolver o sistema $\mu(P - I) = 0$, adicionando a condição $\sum_i \mu_i = 1$.
+
+\begin{eqnarray}
+\begin{pmatrix}[ccc|c]
+-1/2 & 1/3  & 1/6 & 0 \\
+1/3  & -1/2 & 1/3 & 0 \\
+1    &  1   &  1  & 1
+\end{pmatrix} \\
+\begin{pmatrix}[ccc|c]
+-1/2 & 1/3   & 1/6 & 0 \\
+0    & -5/18 & 4/9 & 0 \\
+0    &  5/3  & 4/3 & 1
+\end{pmatrix} \\
+\begin{pmatrix}[ccc|c]
+-1/2 & 1/3   & 1/6 & 0 \\
+0    & -5/18 & 4/9 & 0 \\
+0    &  0    & 4   & 1
+\end{pmatrix} 
+\end{eqnarray}
+Logo, podemos concluir que $\mu_3 = 1/4$,
+$\mu_2 = 2/5$ e $\mu_1 = 7/20$, ou seja,
+o candidato $A$ possui 35\% de chance de vencer as eleições,
+$B$ possui 40\% e $C$ possui 25\%. 
+
+
+\part
+
+Como o processo estocástico em questão é uma cadeia de Markov de 1a ordem estacionária,
+teremos $H(\mathcal{X}) = H(X_2|X_1) = \sum_i \mu_i H(r_i)$, onde $r_i$ representa
+a $i$-ésima linha da matriz de transição (note que as linhas são permutações umas das outras).
+\begin{eqnarray}
+H(\mathcal{X}) &=& \mu_1 H(r_1) + \mu_2 H(r_2) + \mu_3 H(r_3) \\
+        &=& H(r) = H\left( \frac{1}{2}, \frac{1}{3}, \frac{1}{6} \right) \\ 
+        &=& 1 + \frac{1}{3} \log 3 + \frac{1}{6} (1 + \log 3) = \frac{7}{6} + \frac{1}{2} \log 3 \approx 1,9591 .
+\end{eqnarray}
+ 
+\end{parts}
+\end{solution}
+
+\end{questions}

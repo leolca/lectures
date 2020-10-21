@@ -1,0 +1,208 @@
+\subsection{Códigos e entropia}
+% harvard / HW3_ES250_sol_a.pdf
+
+\begin{questions}
+\question{
+Seja $X$ uma variável aleatória com alfabeto $\mathcal{X} = \{1,2,3\}$ e distribuição
+\begin{equation}
+        X = \begin{cases} 
+                1, \quad \textmd{ com probabilidade } 1/2; \\ 
+            2, \quad \textmd{ com probabilidade } 1/4; \\ 
+            3, \quad \textmd{ com probabilidade } 1/4. 
+                \end{cases}
+\end{equation}
+Seja $X_1, X_2, \ldots$ independente identicamente distribuído seguindo esta distribuição e 
+seja $Z_1Z_2Z_3\ldots = C(X_1)C(X_2)\ldots$ a \emph{string} formada pelos símbolos binários 
+resultantes da concatenação das palavras de código, onde o código é $C = \{ 0, 10, 11\}$. 
+Por exemplo, 122 torna-se 01010.
+
+\begin{parts}
+\part
+Encontre a entropia de $H(\mathcal{X})$ e a 
+taxa de entropia $H(\mathcal{Z})$ em bits por símbolo. 
+Observe que $Z$ não pode ser comprimido além deste ponto.
+
+
+\part 
+Considere agora o código
+        \begin{equation}
+                C(x) = 
+                \begin{cases} 
+                00, \quad \textmd{ se } x = 1; \\
+                10, \quad \textmd{ se } x = 2; \\
+                01, \quad \textmd{ se } x = 3.
+                \end{cases}
+        \end{equation}
+e encontre a taxa de entropia $H(\mathcal{Z})$.
+
+
+\part 
+Considere agora o seguinte código
+        \begin{equation}
+                C(x) = 
+                \begin{cases} 
+                00, \quad \textmd{ se } x = 1; \\
+                1,  \quad \textmd{ se } x = 2; \\
+                01, \quad \textmd{ se } x = 3.
+                \end{cases}
+        \end{equation}  
+e encontre a taxa de entropia $H(\mathcal{Z})$.
+
+\end{parts}  
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+Note que os $X_i$s são i.i.d., assim
+\begin{eqnarray}
+H(\mathcal{X}) &=& \lim_{n \rightarrow \infty} \frac{1}{n} H(X_1, X_2, \ldots, X_n) \\
+        &=& \lim_{n \rightarrow \infty} \frac{1}{n} \sum_{i=1}^{n} H(X_i) \\
+        &=& \lim_{n \rightarrow \infty} \frac{1}{n} n H(X_1) \\
+        &=& H(X_1) \\
+        &=& \frac{1}{2} \log 2 + 2 \times \frac{1}{4} \log 4 = \frac{3}{2} .
+\end{eqnarray}
+
+Podemos observar que o código $C(x)$ dado é ótimo para a distribuição em $X$ dada.
+Além disso, como a distribuição é diádica, não há ganho em realizar a compressão em
+blocos.
+O processo resultante de $Z_1 Z_2 \ldots$ é binário $\sim \text{Bernoulli}(1/2)$.
+Desta forma, $H(\mathcal{Z}) = H(1/2) = 1$ bit.
+
+\part 
+Iremos utilizar aqui o seguinte:
+\begin{eqnarray}
+H(\mathcal{X}) &=& \lim_{n \rightarrow \infty} \frac{1}{n} H(X_1, X_2, \ldots, X_n) \\
+\lim_{n \rightarrow \infty} n H(\mathcal{X}) &=& \lim_{n \rightarrow \infty} H(X_1, X_2, \ldots, X_n) \\
+\lim_{n \rightarrow \infty} \frac{n}{2} H(\mathcal{X}) &=& \lim_{n \rightarrow \infty} H(X_1, X_2, \ldots, X_{n/2}) 
+\end{eqnarray}
+
+Como todas as palavras do código possuem comprimento 2, teremos
+\begin{eqnarray}
+H(\mathcal{Z}) &=& \lim_{n \rightarrow \infty} \frac{1}{n} H(Z_1, Z_2, \ldots, Z_n) \\
+        &=& \lim_{n \rightarrow \infty} \frac{1}{n} H(X_1, X_2, \ldots, X_{n/2}) \\
+        &=& \lim_{n \rightarrow \infty} \frac{1}{n} \frac{n}{2} H(\mathcal{X}) \\
+        &=& \frac{ H(\mathcal{X}) }{2} \\
+        &=& \frac{3}{4}
+\end{eqnarray}
+
+
+
+\part 
+Se $H'(\mathcal{Z}) = \lim_{n \rightarrow \infty} H(Z_n | Z_1, \ldots, Z_{n-1})$ existe,
+então pelo lemma da média Cesaro teremos que 
+$H(\mathcal{Z}) = \lim_{n \rightarrow \infty} H(Z_1, \ldots, Z_{n})$ existe e $H'(\mathcal{Z}) = H(\mathcal{Z})$.
+É suficiente então mostrar que $H(Z_n | Z_1, \ldots, Z_{n-1})$ converge para um limite.
+
+Vamos definir uma sequência de v.a. $Y_n$ de forma que
+\begin{equation}
+Y_n = \begin{cases}
+1, & \quad \text{se $Z_1, \ldots, Z_{n-1}$ é uma sequência completa de palavras, } \\
+        & \quad \text{i.e. se $Z_n$ é o início de uma nova palavra} \\
+2, & \quad \text{caso contrário} .
+\end{cases}
+\end{equation}
+
+Note que $Y_n$ é uma função de $(Z_1, \ldots, Z_{n-1})$. 
+Note também que $Z_n$ e $(Z_1, \ldots, Z_{n-1})$ são condicionalmente
+independentes dado $Y_n$. Em outras palavras, $Y_n$ é uma estatística
+suficiente em $(Z_1, \ldots, Z_{n-1})$ sobre $Z_n$. Então,
+\begin{eqnarray}
+H(Z_n | Z_1, \ldots, Z_{n-1}) &=& H(Z_n | Y_n) \\
+        &=& \sum_y p(Y_n = y) H(Z_n | Y_n = y) \\
+        &=& p(Y_n = 1) H(Z_n | Y_n = 1) + p(Y_n = 2) H(Z_n | Y_n = 2) \\
+        &=& p(Y_n = 1) H(1/4) + p(Y_n = 2) H(1/3)
+\end{eqnarray}
+onde acima utilizamos que $H(Z_n | Y_n = 1) = H(1/4)$ e $H(Z_n | Y_n = 2) = H(1/3)$,
+uma vez que podemos obter $p(z,y)$, conforme abaixo 
+
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+\diagbox[width=3em]{z}{y} & 1 & 2  \\    \hline
+0 & 3/8 & 1/4 \\ \hline
+1 & 1/4 & 1/8 \\ \hline
+\end{tabular}
+\end{center}
+
+e assim teremos $p(z=0|y=1) = 3/4$, $p(z=1|y=1) = 1/4$, $p(z=0|y=2) = 2/3$ 
+e $p(z=1|y=2) = 1/3$.
+
+Embora $p(Y_n)$ mude com $n$, $p(Y_n)$ converge para uma distribuição estacionária
+única $\mu$, já que $Y_n$ é uma cadeia de Markov irredutível e aperiódica, conforme 
+ilustrado abaixo:
+
+\begin{center}
+\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=3cm]
+\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+\node[state]    (1)               {$1$};
+\node[state]    (2)[right of=1]   {$2$};
+\path
+(1) edge[bend left,above]   node{$3/4$}  (2)
+(1) edge[loop left]         node{$1/4$}  (1) 
+(2) edge[bend left,below]   node{$1$}  (1);
+\end{tikzpicture}
+\end{center}
+
+A matriz de transição para a cadeia de Markov $\{Y_n\}$ é 
+\begin{equation}
+\mathbf{P} = 
+\begin{blockarray}{ccc}
+ & 1 & 2 \\
+\begin{block}{c(cc)}
+ 1 & 1/4 & 3/4 \\
+ 2 & 1   & 0   \\
+\end{block}
+\end{blockarray} .
+\end{equation}
+
+Para encontrar a distribuição de estado estacionários,
+queremos encontrar $\mu^T P = \mu^T$, ou seja, $\mu^T (P - I) = 0$
+e iremos denotar $Q = P - I$, assim teremos $\mu^T Q = 0$.
+Para incorporar a condução $\sum_i \mu_i = 1$, iremos substituir 
+a última coluna de $Q$ por uma coluna de uns e substituir o último
+elemento do vetor nulo à direita por 1. Teremos assim
+\begin{eqnarray}
+\mu^T \tilde{Q} &=& \begin{pmatrix} 0 & 1 \end{pmatrix} \\
+\tilde{Q}^T \mu &=& \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+\begin{pmatrix} 
+-3/4 & 1 \\
+1 & 1
+\end{pmatrix} 
+\begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix} 
+&=& \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+\end{eqnarray}
+
+Devemos então resolver este sistema.
+\begin{eqnarray}
+\left( \begin{array}{cc|c}
+-3/4 & 1 & 0 \\
+1    & 1 & 1
+\end{array} \right)\\
+\left( \begin{array}{cc|c}
+-3/4 & 1   & 0 \\
+0    & 7/3 & 1
+\end{array} \right) \\
+\left( \begin{array}{cc|c}
+-3/4 & 1   & 0 \\
+0    & 1   & 3/7
+\end{array} \right) \\
+\left( \begin{array}{cc|c}
+-3/4 & 0   & -3/7 \\
+0    & 1   & 3/7
+\end{array} \right) \\
+\left( \begin{array}{cc|c}
+1  & 0   & 4/7 \\
+0  & 1   & 3/7
+\end{array} \right) 
+\end{eqnarray}
+
+A análise mostra que $\mu = (4/7, 3/7)$. Desta forma,
+\begin{eqnarray}
+\lim_{n \rightarrow \infty} H(Z_n | Z_1, \ldots, Z_{n-1}) &=& \frac{4}{7} H\left( \frac{1}{4} \right) + \frac{3}{7} H\left( \frac{1}{3} \right) \\
+        &=& \frac{6}{7} = H(\mathcal{Z}) .
+\end{eqnarray}
+
+
+\end{parts}
+\end{solution}
+\end{questions}

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-04/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q1 : codigos_codigos01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação aos códigos, podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código unicamente decodificável é singular.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Todo código de prefixo é um código unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dados comprimentos <span class="math inline">\((l_1,l_2,\ldots,l_n)\)</span>, satisfazendo a desigualdade de Kraft, é possível construir um código não-singular com estes comprimentos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Para todo código unicamente decodificável com comprimento esperado <span class="math inline">\(L\)</span>, existe um código de prefixo com o mesmo comprimento esperado <span class="math inline">\(L\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código unicamente decodificável possui propriedade de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código que satisfaz a desigualdade de Kraft é um código de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q1 : codigos_codigos01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação aos códigos, podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código unicamente decodificável possui propriedade de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código que satisfaz a desigualdade de Kraft é um código de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código não-síngular é unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Para todo código unicamente decodificável com comprimento esperado <span class="math inline">\(L\)</span>, existe um código de prefixo com o mesmo comprimento esperado <span class="math inline">\(L\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Todo código de prefixo é um código unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dados comprimentos <span class="math inline">\((l_1,l_2,\ldots,l_n)\)</span>, satisfazendo a desigualdade de Kraft, é possível construir um código não-singular com estes comprimentos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q1 : codigos_codigos01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação aos códigos, podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código unicamente decodificável é singular.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dados comprimentos <span class="math inline">\((l_1,l_2,\ldots,l_n)\)</span>, satisfazendo a desigualdade de Kraft, é possível construir um código não-singular com estes comprimentos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Para todo código unicamente decodificável com comprimento esperado <span class="math inline">\(L\)</span>, existe um código de prefixo com o mesmo comprimento esperado <span class="math inline">\(L\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Todo código de prefixo é um código unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código não-síngular é unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código que satisfaz a desigualdade de Kraft é um código de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q1 : codigos_codigos01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação aos códigos, podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se a extensão de um código for singular, ele necessariamente será unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dados comprimentos <span class="math inline">\((l_1,l_2,\ldots,l_n)\)</span>, satisfazendo a desigualdade de Kraft, é possível construir um código não-singular com estes comprimentos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Para todo código unicamente decodificável com comprimento esperado <span class="math inline">\(L\)</span>, existe um código de prefixo com o mesmo comprimento esperado <span class="math inline">\(L\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código unicamente decodificável possui propriedade de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Todo código não-síngular é unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Todo código de prefixo é um código unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q1 : codigos_codigos01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação aos códigos, podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Dados comprimentos <span class="math inline">\((l_1,l_2,\ldots,l_n)\)</span>, satisfazendo a desigualdade de Kraft, é possível construir um código não-singular com estes comprimentos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Para todo código unicamente decodificável com comprimento esperado <span class="math inline">\(L\)</span>, existe um código de prefixo com o mesmo comprimento esperado <span class="math inline">\(L\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Se a extensão de um código for singular, ele necessariamente será unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todo código unicamente decodificável possui propriedade de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todo código não-síngular é unicamente decodificável.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todo código que satisfaz a desigualdade de Kraft é um código de prefixo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-04/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R1 Q2 : codigos_codigos02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Dada uma fonte com distribuição <span class="math inline">\(p = (0.5, 0.25, 0.125, 0.125)\)</span>. O comprimento esperado do código de Shannon será:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><span class="math inline">\(L(C) = \sum_i p_i l_i\)</span>, onde <span class="math inline">\(l_1 = 1\)</span>, <span class="math inline">\(l_2 = 2\)</span>, <span class="math inline">\(l_3 = l_4 = 3\)</span>. Então <span class="math inline">\(L(C) = 0.5 \times 1 + 0.25 \times 2 + 2(0.125 \times 3) = 1.75\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(L(C) = 1.75\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>1.75</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R2 Q2 : codigos_codigos02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Dada uma fonte com distribuição <span class="math inline">\(p = (0.5, 0.25, 0.125, 0.125)\)</span>. O comprimento esperado do código de Shannon será:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><span class="math inline">\(L(C) = \sum_i p_i l_i\)</span>, onde <span class="math inline">\(l_1 = 1\)</span>, <span class="math inline">\(l_2 = 2\)</span>, <span class="math inline">\(l_3 = l_4 = 3\)</span>. Então <span class="math inline">\(L(C) = 0.5 \times 1 + 0.25 \times 2 + 2(0.125 \times 3) = 1.75\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(L(C) = 1.75\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>1.75</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R3 Q2 : codigos_codigos02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Dada uma fonte com distribuição <span class="math inline">\(p = (0.5, 0.25, 0.125, 0.125)\)</span>. O comprimento esperado do código de Shannon será:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><span class="math inline">\(L(C) = \sum_i p_i l_i\)</span>, onde <span class="math inline">\(l_1 = 1\)</span>, <span class="math inline">\(l_2 = 2\)</span>, <span class="math inline">\(l_3 = l_4 = 3\)</span>. Então <span class="math inline">\(L(C) = 0.5 \times 1 + 0.25 \times 2 + 2(0.125 \times 3) = 1.75\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(L(C) = 1.75\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>1.75</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R4 Q2 : codigos_codigos02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Dada uma fonte com distribuição <span class="math inline">\(p = (0.5, 0.25, 0.125, 0.125)\)</span>. O comprimento esperado do código de Shannon será:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><span class="math inline">\(L(C) = \sum_i p_i l_i\)</span>, onde <span class="math inline">\(l_1 = 1\)</span>, <span class="math inline">\(l_2 = 2\)</span>, <span class="math inline">\(l_3 = l_4 = 3\)</span>. Então <span class="math inline">\(L(C) = 0.5 \times 1 + 0.25 \times 2 + 2(0.125 \times 3) = 1.75\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(L(C) = 1.75\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>1.75</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R5 Q2 : codigos_codigos02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Dada uma fonte com distribuição <span class="math inline">\(p = (0.5, 0.25, 0.125, 0.125)\)</span>. O comprimento esperado do código de Shannon será:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p><span class="math inline">\(L(C) = \sum_i p_i l_i\)</span>, onde <span class="math inline">\(l_1 = 1\)</span>, <span class="math inline">\(l_2 = 2\)</span>, <span class="math inline">\(l_3 = l_4 = 3\)</span>. Então <span class="math inline">\(L(C) = 0.5 \times 1 + 0.25 \times 2 + 2(0.125 \times 3) = 1.75\)</span>.</p>
+<ol type = "a">
+<li> <span class="math inline">\(L(C) = 1.75\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>1.75</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/prova-ti-04/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R1 Q3 : codigos_codigos03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere a variável aleatória <span class="math inline">\(X \sim (0.49, 0.26, 0.12, 0.04, 0.04, 0.03, 0.02)\)</span> no alfabeto <span class="math inline">\(\mathcal{X}=\{1,2,3,4,5,6,7\}\)</span>. Calcule a eficiência do código de Huffman para <span class="math inline">\(X\)</span>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A árvore de Huffman será: <span class="math inline">\((1,(2,(3,((4,5),(6,7)))))\)</span>. Os comprimentos serão: <span class="math inline">\((1,2,3,5,5,5,5)\)</span> e assim o comprimento esperado será <span class="math inline">\(L(C)=1 \times 0.49 + 2 \times 0.26 + 3 \times 0.12 + 5 \times 0.13 = 2.02\)</span>. A entropia é <span class="math inline">\(H(X) = -(0.49\log(0.49)+0.26\log(0.26)+0.12\log(0.12)+2\times 0.04\log(0.04)+0.03\log(0.03)+0.02 \log(0.02)) = 2.01279\)</span>. A eficiência então será <span class="math inline">\(\text{Eficiencia} = H/L = 0.99643\)</span>.</p>
+<ol type = "a">
+<li> eficiência = <span class="math inline">\(0.99643\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.99643</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R2 Q3 : codigos_codigos03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere a variável aleatória <span class="math inline">\(X \sim (0.49, 0.26, 0.12, 0.04, 0.04, 0.03, 0.02)\)</span> no alfabeto <span class="math inline">\(\mathcal{X}=\{1,2,3,4,5,6,7\}\)</span>. Calcule a eficiência do código de Huffman para <span class="math inline">\(X\)</span>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A árvore de Huffman será: <span class="math inline">\((1,(2,(3,((4,5),(6,7)))))\)</span>. Os comprimentos serão: <span class="math inline">\((1,2,3,5,5,5,5)\)</span> e assim o comprimento esperado será <span class="math inline">\(L(C)=1 \times 0.49 + 2 \times 0.26 + 3 \times 0.12 + 5 \times 0.13 = 2.02\)</span>. A entropia é <span class="math inline">\(H(X) = -(0.49\log(0.49)+0.26\log(0.26)+0.12\log(0.12)+2\times 0.04\log(0.04)+0.03\log(0.03)+0.02 \log(0.02)) = 2.01279\)</span>. A eficiência então será <span class="math inline">\(\text{Eficiencia} = H/L = 0.99643\)</span>.</p>
+<ol type = "a">
+<li> eficiência = <span class="math inline">\(0.99643\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.99643</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R3 Q3 : codigos_codigos03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere a variável aleatória <span class="math inline">\(X \sim (0.49, 0.26, 0.12, 0.04, 0.04, 0.03, 0.02)\)</span> no alfabeto <span class="math inline">\(\mathcal{X}=\{1,2,3,4,5,6,7\}\)</span>. Calcule a eficiência do código de Huffman para <span class="math inline">\(X\)</span>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A árvore de Huffman será: <span class="math inline">\((1,(2,(3,((4,5),(6,7)))))\)</span>. Os comprimentos serão: <span class="math inline">\((1,2,3,5,5,5,5)\)</span> e assim o comprimento esperado será <span class="math inline">\(L(C)=1 \times 0.49 + 2 \times 0.26 + 3 \times 0.12 + 5 \times 0.13 = 2.02\)</span>. A entropia é <span class="math inline">\(H(X) = -(0.49\log(0.49)+0.26\log(0.26)+0.12\log(0.12)+2\times 0.04\log(0.04)+0.03\log(0.03)+0.02 \log(0.02)) = 2.01279\)</span>. A eficiência então será <span class="math inline">\(\text{Eficiencia} = H/L = 0.99643\)</span>.</p>
+<ol type = "a">
+<li> eficiência = <span class="math inline">\(0.99643\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.99643</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R4 Q3 : codigos_codigos03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere a variável aleatória <span class="math inline">\(X \sim (0.49, 0.26, 0.12, 0.04, 0.04, 0.03, 0.02)\)</span> no alfabeto <span class="math inline">\(\mathcal{X}=\{1,2,3,4,5,6,7\}\)</span>. Calcule a eficiência do código de Huffman para <span class="math inline">\(X\)</span>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A árvore de Huffman será: <span class="math inline">\((1,(2,(3,((4,5),(6,7)))))\)</span>. Os comprimentos serão: <span class="math inline">\((1,2,3,5,5,5,5)\)</span> e assim o comprimento esperado será <span class="math inline">\(L(C)=1 \times 0.49 + 2 \times 0.26 + 3 \times 0.12 + 5 \times 0.13 = 2.02\)</span>. A entropia é <span class="math inline">\(H(X) = -(0.49\log(0.49)+0.26\log(0.26)+0.12\log(0.12)+2\times 0.04\log(0.04)+0.03\log(0.03)+0.02 \log(0.02)) = 2.01279\)</span>. A eficiência então será <span class="math inline">\(\text{Eficiencia} = H/L = 0.99643\)</span>.</p>
+<ol type = "a">
+<li> eficiência = <span class="math inline">\(0.99643\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.99643</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R5 Q3 : codigos_codigos03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere a variável aleatória <span class="math inline">\(X \sim (0.49, 0.26, 0.12, 0.04, 0.04, 0.03, 0.02)\)</span> no alfabeto <span class="math inline">\(\mathcal{X}=\{1,2,3,4,5,6,7\}\)</span>. Calcule a eficiência do código de Huffman para <span class="math inline">\(X\)</span>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A árvore de Huffman será: <span class="math inline">\((1,(2,(3,((4,5),(6,7)))))\)</span>. Os comprimentos serão: <span class="math inline">\((1,2,3,5,5,5,5)\)</span> e assim o comprimento esperado será <span class="math inline">\(L(C)=1 \times 0.49 + 2 \times 0.26 + 3 \times 0.12 + 5 \times 0.13 = 2.02\)</span>. A entropia é <span class="math inline">\(H(X) = -(0.49\log(0.49)+0.26\log(0.26)+0.12\log(0.12)+2\times 0.04\log(0.04)+0.03\log(0.03)+0.02 \log(0.02)) = 2.01279\)</span>. A eficiência então será <span class="math inline">\(\text{Eficiencia} = H/L = 0.99643\)</span>.</p>
+<ol type = "a">
+<li> eficiência = <span class="math inline">\(0.99643\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.99643</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+</quiz>

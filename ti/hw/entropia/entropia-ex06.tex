@@ -1,0 +1,48 @@
+\subsection{World Series}
+% ex 8 Cover Thomas
+
+\begin{questions}
+\question{
+As Séries Mundiais (\textit{World Series}) é uma série de sete jogos que termina
+assim que um dos times conseguir quatro vitórias. Seja $X$ a variável aleatória
+que representa o resultado de uma Série Mundial entre os times $A$ e $B$;
+possíveis valores para $X$ são $AAAA$, $BABABAB$ e $BBBAAAA$.
+Seja $Y$ o número de partidas disputadas, que varia de $4$ a $7$.
+Assumindo que $A$ e $B$ são times igualmente bons (mesma probabilidade de vencer)
+e que as partidas são independentes, calcule $H(X)$, $H(Y)$, $H(Y|X)$ e $H(X|Y)$.
+
+}
+
+\begin{solution}
+  A probabilidade de um time ganhar uma partida qualquer é $1/2$.
+
+  As partidas podem ter de 4 a 7 jogos. 
+
+  \begin{itemize}
+  \item Existem $2$ partidas de $4$ jogos, são elas $AAAA$ e $BBBB$, todas com probabilidade $2^{-4}$.
+  \item Existem $8 = 2 {4 \choose 3}$ particas de $5$ jogos: $BAAAA$, $ABAAA$, $\ldots$, $ABBBB$, 
+        com probabilidade $2^{-5}$ (o último da sequência deve ser necessária mente o time que 
+        ganhou a série, logo sobraram $4$ posições para dispor as demais $3$ partidas do time vencedor).
+  \item Exitem $20 = 2 {5 \choose 3}$ particas de $6$ jogos, com probabilidade $2^{-6}$.
+  \item Exitem $40 = 2 {6 \choose 3}$ particas de $7$ jogos, com probabilidade $2^{-7}$.
+  \end{itemize}
+
+  \begin{eqnarray}
+  H(X) &=& - \sum p(x) \log p(x) \nonumber \\
+        &=& 2 \frac{1}{16} \log 16 + 8 \frac{1}{32} \log 32 + 20 \frac{1}{64} \log 64 + 40 \frac{1}{128} \log 128 \nonumber \\
+        &=& 5.81 \text{ bits}.
+  \end{eqnarray}
+
+  \begin{eqnarray}
+  H(Y) &=& - \sum p(y) \log p(y) \nonumber \\
+        &=& \frac{1}{8} \log 8 + \frac{1}{4} \log 4 + \frac{5}{16} \log \frac{16}{5} + \frac{5}{16} \log \frac{16}{5} \nonumber \\
+        &=& 1.92 \text{ bits}.
+  \end{eqnarray}
+
+  $Y$ é uma função determinística de $X$, logo conhecendo $X$ não resta incerteza quanto a $Y$, ou seja,
+  $H(Y|X) = 0$.
+
+  Como $H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)$, teremos $H(X|Y) = H(X) - H(Y) = 3.89$ bits.
+
+\end{solution}
+\end{questions} 

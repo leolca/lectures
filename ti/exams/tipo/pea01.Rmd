@@ -1,0 +1,84 @@
+Question
+========
+Uma fonte discreta sem memória emite uma sequência binária de dígitos
+independentes com probabilidade $p(1) = 0.002$ e $p(0) = 0.998$. Os
+dígitos são tomados em grupo de 50 e uma palavra binária é fornecida
+para cada sequência de 50 dígitos contendo cinco ou menos uns.
+
+a. Assumindo que todas as palavras código possuem a mesmo
+comprimento, encontre o comprimento mínimo necessário para
+fornecer código para todas as sequências com três ou menos uns
+(1s).
+
+b. Calcule a probabilidade de observar uma sequência da fonte para a
+qual nenhum código foi atribuído.
+
+c. Use a desigualdade de Chebyshev para limitar a probabilidade de
+observamos um sequencia da fonte para a qual nenhum código foi
+associado. Determine este limite.
+
+d. Este limite é maior, menor ou igual ao valor calculado no item b.?
+
+Answerlist
+---------------
+* Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns:
+* Probabilidade para uma sequência sem código:
+* Limite pela desigualdade de Chebyshev:
+* Maior
+* Menor
+* Igual
+
+Solution
+========
+O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por
+$$
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+$$
+Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar
+$\lceil \log 2369936 \rceil = 22$ bits para representar as sequências com cinco ou menos uns. 
+Note que a entropia é $H(0.002) = 0.020814$, ou seja, o limite seriam $50 \times 0.020814 = 1.0407$,
+valor bem menor que os $22$ encontrados.
+
+A probabilidade de uma sequência não possuir código é dada por:
+$$
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+	&= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+$$
+
+  Para a v.a. $S_n$ que representa a soma das v.a. i.i.d. $X_1, \ldots, X_n$, a desigualdade de Chebyschev
+  afirma que 
+  $$
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  $$
+  onde $\mu$ e $\sigma^2$ representam a média e variância de $X_i$ (logo, $n\mu$ e $n\sigma^2$ são
+  a média e variância de $S_n$). 
+
+  No problema em questão temos $n=50$, $\mu=0.002$ e $\sigma^2 = (0.002)(0.998)$.
+  Note que $S_{50} \geq 6$ se e somente se $\vert S_{50} - 50(0.002) \vert \geq 5.9$. Devemos então
+  escolher $\epsilon = 5.9$. Então
+  \begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation} 
+
+  O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.
+ 
+
+Answerlist
+----------
+* 22.
+* 0.
+* 0.0028670
+* True.
+* False.
+* False.
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|schoice
+exsolution: 22|0|0.0028670|100
+exname: pea-codificacao-chebyshev
+extol: 0.001
+expoints: 1|1|1|1

@@ -1,0 +1,41 @@
+\subsection{Retirando elementos com e sem reposição}
+% ex 14 Cover Thomas
+
+\begin{questions}
+\question{
+Uma urna contém $r$ bolas vermelhas, $w$ bolas brancas e $b$ bolas pretas.
+Qual das opções possui maior entropia? 1) Retirar $k \geq 2$ bolas da urna
+com substituição ou 2) sem substituição?
+
+\begin{quote}
+Bernoulli para ter sido o primeiro a utilizar o modelo de urnas no estudo das probabilidades.
+A inspiração de Bernoulli pode ter sido as loterias, eleições, ou jogos de azar, que envolvem sortear as bolas de um recipiente. Tem sido reconhecido que
+nas eleições na época medieval e renascentista de Veneza, incluindo a de Doge\footnote{Doge é a denominação do chefe ou primeiro magistrado eleito, das antigas repúblicas de Gênova e Veneza.}, muitas vezes incluíam a escolha dos eleitores por sorteio, usando bolas de cores diferentes, extraídas de uma urna.
+\end{quote}
+}
+
+\begin{solution}
+  A resposta é simples, pois ao utilizar a estratégia de substituição, teremos que o número de 
+  possíveis escolhas em cada etapa será a mesma, ao passo que, ao adotar a estratégia sem substituição,
+  a cada iteração teremos o número de possíveis escolhas reduzido e, por conseguinte, teremos menos entropia.
+
+  Para o caso 1) com substituição, teremos $H(X_i \vert X_{i-1}, \ldots, X_1) = H(X_i)$.
+  Podemos calcular $H(X_i)$:
+  \begin{equation}
+  H(X_i) = H \left( \frac{r}{r+w+b}, \frac{w}{r+w+b}, \frac{b}{r+w+b} \right)
+  \end{equation}
+
+  Calcular a entropia condicional no caso 2) sem substituição é mais complicado.
+  \begin{eqnarray}
+  H(X_2 | X_1) &=& \sum_{x} p(x) H(Y|X=x) \nonumber \\
+        &=& \frac{r}{r+w+b} H(Y|X=\text{vermelha}) + \frac{w}{r+w+b} H(Y|X=\text{branca}) \nonumber \\
+ 	&&  + \frac{b}{r+w+b} H(Y|X=\text{preta}) \nonumber \\
+        &=& \frac{r}{r+w+b} H \left( \frac{r-1}{r+w+b-1}, \frac{w}{r+w+b-1}, \frac{b}{r+w+b-1} \right) + \nonumber \\
+        && \frac{w}{r+w+b} H \left( \frac{r}{r+w+b-1}, \frac{w-1}{r+w+b-1}, \frac{b}{r+w+b-1} \right) + \nonumber \\
+        && \frac{b}{r+w+b} H \left( \frac{r}{r+w+b-1}, \frac{w}{r+w+b-1}, \frac{b-1}{r+w+b-1} \right)
+  \end{eqnarray}
+  Para calcular as entropias condicionais seguintes seria ainda bem mais complicado.
+
+
+\end{solution}
+\end{questions}

@@ -1,0 +1,53 @@
+\subsection{Taxa de entropia de uma cadeia de Markov de 1a ordem}
+
+\begin{questions}
+\question{
+Seja $X_1$ uniformemente distribuído sobre os estados $\{0,1,2\}$. Seja $\{X_i\}_{1}^{\infty}$ uma cadeia de Markov com matriz de transição $P$, ou seja, $P(X_{n+1}=j \vert X_n = i) = P_{ij}$, 
+$i,j \in \{0,1,2\}$.
+\begin{equation}
+        P = [P_{ij}] = 
+        \begin{bmatrix} 
+        \frac{1}{2} & \frac{1}{4} & \frac{1}{4} \\
+        \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\
+        \frac{1}{4} & \frac{1}{4} & \frac{1}{2} 
+        \end{bmatrix}
+\end{equation}
+
+\begin{parts}
+\part $\{X_n\}$ é estacionária?
+\part Calcule $\lim_{n \rightarrow \infty}\frac{1}{n}H(X_1, \ldots, X_n)$.
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+Como $X_1$ tem distribuição uniforme, a distribuição dos estados permanecerá a mesma nos instantes subsequentes,
+ou seja, teremos $\mu^T = \mu^T P$, o que pode ser facilmente verificado.
+Teremos então uma distribuição estacionária.
+
+\part 
+  A taxa de entropia para um cadeia de Markov de primeira ordem estacionária será dada da seguinte forma
+  \begin{eqnarray}
+  H(\mathcal{X}) &=& H'(\mathcal{X}) = \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}, \ldots, X_1) \nonumber \\
+        &=& \lim_{n \rightarrow \infty} H(X_n \mid X_{n-1}) \nonumber \\
+        && \text{dado que é Markov de 1a ordem} \nonumber \nonumber \\
+        &=& H(X_2 \mid X_1) \quad \text{(estacionário)} \nonumber \\
+        &=& - \sum_{x_2, x_1} p(x_2, x_1) \log p(x_2 \mid x_1) = \sum_i \mu_i \left[ - \sum_j p_{ij} \log p_{ij} \right] \nonumber \\
+        &=& \sum_i \mu_i H(\mathbf{p_i}) 
+  \end{eqnarray}
+  onde $\mu$ é a distribuição estacionária, $p_{ij}$ a probabilidade de transição de $i$ para $j$
+  e $\mathbf{p_i}$ é a i-ésima linha da matriz $P$.
+ 
+  Teremos assim:
+  \begin{eqnarray}
+  H(\mathcal{X}) &= \mu_1 H(\mathbf{p_1}) + \mu_2 H(\mathbf{p_2}) + \mu_3 H(\mathbf{p_3}) \nonumber \\
+		&= H(\mathbf{p_1}) = -\frac{1}{2}\log\frac{1}{2} - \frac{1}{4}\log\frac{1}{4} - \frac{1}{4}\log\frac{1}{4} = \frac{3}{2} ,
+  \end{eqnarray}
+  onde utilizamos que a entropia das linhas são todas iguais, uma vez que são apenas permutações uma das outras e
+  a distribuição de estado estacionário é uniforme.
+ 
+\end{parts}
+\end{solution}
+\end{questions}
+

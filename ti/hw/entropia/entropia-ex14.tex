@@ -1,0 +1,38 @@
+\subsection{Entropia de um alfabeto}
+% ~/ee/ufsj/2016_02/ti/prova/prova01-resolucao.tex
+
+\begin{questions}
+\question{
+Uma fonte produz uma v.a. $X$ em um alfabeto
+$\mathcal{X} = \{0,1,2,\ldots,9,a,b,c,\ldots,z\}$, sendo que, com probabilidade
+de $1/3$ teremos um número natural $\{0,1,2,\ldots,9\}$; com probabilidade de
+$1/3$ teremos uma vogal $\{a,e,i,o,u\}$; e com probabilidade de $1/3$
+teremos uma consoante $\{b,c,d,\ldots,z\}$. Todos os numerais são equiprováveis,
+assim como todas as vogais e todas as consoantes. Determine a entropia de $X$
+(não é necessário calcular os logaritmos de números que não sejam potência de 2).
+}
+
+\begin{solution}
+  \begin{eqnarray}
+  H(X) &=& H \left( \frac{1}{3} , \frac{1}{3} , \frac{1}{3} \right) + \frac{1}{3} \left( H(\text{numerais}) + H(\text{vogais}) + H(\text{consoantes}) \right) \nonumber \\
+        &=& \log 3 + \frac{1}{3} \left( \log 10 + \log 5 + \log 21 \right) = \log 3 + \frac{1}{3} \left( \log 2 + 2 \log 5 + \log 3 + \log 7 \right) \nonumber \\
+        &=& \frac{1}{3} \left( 1 + 4 \log 3 + 2 \log 5 + \log 7 \right)
+  \end{eqnarray}
+
+  Podemos também resolver da seguinte forma:
+
+  Calcular as probabilidades dos símbolos:
+  $p_{\text{numeral}} = \frac{1}{30}$, $p_{\text{vogais}} = \frac{1}{15}$ e $p_{\text{consoantes}} = \frac{1}{63}$.
+
+  Teremos então
+  \begin{eqnarray}
+  H(X) &=&  - \sum_{x \in \mathcal{X}} p(x) \log p(x) \nonumber \\
+        &=& 10 \times \left( - \frac{1}{30} \log \frac{1}{30} \right) + 5 \times \left( - \frac{1}{15} \log \frac{1}{15} \right) + 21 \times \left( \frac{1}{63} \log \frac{1}{63} \right) \nonumber \\
+        &=& \frac{1}{3} \log 30 + \frac{1}{3} \log 15 + \frac{1}{3} \log 63 \nonumber \\
+        &=& \frac{1}{3} ( \log 3 + \log 10 ) + \frac{1}{3} ( \log 3 + \log 5) + \frac{1}{3} (\log 3 + \log 21) \nonumber \\
+        &=& \log 3 + \frac{1}{3} ( \log 10 + \log 5 + \log 21 ) = \frac{1}{3} \left( 1 + 4 \log 3 + 2 \log 5 + \log 7 \right)
+  \end{eqnarray} 
+
+
+\end{solution}
+\end{questions}

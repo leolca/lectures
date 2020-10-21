@@ -1,0 +1,50 @@
+
+
+Question
+========
+Considere uma variável aleatória $X \sim p = \left(\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{16} \right)$.
+Qual é a entropia $H(X)$? E qual é a divergência KL entre $p$ e $u$ (distribuição uniforme)?
+
+
+Answerlist
+----------
+* $H(X) = \frac{15}{8}$ e $D(p||u) = \log 5 - \frac{15}{8}$.
+* $H(X) = \frac{7}{4}$ e $D(p||u) = \log 5$.
+* $H(X) = \frac{3}{8}$ e $D(p||u) = \log 3 - \frac{5}{4}$.
+* $H(X) = \frac{5}{2}$ e $D(p||u) = \log 3 + \frac{1}{8}$.
+* $H(X) = \log 5$ e $D(p||u) = -\frac{5}{8}$.
+
+
+Solution
+========
+A entropia é dada por
+$$
+\begin{aligned}
+H(X) &= - \sum_x p(x) \log p(x) = - \left( \frac{1}{2} \log \frac{1}{2} + \frac{1}{4} \log \frac{1}{4} + \frac{1}{8} \log \frac{1}{8} + \frac{1}{16} \log \frac{1}{16} + \frac{1}{16} \log \frac{1}{16} \right) \\
+     &= \left( \frac{1}{2} + \frac{2}{4} + \frac{3}{8} + \frac{4}{16} + \frac{4}{16} \right) \\
+     &= \frac{15}{8} = 1.875 \textmd{bits}
+\end{aligned}
+$$
+
+A divergência é dada por
+$$
+\begin{aligned}
+D(p||u) &= \sum_x p(x) \log \frac{p(x)}{u(x)} = \left( \frac{1}{2} \log \frac{5}{2} + \frac{1}{4} \log \frac{5}{4} + \frac{1}{8} \log \frac{5}{8} + \frac{1}{16} \log \frac{5}{16} + \frac{1}{16} \log \frac{5}{16} \right) \\
+        &= \left( \log 5 - \frac{15}{8} \right) = 0.447 \textmd{bits}
+\end{aligned}
+$$
+
+Answerlist
+----------
+* True. 
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 11000
+exname: entropia-divergencia
+exshuffle: 5

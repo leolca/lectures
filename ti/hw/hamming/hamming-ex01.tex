@@ -1,0 +1,82 @@
+\subsection{Código de Hamming (7, 4, 3)}
+
+\begin{questions}
+\question{
+Código de Hamming $(7,4,3)$
+        \begin{equation} \label{eq-mod2-h743a}
+        x_4 = (x_1 + x_2 + x_3) \mod 2 
+        \end{equation}
+        \begin{equation} \label{eq-mod2-h743b}
+        x_5 = (x_0 + x_2 + x_3) \mod 2
+        \end{equation}
+        \begin{equation} \label{eq-mod2-h743c}
+        x_6 = (x_0 + x_1 + x_3) \mod 2
+        \end{equation}
+
+        \begin{equation}
+        H = 
+        \begin{pmatrix}
+        0 & 1 & 1 & 1 & 1 & 0 & 0 \\
+        1 & 0 & 1 & 1 & 0 & 1 & 0 \\
+        1 & 1 & 0 & 1 & 0 & 0 & 1 
+        \end{pmatrix}.
+        \end{equation}
+
+
+Considere os números $a$ e $b$, o penúltimo e o último algarismos da sua matrícula, respectivamente.
+O dado a ser enviado é a representação binária com 4 bits de $((10 a + b) \mod 16)$
+(exemplo: se a matrícula fosse 114350047, teríamos $a=4$ e $b=7$, assim $47 \mod 16 = 15$ e 
+o dado em binário seria $1111$).
+
+\begin{parts}
+\part
+Escreva sequência $x$ que representa o código que será enviado utilizando a
+codificação de Hamming (7,4,3).
+
+\part 
+Considere um ruído aditivo que trocará o $k$-ésimo bit transmitido, onde $k$ será determinado
+por $k=((a+b)\mod 7)$, ou sejam, $z = z_0z_1 \ldots z_k \ldots z_7$, onde todos bits, exceto o bit
+$z_k$, são iguais a zero.
+(para o exemplo anterior, $k=11 \mod 7 = 4$ e assim o ruído seria $z=0000100$).
+Qual será o sinal recebido? Mostre como o decodificador poderá corrigir o erro
+calculando a síndrome.
+
+\part
+Qual é o tamanho do \emph{codebook} para o código de Hamming (7,4,3)?
+Este conjunto é fechado em relação à soma? Mostre um exemplo.
+
+\part 
+O que ocorrerá se houverem 2 bits errados? E se houverem 3 bits errados? 
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+  Para o exemplo em que $a=4$ e $b=7$ teríamos 
+  $x = 1111111$.
+
+\part 
+  $y = x + z = 1111011$
+
+  A síndrome é $s = \mathbf{H} y = (1 0 0)^T$, que corresponde a quinta coluna de $\mathbf{H}$.
+  Desta forma determinamos que $z=0000100$, o que está correto. Podemos encontrar $x$ fazendo
+  $x = y + z = 1111011 + 0000100 = 1111111$.
+
+\part 
+  O codebook possui 16 palavras e é um conjunto fechado em relação à soma.
+  
+  Exemplo: $w_1 = 0010110$ e $w_2 = 1011010$, $w_1 + w_2 = 1001100$ que satisfaz as equações \ref{eq-mod2-h743a},
+  \ref{eq-mod2-h743b} e \ref{eq-mod2-h743c} e portanto é um código de Hamming (7,4,3).
+
+\part 
+  Se houverem 2 bits errados o código recebido será não satisfará ao mesmo tempo as equações \ref{eq-mod2-h743a}, 
+  \ref{eq-mod2-h743b} e \ref{eq-mod2-h743c}. Será possível determinar a existência de um erro, mas não será possível 
+  corrigir corretamente.
+
+  Se houverem 3 bits errados, a palavra recebida será um código de Hamming válido e assim o erro passará despercebido.
+
+\end{parts}
+\end{solution}
+\end{questions}

@@ -1,0 +1,29 @@
+
+Question
+========
+Qual(is) das alternativas é(são) **sempre** verdadeira(s)?
+
+Answerlist
+----------
+* Se $H(X|Y) = H(X) - H(Y)$, então $X$ e $Y$ são independentes.
+* Se $H(X|Y) = 0$, então $X$ e $Y$ são independentes.
+* Se $I(X;Y) = 0$, então $X$ e $Y$ são independentes.
+* Se $H(X,Y) = 0$, então $X$ e $Y$ são independentes.
+
+Solution
+========
+
+Answerlist
+----------
+* False
+* False
+* True
+* False
+
+Meta-information
+================
+exname: independencia
+extype: mchoice
+exsolution: 0010
+exshuffle: 4
+expoints: 1

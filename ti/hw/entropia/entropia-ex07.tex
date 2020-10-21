@@ -1,0 +1,63 @@
+\subsection{Uma Medida de Correlação}
+% ex 8 Cover Thomas
+
+\begin{questions}
+\question{
+Sejam $X_1$ e $X_2$ identicamente distribuídos ($\sim p$), mas não necessariamente independentes.
+Considere
+\begin{equation}
+\rho = 1 - \frac{H(X_2|X_1)}{H(X_1)}.
+\end{equation}
+
+\begin{parts}
+\part
+Mostre que $\rho = I(X_1;X_2)/H(X_1)$.
+
+\part
+Mostre que $0 \leq \rho \leq 1$.
+
+\part
+Quando teremos $\rho=0$?
+
+\part
+Quando teremos $\rho=1$?
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+  \begin{proof}
+  \begin{eqnarray}
+  \rho &=& 1 - \frac{H(X_2|X_1)}{H(X_1)} \nonumber \\
+        &=& \frac{H(X_1) - H(X_2|X_1)}{H(X_1)} \nonumber \\
+        &=& \frac{H(X_2) - H(X_2|X_1)}{H(X_1)} \quad X_1 \text{ e } X_2 \sim p \nonumber \\
+        &=& \frac{I(X_1;X_2)}{H(X_1)}
+  \end{eqnarray}
+
+  \end{proof}
+
+\part
+  \begin{proof}
+  Como $0 \leq H(X_2|X_1) \leq H(X_2) = H(X_1)$, teremos
+  \begin{equation}
+  0 \leq \frac{H(X_2|X_1)}{H(X_1)} \leq 1 ,
+  \end{equation} 
+  e assim $0 \leq \rho \leq 1$.
+  \end{proof}
+
+\part
+  Teremos $\rho=0$ sse $X_2 \independent X_1$, pois neste caso $H(X_2|X_1) = H(X_2)$. 
+  Como $X_2$ e $X_1$ possuem a mesma distribuição, teremos $H(X_1) = H(X_2)$ e assim
+  $\rho=0$.
+
+\part
+  $\rho=1$ sse $H(X_2|X_1) = 0$, ou seja, se $X_2$ for uma função de $X_1$ e $X_1$ for uma função de $X_2$,
+  ou seja, uma função bijetiva. 
+
+\end{parts}
+\end{solution}
+\end{questions}
+
+

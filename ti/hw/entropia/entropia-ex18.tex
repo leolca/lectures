@@ -1,0 +1,96 @@
+\begin{questions}
+
+\question{
+Seja a entropia de uma v.a. binária 
+$H(p) = -p \log p - (1 - p) \log (1-p)$
+Faça o que se pede:
+
+\begin{parts}
+\part
+Qual é o valor de $H(\nicefrac{1}{4})$?  (considere $\log 3 \approx 1,585$).
+\begin{choices}
+\correctchoice $0,811$
+\choice $\nicefrac{1}{4}$
+\choice $1$
+\choice $1,584$
+\choice $3,168$
+\choice $0$
+\choice $\nicefrac{1}{2}$
+\end{choices}
+
+\part
+Qual é o valor máximo de $H(p)$ (em bits)?
+\begin{choices}
+\correctchoice $1$
+\choice $\nicefrac{1}{2}$
+\choice $\nicefrac{1}{4}$
+\choice $2$
+\choice $\infty$
+\choice $\log e$
+\choice $2 \log e$
+\end{choices}
+
+\part
+Qual é o valor mínimo de $H(p)$ (em bits)?
+\begin{choices}
+\correctchoice $0$
+\choice $-1$
+\choice $-2$
+\choice $1$
+\choice $-\infty$
+\choice $\nicefrac{1}{2}$
+\choice $\log e$
+\end{choices}
+
+\part
+Qual é o valor esperado da entropia binária $\E [H(p)]$ se $p \sim \mathcal{U}(0,1)$ (em bits)?
+\begin{choices}
+\correctchoice $\nicefrac{1}{2} \log e$
+\choice $1$
+\choice $\nicefrac{1}{e} - 1$
+\choice $\log e - 1$
+\choice $\nicefrac{1}{2}$
+\choice $\nicefrac{1}{4}$
+\choice $0$
+\end{choices}
+
+\end{parts}
+
+}
+
+\begin{solution}
+\begin{parts}
+\part
+    \begin{eqnarray}
+    H(\nicefrac{1}{4}) &=& - \nicefrac{1}{4} \log \nicefrac{1}{4} - \nicefrac{3}{4} \log \nicefrac{3}{4} \nonumber \\
+                &=& \nicefrac{1}{4} \times 2 - \nicefrac{3}{4} \log 3 + \nicefrac{3}{4} \times 2 \nonumber \\
+                &=& \nicefrac{1}{2} - \nicefrac{3}{4} \log 3 + \nicefrac{3}{2} = 2 - \nicefrac{3}{4} \log 3 \nonumber \\
+                &=& 2 - 0,75 \times 1,585 = 2 - 1,1887 = 0,8112
+    \end{eqnarray}
+
+
+\part
+    \begin{equation}
+    H(p) \leq \log \vert \mathcal{X} \vert = \log 2 = 1
+    \end{equation}
+    Logo o máximo é $1$, que ocorre quando $p = \nicefrac{1}{2}$.
+
+\part
+    \begin{equation}
+    H(p) \geq 0
+    \end{equation}
+        Logo o mínimo é $0$, que ocorre quando $p = 1$ ou quando $p = 0$.
+
+\part 
+    \begin{eqnarray}
+    \E_p H(p) &=& \int_{0}^{1} 1 \times H(p) \diff p \nonumber \\
+                &=& - \log e \int_{0}^{1} \left( p \ln p + (1-p) \ln (1-p) \right) \diff p \nonumber \\
+                &=& - 2 \log e \int_{0}^{1} p \ln p \diff p \nonumber \\
+                &=& - 2 \log e \left. \left( \frac{p^2}{2} \ln p - \frac{p^2}{4} \right)  \right|_{p=0}^{p=1} \nonumber \\
+                &=& 2 \log e \frac{1}{4} = \frac{1}{2} \log e
+    \end{eqnarray}
+
+\end{parts}
+\end{solution}
+
+\end{questions}

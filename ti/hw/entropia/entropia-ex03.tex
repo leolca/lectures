@@ -1,0 +1,41 @@
+\subsection{Entropia condicional nula}
+% Cover and Thomas Cap02 Q06
+
+\begin{questions}
+\question{
+Mostre que se $H(Y|X) = 0$, então $Y$ é uma função de $X$, isto é, para todo $x$ com probabilidade $p(x)>0$, existe apenas um único valor de $y$
+com $p(x,y) > 0$.
+}
+
+
+\begin{solution}
+Vamos realizar uma demonstração por contradição.
+
+  \begin{proof}
+Assuma que existe $x_0$, $y_1$ e $y_2$ tais que $p(x_0,y_1)>0$ e $p(x_0,y_2)>0$. Então
+  \begin{equation}
+  p(x_0) \geq \underbrace{ p(x_0,y_1) + p(x_0,y_2) }_{\text{parcela da marginal}} > 0
+  \end{equation}
+
+  Teremos as seguintes relações para as probabilidades condicionais:
+  \begin{equation}
+  p(y_1|x_0) = \frac{p(x_0,y_1)}{p(x_0)} > 0
+  \end{equation}
+  \begin{equation}
+  p(y_2|x_0) = \frac{p(x_0,y_2)}{p(x_0)} > 0
+  \end{equation}
+  ambos não são iguais a $0$ nem a $1$.
+
+  \begin{eqnarray}
+  H(Y|X) &=& - \sum_x p(x) \sum_y p(y|x) \log p(y|x) \nonumber \\
+        && \text{tomando apenas um termo } x=x_0 \nonumber \\
+        &\geq& - p(x_0) \sum_y p(y|x_0) \log p(y|x_0) \nonumber \\
+        && \text{tomando apenas dois termos } y=y_1 \text{ e } y=y_2 \nonumber \\
+        &\geq& - \underbrace{p(x_0)}_{>0} \left( \underbrace{p(y_1|x_0) \log p(y_1|x_0)}_{< 0} + \underbrace{p(y_2|x_0) \log p(y_2|x_0)}_{< 0} \right) \nonumber \\
+        &>& 0
+  \end{eqnarray}
+  Teremos igualdade apenas se $y_1 = y_2$, ou seja, $Y$ é função de $X$.
+
+  \end{proof}
+\end{solution}
+\end{questions}

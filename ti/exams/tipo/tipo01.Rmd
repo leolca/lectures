@@ -1,0 +1,49 @@
+
+Question
+========
+Considere uma fonte produzindo uma sequência $X_{1:n}$ onde $X_i \in \mathcal{X}$,
+$X_i$ é i.i.d. e $X_i \sim p$, $\forall i$.
+Com relação ao conjunto típico $A_{\epsilon}^{( n )}$ podemos afirmar que:
+
+
+Answerlist
+----------
+* O conjunto típico é o conjunto das sequências mais prováveis.
+* A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: $P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)$.
+* O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: $\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert$.
+* Quando $n$ é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.
+* O número de bits necessário para codificar as sequências no conjunto típico é maior do que $nH + 2$ bits.
+* Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.
+
+Solution
+========
+* O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade $\approx 2^{-nH}$.
+Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.
+* $P(A_{\epsilon}^{( n )}) > 1 - \epsilon$ e assim podemos afirmar que $P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1$.
+* O tamanho do conjunto típico é $\approx 2^{nH}$ que usualmente é bem menor do que $\vert \mathcal{X}^n \vert$.
+* O número de tipos cresce polinomialmente em $n$ e o número de sequências cresce exponencialmente em $n$. Eventualmente, 
+para $n$ grande suficiente, teremos que todas as sequências serão de um mesmo tipo.
+* Para codificar as sequências do conjunto típico são necessários $\leq n(H + \epsilon) + 2$ bits.
+* O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando $n$ for grande suficiente, 
+todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo,
+é mais provável do que qualquer outra classe de tipo.
+
+
+
+Answerlist
+----------
+* False. 
+* True.
+* True.
+* True.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 011100
+exname: conjunto-tipico
+exshuffle: 6
+expoints: 1
+

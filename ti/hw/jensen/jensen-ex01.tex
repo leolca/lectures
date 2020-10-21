@@ -1,0 +1,26 @@
+\subsection{Sub-estimação do desvio padrão}
+
+\begin{questions}
+\question{
+Sejam $x_1, x_2, \ldots, x_n$ amostras retiradas identicamente e independentemente (i.i.d)
+de uma determinada distribuição. Considere $\overline{x}$ a média amostral e $\widehat{\sigma} = \sqrt{ \sum_{i=1}^n \left( x_i - \overline{x} \right)^2/n }$
+o desvio padrão amostral. Mostre que $E\left[ \widehat{\sigma} \right] \leq \sigma$, onde $\sigma$ é o desvio padrão populacional, ou seja,
+$\sigma = \sqrt{ E\left[ \left( X - \mu \right)^2 \right] }$ e $\mu = E\left[ X \right]$.
+(dica: utilize a desigualdade de Jensen).
+}
+
+\begin{solution}
+  \begin{proof}
+
+  Note que a função $\sqrt{\cdot}$ é uma função concava. Iremos então aplicar a desigualdade de Jensen:
+  se $f$ é uma função concava, então $E\left[ f(X) \right] \leq f \left( E \left[ X \right] \right)$.
+
+  \begin{eqnarray}
+  E \left[ \widehat{\sigma} \right] &=& E \left[ \sqrt{ \frac{1}{n} \sum_{i=1}^n \left( x_i - \overline{x} \right)^2 } \right] \nonumber \\
+        && \text{aplicando a desigualdade de Jensen para a função concava $\sqrt{\cdot}$} \nonumber \\
+        &\leq& \sqrt{ E \left[ \frac{1}{n} \sum_{i=1}^n \left( x_i - \overline{x} \right)^2 \right]  } = \sigma 
+  \end{eqnarray}
+
+  \end{proof}
+\end{solution}
+\end{questions}

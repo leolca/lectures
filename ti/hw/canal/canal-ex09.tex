@@ -1,0 +1,94 @@
+\subsection{Canal de pombos}
+% http://www.ece.uic.edu/~devroye/courses/ECE534/HW/HW6s.pdf
+% http://users.wpi.edu/~llai/ECE5311/hw6_solution.pdf
+
+\begin{questions}
+\question{
+Suponha que você seja o comandante de um exército sitiado em um forte e 
+a única forma de comunicação possível com seus aliados é através do envio
+de pombos correio carregando mensagens. Considere que cada pombo seja capaz de
+levar apenas um símbolo de 8 bits. Os pombos são enviados um a cada 5 minutos e levam
+3 minutos para voar até seu destino.
+\begin{parts}
+\part 
+Supondo que todos os pombos chegam ao seu destino com segurança,
+qual é a capacidade deste link estabelecido em bits/horas?
+
+\part 
+Suponha agora que o inimigo tente abater os pombos e que uma fração de $\alpha$
+pombos serão efetivamente abatidos. Como os pombos são enviados a uma taxa constante,
+o seu aliado saberá quando um pombo foi abatido. Qual será agora a capacidade deste link?
+
+\part 
+Suponha agora que o inimigo seja mais astuto e envie um pombo com mensagem falsa toda vez que
+abater um pombo. A mensagem falsa será um símbolo de 8 bits escolhido aleatoriamente com distribuição
+uniforme. Qual será a capacidade deste link em bits/hora? Calcule o valor para $\alpha = 1/2$.
+
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+  A cada 60 minutos teremos 12 pombos que serão enviados e chegarão ao destino, 
+  totalizando assim o envio de $12 \times 8 = 96$ bits/hora. 
+
+\part 
+  Este canal funciona como um canal binário com apagamento.
+
+  \includegraphics[width=0.25\textwidth]{../images/bech.pdf}
+
+  A capacidade deste canal é dada por $C = 1 - \alpha$.
+  Como estamos enviando 8 bits simultâneamente, a capacidade do canal de pombos será $8\times (1 - \alpha)$.
+  São enviados 12 pombos por hora, logo teremos que a capacidade do canal por hora será de 
+  $12\times 8 \times (1 - \alpha) = 96(1 - \alpha)$ bits por hora.
+
+\part 
+  Sabemos que existe uma probabilidade de $\alpha$ de que o pombo seja abatido, logo
+  existe uma probabilidade de $(1-\alpha)$ de que o pombo chegue sem ser abatido.
+  Quando um pombo é abatido será enviado um outro em seu lugar. A probabilidade deste novo
+  pombo carregar a mesma mensagem que aquele abatido é de $1/256$. Concluímos assim que 
+  existe uma probabilidade de $(1-\alpha) + \alpha / 256$ de que a mensagem seja recebida sem erro.
+  Cada caso de erro ocorrerá com probabilidade $\alpha / 256$. A matriz de transição do canal 
+  (de dimensões $256 \times 256$) será então:
+
+  \begin{equation} 
+  p(y|x) = 
+  \begin{pmatrix} 
+  (1-\alpha) + \alpha / 256 & \alpha / 256 & \ldots & \alpha / 256 \\
+  \alpha / 256 & (1-\alpha) + \alpha / 256 & \ldots & \alpha / 256 \\
+  \vdots & & \ddots  & \vdots \\
+  \alpha / 256 & \alpha / 256 & \ldots & (1-\alpha) + \alpha / 256
+  \end{pmatrix}
+  \end{equation}
+
+Temos um canal simétrico. A sua capacidade é dada por
+  \begin{equation}
+  C = \log | \mathcal{Y} | - H(r)
+  \end{equation}
+  onde temos $| \mathcal{Y} | = 2^8 = 256$ e $r = ((1-\alpha) + \alpha / 256, \alpha / 256, \ldots, \alpha / 256)$.
+
+  Teremos assim
+  \begin{equation}
+  C = 8 - H\left( (1-\alpha) + \alpha / 256, \alpha / 256, \ldots, \alpha / 256 \right).
+  \end{equation}
+  Como o canal é utilizado 12 vezes por hora, teremos
+  \begin{equation}
+  C = 12 \times \left( 8 - H\left( (1-\alpha) + \alpha / 256, \alpha / 256, \ldots, \alpha / 256 \right) \right).
+  \end{equation}
+  Para $\alpha = 1/2$ teremos
+  \begin{eqnarray}
+  C &=& 8 - H\left( 1/2 + 1/512, 1/512, \ldots, 1/512 \right) \nonumber \\
+    &=& 8 + (257/512) \log (257/512) + (255/512) \log (1/512) \nonumber \\
+    &=& 8 + (257/512) (\log 257 - 9) + (255/512) (-9) \nonumber \\
+    &=& 3.0184 \text{ bits,}
+  \end{eqnarray}
+  e assim
+  \begin{equation}
+  C = 12 \times 3.0184 = 36.221 \text{ bits/hora.}
+  \end{equation}
+
+\end{parts}
+\end{solution}
+\end{questions}
+

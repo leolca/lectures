@@ -1,0 +1,67 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## parameters
+p <- c(1/2, 1/4, 1/8, 1/16, 1/16)
+u <- rep(1, length(p))/length(p)
+## solution
+entropy <- function(p) {
+  H = -sum(p*log2(p))
+  return(H)
+}
+KLdiv <- function(p,q) {
+  D = sum(p*(log2(p) - log2(q)))
+  return(D)
+}
+Rent <- entropy(p) 
+Rdiv <- KLdiv(p,u)
+```
+
+Question
+========
+Considere uma variável aleatória $X \sim p = \left(\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{16} \right)$.
+Qual é a entropia $H(X)$? E qual é a divergência KL entre $p$ e $u$ (distribuição uniforme)?
+
+Answerlist
+---------------
+
+* Qual é a entropia $H(X)$?
+
+* Qual é a divergência KL entre $p$ e $u$ (distribuição uniforme)?
+
+Solution
+========
+A entropia é dada por
+$$
+\begin{aligned} 
+H(X) &= -\sum_x p(x) \log p(x) \\
+     &= -\left( \frac{1}{2} \log \frac{1}{2} + \frac{1}{4} \log \frac{1}{4} + \frac{1}{8} \log \frac{1}{8} + \frac{1}{16} \log \frac{1}{16} + \frac{1}{16} \log \frac{1}{16} \right) \\
+     &= \left( \frac{1}{2} + \frac{2}{4} + \frac{3}{8} + \frac{4}{16} + \frac{4}{16} \right) \\
+     &= \frac{15}{8} = 1.875 \text{bits}
+\end{aligned}
+$$
+
+A divergência é dada por
+$$
+\begin{aligned}
+D(p||u) &= \sum_x p(x) \log \frac{p(x)}{u(x)} \\
+        &= \left( \frac{1}{2} \log \frac{5}{2} + \frac{1}{4} \log \frac{5}{4} + \frac{1}{8} \log \frac{5}{8} + \frac{1}{16} \log \frac{5}{16} + \frac{1}{16} \log \frac{5}{16} \right) \\
+        &= \left( \log 5 - \frac{15}{8} \right) = 0.447 \text{bits} 
+\end{aligned}
+$$
+
+Answerlist
+----------
+
+* $H(X) = 1.875$ bits.
+
+* $D(p||u) = 0.447$ bits.
+
+
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num
+exsolution: `r fmt(Rent)`|`r fmt(Rdiv)`
+exname: entropia-divergencia
+extol: 0.01
+expoints: 1|1

@@ -1,0 +1,37 @@
+Question
+========
+Com relação aos códigos, podemos afirmar que:
+
+Answerlist
+----------
+* Todo código de prefixo é um código unicamente decodificável.
+* Todo código unicamente decodificável possui propriedade de prefixo.
+* Todo código não-síngular é unicamente decodificável.
+* Todo código unicamente decodificável é singular.
+* Se a extensão de um código for singular, ele necessariamente será unicamente decodificável.
+* Para todo código unicamente decodificável com comprimento esperado $L$, existe um código de prefixo com o mesmo comprimento esperado $L$.
+* Todo código que satisfaz a desigualdade de Kraft é um código de prefixo.
+* Dados comprimentos $(l_1,l_2,\ldots,l_n)$, satisfazendo a desigualdade de Kraft, é possível construir um código não-singular com estes comprimentos.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+* True.
+* False.
+* True.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 10000101
+exname: codigos
+exshuffle: 6
+expoints: 1
+

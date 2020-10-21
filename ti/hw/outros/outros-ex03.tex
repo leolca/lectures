@@ -1,0 +1,41 @@
+\subsection{Comportamento no limite}
+% harvard / HW2_ES250_sol_a
+
+\begin{questions}
+\question{
+Sejam $X_1,X_2,\ldots$ tirados de forma i.i.d. de acordo com a seguinte distribuição:
+\begin{equation}
+        X_i = 
+        \begin{cases} 
+        1, \quad 1/2, \\
+        2, \quad 1/4, \\
+        3, \quad 1/4.
+        \end{cases}
+\end{equation}
+Encontre o comportamento limite para o produto
+\begin{equation}
+        (X_1 X_2 \ldots X_n)^{1/n}
+\end{equation}
+
+}
+
+\begin{solution}
+Vamos definir
+\begin{equation}
+P_n = (X_1 X_2 \ldots X_n )^{\frac{1}{n}} = \left( \prod_{i=1}^{n} X_i \right)^{\frac{1}{n}} , 
+\end{equation}
+assim teremos
+\begin{equation}
+\log P_n = \frac{1}{n} \sum_{i=1}^{n} \log X_i \rightarrow \E [\log X]  ,
+\end{equation}
+pela lei forte dos grandes números. Assim, poderemos concluir que
+$P_n \rightarrow 2^{\E [\log X]}$.
+
+Dada os valores que $X_i$ assume e sua distribuição, podemos calcular
+\begin{equation}
+\E [\log X] = \frac{1}{2} \log 1 + \frac{1}{4} \log 2 + \frac{1}{4} \log 3 = \frac{1}{4} \log 6  .
+\end{equation}
+Desta forma, teremos $P_n \rightarrow 2^{\frac{1}{4} \log 6} = 6^{1/4} = 1.565$.
+
+\end{solution}
+\end{questions}

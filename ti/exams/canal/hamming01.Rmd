@@ -1,0 +1,47 @@
+Question
+========
+
+Considere o código de Hamming (7,4,3) seguindo a convenção estabelecida nas aulas, onde os 4 primeiros bits são bits de dados
+e os últimos 3 bits são bits verificadores de paridade.
+
+Suponha que uma sequência de símbolos em Hexadecimal (0-9ABCDEF) foi enviada pela fonte, utilizando o código de Hamming.
+Cada símbolo Hexadecimal é representado por sua sequência binária correspondente.
+O receptor recebeu a seguinte sequência: 01011001000011111001.
+
+Determine a sequência Hexadecimal (use maiúsculas) enviada pela fonte (não utilize nenhum caractere separando os símbolos). 
+
+Answerlist
+----------
+* Sequência produzida pela fonte:
+
+Solution
+========
+
+Vamos primeiramente separa os grupos de 7 bits (palavras do código de Hamming 743): 0101100, 1000011, 111001.
+
+Para cada uma demas iremos calcular a síndrome e corrigir:
+
+$s_1 = [1 1 0]^T$: (3a coluna de $H$).
+
+Devemos trocar o 3 bit e assim obter: 0111100. Bits de dados 0111 (hex=7).
+
+$s_2 = [0 0 0]^T$: (não houve erro).
+
+Bits enviados: 1000011. Bits de dados 1000 (hex=8).
+
+$s_3 = [0 0 1]^T$: (7a coluna de $H$).
+
+Devemos trocar o último bit e assim obter: 111000. Bits de dados 1110 (hex=E).
+
+A sequência produzida pela fonte foi: 78E.
+
+Answerlist
+----------
+* Sequência produzida pela fonte: 78E.
+
+Meta-information
+================
+extype: string
+exsolution: 78E
+exname: hamming743
+expoints: 1

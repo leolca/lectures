@@ -1,0 +1,37 @@
+
+
+Question
+========
+Com relação à entropia $H$ de uma fonte discreta, que produz a
+v.a. $X \in \mathcal{X}$, podemos afirmar que:
+
+
+Answerlist
+----------
+* A entropia é não negativa, $H(X) \geq 0$.
+* A entropia é limitada a $H(X) \leq \log \vert \mathcal{X} \vert$.
+* A entropia é máxima quando a fonte tiver distribuição geométrica. 
+* A entropia é uma função dos valores $x$ que a v.a. $X$ assume.
+* A entropia é sempre uma função convexa.
+* A entropia pode ser côncava ou convexa, dependendo da distribuição da fonte.
+
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* True.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 110000
+exname: propriedades-da-entropia
+exshuffle: 6
+expoints: 1

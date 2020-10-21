@@ -1,0 +1,44 @@
+\subsection{Taxa de entropia}
+
+\begin{questions}
+\question{
+Seja $X_1,X_2,\ldots$ variáveis aleatórias independentes e identicamente distribuídas 
+de acordo com uma função massa probabilidade $p(x)$, $x \in \{1,2,\ldots,m\}$. 
+Então, $p(x_1,x_2,\ldots,x_n) = \prod_{i=1}^n p(x_i)$. Sabemos que $-\frac{1}{n} \log p(X_1, X_2, \ldots, X_n) \rightarrow H(X)$ 
+em probabilidade. Seja $q(x_1,x_2,\ldots,x_n) = \prod_{i=1}^n q(x_i)$, onde $q$ 
+é outra função massa probabilidade em $\{1,2,\ldots,m\}$.
+
+\begin{parts}
+\part Avalie $\lim -\frac{1}{n} \log q(X_1, X_2, \ldots, X_n)$ onde $X_1,X_2,\ldots$ são i.i.d. $\sim p(x)$.
+\part Avalie agora o limite da razão de verossimilhança logarítmica 
+$\frac{1}{n} \log \frac{q(X_1, \ldots, X_n)}{p(X_1, \ldots, X_n)}$, onde $X_1, X_2, \ldots$ são i.i.d. $\sim p(x)$. 
+Desta forma, a vantagem favorecendo $q$ é exponencialmente pequena quando $p$ é verdadeiro.
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part 
+\begin{eqnarray}
+\lim -\frac{1}{n} \log q(X_1, X_2, \ldots, X_n) &=& \lim -\frac{1}{n} \log \prod_{i=1}^{n} q(X_i) \nonumber \\
+        &=& \lim -\frac{1}{n} \sum_{i=1}^{n} \log q(X_i) \nonumber \\
+        &=& - \E [\log q(X)] \nonumber \\
+        &=& - \sum p(x) \log q(x) = \sum p(x) \log \frac{p(x)}{q(x) p(x)} \nonumber \\
+        &=& \sum p(x) \log \frac{p(x)}{q(x)} - \sum p(x) \log p(x) \nonumber \\
+        &=& D(p||q) + H(p)
+\end{eqnarray}
+
+\part 
+\begin{eqnarray}
+\lim \frac{1}{n} \log \frac{ q(X_1, X_2, \ldots, X_n) }{ p(X_1, X_2, \ldots, X_n) } &=& 
+        \lim \frac{1}{n} \log \frac{ \prod_{i=1}^n q(X_i) }{ \prod_{i=1}^n p(X_i)  } \nonumber \\
+        &=& \lim \frac{1}{n} \sum_{i=1}^n \log \frac{ q(X_i) }{ p(X_i) } \nonumber \\
+        &=& \E \left[ \log \frac{ q(X) }{ p(X) }  \right] \nonumber \\
+        &=& \sum p(x) \log \frac{ q(x) }{ p(x) } \nonumber \\
+        &=& - \sum p(x) \log \frac{ p(x) }{ q(x) } \nonumber \\
+        &=& - D(p || q)
+\end{eqnarray}
+
+\end{parts}
+\end{solution}
+\end{questions}

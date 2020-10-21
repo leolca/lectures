@@ -1,0 +1,78 @@
+\subsection{Divergência de Jensen-Shannon}
+% ~/MC-Projects/prova-ti-201701-01-sub/source.tex 
+
+\begin{questions}
+\question{
+        A divergência de Jensen-Shannon é um forma de medir a 
+        similaridade entre duas distribuições, sendo utilizada, por exemplo,
+        em técnicas de aprendizado de máquina na tarefa de discriminação de
+        classes. 
+        
+        A divergência de Jensen-Shannon entre duas distribuições $p$ e $q$ é definida por
+        \begin{equation}
+        \mathrm{JSD}(p||q) = \frac{1}{2} D_{\mathrm{KL}}(p||m) + \frac{1}{2} D_{\mathrm{KL}}(q||m), \nonumber
+        \end{equation}
+        onde $m$ é a mistura das distribuições $p$ e $q$, 
+        $m = \nicefrac{1}{2}(p+q)$, e $D_{\mathrm{KL}}$    é a divergência de Kullback-Leibler.
+                
+% http://users.ugent.be/~gverdool/maxent2016/sp/Carrara_MaxEnt_2016_Slides_or_poster.pdf
+
+\begin{parts}
+\part
+    Sobre a divergência de Jensen-Shannon, podemos mostrar
+    a seguinte relação entre $\mathrm{JSD}(p||q)$, $H(m)$, $H(p)$ e $H(q)$:
+	\begin{choices}
+	\correctchoice $\mathrm{JSD}(p||q) = H(m) - \frac{1}{2} H(p) - \frac{1}{2} H(q)$
+	\choice $\mathrm{JSD}(p||q) = H(m) + \frac{1}{2} H(p) + \frac{1}{2} H(q)$
+	\choice $\mathrm{JSD}(p||q) = H(m) - H(p) - H(q)$
+	\choice $\mathrm{JSD}(p||q) = H(m) + H(p) + H(q)$
+	\choice $\mathrm{JSD}(p||q) = H(m) - 2 H(p) - 2 H(q)$
+	\choice $\mathrm{JSD}(p||q) = H(m) + 2 H(p) + 2 H(q)$
+	\choice $\mathrm{JSD}(p||q) = 2 H(p) + 2 H(q) - H(m)$
+	\end{choices}
+
+\part
+    Sobre a divergência de Jensen-Shannon, podemos mostrar seu limite superior e inferior
+	\begin{choices}
+	\correctchoice $0 \leq \mathrm{JSD}(p||q) \leq 1$
+	\choice $0 \leq \mathrm{JSD}(p||q) \leq 2$
+	\choice $0 \leq \mathrm{JSD}(p||q) \leq \nicefrac{1}{2}$
+	\choice $\nicefrac{1}{2} \leq \mathrm{JSD}(p||q) \leq 2$
+	\choice $1 \leq \mathrm{JSD}(p||q) \leq 2$ 
+	\choice $-1 \leq \mathrm{JSD}(p||q) \leq 1$
+	\choice $\nicefrac{1}{2} \leq \mathrm{JSD}(p||q) \leq \nicefrac{3}{2}$
+	\end{choices}
+    \textit{(dica)} Para mostrar o limite superior de $\mathrm{JSD}(p||q)$, encontre 
+    o limite superior de cada uma das parcelas da soma na Equação 
+    de definição da divergência de Jensen-Shannon.  
+\end{parts}
+}
+
+\begin{solution}
+\begin{parts}
+\part
+    A relação entre $\mathrm{JSD}(p||q)$ e $H(m)$, $H(p)$ e $H(q)$ é dada por
+    \begin{eqnarray}
+    \mathrm{JSD}(p||q) &=& \frac{1}{2} D_{\mathrm{KL}}(p||m) + \frac{1}{2} D_{\mathrm{KL}}(q||m) \nonumber \\
+                &=& \frac{1}{2} \sum p \log \nicefrac{p}{m} + \frac{1}{2} \sum q \log \nicefrac{q}{m} \nonumber \\
+                &=& \frac{1}{2} \underbrace{\sum p \log p}_{-H(p)} - \frac{1}{2} \sum p \log m + \frac{1}{2} \underbrace{\sum q \log q}_{-H(q)} - \frac{1}{2} \sum q \log m \nonumber \\
+                &=& - \frac{1}{2} H(p) - \frac{1}{2} H(q) - \sum m \log m = H(m) - \frac{1}{2} H(p) - \frac{1}{2} H(q)
+    \end{eqnarray}   
+
+\part
+    O limite inferior de $\mathrm{JSD}(p||q)$ é facilmente constato utilizando-se
+    o limite a divergência de KL. Assim teremos $\mathrm{JSD}(p||q) \geq 0$.
+    Para encontrar o limite superior, iremos encontrar o limite de cada uma das
+    parcelas que compõem $\mathrm{JSD}(p||q)$.
+    \begin{eqnarray}
+    D_{\mathrm{KL}}(p||m) &=& \sum p \log \nicefrac{p}{m} = \sum p \log \nicefrac{2p}{(p+q)} \nonumber \\
+                &=& \sum p \underbrace{ \log \underbrace{\nicefrac{p}{(p+q)}}_{\leq 1} }_{\leq 0} + \underbrace{\sum p \log 2}_{=1} \leq 1
+    \end{eqnarray}
+    Seguindo os mesmos passos podemos demonstrar que $D_{\mathrm{KL}}(q||m) \leq 1$, 
+    e assim teremos
+    \begin{equation}
+    \mathrm{JSD}(p||q) = \frac{1}{2} D_{\mathrm{KL}}(p||m) + \frac{1}{2} D_{\mathrm{KL}}(q||m)  \leq 1
+    \end{equation}     
+\end{parts}
+\end{solution}
+\end{questions}
