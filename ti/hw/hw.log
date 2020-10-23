@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.26)  20 OCT 2020 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.26)  21 OCT 2020 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2583,6 +2583,30 @@ LaTeX Warning: Label `part@1@4' multiply defined.
 
 LaTeX Warning: Label `part@1@4@cref' multiply defined.
 
+
+LaTeX Warning: Label `question@1' multiply defined.
+
+
+LaTeX Warning: Label `question@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1' multiply defined.
+
+
+LaTeX Warning: Label `part@1@1@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2' multiply defined.
+
+
+LaTeX Warning: Label `part@1@2@cref' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3' multiply defined.
+
+
+LaTeX Warning: Label `part@1@3@cref' multiply defined.
+
 )
 \openout1 = `hw.aux'.
 
@@ -2651,7 +2675,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count379
  ABD: EveryShipout initializing macros
-<../images/logoufsj.pdf, id=344, 189.63756pt x 190.32133pt>
+<../images/logoufsj.pdf, id=348, 189.63756pt x 190.32133pt>
 File: ../images/logoufsj.pdf Graphic file (type pdf)
 <use ../images/logoufsj.pdf>
 Package pdftex.def Info: ../images/logoufsj.pdf  used on input line 218.
@@ -2695,7 +2719,7 @@ Overfull \vbox (17.29472pt too high) detected at line 40
 
 [5]) (./divergencia/divergencia-ex01.tex [6]) (./entropia/entropia-ex04.tex
 [7]
-<../images/info-set.pdf, id=518, 240.38127pt x 112.75018pt>
+<../images/info-set.pdf, id=523, 240.38127pt x 112.75018pt>
 File: ../images/info-set.pdf Graphic file (type pdf)
 <use ../images/info-set.pdf>
 Package pdftex.def Info: ../images/info-set.pdf  used on input line 102.
@@ -2802,13 +2826,13 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<../images/errorentropy.pdf, id=649, 462.52798pt x 346.89601pt>
+<../images/errorentropy.pdf, id=654, 462.52798pt x 346.89601pt>
 File: ../images/errorentropy.pdf Graphic file (type pdf)
 <use ../images/errorentropy.pdf>
 Package pdftex.def Info: ../images/errorentropy.pdf  used on input line 165.
 (pdftex.def)             Requested size: 216.59018pt x 162.44301pt.
  [16] [17] [18 <../images/errorentropy.pdf>]) (./entropia/entropia-ex11.tex
-<../images/dicelurian.pdf, id=713, 462.52798pt x 346.89601pt>
+<../images/dicelurian.pdf, id=718, 462.52798pt x 346.89601pt>
 File: ../images/dicelurian.pdf Graphic file (type pdf)
 <use ../images/dicelurian.pdf>
 Package pdftex.def Info: ../images/dicelurian.pdf  used on input line 71.
@@ -2821,14 +2845,14 @@ Overfull \hbox (61.41676pt too wide) in paragraph at lines 10--10
 o-[]e-[]bingo-[]no-[]brasil .
  []
 
-<../images/niquel.pdf, id=742, 462.52798pt x 346.89601pt>
+<../images/niquel.pdf, id=747, 462.52798pt x 346.89601pt>
 File: ../images/niquel.pdf Graphic file (type pdf)
 <use ../images/niquel.pdf>
 Package pdftex.def Info: ../images/niquel.pdf  used on input line 129.
 (pdftex.def)             Requested size: 216.59018pt x 162.44301pt.
 [20 <../images/dicelurian.pdf>] [21]) (./entropia/entropia-ex13.tex [22 <../ima
 ges/niquel.pdf>]) (./entropia/entropia-ex14.tex) (./entropia/entropia-ex15.tex
-<../images/quantizador.pdf, id=822, 219.50194pt x 63.95476pt>
+<../images/quantizador.pdf, id=827, 219.50194pt x 63.95476pt>
 File: ../images/quantizador.pdf Graphic file (type pdf)
 <use ../images/quantizador.pdf>
 Package pdftex.def Info: ../images/quantizador.pdf  used on input line 14.
@@ -2896,7 +2920,7 @@ n/10 em $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Z[]; Z[]; [] ; Z[]\OT1/cmr/m/n/10 )$
  []
 
 [53]) (./markov/markov-ex03.tex
-<../images/ehrenfest.png, id=1464, 301.125pt x 150.5625pt>
+<../images/ehrenfest.png, id=1469, 301.125pt x 150.5625pt>
 File: ../images/ehrenfest.png Graphic file (type png)
 <use ../images/ehrenfest.png>
 Package pdftex.def Info: ../images/ehrenfest.png  used on input line 15.
@@ -2907,7 +2931,7 @@ Overfull \vbox (7.40758pt too high) detected at line 307
 
 [55] [56] [57] [58]) (./markov/markov-ex04.tex [59] [60] [61])
 (./markov/markov-ex05.tex [62]) (./markov/markov-ex06.tex
-<../images/sunrain.pdf, id=1655, 291.62454pt x 386.40236pt>
+<../images/sunrain.pdf, id=1660, 291.62454pt x 386.40236pt>
 File: ../images/sunrain.pdf Graphic file (type pdf)
 <use ../images/sunrain.pdf>
 Package pdftex.def Info: ../images/sunrain.pdf  used on input line 60.
@@ -2919,7 +2943,7 @@ Package pdftex.def Info: ../images/sunrain.pdf  used on input line 60.
                                                   \fi \fi 
 l.133 \end{solution}
                      <../images/sunrain.pdf>]) (./markov/markov-ex07.tex
-<../images/catwalk.pdf, id=1678, 154.17601pt x 143.33551pt>
+<../images/catwalk.pdf, id=1683, 154.17601pt x 143.33551pt>
 File: ../images/catwalk.pdf Graphic file (type pdf)
 <use ../images/catwalk.pdf>
 Package pdftex.def Info: ../images/catwalk.pdf  used on input line 15.
@@ -2950,7 +2974,7 @@ Overfull \hbox (14.45085pt too wide) in paragraph at lines 122--123
  []
 
 ) (./codigos/codigos-ex04.tex [77]
-<../images/hufftree.pdf, id=1882, 155.60472pt x 185.00922pt>
+<../images/hufftree.pdf, id=1887, 155.60472pt x 185.00922pt>
 File: ../images/hufftree.pdf Graphic file (type pdf)
 <use ../images/hufftree.pdf>
 Package pdftex.def Info: ../images/hufftree.pdf  used on input line 69.
@@ -2959,7 +2983,7 @@ File: ../images/hufftree.pdf Graphic file (type pdf)
 <use ../images/hufftree.pdf>
 Package pdftex.def Info: ../images/hufftree.pdf  used on input line 123.
 (pdftex.def)             Requested size: 64.9744pt x 77.25165pt.
-<../images/shannofano.pdf, id=1883, 214.50616pt x 239.03372pt>
+<../images/shannofano.pdf, id=1888, 214.50616pt x 239.03372pt>
 File: ../images/shannofano.pdf Graphic file (type pdf)
 <use ../images/shannofano.pdf>
 Package pdftex.def Info: ../images/shannofano.pdf  used on input line 129.
@@ -3022,48 +3046,48 @@ Overfull \hbox (53.48184pt too wide) in paragraph at lines 91--92
  []
 
 ) (./codigos/codigos-ex09.tex [84]
-<../images/acoding.pdf, id=2027, 551.59598pt x 305.91643pt>
+<../images/acoding.pdf, id=2032, 551.59598pt x 305.91643pt>
 File: ../images/acoding.pdf Graphic file (type pdf)
 <use ../images/acoding.pdf>
 Package pdftex.def Info: ../images/acoding.pdf  used on input line 51.
 (pdftex.def)             Requested size: 346.54561pt x 192.19154pt.
 ) (./canal/canal-ex01.tex [85 <../images/acoding.pdf>]
-<../images/2paralell_binarychannel.pdf, id=2050, 202.14452pt x 187.0076pt>
+<../images/2paralell_binarychannel.pdf, id=2055, 202.14452pt x 187.0076pt>
 File: ../images/2paralell_binarychannel.pdf Graphic file (type pdf)
 <use ../images/2paralell_binarychannel.pdf>
 Package pdftex.def Info: ../images/2paralell_binarychannel.pdf  used on input l
 ine 15.
 (pdftex.def)             Requested size: 93.94955pt x 86.91483pt.
-<../images/singlechannel_binarychannel.pdf, id=2051, 201.65048pt x 114.72925pt>
+<../images/singlechannel_binarychannel.pdf, id=2056, 201.65048pt x 114.72925pt>
 
 File: ../images/singlechannel_binarychannel.pdf Graphic file (type pdf)
 <use ../images/singlechannel_binarychannel.pdf>
 Package pdftex.def Info: ../images/singlechannel_binarychannel.pdf  used on inp
 ut line 26.
 (pdftex.def)             Requested size: 93.94955pt x 53.45183pt.
-<../images/ternarychannel_binarychannel.pdf, id=2052, 202.47388pt x 267.79451pt
+<../images/ternarychannel_binarychannel.pdf, id=2057, 202.47388pt x 267.79451pt
 >
 File: ../images/ternarychannel_binarychannel.pdf Graphic file (type pdf)
 <use ../images/ternarychannel_binarychannel.pdf>
 Package pdftex.def Info: ../images/ternarychannel_binarychannel.pdf  used on in
 put line 37.
 (pdftex.def)             Requested size: 93.94955pt x 124.26164pt.
-<../images/plot01a05.pdf, id=2053, 505.7335pt x 389.21712pt>
+<../images/plot01a05.pdf, id=2058, 505.7335pt x 389.21712pt>
 File: ../images/plot01a05.pdf Graphic file (type pdf)
 <use ../images/plot01a05.pdf>
 Package pdftex.def Info: ../images/plot01a05.pdf  used on input line 100.
 (pdftex.def)             Requested size: 123.45726pt x 95.0116pt.
-<../images/plot01a025.pdf, id=2054, 505.7335pt x 389.21712pt>
+<../images/plot01a025.pdf, id=2059, 505.7335pt x 389.21712pt>
 File: ../images/plot01a025.pdf Graphic file (type pdf)
 <use ../images/plot01a025.pdf>
 Package pdftex.def Info: ../images/plot01a025.pdf  used on input line 104.
 (pdftex.def)             Requested size: 123.45726pt x 95.0116pt.
-<../images/plot01a0125.pdf, id=2055, 505.7335pt x 389.21712pt>
+<../images/plot01a0125.pdf, id=2060, 505.7335pt x 389.21712pt>
 File: ../images/plot01a0125.pdf Graphic file (type pdf)
 <use ../images/plot01a0125.pdf>
 Package pdftex.def Info: ../images/plot01a0125.pdf  used on input line 108.
 (pdftex.def)             Requested size: 123.45726pt x 95.0116pt.
-<../images/bech2.pdf, id=2057, 147.60428pt x 87.66461pt>
+<../images/bech2.pdf, id=2062, 147.60428pt x 87.66461pt>
 File: ../images/bech2.pdf Graphic file (type pdf)
 <use ../images/bech2.pdf>
 Package pdftex.def Info: ../images/bech2.pdf  used on input line 220.
@@ -3087,12 +3111,12 @@ pdfTeX warning: pdflatex (file ../images/plot01a0125.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >] [88]) (./canal/canal-ex02.tex [89 <../images/bech2.pdf>])
 (./canal/canal-ex03.tex [90]) (./canal/canal-ex04.tex
-<../images/xplusz.pdf, id=2210, 184.95932pt x 113.12102pt>
+<../images/xplusz.pdf, id=2215, 184.95932pt x 113.12102pt>
 File: ../images/xplusz.pdf Graphic file (type pdf)
 <use ../images/xplusz.pdf>
 Package pdftex.def Info: ../images/xplusz.pdf  used on input line 8.
 (pdftex.def)             Requested size: 93.94955pt x 57.45964pt.
-<../images/canalapagamento.pdf, id=2211, 147.60428pt x 87.66461pt>
+<../images/canalapagamento.pdf, id=2216, 147.60428pt x 87.66461pt>
 File: ../images/canalapagamento.pdf Graphic file (type pdf)
 <use ../images/canalapagamento.pdf>
 Package pdftex.def Info: ../images/canalapagamento.pdf  used on input line 46.
@@ -3102,14 +3126,14 @@ Package pdftex.def Info: ../images/canalapagamento.pdf  used on input line 46.
 pdfTeX warning: pdflatex (file ../images/canalapagamento.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]) (./canal/canal-ex05.tex) (./canal/canal-ex06.tex [92]
-<../images/figure1.pdf, id=2266, 509.24173pt x 385.00815pt>
+<../images/figure1.pdf, id=2271, 509.24173pt x 385.00815pt>
 File: ../images/figure1.pdf Graphic file (type pdf)
 <use ../images/figure1.pdf>
 Package pdftex.def Info: ../images/figure1.pdf  used on input line 66.
 (pdftex.def)             Requested size: 216.59018pt x 163.7526pt.
  [93])
 (./canal/canal-ex07.tex [94 <../images/figure1.pdf>]) (./canal/canal-ex08.tex
-<../images/canalbinapag.pdf, id=2310, 282.31473pt x 67.9328pt>
+<../images/canalbinapag.pdf, id=2315, 282.31473pt x 67.9328pt>
 File: ../images/canalbinapag.pdf Graphic file (type pdf)
 <use ../images/canalbinapag.pdf>
 Package pdftex.def Info: ../images/canalbinapag.pdf  used on input line 13.
@@ -3119,20 +3143,20 @@ Underfull \vbox (badness 1028) detected at line 104
  []
 
 [95 <../images/canalbinapag.pdf>] [96]) (./canal/canal-ex09.tex
-<../images/bech.pdf, id=2333, 147.60428pt x 87.66461pt>
+<../images/bech.pdf, id=2338, 147.60428pt x 87.66461pt>
 File: ../images/bech.pdf Graphic file (type pdf)
 <use ../images/bech.pdf>
 Package pdftex.def Info: ../images/bech.pdf  used on input line 39.
 (pdftex.def)             Requested size: 108.29509pt x 64.31833pt.
  [97 <../images/bech.pdf>]) (./canal/canal-ex10.tex
-<../images/zchannel.pdf, id=2378, 190.31177pt x 66.54147pt>
+<../images/zchannel.pdf, id=2383, 190.31177pt x 66.54147pt>
 File: ../images/zchannel.pdf Graphic file (type pdf)
 <use ../images/zchannel.pdf>
 Package pdftex.def Info: ../images/zchannel.pdf  used on input line 21.
 (pdftex.def)             Requested size: 129.95543pt x 45.44153pt.
  [98 <../images/zchannel.pdf>])
 (./canal/canal-ex11.tex
-<../images/canal24.pdf, id=2403, 252.5701pt x 131.83401pt>
+<../images/canal24.pdf, id=2408, 252.5701pt x 131.83401pt>
 File: ../images/canal24.pdf Graphic file (type pdf)
 <use ../images/canal24.pdf>
 Package pdftex.def Info: ../images/canal24.pdf  used on input line 9.
@@ -3151,14 +3175,14 @@ Underfull \vbox (badness 10000) detected at line 192
  []
 
 [101]) (./canal/canal-ex12.tex
-<../images/canale.pdf, id=2450, 179.24423pt x 145.45584pt>
+<../images/canale.pdf, id=2455, 179.24423pt x 145.45584pt>
 File: ../images/canale.pdf Graphic file (type pdf)
 <use ../images/canale.pdf>
 Package pdftex.def Info: ../images/canale.pdf  used on input line 9.
 (pdftex.def)             Requested size: 140.92793pt x 114.3673pt.
  [102 <../images/canale.pdf>])
 (./canal/canal-ex13.tex
-<../images/canalm.pdf, id=2470, 193.17578pt x 108.10767pt>
+<../images/canalm.pdf, id=2475, 193.17578pt x 108.10767pt>
 File: ../images/canalm.pdf Graphic file (type pdf)
 <use ../images/canalm.pdf>
 Package pdftex.def Info: ../images/canalm.pdf  used on input line 9.
@@ -3176,7 +3200,7 @@ Underfull \vbox (badness 10000) detected at line 96
  []
 
 [104]) (./canal/canal-ex14.tex
-<../images/canalbse.pdf, id=2497, 302.72145pt x 133.89801pt>
+<../images/canalbse.pdf, id=2502, 302.72145pt x 133.89801pt>
 File: ../images/canalbse.pdf Graphic file (type pdf)
 <use ../images/canalbse.pdf>
 Package pdftex.def Info: ../images/canalbse.pdf  used on input line 15.
@@ -3186,12 +3210,12 @@ Package pdftex.def Info: ../images/canalbse.pdf  used on input line 15.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [105] [106 <../images/canalbse.pdf>]) (./canal/canal-ex15.tex
-<../images/c-enc-c.pdf, id=2533, 220.20734pt x 57.02724pt>
+<../images/c-enc-c.pdf, id=2538, 220.20734pt x 57.02724pt>
 File: ../images/c-enc-c.pdf Graphic file (type pdf)
 <use ../images/c-enc-c.pdf>
 Package pdftex.def Info: ../images/c-enc-c.pdf  used on input line 11.
 (pdftex.def)             Requested size: 234.8775pt x 60.82709pt.
-<../images/bscc.pdf, id=2534, 226.53514pt x 83.34578pt>
+<../images/bscc.pdf, id=2539, 226.53514pt x 83.34578pt>
 File: ../images/bscc.pdf Graphic file (type pdf)
 <use ../images/bscc.pdf>
 Package pdftex.def Info: ../images/bscc.pdf  used on input line 33.
@@ -3205,13 +3229,13 @@ Underfull \vbox (badness 2035) detected at line 62
 pdfTeX warning: pdflatex (file ../images/bscc.pdf): PDF inclusion: multiple pdf
 s with page group included in a single page
 >]) (./canal/canal-ex16.tex
-<../images/canalz.pdf, id=2567, 144.74872pt x 52.55931pt>
+<../images/canalz.pdf, id=2572, 144.74872pt x 52.55931pt>
 File: ../images/canalz.pdf Graphic file (type pdf)
 <use ../images/canalz.pdf>
 Package pdftex.def Info: ../images/canalz.pdf  used on input line 12.
 (pdftex.def)             Requested size: 187.89912pt x 68.23402pt.
 ) (./canal/canal-ex17.tex
-<../images/canalzc.pdf, id=2568, 227.61678pt x 62.70619pt>
+<../images/canalzc.pdf, id=2573, 227.61678pt x 62.70619pt>
 File: ../images/canalzc.pdf Graphic file (type pdf)
 <use ../images/canalzc.pdf>
 Package pdftex.def Info: ../images/canalzc.pdf  used on input line 8.
@@ -3219,7 +3243,7 @@ Package pdftex.def Info: ../images/canalzc.pdf  used on input line 8.
  [108 <../images/canalz.pdf>]) (./hamming/hamming-ex01.tex [109 <../images/cana
 lzc.pdf>])
 (./hamming/hamming-ex02.tex
-<../images/hamming84.pdf, id=2634, 370.6343pt x 370.6343pt>
+<../images/hamming84.pdf, id=2639, 370.6343pt x 370.6343pt>
 File: ../images/hamming84.pdf Graphic file (type pdf)
 <use ../images/hamming84.pdf>
 Package pdftex.def Info: ../images/hamming84.pdf  used on input line 13.
@@ -3240,25 +3264,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
 (./hw.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
+Package rerunfilecheck Info: File `hw.out' has not changed.
+(rerunfilecheck)             Checksum: F36515F21D65192D4CE8F425DBFBB454;6251.
 
-
-Package rerunfilecheck Warning: File `hw.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `hw.out':
-(rerunfilecheck)             Before: C21025763B870FB1F61E4FD98B9D4458;6186
-(rerunfilecheck)             After:  F36515F21D65192D4CE8F425DBFBB454;6251.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 336.
  ) 
 Here is how much of TeX's memory you used:
- 30189 strings out of 483002
- 543782 string characters out of 5960726
- 1099608 words of memory out of 5000000
- 42804 multiletter control sequences out of 15000+600000
+ 30190 strings out of 483002
+ 543798 string characters out of 5960726
+ 1099640 words of memory out of 5000000
+ 42805 multiletter control sequences out of 15000+600000
  555710 words of font info for 89 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  68i,24n,81p,440b,2278s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3303,10 +3321,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/pu
 blic/tex-gyre/qhvr.pfb>
-Output written on hw.pdf (116 pages, 1107961 bytes).
+Output written on hw.pdf (116 pages, 1107987 bytes).
 PDF statistics:
- 3773 PDF objects out of 4296 (max. 8388607)
- 2911 compressed objects within 30 object streams
+ 3777 PDF objects out of 4296 (max. 8388607)
+ 2915 compressed objects within 30 object streams
  1596 named destinations out of 1728 (max. 500000)
- 855 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 863 words of extra memory for PDF output out of 10000 (max. 10000000)
 

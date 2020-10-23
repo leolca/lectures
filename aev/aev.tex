@@ -52,6 +52,32 @@
     \end{beamercolorbox}%
 }
 %%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%% print footnotes on notes slides
+\setbeameroption{show notes}
+\makeatletter
+\addtobeamertemplate{note page}{}
+{%
+  \vfill
+  \ifvoid\beamer@footins%  
+  \else%
+    \begingroup
+      \usebeamercolor*[fg]{footnote}%
+      \footnoterule%
+      \unvbox \beamer@footins%
+      \global\setbox\beamer@footins=\box\voidb@x%
+    \endgroup 
+  \fi%
+  \vskip.5em
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 \usepackage{color}
 \definecolor{BlueGreen}{cmyk}{0.8,0,0.5,0.3}
 
@@ -305,15 +331,16 @@
 \input{pca/pca.tex}
 % Wavelets
 \input{wavelets/wavelets.tex}
-% Codificação de Vídeo
-
 % Aquisição de imagem
-
+\input{aquisicao/aquisicao.tex}
+% cores
+\input{cor/cor.tex}
 % Visão
 \input{visao/visao.tex}
 % Audição
 \input{audicao/audicao.tex}
-% Espaços de cores
+% Codificação de Vídeo
+\input{video/video.tex}
 
 % Fala
 
