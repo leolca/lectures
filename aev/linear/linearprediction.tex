@@ -246,7 +246,7 @@ que fazem com que a expressão $z^T M z$ ou $z^\ast M z$ seja sempre negativa, n
   para um vetor de comprimento $N$ através de $O(N\log M)$ operações, ao invés de $O(NM)$ operações.
 
   \begin{equation}
-  r(k) = ifft(fft(x) fft^\ast(x))
+  r(k) = \operatorname{ifft}(\operatorname{fft}(x) \operatorname{fft}^\ast(x))
   \end{equation}
 
   Obs.: Para $M$ pequeno, o custo $O(N\log M)$, associado à obtenção dos coeficiente de autocorrelação, é dominante.
