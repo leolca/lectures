@@ -1,0 +1,40 @@
+library("exams")
+elearn_exam <- c("rle/rle01.Rmd","mov2front/mov2front01.Rmd", "sampling/sampling01.Rmd", "sampling/sampling02.Rmd", "scalarquantization/scalarquantization01.Rmd", "scalarquantization/scalarquantization02.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "R-exams", encoding = "UTF-8")
+
+exams2html(elearn_exam, n = 3, name = "R-exams", encoding = "UTF-8")
+
+library("exams")
+set.seed(1090)
+elearn_exam <- c("swisscapital.Rmd", "deriv.Rmd")
+exams2moodle(elearn_exam, n = 3, name = "R-exams", encoding = "UTF-8")  # n: number of random versions of each questions
+# http://www.r-exams.org/intro/dynamic/
+# http://www.r-exams.org/intro/elearning/
+# http://www.r-exams.org/tutorials/elearning/
+
+
+### PROVA 01
+elearn_exam <- c("rle/rle01.Rmd", "rle/rle02.Rmd", "mov2front/mov2front01.Rmd", "sampling/sampling01.Rmd", "sampling/sampling02.Rmd", "scalarquantization/scalarquantization01.Rmd", "scalarquantization/scalarquantization02.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-01", encoding = "UTF-8")
+
+### PROVA 02
+elearn_exam <- c("scalarquantization/companding01.Rmd", "vectorquantization/vecquantz01.Rmd", "vectorquantization/vecquantz02.Rmd", "sampling/downsample01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-02", encoding = "UTF-8")
+
+### PROVA 03
+elearn_exam <- c("sampling/oversampling01.Rmd", "lpc/lpc01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-03", encoding = "UTF-8")
+exams2html(elearn_exam, n = 2, name = "aev-prova-03", encoding = "UTF-8")
+
+### PROVA 04
+elearn_exam <- c("dct/dct01.Rmd", "pca/pca01.Rmd", "jpeg/jpeg01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-04", encoding = "UTF-8")
+exams2html(elearn_exam, n = 2, name = "aev-prova-04", encoding = "UTF-8")
+
+### PROVA 05
+elearn_exam <- c("sensorial/visao01.Rmd", "sensorial/audicao01.Rmd", "video/video01.Rmd", "wavelets/wavelets01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-05", encoding = "UTF-8")
+exams2html(elearn_exam, n = 2, name = "aev-prova-05", encoding = "UTF-8")
+
+
+

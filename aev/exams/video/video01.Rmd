@@ -1,0 +1,34 @@
+Question
+========
+Com relação à codificação de vídeo podemos afirmar que:
+
+Answerlist
+----------
+* As codificações de vídeo também utilizam transformadas ortogonais (como DCT, Wavelets, etc).
+* A predição temporal é importante para explorar a redundância entre quadros, possibilitando maior compressão.
+* A primeira etapa na codificação de vídeo é a codificação de entropia.
+* A utilização de quadros chave é importante para garantir o acesso aleatório ao vídeo.
+* Os quadros tipo B (bidirecionais) utilizam a predição de movimento na vertical e na horizontal.
+* Quanto maior o número de quadros chave utilizados, maior será a taxa de compressão.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* True.
+* False.
+* True.
+* False.
+* False.
+
+
+Meta-information
+================
+extype: mchoice
+exsolution: 110100
+exname: video
+exshuffle: 5
+expoints: 1
+

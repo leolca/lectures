@@ -1,0 +1,43 @@
+Question
+========
+Sobre a compressão JPEG é correto afirmar que:
+
+Answerlist
+----------
+* A mudança de espaço de cores é realizada para transformar números inteiros em números reais.
+* Como a visão humana é mais sensível a degradação de informação de luminância, o padrão JPEG impõe menores perdas de informação em luminância do que em crominância. 
+* Como as componentes de crominância Cb e Cr são parecidas, pode ser aplicada uma sub-amostragem de crominância a ela. 
+* A imagem é dividida em blocos de $8 \times 8$ pois temos 3 componentes de cores e assim $2^3 = 8$ é o tamanho ideal dos blocos.
+* Após realizar a transformada DCT 2D de cada bloco, realiza-se a quantização vetorial destes blocos em um espaço vetorial $\mathbb{R}^{64}$.
+* Usualmente aplica-se matrizes de quantização diferentes para luminância e crominância.
+* Emprega-se a varredura em zig-zag dos coeficientes da DCT para remover ruído inerente à transformação.
+* Os coeficientes DC são codificados separadamente dos coeficientes AC por possuírem características estatísticas diferentes.
+* A codificação RLE é empregada aos coeficientes AC por possuírem muitos valores pequenos e nulos em sequência.
+* A codificação DPCM é aplicada aos coeficientes DC pois os valores destes coeficientes variam muito entre os blocos vizinho.
+* Ao final da compressão utiliza-se uma codificação de entropia.
+
+Solution
+========
+
+Answerlist
+----------
+* False.
+* True.
+* False.
+* False.
+* False.
+* True.
+* False.
+* True.
+* True.
+* False.
+* True.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 01000101101
+exname: JPEG
+exshuffle: 5
+expoints: 1
+

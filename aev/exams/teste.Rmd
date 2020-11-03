@@ -1,0 +1,25 @@
+Question
+========
+País do samba e sua capital.
+
+Answerlist
+----------
+* Qual é o país do samba?
+* Qual é a capital?
+
+Solution
+========
+Marcola nasceu no Brasil, o país do Samba.
+
+Answerlist
+----------
+* Brasil.
+* Brasília.
+
+Meta-information
+================
+extype: cloze
+exclozetype: string|string
+exsolution: Brasil|Brasília
+exname: ex-marcola
+expoints: 1|1

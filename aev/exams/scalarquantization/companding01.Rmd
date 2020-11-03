@@ -1,0 +1,112 @@
+
+
+Question
+========
+Suponha que um sinal $x(t)$ será amostrado e quantizado através de um quantizador escalar uniforme.
+O sinal $x(t)$ possui extensão $[0, 1]$.
+Um quantizador qualquer pode ser expresso por uma função 
+$Q: \mathbb{R} \rightarrow \{y_1, \ldots, y_M\}$, onde $M$ representa o número de níveis 
+de quantização e $y_i$, $i=1,\ldots,M$, os pontos de representação. 
+Considerando um quantizador uniforme com 2 bits, faça o que se pede:
+
+a. Determine os pontos de representação $y_i$ e os limiares do quantizador, $t_i$;
+   * opção a-A = $y=$`[0.125, 0.375, 0.625, 0.875]` e $t=$`[0.25, 0.5, 0.75]`
+   * opção a-B = $y=$`[-0.5, 0, 0.5]` e $t=$`[-0.25, 0, 0.25]`
+   * opção a-C = $y=$`[0, 0.25, 0.5, 0.75]` e $t=$`[0.125, 0.375, 0.625]`
+   * opção a-D = $y=$`[0.25, 0.5, 0.75, 1]` e $t=$`[0.375, 0.625, 0.875]`
+
+b. Usualmente, para avaliar a performance de um quantizador, utiliza-se
+o erro médio quadrático (MSE), e para tanto, utilizamos como medida de distorção
+o quadrado da diferença, $d(x,Q(x)) = (x - Q(x))^2$. 
+Calcule o valor esperado da distorção $D(Q)$ para um sinal de entrada com
+distribuição uniforme.
+
+c. Calcule a relação sinal-ruído de quantização para um sinal de entrada 
+com distribuição uniforme.
+
+d. Calcule a relação sinal-ruído de quantização para um sinal de entrada senoidal $x(t) = \frac{1}{2}\left( 1 + \sin(\omega t) \right)$.
+
+
+Answerlist
+---------------
+* opção a-A
+* opção a-B 
+* opção a-C
+* opção a-D 
+* nenhuma das anteriores
+* $D(Q) =$
+* $D(Q) =$
+* $\text{SQNR} =$
+
+Solution
+========
+Como o quantizador é de 2-bits, teremos $2^2 = 4$ pontos de representação no intervalo $[0,1]$.
+Iremos dividir o intervalo $[0,1]$ em 4 regiões de mesmo tamanho ($0.25$): $[0,0.25)$,
+$[0.25,0.5)$, $[0.5,0.75)$, $[0.75,1]$. Os limiares então serão: 0.25, 0.5 e 0.75.
+Os pontos de representação serão colocados no meio de cada intervalo: 0.125, 0.375, 0.625 e 0.875.
+
+Abaixo seguem os cálculos de $D(Q)$ para um sinal com distribuição uniforme na entrada.
+Para facilitar, reconhecemos que cada uma das 4 integrais no somatório possuem o mesmo valor.
+$$
+\begin{aligned}
+D(Q) &= \sum_i \int_{t_{i-1}}^{t_i} f(x) (x - y_i)^2 \mathrm{d}x \\
+     &= \frac{1}{4} \left( \int_{0}^{0.25}(x-0.125)^2 dx + \int_{0.25}^{0.5}(x-0.375)^2 dx + \int_{0.5}^{0.75}(x-0.625)^2 dx + \int_{0.75}^{1}(x-0.875)^2 dx \right) \\
+     &= \frac{1}{4} \times 4 \times \left( \int_{0}^{0.25}(x-0.125)^2 dx \\
+     &= \left(\left(\frac{1}{8}\right)^2 x - \frac{1}{4} x^2 + \frac{x^3}{3} \right) \Bigg\rvert_0^{\frac{1}{4}} \\
+     &= \frac{1}{192} .
+\end{aligned}
+$$
+
+
+A relação sinal-ruído de quantização pode ser obtida utilizando a expressão:
+$$
+\text{SQNR} = 10 \log \left( \frac{\sigma_x^2}{\sigma_q^2} \right)
+$$
+onde, para o quantizador uniforme temos
+$$
+\sigma_q^2 = \frac{\Delta^2}{12} 
+$$
+e para o sinal de entrada $x \sim \mathcal{U}(a,b)$ temos
+$$
+\sigma_x^2 = \frac{(b-a)^2}{12}
+$$
+e assim para $x \sim \mathcal{U}(0,1)$ teremos $\sigma_x^2 = \frac{1}{12}$.
+A relação sinal-ruído de quantização, para o quantizador com $n=2$ bits e $\Delta = 1/2^n$ = 1/4, será então
+$$
+\text{SQNR} = 10 \log \left( \frac{\frac{1}{12}}{\frac{1/16}{12}} \right) = 10 \log 16 = 12.0412 \text{dB}.
+$$
+
+
+Para calcular a SQNR para o sinal senoidal proposto, note que $x(t) = \frac{1}{2} + A \sin(\omega t)$,
+onde $A = \frac{1}{2}$. A constante não muda o resultado e poderemos utilizar a fórmula:
+$$
+\text{SQRN} = 6n + 1.76 \text{dB} ,
+$$
+onde $n$ é o número de bits do quantizador. Teremos então um $\text{SQNR} = 13.76 \text{dB}$. 
+Se calcularmos utilizando $\Delta = \frac{1}{4}$ e $\sigma_x^2 = \frac{1}{8}$, obteremos 
+o mesmo resultado: 
+$$
+\text{SQNR} = 10 \log \left( \frac{\sigma_x^2}{\sigma_q^2} \right) = 10 \log \left( \frac{12 \sigma_x^2}{\Delta^2} \right) = 10 \log 24 \text{dB}.
+$$
+
+Answerlist
+----------
+* True.
+* False.
+* False. 
+* False.
+* False
+* $D(Q) = \frac{1}{192} = 0.0052083$.
+* $\text{SQNR} = 10 \log 16 = 12.0412$dB.
+* $\text{SQNR} = 10 \log 24 = 13.80211$dB.
+
+
+Meta-information
+================
+extype: cloze
+exclozetype: schoice|num|num|num
+exsolution: 10000|0.0052083|12.0412|13.80211
+exname: performance do quantizador
+extol: 0.1
+expoints: 1|1|1|1
+

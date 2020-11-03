@@ -1,0 +1,2741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-01/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q1 : rle_rle01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>FLAC é um formato de compressão de áudio que consegue reduzir o tamanho de um arquivo em 50% a 60% do tamanho original. Para isto ele utiliza uma predição linear para converter as amostras de áudio em uma série de de números pequenos e descorrelacionados (conhecidos como resíduo). Este resíduo é armazenado utilizando o código Golomb-Rice. Além disso o FLAC utiliza a compressão RLE para comprimir blocos de amostras idênticas, como no caso dos trechos de silêncio.</p>
+<p>Para um arquivo binário, a saída do RLE pode ser representada apenas pelo número de bits iguais na sequência (não é necessário representar o valor do símbolo, uma vez que temos apenas duas alternativas). Iremos adotar a convenção de que a sequência começa sempre com 0 (zero), caso não seja este o caso, basta indicar que o primeiro número de repetições é zero. Por exemplo, veja como as seguinte sequências seriam codificadas:</p>
+<p><code>rle(0 0 1 0 0 0 0 1 1 1 1 1 0 0) = [2 1 4 5 2]</code></p>
+<p><code>rle(1 1 0 1 1 1 1 0 0 0 0 0 1 1) = [0 2 1 4 5 2]</code></p>
+<p>Diga qual é a saída da codificação RLE para as seguintes sequências:</p>
+<p><code>rle(0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+<p><code>rle(1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[5 2 2 5]</code> e <code>[0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 2 1 0 0 1 4]</code> e <code>[1 4 0 5 1 2 0 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 5 2 2 5]</code> e <code>[5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 1 2 5 2 5]</code> e <code>[1 0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 2 2 5]</code> e <code>[0 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q1 : rle_rle01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>FLAC é um formato de compressão de áudio que consegue reduzir o tamanho de um arquivo em 50% a 60% do tamanho original. Para isto ele utiliza uma predição linear para converter as amostras de áudio em uma série de de números pequenos e descorrelacionados (conhecidos como resíduo). Este resíduo é armazenado utilizando o código Golomb-Rice. Além disso o FLAC utiliza a compressão RLE para comprimir blocos de amostras idênticas, como no caso dos trechos de silêncio.</p>
+<p>Para um arquivo binário, a saída do RLE pode ser representada apenas pelo número de bits iguais na sequência (não é necessário representar o valor do símbolo, uma vez que temos apenas duas alternativas). Iremos adotar a convenção de que a sequência começa sempre com 0 (zero), caso não seja este o caso, basta indicar que o primeiro número de repetições é zero. Por exemplo, veja como as seguinte sequências seriam codificadas:</p>
+<p><code>rle(0 0 1 0 0 0 0 1 1 1 1 1 0 0) = [2 1 4 5 2]</code></p>
+<p><code>rle(1 1 0 1 1 1 1 0 0 0 0 0 1 1) = [0 2 1 4 5 2]</code></p>
+<p>Diga qual é a saída da codificação RLE para as seguintes sequências:</p>
+<p><code>rle(0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+<p><code>rle(1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[5 2 2 5]</code> e <code>[0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 1 2 5 2 5]</code> e <code>[1 0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 5 2 2 5]</code> e <code>[5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 2 2 5]</code> e <code>[0 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 2 1 0 0 1 4]</code> e <code>[1 4 0 5 1 2 0 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q1 : rle_rle01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>FLAC é um formato de compressão de áudio que consegue reduzir o tamanho de um arquivo em 50% a 60% do tamanho original. Para isto ele utiliza uma predição linear para converter as amostras de áudio em uma série de de números pequenos e descorrelacionados (conhecidos como resíduo). Este resíduo é armazenado utilizando o código Golomb-Rice. Além disso o FLAC utiliza a compressão RLE para comprimir blocos de amostras idênticas, como no caso dos trechos de silêncio.</p>
+<p>Para um arquivo binário, a saída do RLE pode ser representada apenas pelo número de bits iguais na sequência (não é necessário representar o valor do símbolo, uma vez que temos apenas duas alternativas). Iremos adotar a convenção de que a sequência começa sempre com 0 (zero), caso não seja este o caso, basta indicar que o primeiro número de repetições é zero. Por exemplo, veja como as seguinte sequências seriam codificadas:</p>
+<p><code>rle(0 0 1 0 0 0 0 1 1 1 1 1 0 0) = [2 1 4 5 2]</code></p>
+<p><code>rle(1 1 0 1 1 1 1 0 0 0 0 0 1 1) = [0 2 1 4 5 2]</code></p>
+<p>Diga qual é a saída da codificação RLE para as seguintes sequências:</p>
+<p><code>rle(0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+<p><code>rle(1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 2 1 0 0 1 4]</code> e <code>[1 4 0 5 1 2 0 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 1 2 5 2 5]</code> e <code>[1 0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 5 2 2 5]</code> e <code>[5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[5 2 2 5]</code> e <code>[0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 2 2 5]</code> e <code>[0 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q1 : rle_rle01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>FLAC é um formato de compressão de áudio que consegue reduzir o tamanho de um arquivo em 50% a 60% do tamanho original. Para isto ele utiliza uma predição linear para converter as amostras de áudio em uma série de de números pequenos e descorrelacionados (conhecidos como resíduo). Este resíduo é armazenado utilizando o código Golomb-Rice. Além disso o FLAC utiliza a compressão RLE para comprimir blocos de amostras idênticas, como no caso dos trechos de silêncio.</p>
+<p>Para um arquivo binário, a saída do RLE pode ser representada apenas pelo número de bits iguais na sequência (não é necessário representar o valor do símbolo, uma vez que temos apenas duas alternativas). Iremos adotar a convenção de que a sequência começa sempre com 0 (zero), caso não seja este o caso, basta indicar que o primeiro número de repetições é zero. Por exemplo, veja como as seguinte sequências seriam codificadas:</p>
+<p><code>rle(0 0 1 0 0 0 0 1 1 1 1 1 0 0) = [2 1 4 5 2]</code></p>
+<p><code>rle(1 1 0 1 1 1 1 0 0 0 0 0 1 1) = [0 2 1 4 5 2]</code></p>
+<p>Diga qual é a saída da codificação RLE para as seguintes sequências:</p>
+<p><code>rle(0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+<p><code>rle(1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 5 2 2 5]</code> e <code>[5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 1 2 5 2 5]</code> e <code>[1 0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 2 2 5]</code> e <code>[0 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[5 2 2 5]</code> e <code>[0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 2 1 0 0 1 4]</code> e <code>[1 4 0 5 1 2 0 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q1 : rle_rle01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>FLAC é um formato de compressão de áudio que consegue reduzir o tamanho de um arquivo em 50% a 60% do tamanho original. Para isto ele utiliza uma predição linear para converter as amostras de áudio em uma série de de números pequenos e descorrelacionados (conhecidos como resíduo). Este resíduo é armazenado utilizando o código Golomb-Rice. Além disso o FLAC utiliza a compressão RLE para comprimir blocos de amostras idênticas, como no caso dos trechos de silêncio.</p>
+<p>Para um arquivo binário, a saída do RLE pode ser representada apenas pelo número de bits iguais na sequência (não é necessário representar o valor do símbolo, uma vez que temos apenas duas alternativas). Iremos adotar a convenção de que a sequência começa sempre com 0 (zero), caso não seja este o caso, basta indicar que o primeiro número de repetições é zero. Por exemplo, veja como as seguinte sequências seriam codificadas:</p>
+<p><code>rle(0 0 1 0 0 0 0 1 1 1 1 1 0 0) = [2 1 4 5 2]</code></p>
+<p><code>rle(1 1 0 1 1 1 1 0 0 0 0 0 1 1) = [0 2 1 4 5 2]</code></p>
+<p>Diga qual é a saída da codificação RLE para as seguintes sequências:</p>
+<p><code>rle(0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+<p><code>rle(1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1)</code></p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 2 1 0 0 1 4]</code> e <code>[1 4 0 5 1 2 0 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 5 2 2 5]</code> e <code>[5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 2 2 5]</code> e <code>[0 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 5 1 2 5 2 5]</code> e <code>[1 0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[5 2 2 5]</code> e <code>[0 4 5 2 2 5]</code>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-01/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q2 : mov2front_mov2front01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha que a palavra “elemento” será codificada pela codificação <em>move-to-front</em>. Considere como dicionário inicial o alfabeto [a-z] (com 26 letras, sem acentos e sem cedilha) em ordem alfabética. Qual será a saída do codificador e o dicionário ao final? (Considere que o ídice zero é a primeira posição).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O dicionário inicial é <code>abcdefghijklmnopqrstuvwxyz</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>entrada</th>
+<th>saída</th>
+<th>dicionário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>e</td>
+<td>4</td>
+<td>abcdefghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>11</td>
+<td>eabcdfghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>leabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>m</td>
+<td>12</td>
+<td>elabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>melabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>n</td>
+<td>13</td>
+<td>emlabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>t</td>
+<td>19</td>
+<td>nemlabcdfghijkopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>o</td>
+<td>15</td>
+<td>tnemlabcdfghijkopqrsuvwxyz</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>otnemlabcdfghijkpqrsuvwxyz</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”. </li>
+<li> False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q2 : mov2front_mov2front01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha que a palavra “elemento” será codificada pela codificação <em>move-to-front</em>. Considere como dicionário inicial o alfabeto [a-z] (com 26 letras, sem acentos e sem cedilha) em ordem alfabética. Qual será a saída do codificador e o dicionário ao final? (Considere que o ídice zero é a primeira posição).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O dicionário inicial é <code>abcdefghijklmnopqrstuvwxyz</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>entrada</th>
+<th>saída</th>
+<th>dicionário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>e</td>
+<td>4</td>
+<td>abcdefghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>11</td>
+<td>eabcdfghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>leabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>m</td>
+<td>12</td>
+<td>elabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>melabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>n</td>
+<td>13</td>
+<td>emlabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>t</td>
+<td>19</td>
+<td>nemlabcdfghijkopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>o</td>
+<td>15</td>
+<td>tnemlabcdfghijkopqrsuvwxyz</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>otnemlabcdfghijkpqrsuvwxyz</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”. </li>
+<li> True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q2 : mov2front_mov2front01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha que a palavra “elemento” será codificada pela codificação <em>move-to-front</em>. Considere como dicionário inicial o alfabeto [a-z] (com 26 letras, sem acentos e sem cedilha) em ordem alfabética. Qual será a saída do codificador e o dicionário ao final? (Considere que o ídice zero é a primeira posição).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O dicionário inicial é <code>abcdefghijklmnopqrstuvwxyz</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>entrada</th>
+<th>saída</th>
+<th>dicionário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>e</td>
+<td>4</td>
+<td>abcdefghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>11</td>
+<td>eabcdfghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>leabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>m</td>
+<td>12</td>
+<td>elabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>melabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>n</td>
+<td>13</td>
+<td>emlabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>t</td>
+<td>19</td>
+<td>nemlabcdfghijkopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>o</td>
+<td>15</td>
+<td>tnemlabcdfghijkopqrsuvwxyz</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>otnemlabcdfghijkpqrsuvwxyz</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”. </li>
+<li> False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q2 : mov2front_mov2front01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha que a palavra “elemento” será codificada pela codificação <em>move-to-front</em>. Considere como dicionário inicial o alfabeto [a-z] (com 26 letras, sem acentos e sem cedilha) em ordem alfabética. Qual será a saída do codificador e o dicionário ao final? (Considere que o ídice zero é a primeira posição).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O dicionário inicial é <code>abcdefghijklmnopqrstuvwxyz</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>entrada</th>
+<th>saída</th>
+<th>dicionário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>e</td>
+<td>4</td>
+<td>abcdefghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>11</td>
+<td>eabcdfghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>leabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>m</td>
+<td>12</td>
+<td>elabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>melabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>n</td>
+<td>13</td>
+<td>emlabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>t</td>
+<td>19</td>
+<td>nemlabcdfghijkopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>o</td>
+<td>15</td>
+<td>tnemlabcdfghijkopqrsuvwxyz</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>otnemlabcdfghijkpqrsuvwxyz</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”. </li>
+<li> False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q2 : mov2front_mov2front01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Suponha que a palavra “elemento” será codificada pela codificação <em>move-to-front</em>. Considere como dicionário inicial o alfabeto [a-z] (com 26 letras, sem acentos e sem cedilha) em ordem alfabética. Qual será a saída do codificador e o dicionário ao final? (Considere que o ídice zero é a primeira posição).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O dicionário inicial é <code>abcdefghijklmnopqrstuvwxyz</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>entrada</th>
+<th>saída</th>
+<th>dicionário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>e</td>
+<td>4</td>
+<td>abcdefghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>11</td>
+<td>eabcdfghijklmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>leabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>m</td>
+<td>12</td>
+<td>elabcdfghijkmnopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>1</td>
+<td>melabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>n</td>
+<td>13</td>
+<td>emlabcdfghijknopqrstuvwxyz</td>
+</tr>
+<tr class="odd">
+<td>t</td>
+<td>19</td>
+<td>nemlabcdfghijkopqrstuvwxyz</td>
+</tr>
+<tr class="even">
+<td>o</td>
+<td>15</td>
+<td>tnemlabcdfghijkopqrsuvwxyz</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>otnemlabcdfghijkpqrsuvwxyz</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”. </li>
+<li> False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”. </li>
+<li> False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[5 12 5 13 5 14 20 15]</code> e “abcdefghijklmnopqrstuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 4 12 4 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True. <code>[4 11 1 12 1 13 19 15]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[0 1  0 2  0 3  4  5 ]</code> e “elmntoabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <code>[4 11 0 12 0 13 19 14]</code> e “otnemlabcdfghijkpqrsuvwxyz”.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-01/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q3 : sampling_sampling01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um sinal com frequência mínima de 20Hz e máxima de 20kHz. Com relação à amostragem deste sinal, podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Utilizando uma frequência de amostragem de 44.1kHz não é necessário utilizar um filtro anti-aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser superior a 40kHz e devemos utilizar um filtro anti-aliasing para evitar o falseamento de ruídos de alta frequência.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum alternativa está correta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser igual a 20kHz e o filtro anti-aliasing deve ter frequência de corte de 20Hz.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Este sinal não poderá ser corretamente amostrado pois sua frequência mínima é superior a 0 (zero).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q3 : sampling_sampling01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um sinal com frequência mínima de 20Hz e máxima de 20kHz. Com relação à amostragem deste sinal, podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Utilizando uma frequência de amostragem de 44.1kHz não é necessário utilizar um filtro anti-aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Este sinal não poderá ser corretamente amostrado pois sua frequência mínima é superior a 0 (zero).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser igual a 20kHz e o filtro anti-aliasing deve ter frequência de corte de 20Hz.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser superior a 40kHz e devemos utilizar um filtro anti-aliasing para evitar o falseamento de ruídos de alta frequência.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum alternativa está correta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q3 : sampling_sampling01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um sinal com frequência mínima de 20Hz e máxima de 20kHz. Com relação à amostragem deste sinal, podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum alternativa está correta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Este sinal não poderá ser corretamente amostrado pois sua frequência mínima é superior a 0 (zero).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser igual a 20kHz e o filtro anti-aliasing deve ter frequência de corte de 20Hz.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Utilizando uma frequência de amostragem de 44.1kHz não é necessário utilizar um filtro anti-aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser superior a 40kHz e devemos utilizar um filtro anti-aliasing para evitar o falseamento de ruídos de alta frequência.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q3 : sampling_sampling01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um sinal com frequência mínima de 20Hz e máxima de 20kHz. Com relação à amostragem deste sinal, podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser superior a 40kHz e devemos utilizar um filtro anti-aliasing para evitar o falseamento de ruídos de alta frequência.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Este sinal não poderá ser corretamente amostrado pois sua frequência mínima é superior a 0 (zero).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser igual a 20kHz e o filtro anti-aliasing deve ter frequência de corte de 20Hz.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Utilizando uma frequência de amostragem de 44.1kHz não é necessário utilizar um filtro anti-aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum alternativa está correta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q3 : sampling_sampling01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um sinal com frequência mínima de 20Hz e máxima de 20kHz. Com relação à amostragem deste sinal, podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser igual a 20kHz e o filtro anti-aliasing deve ter frequência de corte de 20Hz.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum alternativa está correta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Este sinal não poderá ser corretamente amostrado pois sua frequência mínima é superior a 0 (zero).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A frequência de amostragem deve ser superior a 40kHz e devemos utilizar um filtro anti-aliasing para evitar o falseamento de ruídos de alta frequência.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Utilizando uma frequência de amostragem de 44.1kHz não é necessário utilizar um filtro anti-aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-01/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q4 : sampling_sampling02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a amostragem de um sinal podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um impulso e na frequência à multiplicação por um escalar.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um trem de impulsos e na frequência à multiplicação por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um impulso.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todas as alternativas estão erradas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q4 : sampling_sampling02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a amostragem de um sinal podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todas as alternativas estão erradas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um impulso e na frequência à multiplicação por um escalar.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um trem de impulsos e na frequência à multiplicação por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um impulso.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q4 : sampling_sampling02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a amostragem de um sinal podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todas as alternativas estão erradas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um trem de impulsos e na frequência à multiplicação por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um impulso.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um impulso e na frequência à multiplicação por um escalar.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q4 : sampling_sampling02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a amostragem de um sinal podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um impulso.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um trem de impulsos e na frequência à multiplicação por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todas as alternativas estão erradas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um impulso e na frequência à multiplicação por um escalar.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q4 : sampling_sampling02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a amostragem de um sinal podemos afirmar que</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Todas as alternativas estão erradas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um impulso.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um impulso e na frequência à multiplicação por um escalar.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à convolução por um trem de impulsos e na frequência à multiplicação por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um trem de impulsos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-01/Exercise 5</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q5 : scalarquantization_scalarquantization01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um quantizado escalar uniforme com os sequintes pontos de representação: <code>[-1.5 -0.5 0.5 1.5]</code> e considere o seguinte sinal a ser quantizado <code>x = [-3 -2 -1 0 1 2 3]</code>. A saída (índices) do quantizador e a distorção (MSE) obtida são:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Como o quantizador é uniforme, o limiares serão <code>[-1 0 1]</code>. Desta forma, teremos a seguinte mapeamento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(-\infty,-1] \rightarrow -1.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(-1,0] \rightarrow -0.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(0,1] \rightarrow 0.5</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(1,\infty) \rightarrow 1.5</annotation></semantics></math>. Os valores de entrada serão então mapeados em <code>y = [-1.5 -1.5 -1.5 -0.5 0.5 1.5 1.5]</code> e assim os índices serão <code>idx = [0 0 0 1 2 3 4]</code>. A distormão (MSE) é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mi>d</mi></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>x</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><mo>+</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.5</mn><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><msup><mn>1.5</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.5</mn><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mn>5.75</mn><mo>=</mo><mn>0.82143</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+d &amp;= \frac{1}{N} \sum_{i=1}^N (y[i] - x[i])^2 \\
+  &amp;= \frac{1}{7} \left( (-1.5 + 3)^2 + (-1.5 + 2)^2 + (-1.5 + 1)^2 + (-0.5 + 0)^2 + (0.5 - 1)^2 + (1.5 - 2)^2 + (1.5 - 3)^2 \right) \\
+  &amp;= \frac{1}{7} \left( 1.5^2 + 0.5^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-1.5)^2 \right) \\
+  &amp;= \frac{1}{7} 5.75 = 0.82143
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 1 2 3 2 1 0]</code>, distorção = 1.52121.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 0 1 2 3 3]</code>, distorção = 0.82143.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[1 1 0 0 3 3 2]</code>, distorção = 0.96316.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 1 1 2 2 3]</code>, distorção = 0.45782.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q5 : scalarquantization_scalarquantization01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um quantizado escalar uniforme com os sequintes pontos de representação: <code>[-1.5 -0.5 0.5 1.5]</code> e considere o seguinte sinal a ser quantizado <code>x = [-3 -2 -1 0 1 2 3]</code>. A saída (índices) do quantizador e a distorção (MSE) obtida são:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Como o quantizador é uniforme, o limiares serão <code>[-1 0 1]</code>. Desta forma, teremos a seguinte mapeamento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(-\infty,-1] \rightarrow -1.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(-1,0] \rightarrow -0.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(0,1] \rightarrow 0.5</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(1,\infty) \rightarrow 1.5</annotation></semantics></math>. Os valores de entrada serão então mapeados em <code>y = [-1.5 -1.5 -1.5 -0.5 0.5 1.5 1.5]</code> e assim os índices serão <code>idx = [0 0 0 1 2 3 4]</code>. A distormão (MSE) é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mi>d</mi></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>x</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><mo>+</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.5</mn><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><msup><mn>1.5</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.5</mn><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mn>5.75</mn><mo>=</mo><mn>0.82143</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+d &amp;= \frac{1}{N} \sum_{i=1}^N (y[i] - x[i])^2 \\
+  &amp;= \frac{1}{7} \left( (-1.5 + 3)^2 + (-1.5 + 2)^2 + (-1.5 + 1)^2 + (-0.5 + 0)^2 + (0.5 - 1)^2 + (1.5 - 2)^2 + (1.5 - 3)^2 \right) \\
+  &amp;= \frac{1}{7} \left( 1.5^2 + 0.5^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-1.5)^2 \right) \\
+  &amp;= \frac{1}{7} 5.75 = 0.82143
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 0 1 2 3 3]</code>, distorção = 0.82143.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 1 1 2 2 3]</code>, distorção = 0.45782.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 1 2 3 2 1 0]</code>, distorção = 1.52121.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[1 1 0 0 3 3 2]</code>, distorção = 0.96316.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q5 : scalarquantization_scalarquantization01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um quantizado escalar uniforme com os sequintes pontos de representação: <code>[-1.5 -0.5 0.5 1.5]</code> e considere o seguinte sinal a ser quantizado <code>x = [-3 -2 -1 0 1 2 3]</code>. A saída (índices) do quantizador e a distorção (MSE) obtida são:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Como o quantizador é uniforme, o limiares serão <code>[-1 0 1]</code>. Desta forma, teremos a seguinte mapeamento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(-\infty,-1] \rightarrow -1.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(-1,0] \rightarrow -0.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(0,1] \rightarrow 0.5</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(1,\infty) \rightarrow 1.5</annotation></semantics></math>. Os valores de entrada serão então mapeados em <code>y = [-1.5 -1.5 -1.5 -0.5 0.5 1.5 1.5]</code> e assim os índices serão <code>idx = [0 0 0 1 2 3 4]</code>. A distormão (MSE) é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mi>d</mi></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>x</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><mo>+</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.5</mn><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><msup><mn>1.5</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.5</mn><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mn>5.75</mn><mo>=</mo><mn>0.82143</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+d &amp;= \frac{1}{N} \sum_{i=1}^N (y[i] - x[i])^2 \\
+  &amp;= \frac{1}{7} \left( (-1.5 + 3)^2 + (-1.5 + 2)^2 + (-1.5 + 1)^2 + (-0.5 + 0)^2 + (0.5 - 1)^2 + (1.5 - 2)^2 + (1.5 - 3)^2 \right) \\
+  &amp;= \frac{1}{7} \left( 1.5^2 + 0.5^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-1.5)^2 \right) \\
+  &amp;= \frac{1}{7} 5.75 = 0.82143
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 0 1 2 3 3]</code>, distorção = 0.82143.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[1 1 0 0 3 3 2]</code>, distorção = 0.96316.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 1 2 3 2 1 0]</code>, distorção = 1.52121.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 1 1 2 2 3]</code>, distorção = 0.45782.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q5 : scalarquantization_scalarquantization01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um quantizado escalar uniforme com os sequintes pontos de representação: <code>[-1.5 -0.5 0.5 1.5]</code> e considere o seguinte sinal a ser quantizado <code>x = [-3 -2 -1 0 1 2 3]</code>. A saída (índices) do quantizador e a distorção (MSE) obtida são:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Como o quantizador é uniforme, o limiares serão <code>[-1 0 1]</code>. Desta forma, teremos a seguinte mapeamento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(-\infty,-1] \rightarrow -1.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(-1,0] \rightarrow -0.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(0,1] \rightarrow 0.5</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(1,\infty) \rightarrow 1.5</annotation></semantics></math>. Os valores de entrada serão então mapeados em <code>y = [-1.5 -1.5 -1.5 -0.5 0.5 1.5 1.5]</code> e assim os índices serão <code>idx = [0 0 0 1 2 3 4]</code>. A distormão (MSE) é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mi>d</mi></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>x</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><mo>+</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.5</mn><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><msup><mn>1.5</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.5</mn><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mn>5.75</mn><mo>=</mo><mn>0.82143</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+d &amp;= \frac{1}{N} \sum_{i=1}^N (y[i] - x[i])^2 \\
+  &amp;= \frac{1}{7} \left( (-1.5 + 3)^2 + (-1.5 + 2)^2 + (-1.5 + 1)^2 + (-0.5 + 0)^2 + (0.5 - 1)^2 + (1.5 - 2)^2 + (1.5 - 3)^2 \right) \\
+  &amp;= \frac{1}{7} \left( 1.5^2 + 0.5^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-1.5)^2 \right) \\
+  &amp;= \frac{1}{7} 5.75 = 0.82143
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 0 1 2 3 3]</code>, distorção = 0.82143.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 1 2 3 2 1 0]</code>, distorção = 1.52121.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 1 1 2 2 3]</code>, distorção = 0.45782.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[1 1 0 0 3 3 2]</code>, distorção = 0.96316.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q5 : scalarquantization_scalarquantization01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um quantizado escalar uniforme com os sequintes pontos de representação: <code>[-1.5 -0.5 0.5 1.5]</code> e considere o seguinte sinal a ser quantizado <code>x = [-3 -2 -1 0 1 2 3]</code>. A saída (índices) do quantizador e a distorção (MSE) obtida são:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Como o quantizador é uniforme, o limiares serão <code>[-1 0 1]</code>. Desta forma, teremos a seguinte mapeamento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(-\infty,-1] \rightarrow -1.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mo>−</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(-1,0] \rightarrow -0.5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">(0,1] \rightarrow 0.5</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">(1,\infty) \rightarrow 1.5</annotation></semantics></math>. Os valores de entrada serão então mapeados em <code>y = [-1.5 -1.5 -1.5 -0.5 0.5 1.5 1.5]</code> e assim os índices serão <code>idx = [0 0 0 1 2 3 4]</code>. A distormão (MSE) é dada por <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mi>d</mi></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>x</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><mo>+</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.5</mn><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo>−</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><msup><mn>1.5</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.5</mn><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>0.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1.5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mn>5.75</mn><mo>=</mo><mn>0.82143</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+d &amp;= \frac{1}{N} \sum_{i=1}^N (y[i] - x[i])^2 \\
+  &amp;= \frac{1}{7} \left( (-1.5 + 3)^2 + (-1.5 + 2)^2 + (-1.5 + 1)^2 + (-0.5 + 0)^2 + (0.5 - 1)^2 + (1.5 - 2)^2 + (1.5 - 3)^2 \right) \\
+  &amp;= \frac{1}{7} \left( 1.5^2 + 0.5^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-1.5)^2 \right) \\
+  &amp;= \frac{1}{7} 5.75 = 0.82143
+\end{aligned}
+</annotation></semantics></math></p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[1 1 0 0 3 3 2]</code>, distorção = 0.96316.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 0 1 2 3 3]</code>, distorção = 0.82143.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 0 1 1 2 2 3]</code>, distorção = 0.45782.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+saída = <code>[0 1 2 3 2 1 0]</code>, distorção = 1.52121.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-01/Exercise 6</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q6 : scalarquantization_scalarquantization02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação ao algoritmo de Lloyd-Max podemos afirmar:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar uniforme para qualquer sinal de entrada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo converge uniformemente para o quantizador computacionalmente mais eficiente, embora não minimize a distorção.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar não-uniforme para um sinal, porém este algoritmo poderá não convergir.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+O algoritmo fornece uma forma de obter um quantizador melhor (menor distorção) a partir de um quantizador inicial, garantindo assim a obtenção de um quantizador localmente ótimo, porém não garante a obtenção do quantizador ótimo global.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q6 : scalarquantization_scalarquantization02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação ao algoritmo de Lloyd-Max podemos afirmar:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+O algoritmo fornece uma forma de obter um quantizador melhor (menor distorção) a partir de um quantizador inicial, garantindo assim a obtenção de um quantizador localmente ótimo, porém não garante a obtenção do quantizador ótimo global.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo converge uniformemente para o quantizador computacionalmente mais eficiente, embora não minimize a distorção.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar não-uniforme para um sinal, porém este algoritmo poderá não convergir.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar uniforme para qualquer sinal de entrada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q6 : scalarquantization_scalarquantization02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação ao algoritmo de Lloyd-Max podemos afirmar:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar uniforme para qualquer sinal de entrada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar não-uniforme para um sinal, porém este algoritmo poderá não convergir.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo converge uniformemente para o quantizador computacionalmente mais eficiente, embora não minimize a distorção.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+O algoritmo fornece uma forma de obter um quantizador melhor (menor distorção) a partir de um quantizador inicial, garantindo assim a obtenção de um quantizador localmente ótimo, porém não garante a obtenção do quantizador ótimo global.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q6 : scalarquantization_scalarquantization02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação ao algoritmo de Lloyd-Max podemos afirmar:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo converge uniformemente para o quantizador computacionalmente mais eficiente, embora não minimize a distorção.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+O algoritmo fornece uma forma de obter um quantizador melhor (menor distorção) a partir de um quantizador inicial, garantindo assim a obtenção de um quantizador localmente ótimo, porém não garante a obtenção do quantizador ótimo global.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar uniforme para qualquer sinal de entrada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar não-uniforme para um sinal, porém este algoritmo poderá não convergir.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q6 : scalarquantization_scalarquantization02 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação ao algoritmo de Lloyd-Max podemos afirmar:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo converge uniformemente para o quantizador computacionalmente mais eficiente, embora não minimize a distorção.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Nenhum das opções.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar uniforme para qualquer sinal de entrada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+O algoritmo encontra o melhor (menor distorção) quantizador escalar não-uniforme para um sinal, porém este algoritmo poderá não convergir.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+O algoritmo fornece uma forma de obter um quantizador melhor (menor distorção) a partir de um quantizador inicial, garantindo assim a obtenção de um quantizador localmente ótimo, porém não garante a obtenção do quantizador ótimo global.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+</quiz>

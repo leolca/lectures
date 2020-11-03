@@ -1,0 +1,34 @@
+Question
+========
+Sobre a codificação RLE, podemos afirmar que:
+
+
+Answerlist
+----------
+* A codificação RLE altera as características estatísticas dos dados (a distribuição dos dados na entrada do codificador é diferente da distribuição dos dados na saída).
+* A codificação RLE funciona bem para curtas sequências de valores diferentes, porém com valores próximos.
+* A codificação RLE sozinha fornece bons resultados de compressão para fotografias, em geral.
+* A codificação RLE sozinha fornece bons resultados de compressão para imagens com grandes regiões de cor chapada.
+* A codificação RLE é ideal para compressão de textos.
+* A compressão RLE é uma compressão sem perdas.
+
+Solution
+========
+
+
+Answerlist
+----------
+* True.
+* False.
+* False. 
+* True.
+* False.
+* True.
+
+
+Meta-information
+================
+extype: mchoice
+exsolution: 100101
+exname: Multiple choices RLE question
+exshuffle: 5

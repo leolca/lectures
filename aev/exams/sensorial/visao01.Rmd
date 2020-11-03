@@ -1,0 +1,31 @@
+Question
+========
+Com relação à visão podemos afirmar que:
+
+Answerlist
+----------
+* A maior concentração de células sensitivas da visão (cones e bastonetes) esta na região periférica da visão.
+* Existem 3 tipos de cones, células responsáveis pela visão colorida. Eles possuem pico de resposta no comprimento do vermelho, verde e azul
+* A sensibilidade ao verde é maior do que ao vermelho e ao azul.
+* O ponto cego de um olho não é percebido pois a informação que falta e complementada pela informação proveniente do outro olho.
+* Dois espectros luminosos diferentes podem ser percebidos com a mesma cor e brilho.
+
+Solution
+========
+
+Answerlist
+----------
+* False.
+* True.
+* True.
+* False.
+* True.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 01101
+exname: visao
+exshuffle: 5
+expoints: 1
+

@@ -1,0 +1,32 @@
+Question
+========
+Com relação à transformada wavelet podemos afirmar que:
+
+Answerlist
+----------
+* A transformada wavelet é uma transformada ortogonal.
+* A transformada wavelet pode ser expressa por uma multiplicação matricial.
+* A inversa da transformada wavelet (na forma matricial) pode ser obtida pela matriz adjunta.
+* Os coeficientes de filtro de Haar $[\sqrt{2}/2, \sqrt{2}/2]$ representam um filtro passa-altas.
+* O processo de decomposição wavelet equivale a um filtro seguido de um downsample, sendo o filtro projetado para que não ocorra aliasing.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* True.
+* True.
+* False.
+* False.
+
+
+Meta-information
+================
+extype: mchoice
+exsolution: 11100
+exname: wavelets
+exshuffle: 5
+expoints: 1
+

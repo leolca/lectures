@@ -1,0 +1,43 @@
+Question
+========
+Com relação à DCT podemos afirmar que:
+
+Answerlist
+----------
+* A DCT é uma transformada ortogonal.
+* As linhas da matriz de DCT são ortogonais entre si.
+* A matriz de DCT inversa é igual à transposta da matriz de DCT. 
+* Uma propriedade importante da DCT é a compactação de energia.
+* A DCT pode ser calculada através da FFT.
+* A DCT pode ser calculada através da PCA.
+* A DCT impõem perdas de informação, o que é necessário para a compressão de dados.
+* As informações perdidas pela DCT são, em grande parte, imperceptíveis.
+* No compressão de sinais (imagem, áudio, vídeo), podemos substituir a DCT por outra transformada.
+* A DCT é um codificador de entropia.
+* Como a primeira linha da DCT é constante, o primeiro elemento da DCT ($X[0]$) poderá ser sempre desprezado (considere $X[k]$ a DCT de $x[n]$).  
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* True.
+* True.
+* True.
+* True.
+* False.
+* False.
+* False.
+* True.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 11111000100
+exname: DCT
+exshuffle: 5
+expoints: 1
+

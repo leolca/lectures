@@ -1,0 +1,32 @@
+
+
+Question
+========
+Sobre a amostragem de um sinal podemos afirmar que
+
+Answerlist
+----------
+* A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um trem de impulsos.
+* A amostragem no tempo corresponde à convolução por um trem de impulsos e na frequência à multiplicação por um trem de impulsos.
+* A amostragem no tempo corresponde à multiplicação por um trem de impulsos e na frequência à convolução por um impulso.
+* A amostragem no tempo corresponde à convolução por um impulso e na frequência à multiplicação por um escalar.
+* Todas as alternativas estão erradas.
+
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: sampling2
+exshuffle: 5

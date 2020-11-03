@@ -1,0 +1,53 @@
+
+
+Question
+========
+Considere um quantizado escalar uniforme com os sequintes pontos de representação: 
+`[-1.5 -0.5 0.5 1.5]` e considere o seguinte sinal a ser quantizado
+`x = [-3 -2 -1 0 1 2 3]`. A saída (índices) do quantizador e a distorção (MSE) obtida são:
+
+
+Answerlist
+----------
+* saída = `[0 0 0 1 2 3 3]`, distorção = 0.82143.
+* saída = `[0 1 2 3 2 1 0]`, distorção = 1.52121. 
+* saída = `[0 0 1 1 2 2 3]`, distorção = 0.45782.
+* saída = `[1 1 0 0 3 3 2]`, distorção = 0.96316.
+* Nenhum das opções.
+
+
+Solution
+========
+Como o quantizador é uniforme, o limiares serão `[-1 0 1]`. Desta forma, 
+teremos a seguinte mapeamento 
+$(-\infty,-1] \rightarrow -1.5$, 
+$(-1,0] \rightarrow -0.5$,
+$(0,1] \rightarrow 0.5$ e 
+$(1,\infty) \rightarrow 1.5$.
+Os valores de entrada serão então mapeados em `y = [-1.5 -1.5 -1.5 -0.5 0.5 1.5 1.5]` e assim
+os índices serão `idx = [0 0 0 1 2 3 4]`.
+A distormão (MSE) é dada por 
+$$
+\begin{aligned}
+d &= \frac{1}{N} \sum_{i=1}^N (y[i] - x[i])^2 \\
+  &= \frac{1}{7} \left( (-1.5 + 3)^2 + (-1.5 + 2)^2 + (-1.5 + 1)^2 + (-0.5 + 0)^2 + (0.5 - 1)^2 + (1.5 - 2)^2 + (1.5 - 3)^2 \right) \\
+  &= \frac{1}{7} \left( 1.5^2 + 0.5^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-0.5)^2 + (-1.5)^2 \right) \\
+  &= \frac{1}{7} 5.75 = 0.82143
+\end{aligned}
+$$
+
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: scalar quantization
+exshuffle: 5

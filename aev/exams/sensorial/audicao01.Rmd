@@ -1,0 +1,33 @@
+Question
+========
+Com relação à audição podemos afirmar que:
+
+Answerlist
+----------
+* Altas frequências estimulam a base da cóclea. 
+* O tímpano e ossículos possuem como função realizar o casamento de impedância de dois meios:  
+ar (no qual o som se propaga até a entrada do ouvido externo) e líquido (dentro da cóclea).
+* A codificação utilizada pelo padrão MP3 utiliza uma codificação em sub-bandas e utiliza-se do  
+efeito de mascaramento psicoacústico, codificando a informação com menos bits quando houver mascaramento.
+* A membrana basilar vibra igualmente em toda sua extensão quando estimulada por um tom puro. 
+* O tímpano é responsável pela transdução do estimulo mecânico em um estimulo neuronal.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* True.
+* True.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 11100
+exname: audicao
+exshuffle: 5
+expoints: 1
+

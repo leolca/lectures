@@ -1,0 +1,54 @@
+```{r, echo = FALSE, results = "hide"}
+include_supplement("lpcfilter.png",
+  dir = "/home/leoca/ee/ufsj/lectures/aev/exams/lpc/", recursive = TRUE)
+```
+
+Question
+========
+A Figura abaixo apresenta a resposta em frequência do filtro LPC obtido para a vogal [a] amostrada a uma taxa de $f_s=8kHz$. 
+Para as 5 curvas apresentadas, foi utilizado o mesmo sinal de voz da vogal [a]. O que mudou
+apenas foi a ordem desejada do filtro obtido na análise LPC. Foram obtidos filtros de ordem
+4, 8, 12, 16 e 20. As respostas estão deslocadas verticalmente apenas para melhor visualização.
+
+\
+![](lpcfilter.png)
+
+Podemos afirmar que:
+
+Answerlist
+---------------
+* Os filtros (a), (b), (c), (d) e (e) (na figura) correspondem a filtros de ordem 4, 8, 12, 16 e 20, respectivamente.
+* Os filtros (a), (b), (c), (d) e (e) (na figura) correspondem a filtros de ordem 20, 16, 12, 8 e 4, respectivamente.
+* O sistema de 8 ordem possui pólos (mais proeminentes) com ângulo de aproximadamente $\frac{3}{16} \pi$ rad/s, $\frac{5}{16} \pi$ rad/s e $\frac{3}{4} \pi$ rad/s.
+* O sistema de 8 ordem possui pólos (mais proeminentes) com ângulo de aproximadamente $\frac{3}{4} \pi$ rad/s, $\frac{5}{4} \pi$ rad/s e $3 \pi$ rad/s.
+* O sistema de 8 ordem possui pólos (mais proeminentes) com ângulo de aproximadamente $750$ rad, $1300$ rad/s e $2900$ rad/s.
+* Podemos constatar pelos gráficos que a frequência fundamental do [a] pronunciado foi de aproximadamente 140Hz.
+* Podemos constatar pelos gráficos que a frequência fundamental do [a] pronunciado foi de aproximadamente 280Hz.
+* Não podemos inferir qual é a frequência fundamental apenas analisando do gráfico apresentado.
+* A partir dos coeficiente de autocorrelação do sinal podemos obter o filtro LPC e a frequência fundamental do sinal.
+* A partir dos coeficiente de autocorrelação do sinal podemos obter apenas o filtro LPC.
+* A partir dos coeficiente de autocorrelação do sinal podemos obter apenas a frequência fundamental do sinal.
+
+Solution
+========
+
+Answerlist
+----------
+* False.
+* True.
+* True.
+* False.
+* False.
+* False.
+* False.
+* True.
+* True.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 01100001100
+exname: lpc vogal
+expoints: 1

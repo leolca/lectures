@@ -1,0 +1,34 @@
+
+
+Question
+========
+Com relação ao algoritmo de Lloyd-Max podemos afirmar:
+
+Answerlist
+----------
+* O algoritmo fornece uma forma de obter um quantizador melhor (menor distorção) a partir de um quantizador
+inicial, garantindo assim a obtenção de um quantizador localmente ótimo, porém não garante a obtenção do quantizador 
+ótimo global.
+* O algoritmo encontra o melhor (menor distorção) quantizador escalar uniforme para qualquer sinal de entrada.
+* O algoritmo encontra o melhor (menor distorção) quantizador escalar não-uniforme para um sinal, porém este algoritmo poderá não convergir.
+* O algoritmo converge uniformemente para o quantizador computacionalmente mais eficiente, embora não minimize a distorção.
+* Nenhum das opções.
+
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: lloyd-max
+exshuffle: 5

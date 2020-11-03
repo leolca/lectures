@@ -1,0 +1,1592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-05/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q1 : sensorial_visao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à visão podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A sensibilidade ao verde é maior do que ao vermelho e ao azul.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O ponto cego de um olho não é percebido pois a informação que falta e complementada pela informação proveniente do outro olho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Existem 3 tipos de cones, células responsáveis pela visão colorida. Eles possuem pico de resposta no comprimento do vermelho, verde e azul
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dois espectros luminosos diferentes podem ser percebidos com a mesma cor e brilho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A maior concentração de células sensitivas da visão (cones e bastonetes) esta na região periférica da visão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q1 : sensorial_visao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à visão podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A sensibilidade ao verde é maior do que ao vermelho e ao azul.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O ponto cego de um olho não é percebido pois a informação que falta e complementada pela informação proveniente do outro olho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A maior concentração de células sensitivas da visão (cones e bastonetes) esta na região periférica da visão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dois espectros luminosos diferentes podem ser percebidos com a mesma cor e brilho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Existem 3 tipos de cones, células responsáveis pela visão colorida. Eles possuem pico de resposta no comprimento do vermelho, verde e azul
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q1 : sensorial_visao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à visão podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O ponto cego de um olho não é percebido pois a informação que falta e complementada pela informação proveniente do outro olho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dois espectros luminosos diferentes podem ser percebidos com a mesma cor e brilho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A maior concentração de células sensitivas da visão (cones e bastonetes) esta na região periférica da visão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Existem 3 tipos de cones, células responsáveis pela visão colorida. Eles possuem pico de resposta no comprimento do vermelho, verde e azul
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A sensibilidade ao verde é maior do que ao vermelho e ao azul.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q1 : sensorial_visao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à visão podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A maior concentração de células sensitivas da visão (cones e bastonetes) esta na região periférica da visão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A sensibilidade ao verde é maior do que ao vermelho e ao azul.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Existem 3 tipos de cones, células responsáveis pela visão colorida. Eles possuem pico de resposta no comprimento do vermelho, verde e azul
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O ponto cego de um olho não é percebido pois a informação que falta e complementada pela informação proveniente do outro olho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dois espectros luminosos diferentes podem ser percebidos com a mesma cor e brilho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q1 : sensorial_visao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à visão podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O ponto cego de um olho não é percebido pois a informação que falta e complementada pela informação proveniente do outro olho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A sensibilidade ao verde é maior do que ao vermelho e ao azul.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Dois espectros luminosos diferentes podem ser percebidos com a mesma cor e brilho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Existem 3 tipos de cones, células responsáveis pela visão colorida. Eles possuem pico de resposta no comprimento do vermelho, verde e azul
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A maior concentração de células sensitivas da visão (cones e bastonetes) esta na região periférica da visão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-05/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q2 : sensorial_audicao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à audição podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O tímpano é responsável pela transdução do estimulo mecânico em um estimulo neuronal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Altas frequências estimulam a base da cóclea.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tímpano e ossículos possuem como função realizar o casamento de impedância de dois meios: ar (no qual o som se propaga até a entrada do ouvido externo) e líquido (dentro da cóclea).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A codificação utilizada pelo padrão MP3 utiliza uma codificação em sub-bandas e utiliza-se do efeito de mascaramento psicoacústico, codificando a informação com menos bits quando houver mascaramento.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A membrana basilar vibra igualmente em toda sua extensão quando estimulada por um tom puro.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q2 : sensorial_audicao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à audição podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tímpano e ossículos possuem como função realizar o casamento de impedância de dois meios: ar (no qual o som se propaga até a entrada do ouvido externo) e líquido (dentro da cóclea).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Altas frequências estimulam a base da cóclea.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A codificação utilizada pelo padrão MP3 utiliza uma codificação em sub-bandas e utiliza-se do efeito de mascaramento psicoacústico, codificando a informação com menos bits quando houver mascaramento.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A membrana basilar vibra igualmente em toda sua extensão quando estimulada por um tom puro.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O tímpano é responsável pela transdução do estimulo mecânico em um estimulo neuronal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q2 : sensorial_audicao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à audição podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tímpano e ossículos possuem como função realizar o casamento de impedância de dois meios: ar (no qual o som se propaga até a entrada do ouvido externo) e líquido (dentro da cóclea).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O tímpano é responsável pela transdução do estimulo mecânico em um estimulo neuronal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A membrana basilar vibra igualmente em toda sua extensão quando estimulada por um tom puro.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A codificação utilizada pelo padrão MP3 utiliza uma codificação em sub-bandas e utiliza-se do efeito de mascaramento psicoacústico, codificando a informação com menos bits quando houver mascaramento.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Altas frequências estimulam a base da cóclea.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q2 : sensorial_audicao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à audição podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A codificação utilizada pelo padrão MP3 utiliza uma codificação em sub-bandas e utiliza-se do efeito de mascaramento psicoacústico, codificando a informação com menos bits quando houver mascaramento.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Altas frequências estimulam a base da cóclea.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tímpano e ossículos possuem como função realizar o casamento de impedância de dois meios: ar (no qual o som se propaga até a entrada do ouvido externo) e líquido (dentro da cóclea).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O tímpano é responsável pela transdução do estimulo mecânico em um estimulo neuronal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A membrana basilar vibra igualmente em toda sua extensão quando estimulada por um tom puro.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q2 : sensorial_audicao01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à audição podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A codificação utilizada pelo padrão MP3 utiliza uma codificação em sub-bandas e utiliza-se do efeito de mascaramento psicoacústico, codificando a informação com menos bits quando houver mascaramento.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+O tímpano e ossículos possuem como função realizar o casamento de impedância de dois meios: ar (no qual o som se propaga até a entrada do ouvido externo) e líquido (dentro da cóclea).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Altas frequências estimulam a base da cóclea.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A membrana basilar vibra igualmente em toda sua extensão quando estimulada por um tom puro.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O tímpano é responsável pela transdução do estimulo mecânico em um estimulo neuronal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-05/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q3 : video_video01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à codificação de vídeo podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Os quadros tipo B (bidirecionais) utilizam a predição de movimento na vertical e na horizontal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+As codificações de vídeo também utilizam transformadas ortogonais (como DCT, Wavelets, etc).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A primeira etapa na codificação de vídeo é a codificação de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+A predição temporal é importante para explorar a redundância entre quadros, possibilitando maior compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Quanto maior o número de quadros chave utilizados, maior será a taxa de compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q3 : video_video01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à codificação de vídeo podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A predição temporal é importante para explorar a redundância entre quadros, possibilitando maior compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A utilização de quadros chave é importante para garantir o acesso aleatório ao vídeo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+As codificações de vídeo também utilizam transformadas ortogonais (como DCT, Wavelets, etc).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A primeira etapa na codificação de vídeo é a codificação de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os quadros tipo B (bidirecionais) utilizam a predição de movimento na vertical e na horizontal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q3 : video_video01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à codificação de vídeo podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os quadros tipo B (bidirecionais) utilizam a predição de movimento na vertical e na horizontal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Quanto maior o número de quadros chave utilizados, maior será a taxa de compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A utilização de quadros chave é importante para garantir o acesso aleatório ao vídeo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A predição temporal é importante para explorar a redundância entre quadros, possibilitando maior compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+As codificações de vídeo também utilizam transformadas ortogonais (como DCT, Wavelets, etc).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q3 : video_video01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à codificação de vídeo podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+A utilização de quadros chave é importante para garantir o acesso aleatório ao vídeo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+As codificações de vídeo também utilizam transformadas ortogonais (como DCT, Wavelets, etc).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A primeira etapa na codificação de vídeo é a codificação de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Quanto maior o número de quadros chave utilizados, maior será a taxa de compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Os quadros tipo B (bidirecionais) utilizam a predição de movimento na vertical e na horizontal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q3 : video_video01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à codificação de vídeo podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+As codificações de vídeo também utilizam transformadas ortogonais (como DCT, Wavelets, etc).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os quadros tipo B (bidirecionais) utilizam a predição de movimento na vertical e na horizontal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A utilização de quadros chave é importante para garantir o acesso aleatório ao vídeo.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A predição temporal é importante para explorar a redundância entre quadros, possibilitando maior compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Quanto maior o número de quadros chave utilizados, maior será a taxa de compressão.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-05/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q4 : wavelets_wavelets01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à transformada wavelet podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet pode ser expressa por uma multiplicação matricial.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O processo de decomposição wavelet equivale a um filtro seguido de um downsample, sendo o filtro projetado para que não ocorra aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os coeficientes de filtro de Haar <span class="math inline">\([\sqrt{2}/2, \sqrt{2}/2]\)</span> representam um filtro passa-altas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet é uma transformada ortogonal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A inversa da transformada wavelet (na forma matricial) pode ser obtida pela matriz adjunta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q4 : wavelets_wavelets01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à transformada wavelet podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet é uma transformada ortogonal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os coeficientes de filtro de Haar <span class="math inline">\([\sqrt{2}/2, \sqrt{2}/2]\)</span> representam um filtro passa-altas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A inversa da transformada wavelet (na forma matricial) pode ser obtida pela matriz adjunta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet pode ser expressa por uma multiplicação matricial.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O processo de decomposição wavelet equivale a um filtro seguido de um downsample, sendo o filtro projetado para que não ocorra aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q4 : wavelets_wavelets01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à transformada wavelet podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A inversa da transformada wavelet (na forma matricial) pode ser obtida pela matriz adjunta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet é uma transformada ortogonal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os coeficientes de filtro de Haar <span class="math inline">\([\sqrt{2}/2, \sqrt{2}/2]\)</span> representam um filtro passa-altas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O processo de decomposição wavelet equivale a um filtro seguido de um downsample, sendo o filtro projetado para que não ocorra aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet pode ser expressa por uma multiplicação matricial.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q4 : wavelets_wavelets01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à transformada wavelet podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A inversa da transformada wavelet (na forma matricial) pode ser obtida pela matriz adjunta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet é uma transformada ortogonal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet pode ser expressa por uma multiplicação matricial.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os coeficientes de filtro de Haar <span class="math inline">\([\sqrt{2}/2, \sqrt{2}/2]\)</span> representam um filtro passa-altas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O processo de decomposição wavelet equivale a um filtro seguido de um downsample, sendo o filtro projetado para que não ocorra aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q4 : wavelets_wavelets01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à transformada wavelet podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet pode ser expressa por uma multiplicação matricial.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A transformada wavelet é uma transformada ortogonal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+O processo de decomposição wavelet equivale a um filtro seguido de um downsample, sendo o filtro projetado para que não ocorra aliasing.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A inversa da transformada wavelet (na forma matricial) pode ser obtida pela matriz adjunta.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Os coeficientes de filtro de Haar <span class="math inline">\([\sqrt{2}/2, \sqrt{2}/2]\)</span> representam um filtro passa-altas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+</quiz>

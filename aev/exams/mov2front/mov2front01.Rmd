@@ -1,0 +1,49 @@
+
+
+Question
+========
+Suponha que a palavra "elemento" será codificada pela codificação *move-to-front*.
+Considere como dicionário inicial o alfabeto [a-z] (com 26 letras, sem acentos e sem cedilha) em ordem alfabética.
+Qual será a saída do codificador e o dicionário ao final? (Considere que o ídice
+zero é a primeira posição).
+
+
+Answerlist
+----------
+* `[4 11 1 12 1 13 19 15]` e "otnemlabcdfghijkpqrsuvwxyz".
+* `[4 11 4 12 4 13 19 14]` e "otnemlabcdfghijkpqrsuvwxyz".
+* `[5 12 5 13 5 14 20 15]` e "abcdefghijklmnopqrstuvwxyz".
+* `[4 11 0 12 0 13 19 14]` e "otnemlabcdfghijkpqrsuvwxyz".
+* `[0 1  0 2  0 3  4  5 ]` e "elmntoabcdfghijkpqrsuvwxyz".
+
+
+Solution
+========
+O dicionário inicial é `abcdefghijklmnopqrstuvwxyz`.
+
+|entrada    |saída  |dicionário			 |
+|-----------|-------|----------------------------|
+|  e	    | 4	    | abcdefghijklmnopqrstuvwxyz |
+|  l	    | 11    | eabcdfghijklmnopqrstuvwxyz |
+|  e	    | 1	    | leabcdfghijkmnopqrstuvwxyz | 
+|  m	    | 12    | elabcdfghijkmnopqrstuvwxyz |
+|  e	    | 1	    | melabcdfghijknopqrstuvwxyz |
+|  n	    | 13    | emlabcdfghijknopqrstuvwxyz |
+|  t	    | 19    | nemlabcdfghijkopqrstuvwxyz |
+|  o	    | 15    | tnemlabcdfghijkopqrsuvwxyz |
+|	    |	    | otnemlabcdfghijkpqrsuvwxyz |
+
+Answerlist
+----------
+* True. `[4 11 1 12 1 13 19 15]` e "otnemlabcdfghijkpqrsuvwxyz".
+* False. `[4 11 4 12 4 13 19 14]` e "otnemlabcdfghijkpqrsuvwxyz".
+* False. `[5 12 5 13 5 14 20 15]` e "abcdefghijklmnopqrstuvwxyz".
+* False. `[4 11 0 12 0 13 19 14]` e "otnemlabcdfghijkpqrsuvwxyz".
+* False. `[0 1  0 2  0 3  4  5 ]` e "elmntoabcdfghijkpqrsuvwxyz".
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: Move-to-front
+exshuffle: 5

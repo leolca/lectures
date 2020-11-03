@@ -1,0 +1,38 @@
+Question
+========
+Com relação à Análise em Componentes Principais (PCA) podemos afirmar que:
+
+Answerlist
+----------
+* A PCA pode ser utilizada para redução de dimensionalidade dos dados.
+* As componentes principais são os autovetores da matriz de covariância dos dados.
+* A PCA é uma transformação linear.
+* A PCA é uma transformação irreversível.
+* Se você realizar a PCA para reduzir a dimensionalidade de $d$ para $j$ dimensões e
+subsequentemente realizar uma nova PCA para reduzir a dimensionalidade de $j$ para $k$
+dimensões, com $d > j > k$, teríamos o mesmo resultado reduzindo diretamente de $d$ para $k$ dimensões.
+* Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, as componentes principais serão as mesmas.
+* Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, o maior autovalor da covariância das amostras não sofrerá alteração.
+
+Solution
+========
+
+
+Answerlist
+----------
+* True.
+* True.
+* True.
+* False.
+* True.
+* False.
+* True.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 1110101
+exname: PCA
+exshuffle: 5
+expoints: 1
+

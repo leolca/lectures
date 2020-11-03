@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-04/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q1 : dct_dct01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à DCT podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Uma propriedade importante da DCT é a compactação de energia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A DCT impõem perdas de informação, o que é necessário para a compressão de dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A DCT é um codificador de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+Como a primeira linha da DCT é constante, o primeiro elemento da DCT (<span class="math inline">\(X[0]\)</span>) poderá ser sempre desprezado (considere <span class="math inline">\(X[k]\)</span> a DCT de <span class="math inline">\(x[n]\)</span>).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+As informações perdidas pela DCT são, em grande parte, imperceptíveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q1 : dct_dct01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à DCT podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+A DCT pode ser calculada através da FFT.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A DCT impõem perdas de informação, o que é necessário para a compressão de dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+No compressão de sinais (imagem, áudio, vídeo), podemos substituir a DCT por outra transformada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+A matriz de DCT inversa é igual à transposta da matriz de DCT.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+As linhas da matriz de DCT são ortogonais entre si.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q1 : dct_dct01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à DCT podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+A DCT é uma transformada ortogonal.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A DCT é um codificador de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+As informações perdidas pela DCT são, em grande parte, imperceptíveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+No compressão de sinais (imagem, áudio, vídeo), podemos substituir a DCT por outra transformada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Como a primeira linha da DCT é constante, o primeiro elemento da DCT (<span class="math inline">\(X[0]\)</span>) poderá ser sempre desprezado (considere <span class="math inline">\(X[k]\)</span> a DCT de <span class="math inline">\(x[n]\)</span>).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q1 : dct_dct01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à DCT podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Uma propriedade importante da DCT é a compactação de energia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Como a primeira linha da DCT é constante, o primeiro elemento da DCT (<span class="math inline">\(X[0]\)</span>) poderá ser sempre desprezado (considere <span class="math inline">\(X[k]\)</span> a DCT de <span class="math inline">\(x[n]\)</span>).
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A DCT impõem perdas de informação, o que é necessário para a compressão de dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A matriz de DCT inversa é igual à transposta da matriz de DCT.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+As linhas da matriz de DCT são ortogonais entre si.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q1 : dct_dct01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à DCT podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Uma propriedade importante da DCT é a compactação de energia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+As linhas da matriz de DCT são ortogonais entre si.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+No compressão de sinais (imagem, áudio, vídeo), podemos substituir a DCT por outra transformada.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+As informações perdidas pela DCT são, em grande parte, imperceptíveis.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A DCT é um codificador de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-04/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q2 : pca_pca01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à Análise em Componentes Principais (PCA) podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação irreversível.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, o maior autovalor da covariância das amostras não sofrerá alteração.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Se você realizar a PCA para reduzir a dimensionalidade de <span class="math inline">\(d\)</span> para <span class="math inline">\(j\)</span> dimensões e subsequentemente realizar uma nova PCA para reduzir a dimensionalidade de <span class="math inline">\(j\)</span> para <span class="math inline">\(k\)</span> dimensões, com <span class="math inline">\(d &gt; j &gt; k\)</span>, teríamos o mesmo resultado reduzindo diretamente de <span class="math inline">\(d\)</span> para <span class="math inline">\(k\)</span> dimensões.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A PCA pode ser utilizada para redução de dimensionalidade dos dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, as componentes principais serão as mesmas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q2 : pca_pca01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à Análise em Componentes Principais (PCA) podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+A PCA pode ser utilizada para redução de dimensionalidade dos dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, as componentes principais serão as mesmas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+Se você realizar a PCA para reduzir a dimensionalidade de <span class="math inline">\(d\)</span> para <span class="math inline">\(j\)</span> dimensões e subsequentemente realizar uma nova PCA para reduzir a dimensionalidade de <span class="math inline">\(j\)</span> para <span class="math inline">\(k\)</span> dimensões, com <span class="math inline">\(d &gt; j &gt; k\)</span>, teríamos o mesmo resultado reduzindo diretamente de <span class="math inline">\(d\)</span> para <span class="math inline">\(k\)</span> dimensões.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação linear.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+As componentes principais são os autovetores da matriz de covariância dos dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q2 : pca_pca01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à Análise em Componentes Principais (PCA) podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, as componentes principais serão as mesmas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação irreversível.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A PCA pode ser utilizada para redução de dimensionalidade dos dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação linear.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Se você realizar a PCA para reduzir a dimensionalidade de <span class="math inline">\(d\)</span> para <span class="math inline">\(j\)</span> dimensões e subsequentemente realizar uma nova PCA para reduzir a dimensionalidade de <span class="math inline">\(j\)</span> para <span class="math inline">\(k\)</span> dimensões, com <span class="math inline">\(d &gt; j &gt; k\)</span>, teríamos o mesmo resultado reduzindo diretamente de <span class="math inline">\(d\)</span> para <span class="math inline">\(k\)</span> dimensões.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q2 : pca_pca01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à Análise em Componentes Principais (PCA) podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação irreversível.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação linear.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, as componentes principais serão as mesmas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+As componentes principais são os autovetores da matriz de covariância dos dados.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Se você realizar a PCA para reduzir a dimensionalidade de <span class="math inline">\(d\)</span> para <span class="math inline">\(j\)</span> dimensões e subsequentemente realizar uma nova PCA para reduzir a dimensionalidade de <span class="math inline">\(j\)</span> para <span class="math inline">\(k\)</span> dimensões, com <span class="math inline">\(d &gt; j &gt; k\)</span>, teríamos o mesmo resultado reduzindo diretamente de <span class="math inline">\(d\)</span> para <span class="math inline">\(k\)</span> dimensões.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q2 : pca_pca01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Com relação à Análise em Componentes Principais (PCA) podemos afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, as componentes principais serão as mesmas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação linear.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Se você realizar uma rotação rígida dos pontos antes de aplicar a PCA, o maior autovalor da covariância das amostras não sofrerá alteração.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Se você realizar a PCA para reduzir a dimensionalidade de <span class="math inline">\(d\)</span> para <span class="math inline">\(j\)</span> dimensões e subsequentemente realizar uma nova PCA para reduzir a dimensionalidade de <span class="math inline">\(j\)</span> para <span class="math inline">\(k\)</span> dimensões, com <span class="math inline">\(d &gt; j &gt; k\)</span>, teríamos o mesmo resultado reduzindo diretamente de <span class="math inline">\(d\)</span> para <span class="math inline">\(k\)</span> dimensões.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A PCA é uma transformação irreversível.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/aev-prova-04/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q3 : jpeg_jpeg01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a compressão JPEG é correto afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Ao final da compressão utiliza-se uma codificação de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A codificação DPCM é aplicada aos coeficientes DC pois os valores destes coeficientes variam muito entre os blocos vizinho.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Como a visão humana é mais sensível a degradação de informação de luminância, o padrão JPEG impõe menores perdas de informação em luminância do que em crominância.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Emprega-se a varredura em zig-zag dos coeficientes da DCT para remover ruído inerente à transformação.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Os coeficientes DC são codificados separadamente dos coeficientes AC por possuírem características estatísticas diferentes.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q3 : jpeg_jpeg01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a compressão JPEG é correto afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Como as componentes de crominância Cb e Cr são parecidas, pode ser aplicada uma sub-amostragem de crominância a ela.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Emprega-se a varredura em zig-zag dos coeficientes da DCT para remover ruído inerente à transformação.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Como a visão humana é mais sensível a degradação de informação de luminância, o padrão JPEG impõe menores perdas de informação em luminância do que em crominância.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A mudança de espaço de cores é realizada para transformar números inteiros em números reais.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Usualmente aplica-se matrizes de quantização diferentes para luminância e crominância.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q3 : jpeg_jpeg01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a compressão JPEG é correto afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A mudança de espaço de cores é realizada para transformar números inteiros em números reais.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Os coeficientes DC são codificados separadamente dos coeficientes AC por possuírem características estatísticas diferentes.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A imagem é dividida em blocos de <span class="math inline">\(8 \times 8\)</span> pois temos 3 componentes de cores e assim <span class="math inline">\(2^3 = 8\)</span> é o tamanho ideal dos blocos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Como as componentes de crominância Cb e Cr são parecidas, pode ser aplicada uma sub-amostragem de crominância a ela.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Como a visão humana é mais sensível a degradação de informação de luminância, o padrão JPEG impõe menores perdas de informação em luminância do que em crominância.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q3 : jpeg_jpeg01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a compressão JPEG é correto afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+<li> False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A mudança de espaço de cores é realizada para transformar números inteiros em números reais.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Ao final da compressão utiliza-se uma codificação de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A imagem é dividida em blocos de <span class="math inline">\(8 \times 8\)</span> pois temos 3 componentes de cores e assim <span class="math inline">\(2^3 = 8\)</span> é o tamanho ideal dos blocos.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Como a visão humana é mais sensível a degradação de informação de luminância, o padrão JPEG impõe menores perdas de informação em luminância do que em crominância.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Após realizar a transformada DCT 2D de cada bloco, realiza-se a quantização vetorial destes blocos em um espaço vetorial <span class="math inline">\(\mathbb{R}^{64}\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q3 : jpeg_jpeg01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sobre a compressão JPEG é correto afirmar que:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+Usualmente aplica-se matrizes de quantização diferentes para luminância e crominância.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+Os coeficientes DC são codificados separadamente dos coeficientes AC por possuírem características estatísticas diferentes.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+Ao final da compressão utiliza-se uma codificação de entropia.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+A mudança de espaço de cores é realizada para transformar números inteiros em números reais.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+Como a visão humana é mais sensível a degradação de informação de luminância, o padrão JPEG impõe menores perdas de informação em luminância do que em crominância.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+</quiz>

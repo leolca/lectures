@@ -1,0 +1,52 @@
+Question
+========
+FLAC é um formato de compressão de áudio que consegue reduzir o tamanho de um arquivo em 50% a 60%
+do tamanho original. Para isto ele utiliza uma predição linear para converter as amostras de áudio em uma série
+de de números pequenos e descorrelacionados (conhecidos como resíduo). Este resíduo é armazenado utilizando
+o código Golomb-Rice. Além disso o FLAC utiliza a compressão RLE para comprimir blocos de amostras idênticas,
+como no caso dos trechos de silêncio.
+
+Para um arquivo binário, a saída do RLE pode ser representada apenas pelo número de bits iguais na sequência
+(não é necessário representar o valor do símbolo, uma vez que temos apenas duas alternativas).
+Iremos adotar a convenção de que a sequência começa sempre com 0 (zero), caso não seja este o caso, basta
+indicar que o primeiro número de repetições é zero. Por exemplo, veja como as seguinte sequências seriam
+codificadas:
+
+`rle(0 0 1 0 0 0 0 1 1 1 1 1 0 0) = [2 1 4 5 2]`
+
+`rle(1 1 0 1 1 1 1 0 0 0 0 0 1 1) = [0 2 1 4 5 2]`
+
+Diga qual é a saída da codificação RLE para as seguintes sequências:
+
+`rle(0 0 0 0 0 1 1 0 0 1 1 1 1 1)`
+
+`rle(1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1)`
+
+
+Answerlist
+----------
+* `[5 2 2 5]` e `[0 4 5 2 2 5]`.
+* `[0 2 1 0 0 1 4]` e `[1 4 0 5 1 2 0 5]`.
+* `[0 5 1 2 5 2 5]` e `[1 0 4 5 2 2 5]`.
+* `[0 5 2 2 5]` e `[0 5 2 2 5]`.
+* `[4 5 2 2 5]` e `[5 2 2 5]`.
+
+
+Solution
+========
+
+
+Answerlist
+----------
+* True.
+* False.
+* False. 
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: Simple RLE question
+exshuffle: 5
