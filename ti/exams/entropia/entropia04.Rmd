@@ -1,0 +1,56 @@
+```{r, echo=FALSE, results="hide"}
+## parameters
+N <- sample((4:6),1,replace = TRUE)
+## solution
+Hmax <- log2(N)
+p <- 2^(-(1:N))
+p[N] <- p[N-1]
+entropy <- function(p) {
+  H = -sum(p*log2(p))
+  return(H)
+}
+H2adic <- entropy(p)
+```
+
+Question
+========
+Considere uma variável aleatória discreta $X$ em um alfabeto de cardinalidade $N=`r N`$. 
+
+Answerlist
+---------------
+* Qual é o valor mínimo da entropia associada a esta V.A.?
+* Qual é o valor máximo da entropia associada a esta V.A.?
+* Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, $p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})$)?
+
+
+Solution
+========
+
+* O valor mínimo da entropia é $0$ (zero) bits.
+* O valor máximo é $\log N = `r Hmax`$ bits.
+* Para uma distribuição 2-ádica a entropia será dada por:
+
+$$
+\begin{aligned} 
+H(X) &= -\sum_x p(x) \log p(x) \\
+    &= -\sum_{n=1}^{N} p_n \log p_n \\
+    &= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &= `r H2adic` \text{bits}
+\end{aligned}
+$$
+
+Answerlist
+----------
+* $H_{\text{min}} = 0$ bits.
+* $H_{\text{max}} = \log N = `r Hmax`$ bits.
+* $H_p = `r H2adic`$ bits.
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num
+exsolution: `r fmt(0)`|`r fmt(Hmax)`|`r fmt(H2adic)`
+exname: entropia-min-max-2adic
+extol: 0.005
+expoints: 1|1|1
+

@@ -1,0 +1,38 @@
+Question
+========
+Um cachorro procurando por um osso, anda sobre os inteiros, possivelmente invertendo a direção a cada passo com probabilidade $p=0.1$.
+Seja $X_0 = 0$. O primeiro passo pode ser para qualquer um dos dois lados (positivo ou negativo) com igual probabilidade.
+Uma caminhada típica deste cachorro seria da forma:
+$$
+(X_0, X_1, \ldots) = (0, -1, -2, -3, -4, -3, -2, -1, 0, 1, \ldots ).
+$$
+
+1. Determine $H(X_1, X_2, \ldots, X_n)$ para $n=101$.
+2. Determine a taxa de entropia da caminhada deste cachorro. 
+3. Qual é o número esperado de passos que o cachorro dará antes de reverter a sua direção de busca?
+
+Answerlist
+---------------
+* $H(X_1, X_2, \ldots, X_n)$ = 
+* taxa de entropia = 
+* número esperado de passos antes de reverter a sua direção = 
+
+Solution
+========
+
+Ver exercício 4.12 do livro e exercício da caminhada dos pombos na lista.
+
+Answerlist
+---------------
+* 47.9
+* 0.469
+* 10 
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num
+exsolution: 47.9|0.469|10
+exname: ex-markov3
+extol: 0.1|0.001|1
+expoints: 1|1|1

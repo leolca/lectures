@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/ERE2-prova-ti-02/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R1 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R2 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R3 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R4 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R5 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R6 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R7 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R8 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R9 Q1 : tipo_tipo01a </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma fonte produzindo uma sequência <span class="math inline">\(X_{1:n}\)</span> onde <span class="math inline">\(X_i \in \mathcal{X}\)</span>, <span class="math inline">\(X_i\)</span> é i.i.d. e <span class="math inline">\(X_i \sim p\)</span>, <span class="math inline">\(\forall i\)</span>. Com relação ao conjunto típico <span class="math inline">\(A_{\epsilon}^{( n )}\)</span>, as seguintes afirmativas são verdadeiras ou falsas?</p>
+<ul>
+<li>O conjunto típico é o conjunto das sequências mais prováveis.</li>
+<li>A probabilidade do conjunto típico é essencialmente igual à probabilidade do conjunto de todas as sequências: <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n)\)</span>.</li>
+<li>O tamanho do conjunto típico pode ser bem menor do que o tamanho do conjunto de todas as sequências: <span class="math inline">\(\vert A_{\epsilon}^{( n )} \vert \ll \vert \mathcal{X}^n \vert\)</span>.</li>
+<li>Quando <span class="math inline">\(n\)</span> é suficientemente grande, todas as sequências do conjunto típico serão de um mesmo tipo.</li>
+<li>O número de bits necessário para codificar as sequências no conjunto típico é maior do que <span class="math inline">\(nH + 2\)</span> bits.</li>
+<li>Eventualmente pode existir um conjunto com menos elementos e mais provável do que o conjunto típico.</li>
+</ul>
+<ol type = "a">
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%100%Verdadeiro.~%0%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+<li> {1:MULTICHOICE:%0%Verdadeiro.~%100%Falso.} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O conjunto típico é o conjunto de todas as sequências que essencialmente ocorrem e possuem probabilidade <span class="math inline">\(\approx 2^{-nH}\)</span>. Geralmente a sequência mais provável, assim como a menos provável, não estão no conjunto típico.</li>
+<li><span class="math inline">\(P(A_{\epsilon}^{( n )}) &gt; 1 - \epsilon\)</span> e assim podemos afirmar que <span class="math inline">\(P(A_{\epsilon}^{( n )}) \approx P(\mathcal{X}^n) = 1\)</span>.</li>
+<li>O tamanho do conjunto típico é <span class="math inline">\(\approx 2^{nH}\)</span> que usualmente é bem menor do que <span class="math inline">\(\vert \mathcal{X}^n \vert\)</span>.</li>
+<li>O número de tipos cresce polinomialmente em <span class="math inline">\(n\)</span> e o número de sequências cresce exponencialmente em <span class="math inline">\(n\)</span>. Eventualmente, para <span class="math inline">\(n\)</span> grande suficiente, teremos que todas as sequências serão de um mesmo tipo.</li>
+<li>Para codificar as sequências do conjunto típico são necessários <span class="math inline">\(\leq n(H + \epsilon) + 2\)</span> bits.</li>
+<li>O conjunto típico é o menor conjunto que possui essencialmente toda probabilidade. Quando <span class="math inline">\(n\)</span> for grande suficiente, todas as sequências serão de um mesmo tipo, o tipo mais próximo da distribuição da fonte, e a classe de tipo, deste tipo, é mais provável do que qualquer outra classe de tipo.</li>
+</ul>
+<ol type = "a">
+<li> False. / True. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> True. / False. </li>
+<li> False. / True. </li>
+<li> False. / True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/ERE2-prova-ti-02/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R1 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{4}{8},\frac{1}{8},\frac{1}{8},\frac{2}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{1}{6},\frac{1}{6},\frac{4}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=30:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 30 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 4.5776367 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 1, 1, 4, 0 } = 30
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{4}{8}\right)^{1} \left(\frac{1}{8}\right)^{1} \left(\frac{1}{8}\right)^{4} \left(\frac{2}{8}\right)^0 = 4.5776367 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 30\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 4.5776367 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R2 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{5}{8},\frac{1}{8},\frac{0}{8},\frac{2}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{2}{6},\frac{1}{6},\frac{3}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=60:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 60 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 2, 1, 3, 0 } = 60
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{5}{8}\right)^{2} \left(\frac{1}{8}\right)^{1} \left(\frac{0}{8}\right)^{3} \left(\frac{2}{8}\right)^0 = 0
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 60\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R3 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{3}{8},\frac{1}{8},\frac{1}{8},\frac{3}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{3}{6},\frac{1}{6},\frac{2}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=60:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0.01:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 60 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0.0061798\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 3, 1, 2, 0 } = 60
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{3}{8}\right)^{3} \left(\frac{1}{8}\right)^{1} \left(\frac{1}{8}\right)^{2} \left(\frac{3}{8}\right)^0 = 0.0061798
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 60\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0.0061798\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R4 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{3}{8},\frac{2}{8},\frac{0}{8},\frac{3}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{2}{6},\frac{2}{6},\frac{2}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=90:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 90 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 2, 2, 2, 0 } = 90
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{3}{8}\right)^{2} \left(\frac{2}{8}\right)^{2} \left(\frac{0}{8}\right)^{2} \left(\frac{3}{8}\right)^0 = 0
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 90\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R5 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{2}{8},\frac{3}{8},\frac{0}{8},\frac{3}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{2}{6},\frac{2}{6},\frac{2}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=90:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 90 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 2, 2, 2, 0 } = 90
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{2}{8}\right)^{2} \left(\frac{3}{8}\right)^{2} \left(\frac{0}{8}\right)^{2} \left(\frac{3}{8}\right)^0 = 0
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 90\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R6 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{3}{8},\frac{1}{8},\frac{1}{8},\frac{3}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{4}{6},\frac{1}{6},\frac{1}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=30:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0.01:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 30 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0.0092697\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 4, 1, 1, 0 } = 30
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{3}{8}\right)^{4} \left(\frac{1}{8}\right)^{1} \left(\frac{1}{8}\right)^{1} \left(\frac{3}{8}\right)^0 = 0.0092697
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 30\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0.0092697\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R7 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{1}{8},\frac{3}{8},\frac{1}{8},\frac{3}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{4}{6},\frac{0}{6},\frac{2}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=15:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 15 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 5.7220459 &amp;times; 10&lt;sup&gt;-5&lt;/sup&gt;\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 4, 0, 2, 0 } = 15
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{1}{8}\right)^{4} \left(\frac{3}{8}\right)^{0} \left(\frac{1}{8}\right)^{2} \left(\frac{3}{8}\right)^0 = 5.7220459 &amp;times; 10&lt;sup&gt;-5&lt;/sup&gt;
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 15\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 5.7220459 &amp;times; 10&lt;sup&gt;-5&lt;/sup&gt;\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R8 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{2}{8},\frac{3}{8},\frac{0}{8},\frac{3}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{4}{6},\frac{1}{6},\frac{1}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=30:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 30 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 4, 1, 1, 0 } = 30
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{2}{8}\right)^{4} \left(\frac{3}{8}\right)^{1} \left(\frac{0}{8}\right)^{1} \left(\frac{3}{8}\right)^0 = 0
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 30\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 0\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R9 Q2 : tipo_tipo03 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma V.A. <span class="math inline">\(X\)</span> no alfabeto <span class="math inline">\(\mathcal{X} = \{0,1,2,3\}\)</span> com distribuição <span class="math inline">\(p \sim (\frac{1}{8},\frac{2}{8},\frac{1}{8},\frac{4}{8})\)</span>. Considere sequências de comprimento <span class="math inline">\(n=6\)</span>, geradas por <span class="math inline">\(n\)</span> realizações desta V.A. de informa independente. Considere o tipo <span class="math inline">\(P_{x_{1:6}}\)</span> dado por <span class="math display">\[
+P_{x_{1:6}} = \left( \frac{4}{6},\frac{1}{6},\frac{1}{6}, 0 \right)
+\]</span> Responda as seguintes perguntas:</p>
+<ol type = "a">
+<li> Quantos tipos existem? {1:NUMERICAL:=84:0.001} </li>
+<li> Quantas sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span> existem? {1:NUMERICAL:=30:0.001} </li>
+<li> Qual é a probabilidade da classe de tipo para o tipo <span class="math inline">\(P_{x_{1:6}}\)</span>? {1:NUMERICAL:=0:0.001} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>Existem 84 tipos.</li>
+<li>Existem 30 sequências do tipo <span class="math inline">\(P_{x_{1:6}}\)</span>.</li>
+<li><span class="math inline">\(P^n(T(P_{x_{1:6}})) = 2.2888184 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\vert \mathcal{P}_n \vert = {n + \vert \mathcal{X} \vert - 1 \choose \vert \mathcal{X} \vert - 1} = {9 \choose 3} = 84
+\]</span></p>
+<p><span class="math display">\[
+|T(P_{x_{1:6}})| = { 6 \choose 4, 1, 1, 0 } = 30
+\]</span></p>
+<p><span class="math display">\[
+P^n(T(P_{x_{1:6}})) = |T(P_{x_{1:6}})| \left(\frac{1}{8}\right)^{4} \left(\frac{2}{8}\right)^{1} \left(\frac{1}{8}\right)^{1} \left(\frac{4}{8}\right)^0 = 2.2888184 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(\vert \mathcal{P}_n \vert = 84\)</span>. </li>
+<li> <span class="math inline">\(|T(P_{x_{1:6}})| = 30\)</span>. </li>
+<li> <span class="math inline">\(P^n(T(P_{x_{1:6}})) = 2.2888184 &amp;times; 10&lt;sup&gt;-4&lt;/sup&gt;\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/ERE2-prova-ti-02/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R1 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R2 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R3 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R4 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R5 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R6 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R7 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R8 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R9 Q3 : tipo_pea01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Uma fonte discreta sem memória emite uma sequência binária de dígitos independentes com probabilidade <span class="math inline">\(p(1) = 0.002\)</span> e <span class="math inline">\(p(0) = 0.998\)</span>. Os dígitos são tomados em grupo de 50 e uma palavra binária é fornecida para cada sequência de 50 dígitos contendo cinco ou menos uns.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Assumindo que todas as palavras código possuem a mesmo comprimento, encontre o comprimento mínimo necessário para fornecer código para todas as sequências com três ou menos uns (1s).</p></li>
+<li><p>Calcule a probabilidade de observar uma sequência da fonte para a qual nenhum código foi atribuído.</p></li>
+<li><p>Use a desigualdade de Chebyshev para limitar a probabilidade de observamos um sequencia da fonte para a qual nenhum código foi associado. Determine este limite.</p></li>
+<li><p>Este limite é maior, menor ou igual ao valor calculado no item b.?</p></li>
+</ol>
+<ol type = "a">
+<li> Comprimento mínimo para fornecer código a todas as sequências com três ou menos uns: {1:NUMERICAL:=22:0.001} </li>
+<li> Probabilidade para uma sequência sem código: {1:NUMERICAL:=0:0.001} </li>
+<li> Limite pela desigualdade de Chebyshev: {1:NUMERICAL:=0.002867:0.001} </li>
+<li> {1:MULTICHOICE:%100%Maior~%0%Menor~%0%Igual} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>O número de sequências binárias de comprimento 50 com 5 ou menos uns é dado por <span class="math display">\[
+\sum_{k=0}^{5} {50 \choose k} = 1 + 50 + 1225 + 19600 + 230300 + 2118760 = 2369936
+\]</span> Considerando que todos os códigos terão o mesmo comprimento, deveremos utilizar <span class="math inline">\(\lceil \log 2369936 \rceil = 22\)</span> bits para representar as sequências com cinco ou menos uns. Note que a entropia é <span class="math inline">\(H(0.002) = 0.020814\)</span>, ou seja, o limite seriam <span class="math inline">\(50 \times 0.020814 = 1.0407\)</span>, valor bem menor que os <span class="math inline">\(22\)</span> encontrados.</p>
+<p>A probabilidade de uma sequência não possuir código é dada por: <span class="math display">\[
+\begin{aligned}
+\sum_{k=6}^{50} {50 \choose k} (0.002)^k (0.998)^{50 - k} &amp;= 1 - \sum_{k=0}^{5} {50 \choose k} (0.002)^k (0.998)^{50 - k}  \\
+    &amp;= 1 - (0.90475 + 0.090656 + 0.0044510 + 0.00014272 + 0.0000033606 + 0.000000061959) \approx 0.
+\end{aligned}
+\]</span></p>
+<p>Para a v.a. <span class="math inline">\(S_n\)</span> que representa a soma das v.a. i.i.d. <span class="math inline">\(X_1, \ldots, X_n\)</span>, a desigualdade de Chebyschev afirma que <span class="math display">\[
+  \Pr \left( \vert S_n - n\mu  \vert \geq \epsilon \right) \leq \frac{n \sigma^2}{\epsilon^2} ,
+  \]</span> onde <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma^2\)</span> representam a média e variância de <span class="math inline">\(X_i\)</span> (logo, <span class="math inline">\(n\mu\)</span> e <span class="math inline">\(n\sigma^2\)</span> são a média e variância de <span class="math inline">\(S_n\)</span>).</p>
+<p>No problema em questão temos <span class="math inline">\(n=50\)</span>, <span class="math inline">\(\mu=0.002\)</span> e <span class="math inline">\(\sigma^2 = (0.002)(0.998)\)</span>. Note que <span class="math inline">\(S_{50} \geq 6\)</span> se e somente se <span class="math inline">\(\vert S_{50} - 50(0.002) \vert \geq 5.9\)</span>. Devemos então escolher <span class="math inline">\(\epsilon = 5.9\)</span>. Então <span class="math display">\[\begin{equation}
+  \Pr \left( S_{50} \geq 6 \right)  \leq  \frac{50 (0.002) (0.998)}{(5.9)^2} \approx 0.0028670.
+  \end{equation}\]</span></p>
+<p>O limite encontrado é maior do que a real probabilidade, que é aproximadamente zero.</p>
+<ol type = "a">
+<li> <ol start="22" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> <ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol> </li>
+<li> 0.0028670 </li>
+<li> True. / False. / False. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>4</defaultgrade>
+</question>
+
+</quiz>

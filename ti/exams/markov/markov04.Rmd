@@ -1,0 +1,148 @@
+```{r data generation, echo = FALSE, results = "hide"}
+# https://www.eit.lth.se/fileadmin/eit/courses/eitn45/Lectures/2018/L5-HO.pdf
+# use the same graphics type (pdf, svg, png) as the current xweave() call
+typ <- match_exams_device()
+## tikz automaton code with two placeholders
+cadeiamarkov <- "
+\\tikzset{every loop/.style={min distance=10mm,in=60,out=120,looseness=10}}
+\\begin{tikzpicture}[->, >=stealth, auto, semithick, node distance=3.5cm]
+\\node[state]    (a)               {$a$};
+\\node[state]    (c)[below left of=a]   {$c$};
+\\node[state]    (b)[below right of=a]   {$b$};
+\\path
+(a) edge[loop above] node{$1/3$} (a)
+(a) edge[bend left=15] node{$2/3$} (b)
+(b) edge[bend left=15] node{$1/4$} (a)
+(b) edge[bend left=15] node{$3/4$} (c)
+(c) edge[bend left=15, below] node{$1/2$} (b)
+(c) edge[bend left=15] node{$1/2$} (a)
+;
+\\end{tikzpicture}
+"
+
+```
+
+
+Question
+========
+Considere uma cadeia de Markov de primeira ordem dada pelas seguintes probabilidades 
+de transição entre estados:
+$p(a|a) = \frac{1}{3}$, $p(b|a) = \frac{2}{3}$, $p(a|b) = \frac{1}{4}$, $p(c|b) = \frac{3}{4}$,
+$p(b|c) = \frac{1}{2}$ e $p(a|c) = \frac{1}{2}$.
+
+Determine a distribuição de estado estacionário e a taxa de entropia.
+
+Answerlist
+---------------
+* $\mu_a = $
+* $\mu_b = $
+* $\mu_c = $
+* taxa de entropia = 
+
+Solution
+========
+
+
+a matriz de transição é dada por
+$$
+P = \begin{pmatrix} 
+\frac{1}{3} & \frac{2}{3} & 0 \\
+\frac{1}{4} & 0 & \frac{3}{4} \\
+\frac{1}{2} & \frac{1}{2} & 0 
+\end{pmatrix} .
+$$
+
+
+A cadeia de Markov é ilustrada abaixo:
+\
+```{r, echo = FALSE, results = "asis"}
+include_tikz(cadeiamarkov, name = "cadeiamarkov", format = typ, markup = "markdown",
+  library = c("automata", "positioning"),
+  width = "5cm")
+```
+
+A distribuição de estado estacionário é tal que $\mathbf{\mu}^T P = \mathbf{\mu}^T$, com $\sum_i \mu_i = 1$.
+
+$$
+\begin{align}
+\mathbf{\mu}^T P &= \mathbf{\mu}^T \\
+\mathbf{\mu}^T (P-I) &= 0 \\
+\mathbf{\mu}^T Q &= 0 
+\end{align}
+$$
+
+Teremos aqui 
+$$
+Q = \begin{pmatrix} 
+-\frac{2}{3} & \frac{2}{3} & 0 \\
+\frac{1}{4}  & -1 & \frac{3}{4} \\
+\frac{1}{2} & \frac{1}{2} & -1 
+\end{pmatrix} .
+$$
+
+Note que, no sistema de equações acima, podemos incorporar a condição $\sum_i \mu_i = 1$ bastando
+para tanto substituir uma das colunas da matriz $Q$ por uma coluna com uns e substituir
+um dos zeros no vetor de zeros do lado direito da equação por um na posição respectiva.
+Podemos, por exemplo, escolher a última coluna de $Q$ e assim teremos uma matriz 
+
+$$
+\tilde{Q} = \begin{pmatrix} 
+-\frac{2}{3} & \frac{2}{3} & 1 \\
+\frac{1}{4}  & -1 & 1 \\
+\frac{1}{2} & \frac{1}{2} & 1 
+\end{pmatrix} .
+$$
+
+e o novo sistema de equações será
+$$
+\mathbf{\mu}^T \tilde{Q} = (0, 0, 0, 1) ,
+$$
+e a solução poderá ser obtida pós-multiplicando pela matriz inversa de $\tilde{Q}$,
+$$
+\mathbf{\mu}^T = (0, 0, 0, 1) \tilde{Q}^{-1} .
+$$
+
+Calculando a inversa, encontramos
+$$
+\tilde{Q}^{-1} =
+\begin{pmatrix} 
+ -0.837209 & -0.093023 & 0.930233\\
+ 0.139535 & -0.651163 & 0.511628\\
+ 0.348837 &  0.372093 & 0.279070 
+\end{pmatrix} ,
+$$
+e assim,
+$$
+\mathbf{\mu}^T = \left( \frac{15}{43}, \frac{16}{43}, \frac{12}{43} \right) =  (0.34884 \ 0.37209 \ 0.27907).
+$$
+
+Temos que
+$$
+\begin{align}
+H(X_2|X_1 = a) &= H\left(\frac{1}{3}\right) \\
+H(X_2|X_1 = b) &= H\left(\frac{1}{4}\right) \\
+H(X_2|X_1 = c) &= H\left(\frac{1}{2}\right) 
+\end{align}
+$$
+
+A taxa de entropia é dada por:
+$$
+H(\mathcal{X}) = H(X_2|X_1) = \frac{15}{43} H\left(\frac{1}{3}\right) + \frac{16}{43} H\left(\frac{1}{4}\right) + \frac{12}{43} H\left(\frac{1}{2}\right) = 0.9013.
+$$
+
+Answerlist
+---------------
+* 0.3488
+* 0.3721
+* 0.2791
+* 0.9013
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num
+exsolution: 0.3488|0.3721|0.2791|0.9013
+exname: ex-markov4
+extol: 0.01|0.01|0.01|0.01
+expoints: 1|1|1|3
+

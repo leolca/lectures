@@ -1,0 +1,32 @@
+Question
+========
+Determine a capacidade do canal definido por
+
+$$
+\mathcal{X} = \mathcal{Y} = \{1,2,3\}
+$$
+
+$$
+p(y|x) = \begin{pmatrix} 1/2 & 1/2 & 0 \\ 0 & 1/2 & 1/2 \\ 1/2 & 0 & 1/2 \end{pmatrix}
+$$
+
+Answerlist
+---------------
+* C = 
+
+Solution
+========
+
+Ver exercício 7.18.
+
+Answerlist
+----------
+* 0.58 bits
+
+Meta-information
+================
+extype: num
+exsolution: 0.58
+exname: canal2
+extol: 0.01
+expoints: 1

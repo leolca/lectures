@@ -24,3 +24,37 @@ elearn_exam <- c("canal/canal01.Rmd","canal/hamming01.Rmd")
 exams2moodle(elearn_exam, n=5, name = "prova-ti-05", encoding = "UTF-8")
 exams2html(elearn_exam, n=1, name = "prova-ti-05", encoding = "UTF-8")
 
+#### PROVA SUBSTITUTIVA
+elearn_exam <- c("markov/markov03.Rmd", "codigos/codigos04.Rmd","canal/canal02.Rmd")
+exams2moodle(elearn_exam, n=5, name = "prova-ti-substitutiva", encoding = "UTF-8")
+exams2html(elearn_exam, n=1, name = "prova-ti-substitutiva", encoding = "UTF-8")
+
+
+
+
+#### ERE 2
+nalunos <- 9
+library("exams")
+# PROVA 1
+elearn_exam <- c("entropia/entropia04.Rmd","entropia/entropia05.Rmd","entropia/entropia06.Rmd","fano/fano01.Rmd")
+# html test
+exams2html(elearn_exam, n=3, name="prova1", encoding="UTF-8")
+# moodle
+exams2moodle(elearn_exam, n=nalunos, name="ERE2-prova-ti-01", encoding="UTF-8") 
+
+# PROVA 2
+elearn_exam <- c("tipo/tipo01a.Rmd", "tipo/tipo03.Rmd", "tipo/pea01.Rmd")
+exams2html(elearn_exam, n=3, name="prova2", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="ERE2-prova-ti-02", encoding="UTF-8")
+
+# PROVA 3
+elearn_exam <- c("markov/markov03.Rmd", "markov/markov04.Rmd")
+exams2html(elearn_exam, n=3, name="prova3", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="ERE2-prova-ti-03", encoding="UTF-8")
+
+# PROVA 4
+elearn_exam <- c("codigos/codigos02.Rmd", "codigos/codigos04.Rmd", "codigos/codigos05.Rmd")
+exams2html(elearn_exam, n=3, name="prova4", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="ERE2-prova-ti-04", encoding="UTF-8")
+
+

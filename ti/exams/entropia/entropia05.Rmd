@@ -1,0 +1,32 @@
+Question
+========
+Sejam $X$ e $Y$ duas V.A.s em um alfabeto binário ($\{0,1\}$) tal que $H(X) = H(Y) = \log 3 - \frac{2}{3}$ bits.
+Qual alternativa é **garantidamente** verdadeira?
+
+Answerlist
+----------
+* Nenhuma das alternativas.
+* $H(X|Y) \leq \frac{2}{3}$.
+* $H(X|Y=0) < H(X)$.
+* $H(X,Y) > H(X)$.
+* $H(X,Y) \geq \log 3$.
+
+Solution
+========
+
+Answerlist
+----------
+* True
+* False
+* False
+* False
+* False
+
+Meta-information
+================
+exname: entropia-cond
+extype: schoice
+exsolution: 10000
+exshuffle: 4
+expoints: 1
+

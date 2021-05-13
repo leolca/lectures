@@ -1,0 +1,33 @@
+Question
+========
+Sejam $X$ e $Y$ duas V.A.s e $Z = X + Y$.
+Qual alternativa é falsa?
+
+Answerlist
+----------
+* $H(Z) > 0$.
+* $H(Z|X) = H(Y|X)$.
+* Se $X$ e $Y$ são independentes, então $H(Y) \leq H(Z)$.
+* $H(Z) \leq H(X,Y)$.
+* $H(Z|Y) \leq H(X)$.
+
+Solution
+========
+Ver exercício 1.8 (entropia da soma) na lista.
+
+Answerlist
+----------
+* True
+* False
+* False
+* False
+* False
+
+Meta-information
+================
+exname: entropia-soma
+extype: schoice
+exsolution: 10000
+exshuffle: 4
+expoints: 1
+

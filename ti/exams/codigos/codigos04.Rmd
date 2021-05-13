@@ -1,0 +1,46 @@
+Question
+========
+Considere o código de Huffman $D$-ário para a seguinte distribuição $p \sim (\frac{6}{25}, \frac{6}{25}, \frac{4}{25}, \frac{4}{25}, \frac{3}{25}, \frac{2}{25})$.
+Determine o comprimento esperado e a eficiência do código de Huffman para 
+
+1. $D=2$.
+2. $D=4$.
+
+Answerlist
+---------------
+* Comprimeiro esperado ($D=2$):
+* Eficiência ($D=2$):
+* Comprimento esperado ($D=4$):
+* Eficiência ($D=4$):
+
+Solution
+========
+
+Ver exercício 5.38 do livro.
+
+% p = [6/25, 6/25, 4/25, 4/25, 3/25, 2/25];
+% H2 = entropy(p,2); % 2.4929
+% H4 = entropy(p,4); % 1.2464
+% Eff2 = 2.4929/2.66
+% ans =  0.93718
+% Eff4 1.2464/1.36
+% ans =  0.91647
+
+
+Answerlist
+---------------
+* 2.66 
+* 0.937
+* 1.36 
+* 0.916
+
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num
+exsolution: 2.66|0.93718|1.36|0.91647
+exname: ex-huffman
+extol: 0.01
+expoints: 1|1|1|1
+

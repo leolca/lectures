@@ -1,0 +1,2498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/ERE2-prova-ti-01/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R1 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=6\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2.58:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.94:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2.5849625\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.9375 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2.5849625\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.9375\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R2 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=5\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2.32:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.88:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2.3219281\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.875 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2.3219281\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.875\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R3 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=4\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.75:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.75 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.75\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R4 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=5\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2.32:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.88:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2.3219281\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.875 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2.3219281\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.875\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R5 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=4\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.75:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.75 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.75\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R6 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=6\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2.58:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.94:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2.5849625\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.9375 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2.5849625\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.9375\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R7 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=6\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2.58:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.94:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2.5849625\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.9375 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2.5849625\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.9375\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R8 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=4\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.75:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.75 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.75\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R9 Q1 : entropia_entropia04 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere uma variável aleatória discreta <span class="math inline">\(X\)</span> em um alfabeto de cardinalidade <span class="math inline">\(N=6\)</span>.</p>
+<ol type = "a">
+<li> Qual é o valor mínimo da entropia associada a esta V.A.? {1:NUMERICAL:=0:0.005} </li>
+<li> Qual é o valor máximo da entropia associada a esta V.A.? {1:NUMERICAL:=2.58:0.005} </li>
+<li> Qual é o valor da entropia se a distribuição for 2-ádica (ou seja, <span class="math inline">\(p \sim (2^{-1}, 2^{-2}, \ldots, 2^{-N+1}, 2^{-N+1})\)</span>)? {1:NUMERICAL:=1.94:0.005} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ul>
+<li>O valor mínimo da entropia é <span class="math inline">\(0\)</span> (zero) bits.</li>
+<li>O valor máximo é <span class="math inline">\(\log N = 2.5849625\)</span> bits.</li>
+<li>Para uma distribuição 2-ádica a entropia será dada por:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned} 
+H(X) &amp;= -\sum_x p(x) \log p(x) \\
+    &amp;= -\sum_{n=1}^{N} p_n \log p_n \\
+    &amp;= -2^{-1} \log 2^{-1} - 2^{-2} \log 2^{-2} - \ldots - 2^{-N+1} \log 2^{-N+1} \\
+    &amp;= 1.9375 \text{bits}
+\end{aligned}
+\]</span></p>
+<ol type = "a">
+<li> <span class="math inline">\(H_{\text{min}} = 0\)</span> bits. </li>
+<li> <span class="math inline">\(H_{\text{max}} = \log N = 2.5849625\)</span> bits. </li>
+<li> <span class="math inline">\(H_p = 1.9375\)</span> bits. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/ERE2-prova-ti-01/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y) \leq \frac{2}{3}\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y=0) &lt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) &gt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y) \leq \frac{2}{3}\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) \geq \log 3\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y=0) &lt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> True </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) &gt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y=0) &lt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) \geq \log 3\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> True </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y) \leq \frac{2}{3}\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) \geq \log 3\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y=0) &lt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> True </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) \geq \log 3\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y) \leq \frac{2}{3}\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) &gt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R6 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) &gt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y) \leq \frac{2}{3}\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) \geq \log 3\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R7 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y=0) &lt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) &gt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) \geq \log 3\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R8 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) \geq \log 3\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) &gt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y=0) &lt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R9 Q2 : entropia_entropia05 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s em um alfabeto binário (<span class="math inline">\(\{0,1\}\)</span>) tal que <span class="math inline">\(H(X) = H(Y) = \log 3 - \frac{2}{3}\)</span> bits. Qual alternativa é <strong>garantidamente</strong> verdadeira?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> True </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X,Y) &gt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y=0) &lt; H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Nenhuma das alternativas.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(X|Y) \leq \frac{2}{3}\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/ERE2-prova-ti-01/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> True </li>
+<li> False </li>
+<li> False </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes, então <span class="math inline">\(H(Y) \leq H(Z)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|Y) \leq H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|X) = H(Y|X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> True </li>
+<li> False </li>
+<li> False </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes, então <span class="math inline">\(H(Y) \leq H(Z)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|Y) \leq H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) \leq H(X,Y)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> True </li>
+<li> False </li>
+<li> False </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|Y) \leq H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes, então <span class="math inline">\(H(Y) \leq H(Z)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) \leq H(X,Y)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R4 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> True </li>
+<li> False </li>
+<li> False </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|Y) \leq H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) \leq H(X,Y)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|X) = H(Y|X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R5 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> True </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|Y) \leq H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes, então <span class="math inline">\(H(Y) \leq H(Z)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|X) = H(Y|X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R6 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) \leq H(X,Y)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes, então <span class="math inline">\(H(Y) \leq H(Z)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|X) = H(Y|X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R7 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) \leq H(X,Y)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes, então <span class="math inline">\(H(Y) \leq H(Z)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|X) = H(Y|X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R8 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> False </li>
+<li> False </li>
+<li> False </li>
+<li> True </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes, então <span class="math inline">\(H(Y) \leq H(Z)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) \leq H(X,Y)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|X) = H(Y|X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R9 Q3 : entropia_entropia06 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> duas V.A.s e <span class="math inline">\(Z = X + Y\)</span>. Qual alternativa é falsa?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Ver exercício 1.8 (entropia da soma) na lista.</p>
+<ol type = "a">
+<li> True </li>
+<li> False </li>
+<li> False </li>
+<li> False </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) &gt; 0\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|X) = H(Y|X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z|Y) \leq H(X)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(H(Z) \leq H(X,Y)\)</span>.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/ERE2-prova-ti-01/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R1 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R2 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R3 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R4 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R5 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R6 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R7 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R8 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R9 Q4 : fano_fano01 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Considere um canal de comunicação ternário, em que <span class="math inline">\(\mathcal{X} = \mathcal{Y} = \{0,1,2\}\)</span>. Sabemos que a probabilidade conjunta <span class="math inline">\(p(x,y)\)</span> quando <span class="math inline">\(x=y\)</span> é duas vezes maior que a probabilidade conjunta quando <span class="math inline">\(x\neq y\)</span>. Considere um estimador <span class="math inline">\(\hat{X}(Y) = Y\)</span>. Utilizando a desigualdade de Fano, encontre um limite inferior para a probabilidade de erro para o estimador dado.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>A probabilidade conjunta <span class="math inline">\((X,Y)\)</span> é</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{12}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{6}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Desigualdade de Fano: <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)}
+\]</span></p>
+<p>Precisamos calcular <span class="math inline">\(H(X|Y)\)</span>. Para tanto precisamos calcular a marginal <span class="math inline">\(p(y)\)</span> e a condicional <span class="math inline">\(p(x|y)\)</span>. Temos que <span class="math inline">\(p(y) = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right)\)</span> e <span class="math inline">\(p(x|y) = \frac{p(x,y)}{p(y)}\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X  Y</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+  \begin{aligned}
+  H(X|Y) &amp;=&amp; \sum_{y} p(y) H(X | Y = y) \\
+        &amp;=&amp; - \sum_{y} p(y) \sum_{x} p(x|y) \log p(x|y) \\
+        &amp;=&amp; - 3 \times \frac{1}{3} \left( \frac{1}{2} \log \frac{1}{2} + 2 \times \frac{1}{4} \log \frac{1}{4} \right) \\
+        &amp;=&amp; (-1) \times \left(- \frac{1}{2} - 1 \right) = \frac{3}{2}   
+  \end{aligned}
+\]</span></p>
+<p>Teremos assim <span class="math display">\[
+P_e \geq \frac{H(X|Y) - 1}{\log \left( \vert \mathcal{X} \vert - 1 \right)} = \frac{\frac{3}{2} -1}{\log(3-1)} = \frac{1}{2}
+\]</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>3</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.5</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+</quiz>
