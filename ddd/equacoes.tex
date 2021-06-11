@@ -1,0 +1,211 @@
+\subsection{Equações}
+\begin{frame}[fragile]
+\frametitle{Equações}
+O \LaTeX{} contém as ferramentas necessárias para escrever equações em um documento simples.
+Para um documento científico, deve-se utilizar os pacotes \texttt{amsmath} ou \texttt{mathtools}.
+
+\begin{verbatim}
+\usepackage{amsmath}
+\end{verbatim}
+
+Inserindo fórmulas:
+  \begin{itemize}
+  \item \emph{inline} (no meio do texto) utilize \verb|\( ... \)| ou \verb|$ ... $|
+  \item para equações destacadas do texto utilize \verb|\[...\]| ou \verb|$$...$$| ou o ambiente \texttt{equation} ou \texttt{align}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Equações}
+\framesubtitle{Exemplos}
+
+\begin{LTXexample}
+\lipsum[1][1]
+$\forall x \in X, \quad \exists y \leq \epsilon$
+\lipsum[1][2]
+\end{LTXexample}
+
+\begin{LTXexample}
+\(\alpha, \beta, \gamma, \delta, \epsilon, \zeta, \eta, \theta, \Gamma, \Delta, \Theta, \Lambda, \pi, \Pi, \phi, \Phi\)
+\end{LTXexample}
+
+\begin{LTXexample}
+\lipsum[1][1]
+\begin{equation}
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+\end{equation}
+\lipsum[1][2]
+\end{LTXexample}
+
+\begin{LTXexample}
+\lipsum[1][1-2]
+\[ \lim_{x \to \infty} \exp(-x) = 0 \]
+\lipsum[1][3-4]
+\end{LTXexample}
+
+\begin{LTXexample}
+$x \equiv a \pmod b$
+\end{LTXexample}
+
+\begin{LTXexample}
+$k_{n+1} = n^2 + k_n^2 - k_{n-1}$
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+f(n) = \left. n^5 + 4n^2 + 2 \right|_{n=17}
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+$(\cdot), [\cdot], \{\cdot\}, |\cdot|, \lVert\cdot\rVert, \langle\cdot\rangle, \lfloor\cdot\rfloor, \lceil\cdot\rceil$
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+\frac{n!}{k!(n-k)!} = \binom{n}{k} = {n \choose k}
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+\frac{\frac{1}{x}+\frac{1}{y}}{y-z}
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+\frac{
+    \begin{array}[b]{r}
+      \left( x_1 x_2 \right)\\
+      \times \left( x'_1 x'_2 \right)
+    \end{array}
+  }{
+    \left( y_1y_2y_3y_4 \right)
+  }
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+\sqrt[n]{1+x+x^2+x^3+\ldots}
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+\lipsum[1][1] $\sum_{i=1}^{10} t_i$ \lipsum[1][2]
+\end{LTXexample}
+
+\begin{LTXexample}
+\lipsum[1][1] $$ \int_0^\infty e^{-x}\,\mathrm{d}x $$ \lipsum[1][2]
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+ \sum_{\substack{
+    0<i<m \\
+    0<j<n
+ }}
+ P(i,j)
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+$$\int\limits_a^b$$
+\end{LTXexample}
+
+\begin{LTXexample}
+$\prod \bigoplus \bigotimes \bigcup \bigcap \oint \iint \iiint$
+\end{LTXexample}
+
+\begin{LTXexample}
+$$\left(\frac{x^2}{y^3}\right)$$
+\end{LTXexample}
+
+\begin{LTXexample}
+$$\left.\frac{x^3}{3}\right|_0^1$$
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+\begin{matrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i
+ \end{matrix}
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+\label{eqn-Amn}
+ A_{m,n} =
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+ \end{pmatrix}
+\end{equation}
+
+Conforme a Eq. \ref{eqn-Amn}.
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{equation}
+f(n) = \left\{ 
+\begin{array}{l l}
+n/2 & \quad \text{if $n$ is even}\\
+-(n+1)/2 & \quad \text{if $n$ is odd}\\
+\end{array} \right.
+\end{equation}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{eqnarray*}
+\cos 2\theta & = & \cos^2 \theta - 
+                   \sin^2 \theta \\
+             & = & 2 \cos^2 \theta - 1.
+\end{eqnarray*}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{align*}
+  z_0 &= d = 0 \\
+  z_{n+1} &= z_n^2+c
+\end{align*}
+\end{LTXexample}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Mais informações e exemplos}
+
+\begin{itemize}
+\item \href{http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf}{Short Math Guide for \LaTeX}
+\item \url{https://www.overleaf.com/learn/latex/Mathematical_expressions}
+\item \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics}
+\item \url{https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics}
+\item \url{https://en.wikibooks.org/wiki/LaTeX/Theorems}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Dicas para iniciantes}
+
+\begin{itemize}
+\item \hrefcolor{https://detexify.kirelabs.org}{Detexify}
+\item \hrefcolor{https://www.latex4technics.com/}{LaTeX4technics}
+\item \hrefcolor{https://www.mathcha.io/}{Editor de equações online}
+\item \hrefcolor{http://www.wolframalpha.com/input/?i=int+sin{x^2}\%2Bsqrt{x}+dx}{Notação TeX e computação no Wolfram Alpha}
+\end{itemize}
+\end{frame}

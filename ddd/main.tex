@@ -1,0 +1,152 @@
+% !TeX encoding=UTF-8
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[10pt,notes,compress,aspectratio=169]{beamer}
+\usetheme{Montpellier}
+\usecolortheme{dove}
+\setbeamercolor{description item}{fg=gray}
+\defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel} 
+\usepackage[backend=biber,style=abnt,ittitles,repeatfields]{biblatex}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{showexpl}
+\renewcommand\lstlistingname{Lista}
+\input{listingconfig.tex}
+\usepackage{csvsimple}
+\usepackage{colortbl}
+\usepackage{siunitx}
+\newcolumntype{H}{S[table-format=4.2]}
+\usepackage{multirow}
+\usepackage{epigraph} 
+\setlength{\epigraphwidth}{0.8\textwidth}
+\usepackage{tikz}
+\usepackage{biblatex}
+\addbibresource{main.bib}
+\usepackage{subcaption}
+\usepackage{hologo}
+\definecolor{GrayLink}{rgb}{0.5,0.5,0.5}
+\newcommand{\hrefcolor}[2]{\textcolor{GrayLink}{\href{#1}{#2}}}
+\usepackage{multido}
+\usepackage{verbatim}
+%\usepackage{fancyvrb} % for VerbatimOut
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{acronym}
+
+\usepackage{tipa}
+\usepackage{phonrule}
+\usepackage{tikz-dependency}
+\usepackage{qtree}
+
+\newsavebox{\fmbox}
+\newenvironment{fmpage}[1]
+{\begin{lrbox}{\fmbox}\begin{minipage}{#1}}
+{\end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}}
+
+\usepackage{dirtree}
+
+
+\title[Manual de estilo]{Manual de estilo para escrita técnico-científica utilizando \LaTeX{}}
+\author{Leonardo Araujo}
+\institute{UFSJ}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Simple design}
+\epigraph{A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away.}{Antoine de Saint-Exupéry}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Proposta deste manual}
+Este manual tem como proposta apresentar ofícios e ferramentas para uma eficiente elaboração
+de documentos.
+\pause
+
+\vspace{3ex}
+Estética deve estar alinhada à função, afinal livros, artigos e relatórios são documentos
+elaborados prioritariamente para serem lidos e não apreciados em uma galeria de arte.
+\pause
+
+\vspace{3ex}
+Utilização de ferramentas livres. Incentivo à inovação e colaboração.
+\end{frame}
+
+\input{texto.tex}
+
+\input{whylatex.tex}
+
+\input{tipografia.tex}
+
+\input{documentotex.tex}
+
+\input{listas.tex}
+
+\subsection{Citações e notas de rodapé}
+\begin{frame}
+\frametitle{Citações, notas de rodapé e acrônimos}
+Utilize citações e notas de rodapé com parcimônia.
+
+\vspace{3ex}
+Evite acrônimos (exceto quando já forem palavras utilizadas na língua franca do assunto abordado).
+\end{frame}
+
+\input{citacoes.tex}
+
+\input{notasrodape.tex}
+
+\input{referencias.tex}
+
+\input{equacoes.tex}
+
+\input{markdown.tex}
+
+\input{arquivos.tex}
+
+\input{linguistica.tex}
+
+\section{Elementos flutuantes}
+
+\begin{frame}
+\frametitle{Elementos flutuantes}
+\begin{itemize}
+\item figuras
+\item tabelas
+\item listagens e códigos
+\end{itemize}
+
+\vspace{3ex}
+Não utilize referências como:  `veja a figura abaixo'.
+\end{frame}
+
+\input{tabelas.tex}
+
+\input{figuras.tex}
+
+\input{git.tex}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Referências}
+\printbibliography
+
+\vspace{3ex}
+\begin{flushright}
+\includegraphics[width=0.15\linewidth,height=0.3\textheight,keepaspectratio]{figures/lion04.png}
+\end{flushright}
+\end{frame}
+
+
+% references
+% https://www.nature.com/articles/d41586-018-02404-4
+% https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619
+% The task of the referee  https://ieeexplore.ieee.org/document/55470  DOI: 10.1109/2.55470
+% Tufte ER (1990) Envisioning information. Graphics Press. 
+% Tufte ER The Visual Display of Quantitative Information. Graphics Press.
+% https://99percentinvisible.org/episode/florence-nightingale-data-viz-pioneer/ 
+\end{document}

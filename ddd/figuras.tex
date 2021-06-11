@@ -1,0 +1,231 @@
+\subsection{Figuras}
+
+\begin{frame}
+\epigraph{I call our world Flatland, not because we call it so, 
+but to make its nature clearer to you, my happy readers, 
+who are privileged to live in space.}{Edwin A. Abbott, Flatland: A Romance of Many Dimensions}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Figuras}
+Figuras possuem uma grande potencial para levar informação de forma simples ao leitor.
+Podem evidenciar padrões, tendências e anomalias, constâncias ou variações. 
+Devem ser utilizadas com parcimônia e muito bem elaboradas.
+
+\vspace{3ex}
+Figuras são elementos flutuantes e que devem ser capazes de passar uma mensagem sozinhas.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{xkcd}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth,height=0.6\textheight,keepaspectratio]{figures/scientific_paper_graph_quality.png}
+\caption{Scientific Paper Graph Quality (\url{https://xkcd.com/1945/}).}
+\label{fig-scientific_paper_graph_quality}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Eventos na história da visualização de dados}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figures/hist_data_visualization.png}
+\caption{Retirada de \textcite{Friendly2008}.}
+\label{fig-hist_data_visualization}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Figuras}
+
+Florence Nightingale liderou uma pequena equipe de enfermeiras a Istambul em
+1854 para ajudar no cuidado dos soldados britânicos que lutaram na guerra da
+Crimeia. Seus gráficos convenceram os grandes e os bons de que as mortes devido
+à sujeira e ao saneamento deficiente poderiam ser evitadas - salvando inúmeras
+vidas.
+
+\vspace{2ex}
+\fullcite{harford_florence}
+
+\vspace{1ex}
+\hrefcolor{https://99percentinvisible.org/episode/florence-nightingale-data-viz-pioneer/}{Florence Nightingale: Data Viz Pioneer, 99percentinvisible.org}
+
+\hrefcolor{https://en.wikipedia.org/wiki/Florence_Nightingale}{Florence Nightingale, Wikipedia}
+
+\hrefcolor{https://www.youtube.com/watch?v=VTdVPNvwULM}{Nightingale Diagrams, Numberphile}
+
+\hrefcolor{https://www.youtube.com/watch?v=sNppKQh0xPo}{What would Florence Nightingale make of big data?, BBC Ideas}
+\end{frame}
+% Coxcomb plots and 'spiecharts' in R
+% https://rpubs.com/RobinLovelace/11641
+
+\begin{frame}
+\frametitle{Florence Nightingale}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.75\textheight,keepaspectratio]{figures/nightingale-mortality.jpg}
+ \caption{Diagrama de mortalidade feito por Florence Nightingale.}
+ \label{fig-nightingale-mortality}
+\end{figure}
+\end{frame}
+\note{
+O gráfico proposto por Florence Nightingale evidencia as mortes pelas áreas, sendo
+dividas por três causas: doenças infectocontagiosas (azul), ferimentos (vermelho) e outras (preto).
+O gráfico da direito apresenta o período durante a guerra antes da adoção de medidas sanitárias
+e o gráfico da esquerda evidencia o período após a adoções de medidas sanitárias. 
+O tempo é visto no sentido horário e a posição no gráfico facilita a comparação dos
+meses em anos diferentes.
+}
+
+
+
+
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Exemplo 1 - \emph{Storytelling with Data}}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{figures/storytelling_data_ex01a.png}
+ \caption{Preço médio de venda de produtos ao longo dos anos \cite{knaflic_storytelling_2015}.}
+ \label{fig-storytelling_data_ex01a}
+\end{figure}
+\framebreak
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/storytelling_data_ex01b.png}
+ \caption{Preço médio de venda de produtos ao longo dos anos \cite{knaflic_storytelling_2015}.}
+ \label{fig-storytelling_data_ex01b}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks=1]
+\frametitle{Exemplo 2 - \emph{Storytelling with Data}}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{figures/storytelling_data_ex02a.png}
+ \caption{Volume de tickes recebidos e processados. \cite{knaflic_storytelling_2015}.}
+ \label{fig-storytelling_data_ex02a}
+\end{figure}
+\framebreak
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/storytelling_data_ex02b.png}
+ \caption{Volume de tickes recebidos vs. processados. O descolamento evidencia a necessidade de contratação. \cite{knaflic_storytelling_2015}.}
+ \label{fig-storytelling_data_ex02b}
+\end{figure}
+\end{frame}
+
+\begin{frame}[allowframebreaks=1]
+\frametitle{Exemplo 3 - \emph{Storytelling with Data}}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{figures/storytelling_data_ex03a.png}
+ \caption{Resultado da pesquisa de opnião sobre ciências. \cite{knaflic_storytelling_2015}.}
+ \label{fig-storytelling_data_ex03a}
+\end{figure}
+\framebreak
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{figures/storytelling_data_ex03b.png}
+ \caption{Resultado da pesquisa de opnião sobre ciências. \cite{knaflic_storytelling_2015}.}
+ \label{fig-storytelling_data_ex03b}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+Sugestões de leitura: 
+\vspace{2ex}
+
+\fullcite{harford_florence}
+\vspace{2ex}
+
+\fullcite{tufte_visual_1999}
+\vspace{2ex}
+
+\fullcite{tufte_beautiful_2006}
+\vspace{2ex}
+
+\fullcite{knaflic_storytelling_2015}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Figuras}
+Tipos de figuras:
+\begin{itemize}
+\item vetoriais (.pdf, .eps, .svg, .dwg)
+\item rasterizadas (.jpg, .png,. gif)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.45\textwidth,height=0.8\textheight,keepaspectratio]{figures/vector-raster.png}
+ \caption{Imagem vetorial vs imagem rasterizada.}
+ \label{fig-imgvr}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Inserindo uma imagem em \LaTeX{}}
+\begin{lstlisting}[language=tex, label=lst-figure, caption={Código para inserir uma figura em \LaTeX{}}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.5\textwidth]{example-image-a}
+ \caption{Legenda da figura.}
+ \label{fig-img-a}
+\end{figure}
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Tikz}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[darkstyle/.style={circle,draw,fill=gray!40,minimum size=25}]
+  \foreach \x in {0,...,4}
+    \foreach \y in {0,...,4} 
+       {\pgfmathtruncatemacro{\label}{\x - 5 *  \y +21}
+       \node [darkstyle]  (\x\y) at (1.25*\x,1.25*\y) {\label};} 
+
+  \foreach \x in {0,...,4}
+    \foreach \y [count=\yi] in {0,...,3}  
+      \draw (\x\y)--(\x\yi) (\y\x)--(\yi\x) ;
+\end{tikzpicture}
+\caption{Exemplo de utilização do Tikz.}
+ \label{fig-tikz}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Código exemplo Tikz}
+\begin{lstlisting}[language=tex, label=lst-tikz, caption={Código utilizado para criar o exemplo em tikz.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+\begin{tikzpicture}[darkstyle/.style={circle,draw,fill=gray!40,minimum size=20}]
+ \foreach \x in {0,...,4}
+   \foreach \y in {0,...,4} 
+      {\pgfmathtruncatemacro{\label}{\x - 5 *  \y +21}
+      \node [darkstyle]  (\x\y) at (1.5*\x,1.5*\y) {\label};} 
+
+ \foreach \x in {0,...,4}
+   \foreach \y [count=\yi] in {0,...,3}  
+     \draw (\x\y)--(\x\yi) (\y\x)--(\yi\x) ;
+\end{tikzpicture}
+\end{lstlisting}
+\end{frame}
+
+
+\subsection{ggplot}
+\input{ggplot.tex}

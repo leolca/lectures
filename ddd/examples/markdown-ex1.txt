@@ -1,0 +1,48 @@
+Cabeçalho
+=========
+
+Sub-Cabeçalho
+-------------
+
+Sintaxe alternativa:
+
+# Cabeçalho de primeiro nível
+#### Cabeçalho de quarto nível
+
+
+Parágrafos são separados por uma linha em branco
+
+Dois espaços no fim de uma linha produzem    
+uma quebra de linha.
+
+Texto com ênfase:
+
+*Enfatizado - itálico*  
+
+**Fortemente enfatizado - negrito**
+
+Lista não ordenada:
+
+  * item
+  * item
+
+Lista ordenada:
+
+  1. item
+  2. item
+
+Links:
+[Texto do link](http://example.com/ "Propriedade title, opcional")
+
+
+Imagem:
+![Texto da propriedade alt](/pasta/da/img.jpg "Propriedade title")
+
+
+Citações:
+
+> Esse texto será envolto pelo elemento HTML blockquote.
+
+Código: `codigo`
+
+

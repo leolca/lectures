@@ -1,0 +1,141 @@
+\section{Documento \LaTeX{}}
+\begin{frame}[fragile]
+\frametitle{Estrutura de um documento em \LaTeX{}}
+\begin{lstlisting}[language=tex, label=lst-estrutura, caption={Estrutura de um documento em \LaTeX{}}, postbreak=\mbox{$\hookrightarrow$\space}]
+\documentclass{...}
+...
+\begin{document}
+...
+\end{document}
+\end{lstlisting} %stopzone
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Organização do texto em \LaTeX{}}
+\begin{itemize}
+\item título \verb|\title{...}|
+\item autor \verb|\author{...}|
+\item data \verb|\date{...}|
+\item \verb|\maketitle|
+\end{itemize}
+\vspace{3ex}
+\begin{itemize}
+\item resumo \verb|\begin{abstract}...\end{abstract}|
+\item capítulo \verb|\chapter{...}|
+\item seções \verb|\section{...}|
+\item subseções \verb|\section{...}|
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Documento em \LaTeX{}}
+\begin{lstlisting}[language=tex, label=lst-documento, caption={Exemplo de documento em \LaTeX{}}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\author{Leonardo}
+\title{Meu primeiro artigo em \LaTeX{}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Resumo do meu primeiro artigo em \LaTeX{}.
+\end{abstract}
+\section{Introdução}
+Este exemplo ilustra um artigo simples em \LaTeX{}.
+\section{Conclusão}
+Fazer um artigo usando \LaTeX{} é simples!
+\end{document}
+\end{lstlisting} %stopzone
+\end{frame}
+
+
+
+\subsection{Exemplos}
+\begin{frame}
+\frametitle{Exemplos}
+\framesubtitle{um documento simples}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{figures/exdoc.png}
+  \label{fig:exdoc}
+  \end{figure}
+\end{frame}
+
+
+\multido{\i=1+1}{7}{%
+  \begin{frame}
+    \frametitle{Exemplo}
+    \framesubtitle{Abralin \i}
+    \centering
+    \includegraphics[height=0.7\textheight]{figures/abralin0\i.png}
+  \end{frame}
+ }
+ 
+\multido{\i=1+1}{4}{%
+  \begin{frame}
+    \frametitle{Exemplo}
+    \framesubtitle{\hrefcolor{https://www.tug.org/texshowcase/}{TeX showcase} \i}
+    \centering
+    \includegraphics[width=0.7\linewidth,height=0.7\textheight,keepaspectratio]{figures/showcase0\i.png}
+  \end{frame}
+ }
+
+
+
+
+\begin{frame}
+Sugestões de leitura: 
+\vspace{2ex}
+
+\fullcite{knuth_texbook_1984}
+\vspace{2ex}
+
+\fullcite{lamport_latex_1994}
+\vspace{2ex}
+
+\fullcite{wikibook}
+\vspace{2ex}
+
+\fullcite{vivas_andrade_latex_2020}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Aprendendo \LaTeX{}}
+\framesubtitle{}
+\centering
+\includegraphics[width=0.6\linewidth,height=0.7\textheight,keepaspectratio]{figures/lion02.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Arquivos}
+\framesubtitle{Quais arquivos são utilizados?}
+\begin{description}
+\item[.tex] arquivo fonte do documento \TeX{} ou \LaTeX{}
+\item[.cls] arquivo de classe de documento
+\item[.sty] arquivo de estilo, pacotes 
+\item[.bib] arquivo de bibliografia do BibTeX
+\end{description}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conteúdo e Apresentação}
+\framesubtitle{foque em uma coisa de cada vez e diminua o esforço necessário}
+  CSS/HTML (web design) e \LaTeX{} (formatação de texto) são exemplos onde empregamos a separação entre conteúdo e forma.
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/content_design.png}
+  \label{fig:content_design}
+  \end{figure}
+\end{frame}
+
+
+
+\subsection{Arquivo \TeX{}}\label{sec:tex}
+\input{texfile.tex}
+
+
+
+
+

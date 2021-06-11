@@ -1,0 +1,90 @@
+\subsection{Listas}
+\begin{frame}
+\frametitle{Listas}
+\begin{itemize}
+\item numeradas
+\item não numeradas
+\item aninhadas
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Lista não-numerada em \LaTeX{}}
+\begin{LTXexample}
+\begin{itemize}
+\item abacate
+\item banana
+\item laranja
+\end{itemize}
+\end{LTXexample}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Lista numerada em \LaTeX{}}
+\begin{LTXexample}
+\begin{enumerate}
+\item abacate
+\item banana
+\item laranja
+\end{enumerate}
+\end{LTXexample}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Lista numerada em \LaTeX{}}
+\begin{LTXexample}
+\begin{enumerate}[a)]
+ \item item a
+ \item item b
+ \item item c
+\end{enumerate}
+\end{LTXexample}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Lista numerada em \LaTeX{}}
+\begin{verbatim}
+\begin{enumerate}[label=(\alph*)]
+\item abacate
+\item banana
+\item laranja
+\end{enumerate}
+\end{verbatim}
+
+obs: incompatível com \texttt{beamer}.
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Lista aninhada em \LaTeX{}}
+\begin{LTXexample}
+\begin{enumerate}
+\item banana
+    \begin{enumerate}
+    \item prata
+    \item da terra
+    \end{enumerate}
+\item laranja
+    \begin{enumerate}
+    \item pera rio
+    \item serra d'agua
+    \end{enumerate}
+\end{enumerate}
+\end{LTXexample}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Lista de definições em \LaTeX{}}
+\begin{LTXexample}
+\begin{description}
+ \item[primeiro item] txt1 txt1 txt1
+ \item[segundo item] txt2 txt2 txt2
+ \item[terceiro item] txt3 txt3 txt3
+\end{description}
+\end{LTXexample}
+\end{frame}
+

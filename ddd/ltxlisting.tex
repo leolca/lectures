@@ -1,0 +1,382 @@
+%========================================================
+% rodap\'e deve estar em espa\c{c}amento simples,
+% independente do espa\c{c}amento no corpo de documento
+% Devera ser feito com linespread{} \@currsize
+% pois comandos do setspace nao funciona como desejado
+%========================================================
+% foi copiado do book e alterado
+\makeatletter % ativa uso de ``@'' no nome
+\renewcommand\@makefntext[1]{%
+    \parindent 1em%
+    % inicio da altera\c{c}\~ao    
+    \linespread{1} \@currsize \noindent
+    % \hb@xt@1.8em{\hss\@makefnmark}#1}
+    \hb@xt@0.45em{\hss\@makefnmark}#1}
+% fim da altera\c{c}\~ao
+\makeatother % desativa o uso de ``@'' no nome
+
+\let\orilstlistingname\lstlistingname
+\renewcommand{\lstlistingname}{Exemplo}
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}
+% setup  listings
+\lstset{
+%  language=[LaTeX]TeX,
+  numbers=none,
+  backgroundcolor=\color{yellow!30},
+  breaklines=true,
+  breakautoindent=true,
+  % breakatwhitespace=true,    % quebra linha somente no espaço
+  belowcaptionskip=1\baselineskip, % espaço após o título
+  % aboveskip=2ex,
+  %keepspaces=true, % to keep indentation
+  columns=fullflexible, % para poder copiar codigo do PDF (fixed, flexible, fullflexible)
+  frame=lines, %none, single, line % do codigo
+}
+
+% aplicando patch no codigo de showexpl para que o parametro abovecaptionskip funcione tambem no LTXexample
+
+\makeatletter
+\renewcommand\SX@KillAboveCaptionskip{%
+  \ifx\lst@caption\@empty\else
+    \lst@IfSubstring t\lst@captionpos
+      {\vskip-\abovecaptionskip}{}%
+  \fi
+  \ifx\lst@belowcaption\undefined \else %adicionado
+    \belowcaptionskip=\lst@belowcaption\relax % adicionado
+  \fi %adicionado
+}
+\makeatother
+
+% setup showexpl
+\lstset{explpreset={
+  pos=b,
+  belowcaptionskip=0.5\baselineskip, % espaço após o título
+%  language=[LaTeX]TeX,
+  %basicstyle=\ttfamily\small,
+  %identifierstyle=\color{black},
+  %keywordstyle=\color{blue},
+  %commentstyle=\color{red},
+  %extendedchars=true,
+  % extendedchars=false
+  %showspaces=false,
+  %showstringspaces=false,
+%  numbers=none,
+  %numberstyle=\tiny,
+%  breaklines=true,
+  %backgroundcolor=\color{lightgray},
+%  breakautoindent=true,
+  %captionpos=b,
+  %xleftmargin=0pt,
+  % captionpos=t.
+  % aboveskip=2ex,
+  % columns=fullflexible, 
+%  columns=flexible, % para poder copiar codigo do PDF
+  % para editor (sem ele, terq espaço indesejado)
+  % from http://latex.org/forum/viewtopic.php?t=5636
+  % hsep=2ex,  
+%  frame=lines, %none, single, line % do codigo
+  %rframe={single} % do resultado
+  }
+}
+
+% para arquivo de BibTeX no listings
+% https://tex.stackexchange.com/questions/85998/include-bibtex-contents-in-a-listings-block 
+\lstdefinelanguage{BibTeX}
+  {keywords={%
+      @article,@book,@collectedbook,@conference,@electronic,@ieeetranbstctl,%
+      @inbook,@incollectedbook,@incollection,@injournal,@inproceedings,%
+      @manual,@mastersthesis,@misc,@patent,@periodical,@phdthesis,@preamble,%
+      @proceedings,@standard,@string,@techreport,@unpublished%
+      },
+   comment=[l][\itshape]{@comment},
+   sensitive=false,
+  }
+
+\lstdefinestyle{lstexample}
+{
+%  language=[LaTeX]TeX,
+%  keywordstyle=\bfseries,
+%  identifierstyle=\itshape,
+  backgroundcolor=\color{white},
+  numbers=none,
+  breaklines=true,
+  breakautoindent=true,
+%  belowcaptionskip=1\baselineskip, % espaço após o título
+%  aboveskip=2ex,
+  %keepspaces=true, % to keep indentation
+  columns=fullflexible, % para poder copiar codigo do PDF
+  frame=lines, %none, single, line % do codigo
+%  explpreset={
+%    attachfile=false,true
+%    codefile=temporaryfilename,
+%    explpreset=? defualti values is?
+%    graphic=alternativegraphicsfileforoutput,
+%    hsep=,
+%    justification=\raggedright,% \raggedleft, \raggedright, \centering
+%    overhang=,
+%    pos=, % e t, b, l, r, and i
+%    preset={},
+%    rangeaccept=false, % true/false
+%    rframe=,
+%    varwidth=,
+%    hsep,
+%    wide,
+%    width=
+%  }
+}
+
+% LTXexample's parameter
+%    attachfile=false,trure
+%    codefile=temporaryfilename,
+%    explpreset=? defualti values is?
+%    graphic=alternativegraphicsfileforoutput,
+%    hsep=,
+%    justification=\raggedright,% \raggedleft, \raggedright, \centering
+%    overhang=,
+%    pos=, % e t, b, l, r, and i
+%    preset={},
+%    rangeaccept=false, % true/false
+%    rframe=,
+%    varwidth=,
+%    hsep,
+%    wide,
+%    width=
+%  }
+
+% showexpl's LTXexample environment like ltxlisting
+% is implemented (it use showexpl's preset (thus, need showexpl package}
+
+\makeatletter 
+
+% save some values for lstlinting
+\newcounter{lstorisection}
+\newcounter{lstorisubsection}
+%\let\orilabel\label
+%\let\oriref\ref
+\newcommand{\emptyaddcontentsline}[3]{}
+\let\oriaddcontentsline\addcontentsline
+
+\newcounter{orilstlisting}
+
+%\let\oriref\ref % without link
+%\makeatletter
+%\let\refstar\@refstar % without link
+%\makeatother
+
+% Example of untf8 verbatim write
+%\newenvironment{writefile}[1]
+% {\deactivateeightbit\VerbatimOut{#1.out}}
+% {\endVerbatimOut}
+%\makeatletter
+%\newcommand{\deactivateeightbit}{%
+%  \count@=127
+%  \loop
+%    \catcode\count@=12
+%    \ifnum\count@<255
+%    \advance\count@\@ne
+%  \repeat
+%}
+%\makeatother
+
+% from https://tex.stackexchange.com/questions/192941/showexpl-not-showing-caption-of-a-lstlisting-within to create vertical space
+%\def\xstrut{\protect\rule[-2ex]{0pt}{2ex}}
+%----------------------------------------------------------------
+
+% showexpl's LTXexample preset
+%\newcommand*\SX@@preset{%
+%\renewcommand\documentclass[2][]{\SX@eat@version}%
+%\renewcommand\usepackage[2][]{\SX@eat@version}%
+%\renewenvironment{document}{}{}%
+%\renewenvironment{figure}[1][]{\def\@captype{figure}}{}%
+%\renewenvironment{table}[1][]{\def\@captype{table}}{}%
+%\renewcommand\cite[1][]{}%
+%\let\tableofcontens\relax \let\listoffigures\relax
+%\let\listoftables\relax \let\printindex\relax
+%\let\listfiles\relax \let\nofiles\relax
+%\let\index\@gobble \let\label\@gobble
+%\let\bibliography\@gobble
+%\let\pagestyle\@gobble \let\thispagestyle\@gobble
+%%%\let\immediate\relax \let\write\@gobbletwo
+%%%\let\closeout\@gobble \let\@@input\@gobble
+%\renewcommand\marginpar[2][]{}%
+%\renewcommand\footnote[2][]{}%
+%\let\@footnotetext\@gobble
+%%%\abovedisplayskip=\z@
+%%%\abovedisplayshortskip=\z@
+%}
+\makeatletter
+\providecommand\SX@eat@version[1][]{}
+
+\def\ltxlistingpresetfromshowexpl{%
+\renewcommand\documentclass[2][]{\SX@eat@version}%
+\renewcommand\usepackage[2][]{\SX@eat@version}%
+\renewenvironment{document}{}{}%
+\renewenvironment{figure}[1][]{\def\@captype{figure}}{}%
+\renewenvironment{table}[1][]{\def\@captype{table}}{}%
+\renewcommand\cite[1][]{}%
+\let\tableofcontens\relax \let\listoffigures\relax
+\let\listoftables\relax \let\printindex\relax
+\let\listfiles\relax \let\nofiles\relax
+\let\index\@gobble 
+% \let\label\@gobble
+\let\bibliography\@gobble
+\let\pagestyle\@gobble \let\thispagestyle\@gobble
+%%\let\immediate\relax \let\write\@gobbletwo
+%%\let\closeout\@gobble \let\@@input\@gobble
+\renewcommand\marginpar[2][]{}%
+%\renewcommand\footnote[2][]{}%
+%\let\@footnotetext\@gobble
+%%\abovedisplayskip=\z@
+%%\abovedisplayshortskip=\z@
+} % showexpl default preset
+
+\makeatother
+
+% ltxlisting preset
+\newcommand{\ltxlistingpreset}{
+ \ltxlistingpresetfromshowexpl
+ %
+ \setcounter{lstorisection}{\value{section}}%
+ \setcounter{section}{0}%
+ \setcounter{lstorisubsection}{\value{subsection}}%
+ \setcounter{subsection}{0}%
+ \let\oriaddcontentsline\addcontentsline%
+ \let\addcontentsline\emptyaddcontentsline%
+ \let\orimathcal\mathcal%
+ \let\orimathbb\mathbb%
+ \let\mathcal\amsmathcal%
+ \let\mathbb\amsmathbb%
+ \let\orimaketitle\maketitle
+ \let\maketitle\makearticletitle
+ \let\title\orititle      
+ \let\author\oriauthor
+ \let\date\oridate
+ \let\orithempfootnote\thempfootnote
+ \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+ \setcounter{orilstlisting}{\value{lstlisting}}
+}
+
+\newcommand{\ltxlistingposset}{
+ \setcounter{section}{\value{lstorisection}}%
+ \setcounter{subsection}{\value{lstorisubsection}}%
+ \let\addcontentsline\oriaddcontentsline%
+ \let\mathcal\orimathcal%
+ \let\mathbb\orimathbb%
+ \let\maketitle\orimaketitle
+ \let\thempfootnote\orithempfootnote
+ \setcounter{lstlisting}{\value{orilstlisting}}
+}
+
+\makeatletter
+% from
+% https://tex.stackexchange.com/questions/9035/how-to-pass-an-optional-argument-to-an-environment-with-verbatim-content
+%
+% \expandafter trick from
+% https://tex.stackexchange.com/questions/196655/how-to-pass-figure-position-to-keyval-macro
+\newenvironment{ltxlisting}{%
+    \catcode`\^^M=\active
+    \@ifnextchar[% se tem argumento opcional
+        {\catcode`\^^M=5 \lxt@listing@start}
+        {\catcode`\^^M=5 \lxt@listing@start[]}
+}{\ltx@listing@end}
+
+% Use of keyval from
+% http://www.tex.ac.uk/FAQ-keyval.html
+%
+% Trick to ignore unkonown keys from
+% https://tex.stackexchange.com/questions/314944/ignore-undefined-key-in-argument-its-defined-in-the-macro-before-its-used
+
+\define@key{ltxlisting}{preset}{#1} % executte preset
+% como eh dificil expandir segundo argumento antes do comando, define um comando auxiliar. Depois usar \expanafter para expandir argumento antes
+\newcommand{\ltx@listing@setkeys}[1]{\setkeys{ltxlisting}{#1}}
+
+%\def\lxt@listing@start[#1]{%
+%  \begingroup
+%    \ltxlistingpreset
+%    % own preset
+%    \let\KV@errx@ORI\KV@errx   % Save original error handling
+%    \let\KV@errx\@gobble       % Ignore unknown keys
+%      \setkeys{ltxlisting}{#1}
+%    \let\KV@errx\KV@errx@ORI   % Restore original error handling      
+%    %    
+%    \def\ltx@listing@args{language={[LaTeX]TeX},#1}
+%    \VerbatimEnvironment
+%    % \deactivateeightbit
+%    \begin{VerbatimOut}{\jobname.tmp}%
+%}
+%
+%\def\ltx@listing@end{%
+% \end{VerbatimOut}
+% \begin{singlespacing}%
+% \expandafter\lstinputlisting\expandafter[\ltx@listing@args]{\jobname.tmp}
+% %\noindent
+% \begin{framed} % frmae the output
+% \noindent
+% \begin{minipage}{\linewidth} % box the output
+% \input{\jobname.tmp}
+% \end{minipage}
+% \end{framed}
+% \end{singlespacing}%
+% \ltxlistingposset
+%\endgroup
+%}
+
+\def\lxt@listing@start[#1]{%
+  %\begingroup
+    \def\ltx@listing@args{language={[LaTeX]TeX},#1}
+    \VerbatimEnvironment
+    % \deactivateeightbit
+    \begin{VerbatimOut}{\jobname.tmp}%
+}
+
+\def\ltx@listing@end{%
+ \end{VerbatimOut}    %    
+ \begin{singlespacing}
+ \expandafter\lstinputlisting\expandafter[\ltx@listing@args]{\jobname.tmp}
+ \end{singlespacing}
+% \begingroup
+% \begin{singlespacing}%
+%   \ltxlistingpreset
+%    % own preset
+%   \let\KV@errx@ORI\KV@errx   % Save original error handling
+%   \let\KV@errx\@gobble       % Ignore unknown keys
+%     \expandafter\ltx@listing@setkeys\expandafter{\ltx@listing@args}
+%   \let\KV@errx\KV@errx@ORI   % Restore original error handling      
+% %\noindent
+% \begin{framed} % frmae the output
+% \noindent
+% \begin{minipage}{\linewidth} % box the output
+% \input{\jobname.tmp}
+% \end{minipage}
+% \end{framed}
+% \end{singlespacing}%
+% \ltxlistingposset
+%\endgroup
+%
+\begin{ltxlistingout}[\ltx@listing@args]
+\input{\jobname.tmp}
+\end{ltxlistingout}
+}
+
+\newenvironment{ltxlistingout}[1][]
+{ \begingroup
+  \begin{singlespacing}%
+  \ltxlistingpreset
+  % own preset
+  \let\KV@errx@ORI\KV@errx   % Save original error handling
+  \let\KV@errx\@gobble       % Ignore unknown keys
+    \expandafter\ltx@listing@setkeys\expandafter{#1}  
+%    \expandafter\ltx@listing@setkeys\expandafter{\ltx@listing@args}
+  \let\KV@errx\KV@errx@ORI   % Restore original error handling      
+  %\noindent
+  \begin{framed} % frame the output
+  \noindent
+  \begin{minipage}{\linewidth} % box the output
+}{\end{minipage}
+  \end{framed}
+  \end{singlespacing}%
+  \ltxlistingposset
+  \endgroup
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

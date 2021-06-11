@@ -1,0 +1,11 @@
+\frametitle{Comandos básicos}
+
+\begin{itemize}
+\item \verb|git pull|
+\item \verb|git status|
+\item \verb|git add nome_do_arquivo|
+\item \verb|git rm nome_do_arquivo|
+\item \verb|git commit -m 'message'|
+\item \verb|git push origin master|
+\end{itemize}
+

@@ -1,0 +1,33 @@
+\subsection{Rótulos e referências}
+
+\begin{frame}[fragile]
+\frametitle{Rótulos e referências internas}
+Em um texto em \LaTeX{} é possível referenciar quase tudo que é numerado em um documento.
+Por exemplo: figuras, tabelas, listas, páginas, secções, capítulos, equações, notas de rodapé, etc.
+\pause
+
+\vspace{3ex}
+\begin{itemize}[<-+>]
+\item \verb|\label{rotulo}|: fornecer um rótulo ao objeto que se deseja referenciar
+\item \verb|\ref{rotulo}|: realizar a referencia ao objeto com um dado rótulo
+\item \verb|\pageref{rotulo}|: referenciar a página onde o objeto se encontra
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Rótulos e referências internas}
+\begin{LTXexample}
+O teorema de Pit\'agoras \'e equacionado como
+\begin{equation}
+\label{eq-pitagoras}
+c^2 = a^2 + b^2
+\end{equation}
+
+...
+
+Veja a Equa\c{c}\~ao~\ref{eq-pitagoras}.
+\end{LTXexample}
+\end{frame}
+

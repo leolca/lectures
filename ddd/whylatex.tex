@@ -1,0 +1,207 @@
+\section{Por que usar \LaTeX{}?}
+
+\begin{frame}
+\frametitle{\TeX{}}
+\framesubtitle{}
+\begin{itemize}
+  \item \TeX{} é um sistema de tipografia criado no final da década de 70 por Donald Knuth (Stanford University) para a formatação da segunda edição do segundo volume de \textit{The Art of Computer Programming}.
+\end{itemize}
+
+\vspace{3ex}
+\includegraphics[width=0.5\linewidth,height=0.6\textheight,keepaspectratio]{figures/knuth.jpg}
+\end{frame}
+\note{
+A partir da versão 3 o projeto foi congelado e só são lançadas correções de bugs. Os números das versões subsequentes aproximam assintóticamente $\pi$ (a versão atual, Março de 2008, é de número 3.1415926)
+
+Knuth oferece um prêmio para quem encontrar Bug em seu código (valor inicial U\$2.56, dobrando a cada ano até atingir o valor atual U\$327.68)
+}
+\note{
+When the first volume of Knuth's The Art of Computer Programming was published in 1969, it was typeset using hot metal type set by a Monotype Corporation typecaster with a hot metal typesetting machine from the 19th century which produced a "good classic style" appreciated by Knuth. When the second edition of the second volume was published, in 1976, the whole book had to be typeset again because the Monotype technology had been largely replaced by photographic techniques, and the original fonts were no longer available. However, when Knuth received the galley proofs of the new book on 30 March 1977, he found them awful. Around that time, Knuth saw for the first time the output of a high-quality digital typesetting system, and became interested in digital typography. The disappointing galley proofs gave him the final motivation to solve the problem at hand once and for all by designing his own typesetting system. On May 13, 1977, he wrote a memo to himself describing the basic features of TeX.
+}
+\note{
+Even though Donald Knuth himself has suggested a few areas in which TeX could have been improved, he indicated that he firmly believes that having an unchanged system that will produce the same output now and in the future is more important than introducing new features. For this reason, he has stated that the "absolutely final change (to be made after my death)" will be to change the version number to $\pi$, at which point all remaining bugs will become features.
+}
+
+
+\begin{frame}
+\frametitle{\LaTeX{}}
+
+\includegraphics[width=0.5\linewidth]{figures/lion01.png}\hfill\includegraphics[width=0.15\linewidth]{figures/lamport.jpg}
+\begin{itemize}
+  \item \LaTeX{} (1984) é um conjunto de macros criado por Leslie Lamport utilizando comandos do \TeX{}.
+  \item \LaTeX{} é uma linguagem de marcação e um sistema de preparação de documentos utilizando a formatação de texto do programa \TeX{} (para se escrever com \LaTeX{} adota-se uma abordagem diferente dos processadores de texto WYSIWYG).
+  \item \TeX{} é um sistema de formatação de textos projetado com dois objetivos principais:
+  \begin{enumerate}
+      \item permitir que qualquer um possa produzir textos de \textbf{alta qualidade} com um esforço aceitável;
+      \item fornecer um sistema que gere \textbf{exatamente o mesmo resultado} em todos os computadores, agora e no futuro.
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{\TeX{}}
+\framesubtitle{}
+\centering{
+\includegraphics[width=0.6\linewidth,height=0.75\textheight,keepaspectratio]{figures/Metal_movable_type.jpg}
+\includegraphics[width=0.3\linewidth,height=0.75\textheight,keepaspectratio]{figures/A_Specimen_by_William_Caslon.jpg}
+}
+\begin{flushleft}
+\hspace{1.1em}\footnotesize{(Wikipedia)}
+\end{flushleft}
+\end{frame}
+\note{
+\TeX{} utiliza caixas (letras) e cola (espaços) para formar linhas palavras. 
+Cada palavra é tratada como uma caixa e jutas formam linhas e parágrafos.
+A cola é elastica e faz a separação entre as caixas, podendo comprimir ou exapandir.
+}
+
+
+\begin{frame}
+\frametitle{\LaTeX{}}
+\framesubtitle{}
+\begin{itemize}
+  \item \LaTeX{} é um conjunto de macros para o \TeX{} desenvolvido na década de 80 por Leslie Lamport.
+  \item Amplamente utilizado no meio acadêmico, principalmente nas seguintes áreas: matemática, ciência da computação, engenharia, física, estatística e psicologia quantitativa.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Licença}
+\framesubtitle{}
+\begin{itemize}
+  \item \TeX{} possui licença de software permissiva (\hrefcolor{https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licences}{BSD-like}).
+  \item \LaTeX{} poussi licença própria: \LaTeX{} Project Public License (LPPL).
+\end{itemize}
+\end{frame}
+\begin{frame}[allowframebreaks]
+\frametitle{Por que utilizar \LaTeX{}?}
+\framesubtitle{}
+\begin{itemize}
+  \item portabilidade - Linux, Mac OS, Windows, BSDs, Solaris, etc
+  \item compatibilidade - padrão imutável
+  \item flexibilidade
+  \item controle
+  \item apresentação e elegância nos documentos gerados
+  \item facilidade em trocar estilos
+  \item fórmulas matemáticas com alta qualidade
+  \item tabelas, figuras
+  \item disseminado (principalmente no meio acadêmico)
+  \item estabilidade
+  \item escalabilidade
+  \item livre
+  \item armazenamento de documentos de longo prazo (ASCII, UTF-8)
+  \item controle de versão
+  \item modularizar e colaborar documentos
+  \item facilidade para lidar com documentos complexos
+  \item bibliografia, índices e referências
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\LaTeX{} vs Word}
+\framesubtitle{Devo utilizar \LaTeX{} ao invés do Word ou LibreOffice?}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/word_vs_latex.png}
+  \caption{\LaTeX{} vs Word (John D. Cook).}
+  \label{fig:word_vs_latex}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Onde aprender \LaTeX{}?}
+\begin{itemize}
+  \item \hrefcolor{https://www.overleaf.com/learn/latex/Tutorials}{Tutorial Overleaf}
+  \item \hrefcolor{https://en.wikibooks.org/wiki/LaTeX}{Wikibooks}
+  \item \hrefcolor{https://drive.google.com/file/d/1ajERZETmHyAvp7Xa5j0pdFNjm4fNbmZY/view?usp=sharing}{\textcite{vivas_andrade_latex_2020}}
+  \item \hrefcolor{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}{The Not So Short Introduction to LaTeX2e}
+  \item \hrefcolor{https://books.google.com.br/books?id=iX9MAQAAQBAJ}{\textcite{goossens_latex_1993}}
+  \item \hrefcolor{https://tex.stackexchange.com/}{StackExchange}
+  \item Google Groups: \hrefcolor{https://groups.google.com/forum/\#!forum/comp.text.tex}{comp.text.tex}
+  \item \LaTeX{} forum \hrefcolor{https://latex.org/forum/}{latex.org/forum/}
+  \item \hrefcolor{https://www.latex-tutorial.com/}{\LaTeX{} Tutorial}
+  \item \hrefcolor{http://www.ctan.org/}{CTAN} - documentações
+  \item \hrefcolor{http://texample.net/}{texample}, \hrefcolor{https://texblog.org/}{texblog}
+  \item Google
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Como instalar o \LaTeX{}?}
+\framesubtitle{}
+\begin{itemize}
+  \item \hrefcolor{http://www.tug.org/texlive/}{TeXLive} (GNU/Linux, Mac OS, Windows)
+  \item \hrefcolor{http://www.miktex.org/}{MiKTeX} (GNU/Linux, Mac OS, Windows)
+\end{itemize}
+\vspace{3ex}
+
+No Ubuntu, Debian ou demais distribuições da mesma família, basta usar o comando:
+\begin{verbatim}
+$ sudo apt-get install texlive
+\end{verbatim}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Editores para \LaTeX{}}
+\framesubtitle{Até mesmo um bloco de notas pode ser um editor!}
+\begin{itemize}
+  \item \hrefcolor{http://www.xm1math.net/texmaker/}{TeXMaker} (cross-platform)
+  \item \hrefcolor{http://kile.sourceforge.net/}{Kile} (KDE - Linux)
+  \item \hrefcolor{http://www.lyx.org/}{Lyx} (versão WYSIWYM e cross-platform)
+  \item \hrefcolor{https://www.texstudio.org/}{TeXstudio} (cross-platform)
+  \item \hrefcolor{https://www.overleaf.com/}{Overleaf (ShareLaTeX + Overleaf)}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Overleaf}
+\framesubtitle{Editor online}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{figures/overleaf.png}
+    \caption{Editor online Overleaf.}
+    \label{fig:overleaf}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Comparação entre editores}
+\framesubtitle{Escolha a que mais lhe agrada!}
+  \hrefcolor{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors}{Comparação} entre editores \TeX \ na Wikipedia.
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/editorschart.png}
+  \label{fig:editorschart}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Compilando seu documento \TeX{}}
+\framesubtitle{Para visualizar o documento é necessário compilá-lo.}
+   \begin{description}
+   \item[\TeX] gera um arquivo DVI (DeVice Independent) ao compilar um arquivo .tex
+   \item[pdfTeX] gera um PDF
+   \item[LaTeX2RTF] converter arquivo de \LaTeX (.tex) em um arquivo  Rich Text Format (.rtf)
+   \item[dvips] converte um DVI em um aquivo PostScript (PS)
+   \item[dvipdf] traduz um arquivo DVI em PDF
+   \item[pdfLaTeX] gera um PDF diretamente
+   \item[XeTeX] suporte a unicode
+   \item[LuaTeX] linguagem de programação Lua
+   \item[ConTeXt] interface simples para tipografia avançada
+   \end{description}
+\end{frame}
+
+
