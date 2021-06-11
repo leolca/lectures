@@ -36,5 +36,18 @@ elearn_exam <- c("sensorial/visao01.Rmd", "sensorial/audicao01.Rmd", "video/vide
 exams2moodle(elearn_exam, n = 5, name = "aev-prova-05", encoding = "UTF-8")
 exams2html(elearn_exam, n = 2, name = "aev-prova-05", encoding = "UTF-8")
 
+### PROVA SUBSTITUTIVA
+elearn_exam <- c("sampling/resampling01.Rmd", "sampling/resampling02.Rmd", "sampling/oversampling02.Rmd", "scalarquantization/scalarquantization03.Rmd", "jpeg/jpeg02.Rmd", "jpeg/jpeg03.Rmd", "pca/pca02.Rmd", "dct/dct02.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-substitutiva", encoding = "UTF-8")
+exams2html(elearn_exam, n = 2, name = "aev-substitutiva", encoding = "UTF-8")
+
+
+
+#### 2021-1 ####
+# prova 01
+library("exams")
+elearn_exam <- c("mov2front/mov2front02.Rmd", "rle/rle03.Rmd", "rle/rle04.Rmd", "scalarquantization/scalarquantization01.Rmd", "scalarquantization/scalarquantization02.Rmd", "scalarquantization/dithering01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-01", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-01", encoding = "UTF-8")
 
 

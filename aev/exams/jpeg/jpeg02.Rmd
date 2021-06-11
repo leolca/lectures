@@ -1,0 +1,30 @@
+Question
+========
+O DPCM é utilizado no padrão JPEG apenas para codificar os coeficientes DC pois
+
+Answerlist
+----------
+* Os coeficientes DC representam o valor médio de cada bloco da imagem. Como estes valores variam pouco entre blocos vizinhos, a codificação DPCM é propícia para codificá-los.
+* Os coeficientes DC são pequenos e a codificação DPCM obtém baixa distorção quando os valores codificados são pequenos.
+* Devido à propriedade de compactação de energia da DCT, os coeficientes DC possuem pouca energia, e assim o DCPM é capaz de codificá-los com baixa distorção.
+* Os coeficientes DC possuem valor médio nulo, o que faz a codificação com DPCM ser eficiente.
+* Não é possível realizar nenhuma das afirmações.
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: dpcmjpeg
+exshuffle: 5
+

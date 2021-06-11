@@ -1,0 +1,32 @@
+Question
+========
+
+A codificação RLE é adequada para codificar quais das sequências abaixo?
+
+Answerlist
+----------
+* AABACCEFABAAECFACBDFE
+* AAAAABCABBBBEFAEEEEEF
+* ABCDEFABCDEFABCDEFABC
+* AABBAABBAABBAABBAABBA
+* BCAABCAABCAABBACCBAAB
+
+Solution
+========
+
+
+Answerlist
+----------
+* False.
+* True.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 01000
+exname: Multiple choices RLE suitable 
+exshuffle: 5
+

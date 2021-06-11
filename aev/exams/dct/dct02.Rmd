@@ -1,0 +1,30 @@
+Question
+========
+Sobre a DCT (transformada discreta de cosseno) podemos afirmar que:
+
+Answerlist
+----------
+* Existem 8 tipos de DCT definidas de acordo com a forma como é feita a extensão periódica do sinal discreto, variando de acordo com o ponto de simetria e paridade da extensão em cada uma das extremidades do sinal.
+* A DCT é uma transformada ortogonal em que, na forma matricial, a inversa é dada pela própria matriz dividida pelo seu determinante.
+* Apenas a DCT tipo II é utilizada na compressão de imagens pois as demais DCTs não são inversíveis.
+* Em compressão de imagens, utiliza-se a DCT ao invés da FFT pois a DCT possui custo computacional menor que a FFT.
+* Não é possível realizar nenhumas das afirmações.
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: dct2
+exshuffle: 5
+

@@ -1,0 +1,32 @@
+Question
+========
+
+A operação de decimação é constituída por um filtro anti-aliasing, com frequência de corte $\omega_c$ seguido por um downsample com fator $M$.
+Podemos afirmar que
+
+Answerlist
+----------
+* Para não ocorrer aliasing, devemos ter $\omega_c = \pi/M$.
+* É sempre possível recuperar o sinal original através do sinal obtido pela decimação.
+* A frequência máxima do sinal na entrada do decimador deverá ser sempre menor que $\pi/M$.
+* A frequência máxima do sinal na saída do decimador será $M \pi$.
+* Não é possível realizar nenhuma das afirmações.
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: resampling2
+exshuffle: 5
+

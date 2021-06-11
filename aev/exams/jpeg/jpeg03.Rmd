@@ -1,0 +1,32 @@
+Question
+========
+Sobre a compressão JPEG podemos afirmar:
+
+
+Answerlist
+----------
+* Utiliza-se a DCT pela sua capacidade de compressão de energia, possibilitando realizar uma quantização mais drástica, propiciando assim uma maior compressão da imagem com menor perda de informação perceptível.
+* Utiliza a subamostragem de luminância pois a degradação de informação de luminância é menos perceptível do que a degradação da informação de crominância.
+* Utiliza uma quantização vetorial dos coeficientes da DCT em um espaço de tamanho $n^2$, onde $n$ é uma das dimensões dos blocos.
+* Realiza-se a divisão da imagem em blocos para diminuir o custo computacional da DCT.
+* Não é possível afirmar nenhuma das opções.
+
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: jpeg3
+exshuffle: 5
+

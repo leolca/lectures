@@ -58,3 +58,14 @@ exams2html(elearn_exam, n=3, name="prova4", encoding="UTF-8")
 exams2moodle(elearn_exam, n=nalunos, name="ERE2-prova-ti-04", encoding="UTF-8")
 
 
+
+######### 2021/1 #########
+
+library("exams")
+nalunos <- 1
+elearn_exam <- c("entropia/entropia01.Rmd", "entropia/entropia07.Rmd", "fano/fano02.Rmd")
+exams2html(elearn_exam, n=1, name="prova1", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="2021-1-prova-ti-01", encoding="UTF-8")
+
+
+

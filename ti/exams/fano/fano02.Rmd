@@ -1,0 +1,91 @@
+<!-- https://web.njit.edu/~simeone/midit11.pdf -->
+Question
+========
+Considere um canal binário não simétrico caracterizado por
+$p_{Y|X}(1|0) = 0.9$  e $p_{Y|X}(0|1) = 0.1$.
+Considere ainda a entrada $X \sim \text{Ber}(0.2)$, ou seja, $p(X=1)=0.2$.
+Calcule a distribuição conjunta de $X$ e $Y$ e determine o melhor estimador
+$Xe$ para $X$ dado $Y$ como uma função $\hat(X) = Xe = g(Y)$ (no sentido
+de minimizar a probabilidade de erro). Calcule a probabilidade de erro de tal 
+estimador e verifique se esta satisfaz a desigualdade de Fano.
+
+Answerlist
+---------------
+* $p_{XY}(0,0)=$ 
+* $p_{XY}(0,1)=$
+* $p_{XY}(1,0)=$
+* $p_{XY}(1,1)=$
+* $P_e=$
+* Xe = g(Y) = 0.
+* Xe = g(Y) = 1.
+* Xe = g(Y) = 1 - Y.
+* Xe = g(Y) = 1 + Y.
+* Xe = g(Y) = Y.
+* A desigualdade de Fano não é satisfeita.
+* A desigualdade de Fano é satisfeita com igualdade.
+* A desigualdade de Fano é satisfeita com desigualdade.
+
+
+Solution
+=========
+
+A distribuição $p_{XY}(x,y)$ é dada
+
+| X \ Y |             0           |             1           | 
+|:-----:|:-----------------------:|:-----------------------:|
+|   0   | $0.8 \times 0.1 = 0.08$ | $0.8 \times 0.9 = 0.72$ | 
+|   1   | $0.2 \times 0.1 = 0.02$ | $0.2 \times 0.9 = 0.18$ |
+
+Note que $X$ e $Y$ são independentes. Temos $p_Y(1)=0.9$ independente do valor de $X$.
+Assim podemos escrever $p_{XY}(x,y) = p_X(x)p_Y(y)$.
+
+O melhor estimador para $X$ é $\hat{X} = g(Y) = 0$. Como temos $X \sim \text{Ber}(0.2)$
+este estimador irá acertar com probabilidade $0.8$ e assim teremos
+
+$$
+P_e = Pr(\hat{X} \neq X) = Pr(X \neq 0) = 0.2
+$$
+
+Utilizando a desigualdade de Fano temos
+
+$$
+H(X|Y) \leq H(X|\hat{X}) \leq H(P_e) + P_e(\log 2 - 1) = H(P_e)
+$$
+
+e temos
+
+$$
+H(X|Y) = H(X|\hat{X}) = H(X) = H(0.8) = 0.72
+$$
+
+como $H(P_e) = H(X) = H(0.8)$, a desigualdade de Fano é satisfeita com igualdade.
+
+
+Answerlist
+----------
+* 0.08. 
+* 0.72.
+* 0.02.
+* 0.18.
+* 0.2.
+* True.
+* False.
+* False.
+* False.
+* False.
+* False.
+* True.
+* False.
+
+
+
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num|num|schoice|schoice
+exsolution: 0.08|0.72|0.02|0.18|0.2|10000|010
+exname: Fano
+extol: 0.01
+expoints: 1|1|1|1|4|4|4
+

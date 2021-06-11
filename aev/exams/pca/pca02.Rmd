@@ -1,0 +1,30 @@
+Question
+========
+Com relação à análise em componentes principais (PCA), podemos afirmar que
+
+Answerlist
+----------
+* A PCA é uma transformação linear em que os dados (amostras) são projetados nos autovetores da matriz de covariância dos dados.
+* A PCA é utilizada para selecionar as características (dimensões) mais importantes das amostras.
+* A PCA ordena os vetores da base original dos dados em ordem de covariância.
+* As componentes principais obtidas pela PCA não são, em geral, ortogonais.
+* Não é possível realizar nenhuma das afirmações.
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: pca2
+exshuffle: 5
+

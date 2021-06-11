@@ -1,0 +1,30 @@
+Question
+========
+Sobre a técnica de oversampling podemos afirmar que
+
+Answerlist
+----------
+* Ela é utilizada para reduzir o ruído de quantização.
+* Ela é utilizada para se obter melhor resultado na compressão do sinal através do DPCM.
+* Ela utiliza o menor número de amostras possível para se obter uma representação fidedigna do sinal.
+* Ela só pode ser empregada em sinais unidimensionais.
+* Não é possível realizar nenhuma das afirmações.
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: oversampling
+exshuffle: 5
+

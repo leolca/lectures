@@ -1,0 +1,31 @@
+Question
+========
+Ao aplicar um downsample por um fator $M=2$ a um sinal discreto com frequência máxima $\pi$ 
+podemos afirmar que:
+
+Answerlist
+----------
+* Ocorrerá aliasing.
+* Não ocorrerá aliasing.
+* A frequência máxima do sinal discreto obtido pelo downsample será $2\pi$.
+* A frequência máxima do sinal discreto obtido pelo downsample será $\pi/2$.
+* Não é possível fazer nenhuma das afirmações.
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: resampling
+exshuffle: 5
+

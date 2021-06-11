@@ -1,0 +1,67 @@
+Question
+========
+Suponha uma imagem digital representada pela seguinte matriz $A$:
+
+```Octave
+A = [ 8  1  6;  3  5  7;  4  9  2 ];
+```
+
+A esta imagem será aplicada uma quantização escalar uniforme com dithering.
+Os códigos do quantizador são dados por: 
+
+```Octave
+codes = [2.5 7.5];
+```
+
+A matriz de dithering é dada por
+
+```Octave
+K = [0 2; 3 1];
+```
+
+Qual das opções abaixo corresponde ao resultado da quantização com dithering da imagem $A$?
+
+Answerlist
+----------
+* ```[7.5 2.5 7.5; 2.5 2.5 7.5; 2.5 7.5 2.5]```
+* ```[2.5 5 7.5; 5 5 7.5; 2.5 5 7.5]```
+* ```[2.5 2.5 7.5; 2.5 7.5 7.5; 2.5 2.5 2.5]```
+* ```[7.5 2.5 2.5 2.5 2.5 7.5 7.5 7.5 2.5]```
+* ```[2.5 2.5 2.5; 5 5 5; 7.5 7.5 7.5]```
+
+Solution
+========
+
+```Octave
+A = magic(3);
+K = [0 2; 3 1]; [iz,jz] = find(K==0);
+Kn = K./sum(K(:));
+for i=1:size(A,1), for j=1:size(A,2),
+  [QIDX,Q,D]=quantiz(A(i,j),table,codes);
+  AQ(i,j)=Q; 
+  e=A(i,j)-AQ(i,j);
+  for i2=1:size(K,1), for j2=1:size(K,2),
+    if(K(i2,j2)!=0),
+      ir=i2-iz; jr=j2-jz;
+      if(ir > 0 && ir < size(A,1) && jr >0 && jr < size(A,2)), A(ir,jr)+=Kn(i2,j2)*e; endif
+    endif
+  endfor; endfor;
+endfor; endfor;
+AQ
+```
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: dithering
+exshuffle: 5
+

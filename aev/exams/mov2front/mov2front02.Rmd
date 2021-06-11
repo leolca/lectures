@@ -1,0 +1,39 @@
+Question
+========
+
+A sequência $y$ abaixo apresenta o resultado da codificação de uma determinada sequência $x$,
+em um alfabeto $\mathcal{X}=\{0,1,2,3\}$,
+através do move-to-front com [código unário](https://en.wikipedia.org/wiki/Unary_coding) 
+para representar a saída dos símbolos.
+
+```Octave
+y = [1 0 1 0 1 1 0 1 1 1 0 1 1 0 1 1 1 0 1 0 0 0 1 0 0 1 1 1 0 0 0 1 1 1 0]
+```
+
+Decodifique $y$ e obtenha a sequência $x$. Qual é a sequência $x$?
+
+Answerlist
+----------
+* ```[1 0 2 3 0 1 0 0 0 1 1 2 2 2 3]```
+* ```[0 1 1 1 3 2 1 3 1 3 3 3 2 1 2 1 3 2]```
+* ```[0 2 2 1 1 1 0 1 1 0 0 0]```
+* ```[2 3 3 3 2 1 0 0 0]```
+* ```[1 2 1 1 1 2 0 1 3 1 2 1 0 0]```
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: Move-to-front and unary code
+exshuffle: 5

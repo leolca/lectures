@@ -1,0 +1,30 @@
+Question
+========
+Sobre o algoritmo de Lloyd podemos afirmar:
+
+Answerlist
+----------
+* É um método iterativo para se obter uma melhor representação (quantizador) para uma determinada amostra (sinal), minimizando a distorção.
+* O método proposto por Lloyd obtém a representação (quantizador) que confere a menor distorção (global).
+* O método de Lloyd é utilizado para se obter o melhor quantizador uniforme para uma determinada amostra (sinal).
+* O algoritmo converge rapidamente para a solução ótima.
+* Não podemos realizar nenhuma das afirmações.
+
+Solution
+========
+
+Answerlist
+----------
+* True. 
+* False. 
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: lloyd
+exshuffle: 5
+

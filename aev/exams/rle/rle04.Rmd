@@ -1,0 +1,58 @@
+Question
+========
+
+Qual é a codificação implementada pela função abaixo (funcaoX)?
+
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void funcaoX(string str)
+{
+    int n = str.length();
+    for (int i = 0; i < n; i++) {
+        int count = 1;
+        while (i < n - 1 && str[i] == str[i + 1]) {
+            count++;
+            i++;
+        }
+        cout << str[i] << count;
+    }
+}
+ 
+int main()
+{
+    string str = "aaabbbcdeefffaabbbbb";
+    funcaoX(str);
+    return 0;
+}
+```
+
+Answerlist
+----------
+* RLE
+* Move-to-front
+* Quantização escalar
+* wait-c-and-move
+* Dithering
+
+
+Solution
+========
+
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: mchoice
+exsolution: 10000
+exname: Multiple choices RLE code question
+exshuffle: 5
+
