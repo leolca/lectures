@@ -1,4 +1,4 @@
-\begin{frame}
+\begin{frame}[allowframebreaks]
 \frametitle{ggplot2}
 \texttt{ggplot2} é um pacote de visualização de dados para R.
 
@@ -6,6 +6,37 @@
 O \texttt{ggplot2} fornece um esquema de visualização de dados que se
 utiliza de camadas de conteúdo semântico. Os dados devem ser dispostos em \emph{dataframes} 
 ao invés de vetores individuais.
+
+\framebreak 
+
+O \texttt{ggplot2} é diferente de outros pacotes de visualização pois ele
+possui uma gramática subjacente.
+
+\vspace{3ex}
+Ele é baseado na Gramática de Gráficos proposta por \textcite{wilkinson2005grammar}.
+
+\vspace{3ex}
+Uma gramática de uma língua a torna expressiva. Ao especificar a relação entre palavras em um sentença
+uma gramática expande o escopo da língua além de meras palavras isoladas.
+
+\vspace{3ex}
+Uma gramática de gráficos permite ir além de gráficos (palavras), expandindo nosso horizonte a formas
+gráficas mais complexas (sentenças). As regras desta gramática podem ter natureza matemática ou estética.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Especificação de gráficos}
+
+A especificação de gráficos passa por seis etapas \cite{wilkinson2005grammar}:
+\begin{enumerate}
+\item \textbf{Dados} (\emph{dataset})
+\item \textbf{Transformação} de variáveis (ex.: ordenamento)
+\item \textbf{Escala} (ex.: logaritmo)
+\item \textbf{Coordenadas} (ex.: cartesianas, polar)
+\item \textbf{Elementos} gráficos (ex.: pontos, linhas, barras) e seus atributos estéticos (ex.: cor)
+\item \textbf{Guias} (ex.: eixos, legendas)
+\end{enumerate}
 
 \end{frame}
 
@@ -203,6 +234,9 @@ Sugestões de leitura:
 
 \fullcite{wickhamggplot2}
 Disponível em: \url{https://ggplot2-book.org/}
+
+\vspace{3ex}
+\fullcite{wilkinson2005grammar}
 
 \vspace{3ex}
 From Data to Viz: \url{https://www.data-to-viz.com/}

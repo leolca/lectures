@@ -365,6 +365,59 @@ entre as diferenças entre católicos e protestantes a respeito da transubstanci
 \url{https://pt.wikipedia.org/wiki/Extremidade\_(ordena\\\%C3\\\%A7\\\%C3\\\%A3o)}
 }
 
+\begin{frame}[fragile]
+\frametitle{Determinando a codificação}
+
+O comando \texttt{file} do Linux/Unix/OS X/macOS tenta `adivinhar' qual é a codificação do arquivo.
+
+\begin{lstlisting}[language=bash, label=lst-filecod, caption={Determinando o tipo de codificação de um arquivo.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ file -i arquivo.csv
+arquivo.csv: application/csv; charset=us-ascii
+$ file -i arquivo.xls 
+arquivo.xls: text/plain; charset=utf-16le
+$ file -i imagem.png 
+imagem.png: image/png; charset=binary
+$ file -i imagem.jpg 
+imagem.jpg: image/jpeg; charset=binary
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Convertendo o tipo de codificação}
+O comando \texttt{iconv} converte um tipo de codificação de caracteres em outro tipo. Faz a conversão entre 1179 tipos de codificação.
+\begin{lstlisting}[language=bash, label=lst-iconv, caption={Convertendo o tipo de codificação de um arquivo.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ iconv -f ISO-8859-1 -t ASCII arquivo.txt > arquivo_ascii.txt
+$ iconv -f ISO-8859-1 -t ASCII//TRANSLIT input.file -o out.file
+$ iconv -f ISO-8859-1 -t UTF-8//IGNORE input.file -o out.file
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exemplo - declaração de codificação em um HTML}
+\begin{lstlisting}[language=html, label=lst-htmlenc, caption={Documento HTML.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{A traição dos nomes}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth,height=0.7\textheight,keepaspectratio]{figures/magritte.png}
+\caption{\emph{La trahison des images}, René Magritte (1929).}
+\label{fig-magritte}
+\end{figure}
+\end{frame}
+\note{
+``Este quadro, uma das obras-primas surrealistas do artista, está atualmente no Museu de Arte do Condado de Los Angeles (LACMA), Califórnia (...)
+Fortemente influenciado pela psicologia freudiana, o surrealismo representou uma reação contra o "racionalismo". A Traição das Imagens desafia a convenção linguística de identificar uma imagem de algo como a coisa em si. (...) René Magritte nega aquilo que estamos a ver. A uma primeira análise, o significado desta negação torna-se claro, pois aquilo que estamos a ver não é um cachimbo verdadeiro, mas sim a representação de um cachimbo. Deparamo-nos com um desafio àquilo que se convencionou chamar de "cachimbo", pois a nossa imagem de cachimbo está negada. Magritte como que esvaziou de sentido aquilo que entendemos como sendo a palavra "cachimbo". Não podemos identificar esta representação com aquilo que é o objeto, gerando-se, assim, um conflito de mensagens.''(\hrefcolor{https://pt.wikipedia.org/wiki/A_Trai\%C3\%A7\%C3\%A3o_das_Imagens}{Wikipedia - A Traição das Imagens})
+}
+
+
 \begin{frame}[allowframebreaks]
 \frametitle{Formatos de arquivos}
 \begin{description}
@@ -387,10 +440,202 @@ entre as diferenças entre católicos e protestantes a respeito da transubstanci
 \end{description}
 \end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Exemplo \texttt{.docx}}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figures/test-word.png}
+\caption{Documento exemplo criado no Office 365.}
+\label{fig-word-test}
+\end{figure}
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-docx, caption={Conteúdo do arquivo \texttt{.docx} exemplo. Visualização com \texttt{vim}.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{6}{8}\selectfont\ttfamily]
+" zip.vim version v28
+" Browsing zipfile /tmp/test.docx
+" Select a file with cursor and press ENTER
+
+[Content_Types].xml
+_rels/.rels
+word/theme/theme1.xml
+word/settings.xml
+word/fontTable.xml
+word/webSettings.xml
+docProps/app.xml
+docProps/core.xml
+word/styles.xml
+word/document2.xml
+word/_rels/document2.xml.rels
+\end{lstlisting}
+
+\framebreak
+
+\begin{lstlisting}[language=xml, label=lst-docx-1, caption={Conteúdo do arquivo \texttt{word/document2.xml}}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{6}{8}\selectfont\ttfamily]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 wp14"><w:body><w:p w:rsidP="4FDD56AD" w14:paraId="2C078E63" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" wp14:textId="19C3A7FB"><w:pPr><w:jc w:val="center" /><w:rPr><w:b w:val="0" /><w:bCs w:val="0" /><w:sz w:val="32" /><w:szCs w:val="32" /></w:rPr></w:pPr><w:bookmarkStart w:name="_GoBack" w:id="0" /><w:bookmarkEnd w:id="0" /><w:r w:rsidRPr="4FDD56AD" w:rsidR="79861D53"><w:rPr><w:b w:val="0" /><w:bCs w:val="0" /><w:sz w:val="32" /><w:szCs w:val="32" /></w:rPr><w:t>Test 123</w:t></w:r></w:p><w:p w:rsidR="4FDD56AD" w:rsidP="4FDD56AD" w:rsidRDefault="4FDD56AD" w14:paraId="2700AB13" w14:textId="40AAB38F"><w:pPr><w:pStyle w:val="Normal" /></w:pPr></w:p><w:p w:rsidR="79861D53" w:rsidP="4FDD56AD" w:rsidRDefault="79861D53" w14:paraId="53B87EDE" w14:textId="05C1A8EF"><w:pPr><w:pStyle w:val="Normal" /></w:pPr><w:r w:rsidRPr="4FDD56AD" w:rsidR="79861D53"><w:rPr><w:b w:val="1" /><w:bCs w:val="1" /></w:rPr><w:t>LaTeX</w:t></w:r></w:p><w:p w:rsidR="4FDD56AD" w:rsidP="4FDD56AD" w:rsidRDefault="4FDD56AD" w14:paraId="521FC589" w14:textId="672BCEF3"><w:pPr><w:pStyle w:val="Normal" /></w:pPr></w:p><w:p w:rsidR="79861D53" w:rsidP="4FDD56AD" w:rsidRDefault="79861D53" w14:paraId="65FC53F7" w14:textId="703EA904"><w:pPr><w:pStyle w:val="Normal" /></w:pPr><w:r w:rsidRPr="4FDD56AD" w:rsidR="79861D53"><w:rPr><w:i w:val="1" /><w:iCs w:val="1" /></w:rPr><w:t>Word</w:t></w:r></w:p><w:sectPr><w:pgSz w:w="12240" w:h="15840" w:orient="portrait" /><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0" /><w:cols w:space="720" /><w:docGrid w:linePitch="360" /></w:sectPr></w:body></w:document>
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Exemplo imagem PNM}
+
+\includegraphics[width=0.1\textwidth,height=0.1\textheight,keepaspectratio]{figures/pikachu.png}
+
+\begin{lstlisting}[language=bash, label=lst-pnm-ascii, caption={Arquivo PNM ASCII.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{6}{8}\selectfont\ttfamily]
+P3
+# Created by GIMP version 2.10.18 PNM plug-in
+64 64
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+...
+255 255 255 255 255 255 255 255 255 255 255 252 253 253 250 250 250 84 82 81 33 
+28 24 35 28 22 34 27 24 30 24 17 114 114 112 212 210 209 252 251 250 252 254 
+248 252 255 247 253 253 252 255 252 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 254 254 254 249 254 240 251 254 240 226 224 230 
+168 169 169 64 62 69 30 20 19 35 25 24 33 24 23 32 22 20 188 188 188 250 250 
+...
+\end{lstlisting}
+%stopzone
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-pnm-raw, caption={Arquivo PNM RAW. Visualização com \texttt{hexdump}.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{6}{8}\selectfont\ttfamily]
+$ hexdump -C ../pikachu2.pnm 
+00000000  50 36 0a 23 20 43 72 65  61 74 65 64 20 62 79 20  |P6.# Created by |
+00000010  47 49 4d 50 20 76 65 72  73 69 6f 6e 20 32 2e 31  |GIMP version 2.1|
+00000020  30 2e 31 38 20 50 4e 4d  20 70 6c 75 67 2d 69 6e  |0.18 PNM plug-in|
+00000030  0a 36 34 20 36 34 0a 32  35 35 0a ff ff ff ff ff  |.64 64.255......|
+00000040  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00000280  ff fe fe fe fe fe fe ff  ff ff ff ff ff ff ff ff  |................|
+00000290  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00000330  ff ff ff ff ff ff ff ff  ff ff ff fc fd fd fb fb  |................|
+00000340  fb cb ca ca da d9 d8 f7  f6 f7 fe ff ff fc fc fc  |................|
+00000350  fe fe ff fd fd fa ff fe  fe ff fd ff ff fd ff ff  |................|
+00000360  fe fe fe ff fc ff ff ff  ff ff ff ff ff ff ff ff  |................|
+00000370  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+000003b0  ff ff ff ff ff ff ff fd  fe fe ff f4 fc fd fb fd  |................|
+000003c0  fc fe fd fe f9 fc fe fc  fd fe fc fc fe fb f3 f5  |................|
+000003d0  f3 f9 f9 f9 ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+000003e0  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+000003f0  ff ff ff ff ff ff ff ff  ff ff ff fb fb fb df de  |................|
+00000400  de 18 13 10 19 13 0e 4f  4c 4f 9b 9b 9b d6 d6 d7  |.......OLO......|
+00000410  f9 f8 fc fa fb f9 fc fe  f7 fe fe f9 ff fd fc ff  |................|
+00000420  fd ff fe fe fe ff ff ff  ff ff ff ff ff ff ff ff  |................|
+00000430  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+...
+\end{lstlisting}
+%stopzone
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Limites dos sistemas de arquivos}
+\scriptsize
+\begin{table}
+\caption{Limites dos sistemas de arquivos. \\Fonte: \url{https://en.wikipedia.org/wiki/Comparison_of_file_systems}.}
+\begin{tabular}{%
+    >{\raggedright\arraybackslash}p{0.1\textwidth}%
+    >{\raggedright\arraybackslash}p{0.1\textwidth}%
+    >{\raggedright\arraybackslash}p{0.15\textwidth}%
+    >{\raggedright\arraybackslash}p{0.15\textwidth}%
+    >{\raggedright\arraybackslash}p{0.12\textwidth}%
+    >{\raggedright\arraybackslash}p{0.12\textwidth}%
+    >{\raggedright\arraybackslash}p{0.08\textwidth}%
+    }
+\toprule
+sistema de arquivo & comprimento máximo do nome & caracteres permitidos nas entradas de diretórios & comprimento máximo do caminho completo &
+tamanho máximo de arquivo & tamanho máximo de volume & número máximo de arquivos \\
+\midrule
+FAT12 / FAT16 & 8.3 & A-Z, 0-9, ! \# \$ \% \& ' ( ) - @ \^ \_ ` \{ \} \~, 0x80-0xFF, 0x20 & não definido & 32 MB (4 GB) & 1 MB a 32 MB & ? \\
+FAT32 / FAT32X & 8.3 & A-Z, 0-9, ! \# \$ \% \& ' ( ) - @ \^ \_ ` \{ \} \~, 0x80-0xFF, 0x20 & 32.760 caracteres (máximo 255 por componente) & 4 GB & 512 MB a 16 TB \\
+NTFS & 255 & qualquer código UTF-16 exceto / \ : * " ? < > | & 32.767 caracteres (máximo 255 por componente) & 16 EB & 16 EB & $2^{32}$ \\
+ext4 & 255 bytes & qualquer byte exceto NUL e / & sem limite & 16 GB a 16 TB & 1 EB & $2^{32}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Arquivos \texttt{.ps} (PostScript)}
+O PostScript (PS) funciona como uma linguagem de programação (permite escrever programas estruturados)
+para descrição de páginas. Foi desenvolvido pela Adobe Systems em 1982. Seu objetivo inicial era 
+controlar dispositivos de impressão.
+
+\vspace{3ex}
+\begin{minipage}[t]{0.65\textwidth}
+O mais famoso interpretador de arquivos PS é o \textbf{GhostScript}.
+\begin{lstlisting}[language=bash, label=lst-ps, caption={Exemplo `Hello World!'.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+%!PS
+/Times-Bold findfont 36 scalefont setfont
+72 684 moveto (Hello World!) show
+showpage
+\end{lstlisting}
+\end{minipage}
+\hspace{0.02\linewidth}
+\begin{minipage}[t]{0.25\textwidth}
+\centering
+\strut\vspace*{-\baselineskip}\newline\includegraphics[width=0.6\textwidth,height=0.6\textheight,keepaspectratio]{figures/pshello.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Arquivos \texttt{.pdf} (Portable Document Format)}
+PDF é uma evolução do PS. Ele é um formato de presentação de documento, ao invés de uma linguagem de programação.
+Não é necessário um interpretator, bastando ler a descrição do documento.
+
+\begin{lstlisting}[language=bash, label=lst-pdf, caption={Exemplo `Hello World!'.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{7}{9}\selectfont\ttfamily]
+%PDF-1.4
+1 0 obj <</Type /Catalog /Pages 2 0 R>>
+endobj
+2 0 obj <</Type /Pages /Kids [3 0 R] /Count 1>>
+endobj
+3 0 obj<</Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 500 800] /Contents 6 0 R>>
+endobj
+4 0 obj<</Font <</F1 5 0 R>>>>
+endobj
+5 0 obj<</Type /Font /Subtype /Type1 /BaseFont /Times-Bold>>
+endobj
+6 0 obj
+<</Length 44>>
+stream
+BT /F1 24 Tf 72 684 Td (Hello World!)Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f
+0000000009 00000 n
+0000000056 00000 n
+0000000111 00000 n
+0000000212 00000 n
+0000000250 00000 n
+0000000317 00000 n
+trailer <</Size 7/Root 1 0 R>>
+startxref
+406
+%%EOF
+\end{lstlisting}
+
+\end{frame}
+
+
 
 % arquivo .tex, .xml, .doc, docx, csv, xls, xlsx, png, jpg, pdf, etc
 % tim hardfor podcast xls
-
 \begin{frame}
 \small
 Sugestões de leitura:

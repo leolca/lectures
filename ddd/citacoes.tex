@@ -20,6 +20,68 @@ Exemplos:
 
 \framebreak
 
+\begin{columns}[c]
+\column{.5\textwidth}
+\begin{verbatim}
+@article{...,
+    author  = "...",
+    title   = "...",
+    year    = "...",
+    journal = "...",
+    volume  = "...",
+    number  = "...",
+    pages   = "..."
+}
+\end{verbatim} 
+\column{.5\textwidth}
+\begin{verbatim}
+@conference{...,
+    author    = "...",
+    title     = "...",
+    booktitle = "...",
+    %editor   = "...",
+    %volume   = "...",
+    %number   = "...",
+    %series   = "...",
+    %pages    = "...",
+    %address  = "...",
+    year      = "...",
+    %month    = "...",
+    %publisher= "...",
+    %note     = "..."
+}
+\end{verbatim}
+\end{columns}
+
+\framebreak
+
+\begin{columns}[c]
+\column{.5\textwidth}
+\begin{verbatim}
+@inbook
+
+@incollection
+
+@inproceedings 
+
+@mastersthesis
+\end{verbatim} 
+\column{.5\textwidth}
+\begin{verbatim}
+@misc 
+
+@phdthesis 
+
+@proceedings 
+
+@techreport 
+
+@unpublished 
+\end{verbatim}
+\end{columns}
+
+\framebreak
+
 Uma citação textual pode ser feita utilizando o ambiente \verb|quote|.
 
 \begin{LTXexample}
@@ -64,6 +126,69 @@ Sugestões de leitura:
 \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/abnt-example.png}
 \end{frame}
 
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Estilos de bibliografia}
+
+\begin{lstlisting}[language=tex, label=lst-bibsty, caption={Escolhendo o estilo de bibliografia.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+\bibliographystyle{stylename}
+\bibliography{bibfile}
+\end{lstlisting}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figures/bib-plain.png}
+\caption{Estilo \texttt{plain}.}
+\label{fig-bib-plain}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figures/bib-siam.png}
+\caption{Estilo \texttt{siam}.}
+\label{fig-bib-siam}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figures/bib-alpha.png}
+\caption{Estilo \texttt{alpha}.}
+\label{fig-bib-alpha}
+\end{figure}
+
+\framebreak
+
+\begin{itemize}
+\item \hrefcolor{https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles}{Overleaf - Bibtex bibliography styles}
+\item \hrefcolor{http://www.mackichan.com/index.html?techtalk/632.htm~mainFrame}{MacKichan techtalk - BibTeX bibliography styles}
+\item \hrefcolor{https://www.reed.edu/cis/help/LaTeX/bibtexstyles.html}{Reed College - Choosing a BibTeX Style}
+\item \hrefcolor{http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html}{Ken Turner's - BibTeX Style Examples}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Pacotes para formatação e programas para processar bibliografia}
+Pacotes:
+\begin{description}
+\item[natbib] pacote antigo mas ainda muito utilizado 
+\item[biblatex] pacote em desenvolvimento ativo conjuntamente com o \texttt{biber}
+\end{description}
+
+Programas:
+\begin{description}
+\item[bibtex] estável e amplamente utilizado
+\item[biber] capaz de lidar com mais tipos de entrada e campos, suporte à codificação UTF-8, maior controle no ordenamento (funciona apenas com \texttt{biblatex})
+\end{description}
+
+Mais informações: \url{https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib}.
+\end{frame}
 
 
 \begin{frame}

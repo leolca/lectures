@@ -1,0 +1,45 @@
+\subsection{Comandos}
+
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Comandos}
+Kunth definiu 325 primitivas para o \TeX{}.
+
+\vspace{3ex}
+O outros motores utilizam mais primitivas.
+Veja: \hrefcolor{https://www.overleaf.com/learn/latex/TeX_primitives_listed_by_TeX_engine}{\TeX{} primitives listed by \TeX{ engine}}.
+
+
+\vspace{3ex}
+Outros comandos são definidos como combinações de primitivas ou de outros comandos.
+
+\framebreak 
+
+A formatação com \LaTeX{} é facilitada com a utilização de comandos.
+Exemplos de comandos: \verb|\textbf{...}|, \verb|\url{...}|, \verb|\item|, etc.
+
+\vspace{3ex}
+Novos commandos podem ser definidos:
+\begin{lstlisting}[language=tex, label=lst-comand-def, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+% comando simples
+\newcommand{\R}{\mathbb{R}}
+
+% comando com parametro
+\newcommand{\bb}[1]{\mathbb{#1}} 
+
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+\end{lstlisting}
+
+\framebreak
+
+Comando com parâmetro opcional:
+\begin{LTXexample}
+\newcommand{\plusbinomial}[3][2]{(#2 + #3)^#1}
+
+\[ \plusbinomial{x}{y} \]
+
+\[ \plusbinomial[4]{y}{y} \]
+\end{LTXexample}
+\end{frame}
+
+
+
