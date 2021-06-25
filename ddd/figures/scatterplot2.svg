@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="432pt"
+   width="576pt"
+   viewBox="0 0 576 432"
+   version="1.1"
+   id="svg349"
+   sodipodi:docname="scatterplot2.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata353">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1069"
+     inkscape:window-height="745"
+     id="namedview351"
+     showgrid="false"
+     inkscape:zoom="0.8722602"
+     inkscape:cx="384"
+     inkscape:cy="288"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg349" />
+  <title
+     id="title2">gl2ps_renderer figure</title>
+  <desc
+     id="desc4">
+Creator: GL2PS 1.4.0, (C) 1999-2017 C. Geuzaine
+For: Octave
+CreationDate: Fri Jun 25 14:44:48 2021
+</desc>
+  <defs
+     id="defs6" />
+  <g
+     id="g347">
+    <clipPath
+       id="cp00576432">
+      <polygon
+         points="0,432 576,432 576,0 0,0"
+         id="polygon12" />
+    </clipPath>
+    <g
+       clip-path="url(#cp00576432)"
+       id="g345">
+      <polygon
+         points="74.88,384.48 521.28,384.48 521.28,32.4 74.88,32.4"
+         fill="#ffffff"
+         shape-rendering="crispEdges"
+         id="polygon15" />
+      <polyline
+         points="74.88,384.48 74.88,380.015"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline17" />
+      <polyline
+         points="149.28,384.48 149.28,380.015"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline19" />
+      <polyline
+         points="223.68,384.48 223.68,380.015"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline21" />
+      <polyline
+         points="298.08,384.48 298.08,380.015"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline23" />
+      <polyline
+         points="372.48,384.48 372.48,380.015"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline25" />
+      <polyline
+         points="446.88,384.48 446.88,380.015"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline27" />
+      <polyline
+         points="521.28,384.48 521.28,380.015"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline29" />
+      <text
+         xml:space="preserve"
+         transform="translate(67.38,399.982) rotate(-0,7.5,-8)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text33">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan31">0.2</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(141.78,399.982) rotate(-0,7.5,-8)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text37">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan35">0.4</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(216.18,399.982) rotate(-0,7.5,-8)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text41">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan39">0.6</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(290.58,399.982) rotate(-0,7.5,-8)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text45">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan43">0.8</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(369.48,399.982) rotate(-0,3,-8)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text49">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 "
+   id="tspan47">1</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(439.38,399.982) rotate(-0,7.5,-8)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text53">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan51">1.2</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(513.78,399.982) rotate(-0,7.5,-8)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text57">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan55">1.4</tspan>
+   </text>
+      <polyline
+         points="74.88,384.48 79.348,384.48"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline59" />
+      <polyline
+         points="74.88,325.8 79.348,325.8"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline61" />
+      <polyline
+         points="74.88,267.12 79.348,267.12"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline63" />
+      <polyline
+         points="74.88,208.44 79.348,208.44"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline65" />
+      <polyline
+         points="74.88,149.76 79.348,149.76"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline67" />
+      <polyline
+         points="74.88,91.08 79.348,91.08"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline69" />
+      <polyline
+         points="74.88,32.4 79.348,32.4"
+         fill="none"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline71" />
+      <text
+         xml:space="preserve"
+         transform="translate(54.8755,388.48) rotate(-0,15,-4)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text75">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan73">0.2</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(54.8755,329.8) rotate(-0,15,-4)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text79">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan77">0.4</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(54.8755,271.12) rotate(-0,15,-4)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text83">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan81">0.6</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(54.8755,212.44) rotate(-0,15,-4)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text87">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan85">0.8</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(63.8755,153.76) rotate(-0,6,-4)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text91">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 "
+   id="tspan89">1</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(54.8755,95.08) rotate(-0,15,-4)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text95">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan93">1.2</tspan>
+   </text>
+      <text
+         xml:space="preserve"
+         transform="translate(54.8755,36.4) rotate(-0,15,-4)"
+         font-weight="normal"
+         font-family="FreeSans"
+         font-size="10"
+         font-style="normal"
+         id="text99">
+    <tspan
+   fill="rgb(38,38,38)"
+   y="-0"
+   x="0 6 9 "
+   id="tspan97">1.4</tspan>
+   </text>
+      <polyline
+         points="74.88,384.48 521.28,384.48"
+         fill="none"
+         stroke-linecap="square"
+         stroke-dasharray="16,0"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline101" />
+      <polyline
+         points="74.88,384.48 74.88,32.4"
+         fill="none"
+         stroke-linecap="square"
+         stroke-dasharray="16,0"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#262626"
+         id="polyline103" />
+      <polygon
+         points="256.749,189.061 255.167,190.209 253.213,190.209 251.632,189.061 251.028,187.202 251.632,185.343 253.213,184.194 255.167,184.194 256.749,185.343 257.352,187.202"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon105" />
+      <polyline
+         points="257.352,187.202 256.749,189.061 255.167,190.209 253.213,190.209 251.632,189.061 251.028,187.202 251.632,185.343 253.213,184.194 255.167,184.194 256.749,185.343 257.352,187.202"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline107" />
+      <polygon
+         points="388.197,104.194 386.616,105.342 384.662,105.342 383.081,104.194 382.477,102.335 383.081,100.476 384.662,99.3273 386.616,99.3273 388.197,100.476 388.801,102.335"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon109" />
+      <polyline
+         points="388.801,102.335 388.197,104.194 386.616,105.342 384.662,105.342 383.081,104.194 382.477,102.335 383.081,100.476 384.662,99.3273 386.616,99.3273 388.197,100.476 388.801,102.335"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline111" />
+      <polygon
+         points="270.288,362.188 268.707,363.337 266.752,363.337 265.171,362.188 264.567,360.329 265.171,358.47 266.752,357.322 268.707,357.322 270.288,358.47 270.892,360.329"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon113" />
+      <polyline
+         points="270.892,360.329 270.288,362.188 268.707,363.337 266.752,363.337 265.171,362.188 264.567,360.329 265.171,358.47 266.752,357.322 268.707,357.322 270.288,358.47 270.892,360.329"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline115" />
+      <polygon
+         points="327.33,247.68 325.749,248.829 323.795,248.829 322.214,247.68 321.61,245.822 322.214,243.963 323.795,242.814 325.749,242.814 327.33,243.963 327.934,245.822"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon117" />
+      <polyline
+         points="327.934,245.822 327.33,247.68 325.749,248.829 323.795,248.829 322.214,247.68 321.61,245.822 322.214,243.963 323.795,242.814 325.749,242.814 327.33,243.963 327.934,245.822"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline119" />
+      <polygon
+         points="459.567,189.551 457.985,190.7 456.031,190.7 454.45,189.551 453.846,187.692 454.45,185.834 456.031,184.685 457.985,184.685 459.567,185.834 460.171,187.692"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon121" />
+      <polyline
+         points="460.171,187.692 459.567,189.551 457.985,190.7 456.031,190.7 454.45,189.551 453.846,187.692 454.45,185.834 456.031,184.685 457.985,184.685 459.567,185.834 460.171,187.692"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline123" />
+      <polygon
+         points="264.749,342.46 263.168,343.609 261.213,343.609 259.632,342.46 259.028,340.601 259.632,338.743 261.213,337.594 263.168,337.594 264.749,338.743 265.353,340.601"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon125" />
+      <polyline
+         points="265.353,340.601 264.749,342.46 263.168,343.609 261.213,343.609 259.632,342.46 259.028,340.601 259.632,338.743 261.213,337.594 263.168,337.594 264.749,338.743 265.353,340.601"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline127" />
+      <polygon
+         points="339.836,131.518 338.255,132.667 336.3,132.667 334.719,131.518 334.115,129.659 334.719,127.801 336.3,126.652 338.255,126.652 339.836,127.801 340.44,129.659"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon129" />
+      <polyline
+         points="340.44,129.659 339.836,131.518 338.255,132.667 336.3,132.667 334.719,131.518 334.115,129.659 334.719,127.801 336.3,126.652 338.255,126.652 339.836,127.801 340.44,129.659"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline131" />
+      <polygon
+         points="238.676,198.273 237.095,199.421 235.14,199.421 233.559,198.273 232.955,196.414 233.559,194.555 235.14,193.406 237.095,193.406 238.676,194.555 239.28,196.414"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon133" />
+      <polyline
+         points="239.28,196.414 238.676,198.273 237.095,199.421 235.14,199.421 233.559,198.273 232.955,196.414 233.559,194.555 235.14,193.406 237.095,193.406 238.676,194.555 239.28,196.414"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline135" />
+      <polygon
+         points="174.001,299.192 172.42,300.341 170.466,300.341 168.885,299.192 168.281,297.333 168.885,295.474 170.466,294.326 172.42,294.326 174.001,295.474 174.605,297.333"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon137" />
+      <polyline
+         points="174.605,297.333 174.001,299.192 172.42,300.341 170.466,300.341 168.885,299.192 168.281,297.333 168.885,295.474 170.466,294.326 172.42,294.326 174.001,295.474 174.605,297.333"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline139" />
+      <polygon
+         points="147.916,359.907 146.335,361.055 144.38,361.055 142.799,359.907 142.195,358.048 142.799,356.189 144.38,355.04 146.335,355.04 147.916,356.189 148.52,358.048"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon141" />
+      <polyline
+         points="148.52,358.048 147.916,359.907 146.335,361.055 144.38,361.055 142.799,359.907 142.195,358.048 142.799,356.189 144.38,355.04 146.335,355.04 147.916,356.189 148.52,358.048"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline143" />
+      <polygon
+         points="410.783,365.261 409.202,366.41 407.247,366.41 405.666,365.261 405.062,363.403 405.666,361.544 407.247,360.395 409.202,360.395 410.783,361.544 411.387,363.403"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon145" />
+      <polyline
+         points="411.387,363.403 410.783,365.261 409.202,366.41 407.247,366.41 405.666,365.261 405.062,363.403 405.666,361.544 407.247,360.395 409.202,360.395 410.783,361.544 411.387,363.403"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline147" />
+      <polygon
+         points="448.3,232.191 446.719,233.339 444.764,233.339 443.183,232.191 442.579,230.332 443.183,228.473 444.764,227.324 446.719,227.324 448.3,228.473 448.904,230.332"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon149" />
+      <polyline
+         points="448.904,230.332 448.3,232.191 446.719,233.339 444.764,233.339 443.183,232.191 442.579,230.332 443.183,228.473 444.764,227.324 446.719,227.324 448.3,228.473 448.904,230.332"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline151" />
+      <polygon
+         points="448.701,237.275 447.12,238.424 445.166,238.424 443.585,237.275 442.981,235.416 443.585,233.558 445.166,232.409 447.12,232.409 448.701,233.558 449.305,235.416"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon153" />
+      <polyline
+         points="449.305,235.416 448.701,237.275 447.12,238.424 445.166,238.424 443.585,237.275 442.981,235.416 443.585,233.558 445.166,232.409 447.12,232.409 448.701,233.558 449.305,235.416"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline155" />
+      <polygon
+         points="119.828,168.706 118.247,169.855 116.293,169.855 114.712,168.706 114.108,166.848 114.712,164.989 116.293,163.84 118.247,163.84 119.828,164.989 120.432,166.848"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon157" />
+      <polyline
+         points="120.432,166.848 119.828,168.706 118.247,169.855 116.293,169.855 114.712,168.706 114.108,166.848 114.712,164.989 116.293,163.84 118.247,163.84 119.828,164.989 120.432,166.848"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline159" />
+      <polygon
+         points="252.093,140.067 250.512,141.215 248.558,141.215 246.977,140.067 246.373,138.208 246.977,136.349 248.558,135.2 250.512,135.2 252.093,136.349 252.697,138.208"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon161" />
+      <polyline
+         points="252.697,138.208 252.093,140.067 250.512,141.215 248.558,141.215 246.977,140.067 246.373,138.208 246.977,136.349 248.558,135.2 250.512,135.2 252.093,136.349 252.697,138.208"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline163" />
+      <polygon
+         points="151.952,202.566 150.371,203.715 148.416,203.715 146.835,202.566 146.231,200.707 146.835,198.848 148.416,197.7 150.371,197.7 151.952,198.848 152.556,200.707"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon165" />
+      <polyline
+         points="152.556,200.707 151.952,202.566 150.371,203.715 148.416,203.715 146.835,202.566 146.231,200.707 146.835,198.848 148.416,197.7 150.371,197.7 151.952,198.848 152.556,200.707"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline167" />
+      <polygon
+         points="309.145,170.325 307.564,171.474 305.61,171.474 304.029,170.325 303.425,168.466 304.029,166.607 305.61,165.459 307.564,165.459 309.145,166.607 309.749,168.466"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon169" />
+      <polyline
+         points="309.749,168.466 309.145,170.325 307.564,171.474 305.61,171.474 304.029,170.325 303.425,168.466 304.029,166.607 305.61,165.459 307.564,165.459 309.145,166.607 309.749,168.466"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline171" />
+      <polygon
+         points="281.59,365.622 280.008,366.771 278.054,366.771 276.473,365.622 275.869,363.763 276.473,361.905 278.054,360.756 280.008,360.756 281.59,361.905 282.193,363.763"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon173" />
+      <polyline
+         points="282.193,363.763 281.59,365.622 280.008,366.771 278.054,366.771 276.473,365.622 275.869,363.763 276.473,361.905 278.054,360.756 280.008,360.756 281.59,361.905 282.193,363.763"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline175" />
+      <polygon
+         points="399.929,341.05 398.347,342.199 396.393,342.199 394.812,341.05 394.208,339.192 394.812,337.333 396.393,336.184 398.347,336.184 399.929,337.333 400.532,339.192"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon177" />
+      <polyline
+         points="400.532,339.192 399.929,341.05 398.347,342.199 396.393,342.199 394.812,341.05 394.208,339.192 394.812,337.333 396.393,336.184 398.347,336.184 399.929,337.333 400.532,339.192"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline179" />
+      <polygon
+         points="209.958,146.994 208.377,148.143 206.422,148.143 204.841,146.994 204.237,145.135 204.841,143.276 206.422,142.128 208.377,142.128 209.958,143.276 210.562,145.135"
+         fill="#000000"
+         shape-rendering="crispEdges"
+         id="polygon181" />
+      <polyline
+         points="210.562,145.135 209.958,146.994 208.377,148.143 206.422,148.143 204.841,146.994 204.237,145.135 204.841,143.276 206.422,142.128 208.377,142.128 209.958,143.276 210.562,145.135"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#000000"
+         id="polyline183" />
+      <polygon
+         points="251.021,97.2437 257.345,97.2437 257.345,90.9192 251.021,90.9192"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon185" />
+      <polyline
+         points="251.021,90.9192 251.021,97.2437 257.345,97.2437 257.345,90.9192 251.021,90.9192"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline187" />
+      <polygon
+         points="350.602,167.126 356.927,167.126 356.927,160.802 350.602,160.802"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon189" />
+      <polyline
+         points="350.602,160.802 350.602,167.126 356.927,167.126 356.927,160.802 350.602,160.802"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline191" />
+      <polygon
+         points="189.724,213.354 196.049,213.354 196.049,207.029 189.724,207.029"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon193" />
+      <polyline
+         points="189.724,207.029 189.724,213.354 196.049,213.354 196.049,207.029 189.724,207.029"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline195" />
+      <polygon
+         points="273.488,146.179 279.812,146.179 279.812,139.854 273.488,139.854"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon197" />
+      <polyline
+         points="273.488,139.854 273.488,146.179 279.812,146.179 279.812,139.854 273.488,139.854"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline199" />
+      <polygon
+         points="336.715,148.984 343.039,148.984 343.039,142.659 336.715,142.659"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon201" />
+      <polyline
+         points="336.715,142.659 336.715,148.984 343.039,148.984 343.039,142.659 336.715,142.659"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline203" />
+      <polygon
+         points="277.57,155.186 283.895,155.186 283.895,148.861 277.57,148.861"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon205" />
+      <polyline
+         points="277.57,148.861 277.57,155.186 283.895,155.186 283.895,148.861 277.57,148.861"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline207" />
+      <polygon
+         points="352.453,240.356 358.778,240.356 358.778,234.031 352.453,234.031"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon209" />
+      <polyline
+         points="352.453,234.031 352.453,240.356 358.778,240.356 358.778,234.031 352.453,234.031"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline211" />
+      <polygon
+         points="362.558,213.16 368.882,213.16 368.882,206.835 362.558,206.835"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon213" />
+      <polyline
+         points="362.558,206.835 362.558,213.16 368.882,213.16 368.882,206.835 362.558,206.835"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline215" />
+      <polygon
+         points="345.195,150.418 351.519,150.418 351.519,144.093 345.195,144.093"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon217" />
+      <polyline
+         points="345.195,144.093 345.195,150.418 351.519,150.418 351.519,144.093 345.195,144.093"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline219" />
+      <polygon
+         points="265.221,252.526 271.546,252.526 271.546,246.201 265.221,246.201"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon221" />
+      <polyline
+         points="265.221,246.201 265.221,252.526 271.546,252.526 271.546,246.201 265.221,246.201"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline223" />
+      <polygon
+         points="461.727,261.533 468.052,261.533 468.052,255.209 461.727,255.209"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon225" />
+      <polyline
+         points="461.727,255.209 461.727,261.533 468.052,261.533 468.052,255.209 461.727,255.209"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline227" />
+      <polygon
+         points="384.013,240.827 390.337,240.827 390.337,234.502 384.013,234.502"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon229" />
+      <polyline
+         points="384.013,234.502 384.013,240.827 390.337,240.827 390.337,234.502 384.013,234.502"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline231" />
+      <polygon
+         points="233.453,139.917 239.778,139.917 239.778,133.592 233.453,133.592"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon233" />
+      <polyline
+         points="233.453,133.592 233.453,139.917 239.778,139.917 239.778,133.592 233.453,133.592"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline235" />
+      <polygon
+         points="296.773,95.2643 303.097,95.2643 303.097,88.9397 296.773,88.9397"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon237" />
+      <polyline
+         points="296.773,88.9397 296.773,95.2643 303.097,95.2643 303.097,88.9397 296.773,88.9397"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline239" />
+      <polygon
+         points="196.911,239.24 203.235,239.24 203.235,232.916 196.911,232.916"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon241" />
+      <polyline
+         points="196.911,232.916 196.911,239.24 203.235,239.24 203.235,232.916 196.911,232.916"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline243" />
+      <polygon
+         points="289.216,299.611 295.54,299.611 295.54,293.286 289.216,293.286"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon245" />
+      <polyline
+         points="289.216,293.286 289.216,299.611 295.54,299.611 295.54,293.286 289.216,293.286"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline247" />
+      <polygon
+         points="445.353,280.567 451.677,280.567 451.677,274.242 445.353,274.242"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon249" />
+      <polyline
+         points="445.353,274.242 445.353,280.567 451.677,280.567 451.677,274.242 445.353,274.242"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline251" />
+      <polygon
+         points="399.82,160.184 406.145,160.184 406.145,153.859 399.82,153.859"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon253" />
+      <polyline
+         points="399.82,153.859 399.82,160.184 406.145,160.184 406.145,153.859 399.82,153.859"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline255" />
+      <polygon
+         points="236.091,143.533 242.415,143.533 242.415,137.208 236.091,137.208"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon257" />
+      <polyline
+         points="236.091,137.208 236.091,143.533 242.415,143.533 242.415,137.208 236.091,137.208"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline259" />
+      <polygon
+         points="430.099,89.1766 436.424,89.1766 436.424,82.852 430.099,82.852"
+         fill="#4c4c4c"
+         shape-rendering="crispEdges"
+         id="polygon261" />
+      <polyline
+         points="430.099,82.852 430.099,89.1766 436.424,89.1766 436.424,82.852 430.099,82.852"
+         fill="none"
+         stroke-linecap="square"
+         stroke-linejoin="miter"
+         stroke-width="0.5"
+         stroke="#4c4c4c"
+         id="polyline263" />
+      <polygon
+         points="292.853,102.149 286.529,102.149 289.691,108.473"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon265" />
+      <polyline
+         points="289.691,108.473 292.853,102.149 286.529,102.149 289.691,108.473"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline267" />
+      <polygon
+         points="460.255,146.261 453.93,146.261 457.092,152.585"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon269" />
+      <polyline
+         points="457.092,152.585 460.255,146.261 453.93,146.261 457.092,152.585"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline271" />
+      <polygon
+         points="409.682,75.0947 403.357,75.0947 406.52,81.4193"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon273" />
+      <polyline
+         points="406.52,81.4193 409.682,75.0947 403.357,75.0947 406.52,81.4193"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline275" />
+      <polygon
+         points="300.845,87.2296 294.521,87.2296 297.683,93.5542"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon277" />
+      <polyline
+         points="297.683,93.5542 300.845,87.2296 294.521,87.2296 297.683,93.5542"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline279" />
+      <polygon
+         points="424.994,90.2168 418.67,90.2168 421.832,96.5414"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon281" />
+      <polyline
+         points="421.832,96.5414 424.994,90.2168 418.67,90.2168 421.832,96.5414"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline283" />
+      <polygon
+         points="462.957,168.464 456.632,168.464 459.794,174.789"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon285" />
+      <polyline
+         points="459.794,174.789 462.957,168.464 456.632,168.464 459.794,174.789"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline287" />
+      <polygon
+         points="382.898,147.273 376.573,147.273 379.736,153.597"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon289" />
+      <polyline
+         points="379.736,153.597 382.898,147.273 376.573,147.273 379.736,153.597"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline291" />
+      <polygon
+         points="347.526,85.9109 341.202,85.9109 344.364,92.2354"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon293" />
+      <polyline
+         points="344.364,92.2354 347.526,85.9109 341.202,85.9109 344.364,92.2354"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline295" />
+      <polygon
+         points="347.857,46.6952 341.533,46.6952 344.695,53.0197"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon297" />
+      <polyline
+         points="344.695,53.0197 347.857,46.6952 341.533,46.6952 344.695,53.0197"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline299" />
+      <polygon
+         points="456.455,174.966 450.13,174.966 453.293,181.29"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon301" />
+      <polyline
+         points="453.293,181.29 456.455,174.966 450.13,174.966 453.293,181.29"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline303" />
+      <polygon
+         points="494.312,195.655 487.988,195.655 491.15,201.979"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon305" />
+      <polyline
+         points="491.15,201.979 494.312,195.655 487.988,195.655 491.15,201.979"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline307" />
+      <polygon
+         points="474.94,92.5535 468.616,92.5535 471.778,98.878"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon309" />
+      <polyline
+         points="471.778,98.878 474.94,92.5535 468.616,92.5535 471.778,98.878"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline311" />
+      <polygon
+         points="296.8,128.913 290.475,128.913 293.638,135.238"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon313" />
+      <polyline
+         points="293.638,135.238 296.8,128.913 290.475,128.913 293.638,135.238"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline315" />
+      <polygon
+         points="307.68,217.81 301.356,217.81 304.518,224.135"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon317" />
+      <polyline
+         points="304.518,224.135 307.68,217.81 301.356,217.81 304.518,224.135"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline319" />
+      <polygon
+         points="433.989,87.5371 427.664,87.5371 430.827,93.8616"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon321" />
+      <polyline
+         points="430.827,93.8616 433.989,87.5371 427.664,87.5371 430.827,93.8616"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline323" />
+      <polygon
+         points="353.403,132.328 347.079,132.328 350.241,138.653"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon325" />
+      <polyline
+         points="350.241,138.653 353.403,132.328 347.079,132.328 350.241,138.653"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline327" />
+      <polygon
+         points="401.907,147.391 395.582,147.391 398.745,153.715"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon329" />
+      <polyline
+         points="398.745,153.715 401.907,147.391 395.582,147.391 398.745,153.715"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline331" />
+      <polygon
+         points="398.88,88.4994 392.555,88.4994 395.718,94.8239"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon333" />
+      <polyline
+         points="395.718,94.8239 398.88,88.4994 392.555,88.4994 395.718,94.8239"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline335" />
+      <polygon
+         points="288.946,52.08 282.622,52.08 285.784,58.4046"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon337" />
+      <polyline
+         points="285.784,58.4046 288.946,52.08 282.622,52.08 285.784,58.4046"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline339" />
+      <polygon
+         points="397.21,190.769 390.886,190.769 394.048,197.093"
+         fill="#999999"
+         shape-rendering="crispEdges"
+         id="polygon341" />
+      <polyline
+         points="394.048,197.093 397.21,190.769 390.886,190.769 394.048,197.093"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.5"
+         stroke="#999999"
+         id="polyline343" />
+    </g>
+  </g>
+</svg>

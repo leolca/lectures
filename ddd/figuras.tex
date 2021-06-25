@@ -126,16 +126,284 @@ meses em anos diferentes.
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{figures/storytelling_data_ex03a.png}
- \caption{Resultado da pesquisa de opnião sobre ciências. \cite{knaflic_storytelling_2015}.}
+ \caption{Resultado da pesquisa de opinião sobre ciências. \cite{knaflic_storytelling_2015}.}
  \label{fig-storytelling_data_ex03a}
 \end{figure}
 \framebreak
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{figures/storytelling_data_ex03b.png}
- \caption{Resultado da pesquisa de opnião sobre ciências. \cite{knaflic_storytelling_2015}.}
+ \caption{Resultado da pesquisa de opinião sobre ciências. \cite{knaflic_storytelling_2015}.}
  \label{fig-storytelling_data_ex03b}
 \end{figure}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Limitações de alguns gráficos}
+
+\begin{lstlisting}[language=Octave, label=lst-pie-ex, caption={Exemplo de limitações do gráficos.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+x = [0.07 0.12 0.08 0.13 0.075 0.126 0.083 0.135 0.063 0.118]; 
+pie(x,strcat('item',strsplit(num2str(1:length(x)))));
+print -dsvg piex.svg
+
+lbs=strcat('item',strsplit(num2str(1:length(x))));
+[_,idx]=sort(x);
+pie(x(idx),lbs(idx)); 
+
+plot(x,'ok','markerfacecolor','k')
+set(gca,'Visible','off')
+axes('Position',get(gca,'Position'),'XAxisLocation','bottom','YAxisLocation','left', 'Color','none','XTickLabel',get(gca,'XTickLabel'),'YTickLabel',get(gca,'YTickLabel'),'XColor','k','YColor','k','LineWidth',1,'TickDir','out');
+print -dsvg piex-dots.svg
+
+plot(x(idx),'ok','markerfacecolor','k');
+set(gca,'xtick',[1:length(x)]); set(gca,'xticklabel',lbs(idx));
+
+plot(x(idx),'ok','markerfacecolor','k');
+set(gca,'Visible','off')
+axes('Position',get(gca,'Position'),'XAxisLocation','bottom','YAxisLocation','left', 'Color','none','XTick',linspace(1/(length(x)),1,length(x)),'XTickLabel',lbs(idx),'YTickLabel',get(gca,'YTickLabel'),'XColor','k','YColor','k','LineWidth',1,'TickDir','out');
+print -dsvg piex-dots-order.svg
+
+pie3([0.2 0.2 0.2 0.4],{'','','',''}); view (0,12);
+print -dsvg pie3d.svg
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.6\textwidth,height=0.6\textheight,keepaspectratio]{figures/piex.pdf}
+ \caption{Gráfico pizza gerado pelo código na lista \ref{lst-pie-ex}. Qual item é maior? e menor?}
+ \label{fig-piex}
+\end{figure}
+
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/piex-dots.pdf}
+ \caption{Gráfico de pontos gerado pelo código na lista \ref{lst-pie-ex}. É possível distinguir dois grupos.}
+ \label{fig-piex2}
+\end{figure}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.8\textwidth,height=0.65\textheight,keepaspectratio]{figures/piex-dots-order.pdf}
+ \caption{Gráfico de pontos gerado pelo código na lista \ref{lst-pie-ex}. É possível distinguir dois grupos e verificar a ordem de valores dos itens.}
+ \label{fig-piex3}
+\end{figure}
+
+\begin{quote}
+"Pie charts have severe perceptual problems. Experiments in graphical perception have shown
+that compared with dot charts, they convey information far
+less reliably. But if you want to display some data, and perceiving the information is not so important, then a pie chart
+is fine." \cite{becker1996}
+\end{quote}
+
+\begin{quote}
+"dumb pie chart; the only worse design than a pie chart is several of them,
+for then the viewer is asked to compare quantities located in
+spatial disarray both within and between pies. ... Given their
+low data-density and failure to order numbers along a visual
+dimension, pie charts should never be used." \cite{tufte_visual_1999}
+\end{quote}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{figures/pie3d.pdf}
+ \caption{Nada é tão ruim que não possa piorar.}
+ \label{fig-pie3d}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{figures/3dbars.pdf}
+ \caption{Evite gráficos com 3D desnecessários.}
+ \label{fig-3dbars}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Playfair's Balance-of-Trade}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{figures/imports-exports.png}
+ \caption{Balanço de comércio.}
+ \label{fig-importex1}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{figures/imports-exports_a.png}
+ \caption{Balanço de comércio.}
+ \label{fig-importex1a}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{figures/imports-exports_b.png}
+ \caption{Balanço de comércio.}
+ \label{fig-importex1b}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.9\textheight,keepaspectratio]{figures/imports-exports2.png}
+ \caption{Balanço de comércio.}
+ \label{fig-importex2}
+\end{figure}
+
+\end{frame}
+
+
+
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Limitações de alguns gráficos}
+
+\begin{lstlisting}[language=Octave, label=lst-y1y2, caption={Onde as curvas $y_1$ e $y_2$ estão mais próximas e mais distantes?}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+x = [0.5:0.125:3];
+y1 = 1./x.^2; y2 = y1 + 0.6;
+plot(x,y1,'-',x,y2,'--'); legend('y_1','y_2');
+print -dsvg curvesy1y2.svg
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.9\textheight,keepaspectratio]{figures/curvesy1y2.pdf}
+ \caption{Diferença entre as curvas.}
+ \label{fig-curvesy1y2}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Limitações de alguns gráficos}
+\begin{lstlisting}[language=Octave, label=lst-y1y2, caption={Onde as curvas $y_1$ e $y_2$ estão mais próximas e mais distantes?}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+system('wget https://gist.githubusercontent.com/curran/13d30e855d48cdd6f22acdf0afe27286/raw/0635f14817ec634833bb904a47594cc2f5f9dbf8/worldcities_clean.csv -O /tmp/worldcities.csv')
+X = csvread ('/tmp/worldcities.csv');
+top100 = X(2:104,5);
+id=find(top100==0);
+top100(id)=[];
+figure; hold on; for i=1:10:100, drawCircle(i-1,top100(i)/top100(end),top100(i)/top100(end)); end; plot([0:99],top100./top100(end),'k-'); hold off; daspect([1 1 1]);
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{figures/citiespop.pdf}
+ \caption{População das cidades.}
+ \label{fig-citiespop}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Limitações de alguns gráficos}
+\begin{lstlisting}[language=Octave, label=lst-scatters, caption={Gráfico de espalhamento com 3 grupos.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+X1=rand(20,2)+0.25; X2=0.8*rand(20,2)+0.5; X3=0.6*rand(20,2)+0.75;
+figure; hold on; scatter(X1(:,1),X1(:,2),40,[0 0 0],'o','filled'); scatter(X2(:,1),X2(:,2),40,[0 0 0],'s','filled'); scatter(X3(:,1),X3(:,2),40,[0 0 0],'v','filled'); hold off;
+print -dsvg scatterplot1.svg
+figure; hold on; scatter(X1(:,1),X1(:,2),40,[0 0 0],'o','filled'); scatter(X2(:,1),X2(:,2),40,[0.3 0.3 0.3],'s','filled'); scatter(X3(:,1),X3(:,2),40,[0.6 0.6 0.6],'v','filled'); hold off;
+print -dsvg scatterplot2.svg
+\end{lstlisting}
+
+\framebreak 
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/scatterplot1.pdf}
+ \caption{Gráfico de espalhamento utilizando tipo de elemento para distinguir os grupos.}
+ \label{fig-scatterplot1}
+\end{figure}
+
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/scatterplot2.pdf}
+ \caption{Gráfico de espalhamento utilizando também a cor para distinguir os grupos.}
+ \label{fig-scatterplot2}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Limitações de alguns gráficos}
+\begin{lstlisting}[language=Octave, label=lst-scatters, caption={Gráfico de espalhamento com 3 grupos.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+x = [4 11 22 29 38 42 49 7 13 22 31 39 42 49 7 14 23 32 40 43 55 9 15 27 33 40 45 58 10 15 27 33 40 47 66 10 20 28 35 40 48 72 11 21 28 38 42 48 73];
+plot(x,0,'ko'); ylim ([-5 5]);
+set(gca,'Visible','off')
+axes('Position',get(gca,'Position'),'XAxisLocation','bottom','YAxisLocation','left', 'Color','none','XTickLabel',get(gca,'XTickLabel'),'YTickLabel',get(gca,'YTickLabel'),'XColor','k','YColor','k','LineWidth',1,'TickDir','out');
+print -dsvg strip1.svg
+
+plot(x,0.125*randn(1,length(x)),'ko'); ylim ([-5 5]);
+set(gca,'Visible','off')
+axes('Position',get(gca,'Position'),'XAxisLocation','bottom','YAxisLocation','left', 'Color','none','XTickLabel',get(gca,'XTickLabel'),'YTickLabel',get(gca,'YTickLabel'),'XColor','k','YColor','k','LineWidth',1,'TickDir','out');
+print -dsvg strip2.svg
+\end{lstlisting}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/strip1.pdf}
+ \caption{Strip plot.}
+ \label{fig-strip1}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/strip2.pdf}
+ \caption{Strip plot com Jittering - possibilita a visualização de pontos sobrepostos.}
+ \label{fig-strip2}
+\end{figure}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Percepção de elementos gráficos}
+\begin{itemize}
+\item ângulo  
+\item área e volume 
+\item matiz de cor
+\item saturação de cor
+\item densidade
+\item comprimento
+\item posição em uma escala
+\item posição ao longo de escalas não alinhadas
+\item inclinação
+\end{itemize}
+
+\begin{quote}
+Distance and detection also play a role in our ability to decode
+information from graphs. The closer together objects are, the
+easier it is to judge attributes that compare them. As distance
+between objects increases, accuracy of judgment decreases. It
+is certainly easier to judge the difference in lengths of two bars
+if they are next to one another than if they are pages apart.
+\cite{robbins_creating_2013}
+\end{quote}
+
 \end{frame}
 
 
@@ -154,6 +422,9 @@ Sugestões de leitura:
 \vspace{2ex}
 
 \fullcite{knaflic_storytelling_2015}
+\vspace{2ex}
+
+\fullcite{robbins_creating_2013}
 \end{frame}
 
 

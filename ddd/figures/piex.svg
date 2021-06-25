@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="281.7973pt"
+   width="333.10696pt"
+   viewBox="0 0 333.10696 281.7973"
+   version="1.1"
+   id="svg99"
+   sodipodi:docname="piex.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata103">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>gl2ps_renderer figure</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="869"
+     inkscape:window-height="620"
+     id="namedview101"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.67220052"
+     inkscape:cx="204.85467"
+     inkscape:cy="178.676"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg99" />
+  <title
+     id="title2">gl2ps_renderer figure</title>
+  <desc
+     id="desc4">
+Creator: GL2PS 1.4.0, (C) 1999-2017 C. Geuzaine
+For: Octave
+CreationDate: Thu Jun 24 17:29:32 2021
+</desc>
+  <defs
+     id="defs6" />
+  <g
+     id="g97"
+     transform="translate(-134.359,-68.2097)">
+    <clipPath
+       id="cp00576432">
+      <polygon
+         points="0,432 576,432 576,0 0,0 "
+         id="polygon12" />
+    </clipPath>
+    <g
+       clip-path="url(#cp00576432)"
+       id="g95">
+      <polygon
+         points="281.747,92.2221 289.893,91.3659 298.08,91.08 298.08,208.44 248.111,102.25 250.345,101.226 257.94,98.1577 265.731,95.6263 273.679,93.6446 "
+         id="polygon15"
+         style="fill:#440154;shape-rendering:crispEdges" />
+      <polyline
+         points="298.08,208.44 248.111,102.25 250.345,101.226 257.94,98.1577 265.731,95.6263 273.679,93.6446 281.747,92.2221 289.893,91.3659 298.08,91.08 298.08,208.44"
+         id="polyline17"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(243.358,75.4997)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text21"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan19"
+   style="fill:#000000">item1</tspan>   </text>
+      <polygon
+         points="209.239,131.755 214.805,125.744 220.776,120.137 227.124,114.959 233.818,110.237 240.825,105.994 248.111,102.25 298.08,208.44 188.961,165.237 191.543,159.213 195.237,151.901 199.431,144.865 204.106,138.139 "
+         id="polygon23"
+         style="fill:#472877;shape-rendering:crispEdges" />
+      <polyline
+         points="298.08,208.44 188.961,165.237 191.543,159.213 195.237,151.901 199.431,144.865 204.106,138.139 209.239,131.755 214.805,125.744 220.776,120.137 227.124,114.959 233.818,110.237 240.825,105.994 248.111,102.25 298.08,208.44"
+         id="polyline25"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(171.418,116.534)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text29"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan27"
+   style="fill:#000000">item2</tspan>   </text>
+      <polygon
+         points="188.961,165.237 298.08,208.44 181.645,223.149 181.451,221.522 180.823,213.355 180.766,205.163 181.28,196.988 182.363,188.868 184.011,180.844 186.214,172.954 "
+         id="polygon31"
+         style="fill:#3e4a89;shape-rendering:crispEdges" />
+      <polyline
+         points="298.08,208.44 181.645,223.149 181.451,221.522 180.823,213.355 180.766,205.163 181.28,196.988 182.363,188.868 184.011,180.844 186.214,172.954 188.961,165.237 298.08,208.44"
+         id="polyline33"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(134.359,195.289)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text37"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan35"
+   style="fill:#000000">item3</tspan>   </text>
+      <polygon
+         points="212.528,288.778 207.133,282.615 202.18,276.09 197.694,269.236 193.698,262.085 190.21,254.673 187.248,247.036 184.826,239.211 182.955,231.235 181.645,223.149 298.08,208.44 229.098,303.386 224.542,299.903 218.341,294.551 "
+         id="polygon39"
+         style="fill:#30678d;shape-rendering:crispEdges" />
+      <polyline
+         points="298.08,208.44 229.098,303.386 224.542,299.903 218.341,294.551 212.528,288.778 207.133,282.615 202.18,276.09 197.694,269.236 193.698,262.085 190.21,254.673 187.248,247.036 184.826,239.211 182.955,231.235 181.645,223.149 298.08,208.44"
+         id="polyline41"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(152.86,284.629)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text45"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan43"
+   style="fill:#000000">item4</tspan>   </text>
+      <polygon
+         points="257.94,318.722 250.345,315.654 242.983,312.063 235.889,307.967 229.098,303.386 298.08,208.44 279.721,324.355 273.679,323.235 265.731,321.254 "
+         id="polygon47"
+         style="fill:#25828e;shape-rendering:crispEdges" />
+      <polyline
+         points="298.08,208.44 279.721,324.355 273.679,323.235 265.731,321.254 257.94,318.722 250.345,315.654 242.983,312.063 235.889,307.967 229.098,303.386 298.08,208.44"
+         id="polyline49"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(220.186,343.052)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text53"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan51"
+   style="fill:#000000">item5</tspan>   </text>
+      <polygon
+         points="351.36,313.009 343.936,316.47 336.289,319.406 328.455,321.801 320.473,323.644 312.383,324.925 304.222,325.639 296.032,325.782 287.851,325.353 279.721,324.355 298.08,208.44 367.658,302.951 365.395,304.576 358.525,309.037 "
+         id="polygon55"
+         style="fill:#1e9d88;shape-rendering:crispEdges" />
+      <polyline
+         points="367.658,302.951 365.395,304.576 358.525,309.037 351.36,313.009 343.936,316.47 336.289,319.406 328.455,321.801 320.473,323.644 312.383,324.925 304.222,325.639 296.032,325.782 287.851,325.353 279.721,324.355 298.08,208.44 367.658,302.951"
+         id="polyline57"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(331.387,349.777)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text61"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan59"
+   style="fill:#000000">item6</tspan>   </text>
+      <polygon
+         points="391.013,280.112 385.787,286.42 380.134,292.348 374.081,297.867 367.658,302.951 298.08,208.44 405.493,255.725 403.884,259.223 400.083,266.48 395.786,273.454 "
+         id="polygon63"
+         style="fill:#35b778;shape-rendering:crispEdges" />
+      <polyline
+         points="405.493,255.725 403.884,259.223 400.083,266.48 395.786,273.454 391.013,280.112 385.787,286.42 380.134,292.348 374.081,297.867 367.658,302.951 298.08,208.44 405.493,255.725"
+         id="polyline65"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(407.99,300.994)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text69"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan67"
+   style="fill:#000000">item7</tspan>   </text>
+      <polygon
+         points="412.772,183.559 414.228,191.62 415.119,199.763 415.439,207.948 415.187,216.136 414.365,224.286 412.977,232.359 411.028,240.316 408.529,248.117 405.493,255.725 298.08,208.44 404.582,159.139 405.093,160.257 408.193,167.839 410.757,175.619 "
+         id="polygon71"
+         style="fill:#6ccd59;shape-rendering:crispEdges" />
+      <polyline
+         points="415.439,207.948 415.187,216.136 414.365,224.286 412.977,232.359 411.028,240.316 408.529,248.117 405.493,255.725 298.08,208.44 404.582,159.139 405.093,160.257 408.193,167.839 410.757,175.619 412.772,183.559 414.228,191.62 415.119,199.763 415.439,207.948"
+         id="polyline73"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(438.906,211.613)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text77"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan75"
+   style="fill:#000000">item8</tspan>   </text>
+      <polygon
+         points="396.684,144.796 400.884,151.83 404.582,159.139 298.08,208.44 377.337,121.885 381.297,125.686 386.867,131.693 392.005,138.073 "
+         id="polygon79"
+         style="fill:#b4dd2b;shape-rendering:crispEdges" />
+      <polyline
+         points="404.582,159.139 298.08,208.44 377.337,121.885 381.297,125.686 386.867,131.693 392.005,138.073 396.684,144.796 400.884,151.83 404.582,159.139"
+         id="polyline81"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(411.755,129.803)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text85"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18"
+   y="0"
+   id="tspan83"
+   style="fill:#000000">item9</tspan>   </text>
+      <polygon
+         points="335.28,97.1317 342.954,99.9978 350.409,103.392 357.609,107.298 364.52,111.697 371.106,116.568 377.337,121.885 298.08,208.44 298.08,91.08 303.158,91.1899 311.325,91.8298 319.427,93.0378 327.425,94.808 "
+         id="polygon87"
+         style="fill:#fde724;shape-rendering:crispEdges" />
+      <polyline
+         points="377.337,121.885 298.08,208.44 298.08,91.08 303.158,91.1899 311.325,91.8298 319.427,93.0378 327.425,94.808 335.28,97.1317 342.954,99.9978 350.409,103.392 357.609,107.298 364.52,111.697 371.106,116.568 377.337,121.885"
+         id="polyline89"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter" />
+      <text
+         xml:space="preserve"
+         transform="translate(349.1,81.6746)"
+         font-size="10"
+         font-weight="normal"
+         font-style="normal"
+         id="text93"
+         style="font-style:normal;font-weight:normal;font-size:10px;font-family:FreeSans">     <tspan
+   x="0 2 5 10 18 24"
+   y="0"
+   id="tspan91"
+   style="fill:#000000">item10</tspan>   </text>
+    </g>
+  </g>
+</svg>

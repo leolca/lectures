@@ -1,0 +1,54 @@
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{siunitx}
+
+O pacote \texttt{siunitx} é utilizado para formatação de texto com quantidades físicas de maneira consistente no texto.
+
+\begin{LTXexample}
+\num{12345,67890}  \\
+\num{.3e45}        \\
+\num{0.123}   \\
+\num{0,1234}  \\
+\num{3.45d-4} \\
+\num{3.4567e-6} 
+\end{LTXexample}
+
+\framebreak
+
+\begin{LTXexample}
+\num{1.23456}     \\
+\num{14.23}      \\
+\sisetup{round-mode = places, round-precision = 3}%
+\num{1.23456}     \\
+\num{14.23}      \\
+\end{LTXexample}
+
+\framebreak
+
+\begin{LTXexample}
+\begin{table}\caption{Uso tabela sem o pacote \texttt{siunitx}.}
+\begin{tabular}{l}
+\toprule{Some Values} \\
+\midrule 
+2.3456 \\ 34.2345 \\ -6.7835 \\ 90.473  \\ 5642.5    \\ 1.2e3 \\ e4  \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{LTXexample}
+
+\framebreak 
+
+\begin{LTXexample}
+\begin{table}\caption{Standard behaviour of the \texttt{S} column type.%
+\label{tab-S-standard}}
+\begin{tabular}{@{}S@{}}
+\toprule{Some Values} \\
+\midrule 
+2.3456 \\ 34.2345 \\ -6.7835 \\ 90.473  \\ 5642.5    \\ 1.2e3 \\ e4  \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{LTXexample}
+
+
+
+\end{frame}
