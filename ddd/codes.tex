@@ -1,0 +1,103 @@
+\subsection{Códigos}
+
+\begin{frame}%[allowframebreaks]
+\frametitle{Códigos}
+\LaTeX{} é muito utilizando nas áreas de ciências e computação, sendo assim importante
+ter ferramentas adequadas para documentação de códigos fonte.
+
+\begin{itemize}
+\item ambiente \texttt{verbatim}\footnote{Verbatim: literalmente, ipsis litteris, idêntico à fonte original, palavra por palavra.}
+\item pacote \texttt{listings}: \url{https://www.ctan.org/pkg/listings}
+\item pacote \texttt{minted}: \url{https://www.ctan.org/pkg/minted}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]%[allowframebreaks]
+\frametitle{Verbatim}
+
+\begin{lstlisting}[language=tex, label=lst-verbatim, caption={Uso do ambiente verbatim.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+\begin{verbatim}
+Exemplo \textbf{verbatim}.
+$ x = a^2 + 2bc $
+\end{verbatim}
+\end{lstlisting}
+
+Resultado da Lista \ref{lst-verbatim}:
+\begin{verbatim}
+Exemplo \textbf{verbatim}.
+$ x = a^2 + 2bc $
+\end{verbatim}
+
+\end{frame}
+
+
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{listings}
+
+\begin{footnotesize}
+\begin{lstlisting}[language=Python, label=lst-listings1, caption={Inserindo o código direto no aquiro \texttt{.tex}.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+def factorial(n):
+    if n>1:
+        F=n*factorial(n-1)
+    else:
+        F=1
+    return F
+\end{lstlisting}
+
+\begin{verbatim}
+\begin{lstlisting}[language=Python]
+def factorial(n):
+    if n>1:
+        F=n*factorial(n-1)
+    else:
+        F=1
+    return F
+\end{lstlisting}
+\end{verbatim}
+\end{footnotesize}
+
+\framebreak
+
+Importando o código de um arquivo.
+\begin{verbatim}
+\lstinputlisting[language=Python]{factorial.py}
+\end{verbatim}
+\lstinputlisting[language=Python]{factorial.py}
+
+\framebreak
+\begin{verbatim}
+\lstinputlisting[language=Python,firstline=2, lastline=5]{factorial.py}
+\end{verbatim}
+\lstinputlisting[language=Python,firstline=2, lastline=5]{factorial.py}
+
+
+\framebreak
+Suporte a diversas linguagens: bash, C, C++, Java, HTML, Matlab, Octave, Perl, Python, R, TeX, XML, etc.
+\vspace{3ex}
+
+Opções de customização: \\
+backgroundcolor, 
+commentstyle,
+basicstyle (e.g. \verb|basicstyle=\ttfamily\small|),
+keywordstyle (e.g. \verb|keywordstyle=\color{red}|),
+numberstyle,
+numbersep,
+stringstyle,
+showspaces,
+showstringspaces,
+showtabs,
+numbers, 
+prebreak,
+captionpos,
+frame,
+breakwhitespace,
+breaklines,
+keepspaces,
+tabsize,
+escapeinside,
+rulecolor, etc.
+
+\end{frame}
+

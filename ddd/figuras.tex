@@ -373,8 +373,284 @@ print -dsvg strip2.svg
  \caption{Strip plot com Jittering - possibilita a visualização de pontos sobrepostos.}
  \label{fig-strip2}
 \end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Razão de aspecto}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.5\textwidth,height=0.7\textheight,keepaspectratio]{figures/sunspots.png}
+ \caption{Número de manchas solares ao longo dos anos \cite{robbins_creating_2013}. Razão de aspecto 0.8 (gráfico de cima) e 0.055 (gráfico de baixo).}
+ \label{fig-sunspots}
+\end{figure}
 
 \end{frame}
+\note{
+Note como a razão de aspecto influencia na percepção dos altos e baixos no gráfico.
+No gráfico de baixo fica evidente a diferença na velocidade de subida e descida.
+}
+
+
+\begin{frame}
+\frametitle{Razão de aspecto e referência zero}
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/carbondioxide.png}
+ \caption{Nível de dióxido de carbono na atmosfera \cite{robbins_creating_2013}.}
+ \label{fig-carbondioxide}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Escala logarítmica}
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/uselogscale.png}
+ \caption{Uso da escala logarítmica \cite{robbins_creating_2013}. Os valores dobram a cada dia.}
+ \label{fig-uselogscale}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Eixo y duplo}
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{figures/dyaxis.png}
+ \caption{Uso de eixo y duplo \cite{robbins_creating_2013}.}
+ \label{fig-dyaxis}
+\end{figure}
+Evite usar eixo y duplo. Note como uma má escolha pode levar a uma interpretação errônea.
+\end{frame}
+
+\begin{frame}
+\frametitle{Variáveis com extensões diferentes}
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.9\textwidth,height=0.7\textheight,keepaspectratio]{figures/range.png}
+ \caption{Nível sanguíneo \cite{robbins_creating_2013}.}
+ \label{fig-range}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Dados de crescimento de dentes}
+Vamos analisar os dados de crescimento de dente em Porquinho-da-Índia disponíveis no R (\emph{Tooth Growth Data}).
+Os dados mostram o crescimento de odontoblasto\footnote{Odontoblasto é um tipo de células colunares responsáveis pela síntese de matriz da pré-dentina.}
+em 10 porquinhos-da-índia a 3 dosagens de vitamina C (0.5, 1, e 2 mg) com dois métodos de entrega (suco de laranja (OJ) e ácido ascórbico (VC)).
+Os dados apresentam 60 observações de 3 variáveis (tamanho do dente, tipo de suplemento e dosagem).
+
+\vspace{3ex}
+\fullcite{crampton_growth_1947}
+
+\begin{lstlisting}[language=R, label=lst-tooth-0, caption={Resumo dos dados.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+> data(ToothGrowth)
+> summary(ToothGrowth)
+      len        supp         dose      
+ Min.   : 4.20   OJ:30   Min.   :0.500  
+ 1st Qu.:13.07   VC:30   1st Qu.:0.500  
+ Median :19.25           Median :1.000  
+ Mean   :18.81           Mean   :1.167  
+ 3rd Qu.:25.27           3rd Qu.:2.000  
+ Max.   :33.90           Max.   :2.000  
+\end{lstlisting}
+
+\begin{lstlisting}[language=R, label=lst-tooth-1, caption={Gráfico de pontos evidenciando cada amostra.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+> library(ggplot2)
+> library(dplyr)
+> ggplot(ToothGrowth, aes(x= dose, y= len)) + geom_point(aes(color=supp)) + theme_minimal()
+> ggsave('tooth01.pdf')
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/tooth01.pdf}
+ \caption{Gráfico de pontos evidenciando as amostras. Gerado pelo código na lista \ref{lst-tooth-1}.}
+ \label{fig-tooth01}
+\end{figure}
+
+\begin{lstlisting}[language=R, label=lst-tooth-2, caption={Sumário dos dados.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+> ToothGrowth %>% group_by(supp,dose) %>% summarize(lenmean=mean(len), lensd=sd(len), count = n())
+`summarise()` has grouped output by 'supp'. You can override using the `.groups` argument.
+# A tibble: 6 x 5
+# Groups:   supp [2]
+  supp   dose lenmean lensd count
+  <fct> <dbl>   <dbl> <dbl> <int>
+1 OJ      0.5   13.2   4.46    10
+2 OJ      1     22.7   3.91    10
+3 OJ      2     26.1   2.66    10
+4 VC      0.5    7.98  2.75    10
+5 VC      1     16.8   2.52    10
+6 VC      2     26.1   4.80    10
+\end{lstlisting}
+
+\framebreak
+
+\begin{lstlisting}[language=R, label=lst-tooth-jitter, caption={Jitter.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+ggplot(ToothGrowth, aes(x= dose, y= len)) + geom_jitter(aes(color=supp), shape=16, position=position_jitter(0.1)) + theme_minimal()
+ggsave('tooth-jitter.pdf')
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/tooth-jitter.pdf}
+ \caption{Gráfico de \emph{jitter} evidenciando as amostras. Gerado pelo código na lista \ref{lst-tooth-jitter}.}
+ \label{fig-tooth-jitter}
+\end{figure}
+
+
+\framebreak
+
+\begin{lstlisting}[language=R, label=lst-tooth-3, caption={Box plot.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+library(ggplot2)
+ToothGrowth$dose <- as.factor(ToothGrowth$dose)
+ggplot(ToothGrowth, aes(x=dose, y=len)) + geom_boxplot() + theme_minimal()
+ggsave('tooth02.pdf')
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/tooth02.pdf}
+ \caption{Diagrama de caixa (\emph{Box plot}). Gerado pelo código na lista \ref{lst-tooth-3}.}
+ \label{fig-tooth02}
+\end{figure}
+
+\framebreak
+
+\begin{lstlisting}[language=R, label=lst-tooth-4, caption={Box plot.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+ggplot(ToothGrowth, aes(x=dose, y=len)) + geom_boxplot(notch=TRUE, outlier.colour="red", outlier.shape=8, outlier.size=4) + coord_flip() + theme_minimal()
+ggsave('tooth03.pdf')
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/tooth03.pdf}
+ \caption{Diagrama de caixa (\emph{Box plot}). Gerado pelo código na lista \ref{lst-tooth-4}.}
+ \label{fig-tooth03}
+\end{figure}
+
+\framebreak
+
+\begin{lstlisting}[language=R, label=lst-tooth-5, caption={Box plot.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+ggplot(ToothGrowth, aes(x=dose, y=len, fill=dose)) + geom_boxplot(notch=TRUE, outlier.colour="red", outlier.size=2) + coord_flip() + theme_minimal() + theme(legend.position="bottom")
+ggsave('tooth04.pdf')
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/tooth04.pdf}
+ \caption{Diagrama de caixa (\emph{Box plot}). Gerado pelo código na lista \ref{lst-tooth-5}.}
+ \label{fig-tooth04}
+\end{figure}
+
+\framebreak
+
+\begin{lstlisting}[language=R, label=lst-tooth-6, caption={Box plot.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+ggplot(ToothGrowth, aes(x=dose, y=len, fill=supp)) + geom_boxplot() + theme_minimal()
+ggsave('/tmp/tooth05.pdf')
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/tooth05.pdf}
+ \caption{Diagrama de caixa (\emph{Box plot}). Gerado pelo código na lista \ref{lst-tooth-6}.}
+ \label{fig-tooth05}
+\end{figure}
+
+\framebreak
+
+\begin{footnotesize}
+Examining Tooth Growth Data in R\\
+\url{https://rpubs.com/garedwards/107023}
+
+\begin{quote}
+Conclusions and Assumptions
+
+Based off this data we can conclude the following:
+\begin{itemize}
+\item As dosage increases, tooth length increases regardless of supplement method.
+\item At the 0.5 mg and 1.0 mg dosage the OJ supplement method leads to more tooth growth than the VC method.
+\item At the 2.0 mg dosage, there is no significant difference between the OJ and VC supplement methods.
+\end{itemize}
+
+Assumptions
+\begin{itemize}
+\item We assume that the measurements are not paired.
+\item We do not assume that the variances are equal (var.equal=FALSE)
+\item We assume the populations are independent, that there was no crossover between the subjects and dosage.
+\item We assume that the guinea pigs were truly selected at random so no conflating factors influence the results.
+\end{itemize}
+\end{quote}
+\end{footnotesize}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{box plot explained}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{figures/fake-data-notch-boxplot.jpg}
+ \caption{Explicando o diagrama de caixa (\emph{box plot}). Fonte: \url{https://www.geeksforgeeks.org/understanding-different-box-plot-with-visualization/}.}
+ \label{fig-boxplot-explained}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.5\textwidth,height=0.72\textheight,keepaspectratio]{figures/Boxplot_vs_PDF.pdf}
+ \caption{Box plot e distribuição normal (Wikipedia).}
+ \label{fig-boxplot-normal}
+\end{figure}
+
+
+\end{frame}
+
+
+
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{}
+\begin{lstlisting}[language=R, label=lst-nycflights13-A, caption={Box plot.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+library(nycflights13)
+tempdata <- aggregate(temp ~ month + day, data=weather, mean)
+pdf('nycflights13-A.pdf')
+with(tempdata, monthplot(temp, times=day , phase=month, ylab = "temp"))
+dev.off()
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/nycflights13-A.pdf}
+ \caption{Temperatura em NYC ao longo de 2013. Base de dados \texttt{nycflights13}. Gerado pelo código na lista \ref{lst-nycflights13-A}.}
+ \label{fig-nycflights13-A}
+\end{figure}
+
+\framebreak
+
+\begin{lstlisting}[language=R, label=lst-nycflights13-B, caption={Box plot.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+library('ggplot2')
+months.labs <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dez")
+names(months.labs) <- c(1,2,3,4,5,6,7,8,9,10,11,12)
+ggplot(tempdata, aes(x=month+day, y=temp)) + geom_line() + stat_smooth(method="lm", formula=y~1, se=F) + facet_wrap(~month, nrow=1, labeller = labeller(month=months.labs)) + theme_minimal() + theme(axis.text.x = element_blank(), axis.title.x = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + labs(title="Temperature in NYC in 2013", y="Temperature (°F)")
+ggsave('nycflights13-B.pdf')
+\end{lstlisting}
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{figures/nycflights13-B.pdf}
+ \caption{Temperatura em NYC ao longo de 2013. Base de dados \texttt{nycflights13}. Gerado pelo código na lista \ref{lst-nycflights13-B}.}
+ \label{fig-nycflights13-B}
+\end{figure}
+
+\url{https://cran.r-project.org/web/packages/nycflights13/index.html}
+
+\end{frame}
+
 
 
 
@@ -498,5 +774,3 @@ Tipos de figuras:
 \end{frame}
 
 
-\subsection{ggplot}
-\input{ggplot.tex}
