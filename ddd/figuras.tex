@@ -436,6 +436,35 @@ Evite usar eixo y duplo. Note como uma má escolha pode levar a uma interpretaç
 \end{figure}
 \end{frame}
 
+\begin{frame}
+\frametitle{Máxima, mínima e média ao longo do tempo}
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.9\textwidth,height=0.7\textheight,keepaspectratio]{figures/maxminmeanchart.png}
+ \caption{Preço do ouro \cite{robbins_creating_2013}.}
+ \label{fig-maxminmeanchart}
+\end{figure}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Agregando, simplificando e ordenando}
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=0.9\textwidth,height=0.7\textheight,keepaspectratio]{figures/vcrmanual01.png}
+ \caption{Tempo gasto para ler uma secção do manual e executar a tarefa \cite{robbins_creating_2013}.}
+ \label{fig-vcrmanual01}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+  \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{figures/vcrmanual02.png}
+ \caption{Tempo gasto para ler uma secção do manual e executar a tarefa \cite{robbins_creating_2013}.}
+ \label{fig-vcrmanual02}
+\end{figure}
+\end{frame}
+
 
 \begin{frame}[allowframebreaks,fragile]
 \frametitle{Dados de crescimento de dentes}
@@ -652,6 +681,45 @@ ggsave('nycflights13-B.pdf')
 \end{frame}
 
 
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Pizza e Waffle}
+
+\begin{lstlisting}[language=R, label=lst-irisspecies-pie, caption={Gráfico pizza.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+library(ggplot2)
+ggplot(iris, aes(x="", fill=Species)) + geom_bar(width = 1) + coord_polar("y") + theme_minimal()
+ggsave('irisspecies-pie.pdf')
+\end{lstlisting}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/irisspecies-pie.pdf}
+ \caption{Espécies da planta Iris.}
+ \label{fig-irisspecies-pie}
+\end{figure}
+
+\framebreak
+
+\begin{lstlisting}[language=R, label=lst-irisspecies-waffle, caption={Gráfico Waffle.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+library(ggwaffle)
+iris$Species <- as.character(iris$Species)
+waffle_data <- waffle_iron(iris, aes_d(group = Species))
+
+ggplot(waffle_data, aes(x, y, fill = group)) + geom_waffle() + coord_equal() + scale_fill_waffle() + theme_waffle()
+ggsave('irisspecies-waffle.pdf')
+\end{lstlisting}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.9\textwidth,height=0.7\textheight,keepaspectratio]{figures/irisspecies-waffle.pdf}
+ \caption{Espécies da planta Iris.}
+ \label{fig-irisspecies-waffle}
+\end{figure}
+
+\end{frame}
 
 
 
