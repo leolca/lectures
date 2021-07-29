@@ -563,25 +563,38 @@ play snds/stadt_city.ogg
 
 ![Fusion by common frequency change](imgs/bregman-03.png){ height=70% }
 
-<!-- /ms/downloads/lectures/Bregman_ASA/Track11.mp3 -->
+<!-- /ms/downloads/lectures/Bregman_ASA/Track19.mp3 -->
 
 ---
 
 ![Sine-wave speech](imgs/bregman-04.png){ height=70% }
 
 <!-- /ms/downloads/lectures/Bregman_ASA/Track23.mp3 -->
+<!-- The sine-wave speech demonstration starts with the sentence, “Please say what this word
+is”, and then presents the list, “sill, shook, rust, wed, pass, lark, jaw, coop, beak”.-->
 
 ---
 
 ![Role of frequency micro-modulation in voice perception](imgs/bregman-05.png){ height=70% }
 
 <!-- /ms/downloads/lectures/Bregman_ASA/Track24.mp3 -->
+<!-- the vowels “oh” as in “more”, “ah” as in “bomb”, and “e” as in “bed” -->
 
 ---
 
 ![The picket-fence effect with speech](imgs/bregman-06.png){ height=70% }
 
 <!-- /ms/downloads/lectures/Bregman_ASA/Track31.mp3 -->
+<!-- In the first example, we play a sequence of two sentences in which half the
+sound has been eliminated by taking out every other one-sixth-second segment and
+replacing it with a silence. Then the same signal is played with loud noise bursts
+replacing the silences. 
+
+In the second example, we again delete half the speech, but this time every other quarter-
+second segment. Despite the longer deletions, the listener will typically hear the
+sentences as continuous, though unclear. First the gaps are filled by silence, then with
+loud noise. -->
+
 
 ---
 
