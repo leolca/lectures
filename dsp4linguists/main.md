@@ -167,6 +167,12 @@ endfor
 
 ---
 
+# Praat clipping example - recording
+
+![saturation](imgs/praat-clipping-rec.png){ height=75% }
+
+---
+
 # Fourier Series
 
 [Simulation](https://www.compadre.org/osp/EJSS/4487/272.htm)
@@ -456,6 +462,18 @@ x=0.5*sin(2*pi*220*t); player = audioplayer (x, fs, 8); play (player);
 # Pitch scales
 
 ![Elements of acoustic phonetics, Peter Ladefoged (1996)](imgs/pitch-scales.png){ height=80% }
+
+
+---
+
+# Tonal languages
+
+![Mandarin - ma](imgs/mandarin-ma.png)
+
+<!--
+play snds/mandarin-ma.ogg
+# https://www.youtube.com/watch?v=9XRXYaHOlpo
+-->
 
 ---
 
