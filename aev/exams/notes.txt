@@ -50,4 +50,20 @@ elearn_exam <- c("mov2front/mov2front02.Rmd", "rle/rle03.Rmd", "rle/rle04.Rmd", 
 exams2moodle(elearn_exam, n = 5, name = "aev-prova-01", encoding = "UTF-8")
 exams2html(elearn_exam, n = 1, name = "aev-prova-01", encoding = "UTF-8")
 
+# prova 02
+elearn_exam <- c("vectorquantization/vecquantz03.Rmd", "vectorquantization/vecquantz04.Rmd", "sampling/resampling03.Rmd", "sampling/sampling01.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "aev-prova-02", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-02", encoding = "UTF-8")
+
+# prova 03
+elearn_exam <- c("dpcm/dpcm01.Rmd", "dpcm/dpcm02.Rmd", "lpc/lpc01.Rmd", "voice/pitch.Rmd", "voice/formants.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "aev-prova-03", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-03", encoding = "UTF-8")
+
+# prova 04
+elearn_exam <- c("dct/dct01.Rmd","dct/dct02.Rmd","dct/dct03.Rmd","jpeg/jpeg03.Rmd","pca/pca02.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "aev-prova-04", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-04", encoding = "UTF-8")
+
+
 

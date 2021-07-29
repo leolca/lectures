@@ -1,0 +1,31 @@
+Question
+========
+Para determinar a frequência de ressonância do trato vocal (formantes),
+para uma determinada amostra de áudio adquirida, devemos
+
+Answerlist
+---------------
+* Encontrar a energia do resíduo do filtro LPC.
+* Determinar o máximo de autocorrelação da resposta ao impulso do filtro LPC.
+* Determinar o ângulo dos pólos do filtro LPC.
+* Determinar o ganho do filtro LPC inverso.
+* Nenhum das opções.
+
+Solution
+========
+
+Answerlist
+----------
+* False.
+* False.
+* True.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 00100
+exname: formantes
+expoints: 1
+

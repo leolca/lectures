@@ -1,0 +1,30 @@
+Question
+========
+Qual das afirmações sobre a codificação DPCM é verdadeira?
+
+Answerlist
+---------------
+* A soma do sinal de entrada e sua predição é quantizada.
+* O índice da amostra é quantizado diretamente e sua predição é desprezada.
+* A diferença entra o sinal de entrada e um sinal aleatório é quantizada.
+* A diferença entre o sinal de entrada e sua predição é quantizada.
+* A predição do sinal de entrada é quantizada.
+
+Solution
+========
+
+Answerlist
+----------
+* False.
+* False.
+* False.
+* True.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 00010
+exname: dpcm
+expoints: 1
+

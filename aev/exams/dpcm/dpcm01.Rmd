@@ -1,0 +1,38 @@
+Question
+========
+Considere uma codificação DPCM do sinal $x = [1, 2, 3, 4, 5, 4, 3, 2, 1]$,
+onde o preditor é dado por $\hat{x}[n] = x[n-1]$ e o quantizador é
+definido pelos valores de representação $[0, 1]$ e pelo limiar $0.5$.
+A saída do codificador DPCM representa os índices no codebook 
+(o primeiro elemento do codebook possuí índice zero).
+Qual é a saída do codificador DPCM para o sinal $x$ dado?
+
+Answerlist
+---------------
+* [1, 1, 1, 1, 1, 0, 0, 0, 0]
+* [1, 1, 1, 1, 1, 1, 1, 1, 1]
+* [0, 0, 0, 0, 0, 0, 0, 0, 0]
+* [0, 0, 0, 0, 1, 1, 1, 1, 1]
+* [1, 0, 1, 0, 1, 0, 1, 0, 1]
+* [1, 1, 1, 0, 0, 0, 0, 0, 1]
+
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 100000
+exname: dpcm
+expoints: 1
+

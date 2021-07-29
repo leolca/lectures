@@ -1,0 +1,31 @@
+Question
+========
+A autocorrelação de um sinal de voz pode ser utilizada para determinar:
+
+Answerlist
+---------------
+* A intensidade.
+* A frequência do primeiro formante (F1).
+* O timbre da voz.
+* A frequência de amostragem.
+* A altura (pitch).
+
+Solution
+========
+
+Answerlist
+----------
+* False.
+* False.
+* False.
+* False.
+* True.
+
+Meta-information
+================
+extype: schoice
+exsolution: 00001
+exname: pitch
+expoints: 1
+
+

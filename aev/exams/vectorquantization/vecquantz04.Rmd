@@ -1,0 +1,43 @@
+Question
+========
+
+Em uma quantização vetorial de imagens, o tamanho dos vetores no codebook é 16x8 pixels e
+o codebook possui 64 vetores. Qual é a taxa de bits (bit rate) deste sistema de 
+compressão em termos do número de bits por pixel? 
+
+Answerlist
+---------------
+* 3.1 bits/pixel.
+* 2.3 bits/pixel.
+* 2 bits/pixel.
+* 1 bit/pixel.
+* 0.51 bits/pixel.
+* 0.37 bits/pixel.
+* 0.252 bits por pixel.
+* 0.047 bits por pixel.
+
+Solution
+========
+
+Como o codebook possui 64 vetores, podemos idexá-lo com 6 bits. Cada vetor no codebook
+representa um bloco de 16x8 pixels, ou seja, 128 pixels. Teremos então uma taxa de
+6/128 = 0.046875 bits por pixel.
+
+Answerlist
+----------
+* False.
+* False.
+* False.
+* False.
+* False.
+* False.
+* False.
+* True.
+
+Meta-information
+================
+extype: schoice
+exsolution: 00000001
+exname: quantizador vetorial 4
+expoints: 1
+

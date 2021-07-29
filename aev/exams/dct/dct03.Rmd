@@ -1,0 +1,44 @@
+Question
+========
+Considere o sinal $x[n] = [4a, -a, -a, -2a]$. 
+A DCT-II deste sinal é $X[k] = [X[0], X[1], X[2], X[3]$.
+Determine (em função de $a$):
+
+Answerlist
+---------------
+* $X[0] = $ 
+* $X[2] = $
+
+Solution
+========
+
+Para $k=0$ temos
+$$
+X[0] = \sqrt(\frac{1}{4}) \sum_{n=0}^{3} x[n] = \sqrt(\frac{1}{4}) (4a -a -a -2a) = 0
+$$
+
+Para $k=2$ temos
+$$
+\begin{aligned}
+X[2] &= \sqrt{\frac{1}{2}} \sum_{n=0}^{3} x[n] \cos \left( \frac{\pi (2n+1)}{4} \right) \\
+     &= \sqrt{\frac{1}{2}} \left( \frac{\sqrt{2}}{2} (4a) - \frac{\sqrt{2}}{2} (-a) - \frac{\sqrt{2}}{2} (-a) + \frac{\sqrt{2}}{2} (-2a) \right) \\
+     &= \sqrt{\frac{1}{2}} \frac{\sqrt{2}}{2} (4a + a + a - 2a) = 2a
+\end{aligned}
+$$
+
+
+Answerlist
+----------
+* $X[0] = 0$
+* $X[2] = 2a$
+
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|verbatim
+exsolution: 0|1:SHORTANSWER:%100%2a~%100%2*a~%100%2 a
+exname: DCT
+extol: 0.01
+expoints: 1|1
+
