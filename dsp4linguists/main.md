@@ -17,6 +17,12 @@ mathfont: texgyredejavu-math.otf
 
 ---
 
+# Elements of Acoustic Phonetics
+
+![Peter Ladefoged, Elements of Acoustic Phonetics, 1996](imgs/Ladefoged.png){ height=75% }
+
+---
+
 # Acoustic wave
 
 ![Acoustic wave.](imgs/awave.jpg)
@@ -30,6 +36,24 @@ mathfont: texgyredejavu-math.otf
 ![ADC and DAC.](imgs/sound-adc-dac.svg)
 
 <!-- Source: Wikimedia. -->
+
+---
+
+# Microphone
+
+![Microphone polar pattern](imgs/micpolarpattern.jpg){ height=50% }
+
+---
+
+# Microphone
+
+![Microphone polar pattern](imgs/micpolarpattern2.jpg){ height=50% }
+
+---
+
+# Headphone
+
+![Headphone frequency response](imgs/headphone-freq-resp.png){ height=75% }
 
 ---
 
@@ -134,6 +158,12 @@ for m=0.8:-0.25:0.05,
   play (player);
 endfor
 -->
+
+---
+
+# Praat clipping example
+
+![440Hz sin wave clipped](imgs/praat-clipping.png){ height=80% }
 
 ---
 
@@ -581,7 +611,7 @@ New > Sound > Pure tone
    check parameters
    use 44.1kHz sampling frequency
 
-Vier & Edit 
+View & Edit 
    Spectrogram - settings - window length - dynamic range (from peak)
 
 -->
@@ -645,7 +675,7 @@ change spectrogram settings - window length 0.025 (better frequency resolution)
 
 <!--
 analyze spectrum > LPC autocorrelation
-  > to expectrum slice > time  0.358
+  > to expectrum slice > time  0.322
 
 -->
 
@@ -659,8 +689,8 @@ analyze spectrum > LPC autocorrelation
 back to original ah
 convert > resample to 8820
 analyze spectrum > LPC autocorrelation
-  > to expectrum slice > time  0.358
-   to expectrum slice > time  0.358
+  > to expectrum slice > time  0.322
+   to expectrum slice > time  0.322
 -->
 
 
