@@ -11,6 +11,12 @@ mathfont: texgyredejavu-math.otf
 <!-- copile with: pandoc -t beamer main.md --pdf-engine=xelatex -o main.pdf -->
 ---
 
+# URL
+
+![https://raw.githubusercontent.com/leolca/lectures/master/dsp4linguists/main.pdf](imgs/qrurl.png)
+
+---
+
 # Acoustic wave
 
 ![Acoustic wave.](imgs/awave.jpg)
