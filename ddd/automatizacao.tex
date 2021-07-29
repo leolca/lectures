@@ -9,3 +9,104 @@ Automatização é util para realizar tarefas repetitivas e com grande volume de
 \vspace{3ex}
 \fullcite{yitbarek2019}
 \end{frame}
+
+
+\subsection{Bash}
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Bash}
+\texttt{Bash} foi escrito por Brian Fox para o projeto GNU. A primeira versão saiu em 1989, tornando-se o shell padrão 
+para a maioria das distribuições Linux e para macOS (até 2019, quando a Apple passou a adotar o \texttt{zsh}).
+
+\vspace{2ex}
+O nome \texttt{bash} é um acrônimo para \emph{Bourne Again Shell}.
+
+
+\vspace{2ex}
+Windows 10: \href{https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/}{Windows Subsystem For Linux},
+\href{https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/}{How to Install and Use the Linux Bash Shell on Windows 10}
+
+Windows: \href{https://www.cygwin.com/}{Cygwin}
+
+
+\href{https://www.virtualbox.org/}{VM VirtualBox}
+
+Online: 
+\href{https://colab.research.google.com}{Google Colab},
+\href{https://cocalc.com}{Cocalc},
+\href{https://jupyter.org/}{Jupyter Notebook}.
+
+\vspace{2ex}
+\url{https://en.wikipedia.org/wiki/Bash_(Unix_shell)}
+
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-bash-new-script-01, caption={Criando um script.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ touch myscript.sh
+$ chmod +x myscript.sh
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-new-script-02, caption={Criando um script.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+#!/bin/bash
+printf "Hello %s!\n" "$1"
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-convert-imgs, caption={Script para converter PNGs em JPGs}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+for img in $( ls *.png ); do convert $img  ${img%%png}jpg; done
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-sequencia, caption={Sequência de 1 a 100.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+for i in `seq 100`; do echo $i; sleep 1; done
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-listpdfs, caption={Listar PDFs em ordem decrescente de tamanho}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+ls -la *.[pP][dD][fF] | tr -s [:blank:] | cut -d' ' -f5,9 | column -t | sort -nr > pdflist.txt
+\end{lstlisting}
+
+Lista de alguns comandos uteis:
+\begin{description}
+\item[ls] listar conteúdo de diretórios
+\item[echo] imprimir texto na tela
+\item[touch] criar arquivo
+\item[mkdir] criar diretório
+\item[grep] procurar textos e padrões
+\item[man] manual, obter ajuda para os comandos
+\item[pwd] diretório corrente
+\item[cd] trocar de diretório
+\item[mv] mover arquivo
+\item[rm] remover arquivo
+\item[rmdir] remover diretório
+\item[cp] copiar aquivos
+\item[less] visualizar o conteúdo de arquivos
+\item[cat] concatenar e imprimir na saída padrão
+\item[>, <, |] redirecionamentos
+\item[head] lê o início de um arquivo
+\item[tail] lê o final de um arquivo
+\item[chmod] alterar permissões
+\item[kill] matar um processo
+\item[sleep] esperar um determinado tempo
+\item[\&] executar em background
+\item[cal] calendário
+\item[diff] verificar diferenças entre arquivos
+\item[paste] juntar linhas de arquivos
+\item[ps] status de processos
+\item[sort] ordenar
+\item[tr] traduzir, comprimir e/ou remover caracteres
+\item[sed] editor de fluxo
+\item[awk] linguagem para processamento de texto
+\end{description}
+
+
+\framebreak
+
+\fullcite{evans2021}
+\vspace{2ex}
+
+\fullcite{devhints}
+\vspace{2ex}
+
+\fullcite{robbins2016}
+
+\end{frame}
+
+

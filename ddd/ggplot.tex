@@ -234,8 +234,77 @@ Gráfico polar:
 \framebreak
 \lstinputlisting[language=bash, label=lst-lodz-ex-03, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/extractdataapto.sh}
 
+\end{frame}
+
+
+
+
+\begin{frame}[fragile,allowframebreaks]
+\frametitle{Dados em um mapa}
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/mg-furtos-veiculos-2020.pdf}
+ \caption{Furtos de veículos nos municípos de Minas Gerais durante o ano de 2020.}
+ \label{fig-mg-furtos-veiculos-2020}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/mg-furtos-veiculos-2015a2021.png}
+ \caption{Furtos de veículos nos municípos de Minas Gerais durante os anos de 2015 a 2021.}
+ \label{fig-mg-furtos-veiculos-2015a2021}
+\end{figure}
+
+\framebreak
+
+Para elaborar os gráficos de furtos de veículos apresentados nas figuras \ref{fig-mg-furtos-veiculos-2020,fig-mg-furtos-veiculos-2015a2021}
+foram utilizados os seguintes dados:
+\begin{itemize}
+\item número de ocorrência de furtos (Secretaria de Segurança Pública de Minas Gerais, disponíveis em \url{http://www.seguranca.mg.gov.br/2018-08-22-13-39-06/dados-abertos})
+\item população dos municípos (DATASUS, disponível em \url{http://tabnet.datasus.gov.br/cgi/deftohtm.exe?ibge/cnv/popmg.def})
+\item dados espaciais dos municípos de Minas Gerais (pacote \texttt{geobr} para R e Python, disponível em \url{https://github.com/ipeaGIT/geobr})
+\end{itemize}
+
+Os gráficos foram elabordos no R, utilizando o pacote \texttt{ggplot2}.
+
+\framebreak
+
+Pacotes utilizados:
+\lstinputlisting[language=R, label=lst-furtos-01, linerange={7-10}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+
+Dados geográficos de MG:
+\lstinputlisting[language=R, label=lst-furtos-02, linerange={13-13}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+
+\framebreak
+Dados de furtos de veículos por ano:
+\lstinputlisting[language=R, label=lst-furtos-03, linerange={28-38}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+
+\framebreak
+Ajustes nos dados obtidos do pacote \texttt{geobr}:
+\lstinputlisting[language=R, label=lst-furtos-04, linerange={41-44}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+
+\framebreak
+Processo utilizado para obter os dados populacionais:
+\lstinputlisting[language=bash, label=lst-furtos-05, linerange={56-59}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+\lstinputlisting[language=R, label=lst-furtos-06, linerange={61-64}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+
+\framebreak
+Definição do tema dos gráficos:
+\lstinputlisting[language=R, label=lst-furtos-07, linerange={15-21}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+
+\framebreak
+Figura \ref{fig-mg-furtos-veiculos-2020}:
+\lstinputlisting[language=R, label=lst-furtos-08, linerange={66-75}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
+
+\framebreak
+Figura \ref{fig-mg-furtos-veiculos-2015a2021}:
+\lstinputlisting[language=R, label=lst-furtos-09, linerange={78-87}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{examples/mapa_furto_veiculos_mg.r}
 
 \end{frame}
+
 
 
 

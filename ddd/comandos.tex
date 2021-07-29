@@ -20,12 +20,13 @@ Exemplos de comandos: \verb|\textbf{...}|, \verb|\url{...}|, \verb|\item|, etc.
 \vspace{3ex}
 Novos commandos podem ser definidos:
 \begin{lstlisting}[language=tex, label=lst-comand-def, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
-% comando simples
-\newcommand{\R}{\mathbb{R}}
+% comando simples (incluir \usepackage{amsfonts})
+\newcommand{\R}{$\mathbb{R}$}
 
 % comando com parametro
-\newcommand{\bb}[1]{\mathbb{#1}} 
+\newcommand{\bb}[1]{$\mathbb{#1}$} 
 
+% (incluir \usepackage{hyperref})
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
 \end{lstlisting}
 

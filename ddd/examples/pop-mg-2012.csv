@@ -1,0 +1,854 @@
+code_muni,name_muni,pop
+310010,Abadia dos Dourados,6743
+310020,Abaete,22740
+310030,Abre Campo,13306
+310040,Acaiaca,3925
+310050,Acucena,10093
+310060,Agua Boa,14803
+310070,Agua Comprida,2015
+310080,Aguanil,4129
+310090,Aguas Formosas,18575
+310100,Aguas Vermelhas,12850
+310110,Aimores,24937
+310120,Aiuruoca,6116
+310130,Alagoa,2696
+310140,Albertina,2924
+310150,Alem Paraiba,34461
+310160,Alfenas,74804
+310163,Alfredo Vasconcelos,6223
+310170,Almenara,39287
+310180,Alpercata,7204
+310190,Alpinopolis,18709
+310200,Alterosa,13829
+310205,Alto Caparao,5392
+315350,Alto Jequitiba,8297
+310210,Alto Rio Doce,11903
+310220,Alvarenga,4329
+310230,Alvinopolis,15212
+310240,Alvorada de Minas,3549
+310250,Amparo do Serra,4910
+310260,Andradas,37920
+310280,Andrelandia,12153
+310285,Angelandia,8084
+310290,Antonio Carlos,11151
+310300,Antonio Dias,9493
+310310,Antonio Prado de Minas,1653
+310320,Aracai,2258
+310330,Aracitaba,2054
+310340,Aracuai,36059
+310350,Araguari,110983
+310360,Arantina,2811
+310370,Araponga,8188
+310375,Arapora,6271
+310380,Arapua,2780
+310390,Araujos,8135
+310400,Araxa,95888
+310410,Arceburgo,9732
+310420,Arcos,37188
+310430,Areado,13958
+310440,Argirita,2860
+310445,Aricanduva,4848
+310450,Arinos,17669
+310460,Astolfo Dutra,13237
+310470,Ataleia,14109
+310480,Augusto de Lima,4930
+310490,Baependi,18426
+310500,Baldim,7877
+310510,Bambui,22891
+310520,Bandeira,4938
+310530,Bandeira do Sul,5405
+310540,Barao de Cocais,29205
+310550,Barao de Monte Alto,5643
+310560,Barbacena,128120
+310570,Barra Longa,5930
+310590,Barroso,19787
+310600,Bela Vista de Minas,10028
+310610,Belmiro Braga,3400
+310620,Belo Horizonte,2395785
+310630,Belo Oriente,23984
+310640,Belo Vale,7553
+310650,Berilo,12198
+310665,Berizal,4431
+310660,Bertopolis,4508
+310670,Betim,388873
+310680,Bias Fortes,3703
+310690,Bicas,13783
+310700,Biquinhas,2602
+310710,Boa Esperanca,38734
+310720,Bocaina de Minas,5011
+310730,Bocaiuva,47236
+310740,Bom Despacho,46482
+310750,Bom Jardim de Minas,6480
+310760,Bom Jesus da Penha,3942
+310770,Bom Jesus do Amparo,5593
+310780,Bom Jesus do Galho,15242
+310790,Bom Repouso,10449
+310800,Bom Sucesso,17271
+310810,Bonfim,6811
+310820,Bonfinopolis de Minas,5778
+310825,Bonito de Minas,9947
+310830,Borda da Mata,17523
+310840,Botelhos,14893
+310850,Botumirim,6447
+310870,Bras Pires,4567
+310855,Brasilandia de Minas,14642
+310860,Brasilia de Minas,31356
+310880,Braunas,4973
+310890,Brazopolis,14585
+310900,Brumadinho,35085
+310910,Bueno Brandao,10886
+310920,Buenopolis,10281
+310925,Bugre,3999
+310930,Buritis,23091
+310940,Buritizeiro,27076
+310945,Cabeceira Grande,6534
+310950,Cabo Verde,13838
+310960,Cachoeira da Prata,3635
+310970,Cachoeira de Minas,11107
+310270,Cachoeira de Pajeu,9025
+310980,Cachoeira Dourada,2536
+310990,Caetanopolis,10467
+311000,Caete,41423
+311010,Caiana,5059
+311020,Cajuri,4026
+311030,Caldas,13764
+311040,Camacho,3097
+311050,Camanducaia,21162
+311060,Cambui,27020
+311070,Cambuquira,12612
+311080,Campanario,3586
+311090,Campanha,15635
+311100,Campestre,20707
+311110,Campina Verde,19358
+311115,Campo Azul,3701
+311120,Campo Belo,51900
+311130,Campo do Meio,11483
+311140,Campo Florido,7103
+311150,Campos Altos,14416
+311160,Campos Gerais,27760
+311190,Cana Verde,5578
+311170,Canaa,4604
+311180,Canapolis,11476
+311200,Candeias,14616
+311205,Cantagalo,4249
+311210,Caparao,5241
+311220,Capela Nova,4724
+311230,Capelinha,35368
+311240,Capetinga,7039
+311250,Capim Branco,9030
+311260,Capinopolis,15424
+311265,Capitao Andrade,5019
+311270,Capitao Eneas,14372
+311280,Capitolio,8251
+311290,Caputira,9060
+311300,Carai,22549
+311310,Caranaiba,3260
+311320,Carandai,23692
+311330,Carangola,32353
+311340,Caratinga,86364
+311350,Carbonita,9176
+311360,Careacu,6372
+311370,Carlos Chagas,19779
+311380,Carmesia,2477
+311390,Carmo da Cachoeira,11872
+311400,Carmo da Mata,11007
+311410,Carmo de Minas,13932
+311420,Carmo do Cajuru,20444
+311430,Carmo do Paranaiba,29777
+311440,Carmo do Rio Claro,20531
+311450,Carmopolis de Minas,17456
+311455,Carneirinho,9556
+311460,Carrancas,3958
+311470,Carvalhopolis,3380
+311480,Carvalhos,4530
+311490,Casa Grande,2241
+311500,Cascalho Rico,2893
+311510,Cassia,17433
+311530,Cataguases,70630
+311535,Catas Altas,4938
+311540,Catas Altas da Noruega,3489
+311545,Catuji,6614
+311547,Catuti,5067
+311550,Caxambu,21641
+311560,Cedro do Abaete,1199
+311570,Central de Minas,6806
+311580,Centralina,10271
+311590,Chacara,2856
+311600,Chale,5643
+311610,Chapada do Norte,15184
+311615,Chapada Gaucha,11339
+311620,Chiador,2759
+311630,Cipotanea,6578
+311640,Claraval,4588
+311650,Claro dos Pocoes,7712
+311660,Claudio,26262
+311670,Coimbra,7135
+311680,Coluna,8972
+311690,Comendador Gomes,2992
+311700,Comercinho,8011
+311710,Conceicao da Aparecida,9888
+311520,Conceicao da Barra de Minas,3944
+311730,Conceicao das Alagoas,23932
+311720,Conceicao das Pedras,2755
+311740,Conceicao de Ipanema,4468
+311750,Conceicao do Mato Dentro,17798
+311760,Conceicao do Para,5214
+311770,Conceicao do Rio Verde,13052
+311780,Conceicao dos Ouros,10609
+311783,Conego Marinho,7196
+311787,Confins,6077
+311790,Congonhal,10732
+311800,Congonhas,49616
+311810,Congonhas do Norte,4950
+311820,Conquista,6591
+311830,Conselheiro Lafaiete,118578
+311840,Conselheiro Pena,22319
+311850,Consolacao,1732
+311860,Contagem,613815
+311870,Coqueiral,9241
+311880,Coracao de Jesus,26079
+311890,Cordisburgo,8689
+311900,Cordislandia,3447
+311910,Corinto,23819
+311920,Coroaci,10190
+311930,Coromandel,27562
+311940,Coronel Fabriciano,104637
+311950,Coronel Murta,9115
+311960,Coronel Pacheco,2996
+311970,Coronel Xavier Chaves,3319
+311980,Corrego Danta,3349
+311990,Corrego do Bom Jesus,3716
+311995,Corrego Fundo,5883
+312000,Corrego Novo,3050
+312010,Couto de Magalhaes de Minas,4234
+312015,Crisolita,6161
+312020,Cristais,11553
+312030,Cristalia,5787
+312040,Cristiano Otoni,5023
+312050,Cristina,10191
+312060,Crucilandia,4800
+312070,Cruzeiro da Fortaleza,3967
+312080,Cruzilia,14716
+312083,Cuparaque,4728
+312087,Curral de Dentro,7055
+312090,Curvelo,75014
+312100,Datas,5237
+312110,Delfim Moreira,7962
+312120,Delfinopolis,6869
+312125,Delta,8546
+312130,Descoberto,4804
+312140,Desterro de Entre Rios,7032
+312150,Desterro do Melo,2986
+312160,Diamantina,46125
+312170,Diogo de Vasconcelos,3830
+312180,Dionisio,8520
+312190,Divinesia,3309
+312200,Divino,19241
+312210,Divino das Laranjeiras,4933
+312220,Divinolandia de Minas,7114
+312230,Divinopolis,217404
+312235,Divisa Alegre,6046
+312240,Divisa Nova,5797
+312245,Divisopolis,9351
+312247,Dom Bosco,3778
+312250,Dom Cavati,5170
+312260,Dom Joaquim,4511
+312270,Dom Silverio,5192
+312280,Dom Vicoso,2988
+312290,Dona Eusebia,6098
+312300,Dores de Campos,9443
+312310,Dores de Guanhaes,5200
+312320,Dores do Indaia,13686
+312330,Dores do Turvo,4412
+312340,Doresopolis,1454
+312350,Douradoquara,1850
+312352,Durande,7487
+312360,Eloi Mendes,25715
+312370,Engenheiro Caldas,10421
+312380,Engenheiro Navarro,7128
+312385,Entre Folhas,5194
+312390,Entre Rios de Minas,14413
+312400,Ervalia,18087
+312410,Esmeraldas,62262
+312420,Espera Feliz,23208
+312430,Espinosa,31134
+312440,Espirito Santo do Dourado,4470
+312450,Estiva,10918
+312460,Estrela Dalva,2440
+312470,Estrela do Indaia,3504
+312480,Estrela do Sul,7532
+312490,Eugenopolis,10657
+312500,Ewbank da Camara,3775
+312510,Extrema,30016
+312520,Fama,2350
+312530,Faria Lemos,3342
+312540,Felicio dos Santos,5054
+312560,Felisburgo,6974
+312570,Felixlandia,14323
+312580,Fernandes Tourinho,3101
+312590,Ferros,10612
+312595,Fervedouro,10452
+312600,Florestal,6744
+312610,Formiga,65464
+312620,Formoso,8427
+312630,Fortaleza de Minas,4150
+312640,Fortuna de Minas,2746
+312650,Francisco Badaro,10239
+312660,Francisco Dumont,4920
+312670,Francisco Sa,25116
+312675,Franciscopolis,5706
+312680,Frei Gaspar,5865
+312690,Frei Inocencio,9033
+312695,Frei Lagonegro,3350
+312700,Fronteira,14799
+312705,Fronteira dos Vales,4655
+312707,Fruta de Leite,5814
+312710,Frutal,54511
+312720,Funilandia,3942
+312730,Galileia,6908
+312733,Gameleiras,5121
+312735,Glaucilandia,2992
+312737,Goiabeira,3105
+312738,Goiana,3710
+312740,Goncalves,4235
+312750,Gonzaga,5953
+312760,Gouveia,11680
+312770,Governador Valadares,266190
+312780,Grao Mogol,15145
+312790,Grupiara,1373
+312800,Guanhaes,31781
+312810,Guape,13911
+312820,Guaraciaba,10218
+312825,Guaraciama,4756
+312830,Guaranesia,18727
+312840,Guarani,8702
+312850,Guarara,3894
+312860,Guarda-Mor,6552
+312870,Guaxupe,49792
+312880,Guidoval,7164
+312890,Guimarania,7399
+312900,Guiricema,8624
+312910,Gurinhata,6025
+312920,Heliodora,6192
+312930,Iapu,10406
+312940,Ibertioga,5021
+312950,Ibia,23547
+312960,Ibiai,7928
+312965,Ibiracatu,6098
+312970,Ibiraci,12470
+312980,Ibirite,162867
+312990,Ibitiura de Minas,3395
+313000,Ibituruna,2883
+313005,Icarai de Minas,10963
+313010,Igarape,36363
+313020,Igaratinga,9553
+313030,Iguatama,7993
+313040,Ijaci,5980
+313050,Ilicinea,11633
+313055,Imbe de Minas,6502
+313060,Inconfidentes,6973
+313065,Indaiabira,7316
+313070,Indianopolis,6312
+313080,Ingai,2650
+313090,Inhapim,24204
+313100,Inhauma,5846
+313110,Inimutaba,7034
+313115,Ipaba,17037
+313120,Ipanema,18455
+313130,Ipatinga,243541
+313140,Ipiacu,4120
+313150,Ipuiuna,9607
+313160,Irai de Minas,6553
+313170,Itabira,111514
+313180,Itabirinha,10826
+313190,Itabirito,46589
+313200,Itacambira,5053
+313210,Itacarambi,17761
+313220,Itaguara,12534
+313230,Itaipe,11957
+313240,Itajuba,91643
+313250,Itamarandiba,32595
+313260,Itamarati de Minas,4123
+313270,Itambacuri,22831
+313280,Itambe do Mato Dentro,2238
+313290,Itamogi,10293
+313300,Itamonte,14276
+313310,Itanhandu,14366
+313320,Itanhomi,11899
+313330,Itaobim,20961
+313340,Itapagipe,13932
+313350,Itapecerica,21399
+313360,Itapeva,8861
+313370,Itatiaiucu,10142
+313375,Itau de Minas,15135
+313380,Itauna,86762
+313390,Itaverava,5711
+313400,Itinga,14485
+313410,Itueta,5859
+313420,Ituiutaba,98392
+313430,Itumirim,6101
+313440,Iturama,35308
+313450,Itutinga,3879
+313460,Jaboticatubas,17679
+313470,Jacinto,12142
+313480,Jacui,7520
+313490,Jacutinga,23341
+313500,Jaguaracu,3011
+313505,Jaiba,34539
+313507,Jampruca,5121
+313510,Janauba,67581
+313520,Januaria,65744
+313530,Japaraiba,4010
+313535,Japonvar,8331
+313540,Jeceaba,5288
+313545,Jenipapo de Minas,7211
+313550,Jequeri,12726
+313560,Jequitai,7893
+313570,Jequitiba,5154
+313580,Jequitinhonha,24317
+313590,Jesuania,4760
+313600,Joaima,15000
+313610,Joanesia,5246
+313620,Joao Monlevade,74655
+313630,Joao Pinheiro,45848
+313640,Joaquim Felicio,4371
+313650,Jordania,10394
+313652,Jose Goncalves de Minas,4532
+313655,Jose Raydan,4487
+313657,Josenopolis,4614
+313665,Juatuba,23080
+313670,Juiz de Fora,525225
+313680,Juramento,4146
+313690,Juruaia,9474
+313695,Juvenilia,5697
+313700,Ladainha,17170
+313710,Lagamar,7584
+313720,Lagoa da Prata,47076
+313730,Lagoa dos Patos,4191
+313740,Lagoa Dourada,12373
+313750,Lagoa Formosa,17293
+313753,Lagoa Grande,8786
+313760,Lagoa Santa,54732
+313770,Lajinha,19622
+313780,Lambari,19752
+313790,Lamim,3432
+313800,Laranjal,6517
+313810,Lassance,6474
+313820,Lavras,94228
+313830,Leandro Ferreira,3202
+313835,Leme do Prado,4815
+313840,Leopoldina,51286
+313850,Liberdade,5279
+313860,Lima Duarte,16216
+313862,Limeira do Oeste,6999
+313865,Lontra,8506
+313867,Luisburgo,6225
+313868,Luislandia,6443
+313870,Luminarias,5413
+313880,Luz,17585
+313890,Machacalis,6985
+313900,Machado,39264
+313910,Madre de Deus de Minas,4930
+313920,Malacacheta,18705
+313925,Mamonas,6349
+313930,Manga,19489
+313940,Manhuacu,81455
+313950,Manhumirim,21587
+313960,Mantena,27148
+313980,Mar de Espanha,11928
+313970,Maravilhas,7304
+313990,Maria da Fe,14157
+314000,Mariana,55353
+314010,Marilac,4189
+314015,Mario Campos,13594
+314020,Maripa de Minas,2818
+314030,Marlieria,4008
+314040,Marmelopolis,2919
+314050,Martinho Campos,12731
+314053,Martins Soares,7398
+314055,Mata Verde,7994
+314060,Materlandia,4558
+314070,Mateus Leme,28417
+317150,Mathias Lobato,3329
+314080,Matias Barbosa,13603
+314085,Matias Cardoso,10188
+314090,Matipo,17843
+314100,Mato Verde,12609
+314110,Matozinhos,34624
+314120,Matutina,3750
+314130,Medeiros,3506
+314140,Medina,20934
+314150,Mendes Pimentel,6338
+314160,Merces,10415
+314170,Mesquita,5963
+314180,Minas Novas,30852
+314190,Minduri,3841
+314200,Mirabela,13116
+314210,Miradouro,10324
+314220,Mirai,14009
+314225,Miravania,4604
+314230,Moeda,4723
+314240,Moema,7106
+314250,Monjolos,2327
+314260,Monsenhor Paulo,8244
+314270,Montalvania,15631
+314280,Monte Alegre de Minas,19863
+314290,Monte Azul,21717
+314300,Monte Belo,13049
+314310,Monte Carmelo,46055
+314315,Monte Formoso,4693
+314320,Monte Santo de Minas,21238
+314340,Monte Siao,21658
+314330,Montes Claros,370216
+314345,Montezuma,7599
+314350,Morada Nova de Minas,8353
+314360,Morro da Garca,2615
+314370,Morro do Pilar,3349
+314380,Munhoz,6197
+314390,Muriae,102074
+314400,Mutum,26657
+314410,Muzambinho,20406
+314420,Nacip Raydan,3159
+314430,Nanuque,40716
+314435,Naque,6453
+314437,Natalandia,3279
+314440,Natercia,4661
+314450,Nazareno,8062
+314460,Nepomuceno,25871
+314465,Ninheira,9885
+314467,Nova Belem,3617
+314470,Nova Era,17494
+314480,Nova Lima,83507
+314490,Nova Modica,3744
+314500,Nova Ponte,13314
+314505,Nova Porteirinha,7400
+314510,Nova Resende,15599
+314520,Nova Serrana,79174
+313660,Nova Uniao,5575
+314530,Novo Cruzeiro,30767
+314535,Novo Oriente de Minas,10395
+314537,Novorizonte,5017
+314540,Olaria,1927
+314545,Olhos-d'Agua,5416
+314550,Olimpio Noronha,2577
+314560,Oliveira,39801
+314570,Oliveira Fortes,2120
+314580,Onca de Pitangui,3066
+314585,Oratorios,4514
+314587,Orizania,7409
+314590,Ouro Branco,36006
+314600,Ouro Fino,31893
+314610,Ouro Preto,70886
+314620,Ouro Verde de Minas,5985
+314625,Padre Carvalho,5926
+314630,Padre Paraiso,19057
+314655,Pai Pedro,5950
+314640,Paineiras,4592
+314650,Pains,8047
+314660,Paiva,1549
+314670,Palma,6543
+314675,Palmopolis,6636
+314690,Papagaios,14433
+314710,Para de Minas,85908
+314700,Paracatu,86153
+314720,Paraguacu,20442
+314730,Paraisopolis,19664
+314740,Paraopeba,22893
+314760,Passa Quatro,15692
+314770,Passa Tempo,8155
+314780,Passa-Vinte,2067
+314750,Passabem,1739
+314790,Passos,107661
+314795,Patis,5642
+314800,Patos de Minas,140950
+314810,Patrocinio,83882
+314820,Patrocinio do Muriae,5352
+314830,Paula Candido,9307
+314840,Paulistas,4889
+314850,Pavao,8541
+314860,Pecanha,17272
+314870,Pedra Azul,23874
+314875,Pedra Bonita,6739
+314880,Pedra do Anta,3361
+314890,Pedra do Indaia,3885
+314900,Pedra Dourada,2247
+314910,Pedralva,11386
+314915,Pedras de Maria da Cruz,10534
+314920,Pedrinopolis,3510
+314930,Pedro Leopoldo,59670
+314940,Pedro Teixeira,1785
+314950,Pequeri,3188
+314960,Pequi,4131
+314970,Perdigao,9396
+314980,Perdizes,14713
+314990,Perdoes,20292
+314995,Periquito,6975
+315000,Pescador,4142
+315010,Piau,2816
+315015,Piedade de Caratinga,7377
+315020,Piedade de Ponte Nova,4067
+315030,Piedade do Rio Grande,4656
+315040,Piedade dos Gerais,4696
+315050,Pimenta,8299
+315053,Pingo-d'Agua,4511
+315057,Pintopolis,7251
+315060,Piracema,6391
+315070,Pirajuba,4946
+315080,Piranga,17266
+315090,Pirangucu,5254
+315100,Piranguinho,8110
+315110,Pirapetinga,10414
+315120,Pirapora,53832
+315130,Pirauba,10821
+315140,Pitangui,25771
+315150,Piumhi,32352
+315160,Planura,10700
+315170,Poco Fundo,16082
+315180,Pocos de Caldas,154974
+315190,Pocrane,8856
+315200,Pompeu,29561
+315210,Ponte Nova,57706
+315213,Ponto Chique,4014
+315217,Ponto dos Volantes,11469
+315220,Porteirinha,37588
+315230,Porto Firme,10560
+315240,Pote,15801
+315250,Pouso Alegre,134215
+315260,Pouso Alto,6145
+315270,Prados,8495
+315280,Prata,26139
+315290,Pratapolis,8746
+315300,Pratinha,3323
+315310,Presidente Bernardes,5491
+315320,Presidente Juscelino,3846
+315330,Presidente Kubitschek,2961
+315340,Presidente Olegario,18698
+315360,Prudente de Morais,9776
+315370,Quartel Geral,3346
+315380,Queluzito,1872
+315390,Raposos,15502
+315400,Raul Soares,23748
+315410,Recreio,10316
+315415,Reduto,6667
+315420,Resende Costa,11001
+315430,Resplendor,17107
+315440,Ressaquinha,4735
+315445,Riachinho,8013
+315450,Riacho dos Machados,9361
+315460,Ribeirao das Neves,303029
+315470,Ribeirao Vermelho,3857
+315480,Rio Acima,9307
+315490,Rio Casca,14042
+315510,Rio do Prado,5191
+315500,Rio Doce,2488
+315520,Rio Espera,5939
+315530,Rio Manso,5372
+315540,Rio Novo,8737
+315550,Rio Paranaiba,11939
+315560,Rio Pardo de Minas,29381
+315570,Rio Piracicaba,14151
+315580,Rio Pomba,17224
+315590,Rio Preto,5315
+315600,Rio Vermelho,13455
+315610,Ritapolis,4850
+315620,Rochedo de Minas,2148
+315630,Rodeiro,7093
+315640,Romaria,3575
+315645,Rosario da Limeira,4305
+315650,Rubelita,7406
+315660,Rubim,9958
+315670,Sabara,127897
+315680,Sabinopolis,15619
+315690,Sacramento,24283
+315700,Salinas,39550
+315710,Salto da Divisa,6872
+315720,Santa Barbara,28435
+315725,Santa Barbara do Leste,7754
+315727,Santa Barbara do Monte Verde,2852
+315730,Santa Barbara do Tugurio,4532
+315733,Santa Cruz de Minas,7990
+315737,Santa Cruz de Salinas,4336
+315740,Santa Cruz do Escalvado,4934
+315750,Santa Efigenia de Minas,4552
+315760,Santa Fe de Minas,3935
+315765,Santa Helena de Minas,6101
+315770,Santa Juliana,11830
+315780,Santa Luzia,205666
+315790,Santa Margarida,15207
+315800,Santa Maria de Itabira,10584
+315810,Santa Maria do Salto,5261
+315820,Santa Maria do Suacui,14402
+315920,Santa Rita de Caldas,8990
+315940,Santa Rita de Ibitipoca,3544
+315930,Santa Rita de Jacutinga,4960
+315935,Santa Rita de Minas,6661
+315950,Santa Rita do Itueto,5643
+315960,Santa Rita do Sapucai,38734
+315970,Santa Rosa da Serra,3241
+315980,Santa Vitoria,18406
+315830,Santana da Vargem,7188
+315840,Santana de Cataguases,3662
+315850,Santana de Pirapama,7918
+315860,Santana do Deserto,3873
+315870,Santana do Garambeu,2273
+315880,Santana do Jacare,4638
+315890,Santana do Manhuacu,8579
+315895,Santana do Paraiso,28641
+315900,Santana do Riacho,4066
+315910,Santana dos Montes,3804
+315990,Santo Antonio do Amparo,17532
+316000,Santo Antonio do Aventureiro,3542
+316010,Santo Antonio do Grama,4041
+316020,Santo Antonio do Itambe,4067
+316030,Santo Antonio do Jacinto,11720
+316040,Santo Antonio do Monte,26353
+316045,Santo Antonio do Retiro,7001
+316050,Santo Antonio do Rio Abaixo,1771
+316060,Santo Hipolito,3201
+316070,Santos Dumont,46208
+316080,Sao Bento Abade,4704
+316090,Sao Bras do Suacui,3548
+316095,Sao Domingos das Dores,5441
+316100,Sao Domingos do Prata,17314
+316105,Sao Felix de Minas,3372
+316110,Sao Francisco,54180
+316120,Sao Francisco de Paula,6476
+316130,Sao Francisco de Sales,5852
+316140,Sao Francisco do Gloria,5100
+316150,Sao Geraldo,10648
+316160,Sao Geraldo da Piedade,4295
+316165,Sao Geraldo do Baixio,3580
+316170,Sao Goncalo do Abaete,6390
+316180,Sao Goncalo do Para,10765
+316190,Sao Goncalo do Rio Abaixo,9976
+312550,Sao Goncalo do Rio Preto,3071
+316200,Sao Goncalo do Sapucai,24148
+316210,Sao Gotardo,32452
+316220,Sao Joao Batista do Gloria,6981
+316225,Sao Joao da Lagoa,4695
+316230,Sao Joao da Mata,2728
+316240,Sao Joao da Ponte,25257
+316245,Sao Joao das Missoes,11940
+316250,Sao Joao del Rei,85353
+316255,Sao Joao do Manhuacu,10476
+316257,Sao Joao do Manteninha,5307
+316260,Sao Joao do Oriente,7781
+316265,Sao Joao do Pacui,4120
+316270,Sao Joao do Paraiso,22517
+316280,Sao Joao Evangelista,15558
+316290,Sao Joao Nepomuceno,25249
+316292,Sao Joaquim de Bicas,26653
+316294,Sao Jose da Barra,6888
+316295,Sao Jose da Lapa,20524
+316300,Sao Jose da Safira,4103
+316310,Sao Jose da Varginha,4345
+316320,Sao Jose do Alegre,4026
+316330,Sao Jose do Divino,3830
+316340,Sao Jose do Goiabal,5580
+316350,Sao Jose do Jacuri,6518
+316360,Sao Jose do Mantimento,2625
+316370,Sao Lourenco,42372
+316380,Sao Miguel do Anta,6778
+316390,Sao Pedro da Uniao,4953
+316410,Sao Pedro do Suacui,5493
+316400,Sao Pedro dos Ferros,8223
+316420,Sao Romao,10653
+316430,Sao Roque de Minas,6741
+316440,Sao Sebastiao da Bela Vista,5045
+316443,Sao Sebastiao da Vargem Alegre,2832
+316447,Sao Sebastiao do Anta,5884
+316450,Sao Sebastiao do Maranhao,10503
+316460,Sao Sebastiao do Oeste,5980
+316470,Sao Sebastiao do Paraiso,65984
+316480,Sao Sebastiao do Rio Preto,1588
+316490,Sao Sebastiao do Rio Verde,2131
+316520,Sao Thome das Letras,6724
+316500,Sao Tiago,10609
+316510,Sao Tomas de Aquino,7062
+316530,Sao Vicente de Minas,7136
+316540,Sapucai-Mirim,6360
+316550,Sardoa,5718
+316553,Sarzedo,27104
+316556,Sem-Peixe,2799
+316557,Senador Amaral,5233
+316560,Senador Cortes,1987
+316570,Senador Firmino,7326
+316580,Senador Jose Bento,1793
+316590,Senador Modestino Goncalves,4481
+316600,Senhora de Oliveira,5690
+316610,Senhora do Porto,3494
+316620,Senhora dos Remedios,10222
+316630,Sericita,7149
+316640,Seritinga,1797
+316650,Serra Azul de Minas,4224
+316660,Serra da Saudade,807
+316680,Serra do Salitre,10725
+316670,Serra dos Aimores,8447
+316690,Serrania,7548
+316695,Serranopolis de Minas,4484
+316700,Serranos,1984
+316710,Serro,20809
+316720,Sete Lagoas,218574
+316555,Setubinha,11126
+316730,Silveirania,2201
+316740,Silvianopolis,6053
+316750,Simao Pereira,2546
+316760,Simonesia,18513
+316770,Sobralia,5762
+316780,Soledade de Minas,5755
+316790,Tabuleiro,4005
+316800,Taiobeiras,31457
+316805,Taparuba,3124
+316810,Tapira,4231
+316820,Tapirai,1869
+316830,Taquaracu de Minas,3840
+316840,Tarumirim,14264
+316850,Teixeiras,11387
+316860,Teofilo Otoni,135549
+316870,Timoteo,82718
+316880,Tiradentes,7143
+316890,Tiros,6806
+316900,Tocantins,15947
+316905,Tocos do Moji,3970
+316910,Toledo,5846
+316920,Tombos,9218
+316930,Tres Coracoes,73894
+316935,Tres Marias,29036
+316940,Tres Pontas,54289
+316950,Tumiritinga,6363
+316960,Tupaciguara,24350
+316970,Turmalina,18383
+316980,Turvolandia,4721
+316990,Uba,104004
+317000,Ubai,11818
+317005,Ubaporanga,12095
+317010,Uberaba,302623
+317020,Uberlandia,619536
+317030,Umburatiba,2680
+317040,Unai,78703
+317043,Uniao de Minas,4385
+317047,Uruana de Minas,3231
+317050,Urucania,10279
+317052,Urucuia,14207
+317057,Vargem Alegre,6449
+317060,Vargem Bonita,2156
+317065,Vargem Grande do Rio Pardo,4775
+317070,Varginha,125208
+317075,Varjao de Minas,6259
+317080,Varzea da Palma,36439
+317090,Varzelandia,19108
+317100,Vazante,19844
+317103,Verdelandia,8523
+317107,Veredinha,5569
+317110,Verissimo,3575
+317115,Vermelho Novo,4707
+317120,Vespasiano,108771
+317130,Vicosa,73333
+317140,Vieiras,3698
+317160,Virgem da Lapa,13611
+317170,Virginia,8612
+317180,Virginopolis,10534
+317190,Virgolandia,5590
+317200,Visconde do Rio Branco,38749
+317210,Volta Grande,5093
+317220,Wenceslau Braz,2547
