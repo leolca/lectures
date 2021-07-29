@@ -160,10 +160,11 @@ Formant settings: 5500, 5, 0.025, 30, 1
 - selecionar o ruído de excitação juntamente com o objeto LPC e realizar a filtragem
 - sintetizar o seguinte tom complexo: uma combinação de senoides harmonicamente relacionadas com f0=140Hz
 - filtrar o tom complexo pelo filtro LPC
- 
+
+- *extract the source from an existing speech sound*
+- *to get at the source signal, however, you need the raw LPC object: you select it together with the resampled Sound, and apply inverse filtering*
+
 > Praat History
-# extract the source from an existing speech sound
-# To get at the source signal, however, you need the raw LPC object: you select it together with the resampled Sound, and apply inverse filtering
 Read from file: "/tmp/open_front_unrounded.mp3"
 View & Edit
 Extract selected sound (time from 0)
