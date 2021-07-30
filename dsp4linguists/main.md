@@ -151,8 +151,7 @@ x = x./max(abs(x));
 player = audioplayer (x, fs, 8);
 play (player);
 for m=0.8:-0.25:0.05,
-  pause(3);
-  xc = sign(x).*min(abs(x),m)./m;
+  pause(3)
   player = audioplayer (xc, fs, 8);
   plot(xc);
   play (player);
@@ -233,6 +232,9 @@ xa = x(start:start+wl);
 
 gconv(xa,flipud(xa),[],0)
 
+
+###
+vlc imgs/autocorrelation.mp4
 -->
 
 ---
