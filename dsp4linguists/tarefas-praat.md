@@ -8,6 +8,7 @@
 
 <details>
   <summary>Praat History</summary>
+
 ```Praat
 Create Sound as pure tone: "tone", 1, 0, 1, 44100, 440, 0.2, 0.01, 0.01
 View & Edit
@@ -32,6 +33,7 @@ View & Edit
 
 <details>
   <summary>Praat History</summary>
+
 ```Praat
 Create Sound as pure tone: "tone", 1, 0, 2, 44100, 440, 0.2, 0.01, 0.01
 View & Edit
@@ -59,6 +61,7 @@ Spectrogram settings: 0, 1000, 0.1, 20
 
 <details>
   <summary>Praat History</summary>
+
 ```Praat
 Create Sound from formula: "complexsound", 1, 0, 2, 44100, "1/4 * sin(2*pi*880*x) + 1/2 * sin(2*pi*1320*x) + 1/4 * sin(2*pi*1760*x)"
 Play
@@ -89,6 +92,7 @@ View & Edit
 
 <details>
   <summary>Praat History</summary>
+
 ```Praat
 Create Sound as pure tone: "tone", 1, 0, 2, 44100, 4410, 0.2, 0.01, 0.01
 Play
@@ -135,6 +139,7 @@ Zoom: 0, 2
 
 <details>
   <summary>Praat History</summary>
+
 ```Praat
 Read from file: "/tmp/open_front_unrounded.mp3"
 Play
@@ -185,6 +190,7 @@ Formant settings: 5500, 5, 0.025, 30, 1
 
 <details>
   <summary>Praat History</summary>
+
 ```Praat
 Read from file: "/tmp/open_front_unrounded.mp3"
 View & Edit
@@ -245,6 +251,7 @@ New Praat script
 
 <details>
   <summary>Praat History</summary>
+
 ```Praat
 Read from file: "/tmp/open_front_unrounded.mp3"
 View & Edit
