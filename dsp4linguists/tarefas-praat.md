@@ -1,4 +1,4 @@
-# tom puro 440Hz
+# 1. tom puro 440Hz
 - gravar tom puro 440Hz com duração de 2s
 - visualizar e escutar
 - multiplicar por 15
@@ -22,7 +22,7 @@ View & Edit
 
 ---
 
-# tom puro 440Hz
+# 2. tom puro 440Hz
 - gravar tom puro 440Hz com duração de 2s
 - escutar
 - visualizar o sinal no tempo e tempo-frequência (espectrograma)
@@ -47,7 +47,7 @@ Spectrogram settings: 0, 1000, 0.1, 20
 
 ---
 
-# gravar um som complexo
+# 3. gravar um som complexo
 
 - gravar o seguinte som complexo: x(t) = 1/4 sin(2 pi 880 t) + 1/2 sin(2 pi 1320 t) + 1/4 sin(2 pi 1760 t)
 - escutar
@@ -81,7 +81,7 @@ View & Edit
 
 ---
 
-# reamostragem
+# 4. reamostragem
 
 - gravar uma senoide de 4410Hz utilizando fs=44.1kHz
 - visualizar
@@ -121,7 +121,7 @@ Zoom: 0, 2
 
 ---
 
-# vogal [a]
+# 5. vogal [a]
 
 - download do arquivo: https://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAsounds/open_front_unrounded.mp3
 - abrir no Praat e escutar
@@ -175,7 +175,7 @@ Formant settings: 5500, 5, 0.025, 30, 1
 
 ---
 
-# vogal [a]
+# 6. vogal [a]
 
 - repetir os passos, mas selecionar apenas o trecho de com sinal (selecionar > File > Extract selected sound)
 - resample 8820Hz
@@ -184,9 +184,11 @@ Formant settings: 5500, 5, 0.025, 30, 1
 - selecionar o ruído de excitação juntamente com o objeto LPC e realizar a filtragem
 - sintetizar o seguinte tom complexo: uma combinação de senoides harmonicamente relacionadas com f0=140Hz
 - filtrar o tom complexo pelo filtro LPC
-
+- para extrair a fonte de uma sinal de voz existente, deverá do objeto LPC: selecione-o juntamente com o sinal de voz e aplique a filtragem inversa
+<!-- 
 - *extract the source from an existing speech sound*
 - *to get at the source signal, however, you need the raw LPC object: you select it together with the resampled Sound, and apply inverse filtering*
+-->
 
 <details>
   <summary>Praat History</summary>
@@ -242,7 +244,7 @@ New Praat script
 
 ---
 
-# utilizar o resíduo de uma vogal e o filtro LPC de outra
+# 7. utilizar o resíduo de uma vogal e o filtro LPC de outra
 
 - baixar o [i]: https://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAsounds/close_front_unrounded.mp3
 - realizar os mesmo passos anteriores com a vogal [a] e a vogal [i]

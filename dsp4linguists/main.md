@@ -265,9 +265,9 @@ play /home/leoca/ee/ufsj/aulas/audioevideo/lpc/synthesized-jose.ogg
 play /home/leoca/ee/ufsj/aulas/audioevideo/lpc/synthesized-daisy.ogg
 play /home/leoca/ee/ufsj/aulas/audioevideo/lpc/synthesized-liberdade.ogg
 
-play -v 0.1 snds/ah.ogg 
-play -v 0.1 snds/pulsetrain.ogg 
-play -v 0.1 snds/ah_r.ogg 
+play -v 0.5 snds/ah.ogg 
+play -v 0.5 snds/pulsetrain.ogg 
+play -v 0.5 snds/ah_r.ogg 
 
 wget -q https://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAsounds/open_front_unrounded.mp3 -O /tmp/ah.mp3
 ffmpeg -i /tmp/ah.mp3 /tmp/ah.ogg
@@ -298,7 +298,8 @@ endfunction
 [r,l] = xcorr(x(start:start+wl));
 [pks,locs] = findpeaks(r(wl:end));
 
-[_,id] = sort(pks,"descend");
+[_,id] = smrt;
+  xc = sign(x).*min(abs(x),m)./m;(pks,"descend");
 T0 = locs(id(2))/fs;
 f0 = 1/T0;
 
@@ -380,6 +381,9 @@ specgram(x, 2^nextpow2(window), Fs, window, window-step);
 
 ![Shepard Tone](imgs/shepard.png){ height=80% }
 
+<!--
+https://www.youtube.com/watch?v=u9VMfdG873E
+-->
 ---
 
 ## Downsampling
@@ -613,7 +617,7 @@ loud noise. -->
 
 ---
 
-# Compresstion error
+# Compression error
 
 ![I Siegert, AF Lotz, LL Duong, A Wendemuth, Measuring the impact of audio compression on the spectral quality of speech data, 2016](imgs/audiocodecs_compressionerror.png)
 
