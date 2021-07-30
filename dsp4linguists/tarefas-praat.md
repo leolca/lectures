@@ -6,7 +6,9 @@
 - abrir o arquivo salvo
 - visualizar e escutar
 
-> Praat History
+<details>
+  <summary>Praat History</summary>
+```Praat
 Create Sound as pure tone: "tone", 1, 0, 1, 44100, 440, 0.2, 0.01, 0.01
 View & Edit
 Zoom: 0.1, 0.125
@@ -14,6 +16,8 @@ Multiply: 15
 Save as WAV file: "/tmp/tone.wav"
 Read from file: "/tmp/tone.wav"
 View & Edit
+```
+</details>
 
 ---
 
@@ -26,7 +30,9 @@ View & Edit
 - alterar a extensão dinâmica para 20dB
 - alterar a largura da janela do espectrograma de 50ms e depois 100ms (default 5ms)
 
-> Praat History
+<details>
+  <summary>Praat History</summary>
+```Praat
 Create Sound as pure tone: "tone", 1, 0, 2, 44100, 440, 0.2, 0.01, 0.01
 View & Edit
 Zoom: 0.1, 0.125
@@ -34,7 +40,8 @@ Spectrogram settings: 0, 1000, 0.005, 70
 Spectrogram settings: 0, 1000, 0.005, 20
 Spectrogram settings: 0, 1000, 0.05, 20
 Spectrogram settings: 0, 1000, 0.1, 20
-
+```
+</details>
 
 ---
 
@@ -50,7 +57,9 @@ Spectrogram settings: 0, 1000, 0.1, 20
 - aplicar filtro passa-faixa com f1=780, f2=980, w=100
 - escutar e visualizar
 
-> Praat History
+<details>
+  <summary>Praat History</summary>
+```Praat
 Create Sound from formula: "complexsound", 1, 0, 2, 44100, "1/4 * sin(2*pi*880*x) + 1/2 * sin(2*pi*1320*x) + 1/4 * sin(2*pi*1760*x)"
 Play
 View & Edit
@@ -63,6 +72,8 @@ Spectrogram settings: 0, 2000, 0.1, 20
 Filter (pass Hann band): 780, 980, 100
 Play
 View & Edit
+```
+</details>
 
 
 ---
@@ -76,7 +87,9 @@ View & Edit
 - reamostrar usando fs=8820Hz
 - escutar e visualizar
 
-> Praat History
+<details>
+  <summary>Praat History</summary>
+```Praat
 Create Sound as pure tone: "tone", 1, 0, 2, 44100, 4410, 0.2, 0.01, 0.01
 Play
 View & Edit
@@ -98,6 +111,8 @@ Spectrogram settings: 0, 5000, 0.005, 50
 Spectrogram settings: 0, 5000, 0.05, 20
 Play
 Zoom: 0, 2
+```
+</details>
 
 
 ---
@@ -118,7 +133,9 @@ Zoom: 0, 2
 - fazer novamente o LPC e visualizar
 - veja a trajetória dos formantes no espectrograma e compare os valores no tempo 0.322 com aquele do gráfico anterior
 
-> Praat History
+<details>
+  <summary>Praat History</summary>
+```Praat
 Read from file: "/tmp/open_front_unrounded.mp3"
 Play
 Info
@@ -147,6 +164,8 @@ Zoom: 0.192, 0.659
 Show formants
 Show pitch
 Formant settings: 5500, 5, 0.025, 30, 1
+```
+</details>
 
 
 ---
@@ -164,7 +183,9 @@ Formant settings: 5500, 5, 0.025, 30, 1
 - *extract the source from an existing speech sound*
 - *to get at the source signal, however, you need the raw LPC object: you select it together with the resampled Sound, and apply inverse filtering*
 
-> Praat History
+<details>
+  <summary>Praat History</summary>
+```Praat
 Read from file: "/tmp/open_front_unrounded.mp3"
 View & Edit
 Extract selected sound (time from 0)
@@ -209,6 +230,8 @@ Play
 View & Edit
 selectObject: "Sound untitled_8820"
 New Praat script
+```
+</details>
 
 
 ---
@@ -220,7 +243,9 @@ New Praat script
 - utilizar o resíduo obtido pela vogal [i] para excitar o filtro LPC obtido pela vogal [a] 
 - utilizar o resíduo obtido pela vogal [a] para excitar o filtro LPC obtido pela vogal [i]
 
-> Praat History
+<details>
+  <summary>Praat History</summary>
+```Praat
 Read from file: "/tmp/open_front_unrounded.mp3"
 View & Edit
 Extract selected sound (time from 0)
@@ -255,4 +280,6 @@ Filter: "no"
 Play
 Rename: "vowel__i__8820_ruido_excitacao_[a]"
 New Praat script
+```
+</details>
 
