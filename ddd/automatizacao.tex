@@ -96,6 +96,156 @@ Lista de alguns comandos uteis:
 \item[awk] linguagem para processamento de texto
 \end{description}
 
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-bash-simple-loop, caption={Criando um loop simples.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+#!/bin/bash
+for i in 1 2 3 4 5; do
+  echo "counter: $i"
+done
+
+for i in {1..10}; do  echo "counter: $i"; done
+
+for counter in $(seq 1 255); do echo "$counter"; done
+\end{lstlisting}
+
+\framebreak
+
+\begin{itemize}
+\item entrada padrão (\emph{stdin})
+\item saída padrão (\emph{stdout})
+\item saída de erro padrão (\emph{stderr})
+\item redirecionamentos e \emph{pipes}
+\item descritores de arquivos
+\end{itemize}
+
+\begin{lstlisting}[language=bash, label=lst-bash-stds, caption={Entrada e saída padrão.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+# envia uma msg para saída padrão
+echo hello
+
+# ler da entrada padrão e escreve na saída padrão (até encontrar EOF (ctrl+d))
+cat
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-pipe, caption={Pipes.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+# um pipe conecta a saída padrão de um comando com a entrada padrão do próximo
+echo "hello there" | sed "s/hello/hi/"
+
+echo "hello there" | sed "s/hello/hi/" | sed "s/there/robots/"
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-stderr, caption={Erros.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+cat arquivo 
+
+cat arquivo | sed 's/file/arquivo/'
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=bash, label=lst-bash-redirecionamento, caption={Redirecionamento.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+echo hello > arquivo
+cat arquivo
+
+echo hello again >> arquivo
+cat arquivo
+\end{lstlisting}
+
+\framebreak
+Descritor de arquivo (FD, \emph{file descriptor}) é um número inteiro que refere a uma fonte de entra/saída.
+Exemplos: 0 (\emph{stdin}), 1 (\emph{stdout}) e 2 (\emph{stderr}). Para redirecionar um descritor utizamos o operador \verb|>&|.
+\begin{lstlisting}[language=bash, label=lst-bash-descritores, caption={Descritores de arquivos.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+# redireciona o stdout para stderr
+echo "hello there" >&2
+# equivalente a fazer
+echo "hello there" 1>&2
+# onde explicitamos que o FD 1 (stdout) será redirecionado para FD 2 (stderr)
+
+# agora um exemplo redirecionando a saída do sterr em na saída stdout
+cat arquivo 2>&1 | sed 's/file/arquivo/'
+
+# redirecionando para arquivos de log (stdout para stdout.log e stderr para debug.log)
+python hello.py 1>stdout.log 2>debug.log
+
+# redirecionando stdout e stderr para um único arquivo de log
+python hello.py 1>all_output.log 2>&1
+
+# redirecionando um arquivo para a entrada padrão de um programa em python
+python3 hello.py < input.txt
+cat input.txt | python3 hello.py
+
+# redirecionando entrada e saída
+python3 hello.py < input.txt > output.txt
+\end{lstlisting}
+
+
+
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-bash-ping-loop, caption={Tempo de ping nas máquinas.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+for counter in {1..255}
+do 
+  ptime=$(ping -c 1 192.168.0.$counter | grep -oP "(?<=time=)([0-9].[0-9]+)")
+  echo -e "192.168.0.$counter\t${ptime:-0}"
+done
+\end{lstlisting}
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-bash-if, caption={if else em Bash.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+#!/bin/bash
+
+VAR=$1
+if [ -z "$VAR" ]
+then
+  echo -n "Enter a number: "
+  read VAR
+fi
+
+if [[ $VAR -gt 10 ]]
+then
+  echo "The variable is greater than 10."
+else
+  echo "The variable is equal or less than 10."
+fi
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-convert-mp3, caption={Converter todos WAVs em MP3.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+for file in $( ls *.wav ); do lame $file ${file%wav}mp3; done
+
+for file in $( ls *.wav ); do lame -m j -h --vbr-new -b 160 -s 44.1 $file -o ${file%wav}mp3; done
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, label=lst-bash-thumbnails, caption={Criar minuaturas de todas fotos.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+for img in $(ls *.jpg); do echo $img; convert $img -resize 75x75 ${img%%.jpg}_thumbnail.jpg; done
+\end{lstlisting}
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-bash-word-freq, caption={Listando as palavras por frequência de ocorrência.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+cat ulysses.txt | tr 'A-Z' 'a-z' | tr -c "a-z'" "\n" | sed '/^$/d' | sort | uniq -c | sort -k1nr -k2 > wordlist.txt
+
+cat ulysses.txt | tr 'A-Z' 'a-z' | tr -c "a-z'" "\n" | sed '/^$/d' | sort | uniq -c | sort -k1nr -k2 | tail -n 100 | pr -c5 -t -w80
+\end{lstlisting}
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-bash-misspelled, caption={Listando as palavras não encontradas no dicionário. Salvar no arquivo \texttt{misspelled.sh}.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+#!/bin/bash
+
+comm -13 <(cat /usr/share/dict/american-english | tr 'A-Z' 'a-z' | sort | uniq) <(cat "${1:-/dev/stdin}" | tr 'A-Z' 'a-z' | tr -c "a-z'" "\n" | sed '/^$/d' | sort | uniq)
+\end{lstlisting}
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-bash-misspelled2, caption={Listando as palavras de Ulysses não encontradas no dicionário.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+chmod +x misspelled.sh
+cat ulysses.txt | ./misspelled.sh 
+cat ulysses.txt | ./misspelled.sh | wc -l
+./misspelled.sh ulysses.txt | wc -l
+
+# listar palavras, removendo aquelas com apostrofe, buscar a frequencia de ocorrencia e ordenar
+./misspelled.sh ulysses.txt | grep -v "'" | while read word; do grep -P "\s$word$" wordlist.txt; done | sort -k1nr -k2
+\end{lstlisting}
 
 \framebreak
 
@@ -106,6 +256,9 @@ Lista de alguns comandos uteis:
 \vspace{2ex}
 
 \fullcite{robbins2016}
+\vspace{2ex}
+
+\fullcite{robbins_classic_2005}
 
 \end{frame}
 
