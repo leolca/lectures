@@ -1,36 +1,6 @@
-\section{Assinatura digital}
+\section{Criptografia e assinatura digital}
 
-\begin{frame}[allowframebreaks]
-\frametitle{Assinatura digital}
-Uma assinatura digital é utilizada para validar a autenticidade e integridade de uma mensagem.
-
-\vspace{3ex}
-A base para assinaturas digitais é a criptografia assimétrica (utilizando chave pública e privada).
-Exemplo: algoritmo RSA (Rivest-Shamir-Adleman).
-
-\vspace{3ex}
-Calcula-se o hash de um documento e encripta o hash (junto com outras informações) usando a chave privada. 
-
-\vspace{3ex} 
-O hash é rápido de se calcular e possui tamanho fixo.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{figures/digitalsignaturediagram.pdf}
-\caption{Diagrama de assinatura digital de documentos (\url{https://commons.wikimedia.org/wiki/File:Digital_Signature_diagram.svg}).}
-\label{fig-digi-sign}
-\end{figure}
-
-Certificado digital \textbf{x} assinatura digital\\
-O certificado digital é uma documento digital emitido por uma autoridade de certificação (CA). 
-As CAs agem como terceiros confiáveis aceitando, autenticando, emitindo e mantendo certificados digitais. 
-O certificado digital faz a ligação entre a chave pública e a identidade de um agente, permitindo
-verificar se determinada chave pertence a tal pessoa ou entidade.
-
-\end{frame}
-
-
-
+\subsection{Criptografia}
 \begin{frame}
 \frametitle{Criptografia}
 
@@ -212,9 +182,9 @@ que não possuem conhecimento prévio uma da outra, troquem chaves de maneira se
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth,height=0.6\textheight,keepaspectratio]{figures/public_key_shared_secret.pdf}
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{figures/public_key_shared_secret.pdf}
 \caption{Esquema de troca de chaves Diffie-Hellman.}
-\label{fig-delffiehellman}
+\label{fig-diffiehellman}
 \end{figure}
 
 \framebreak
@@ -243,7 +213,7 @@ Problemas:
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}[allowframebreaks,fragile]
 \frametitle{Criptografia de chave pública - RSA}
 \begin{itemize}
 \item par de chaves: pública e privada
@@ -251,5 +221,450 @@ Problemas:
 \item apenas a chave privada é capaz de descriptografar
 \item RSA (Rivest-Shamir-Adleman) 
 \end{itemize}
+
+\framebreak
+
+Processo para gerar as chaves:
+\begin{itemize}
+\item selecione aleatoriamente dois números primos grandes: $p$ e $q$
+\item calcule $n = pq$
+\item para gerar uma mensagem iremos $c$, iremos calcular $c = m^e \pmod{n}$, onde
+$m$ é a mensagem original e $e$ o expoente da chave pública definido abaixo
+\item para definir $e$, primeiramente devemos calcular a função totiente $\phi(n) = (p-1)(q-1)$.
+     \begin{itemize}
+     \item a função totiente de um número inteiro positivo $n$ é o número de inteiros positivos menores que $n$ que são co-primos a $n$ 
+     (não possuem nenhum fator em comum, senão $1$)
+     \item para qualquer número primo $p$, $\phi(n) = (p-1)$ 
+     \end{itemize}
+\item escolha $e$ tal que $1 < e < \phi(n)$ e $e$ é co-primo com $\phi(n)$
+\item a chave pública será constituída por $(e,n)$
+\item para a chave privada devemos encontrar $d$ que satisfaça a seguinte relação de congruência: $de \equiv 1 \pmod{\phi(n)}$
+\item criptografar a mensagem: $c = m^e \pmod{n}$
+\item descriptografar a mensagem: $c^d \pmod n \equiv m^{ed} \pmod n \equiv m$
+\end{itemize}
+
+\framebreak
+
+Exemplo:
+\begin{itemize}
+\item escolher dois números primos $p$ e $q$: $p=61$ e $q=53$
+\item calcular $n = pq$: $n = 61 \times 53 = 3233$
+\item calcular a função totiente $\phi(n) = (p-1)(q-1)$: $\phi(n) = (61 - 1)(53 - 1) = 3120$
+\item escolher $e$ co-primo com $\phi(n)$: $e = 17$
+\item encontrar $d$ que satisfaça $e d \equiv 1 \bmod{\phi(n)}$: $d=2753$, com $17 \times 2753 = 46801 = 1 + 15 \times 3120$
+\end{itemize}
+A chave pública será: $(n=3233, e=17)$. Para uma mensagem $m$ a função de encriptação será: $c = m^e \bmod{n} = m^{17} \bmod 3233$.
+
+A chave privada é: $(n=3233, d=2753)$ e a função de desencriptação é $m = c^d \bmod{n} = c^{2753} \bmod 3233$.
+
+\vspace{2ex}
+Para o exemplo, $m=123$, calculamos:\\
+encriptação $c = 123^{17} \bmod 3233 = 855$\\
+desencriptação $m = 855^{2753} \bmod 3233 = 123$
+
+\framebreak
+
+Exemplos online:
+
+\url{https://www.ti89.com/cryptotut/rsa3.htm} 
+
+\url{http://umaranis.com/rsa_calculator_demo.html} 
+
+\url{https://www.devglan.com/online-tools/rsa-encryption-decryption}
+
+
+\framebreak
+
+Para definir a chave na criptografia RSA, requere-se a utilização de dois números primos muito grandes $p$ e $q$.
+Para tanto, geramos números aleatórios grandes e testamos se tais números são primos. Para determinar se um número
+é primo, podemos utilizar o teste de primalidade de Miller-Rabin (teste probabilístico da primitividade).
+
+\url{https://en.wikipedia.org/wiki/Miller\%E2\%80\%93Rabin\_primality\_test}
+
+\framebreak
+
+Chave pública de um servidor:
+\begin{lstlisting}[language=bash, label=lst-ufsj-key, caption={Visualizando a chave pública da UFSJ (armored ASCII).}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ openssl s_client -connect www.ufsj.edu.br:443 | openssl x509 -pubkey -noout
+depth=2 OU = GlobalSign Root CA - R3, O = GlobalSign, CN = GlobalSign
+verify return:1
+depth=1 C = BE, O = GlobalSign nv-sa, CN = GlobalSign RSA OV SSL CA 2018
+verify return:1
+depth=0 C = BR, ST = Minas Gerais, L = Sao Joao Del-Rei, O = Universidade Federal de Sao Joao Del-Rei - UFSJ, CN = ufsj.edu.br
+verify return:1
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3BPVmy4YpIZzC74kzXhm
+43MEVYnhTGaV+hHuMtSX+50RavbtYDrTkj3LPzLwDEVQxj3rn6kRvFrErJT0KXT9
+N8ZCKkiayj4qRP9Ymt2A7nTMQFKm0mdtmBpWOUrg7w87kIUeFx4gIw/8GGJLa1NL
+bG4/a6q+YMEi2g1eqDiLE4E9mgZpBsDYNh96aeLB6OGJuSalajRZ5MCEh2YK3A+H
+dBh+ySYHMhAVx1uaFhZAcpHeYjEhdL2wd2AGBVD3eoTk76lHc5sLQsNTTErZ7O+b
+pbF2iVWm6eHTCSRwFeGQBzVuZQxgcbRGenMuOgeHLjvCymDa6H0YYP6mgKsDkEkd
+cQIDAQAB
+-----END PUBLIC KEY-----
+\end{lstlisting}
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-ufsj-key-hex, caption={Visualizando a chave pública da UFSJ em hex.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+openssl s_client -connect www.ufsj.edu.br:443 | openssl x509 -modulus -noout 
+depth=2 OU = GlobalSign Root CA - R3, O = GlobalSign, CN = GlobalSign
+verify return:1
+depth=1 C = BE, O = GlobalSign nv-sa, CN = GlobalSign RSA OV SSL CA 2018
+verify return:1
+depth=0 C = BR, ST = Minas Gerais, L = Sao Joao Del-Rei, O = Universidade Federal de Sao Joao Del-Rei - UFSJ, CN = ufsj.edu.br
+verify return:1
+Modulus=DC13D59B2E18A486730BBE24CD7866E373045589E14C6695FA11EE32D497FB9D116AF6ED
+603AD3923DCB3F32F00C4550C63DEB9FA911BC5AC4AC94F42974FD37C6422A489ACA3E2A44FF589A
+DD80EE74CC4052A6D2676D981A56394AE0EF0F3B90851E171E20230FFC18624B6B534B6C6E3F6BAA
+BE60C122DA0D5EA8388B13813D9A066906C0D8361F7A69E2C1E8E189B926A56A3459E4C08487660A
+DC0F8774187EC92607321015C75B9A1616407291DE62312174BDB07760060550F77A84E4EFA94773
+9B0B42C3534C4AD9ECEF9BA5B1768955A6E9E1D309247015E19007356E650C6071B4467A732E3A07
+872E3BC2CA60DAE87D1860FEA680AB0390491D71
+\end{lstlisting}
+
+\end{frame}
+
+
+
+
+\subsection{Assinatura digital}
+\begin{frame}[allowframebreaks]
+\frametitle{Assinatura digital}
+Uma assinatura digital é utilizada para validar a autenticidade e integridade de uma mensagem.
+
+\vspace{3ex}
+A base para assinaturas digitais é a criptografia assimétrica (utilizando chave pública e privada).
+Exemplo: algoritmo RSA (Rivest-Shamir-Adleman).
+
+\vspace{3ex}
+Calcula-se o hash de um documento e encripta o hash (junto com outras informações) usando a chave privada. 
+
+\vspace{3ex} 
+O hash é rápido de se calcular e possui tamanho fixo.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight,keepaspectratio]{figures/digitalsignaturediagram.pdf}
+\caption{Diagrama de assinatura digital de documentos (\url{https://commons.wikimedia.org/wiki/File:Digital_Signature_diagram.svg}).}
+\label{fig-digi-sign}
+\end{figure}
+
+Certificado digital \textbf{x} assinatura digital\\
+O certificado digital é uma documento digital emitido por uma autoridade de certificação (CA). 
+As CAs agem como terceiros confiáveis aceitando, autenticando, emitindo e mantendo certificados digitais. 
+O certificado digital faz a ligação entre a chave pública e a identidade de um agente, permitindo
+verificar se determinada chave pertence a tal pessoa ou entidade.
+
+\end{frame}
+
+
+
+
+\subsection{Números aleatórios}
+\begin{frame}[allowframebreaks,fragile]
+  \frametitle{Números aleatórios}
+
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.75\textwidth,height=0.5\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/ti/images/dilbert.png}
+        %\caption{Df.}
+        \label{fig:dilbert-random}
+        \end{figure}
+
+  \begin{itemize}
+  \item ``Anyone who attempts to generate random numbers by deterministic means is,
+          of course, living in a state of sin''. (John von Neumann)
+  \item ``randomness is in the eye of the beholder'' (Numerical Recipes)
+  \end{itemize}
+
+  As três fontes de aleatoriedade:
+  \begin{itemize}
+  \item aleatoriedade do ambiente
+  \item aleatoriedade nas condições iniciais
+  \item geração intrínseca de aleatoriedade
+  \end{itemize}
+
+  \begin{quote}
+  ``assuming that there is a random external environment which
+    continually affects the system one is looking at, and continually
+    injects randomness into it.''
+
+    (...)
+
+  ``the basic mechanisms responsible for phenomena that we see in nature are
+    somehow the same as those responsible for phenomena that we see
+    in simple programs''.
+
+    (...)
+
+  ``simple programs can produce apparently random behavior even when they are given no random input whatsoever''.
+
+  (Stephen Wolfram, A New Kind of Science)
+  \end{quote}
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.5\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg299.png}
+  \caption{Três mecanismos que podem ser responsáveis pela aleatoriedade: ambiente, condição inicial e
+          geração intrínseca (Stephen Wolfram, A New Kind of Science).}
+  \label{fig:nkspg299}
+  \end{figure}
+
+  \framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg27.png}
+  \caption{Regra 30 - automato celular (Stephen Wolfram, A New Kind of Science).}
+  \label{fig:nkspg27}
+  \end{figure}
+
+  \framebreak
+
+  \begin{quote}
+  ``I believe that this mechanism [intrinsic randomness] is in fact ultimately
+    responsible for a large fraction, if not essentially all, of the
+    randomness that we see in the natural world. (...) to get randomness
+    in a particular system it turns out that there is no need for continual
+    interaction between the system and an external random environment''.
+    (Stephen Wolfram, A New Kind of Science)
+  \end{quote}
+
+  \framebreak
+
+  Números Aleatórios gerados computacionalmente.
+
+  O seguinte método é utilizado desde o final dos anos 1940 em diversos sistemas computacionais:
+  \begin{quote}
+  ``if one successively multiplies a number by various constant factors,
+    and then looks at the digit sequences of the numbers that result (...)
+    the patterns of digits obtained in this way seem quite random. (...)
+    For practical reasons, such generators typically keep only, say, the
+    rightmost 31 digits in the numbers at each step.'' (Stephen Wolfram,
+    A New Kind of Science)
+  \end{quote}
+
+  \framebreak 
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg319.png}
+  %\caption{.}
+  \label{fig:nkspg319}
+  \end{figure}
+
+  \framebreak
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg320a.png}
+  %\caption{.}
+  \label{fig:nkspg320a}
+  \end{figure}
+
+  \framebreak
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg320b.png}
+  %\caption{.}
+  \label{fig:nkspg320b}
+  \end{figure}
+
+  \framebreak
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg320c.png}
+  %\caption{.}
+  \label{fig:nkspg320c}
+  \end{figure}
+
+
+  \framebreak
+  \lstinputlisting[language=Matlab,basicstyle=\footnotesize]{/home/leoca/ee/ufsj/aulas/ti/hw/simulations/rndnumberexample2.m}
+
+  \framebreak
+  Gerador de número aleatório Lehmer:
+  \begin{equation}
+  X_{k+1} = g \cdot X_k \mod n
+  \end{equation}
+  onde $n$ é um número primo ou uma potência de um número primo,
+  o multiplicador $g$ é uma raiz primitiva módulo $n$ e a semente
+  $X_0$ é co-primo com $n$.
+
+  \url{https://en.wikipedia.org/wiki/Lehmer_random_number_generator}
+
+  \framebreak
+  \lstinputlisting[language=Matlab,postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{/home/leoca/ee/ufsj/aulas/programming/tarefas/prandom/randomnumbergenerator.m}
+
+  \framebreak
+  Números aleatórios em Linux
+
+  \lstinputlisting[language=bash,postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]{/home/leoca/ee/ufsj/aulas/ti/hw/simulations/rndlinuxex.txt}
+
+\end{frame}
+
+
+
+
+
+
+
+
+\subsection{Hash}
+\begin{frame}[allowframebreaks,fragile]
+  \frametitle{Hash}
+
+Uma função hash é uma função de mapeamento de dados de tamanho qualquer 
+em dados com tamanho fixo.
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.33\textwidth,height=0.7\textheight,keepaspectratio]{figures/hashkeys.png}
+  \caption{Mapeamento.}
+  \label{fig:hashkeys}
+  \end{figure}
+
+\framebreak
+
+Alguns exemplos de utilização:
+\begin{itemize}
+\item Hash Tables
+\item Cache (grande quantidade de dados armazenados em media lenta)
+\item Bloom filters (estrutura de dados probabilística usada para testar se um elemento pertence a um conjunto)
+\item Encontrar duplicidades ou similaridades (exemplo: banco de dados, sequência de DNA)
+\item Proteger e autenticar dados 
+\end{itemize}
+
+\framebreak
+
+Tempo de Acesso
+\begin{itemize}
+\item lista simples $O(n)$
+\item árvore binária balanceada $O(\log n)$
+\item hash tables $O(1)$
+\end{itemize}
+
+Usar \emph{hash table} fará com que todas operações (adição, remoção, verificação) tenham custo $O(1)$.
+No pior caso (colisão de todas as chaves) a performance será $O(n)$, igual à performance
+de uma lista encadeada (se utilizarmos lista para solucionar colisão). 
+Podemos usar uma árvore balanceada para nos casos de colisão e assim garantir 
+que a pior performance será $O(\log n)$.
+
+\framebreak
+
+Propriedades de um função hash:
+\begin{description}
+\item[Determinística] -- para um determinado dado de entrada a saída produzida será sempre a mesma saída
+\item[Uniformidade] -- os valores de hash devem ser gerados com a mesma probabilidade, uniformemente distribuídos. 
+Em aplicações onde queremos a busca de similaridade podemos abrir mão da uniformidade para obter continuidade,
+de forma que sequências de dados similares sejam mapeadas em valores iguais ou quase iguais
+\item[Não Inversível] -- para aplicações criptográficas isto é um requisito
+\item[Extensão pré-definida] -- estes valores podem ser utilizados para indexar um array. 
+Funções de hash criptográfico utilizam valores de hash grandes para assegurar a complexidade
+da inversão por força bruta, SHA-1, por exemplo, utiliza valores de 160-bits.
+Funções de hash dinâmica possuem extensão variável.
+\item[Difusão] -- para $k_1 \neq k_2$, conhecer $h(k_1)$ não deve fornecer nenhuma informação sobre $h(k_2)$,
+por exemplo, se $k_1$ e $k_2$ diferem em apenas 1 bit, então todos os bits de $h(k_2)$ devem diferir
+de $h(k_1)$ com probabilidade $1/2$.
+\end{description}
+
+\framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/hash-fig111.png}
+  \caption{Hash.}
+  \label{fig:hash-fig111}
+  \end{figure}
+
+\framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/hash-fig112.png}
+  \caption{Hash - colisão.}
+  \label{fig:hash-fig112}
+  \end{figure}
+
+\framebreak
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth,height=0.7\textheight,keepaspectratio]{figures/hash-fig113.png}
+  \caption{Hash - encadeamento.}
+  \label{fig:hash-fig113}
+  \end{figure}
+
+\framebreak
+
+Funções de Hash
+\begin{description}
+\item[Função de Hash trivial] -- Quando o universo dos dados é pequeno, podemos interpretar os próprios dados como inteiros, sendo
+eles mesmo o valor hash de si próprios.
+\item[Função de Hash perfeita] -- É uma função injetiva, não gerando colisões.
+\item[Função de Hash mínima perfeita] -- Uma função para $n$ chaves é mínima quando sua extensão consiste em inteiros consecutivos de $0$ a $n-1$
+sem deixar buracos, gerando assim uma tabela hash compacta.
+\end{description}
+
+\framebreak
+
+Função de Hash Modular
+ $$h(k) = k \mod m$$
+
+\begin{itemize}
+\item $m$ não deve ser uma potência de 2
+\item $m$ tipicamente escolhemos $m$ primo
+  (um primo que não esteja muito próximo de uma potência de 2)
+\item a extensão será $m$
+\item em geral, não garante uniformidade, podendo levar a muitas colisões
+\end{itemize}
+
+
+\framebreak
+
+Para uma chave inteiro, podemos fazer:
+\begin{lstlisting}[language=C, label=lst-hash-mod, caption={Função de Hash Modular.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+int hash(int key) {
+    return key % M;
+}
+\end{lstlisting}
+
+
+No caso de strings, faremos:
+\begin{lstlisting}[language=C, label=lst-hash-mod, caption={Função de Hash Modular.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+int h = 0;
+for (int i = 0; i < s.length(); i++)
+    h = (31 * h + s(i)) % M;
+\end{lstlisting}
+
+\framebreak
+
+Método multiplicativo
+
+  $$h(k) = \lfloor m (kA \mod 1) \rfloor $$
+
+Note que $kA \mod 1$ representar a parte fracionária de $kA$.
+O valor escolhido para $m$ não é crítico.
+Tipicamente escolhemos $m$ como uma potência de 2 ($m=2^p$, para algum inteiro $p$).
+
+
+\framebreak
+Sugestões de leitura:
+\vspace{2ex}
+
+\fullcite{cormen2009}
+\vspace{2ex}
+
+\url{https://algs4.cs.princeton.edu/34hash/}
+\vspace{2ex}
+
+\url{http://www.cs.cornell.edu/courses/cs312/2008sp/lectures/lec20.html}
+\vspace{2ex}
+
+\url{https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/st-hash.html}
+\vspace{2ex}
+
+\url{https://en.wikipedia.org/wiki/Hash_function}
+
+
+
 
 \end{frame}
