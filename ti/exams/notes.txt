@@ -68,4 +68,9 @@ exams2html(elearn_exam, n=1, name="prova1", encoding="UTF-8")
 exams2moodle(elearn_exam, n=nalunos, name="2021-1-prova-ti-01", encoding="UTF-8")
 
 
+elearn_exam <- c("entropia/entropia01.Rmd", "fano/fano02.Rmd", "markov/markov01.Rmd", "codigos/codigos03.Rmd", "canal/canal02.Rmd", "canal/hamming01.Rmd")
+exams2html(elearn_exam, n=1, name="prova-ti-substitutiva", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="2021-1-prova-substitutiva", encoding="UTF-8")
+
+
 
