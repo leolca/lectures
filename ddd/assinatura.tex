@@ -5,9 +5,8 @@
 \frametitle{Criptografia}
 
 \begin{itemize}
-\item estenografia - ocultar uma mensagem dentro de outra
-\item escrita oculta
-\item criptografia - escrita segura
+\item estenografia (escrita oculta) - ocultar uma mensagem dentro de outra
+\item criptografia (escrita segura)
 \end{itemize}
 
 \end{frame}
@@ -60,11 +59,13 @@ durante as campanhas militares.
 \label{fig-cifracaesar}
 \end{figure}
 
-ROT13 (\emph{rotate by 13 places}) é um caso específico da cífra de César com deslocamente de 13 posições, o que 
+ROT13 (\emph{rotate by 13 places}) é um caso específico da cifra de César com deslocamento de 13 posições, o que 
 faz com que o algoritmo de codificação e decodificação seja o mesmo.
-ROT13 era utilizado na década de 80 para esconder piadas potencialmente ofencivas, respostas de enigmas, ou 
+ROT13 era utilizado na década de 80 para esconder piadas potencialmente ofensivas, respostas de enigmas, ou 
 outros \emph{spoilers}. É utilizado para esconder endereços de e-mails de \emph{spam bots}.
 \url{https://en.wikipedia.org/wiki/ROT13}
+
+\framebreak
 
 \begin{figure}[h]
 \centering
@@ -107,6 +108,7 @@ Substitui cada palavra ou sequência por um código (utilizando uma referência,
 
 O código foi quebrado apenas no final de 2020.\\
 \fullcite{goodin_zodiac_2020}
+
 \vspace{2ex}
 \fullcite{bauer_zodiac_nodate}
 
@@ -151,6 +153,16 @@ Utiliza as letras da chave para selecionar a coluna e as letras da mensagem para
 \item Um sistema de criptografia deve ser seguro mesmo se tudo sobre ele for público, exceto a chave.
 \item Não confie em segurança por obscuridade.
 \end{itemize}
+
+\vspace{2ex}
+\begin{quote}
+o inimigo conhece o sistema, (...) deve-se projetar sistemas sob o pressuposto de que o inimigo
+irá rapidamente obter familiaridade com eles.
+% "the enemy knows the system",[1] i.e., "one ought to design systems under the assumption that the enemy will immediately gain full familiarity with them".
+\end{quote}
+
+\fullcite{Shannon1949}
+
 \end{frame}
 
 \begin{frame}
@@ -158,7 +170,7 @@ Utiliza as letras da chave para selecionar a coluna e as letras da mensagem para
 \begin{itemize}
 \item tornaram-se fracas em face da capacidade computacional dos computadores modernos
 \item os métodos eram criados \emph{ad hoc}, sem existir definição e prova de segurança
-\item o conhecimento de criptografia estava restrito ao militares e agência de inteligência
+\item o conhecimento de criptografia estava restrito a militares e agência de inteligência
 \item o número de chaves cresce quadraticamente com o número de participantes (cada comunicação entre pares deve possuir uma chave diferente)
 \end{itemize}
 \end{frame}
@@ -202,6 +214,10 @@ Eve está escutando o canal e obtém ($G$,$g$,$A$,$B$) = ($G$,$g$,$g^x$,$g^y$).
 
 Não existe maneira eficiente de calcular $g^{(xy)}$.
 
+\vspace{3ex}
+\url{https://www.irongeek.com/diffie-hellman.php}
+
+
 \framebreak
 Problemas:
 \begin{itemize}
@@ -228,13 +244,14 @@ Processo para gerar as chaves:
 \begin{itemize}
 \item selecione aleatoriamente dois números primos grandes: $p$ e $q$
 \item calcule $n = pq$
-\item para gerar uma mensagem iremos $c$, iremos calcular $c = m^e \pmod{n}$, onde
+\item para gerar uma mensagem iremos calcular $c = m^e \pmod{n}$, onde
 $m$ é a mensagem original e $e$ o expoente da chave pública definido abaixo
 \item para definir $e$, primeiramente devemos calcular a função totiente $\phi(n) = (p-1)(q-1)$.
      \begin{itemize}
      \item a função totiente de um número inteiro positivo $n$ é o número de inteiros positivos menores que $n$ que são co-primos a $n$ 
      (não possuem nenhum fator em comum, senão $1$)
-     \item para qualquer número primo $p$, $\phi(n) = (p-1)$ 
+     \item para qualquer número primo $p$, $\phi(p) = (p-1)$
+     \item $\phi(mn) = \phi(m) \phi(n) \cdot \frac{d}{\phi(d)}$, onde $d = \text{gcd}(m,n)$
      \end{itemize}
 \item escolha $e$ tal que $1 < e < \phi(n)$ e $e$ é co-primo com $\phi(n)$
 \item a chave pública será constituída por $(e,n)$
@@ -275,7 +292,7 @@ Exemplos online:
 
 \framebreak
 
-Para definir a chave na criptografia RSA, requere-se a utilização de dois números primos muito grandes $p$ e $q$.
+Para definir a chave na criptografia RSA, requer-se a utilização de dois números primos muito grandes $p$ e $q$.
 Para tanto, geramos números aleatórios grandes e testamos se tais números são primos. Para determinar se um número
 é primo, podemos utilizar o teste de primalidade de Miller-Rabin (teste probabilístico da primitividade).
 
@@ -349,14 +366,88 @@ O hash é rápido de se calcular e possui tamanho fixo.
 \label{fig-digi-sign}
 \end{figure}
 
-Certificado digital \textbf{x} assinatura digital\\
+Certificado digital vs. assinatura digital
+
+\vspace{2ex}
 O certificado digital é uma documento digital emitido por uma autoridade de certificação (CA). 
 As CAs agem como terceiros confiáveis aceitando, autenticando, emitindo e mantendo certificados digitais. 
 O certificado digital faz a ligação entre a chave pública e a identidade de um agente, permitindo
 verificar se determinada chave pertence a tal pessoa ou entidade.
+Modelo de confiança centralizado (PKI, \textit{public key infrastructure}).
+
+\vspace{2ex}
+Uma alternativa às CAs é a rede de confiança (\textit{Web of trust}), um modelo de confiança descentralizado.
+Utilizado no PGP (\textit{Pretty Good Privacy}).
 
 \end{frame}
 
+
+
+\subsection{PGP}
+\begin{frame}[allowframebreaks,fragile]
+\frametitle{Exemplos PGP}
+
+\begin{lstlisting}[language=bash, label=lst-pgp-ex01, caption={Assinar um documento.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ echo "pois só a justa medida do tempo dá a justa natureza das coisas, não bebendo do vinho quem esvazia num só gole a taça cheia" > RaduanNassar.txt
+$ gpg --clear-sign RaduanNassar.txt 
+$ cat RaduanNassar.txt.asc
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+pois só a justa medida do tempo dá a justa natureza das coisas, não bebendo do vinho quem esvazia num só gole a taça cheia
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEEp4rIXACghPaEmi4sB7Zpi0fJbb8FAmFN9/oACgkQB7Zpi0fJ
+bb/JZAf/UJXiKFayugMYewIfWapVvqHmt3Uu30H8ro2Aj1TVZKm37LLudGwsDGH5
+HcqRZtb1pkugVCGZ8tZxg3WTuiYUaPsWBdiich9hQE5CkFasl2SYoAeX8Gn4RhVK
+qX60Dfvw3Wm1HgayBfuqjDjxz7TXcpJHF6jte/Ni7kKLB4emgcuCGg17Hw9iOvYl
+2RprL8qn7H7V/VuhWH9UG8fXvlDxQHm/yR++Q0lCjhNmT8yTKJsaTqtOfu5frQJv
+otQtqfYQ+Wg3pQe/3/BWUW+8cEF8vwV3nRADiScFIwASEYMQ29ozQiCGu8H4FeBn
+Ht/L75hqf44yePysO+HG+c+40RX8GQ==
+=SSvI
+-----END PGP SIGNATURE-----
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=bash, label=lst-pgp-ex02, caption={Verificar a assinatura de um documento.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ gpg --verify RaduanNassar.txt.asc
+gpg: Signature made sex 24 set 2021 13:08:26 -03
+gpg:                using RSA key A78AC85C00A084F6849A2E2C07B6698B47C96DBF
+gpg: Good signature from "Leonardo Carneiro de Araujo <leolca@gmail.com>" [ultimate]
+gpg: WARNING: not a detached signature; file 'RaduanNassar.txt' was NOT verified!
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=bash, label=lst-pgp-ex03, caption={Assinar um documento e verificar.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ gpg --sign RaduanNassar.txt
+$ gpg --verify RaduanNassar.txt.gpg
+gpg: Signature made sex 24 set 2021 13:20:53 -03
+gpg:                using RSA key A78AC85C00A084F6849A2E2C07B6698B47C96DBF
+gpg: Good signature from "Leonardo Carneiro de Araujo <leolca@gmail.com>" [ultimate]
+\end{lstlisting}
+
+
+\framebreak 
+\begin{lstlisting}[language=bash, label=lst-pgp-ex04, caption={Encriptar um arquivo.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+# encriptando um arquivo 
+$ gpg --recipient leolca --encrypt RaduanNassar.txt
+$ ls RaduanNassar.txt.gpg
+$ gpg --decrypt RaduanNassar.txt.gpg
+\end{lstlisting}
+
+\framebreak 
+\begin{lstlisting}[language=bash, label=lst-pgp-ex05, caption={Enviando a chave para um servidor de chaves.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ gpg --fingerprint leolca@gmail.com
+pub   rsa2048 2013-07-08 [SC]
+      A78A C85C 00A0 84F6 849A  2E2C 07B6 698B 47C9 6DBF
+      uid           [ultimate] Leonardo Carneiro de Araujo <leolca@gmail.com>
+      sub   rsa2048 2013-07-08 [E]
+
+$ gpg --keyserver hkp://keyserver.ubuntu.com:80 --send-keys 47C96DBF
+gpg: sending key 07B6698B47C96DBF to hkp://keyserver.ubuntu.com:80
+\end{lstlisting}
+
+\end{frame}
 
 
 
@@ -414,7 +505,7 @@ verificar se determinada chave pertence a tal pessoa ou entidade.
 
   \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg27.png}
+  \includegraphics[width=0.75\textwidth,height=0.7\textheight,keepaspectratio]{/home/leoca/ee/ufsj/aulas/programming/random/nkspg27.png}
   \caption{Regra 30 - automato celular (Stephen Wolfram, A New Kind of Science).}
   \label{fig:nkspg27}
   \end{figure}
@@ -611,9 +702,9 @@ Função de Hash Modular
 
 \begin{itemize}
 \item $m$ não deve ser uma potência de 2
-\item $m$ tipicamente escolhemos $m$ primo
+\item tipicamente escolhemos $m$ primo
   (um primo que não esteja muito próximo de uma potência de 2)
-\item a extensão será $m$
+\item a extensão de $h$ será $m$
 \item em geral, não garante uniformidade, podendo levar a muitas colisões
 \end{itemize}
 
@@ -645,6 +736,19 @@ Note que $kA \mod 1$ representar a parte fracionária de $kA$.
 O valor escolhido para $m$ não é crítico.
 Tipicamente escolhemos $m$ como uma potência de 2 ($m=2^p$, para algum inteiro $p$).
 
+
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-hash-ex01, caption={Hash de arquivo.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+$ md5sum RaduanNassar.txt
+f6955a7644083fb61d6ea97578e2727a  RaduanNassar.txt
+
+$ sha256sum RaduanNassar.txt
+e98f57d7d3e3887503ce69a7bd6df4a6c8a8dc59455ad1e20f435683000ee3c9  RaduanNassar.txt
+
+$ sha256sum RaduanNassar.txt | sha256sum --check
+RaduanNassar.txt: OK
+\end{lstlisting}
 
 \framebreak
 Sugestões de leitura:
