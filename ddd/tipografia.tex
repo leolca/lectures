@@ -123,6 +123,61 @@ Alguns deles são:
 \end{frame}
 
 
+\begin{frame}[allowframebreaks]
+\frametitle{\TeX{}}
+\framesubtitle{Quebrando parágrafos em linhas}
+
+Problema: quebrar o texto de um parágrafo em linhas de mesmo comprimento
+evitando linhas com palavras muito espaçadas ou linhas muito justas.
+
+Itens para ajustar:
+\begin{itemize}
+\item caixas
+\item cola
+\item penalidade
+\end{itemize}
+
+\framebreak
+Exemplos:
+
+\vspace{2ex}
+{
+\newdimen\origiwspc%
+\newdimen\origiwstr%
+\origiwspc=\fontdimen2\font% original inter word space
+\origiwstr=\fontdimen3\font% original inter word stretch
+\lipsum[1][1-3]
+
+\vspace{2ex}
+\fontdimen2\font=0.2ex% inter word space
+\lipsum[1][1-3]% decreased inter word space
+
+\vspace{2ex}
+%\fontdimen2\font=\origiwspc% (original) inter word space
+%\fontdimen3\font=0.1em% inter word stretch
+%\lipsum[1][1]% decreased inter word stretch
+\fontdimen3\font=\origiwstr% (original) inter word stretch
+\fontdimen2\font=1em% inter word space
+\lipsum[1][1-3]% increased inter word space and stretch
+\fontdimen2\font=\origiwspc% (original) inter word space
+\fontdimen3\font=\origiwstr% (original) inter word stretch
+}
+
+
+\framebreak
+
+Em um parágrafo com $n$ locais possíveis para realizar a quebra, existem $2^n$ possíveis formas
+de quebrá-lo em linhas. Este é um problema NP completo\footnote{
+``NP-completo é um subconjunto de NP, o conjunto de todos os problemas de decisão cujas soluções podem ser verificadas em tempo polinomial; NP pode ser equivalentemente definida como o conjunto de problemas de decisão que podem ser solucionados em tempo polinomial em uma Máquina de Turing não determinística. Um problema $p$ em NP também está em NPC se e somente se todos os outros problemas em NP podem ser transformados em $p$ em tempo polinomial.'' (Wikipedia)
+}. No \TeX{} é resolvido utilizando-se programação dinâmica.
+
+\vspace{3ex}
+\fullcite{Knuth1981}
+
+\end{frame}
+
+
+
 \begin{frame}
 \frametitle{Sugestão de leitura}
 
