@@ -209,6 +209,27 @@ else
 fi
 \end{lstlisting}
 
+\framebreak
+
+\begin{lstlisting}[language=bash, label=lst-argumentos, caption={argumentos Bash.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+#!/bin/bash
+
+echo "Início do programa: $(date)"
+echo "Nome do programa: $0"
+echo "Número de argumentos $#"
+echo "Número do processo $$"
+
+COUNTER=0
+for arg in "$@"
+do
+  ((COUNTER++))
+  echo "arg $COUNTER: $arg"
+done
+\end{lstlisting}
+
+\framebreak
+
+
 \begin{lstlisting}[language=bash, label=lst-bash-convert-mp3, caption={Converter todos WAVs em MP3.}, postbreak=\mbox{$\hookrightarrow$\space}, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
 for file in $( ls *.wav ); do lame $file ${file%wav}mp3; done
 
