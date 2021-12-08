@@ -20,6 +20,19 @@ Answerlist
 Solution
 ========
 
+```Octave
+predictor = [0, 1];
+x = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+codebook = [0, 1];
+partition = [0.5];
+[qidx, q, d] = dpcmenco(x,codebook,partition,predictor);
+qidx
+qidx =
+
+   1   1   1   1   1   0   0   0   0
+```
+
+
 Answerlist
 ----------
 * True.
