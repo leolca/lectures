@@ -1,0 +1,34 @@
+Question
+========
+
+Qual é a capacidade do canal descrito pela matriz de transição a seguir?
+
+|     |  a  |  b  |  c  |  d  |
+|:---:|:---:|:---:|:---:|:---:|
+|  a  | 1/2 |  0  | 1/2 |  0  |
+|  b  |  0  | 1/4 |  0  | 3/4 |
+|  c  | 1/2 |  0  | 1/2 |  0  |
+|  d  |  0  | 3/4 |  0  | 1/4 |
+
+
+Answerlist
+---------------
+* (bits) $C = $
+
+Solution
+========
+Ver exercício 5.7 da lista.
+
+Answerlist
+----------
+* 1.0974 bits
+
+Meta-information
+================
+extype: num
+exsolution: 1.0974
+exname: canal3
+extol: 0.001
+expoints: 1
+
+

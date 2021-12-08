@@ -1,0 +1,51 @@
+Question
+========
+
+Seja a distribuição conjunta $p(x,y)$ dada por
+
+|  X / Y |   0  |  1  |
+|:------:|:----:|:---:|
+|    0   |  1/3 | 1/3 |
+|    1   |   0  | 1/3 |
+
+Determine (em bits)
+
+Answerlist
+----------
+* $H(X)$
+* $H(Y)$
+* $H(X|Y)$
+* $H(Y|X)$
+* $H(X,Y)$
+* $H(Y) - H(Y|X)$
+* $I(X;Y)$
+
+Solution
+========
+
+* $H(X) = \frac{2}{3} \log \frac{3}{2} + \frac{1}{3} \log 3 = 0.918$ bits
+* $H(Y) = 0.918$ bits
+* $H(X|Y) = \frac{1}{3} H(X|Y=0) + \frac{2}{3} H(X|Y=1) = 0.667$ bits
+* $H(Y|X) = 0.667$ bits 
+* $H(X,Y) = 3 \times \frac{1}{3} \log 3 = 1.585$ bits
+* $H(Y) - H(Y|X) = 0.251$ bits
+* $I(X;Y) = H(X) - H(Y|X) = 0.251$ bits
+
+Answerlist
+----------
+* 0.918
+* 0.918
+* 0.667
+* 0.667
+* 1.585
+* 0.251
+* 0.251
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num|num|num|num
+exsolution: 0.918|0.918|0.667|0.667|1.585|0.251|0.251
+exname: calculo entropia
+extol: 0.005
+expoints: 1|1|1|1|1|1|1

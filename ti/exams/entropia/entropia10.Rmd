@@ -1,0 +1,57 @@
+Question
+========
+Qual das desigualdades ($\leq$, $=$, $\geq$) aplica-se nas comparações abaixo:
+
+* $H(5X)$ vs. $H(X)$
+* $I(g(X);Y)$ vs. $I(X;Y)$
+* $H(X_0|X_{-1})$ vs $H(X_0|X_{-1},X_1)$
+* $H(X,Y)/(H(X)+H(Y))$ vs. $1$
+
+
+Answerlist
+----------
+* $\geq$ (maior ou igual)
+* $=$ (igual)
+* $\leq$ (menor ou igual)
+* $\geq$ (maior ou igual)
+* $=$ (igual)
+* $\leq$ (menor ou igual)
+* $\geq$ (maior ou igual)
+* $=$ (igual)
+* $\leq$ (menor ou igual)
+* $\geq$ (maior ou igual)
+* $=$ (igual)
+* $\leq$ (menor ou igual)
+
+
+Solution
+========
+* Como $X \rightarrow 5X$ é um mapeamento um-pra-um, a incerteza deverá ser a mesma, $H(X)=H(5X)$.
+* Pela desigualdade de processamento de dados temos que $I(g(X);Y) \leq I(X;Y)$.
+* Condicionar reduz a entropia, assim $H(X_0 | X_{-1}) \geq H(X_0 | X_{-1},X_1)$.
+* $H(X,Y) \leq H(X) + H(Y)$, assim $H(X,Y)/(H(X)+H(Y)) \leq 1$.
+
+
+Answerlist
+----------
+* False.
+* True.
+* False.
+* False.
+* False.
+* True.
+* True.
+* False.
+* False.
+* False.
+* False.
+* True.
+
+Meta-information
+================
+extype: cloze
+exclozetype: schoice|schoice|schoice|schoice
+exsolution: 010|001|100|001
+exname: conjunto-tipico
+expoints: 1|1|1|1
+

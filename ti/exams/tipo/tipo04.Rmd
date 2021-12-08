@@ -1,0 +1,64 @@
+```{r, echo=FALSE, results="hide"}
+## parameters
+# p: 0.01, 0.0075, 0.005, 0.0025
+# N: 100, 95, 90, 85, 80
+p <- sample(c(0.01, 0.0075, 0.005, 0.0025),1,replace = TRUE)
+N <- sample(c(100, 95, 90, 85, 80),1,replace = TRUE)
+n <- sample(c(3, 4, 5),1,replace = TRUE)
+
+Nseq <- 0
+for (k in 0:n) {
+ Nseq <- Nseq + choose(N, k)
+}
+nbits <- ceiling( log2(Nseq) )
+
+Perr <- 1
+for (k in 0:n) {
+  Perr <- Perr - choose(N, k) * p^k * (1-p)^(N-k) 
+}
+
+Cheby <- N*p*(1-p)/( (n+N*p)^2 )
+## solution
+
+
+```
+
+Question
+========
+
+Considera uma fonte binária, discreta e sem memória. Considere o alfabeto $\mathcal{X}=\{0,1\}$ e $p(1) = `r p`$.
+Os dígitos são tomados a cada $`r N`$ dígitos. Sequências com $`r n`$ ou menos uns serão codificadas, sendo a 
+elas associadas palavras.
+
+Answerlist
+----------
+* Assumindo que todas as palavras do código possuem o mesmo comprimento, encontre o menor comprimento necessário para
+fornecer palavras binárias de código a todas as sequências que serão codificadas.
+* Calcule a probabilidade de observar-se uma sequência produzida pela fonte que não será codificada.
+* Utilize a desigualdade de Chebyshev para encontrar o limite da probabilidade de se observar uma sequência da fonte para a qual
+nenhuma palavra código foi associada. 
+
+Solution
+========
+* O número mínimo de bits necessário é `r nbits` bits.
+* A probabilidade de se observar uma sequência que não será codificada é `r Perr`.
+* O limite da desigualdade de Chebyshev é `r Cheby`.
+
+Veja a resolução do exercício 2.1 na lista de exercícios.
+
+Answerlist
+----------
+* `r nbits` bits 
+* `r Perr`
+* $Pr(S_{`r N`} \geq `r n+1` ) \leq `r Cheby`$
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num
+exsolution: `r fmt(nbits)`|`r Perr`|`r Cheby`
+exname: PEA e codificação
+extol: 0.0001
+expoints: 1|1|1
+
+

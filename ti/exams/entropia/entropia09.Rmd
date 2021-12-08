@@ -1,0 +1,36 @@
+Question
+========
+Seja $X$ e $Y$ duas variáveis aleatórias independentes com valores inteiros.
+Considere $X$  uniformemente distribuído em $\{1,2,\ldots,8\}$ e considere
+$\text{Pr}\{Y=k\}=2^{-k}, \quad k=1,2,3,\ldots$
+
+Determine:
+
+Answerlist
+---------------
+* $H(X)$
+* $H(Y)$
+* $H(X+Y,X-Y)$
+
+Solution
+========
+* Como $X \sim \mathcal{U}$ e $\vert \mathcal{X} \vert = 9$, teremos $H(X) = \log 8 = 3$.
+* $Y$ possui distribuição geométrica, então $H(Y) = \sum_k k2^{-k} = 2$ (ver lista de execícios).
+* Temos que $(X,Y) \rightarrow (X+Y,X-Y)$ é uma função um-pra-um, desta forma $H(X+Y,X-Y) = H(X,Y) = H(X) + H(Y) = 3 + 2 = 5$, onde utilizamos também a independência entre $X$ e $Y$.
+
+
+
+Answerlist
+----------
+* 3
+* 2
+* 5
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num
+exsolution: 3|2|5
+exname: entropia discreta
+extol: 0.005
+expoints: 1|1|1
