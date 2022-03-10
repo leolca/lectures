@@ -67,3 +67,38 @@ exams2html(elearn_exam, n = 1, name = "aev-prova-04", encoding = "UTF-8")
 
 
 
+
+
+#### 2021-2 ####
+# prova 01
+library("exams")
+elearn_exam <- c("mov2front/mov2front01.Rmd", "rle/rle01.Rmd", "scalarquantization/scalarquantization01.Rmd", "scalarquantization/scalarquantization03.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-01", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-01", encoding = "UTF-8")
+
+# prova 02
+library("exams")
+elearn_exam <- c("vectorquantization/vecquantz05.Rmd","scalarquantization/companding01.Rmd","sampling/resampling03.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "aev-prova-02", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-02", encoding = "UTF-8")
+
+# prova 03
+library("exams")
+elearn_exam <- c("dpcm/dpcm01.Rmd", "voice/pitch02.Rmd", "lpc/lpc02.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "aev-prova-03", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-03", encoding = "UTF-8")
+
+# prova 04
+library("exams")
+elearn_exam <- c("dct/dct01.Rmd","dct/dct03.Rmd","jpeg/jpeg01.Rmd","pca/pca01.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "aev-prova-04", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-04", encoding = "UTF-8")
+
+### PROVA 05
+library("exams")
+elearn_exam <- c("sensorial/visao01.Rmd", "sensorial/audicao01.Rmd", "video/video01.Rmd", "wavelets/wavelets01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "aev-prova-05", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "aev-prova-05", encoding = "UTF-8")
+
+
+
