@@ -1,0 +1,95 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## parameters
+dpi <- sample(c(2,3,4),1,replace=TRUE)
+px0 <- 1/dpi # p(x=0)
+probs <- sample(c(1/3,1/4,1/5),size=2,replace=FALSE)
+alpha <- probs[1]; beta <- probs[2];
+py0 <- (1-alpha)*px0 + beta*(1-px0)
+py1 <- alpha*px0 + (1-beta)*(1-px0)
+entropy <- function(p) {
+  return(-sum(p * log2(p)))
+}
+```
+
+Question
+========  
+
+Considere o canal de comunicação assimétrico onde a entrada $X$ está no alfabeto 
+$\mathcal{X}=\{0,1\}$ com probabilidades $\{\pi, 1-\pi\}$ e saída $Y$
+também binária no alfabeto $\mathcal{Y}=\{0,1\}$. O canal é caracterizado pela
+matriz de transmissão $p(y_k|x_j)$:
+
+$$
+\begin{pmatrix}
+1 - \alpha & \alpha \\
+\beta & 1 - \beta
+\end{pmatrix}
+$$
+
+* Determine as probabilidades: $P(Y=0)$ e $P(Y=1)$.
+* Determine os pares de valores $(\alpha, \beta)$ para maximizar a capacidade do canal (obs: coloque em ordem crescente de $\alpha$): $(\alpha_1,\beta_1)$, $(\alpha_2,\beta_2)$.
+* Determine pares de valores $(\alpha, \beta)$ para minimizar a capacidade do canal (obs: coloque em ordem crescente de $\alpha$): $(\alpha_3,\beta_3)$, $(\alpha_4,\beta_4)$, $(\alpha_5,\beta_5)$.
+
+Answerlist
+---------------
+* $P(Y=0)$
+* $P(Y=1)$
+* $\alpha_1=$
+* $\beta_1=$
+* $\alpha_2=$
+* $\beta_2=$
+* $\alpha_3=$
+* $\beta_3=$
+* $\alpha_4=$
+* $\beta_4=$
+* $\alpha_5=$
+* $\beta_5=$
+
+Solution
+========
+
+$$
+P(Y=0) = P(X=0) (1 - \alpha) + (1 - P(X=0)) \beta = `r px0` (1 - `r alpha`) + (1 - `r px0`) `r beta` = `r py0`
+$$
+
+$$
+P(Y=1) = P(X=0) \alpha + (1 - P(X=0))(1 - \beta) = `r px0` \times `r alpha` + (1 - `r px0`)(1 - `r beta`) = `r py1`
+$$
+
+A capacidade do canal será maximizada quando $(\alpha,\beta)=(0,0)$ ou $(\alpha,\beta)=(1,1)$. Nestas situações,
+teremos uma saída $Y$ sempre igual à entrada $X$ ou uma saída $Y$ sempre igual a $(1-X)$. A informação mútua entre $X$ e $Y$ será máxima,
+o que será a capacidade do canal.
+
+Para as seguintes escolhas de $(\alpha,\beta)$ termos a capacidade de canal nula e, por tanto, será mínima:
+$(0,1)$, $(0.5, 0.5)$ e $(1,0)$. Nestes casos, saber a saída nada nos diz sobre a entrada. Quando 
+$(\alpha,\beta) = (0.5, 0.5)$, a troca e não-troca de bit são igualmente prováveis. Quando 
+$(\alpha,\beta) = (0,1) \text{ou} (1,0)$ só teremos um símbolo sempre na saída, não fornecendo assim
+informação alguma sobre a entrada.
+Note ainda que, para pares $(\alpha,\beta)$ tais que $\alpha + \beta = 1$, teremos uma distribuição
+na saída independente da entrada. Desta forma, a informação mútua será nula e, consequentemente,
+a capacidade do canal será nula.
+(Obs:  Caso tenha escolhido outro par, satisfazendo $\alpha + \beta = 1$, favor contactar  para que seja realizada a correção manual.)
+
+Answerlist
+----------
+* $P(Y=0) = `r py0`$
+* $P(Y=1) = `r py1`$
+* $\alpha_1=0$
+* $\beta_1=0$
+* $\alpha_2=1$
+* $\beta_2=1$
+* $\alpha_3=0$
+* $\beta_3=1$
+* $\alpha_4=0.5$
+* $\beta_4=0.5$
+* $\alpha_5=1$
+* $\beta_5=0$
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num|num|num|num|num|num|num|num|num
+exsolution: `r py0`|`r py1`|0|0|1|1|0|1|0.5|0.5|1|0
+exname: canal-assimetrico
+extol: 0.01
+expoints: 2|2|1|1|1|1|1|1|1|1|1|1

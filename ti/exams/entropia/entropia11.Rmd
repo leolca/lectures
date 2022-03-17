@@ -1,0 +1,40 @@
+Question
+========
+<!--
+source: https://www.cl.cam.ac.uk/teaching/1920/InfoTheory/Exercises1-4_with_Solns.pdf
+-->
+
+Suponha que, acima dos 80 anos, temos 3 vezes mais mulheres do que homens.
+Quanta informação em bits ganhamos ao saber que uma determinada pessoa acima dos 80 anos é homem?
+
+Answerlist
+---------------
+* Ganho de informação (em bits):
+
+Solution
+========
+Do enunciado do problema, podemos concluir que:
+$$
+p(\text{mulher}|\text{idoso}) = 3 p(\text{homem}|\text{idoso})
+$$
+Temos ainda que $p(\text{mulher}|\text{idoso}) + p(\text{homem}|\text{idoso}) = 1$. Logo,
+podemos concluir que $p(\text{homem}|\text{idoso}) = 1/4$ e $p(\text{mulher}|\text{idoso}) = 3/4$.
+Ao observarmos um evento, a quantidade de informação adquirida é dada pelo
+$-\log_2$ da probabilidade deste evento. 
+Neste caso, ao observarmos que uma determinada pessoa idosa é um homem,
+ganhamos $-\log_2 1/4 = 2$ bits de informação.
+
+<!--
+Answerlist
+----------
+* 2
+-->
+
+
+Meta-information
+================
+extype: num
+exsolution: 2
+exname: old-entropy
+extol: 0.001
+expoints: 1

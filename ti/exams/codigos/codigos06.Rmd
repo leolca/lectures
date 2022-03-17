@@ -1,0 +1,150 @@
+Question
+========
+<!--
+https://www.cl.cam.ac.uk/teaching/1920/InfoTheory/Exercises1-4_with_Solns.pdf
+-->
+Seja uma variável aleatória $X$ no alfabeto $\mathcal{X} = \{ \alpha, \beta, \gamma, \delta, \epsilon \}$.
+Considere duas distribuições de probabilidade $p(x)$ e $q(x)$ sobre este alfabeto e considere dois
+esquemas de codificação $C_1(x)$ e $C_2(x)$ para esta v.a., conforme dado na tabela a seguir:
+
+| símbolo    | $p(x)$ | $q(x)$ | $C_1(x)$ | $C_2(x)$ |
+|:----------:|:------:|-------:|:--------:|:--------:|
+| $\alpha$   |  1/2   |  1/2   |     0    |     0    |
+| $\beta$    |  1/4   |  1/8   |    10    |   100    |
+| $\gamma$   |  1/8   |  1/8   |   110    |   101    |
+| $\delta$   |  1/16  |  1/8   |  1110    |   110    |
+| $\epsilon$ |  1/16  |  1/8   |  1111    |   111    |
+
+Calcule e responda o que se pede a seguir:
+
+* as entropias $H(p)$ e $H(q)$;
+* as entropias relativas $D(p||q)$ e $D(q||p)$;
+* $L_p(C_1)$ e $L_q(C_1)$, o comprimento médio de $C_1$, sob $p$ e $q$;
+* $L_p(C_2)$ e $L_q(C_2)$, o comprimento médio de $C_2$, sob $p$ e $q$;
+* o código $C_1$ é ótimo para $p$?
+* o código $C_1$ é ótimo para $q$?
+* o código $C_2$ é ótimo para $p$?
+* o código $C_2$ é ótimo para $q$?
+* assuma o código $C_2$ quando a distribuição é $p$, o comprimento médio excede a entropia em quanto? este valor é maior, menor ou igual a $D(p||q)$?
+* assuma o código $C_1$ quando a distribuição é $q$, o comprimento médio excede a entropia em quanto? este valor é maior, menor ou igual a $D(q||p)$?
+
+
+Answerlist
+---------------
+* $H(p)$
+* $H(q)$
+* $D(p||q)$
+* $D(q||p)$
+* $L_p(C_1)$
+* $L_q(C_1)$
+* $L_p(C_2)$
+* $L_q(C_2)$
+* $C_1$ é ótimo para $p$
+* $C_1$ não é ótimo para $p$
+* $C_1$ é ótimo para $q$
+* $C_1$ não é ótimo para $q$
+* $C_2$ é ótimo para $p$
+* $C_2$ não é ótimo para $p$
+* $C_2$ é ótimo para $q$
+* $C_2$ não é ótimo para $q$
+* $L_p(C_2) - H(p) > D(p||q)$
+* $L_p(C_2) - H(p) = D(p||q)$?
+* $L_p(C_2) - H(p) < D(p||q)$
+* $L_q(C_1) - H(q) > D(q||p)$
+* $L_q(C_1) - H(q) = D(q||p)$
+* $L_q(C_1) - H(q) < D(q||p)$
+* $C_1$ é univocamente decodificável
+* $C_1$ não é univocamente decodificável
+* $C_2$ é univocamente decodificáveis
+* $C_2$ não é univocamente decodificáveis
+
+<!-- $l_p(C_2) - H(p) \gtreqqless D(p||q)$? -->
+
+
+Solution
+========
+$$
+H(p) = -\sum_i p_i \log p_i = 1/2 + 2/4 + 3/8 + 4/16 + 4/16 = \frac{15}{8} \text{bits} = 1 \frac{7}{8} \text{bits}
+$$
+
+$$
+H(q) = -\sum_i q_i \log q_1 = 1/2 + 4 \times 3/8 = 2 \text{bits}
+$$
+
+$$
+D(p||q) = \sum_i p_i \log \frac{p_i}{q_i} = \frac{1}{2} \times \log(1) + \frac{1}{4} \log(2) + \frac{1}{8}\log(1) + 2 \times \frac{1}{16} \log \frac{1}{2} = 0 + \frac{1}{4} + 0 - \frac{1}{8} = \frac{1}{8} \text{bit} 
+$$
+
+$$
+D(q||p) = \sum_i q_i \log \frac{q_i}{p_i} = \frac{1}{2} \times \log(1) + \frac{1}{8}\log\frac{1}{2} +  \frac{1}{8}\log 1 + 2 \times \frac{1}{8}\log 2 = 0 - \frac{1}{8} + 0 + \frac{1}{4} = \frac{1}{8} \text{bit}
+$$
+
+$$
+L_p(C_1) = \frac{1}{2} + \frac{2}{4} + \frac{3}{8} + \frac{4}{16} + \frac{4}{16} = \frac{15}{8} 
+$$
+
+$$
+L_q(C_1) = \frac{1}{2} + \frac{2}{8} + \frac{3}{8} + \frac{4}{8} + \frac{4}{8} = \frac{17}{8}
+$$
+
+$$
+L_p(C_2) = \frac{1}{2} + \frac{3}{4} + \frac{3}{8} + \frac{3}{16} + \frac{3}{16} = 2 
+$$
+
+$$
+L_q(C_2) = \frac{1}{2} + 4 \times \frac{3}{8} = \frac{16}{8} = 2
+$$
+
+O código $C_1$ é ótimo para $p$ uma vez que $L_p(C_1) = H(p)$.
+
+O código $C_1$ não é ótimo para $q$ uma vez que $L_q(C_1) > H(q)$.
+
+O código $C_2$ não é ótimo para $p$ uma vez que $L_p(C_2) > H(p)$. 
+
+O código $C_2$ é ótimo para $q$ uma vez que $L_q(C_2) = H(q)$.
+
+$L_p(C_2) - H(p) = D(p||q)$, ou seja, o custo extra de se codificar com a distribuição errada.
+
+$L_q(C_1) - H(q) = D(q||p)$, ou seja, o custo extra de se codificar com a distribuição errada.
+
+Ambos códigos $C_1$ e $C_2$ são univocamente decodificáveis.
+
+<!--
+Answerlist
+---------------
+* 1.875 
+* 2
+* 0.125
+* 0.125 
+* 1.875
+* 2.125
+* 2
+* 2
+* Sim
+* Não
+* Sim
+* Não
+* Sim
+* Não
+* Sim
+* Não
+* $>$
+* $=$
+* $<$
+* $>$
+* $=$
+* $<$
+* Sim
+* Não
+* Sim
+* Não
+-->
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num|num|num|num|num|schoice|schoice|schoice|schoice|schoice|schoice|schoice|schoice
+exsolution: 1.875|2|0.125|0.125|1.875|2.125|2|2|10|01|01|10|010|010|10|10
+exname: ex-codes
+extol: 0.001
+expoints: 1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1

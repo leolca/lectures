@@ -102,12 +102,36 @@ elearn_exam <- c("codigos/codigos01.Rmd","codigos/codigos03.Rmd","codigos/codigo
 exams2html(elearn_exam, n=1, name="prova4", encoding="UTF-8")
 exams2moodle(elearn_exam, n=nalunos, name="2021-2-prova-ti-04", encoding="UTF-8")
 
-
-
 library("exams")
 nalunos <- 1
 elearn_exam <- c("canal/canal01.Rmd","canal/canal03.Rmd","canal/hamming01.Rmd")
 exams2html(elearn_exam, n=1, name="prova5", encoding="UTF-8")
 exams2moodle(elearn_exam, n=nalunos, name="2021-2-prova-ti-05", encoding="UTF-8")
+
+
+
+######### 2022/1 #########
+library("exams")
+nalunos <- 10
+
+elearn_exam <- c("entropia/entropia01.Rmd", "entropia/entropia04.Rmd", "entropia/entropia06.Rmd", "entropia/entropia11.Rmd")
+exams2html(elearn_exam, n=1, name="prova1", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="2022-1-prova-ti-01", encoding="UTF-8")
+
+elearn_exam <- c("tipo/tipo01.Rmd","tipo/tipo03.Rmd","tipo/tipo04.Rmd")
+exams2html(elearn_exam, n=1, name="prova2", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="2022-1-prova-ti-02", encoding="UTF-8")
+
+elearn_exam <- c("markov/markov02.Rmd","markov/markov03.Rmd")
+exams2html(elearn_exam, n=1, name="prova3", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="2022-1-prova-ti-03", encoding="UTF-8")
+
+elearn_exam <- c("codigos/codigos01.Rmd","codigos/codigos03.Rmd","codigos/codigos06.Rmd")
+exams2html(elearn_exam, n=1, name="prova4", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="2022-1-prova-ti-04", encoding="UTF-8")
+
+elearn_exam <- c("canal/canal02.Rmd","canal/canal04.Rmd","canal/hamming01.Rmd")
+exams2html(elearn_exam, n=1, name="prova5", encoding="UTF-8")
+exams2moodle(elearn_exam, n=nalunos, name="2022-1-prova-ti-05", encoding="UTF-8")
 
 
