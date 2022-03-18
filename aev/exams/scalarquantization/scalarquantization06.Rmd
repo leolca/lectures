@@ -1,0 +1,30 @@
+Question
+========
+Para um quantizador Lloyd-Max, com relação à variância da entrada, podemos dizer que a variância da saída é
+
+Answerlist
+----------
+* sempre menor ou igual
+* sempre igual
+* sempre maior ou igual
+* sempre maior
+* nenhuma das opções
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: lloydmax2
+exshuffle: 5
+expoints: 1

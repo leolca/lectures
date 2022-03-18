@@ -1,0 +1,30 @@
+Question
+========
+Em uma quantização vetorial, o conjunto de $N$ vetores utilizados pelo quantizador é chamado de  
+
+Answerlist
+----------
+* codebook
+* autovetores
+* vetores de codificação
+* diretório
+* nenhuma das opções
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: vectorquantization06
+exshuffle: 5
+expoints: 1

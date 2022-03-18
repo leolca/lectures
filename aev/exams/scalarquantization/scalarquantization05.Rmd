@@ -1,0 +1,28 @@
+Question
+========
+A média de valores da entrada e da saída de um quantizador Lloyd-Max são
+
+Answerlist
+----------
+* iguais.
+* diferente.
+* nulas.
+* nenhuma das opções.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 1000
+exname: lloydmax1
+exshuffle: 4
+expoints: 1

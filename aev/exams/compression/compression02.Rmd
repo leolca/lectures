@@ -1,0 +1,28 @@
+Question
+========
+Com relação aos sinais multimídia: 
+
+Answerlist
+----------
+* A compressão deles utiliza compressão com perdas e sem perdas.
+* A compressão deles utiliza apenas compressão com perdas.
+* A compressão deles utiliza apenas compressão sem perdas.
+* Não pode haver compressão alguma dos dados.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 1000
+exname: compressao2
+exshuffle: 4
+expoints: 1

@@ -1,0 +1,28 @@
+Question
+========
+Qual afirmativa é correta na comparação de quantizador escalar e vetorial?
+
+Answerlist
+----------
+* Um quantizador vetorial poderá ter uma taxa de distorção menor ou igual ao melhor quantizador escalar.
+* A quantização vetorial melhora a performance apenas de fontes sem memória. Para fontes iid, o melhor quantizador escalar terá a mesma eficiência que o melhor quantizador vetorial.
+* O quantizador vetorial não é capaz de obter uma melhora na performance de distorção, em relação a uma quantizador escalar. Entretanto, o quantizador vetorial possui menor custo.
+* Nenhuma das opções.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 1000
+exname: quantizacaovetorialescalar
+exshuffle: 4
+expoints: 1

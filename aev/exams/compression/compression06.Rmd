@@ -1,0 +1,32 @@
+Question
+========
+Uma imagem digital em tons de cinza sem compressão com 256 linhas de 256 pixels para ser armazenada requer
+
+Answerlist
+----------
+* 65.536 bytes 
+* 65.536 bits
+* 196.608 bytes
+* 196.608 bits
+* 524.288 bytes
+* 524.288 bits
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 100000
+exname: compressao6
+exshuffle: 5
+expoints: 1

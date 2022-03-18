@@ -1,0 +1,28 @@
+Question
+========
+A compressão com perdas:
+
+Answerlist
+----------
+* Pode ser utilizada quando não é necessária a representação exata dos dados, sendo tolerável ocorrer distorção.
+* Resulta em dados que não podem mais serem utilizados.
+* Não pode ser utilizada conjuntamente com uma compressão sem perdas.
+* Gera dados com informação degradada, mas é ainda possível recuperar a informação origial sem erros.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 1000
+exname: compressao3
+exshuffle: 4
+expoints: 1

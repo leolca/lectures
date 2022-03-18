@@ -1,0 +1,32 @@
+Question
+========
+O objetivo da compressão de dados é:
+
+Answerlist
+----------
+* Reduzir o tamanho de arquivos.
+* Representar os dados de forma segura.
+* Evitar a ocorrência de erros nos dados.
+* Evitar o congestionamento de pacotes na rede.
+* Aumentar a taxa de envio de informação na rede.
+* Todas opções estão corretas.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 100000
+exname: compressao
+exshuffle: 5
+expoints: 1

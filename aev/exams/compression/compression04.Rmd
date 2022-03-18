@@ -1,0 +1,28 @@
+Question
+========
+A compressão sem perdas em sinais multimídia:
+
+Answerlist
+----------
+* Pode ser utilizada após uma etapa de compressão com perdas.
+* Deve ser utilizada antes da compressão com perdas.
+* Não pode ser utilizada.
+* Deve ser obrigatoriamente utilizada.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 1000
+exname: compressao4
+exshuffle: 4
+expoints: 1

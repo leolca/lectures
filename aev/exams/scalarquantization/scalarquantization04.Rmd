@@ -1,0 +1,30 @@
+Question
+========
+O processo de representar um conjunto grande (possivelmente infinito) de valores através de um conjunto menor é chamado de
+
+Answerlist
+----------
+* Quantização.
+* Correlação.
+* Quantização não uniforme.
+* Modelagem.
+* Codificação de entropia.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: quantizacao1
+exshuffle: 5
+expoints: 1

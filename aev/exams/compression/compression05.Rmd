@@ -1,0 +1,28 @@
+Question
+========
+Sobre compressão com e sem perdas, podemos afirmar que:
+
+Answerlist
+----------
+* A compressão sem perdas é mais adequada para situações em que a perda de informação é tolerável, especialmente se não for percebida pelas pessoas.
+* A compressão sem perdas só é utilizada em situações em que a compressão com perdas não pode ser utilizada.
+* Ambos tipos de compressão (com e sem perdas) irá resultar em perda de informação do sinal original.
+* Nenhuma das formas de compressão (com ou sem perdas) é capaz de reduzir o número de bits necessários para representar um arquivo.
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 1000
+exname: compressao5
+exshuffle: 4
+expoints: 1

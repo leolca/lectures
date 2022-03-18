@@ -1,0 +1,30 @@
+Question
+========
+Um quantizador vetorial é raramente utilizado em aplicações práticas pois
+
+Answerlist
+----------
+* a complexidade computacional para codificação é muito maior que a complexidade computacional de um quantizador escalar
+* a eficiência da codificação é aproximadamente a mesma da eficiência de um quantizador escalar
+* é necessário empregar a codificação Huffman dos índices, o que é extremamente complexo
+* raramente lidamos com sinais vetoriais 
+* nenhuma das opções
+
+Solution
+========
+
+Answerlist
+----------
+* True.
+* False.
+* False.
+* False.
+* False.
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: vetorialquantz08
+exshuffle: 5
+expoints: 1
