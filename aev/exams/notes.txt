@@ -102,3 +102,43 @@ exams2html(elearn_exam, n = 1, name = "aev-prova-05", encoding = "UTF-8")
 
 
 
+
+
+#### 2022-1 ####
+# prova 01
+library("exams")
+elearn_exam <- c("compression/compression01.Rmd", "compression/compression06.Rmd", "rle/rle04.Rmd", "scalarquantization/scalarquantization01.Rmd", "scalarquantization/scalarquantization05.Rmd")
+exams2moodle(elearn_exam, n = 4, name = "202201-prova-aev-01", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "202201-prova-aev-01", encoding = "UTF-8")
+
+# prova 02
+library("exams")
+elearn_exam <- c("vectorquantization/vecquantz06.Rmd","vectorquantization/vecquantz05.Rmd","scalarquantization/companding01.Rmd","sampling/resampling01.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "202201-prova-aev-02", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "202201-prova-aev-02", encoding = "UTF-8")
+
+# prova 03
+library("exams")
+elearn_exam <- c("dpcm/dpcm01.Rmd", "voice/pitch02.Rmd", "lpc/lpc02.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "202201-prova-aev-03", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "202201-prova-aev-03", encoding = "UTF-8")
+
+# prova 04
+library("exams")
+elearn_exam <- c("dct/dct02.Rmd","dct/dct03.Rmd","jpeg/jpeg03.Rmd","pca/pca03.Rmd")
+exams2moodle(elearn_exam, n = 1, name = "202201-prova-aev-04", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "202201-prova-aev-04", encoding = "UTF-8")
+
+### PROVA 05
+library("exams")
+elearn_exam <- c("sensorial/visao01.Rmd", "sensorial/audicao01.Rmd", "video/video01.Rmd", "wavelets/wavelets01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "202201-prova-aev-05", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "202201-prova-aev-05", encoding = "UTF-8")
+
+### PROVA SUBSTITUTIVA
+library("exams")
+elearn_exam <- c("compression/compression02.Rmd", "compression/compression03.Rmd", "compression/compression04.Rmd", "compression/compression05.Rmd", "scalarquantization/dithering01.Rmd", "scalarquantization/scalarquantization06.Rmd", "dpcm/dpcm02.Rmd", "vectorquantization/vecquantz07.Rmd", "vectorquantization/vecquantz08.Rmd", "dct/dct01.Rmd", "jpeg/jpeg01.Rmd")
+exams2moodle(elearn_exam, n = 5, name = "202201-prova-aev-subs", encoding = "UTF-8")
+exams2html(elearn_exam, n = 1, name = "202201-prova-aev-subs", encoding = "UTF-8")
+
+
