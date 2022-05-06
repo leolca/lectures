@@ -9,7 +9,7 @@ Answerlist
 * 196.608 bytes
 * 196.608 bits
 * 524.288 bytes
-* 524.288 bits
+* 1.572.864 bits
 
 Solution
 ========
