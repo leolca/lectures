@@ -51,6 +51,6 @@ extype: cloze
 exclozetype: num|num|num
 exsolution: `r fmt(0)`|`r fmt(Hmax)`|`r fmt(H2adic)`
 exname: entropia-min-max-2adic
-extol: 0.005
+extol: 0.01
 expoints: 1|1|1
 
