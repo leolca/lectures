@@ -1,0 +1,13 @@
+% https://tex.stackexchange.com/questions/625478/beamer-footnote-in-a-slide-note
+\makeatletter
+\addtobeamertemplate{note page}{}{
+    \begingroup
+    \vfill
+    \usebeamercolor*[fg]{footnote}%
+    \footnoterule%
+    \unvbox \beamer@footins%
+    \global\setbox\beamer@footins=\box\voidb@x%
+    \endgroup  
+    \vskip0.2cm
+}
+\makeatother
