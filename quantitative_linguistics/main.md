@@ -1,38 +1,34 @@
 ---
 title: "Linguistíca Quantitativa"
 author: Leonardo Araujo
-date: 9 de Novembro de 2022
+date: 23 de Novembro de 2022
 bibliography: references.bib
 link-citations: yes
 eqnos-cleveref: True
 eqnos-plus-name: Eq.
-lang: br
+lang: pt-BR
 output:
   beamer_presentation:
-      keep_tex: no
+      keep_tex: yes
       theme: metropolis
-      latex_engine: xelatex
+      latex_engine: lualatex
+      toc: false
       slide_level: 2
       incremental: no
-      pandoc_args: ["--filter", "pandoc-eqnos"]
+      pandoc_args: ["--filter", "pandoc-eqnos", "--strip-comments"]
 classoption: "aspectratio=169"
-mainfont: DejaVuSerif.ttf
-sansfont: DejaVuSans.ttf
-monofont: DejaVuSansMono.ttf
-mathfont: texgyredejavu-math.otf
 header-includes:
   - \setbeameroption{show notes}  
-  - \setbeamerfont{note page}{size=\scriptsize}
+  - \setbeamerfont{note page}{size=\footnotesize}
   - \hypersetup{colorlinks,citecolor=orange,filecolor=red,linkcolor=brown,urlcolor=blue}
   - \input{header.tex}
 ---
 
-<!-- copile with: pandoc -t beamer main.md --pdf-engine=xelatex --bibliography references.bib -o main.pdf 
- pandoc -t beamer main.md --pdf-engine=xelatex --bibliography references.bib --table-of-contents --standalone --slide-level=2 --filter pandoc-eqnos -o main.pdf 
- pandoc -t beamer main.md --pdf-engine=xelatex --bibliography references.bib --standalone --slide-level=2 --filter pandoc-eqnos -o main.pdf 
- copile with: Rscript -e "rmarkdown::render('main.md', clean=TRUE)"
- pdfpc main.pdf
- -->
+<!-- copile with: pandoc -t beamer main.md --pdf-engine=xelatex --bibliography references.bib -o main.pdf -->
+<!-- pandoc -t beamer main.md --pdf-engine=xelatex --bibliography references.bib --table-of-contents --standalone --slide-level=2 --filter pandoc-eqnos -o main.pdf -->
+<!-- pandoc -t beamer main.md --pdf-engine=xelatex --bibliography references.bib --standalone --slide-level=2 --filter pandoc-eqnos -o main.pdf -->
+<!-- copile with: Rscript -e "rmarkdown::render('main.md', clean=TRUE)" -->
+<!-- pdfpc main.pdf -->
 
 
 # Linguística Quantitativa enquanto ciência
@@ -41,16 +37,50 @@ header-includes:
 
 * Lei científica
 
+&nbsp;
+
+> Uma lei científica é um princípio básico, generalização ou regra que 
+> se mantém verdadeira universalmente sob condições particulares [@mccomas2014].
+
+<!-- A scientific law is a basic principle, generalization, regularity or rule that holds true -->
+<!--universally under particular conditions. -->
+
+Exemplos:
+
+- Lei da gravidade (física)
+- Lei periódica (química)
+- Leis de Mendel (biologia)
+
+::: notes
+Uma lei, em ciência, é uma hipótese sistematicamente conectada a outras hipóteses em um campo do conhecimento
+e, ao mesmo tempo, corroborada por dados empíricos. Uma lei é dita universal quando é valida a todo tempo,
+em qualquer lugar e para todos objetos sob seu escopo.
+
+A lei da gravidade prediz a força de atração entre copos com base em suas massas e distância entre eles.
+Entretanto, não explica o motivo da existência de tal atração ou busca explicar o motivo pelo qual tal
+comportamento é descrito pela equação $F = G\frac{m_1 m_2}{r^2}$.
+
+A lei periódica estabelece que certas propriedades físicas e químicas dos elementos serão recorrentes
+de maneira sistemática e previsível quando os elementos são ordenados de forma crescente de seus número atômico.
+As principais propriedades em que observamos uma tendência devido à lei da periodicidade são: raio atômico,
+raio iônico, energia de ionização, eletronegatividade e eletroafinidade. 
+
+As leis de Mendel (ou leis da herança) são as três leis a seguir: 
+1) lei da dominância (quando pais com traços puros e contrastantes são cruzados, apenas uma forma de traço aparece na próxima geração; assim, os descendentes híbridos exibirão apenas a característica dominante no fenótipo); 
+2) lei da segregação (uma única característica associada a um único gene é herdada); e 
+3) lei da variação independente (os alelos de dois (ou mais) genes diferentes são distribuídos para os gametas independentemente um do outro).
+
+:::
+
+---
+
+## Teoria
 
 * Teoria: um sistema de leis
   - teorias axiomáticas
   - teorias empíricas 
 
 ::: notes 
-Uma lei, em ciência, é uma hipótese sistematicamente conectada a outras hipóteses em um campo do conhecimento
-e, ao mesmo tempo, corroborada por dados empíricos. Uma lei é dita universal quando é valida a todo tempo,
-em qualquer lugar e para todos objetos sob seu escopo.
-
 Compreendemos ciência como um esforço sistemático de construir e organizar conhecimento na forma de 
 explicações e predições testáveis sobre o universo.
 
@@ -64,6 +94,51 @@ A filosofia da ciência distingue dois tipos de teorias: 1) as teorias axiomáti
 2) as teorias empíricas da ciência factual (faz afirmações sobre partes do mundo; a veracidade dependerá da correção interna e correspondência com fatos da realidade; 
 teorias empíricas devem também ter um núcleo axiomático).
 :::
+
+<!-- https://timharford.com/2022/09/cautionary-tales-a-leap-of-faith-from-the-eiffel-tower/ -->
+<!-- - Franz Reichelt - parachute suit from the Eiffel Tower -->
+<!-- - Barry Marshall working with Robin Warren discovered the gut could be overrun by Helicobacter pylori bacteria. -->
+<!--  The cure, he realized, was readily available: anti­biotics. But mainstream gastroenterologists were dismissive, holding on to the old idea that ulcers were caused by stress.-->
+<!--  Barry Marshall ran an experiment on the only human patient he could ethically recruit: himself. He took some H. pylori from the gut of an ailing patient, stirred it into a broth, and drank it. -->
+<!--  As the days passed, he developed gastritis, the precursor to an ulcer: He started vomiting, his breath began to stink, and he felt sick and exhausted. Back in the lab, he biopsied his own gut, culturing H. pylori and proving unequivocally that bacteria were the underlying cause of ulcers. -->
+<!--  https://www.discovermagazine.com/health/the-doctor-who-drank-infectious-broth-gave-himself-an-ulcer-and-solved-a-medical-mystery -->
+<!--- John Hunter - inoculated himself with gonorrheal pus from a patient and also aquired syphilis. -->
+<!--  18th century British surgeon John Hunter, in attempting to acquire (for study purposes) gonorrhea, “inoculated himself with gonorrheal pus from a patient” [1, p. 402].  -->
+<!--  However, because the source patient was coinfected, the recipient of the inoculation (Hunter, according to Ross) ended up with syphilis, in addition to the intended gonorrhea   -->
+<!--  https://academic.oup.com/cid/article/41/1/128/324493 -->
+<!--- Max von Pettenkofer - was wrong in his belief that the cholera bacillus could alone cause the disease. -->
+<!--  It was Pettenkofer’s central belief that the cholera germ had to transform or “ferment” under these favorable circumstances before it could become contagious and cause an epidemic.  -->
+<!--  Isolated from these circumstances, the cholera germ could not, in his view, cause disease.  -->
+<!--  Pettenkofer famously demonstrated the strength of this belief in 1892 by drinking a quantity of water infected by pure cultures of the cholera bacillus.  -->
+<!--  Though he did end up getting somewhat ill, he did not develop a full-blown case of cholera. -->
+<!--  https://curiosity.lib.harvard.edu/contagion/feature/max-von-pettenkofer-1818-1901 -->
+<!--- Werner Forssmann - tube ballom to measure pressure in the heart -->
+<!--  In 1929 the physician Werner Forssmann saw a picture in a book showing how a tube was inserted into the heart of a horse through a vein.  -->
+<!--  A balloon at the other end of the tube showed changes in pressure. Forssmann was convinced that a similar experiment could be carried out on people.  -->
+<!--  Despite the fact that his boss forbade him, Forssmann conducted the experiment on himself.  -->
+<!--  From the crook of his arm he inserted a thin catheter through a vein into his heart and took an X-ray photo. The experiment paved the way for many types of heart studies. -->
+<!--  https://www.nobelprize.org/prizes/medicine/1956/forssmann/facts/ -->
+<!--- Department of Physiological Hygiene. Run by a man named Ancel Keys. -->
+<!--  Lewis Terman's 1500 gifted children -->
+<!--  Termite. Mississsipi. K ration (balanced, vitamin-rich meal). -->
+<!--  What happens to people . . . when for months on end you deny them . . . food?  -->
+<!--  In Alabama, between the 1930s and the 1970s, the Public Health Service launched the Tuskegee Syphilis Study. Where a group of African American men were tricked into signing up for what they thought was medical treatment–when in fact all the researchers wanted to do was to find out what happened when you let untreated syphilis run its course. -->
+<!--  In the early 1960s, the Yale psychologist Stanley Milgram ran his infamous obedience study. Where Milgram deceived otherwise unsuspecting subjects into thinking that they were delivering high-voltage electric shocks to someone they’d never met. -->
+<!-- What was the effect of long-term hunger on physical well-being? On psychological health? And what was the best way to bring the undernourished back to health? What was more important: How much you fed someone? Or what you fed someone? -->
+<!--  So Keys designs an experiment. He would need 36 subjects for at least a year. The first three months would be the control period. Each research subject would be stabilized at what Keys estimated to be their correct weight. Three full meals a day. Intake matching outtake. Then, after stabilization, would come six months of severe calorie restriction. With the goal that each man lose 25 percent of his ideal weight. Exercise would be mandatory throughout the study: 22 miles a week of walking, up and down the Mississippi, or through downtown Minneapolis. All through the long Minnesota winter and through the following summer. Each participant tested on a regular basis: blood samples, sperm samples. Body fat. Blood volumes. The men would be asked to keep journals and record their thoughts and dreams. -->
+<!--  And then—after six months of starvation–three months of recovery. The crucial part. Keys planned to test out different rehabilitation diets, with varying amounts of calories, protein and vitamins. -->
+<!-- In 1950, five years after the study ended, Keys published The Biology of Human Starvation. -->
+<!-- To this day, that book helps doctors understand everything from famine relief to eating disorders.  -->
+<!-- If you’ve ever used the terms “metabolism,” “intermittent fasting,” “calories in and calories out,” then you’re talking about concepts that go back to the Keys experiment. -->
+
+<!-- In Euclid's Geometry, the main axioms/postulates are: 
+     -  Given any two distinct points, there is a line that contains them.
+     -  Any line segment can be extended to an infinite line.
+     -  Given a point and a radius, there is a circle with center in that point and that radius.
+     -  All right angles are equal to one another.
+     -  If a straight line falling on two straight lines makes the interior angles on the same side less than two right angles, the two straight lines, if produced indefinitely, meet on that side on which are the angles less than the two right angles. (The parallel postulate).
+-->
+
 
 ---
 
@@ -101,14 +176,21 @@ e criado um modelo teórico para explicar suas observações e propor uma formul
 
 &nbsp;
 
-Zipf propôs as ideias de 
+Zipf propôs as ideias de
+
 - princípio do esforço mínimo (esforço mínimo individual e esforço mínimo coletivo)
 - forças de unificação e diversificação
+
 Para o falante, o princípio da economia busca uma maior unificação e simplificação (o que dificulta a tarefa do ouvinte).
 Para o ouvinte, o princípio da economia busca diversificação (o que simplifica sua tarefa de decodificação da mensagem, mas dificulta a tarefa do falante).
+
 :::
 
----
+
+
+
+
+
 
 # Leis da Linguística Quantitativa
 
@@ -138,7 +220,7 @@ sendo 29.899 palavras diferentes.
   única palavras com sete formas diferentes).
 
 - Zipf observou uma correlação entre o número de diferentes palavras e sua frequência de uso, 
-  aproximando-se à equação de uma hipérbole equilátera (Dizemos que uma hipérbole é equilátera se o comprimento do eixo focal é igual ao comprimento do eixo não-focal).
+  aproximando-se à equação de uma hipérbole equilátera\footnote{Dizemos que uma hipérbole é equilátera se o comprimento do eixo focal é igual ao comprimento do eixo não-focal.} $y=1/x$ (lei de Zipf inversa).
 :::
 
 ---
@@ -160,7 +242,7 @@ ocorreram três vezes (tris legomenon).
 
 ---
 
-![Beowulf a T.S. Eliot. Distribuição rank-frequência de palavras em 15 escritores da língua inglesa, do inglês antigo ao atual.](zipf-fig3-14.png){width=50%}
+![Beowulf a T.S. Eliot. Distribuição rank-frequência de palavras em 15 escritores da língua inglesa, do inglês antigo ao atual.](zipf-fig3-14.png){width=70%}
 
 ---
 
@@ -212,13 +294,45 @@ e muitos outros.
 
 ---
 
+![Distribuição cumulativa dos tempos calmos (entre terremotos) na California [@suzuki2005].](abe-earthquakes.png){width=100%}
+
+---
+
+![Distribuição do tempo entre terremotos (tempo de primeiro retorno e todos) [@perbak;@ito1990earthquakes].](bak-earthquakes.png){width=50%}
+
+---
+
+![Distribuição da magnitude de terremotos. Os pontos representam o número de terremotos $N_c$ com magnitude maior que uma determinada magnitude $m$. A figura (b) apresenta a localização dos terremotos em Nova Madrid (Missouri) nos anos de 1974 a 1983. O tamanho dos pontos representa a magnitude dos terremotos [@perbak].](bak-earthquakes2.png){width=50%}
+
+---
+
+![Distribuição cumulativa $P(x_i)$ das cidades brasileiras com população $x_i$ [@moura2006zipf].](ribeiro-pop-cidades.png){width=60%}
+
+---
+
+![Distribuição cumulativa dos preços de ações negocinadas no KOSDAQ (Korean Securities Dealers Automated Quotations) [@choi2005].](choi-koren-stock.png){width=60%}
+
+---
+
+![Distribuição de avalanches ($s$ representa o tamanho das avalanches) [@perbak].](bak-avalanches.png){width=55%}
+
+---
+
+![Distribuição de lei de potência para o número de a) páginas, b) visitantes, c) links externos e d) links internos de um site (medidas de 1997) [@huberman2002].](adamic-sites.png){width=60%}
+
+---
+
+![Sites ordenados pelo número de visitantes AOL únicos recebidos em 01/12/1997 [@huberman2002].](adamic-visitors.png){width=50%}
+
+---
+
 ![Tamanho das famílias linguísticas, segundo @grimes2000 [@wichmann2005].](wichmann2005_familysize.png){width=80%}
 
 ---
 
 ## Generalização proposta por Mandelbrot
 
-@mandelbrot1963 propôs um deslocamento no rank
+@mandelbrot1963 propôs um deslocamento para levar em consideração o achatamento observado na região do baixo ranque
 
 $$
 f \propto \frac{1}{(r + \beta)^{\alpha}}
@@ -263,6 +377,32 @@ seguiriam uma regra que não leva em consideração o significado ou função si
 
 ---
 
+## Invariância à escala
+
+![Conceito de invariância à escala. A mesma função é apresentada em diferentes escalas [@chater1999scale].](chater-invariancia-escala.png){width=50%}
+
+::: notes
+Para @chater1999scale, o sistema perceptual-motor reflerem e preservam a características de invariância a escala presentes em vários aspectos ambientais.
+Isto permite o surgimento de diversas leis da psicologia governando perceção e ação em vários domínios e espécies
+(exemplos: lei de Weber-Fechner, lei de Stevens, lei de Fitts e lei de Piéron).
+:::
+
+---
+
+## Lei de Zipf evitando sinonímia excessiva 
+
+![Lei de Zipf gerada por modelos de especialização e generalização [@manin2008zipf].](manin2008-intervals.png){width=60%}
+
+::: notes
+@manin2008zipf sugere que a lei de Zipf é resultante da organização hierárquica dos significados de palavras no espaço semântico.
+@manin2008zipf parte da proposta de matriz semântica de @guiraud1968semic em que o significado de uma palavra é representado pela superposição
+de significados elementares. @manin2008zipf propõe um modelo numérico em que o significado de palavras é associado a intervalos numéricos
+e está sujeito ao processo de generalização e especialização, sendo regido por regras simples. @manin2008zipf mostra que este modelo
+simples leva à distribuição de Zipf.
+:::
+
+---
+
 ## Maximização da informação mútua 
 
 ![Resultado de um modelo computacional onde a probabilidade dos significados é governada por estruturas internas do sistema de comunicação [@cancho2003;@cancho2007]](cancho-fig1.png){width=70%}
@@ -271,7 +411,8 @@ seguiriam uma regra que não leva em consideração o significado ou função si
 As diversas línguas diferem-se muito, mas todos tem em comum o fato de serem utilizadas para a comunicação.
 Um sistema de comunicação confiável deve maximizar a transferência de informação. Além disto,
 a comunicação falada é um processo cognitivo e, portanto, busca-se economia de energia (para o falante e ouvinte).
-A maximização da transferência de informação e minimização do custo energético do uso das palavras.
+@cancho2003 utilizam um modelo em que a comunicação visa à maximização da transferência de informação e 
+a minimização do custo energético do uso das palavras (entropia).
 :::
 
 --- 
@@ -334,7 +475,6 @@ similar ao código de @huffman1952method.
 ![Lei da brevidade para palavras (duração, número de fonemas e número de caracteres) [@Torre2019].\label{fig-brevity}](brevity.png){width=70%}
 
 ::: notes 
-\begin{footnotesize}
 Para palavras, @Torre2019 considera 3 casos para analisar a lei de brevidade:
 (1) tendência das palavras mais frequentes serem constituídas por um menor número de caracteres;
 (2) tendência das palavras mais frequentes serem constituídas por um menor número de fonemas;
@@ -349,7 +489,16 @@ utiliza o numero de caracteres.
 @Torre2019 utilizou o corpus Buckeye contendo fala de conversação de falantes nativos de inglês, 
 contendo aproximadamente $8 \times 10^5$ fonemas, $3 \times 10^5$ palavras e $5 \times 10^4$ 
 grupos respiratórios\footnote{Grupo respiratório é uma sequência de sons articulados no decorrer de uma única expiração} (breath-groups).
-\end{footnotesize}
+:::
+
+---
+
+## Lei da polissemia
+
+![Relação entre frequência e polissemia. A cor verde indica a densidade de pontos (mais escuro, maior densidade). A linha azul é a regressão não-paramétrica. Dados do corpus SemCor [@hernandez2016testing].](polysemy.png){width=40%}
+
+::: notes
+SemCor é um corpus criado pelo Universidade de Princeton, composto por 352 textos, sendo estes um subconjunto do corpus Brown para o inglês.
 :::
 
 ---
@@ -357,13 +506,19 @@ grupos respiratórios\footnote{Grupo respiratório é uma sequência de sons art
 ## Leis de polissemia e brevidade de Zipf
 
 Vários trabalhos analisaram as leis de polissemia e brevidade de Zipf
-[@zipf1935;@hernandez2016testing;@ilgen2007investigation;@cancho2018origins;@kanwal2017;@tomaschek2017word;@bentz2016zipf;@piantadosi2011word;@cancho2013compression;@strauss2007word;@sigurd2004word;@teahan2000compression].
+[@zipf1935;@zipf1945;@hernandez2016testing;@ilgen2007investigation;@cancho2018origins;@kanwal2017;@tomaschek2017word;@bentz2016zipf;@piantadosi2011word;@cancho2013compression;@strauss2007word;@sigurd2004word;@teahan2000compression].
+
+::: notes
+Estas leis são presumidamente universais por serem verificadas em todas as línguas em que foram testadas até o momento.
+Alguns estudos buscam modelar suas origens e traçar mecanismos abstratos ou princípios linguísticos que suportem sua universalidade.
+Como exemplo temos o trabalho de @cancho2013compression.
+:::
 
 ---
 
 ## Lei da Lognormalidade 
 
-Diversos estudos observam consistentemente uma distribuição lognormal para unidades fala (fonemas, palavras e grupo respitarório)
+Diversos estudos observam consistentemente uma distribuição lognormal para unidades fala (fonemas, palavras e grupo respiratório)
 [@herdan1958relation;@sayli2002duration;@rosen2005analysis;@gopinath2008modeling;@shaw2019effects;@hernandez2019linguistic;@Torre2019].
 
 <!--
@@ -525,7 +680,7 @@ $$
 
 [@altmann1983piotrowski;@altmann1983law;@best2016bibliography;@stachowski2020]
 
-@Best2016 reune uma extensa lista de publicações sobre a lei de Piotrowski.
+@Best2016 reúne uma extensa lista de publicações sobre a lei de Piotrowski.
 
 
 <!-- 
@@ -547,13 +702,11 @@ They include the replacement of an old morphological form with a new one, lexica
 
 ::: notes
 
-A variante da mudança completa é a mais básica, descrevendo a substituição completa de uma forma por outra.
+A variante da **mudança completa** é a mais básica, descrevendo a substituição completa de uma forma por outra.
 Exemplo: desaparecimento do sufixo -ov do plural genitivo dos nomes de unidades nos textos técnicos russos entre 1880 e 1920.
-
-A mudança parcial descreve mudanças que devem ser descritas pelo volume ao invés de percentual.
+A **mudança parcial** descreve mudanças que devem ser descritas pelo volume ao invés de percentual.
 Por exemplo: empréstimos de outras línguas no alemão.
-
-A variante de mudança reversível descreve uma mudança que se inicia, tem um pico e reverte-se.
+A variante de **mudança reversível** descreve uma mudança que se inicia, tem um pico e reverte-se.
 Por exemplo: epêntese do -e em verbos fortes no alemão.
 
 <!--
@@ -637,7 +790,6 @@ xlabel('rank'); ylabel('observações');
 
 
 
----
 
 # Softwares
 
@@ -692,7 +844,9 @@ fitdistrplus
 :   Autores: Marie-Laure Delignette-Muller, Christophe Dutang, Regis Pouillot, Jean-Baptiste Denis, Aurelie Siberchicot 
 :   [https://cran.r-project.org/web/packages/fitdistrplus/](https://cran.r-project.org/web/packages/fitdistrplus/)
 
----
+
+
+
 
 # Teoria
 
@@ -720,7 +874,6 @@ de sua mudança relativa $(dy/y)$; 2) uma outra variável $x$ que tenha efeito s
 
 :::
 
----
 
 
 
