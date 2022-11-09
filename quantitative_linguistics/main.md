@@ -21,6 +21,9 @@ header-includes:
   - \setbeameroption{show notes}  
   - \setbeamerfont{note page}{size=\footnotesize}
   - \hypersetup{colorlinks,citecolor=orange,filecolor=red,linkcolor=brown,urlcolor=blue}
+  - \pgfdeclareimage[height=2cm]{qrcode}{qrcode.png}
+  - \titlegraphic{\pgfuseimage{qrcode}}
+  - \usepackage{phonrule}
   - \input{header.tex}
 ---
 
@@ -40,32 +43,40 @@ header-includes:
 &nbsp;
 
 > Uma lei científica é um princípio básico, generalização ou regra que 
-> se mantém verdadeira universalmente sob condições particulares [@mccomas2014].
+> se mantém universalmente verdadeira sob condições particulares [@mccomas2014].
 
 <!-- A scientific law is a basic principle, generalization, regularity or rule that holds true -->
 <!--universally under particular conditions. -->
-
-Exemplos:
-
-- Lei da gravidade (física)
-- Lei periódica (química)
-- Leis de Mendel (biologia)
 
 ::: notes
 Uma lei, em ciência, é uma hipótese sistematicamente conectada a outras hipóteses em um campo do conhecimento
 e, ao mesmo tempo, corroborada por dados empíricos. Uma lei é dita universal quando é valida a todo tempo,
 em qualquer lugar e para todos objetos sob seu escopo.
+:::
 
-A lei da gravidade prediz a força de atração entre copos com base em suas massas e distância entre eles.
+---
+
+## Exemplos
+
+<!-- 
+- Lei da gravidade (física)
+- Lei periódica (química)
+- Leis de Mendel (biologia)
+-->
+
+![Lei da gravidade (https://www.nagwa.com/en/videos/346134549365/). Lei periódica (https://en.wikipedia.org/wiki/Periodic_table). Lei de Mendel (https://biologydictionary.net/mendels-law-of-heredity/).](laws-grav-per-men.png){width=70%}
+
+::: notes
+A **lei da gravidade** prediz a força de atração entre copos com base em suas massas e distância entre eles.
 Entretanto, não explica o motivo da existência de tal atração ou busca explicar o motivo pelo qual tal
 comportamento é descrito pela equação $F = G\frac{m_1 m_2}{r^2}$.
 
-A lei periódica estabelece que certas propriedades físicas e químicas dos elementos serão recorrentes
+A **lei periódica** estabelece que certas propriedades físicas e químicas dos elementos serão recorrentes
 de maneira sistemática e previsível quando os elementos são ordenados de forma crescente de seus número atômico.
 As principais propriedades em que observamos uma tendência devido à lei da periodicidade são: raio atômico,
 raio iônico, energia de ionização, eletronegatividade e eletroafinidade. 
 
-As leis de Mendel (ou leis da herança) são as três leis a seguir: 
+As **leis de Mendel** (ou leis da herança) são as três leis a seguir: 
 1) lei da dominância (quando pais com traços puros e contrastantes são cruzados, apenas uma forma de traço aparece na próxima geração; assim, os descendentes híbridos exibirão apenas a característica dominante no fenótipo); 
 2) lei da segregação (uma única característica associada a um único gene é herdada); e 
 3) lei da variação independente (os alelos de dois (ou mais) genes diferentes são distribuídos para os gametas independentemente um do outro).
@@ -145,6 +156,18 @@ teorias empíricas devem também ter um núcleo axiomático).
 ## Linguistíca Quantitativa
 
 * Linguística formal - matemática qualitativa (álgebra, teoria de conjuntos e lógica)
+
+\onslide<2->{
+\begin{footnotesize}
+Exemplo para o português brasileiro:
+\begin{center}
+\phonb{\phonfeat{+silábico \\ +alto \\ -arredondado}
+}{∅}{\#}{\phonfeat{+consonantal \\ +contínuo \\ +coronal}\phonfeat{+consonantal}}
+\end{center}
+A vogal [i] pode ser apagada em início de palavra quando seguida de uma sibilante e outra consoante. Por
+exemplo: esperar, estragar, espelho, estante, etc.
+\end{footnotesize}
+}
 
 * Linguística quantitativa (LQ) - propriedades quantitativas (quantidades, probabilidades e tendências)
 
@@ -242,7 +265,7 @@ ocorreram três vezes (tris legomenon).
 
 ---
 
-![Beowulf a T.S. Eliot. Distribuição rank-frequência de palavras em 15 escritores da língua inglesa, do inglês antigo ao atual.](zipf-fig3-14.png){width=70%}
+![De Beowulf a T.S. Eliot. Distribuição rank-frequência de palavras em 15 escritores da língua inglesa, do inglês antigo ao atual. Os gráficos estão deslocados na abscissa para melhor visualização.](zipf-fig3-14.png){width=70%}
 
 ---
 
@@ -270,6 +293,10 @@ línguas [@mehri2017].
 Em seu trabalho, @mehri2017 faz o ajuste da distribuição de Zipf para a tradução da bíblia em 100 línguas diferentes.
 @mehri2017 enfatiza que estruturas sintáticas distintas levam a expoentes de Zipf diferentes e analisam o comportamento 
 do coeficiente de Zipf em diferentes famílias linguísticas.
+
+Inglês e Coreano possuem coeficiente de Zipf próximos, enquanto o tailandês possui coeficiente bem diferente, o que
+pode ser explicado pela sua estrutura gramatical distinta. A lei de Zipf não é compatível com dados empíricos de
+palavras de tipo raro. @mandelbrot1966information generalizou a lei de Zipf para superar tal limitação.
 :::
 
 ---
@@ -391,7 +418,7 @@ Isto permite o surgimento de diversas leis da psicologia governando perceção e
 
 ## Lei de Zipf evitando sinonímia excessiva 
 
-![Lei de Zipf gerada por modelos de especialização e generalização [@manin2008zipf].](manin2008-intervals.png){width=60%}
+![Lei de Zipf gerada por modelos de especialização e generalização. O parâmetro $\gamma$ determina o quanto duas palavras podem diferir em extensão e ainda competir entre elas [@manin2008zipf].](manin2008-intervals.png){width=60%}
 
 ::: notes
 @manin2008zipf sugere que a lei de Zipf é resultante da organização hierárquica dos significados de palavras no espaço semântico.
@@ -399,13 +426,19 @@ Isto permite o surgimento de diversas leis da psicologia governando perceção e
 de significados elementares. @manin2008zipf propõe um modelo numérico em que o significado de palavras é associado a intervalos numéricos
 e está sujeito ao processo de generalização e especialização, sendo regido por regras simples. @manin2008zipf mostra que este modelo
 simples leva à distribuição de Zipf.
+
+Os significados de palavras são associados a subintervalos do intervalo $S=[0,1]$]. **Modelo de generalização**: Se
+não estiverem congelados, os intervalos vão crescendo paulatinamente por uma quantidade $\delta$. Quando surgir uma
+sobreposição de intervalos, um deles será escolhido aleatoriamente e será congelado. **Modelo de especialização**: Se
+dois intervalos, $r_i$ e $r_j$, se interceptam e seus comprimentos, $l_i$ e $l_j$ satisfazem $1/\gamma < l_i/l_j < \gamma$, diminui-se o
+menor intervalo pelo tamanho da sobreposição (competição entre os significados de palavras).
 :::
 
 ---
 
 ## Maximização da informação mútua 
 
-![Resultado de um modelo computacional onde a probabilidade dos significados é governada por estruturas internas do sistema de comunicação [@cancho2003;@cancho2007]](cancho-fig1.png){width=70%}
+![Resultado de um modelo computacional onde a probabilidade dos significados é governada por estruturas internas do sistema de comunicação. Função minimizada: $\Omega(\lambda) = - \lambda I(S,R) + (1-\lambda) H(S)$ [@cancho2003;@cancho2007].\label{fig-cancho-1}](cancho-fig1.png){width=70%}
 
 ::: notes
 As diversas línguas diferem-se muito, mas todos tem em comum o fato de serem utilizadas para a comunicação.
@@ -413,11 +446,19 @@ Um sistema de comunicação confiável deve maximizar a transferência de inform
 a comunicação falada é um processo cognitivo e, portanto, busca-se economia de energia (para o falante e ouvinte).
 @cancho2003 utilizam um modelo em que a comunicação visa à maximização da transferência de informação e 
 a minimização do custo energético do uso das palavras (entropia).
+
+@cancho2003;@cancho2007 propõe uma função $\Omega$ que deve ser minimizada pelo sistema de comunicação.
+Minimizar esta função será um balanço entre a maximização da transferência de comunicação ($I(S,R)$)\footnote{Informação mútua entre o sinal e o estímulo.} 
+e minimizar o custo da comunicação ($H(S)$)\footnote{Entropia associada ao sinal.}. 
+A função definida é $\Omega(\lambda) = - \lambda I(S,R)+ (1-\lambda) H(S)$, onde o parâmetro
+$\lambda \in [0,1]$ controla o balanço entre a transferência de informação e o custo. Utilizou-se um algoritmo de Monte
+Carlo para realizar a minimização e encontrou-se o valor crítico de $\lambda = \lambda^\ast = 1/2 - \epsilon$, onde $\epsilon$ é um valor positivo
+pequeno ($\epsilon \approx 0.002$ na figura \ref{fig-cancho-1}). A lei de Zipf ocorre na transição abrupta observada em $I(S,R)$,  com $\lambda \approx 1/2$.
 :::
 
 --- 
 
-## Significado
+## Significado {.allowframebreaks}
 
 No balanço entre forças de unificação e diversificação esperamos encontrar palavras que possuam alguns significados.
 
@@ -429,8 +470,10 @@ $$
 m_r \times f_r = F_r
 $$
 
-- forças de unificação: $\uparrow m_1$, $\downarrow f_1$
-- forças de diversificação: $\downarrow m_1$,  $\uparrow f_1$
+- forças de unificação: $\uparrow m_r$, $\downarrow f_r$
+- forças de diversificação: $\downarrow m_r$,  $\uparrow f_r$
+
+Uma relação hiperbólica entre as forças leva a
 
 $$
 m_r = f_r = \sqrt{F_r}
@@ -478,7 +521,7 @@ similar ao código de @huffman1952method.
 Para palavras, @Torre2019 considera 3 casos para analisar a lei de brevidade:
 (1) tendência das palavras mais frequentes serem constituídas por um menor número de caracteres;
 (2) tendência das palavras mais frequentes serem constituídas por um menor número de fonemas;
-(3) tendência das palavras mais frequentes serem articuladas pelos falandes em um menor intervalo de tempo.
+(3) tendência das palavras mais frequentes serem articuladas pelos falantes em um menor intervalo de tempo.
 
 Os pontos cinza na figura \ref{fig-brevity} apresentam o espalhamento das palavras em relação 
 ao tempo mediano de duração (em segundos) e a frequência de ocorrência das palavras. Os pontos azuis
