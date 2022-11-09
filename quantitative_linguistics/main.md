@@ -416,7 +416,7 @@ Isto permite o surgimento de diversas leis da psicologia governando perceção e
 
 ---
 
-## Lei de Zipf evitando sinonímia excessiva 
+## Evitando sinonímia excessiva 
 
 ![Lei de Zipf gerada por modelos de especialização e generalização. O parâmetro $\gamma$ determina o quanto duas palavras podem diferir em extensão e ainda competir entre elas [@manin2008zipf].](manin2008-intervals.png){width=60%}
 
@@ -427,7 +427,7 @@ de significados elementares. @manin2008zipf propõe um modelo numérico em que o
 e está sujeito ao processo de generalização e especialização, sendo regido por regras simples. @manin2008zipf mostra que este modelo
 simples leva à distribuição de Zipf.
 
-Os significados de palavras são associados a subintervalos do intervalo $S=[0,1]$]. **Modelo de generalização**: Se
+Os significados de palavras são associados a subintervalos do intervalo $S=[0,1]$. **Modelo de generalização**: Se
 não estiverem congelados, os intervalos vão crescendo paulatinamente por uma quantidade $\delta$. Quando surgir uma
 sobreposição de intervalos, um deles será escolhido aleatoriamente e será congelado. **Modelo de especialização**: Se
 dois intervalos, $r_i$ e $r_j$, se interceptam e seus comprimentos, $l_i$ e $l_j$ satisfazem $1/\gamma < l_i/l_j < \gamma$, diminui-se o
