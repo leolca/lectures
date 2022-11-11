@@ -976,8 +976,8 @@ fitdistrplus
 
 Abordagens:
 
-1. linguística sinergética - Reinhard Köhler
-2. teoria unificada - Gabriel Altmann
+1. linguística sinergética [@kohler1986linguistischen;@kohler1987system;@kohler2005]
+2. teoria unificada [@altmann2005]
 
 ::: notes
 \scriptsize
