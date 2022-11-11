@@ -10,14 +10,14 @@ lang: pt-BR
 output:
   beamer_presentation:
       keep_tex: yes
-      theme: metropolis
       latex_engine: lualatex
       toc: false
-      slide_level: 2
+      slide_level: 3
       incremental: no
       pandoc_args: ["--filter", "pandoc-eqnos", "--strip-comments"]
 classoption: "aspectratio=169"
 header-includes:
+  - \usetheme[sectionpage=progressbar,subsectionpage=progressbar]{metropolis}
   - \setbeameroption{show notes}  
   - \setbeamerfont{note page}{size=\footnotesize}
   - \hypersetup{colorlinks,citecolor=orange,filecolor=red,linkcolor=brown,urlcolor=blue}
@@ -36,7 +36,7 @@ header-includes:
 
 # Linguística Quantitativa enquanto ciência
 
-## Leis
+### Leis
 
 * Lei científica
 
@@ -51,12 +51,12 @@ header-includes:
 ::: notes
 Uma lei, em ciência, é uma hipótese sistematicamente conectada a outras hipóteses em um campo do conhecimento
 e, ao mesmo tempo, corroborada por dados empíricos. Uma lei é dita universal quando é valida a todo tempo,
-em qualquer lugar e para todos objetos sob seu escopo.
+em qualquer lugar e para todos objetos sob seu escopo [@kohler2014laws;@bunge2012scientific].
 :::
 
 ---
 
-## Exemplos
+### Exemplos
 
 <!-- 
 - Lei da gravidade (física)
@@ -79,13 +79,13 @@ raio iônico, energia de ionização, eletronegatividade e eletroafinidade.
 As **leis de Mendel** (ou leis da herança) são as três leis a seguir: 
 1) lei da dominância (quando pais com traços puros e contrastantes são cruzados, apenas uma forma de traço aparece na próxima geração; assim, os descendentes híbridos exibirão apenas a característica dominante no fenótipo); 
 2) lei da segregação (uma única característica associada a um único gene é herdada); e 
-3) lei da variação independente (os alelos de dois (ou mais) genes diferentes são distribuídos para os gametas independentemente um do outro).
+3) lei da variação independente (os alelos de dois ou mais genes diferentes são distribuídos para os gametas independentemente um do outro).
 
 :::
 
 ---
 
-## Teoria
+### Teoria
 
 * Teoria: um sistema de leis
   - teorias axiomáticas
@@ -153,11 +153,13 @@ teorias empíricas devem também ter um núcleo axiomático).
 
 ---
 
-## Linguistíca Quantitativa
+### Linguistíca Quantitativa
 
 * Linguística formal - matemática qualitativa (álgebra, teoria de conjuntos e lógica)
 
-\onslide<2->{
+```{=latex}
+\hfill%
+\begin{minipage}[t]{0.735\linewidth}
 \begin{footnotesize}
 Exemplo para o português brasileiro:
 \begin{center}
@@ -167,7 +169,8 @@ Exemplo para o português brasileiro:
 A vogal [i] pode ser apagada em início de palavra quando seguida de uma sibilante e outra consoante. Por
 exemplo: esperar, estragar, espelho, estante, etc.
 \end{footnotesize}
-}
+\end{minipage}
+```
 
 * Linguística quantitativa (LQ) - propriedades quantitativas (quantidades, probabilidades e tendências)
 
@@ -185,7 +188,7 @@ realidade, permitindo a distinção em diversos níveis ao invés de uma distin�
 
 ---
 
-## Surgimento da linguística quantitativa
+### Surgimento da linguística quantitativa
 
 * George Kingley Zipf - a lei de Zipf
   - relação entre ordem (rank) e frequência -- princípio de auto-organização e economicidade 
@@ -217,7 +220,31 @@ Para o ouvinte, o princípio da economia busca diversificação (o que simplific
 
 # Leis da Linguística Quantitativa
 
+## Leis da Linguística Quantitativa
+
+- Leis de distribuição
+- Leis funcionais
+- Leis de desenvolvimento
+
+[@kohler2014laws]
+
+::: notes
+- As leis de distribuição fazem predição sobre o número observado de certas características. 
+O exemplo mais conhecido é a lei de Zipf-Mandelbrot. Outros exemplos são leis sobre distribuição de comprimento,
+leis de polissemia, leis de sinônimos, leis de frequência de estruturas sintáticas, etc.
+- As leis funcionais são leis que estabelecem relações entre duas ou mais propriedades.
+A lei de Menzerath, que relaciona o tamanho do constituinte com o respectivo construto, é um exemplo
+de lei funcional.
+- As leis de desenvolvimento descrevem como certas características evoluem ao longo do tempo.
+O exemplo mais conhecido é a lei de Piotrowski, que descreve o crescimento ou decaimento de 
+de certas unidades ao longo do tempo.
+:::
+
+
+
 ## Lei de Zipf
+
+### Lei de Zipf
 
 @zipf1949 - Ulysses de James Joyce - 260.430 palavras (29.899 palavras diferentes).
 
@@ -256,7 +283,7 @@ sendo 29.899 palavras diferentes.
 
 ::: notes
 Os degraus ao final representam palavras com baixa frequência de ocorrência. Como apenas é possível observarmos as palavras 
-um numero inteiro de vez, o valor da relação dada na equação {!@eq:zipflaw} é arredondado para o inteiro mais próximo.
+um número inteiro de vezes, o valor da relação dada na equação {!@eq:zipflaw} é arredondado para o inteiro mais próximo.
 
 O último degrau representa 16.432 palavras que ocorreram uma única vez em todo o texto (hápax legómenon). O degrau 
 anterior representa 4.776 palavras que ocorreram duas vezes (dis legomenon) e o anterior representa 2.194 palavras que
@@ -265,17 +292,24 @@ ocorreram três vezes (tris legomenon).
 
 ---
 
-![De Beowulf a T.S. Eliot. Distribuição rank-frequência de palavras em 15 escritores da língua inglesa, do inglês antigo ao atual. Os gráficos estão deslocados na abscissa para melhor visualização.](zipf-fig3-14.png){width=70%}
+![De Beowulf a T.S. Eliot. Distribuição rank-frequência de palavras em 15 escritores da língua inglesa, do inglês antigo ao atual. Os gráficos estão deslocados na abscissa para melhor visualização [@zipf1949].](zipf-fig3-14.png){width=70%}
 
 ---
 
-## Lei de Zipf
+### Lei de Zipf
 
 A $r$-ésima palavra mais frequente possui frequência de ocorrência $f(r)$ que varia da seguinte forma com $r$:
 $$
 f \propto \frac{1}{r^{\alpha}}
 $$
 onde temos $\alpha \approx 1$ [@zipf1935;@zipf1949].
+
+
+A lei de Zipf pode também ser expressa por
+$$
+f(r;\alpha,N) = \frac{1}{H_{N,\alpha} \cdot r^{\alpha}} ,
+$$
+onde $H_{N,\alpha}$ é o N-ésimo número harmônico generalizado e $N$ é o tamanho do vocabulário.
 
 ::: notes
 
@@ -345,7 +379,7 @@ e muitos outros.
 
 ---
 
-![Distribuição de lei de potência para o número de a) páginas, b) visitantes, c) links externos e d) links internos de um site (medidas de 1997) [@huberman2002].](adamic-sites.png){width=60%}
+![Distribuição de lei de potência para o número de a) páginas, b) visitantes, c) links externos e d) links internos de um site (rastreadas pelo infoseek.com e archive.com em 1997) [@huberman2002].](adamic-sites.png){width=60%}
 
 ---
 
@@ -357,7 +391,7 @@ e muitos outros.
 
 ---
 
-## Generalização proposta por Mandelbrot
+### Generalização proposta por Mandelbrot
 
 @mandelbrot1963 propôs um deslocamento para levar em consideração o achatamento observado na região do baixo ranque
 
@@ -374,7 +408,7 @@ http://web.utk.edu/~scolli46/zipfmandelbrotmc.html
 
 ---
 
-## Por que as línguas seguem a lei de Zipf? {.allowframebreaks}
+### Por que as línguas seguem a lei de Zipf? {.allowframebreaks}
 
 
 Algumas possíveis explicações:
@@ -404,7 +438,7 @@ seguiriam uma regra que não leva em consideração o significado ou função si
 
 ---
 
-## Invariância à escala
+### Invariância à escala
 
 ![Conceito de invariância à escala. A mesma função é apresentada em diferentes escalas [@chater1999scale].](chater-invariancia-escala.png){width=50%}
 
@@ -416,14 +450,14 @@ Isto permite o surgimento de diversas leis da psicologia governando perceção e
 
 ---
 
-## Evitando sinonímia excessiva 
+### Evitando sinonímia excessiva 
 
 ![Lei de Zipf gerada por modelos de especialização e generalização. O parâmetro $\gamma$ determina o quanto duas palavras podem diferir em extensão e ainda competir entre elas [@manin2008zipf].](manin2008-intervals.png){width=60%}
 
 ::: notes
 @manin2008zipf sugere que a lei de Zipf é resultante da organização hierárquica dos significados de palavras no espaço semântico.
 @manin2008zipf parte da proposta de matriz semântica de @guiraud1968semic em que o significado de uma palavra é representado pela superposição
-de significados elementares. @manin2008zipf propõe um modelo numérico em que o significado de palavras é associado a intervalos numéricos
+de significados elementares. @manin2008zipf propõe um modelo em que o significado de palavras é associado a intervalos numéricos
 e está sujeito ao processo de generalização e especialização, sendo regido por regras simples. @manin2008zipf mostra que este modelo
 simples leva à distribuição de Zipf.
 
@@ -436,7 +470,7 @@ menor intervalo pelo tamanho da sobreposição (competição entre os significad
 
 ---
 
-## Maximização da informação mútua 
+### Maximização da informação mútua 
 
 ![Resultado de um modelo computacional onde a probabilidade dos significados é governada por estruturas internas do sistema de comunicação. Função minimizada: $\Omega(\lambda) = - \lambda I(S,R) + (1-\lambda) H(S)$ [@cancho2003;@cancho2007].\label{fig-cancho-1}](cancho-fig1.png){width=70%}
 
@@ -456,9 +490,13 @@ Carlo para realizar a minimização e encontrou-se o valor crítico de $\lambda 
 pequeno ($\epsilon \approx 0.002$ na figura \ref{fig-cancho-1}). A lei de Zipf ocorre na transição abrupta observada em $I(S,R)$,  com $\lambda \approx 1/2$.
 :::
 
---- 
 
-## Significado {.allowframebreaks}
+
+
+
+## Significado
+
+### Significado {.allowframebreaks}
 
 No balanço entre forças de unificação e diversificação esperamos encontrar palavras que possuam alguns significados.
 
@@ -497,9 +535,12 @@ Desta forma, resulta-se em $m_r$ e $f_r$ estarem também em uma relação hiperb
 e o Thorndike-Century Dictionary para obter os $m$ distintos significados de cada palavra. 
 :::
 
----
 
-## Lei de abreviação/brevidade de Zipf
+
+
+## Lei da brevidade
+
+### Lei de abreviação/brevidade de Zipf
 
 "a magnitude das palavras apresenta uma relação inversa ao número de ocorrências" [@zipf1935]
 
@@ -527,26 +568,31 @@ Os pontos cinza na figura \ref{fig-brevity} apresentam o espalhamento das palavr
 ao tempo mediano de duração (em segundos) e a frequência de ocorrência das palavras. Os pontos azuis
 são gerados através de agrupamento logarítmico nas frequências. O gráfico superior à direita apresenta o
 mesmo tipo de relação, porém considerando a mediana do número de fonemas e o gráfico inferior à esquerda
-utiliza o numero de caracteres.
+utiliza o número de caracteres.
 
 @Torre2019 utilizou o corpus Buckeye contendo fala de conversação de falantes nativos de inglês, 
 contendo aproximadamente $8 \times 10^5$ fonemas, $3 \times 10^5$ palavras e $5 \times 10^4$ 
 grupos respiratórios\footnote{Grupo respiratório é uma sequência de sons articulados no decorrer de uma única expiração} (breath-groups).
 :::
 
----
+
+
 
 ## Lei da polissemia
+
+### Lei da polissemia
 
 ![Relação entre frequência e polissemia. A cor verde indica a densidade de pontos (mais escuro, maior densidade). A linha azul é a regressão não-paramétrica. Dados do corpus SemCor [@hernandez2016testing].](polysemy.png){width=40%}
 
 ::: notes
 SemCor é um corpus criado pelo Universidade de Princeton, composto por 352 textos, sendo estes um subconjunto do corpus Brown para o inglês.
+
+A tendência observada pela regressão não paramétrica não é válida para regiões extremas do gráfico, onde a densidade de pontos é muito pequena.
 :::
 
 ---
 
-## Leis de polissemia e brevidade de Zipf
+### Leis de polissemia e brevidade de Zipf
 
 Vários trabalhos analisaram as leis de polissemia e brevidade de Zipf
 [@zipf1935;@zipf1945;@hernandez2016testing;@ilgen2007investigation;@cancho2018origins;@kanwal2017;@tomaschek2017word;@bentz2016zipf;@piantadosi2011word;@cancho2013compression;@strauss2007word;@sigurd2004word;@teahan2000compression].
@@ -554,14 +600,18 @@ Vários trabalhos analisaram as leis de polissemia e brevidade de Zipf
 ::: notes
 Estas leis são presumidamente universais por serem verificadas em todas as línguas em que foram testadas até o momento.
 Alguns estudos buscam modelar suas origens e traçar mecanismos abstratos ou princípios linguísticos que suportem sua universalidade.
-Como exemplo temos o trabalho de @cancho2013compression.
+Como exemplo temos o trabalho de @cancho2013compression, em que busca-se argumentar que a compressão é um princípio geral na comunicação animal,
+refletindo uma codificação eficiente.
 :::
 
----
 
-## Lei da Lognormalidade 
 
-Diversos estudos observam consistentemente uma distribuição lognormal para unidades fala (fonemas, palavras e grupo respiratório)
+
+## Lei da Lognormalidade
+
+### Lei da Lognormalidade 
+
+Diversos estudos observam consistentemente uma distribuição lognormal para unidades da fala (fonemas, palavras e grupo respiratório)
 [@herdan1958relation;@sayli2002duration;@rosen2005analysis;@gopinath2008modeling;@shaw2019effects;@hernandez2019linguistic;@Torre2019].
 
 <!--
@@ -581,14 +631,17 @@ distribution, hence claiming the universal validity of the lognormal shape and i
 ![Distribuição lognormal na duração de fonemas, palavras e grupos respiratórios no inglês [@Torre2019].\label{fig-lognormal}](lognormal.png){width=70%}
 
 ::: notes
-Dizemos uma v.a. $X$ possui distribuição lognormal se o logaritmo dela, $Y=\ln(X)$, possuir distribuição normal.
+Dizemos que uma v.a. $X$ possui distribuição lognormal se o logaritmo dela, $Y=\ln(X)$, possui distribuição normal.
 O gráfico menor da figura \ref{fig-lognormal}, no canto superior direito, apresenta o escalonamento dos valores
 para verificar que de fato seguem uma distribuição normal.
 :::
 
----
 
-## Lei de Heaps/Herdan
+
+
+## Lei de Heaps
+
+### Lei de Heaps/Herdan
 
 A lei de Heaps/Herdan descreve o crescimento do vocabulário em um texto.
 
@@ -603,8 +656,10 @@ $K$ tipicamente está entre 10 e 100, e $\beta$ entre $0.4$ e $0.6$.
 
 ---
 
-@vanLeijenhorst2005 mostra que é possível derivar matematicamente a lei de Heaps a partir da lei de Zipf.
-Nesta caso, teremos $\beta = 1/\alpha$, sendo necessário $\alpha > 1$.
+### Relação entre a lei de Heaps e a lei de Zipf
+
+@vanLeijenhorst2005 mostram que é possível derivar matematicamente a lei de Heaps a partir da lei de Zipf.
+Neste caso, teremos $\beta = 1/\alpha$, sendo necessário $\alpha > 1$.
 
 ---
 
@@ -612,7 +667,7 @@ Nesta caso, teremos $\beta = 1/\alpha$, sendo necessário $\alpha > 1$.
 
 ---
 
-## Crescimento do vocabulário e das classes de baixa frequência
+### Crescimento do vocabulário e das classes de baixa frequência
 
 A lei de potência proposta por Altmann $y = Ax^{-b}$ descreve bem a relação entre crescimento do vocabulário e tamanho das classes.
 
@@ -622,9 +677,11 @@ A lei de potência proposta por Altmann $y = Ax^{-b}$ descreve bem a relação e
 <!-- there is a linear relationship between vocabulary richness and the sizes of frequency class 1—3 -->
 
 
----
+
 
 ## Lei de Zipf inversa
+
+### Lei de Zipf inversa
 
 @zipf1935 estabelece a lei inversa, relacionando a frequência de ocorrência e o número de palavras para uma dada frequência.
 
@@ -642,9 +699,11 @@ onde $f$ é a frequência de ocorrência e $N_f$ o número de palavras com uma d
 
 ![Gráfico de Zipf e gráfico inverso para o texto Ulysses [@leoca2013].](zipf-inverse-2.png){width=80%}
 
---- 
+ 
 
 ## Hapax Legomena
+
+### Hapax Legomena
 
 O número de hapax legomena algumas vezes é utilizado como uma medida de riqueza de vocabulário.
 
@@ -668,9 +727,13 @@ $$
 A razão entre o tamanho do vocabulário e o número de hapaxes foi objeto de estudo de diversos linguistas
 [@baayen1996effects;@tweedie1998variable;@baayen2001word;@kornai2002many;@fengxiang2010asymptotic].
 
----
 
-## Lei de Menzerath-Altmann
+
+
+
+## Lei de Menzerath
+
+### Lei de Menzerath-Altmann
 
 @menzerath1954 observou a existência de uma relação inversa entre o tamanho de um construto e o tamanho de seus constituintes.
 
@@ -686,7 +749,7 @@ A razão entre o tamanho do vocabulário e o número de hapaxes foi objeto de es
 
 ---
 
-@altmann1980 observou que o conceito de \textit{tamanho} poderia referir-se também à complexidade e numero de elementos utilizados na composição.
+@altmann1980 observou que o conceito de \textit{tamanho} poderia referir-se também à complexidade e número de elementos utilizados na composição.
 @altmann1980 propôs o modelo matemático
 
 $$
@@ -704,17 +767,17 @@ $$
 Para @kohler1989menzerathsche, a lei de Menzerath-Altmann é uma manifestação característica de sistemas complexos.
 
 Outros estudos analizam a lei de Menzerath-Altmann em textos [@hrebicek1995;@andres2010;@araujo2020;@gtorre2021], 
-fala [@HernndezFernndez2019;Torre2019], genoma [@ferrer2014menzerath], música [@boroda1991],
+fala [@HernndezFernndez2019;@Torre2019], genoma [@ferrer2014menzerath], música [@boroda1991],
 comunicação gestual de chipanzés [@heesen2019], etc.
 
---- 
 
-## Lei de Piotrowski-Altmann 
+## Lei de Piotrowski
+### Lei de Piotrowski-Altmann 
 
 As línguas mudam pela interação entre formas antigas e novas. 
 
-Mudanças qualitativas: mudanças em entidades individuais, mudanças sonoras.
-Mudanças em volume: crescimento/decaimento lexical.
+- Mudanças qualitativas: mudanças em entidades individuais, mudanças sonoras.
+- Mudanças em volume: crescimento/decaimento lexical.
 
 O influxo de novos elementos em uma língua, ao longo do tempo, é descrito por 
 $$
@@ -765,34 +828,48 @@ The reversible change variant describes a change which begins, peaks, and
 reverses as if cancelled mid-course, such as the epithesis of -e with strong verbs in
 German (Imsiepen 1983).
 -->
+
+> Starke Verben haben in der 1. Person Singular Präteritum Indikativ keine Endung -e:
+> ich ging (gehen), sah (sehen), kam (kommen), nahm (nehmen), fand (finden), half (helfen), blieb (bleiben), ...
+> Die Ausnahme ist werden: ich wurde (veraltet: ward)
+>
+> Die e-Epithese bei den starken Verben ist ein Sprachwandelprozeß, der sich nicht durchgesetzt hat. Im Verlauf des 17. Jahrhunderts erlangte sie ihre größte Beliebtheit, war jedoch nie obligatorisch. Man findet also auch in ihrer Hochzeit bei ein und demselben Autor Formen ohne -e neben solchen mit -e. Die Formen mit -e sind immer seltener als die ohne.
+([https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese](https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese))
 :::
 
 
-::: notes
-Starke Verben haben in der 1. Person Singular Präteritum Indikativ keine Endung -e:
-ich ging (gehen), sah (sehen), kam (kommen), nahm (nehmen), fand (finden), half (helfen), blieb (bleiben), ...
-Die Ausnahme ist werden: ich wurde (veraltet: ward)
-
-Die e-Epithese bei den starken Verben ist ein Sprachwandelprozeß, der sich nicht durchgesetzt hat. Im Verlauf des 17. Jahrhunderts erlangte sie ihre größte Beliebtheit, war jedoch nie obligatorisch. Man findet also auch in ihrer Hochzeit bei ein und demselben Autor Formen ohne -e neben solchen mit -e. Die Formen mit -e sind immer seltener als die ohne.
-
-[https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese](https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese)
-:::
-
-
----
 
 ## Lei de Frumkina
+
+### Lei de Frumkina
 
 A lei de Frumkina (lei dos blocos de texto) descreve a frequência de ocorrência de certas unidades linguísticas em blocos de texto.
 A distribuição hipergeométrica negativa é um bom modelo para descrever a ocorrência [@altmann1982towards;@best2005sprachliche;@textblockgesetz2021].
 
 ---
 
-![Ocorrências de "a" no capítulo 1 de *Die Bäder von Lucca* (Heinrich Heine) com blocos de tamanho 50 e 100 [@best2005sprachliche].](frumkina-a.png){width=70%}
+![Ocorrências de 'a' no capítulo 1 de *Die Bäder von Lucca* (Heinrich Heine) com blocos de tamanho 50 e 100. $x$: número de ocorrências da letra 'a' nos blocos de texto; $n_x$: número observado de blocos de texto com $x$ ocorrências de 'a'; $NP_x$: número de blocos de texto com $x$ ocorrências de 'a', calculado de acordo com a distribuição hipergeométrica negativa [@best2005sprachliche].](frumkina-a-tabelle.png){width=60%}
 
 ---
 
+![$x$: número de ocorrências da letra 'a' nos blocos de texto; $n_x$: número observado de blocos de texto com $x$ ocorrências de 'a'.](frumkina-a.png){width=80%}
+
+
+<!-- 
+nx50 = [12 27 36 31 13 8 2 1];
+nx100 = [4 6 10 14 9 7 8 5 2];
+stem([0:7],nx50,'b','linewidth',2,'filled');
+hold on;
+stem([1:9],nx100,'r^','linewidth',2,'filled');
+legend('bloco de 50 palavras','bloco de 100 palavras');
+xlim([-1 10]); set(gca,'xtick',[0:9]);
+xlabel('x'); ylabel('n_x');
+-->
+
+
 ## Lei de Martin
+
+### Lei de Martin
 
 A lei de Martin diz respeito à estruturação hierárquica do léxico.
 
@@ -807,14 +884,14 @@ Sessel(1) – Sitzmöbel(2) – Möbel(3) – Einrichtungsgegenstand(4) – Gege
 ::: notes
 
 A posição que uma palavra ocupa na cadeia lexical diz respeito a quantas definições são ligadas a ela, indo do termo mais 
-específico ao mais geral, formando uma hierarquia de significados cada vez mais gerais.
+específico ao mais geral, formando uma hierarquia de significados cada vez mais abrangentes.
 O número de definições diminui com o aumento da generalidade.
 
 :::
 
 ---
 
-![A distribuição de Poisson mista é um bom modelo para os dados de @bagheri2002 [@martinschesgesetz2021]](martins.png){width=70%}
+![A distribuição de Poisson mista é um bom modelo para os dados de @bagheri2002 [@martinschesgesetz2021]](martins.png){width=80%}
 
 <!--
 Lei de Martin: esta lei diz respeito a cadeias lexicais que são obtidas procurando a definição de uma palavra em um dicionário, depois procurando a definição da definição recém-obtida, etc. Finalmente, todas essas definições formam uma hierarquia de significados cada vez mais gerais. de modo que o número de definições diminui com o aumento da generalidade. Dentre os níveis desse tipo de hierarquia, existem várias leis relacionadas a essa relação.
@@ -824,7 +901,7 @@ https://de.wikipedia.org/wiki/Martinsches_Gesetz
 
 ob = [1482 1110 642 334 160 74 23 7 2];
 x = [1:9];
-stem(x,ob,'k'); xlim([0 10]);
+stem(x,ob,'k','linewidth',2,'filled'); xlim([0 10]);
 set(gca,'xtick',[1:9]);
 xlabel('rank'); ylabel('observações');
 
@@ -832,11 +909,9 @@ xlabel('rank'); ylabel('observações');
 
 
 
-
-
 # Softwares
 
-## Altmann-Fitter
+### Altmann-Fitter
 
 ![Tela do software Altmann-Fitter.](altmannfitter.png){width=50%}
 
@@ -846,7 +921,7 @@ O Altmann Fitter é um software interativo para ajuste de distribuições de pro
 a dados de frequência. O algoritmo utilizado é baseado no Nelder-Mead Simplex.
 Mais de 200 distribuições estão definidas e implementadas no software. 
 Os procedimentos matemáticos são automatizados. O software iterativamente
-busca melhor o ajuste, buscando a distribuição que melhor se explique os dados observados. 
+busca o melhor ajuste, buscando a distribuição que melhor explique os dados observados. 
 
 <!--
 The Altmann Fitter is an interactive programme for the iterative fitting of
@@ -866,7 +941,7 @@ finements
 
 ---
 
-## R 
+### R 
 
 Pacotes
 
@@ -888,32 +963,43 @@ fitdistrplus
 :   [https://cran.r-project.org/web/packages/fitdistrplus/](https://cran.r-project.org/web/packages/fitdistrplus/)
 
 
+---
 
+### Zipf R
+
+![ZipfR](zipfr.png){width=70%}
 
 
 # Teoria
 
-## Construção de uma teoria
+### Construção de uma teoria
 
 Abordagens:
 
-1. linguística sinergética 
-2. teoria unificada 
+1. linguística sinergética - Reinhard Köhler
+2. teoria unificada - Gabriel Altmann
 
 ::: notes
+\scriptsize
 
+Segundo a filosofia da ciência, a pesquisa científica ocorre em três níveis: observação, descrição e explicação.
+O nível mais alto, explicação, não é possível sem o estabelecimento de leis.
+Vimos alguns exemplos que ilustram o que é e o que faz a linguística quantitativa, uma área de estudo ainda incipiente, 
+almejando a construção de uma teoria que seja capaz de descrever e explicar a diversidade da comunicação humana.
 As leis da linguística quantitativa são observadas na comunicação escrita, na comunicação oral, 
 em certos aspectos da comunicação animal e, algumas vezes, também em outros fenômenos da natureza.
-Certas podem ser ligadas à emergência em sistemas complexos, aspectos associados à sistemas de comunicação,
+Algumas delas podem ser ligadas à emergência em sistemas complexos, aspectos associados à sistemas de comunicação,
 ou aspectos cognitivos e psicológicos que devem ser explorados.
 
-1. A proposta sinergética busca integrar as leis e hipóteses em um modelo complexo para descrever o fenômeno linguístico.
+1. A proposta sinergética busca integrar leis e hipóteses em um modelo complexo para descrever o fenômeno linguístico.
 Utilizam para tanto um axioma central: as línguas são sistemas auto-organizativos. Estabelece também alguns requisitos
 que devem ser seguidos por um sistema semiótico: ser possível realizar codificação e decodificação com eficiência,
 economia de memória, minimização de esforço, dentre outros.
 2. A teoria unificada busca integrar as leis e hipóteses a partir de equações diferenciais gerais (ou equações de diferenças, no caso discreto),
 assim como dois pressupostos gerais: 1) a dinâmica de uma variável linguística $y$ será modelada matematicamente em termos 
 de sua mudança relativa $(dy/y)$; 2) uma outra variável $x$ que tenha efeito sobre $y$ deverá ser considerada da mesma forma em temos de sua mudança relativa $(dx/x)$.
+
+[@bunge2012scientific;@kohler2014laws]
 
 :::
 
@@ -940,4 +1026,4 @@ the Piotrowski Law, which represents the development (increase and/or decrease) 
 -->
 
 
-# References {.allowframebreaks} 
+# Referências {.allowframebreaks} 
