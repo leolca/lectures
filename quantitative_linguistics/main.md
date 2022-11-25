@@ -1,7 +1,7 @@
 ---
 title: "Linguistíca Quantitativa"
 author: Leonardo Araujo
-date: 23 de Novembro de 2022
+date: 30 de Novembro de 2022
 bibliography: references.bib
 link-citations: yes
 eqnos-cleveref: True
@@ -237,7 +237,7 @@ A lei de Menzerath, que relaciona o tamanho do constituinte com o respectivo con
 de lei funcional.
 - As leis de desenvolvimento descrevem como certas características evoluem ao longo do tempo.
 O exemplo mais conhecido é a lei de Piotrowski, que descreve o crescimento ou decaimento de 
-de certas unidades ao longo do tempo.
+certas unidades ao longo do tempo.
 :::
 
 
@@ -317,6 +317,21 @@ Outros trabalhos mostram que o valor do expoente $\alpha$ está entre 0.6 e 1.5
 para o inglês falado [@Bian2016;@Baixeries2013], entre 0.765 e 1.357 para traduções da bíblia em diversas
 línguas [@mehri2017].
 
+
+O $N$-ésimo número harmônico é a soma dos recíprocos dos $N$ primeiros números naturais:
+$$
+H_N = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{N} = \sum_{k=1}^{N} \frac{1}{k} .
+$$
+
+O $N$-ésimo número harmônico generalizado de ordem $\alpha$ é dada por
+$$
+H_{N,\alpha} = \sum_{k=1}^{N} \frac{1}{k^\alpha} .
+$$
+O limite para $N \rightarrow \infty$, quando $\alpha > 1$, converge para a função zeta de Riemann:
+$$
+\lim_{N \rightarrow \infty} H_{N,\alpha} = \zeta(\alpha) .
+$$
+
 :::
 
 ---
@@ -324,8 +339,8 @@ línguas [@mehri2017].
 ![Gráfico Zipf para tradução da bíblia no coreano, inglês e tailandês [@mehri2017].](mehri-fig2.png){width=60%}
 
 ::: notes
-Em seu trabalho, @mehri2017 faz o ajuste da distribuição de Zipf para a tradução da bíblia em 100 línguas diferentes.
-@mehri2017 enfatiza que estruturas sintáticas distintas levam a expoentes de Zipf diferentes e analisam o comportamento 
+Em seu trabalho, @mehri2017 fazem o ajuste da distribuição de Zipf para a tradução da bíblia em 100 línguas diferentes.
+@mehri2017 enfatizam que estruturas sintáticas distintas levam a expoentes de Zipf diferentes e analisam o comportamento 
 do coeficiente de Zipf em diferentes famílias linguísticas.
 
 Inglês e Coreano possuem coeficiente de Zipf próximos, enquanto o tailandês possui coeficiente bem diferente, o que
@@ -355,7 +370,7 @@ e muitos outros.
 
 ---
 
-![Distribuição cumulativa dos tempos calmos (entre terremotos) na California [@suzuki2005].](abe-earthquakes.png){width=100%}
+![Distribuição cumulativa dos tempos calmos (entre terremotos) na Califórnia [@suzuki2005].](abe-earthquakes.png){width=100%}
 
 ---
 
@@ -371,7 +386,7 @@ e muitos outros.
 
 ---
 
-![Distribuição cumulativa dos preços de ações negocinadas no KOSDAQ (Korean Securities Dealers Automated Quotations) [@choi2005].](choi-koren-stock.png){width=60%}
+![Distribuição cumulativa dos preços de ações negociadas no KOSDAQ (Korean Securities Dealers Automated Quotations) [@choi2005].](choi-koren-stock.png){width=60%}
 
 ---
 
@@ -443,8 +458,8 @@ seguiriam uma regra que não leva em consideração o significado ou função si
 ![Conceito de invariância à escala. A mesma função é apresentada em diferentes escalas [@chater1999scale].](chater-invariancia-escala.png){width=50%}
 
 ::: notes
-Para @chater1999scale, o sistema perceptual-motor reflerem e preservam a características de invariância a escala presentes em vários aspectos ambientais.
-Isto permite o surgimento de diversas leis da psicologia governando perceção e ação em vários domínios e espécies
+Para @chater1999scale, o sistema perceptual-motor refletem e preservam a características de invariância a escala presentes em vários aspectos ambientais.
+Isto permite o surgimento de diversas leis da psicologia governando percepção e ação em vários domínios e espécies
 (exemplos: lei de Weber-Fechner, lei de Stevens, lei de Fitts e lei de Piéron).
 :::
 
@@ -457,14 +472,14 @@ Isto permite o surgimento de diversas leis da psicologia governando perceção e
 ::: notes
 @manin2008zipf sugere que a lei de Zipf é resultante da organização hierárquica dos significados de palavras no espaço semântico.
 @manin2008zipf parte da proposta de matriz semântica de @guiraud1968semic em que o significado de uma palavra é representado pela superposição
-de significados elementares. @manin2008zipf propõe um modelo em que o significado de palavras é associado a intervalos numéricos
-e está sujeito ao processo de generalização e especialização, sendo regido por regras simples. @manin2008zipf mostra que este modelo
+de significados elementares. @manin2008zipf propõe um modelo em que os significados de palavras são associados a intervalos numéricos
+e estão sujeito ao processo de generalização e especialização, sendo regidos por regras simples. @manin2008zipf mostra que este modelo
 simples leva à distribuição de Zipf.
 
 Os significados de palavras são associados a subintervalos do intervalo $S=[0,1]$. **Modelo de generalização**: Se
 não estiverem congelados, os intervalos vão crescendo paulatinamente por uma quantidade $\delta$. Quando surgir uma
 sobreposição de intervalos, um deles será escolhido aleatoriamente e será congelado. **Modelo de especialização**: Se
-dois intervalos, $r_i$ e $r_j$, se interceptam e seus comprimentos, $l_i$ e $l_j$ satisfazem $1/\gamma < l_i/l_j < \gamma$, diminui-se o
+dois intervalos, $r_i$ e $r_j$, se interceptam e seus comprimentos, $l_i$ e $l_j$, satisfazem $1/\gamma < l_i/l_j < \gamma$, diminui-se o
 menor intervalo pelo tamanho da sobreposição (competição entre os significados de palavras).
 :::
 
@@ -472,7 +487,7 @@ menor intervalo pelo tamanho da sobreposição (competição entre os significad
 
 ### Maximização da informação mútua 
 
-![Resultado de um modelo computacional onde a probabilidade dos significados é governada por estruturas internas do sistema de comunicação. Função minimizada: $\Omega(\lambda) = - \lambda I(S,R) + (1-\lambda) H(S)$ [@cancho2003;@cancho2007].\label{fig-cancho-1}](cancho-fig1.png){width=70%}
+![Resultado de um modelo computacional onde as probabilidades dos significados são governadas por estruturas internas do sistema de comunicação. Função minimizada: $\Omega(\lambda) = - \lambda I(S,R) + (1-\lambda) H(S)$ [@cancho2003;@cancho2007].\label{fig-cancho-1}](cancho-fig1.png){width=70%}
 
 ::: notes
 As diversas línguas diferem-se muito, mas todos tem em comum o fato de serem utilizadas para a comunicação.
@@ -481,7 +496,7 @@ a comunicação falada é um processo cognitivo e, portanto, busca-se economia d
 @cancho2003 utilizam um modelo em que a comunicação visa à maximização da transferência de informação e 
 a minimização do custo energético do uso das palavras (entropia).
 
-@cancho2003;@cancho2007 propõe uma função $\Omega$ que deve ser minimizada pelo sistema de comunicação.
+@cancho2003;@cancho2007 propõem uma função $\Omega$ que deve ser minimizada pelo sistema de comunicação.
 Minimizar esta função será um balanço entre a maximização da transferência de comunicação ($I(S,R)$)\footnote{Informação mútua entre o sinal e o estímulo.} 
 e minimizar o custo da comunicação ($H(S)$)\footnote{Entropia associada ao sinal.}. 
 A função definida é $\Omega(\lambda) = - \lambda I(S,R)+ (1-\lambda) H(S)$, onde o parâmetro
@@ -559,7 +574,7 @@ similar ao código de @huffman1952method.
 ![Lei da brevidade para palavras (duração, número de fonemas e número de caracteres) [@Torre2019].\label{fig-brevity}](brevity.png){width=70%}
 
 ::: notes 
-Para palavras, @Torre2019 considera 3 casos para analisar a lei de brevidade:
+Para palavras, @Torre2019 consideram 3 casos para analisar a lei de brevidade:
 (1) tendência das palavras mais frequentes serem constituídas por um menor número de caracteres;
 (2) tendência das palavras mais frequentes serem constituídas por um menor número de fonemas;
 (3) tendência das palavras mais frequentes serem articuladas pelos falantes em um menor intervalo de tempo.
@@ -737,7 +752,7 @@ A razão entre o tamanho do vocabulário e o número de hapaxes foi objeto de es
 
 @menzerath1954 observou a existência de uma relação inversa entre o tamanho de um construto e o tamanho de seus constituintes.
 
-![Frequencia de tipo das palavras alemãs em relação ao número de sílabas ($z$) e o número de sons ($n$) [@menzerath1954].](menzerath-fig471.png){width=70%}
+![Frequência de tipo das palavras alemãs em relação ao número de sílabas ($z$) e o número de sons ($n$) [@menzerath1954].](menzerath-fig471.png){width=70%}
 
 ---
 
@@ -745,7 +760,7 @@ A razão entre o tamanho do vocabulário e o número de hapaxes foi objeto de es
 
 ---
 
-![Lei de Menzerath-Altmann. Relação entre o tamnho de grupo respiratório (número de palavas) versus tamanho médio das palavras (duração, número de fonemas, número de caracteres) [@Torre2019].](menzerath_bg.png){width=70%}
+![Lei de Menzerath-Altmann. Relação entre o tamanho de grupo respiratório (número de palavas) versus tamanho médio das palavras (duração, número de fonemas, número de caracteres) [@Torre2019].](menzerath_bg.png){width=70%}
 
 ---
 
@@ -766,7 +781,7 @@ $$
 
 Para @kohler1989menzerathsche, a lei de Menzerath-Altmann é uma manifestação característica de sistemas complexos.
 
-Outros estudos analizam a lei de Menzerath-Altmann em textos [@hrebicek1995;@andres2010;@araujo2020;@gtorre2021], 
+Outros estudos analisam a lei de Menzerath-Altmann em textos [@hrebicek1995;@andres2010;@araujo2020;@gtorre2021], 
 fala [@HernndezFernndez2019;@Torre2019], genoma [@ferrer2014menzerath], música [@boroda1991],
 comunicação gestual de chipanzés [@heesen2019], etc.
 
@@ -894,7 +909,7 @@ O número de definições diminui com o aumento da generalidade.
 ![A distribuição de Poisson mista é um bom modelo para os dados de @bagheri2002 [@martinschesgesetz2021]](martins.png){width=80%}
 
 <!--
-Lei de Martin: esta lei diz respeito a cadeias lexicais que são obtidas procurando a definição de uma palavra em um dicionário, depois procurando a definição da definição recém-obtida, etc. Finalmente, todas essas definições formam uma hierarquia de significados cada vez mais gerais. de modo que o número de definições diminui com o aumento da generalidade. Dentre os níveis desse tipo de hierarquia, existem várias leis relacionadas a essa relação.
+Lei de Martin: esta lei diz respeito a cadeias lexicais que são obtidas procurando a definição de uma palavra em um dicionário, depois procurando a definição da definição recém-obtida, etc. Finalmente, todas essas definições formam uma hierarquia de significados cada vez mais gerais. De modo que o número de definições diminui com o aumento da generalidade. Dentre os níveis desse tipo de hierarquia, existem várias leis relacionadas a essa relação.
 
 
 https://de.wikipedia.org/wiki/Martinsches_Gesetz
