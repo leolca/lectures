@@ -241,6 +241,7 @@ certas unidades ao longo do tempo.
 :::
 
 
+# Leis de distribuição
 
 ## Lei de Zipf
 
@@ -744,116 +745,6 @@ A razão entre o tamanho do vocabulário e o número de hapaxes foi objeto de es
 
 
 
-
-
-## Lei de Menzerath
-
-### Lei de Menzerath-Altmann
-
-@menzerath1954 observou a existência de uma relação inversa entre o tamanho de um construto e o tamanho de seus constituintes.
-
-![Frequência de tipo das palavras alemãs em relação ao número de sílabas ($z$) e o número de sons ($n$) [@menzerath1954].](menzerath-fig471.png){width=70%}
-
----
-
-![Relação entre o comprimento das palavras e a duração de seus constituintes. Foram analisadas 10.086 palavras do inglês, com dados obtidos de dicionários online [@araujo2014menzerath].](leolca-menzerath.png){width=80%}
-
----
-
-![Lei de Menzerath-Altmann. Relação entre o tamanho de grupo respiratório (número de palavas) versus tamanho médio das palavras (duração, número de fonemas, número de caracteres) [@Torre2019].](menzerath_bg.png){width=70%}
-
----
-
-@altmann1980 observou que o conceito de \textit{tamanho} poderia referir-se também à complexidade e número de elementos utilizados na composição.
-@altmann1980 propôs o modelo matemático
-
-$$
-\frac{y'}{y} = \frac{b}{x} + c 
-$$
-
-para o qual a solução é 
-
-$$
-y = a x^b e^{cx}
-$$
-
----
-
-Para @kohler1989menzerathsche, a lei de Menzerath-Altmann é uma manifestação característica de sistemas complexos.
-
-Outros estudos analisam a lei de Menzerath-Altmann em textos [@hrebicek1995;@andres2010;@araujo2020;@gtorre2021], 
-fala [@HernndezFernndez2019;@Torre2019], genoma [@ferrer2014menzerath], música [@boroda1991],
-comunicação gestual de chipanzés [@heesen2019], etc.
-
-
-## Lei de Piotrowski
-### Lei de Piotrowski-Altmann 
-
-As línguas mudam pela interação entre formas antigas e novas. 
-
-- Mudanças qualitativas: mudanças em entidades individuais, mudanças sonoras.
-- Mudanças em volume: crescimento/decaimento lexical.
-
-O influxo de novos elementos em uma língua, ao longo do tempo, é descrito por 
-$$
-p(t) = \frac{c}{1 + ae^{-bt}}
-$$
-
-[@altmann1983piotrowski;@altmann1983law;@best2016bibliography;@stachowski2020]
-
-@Best2016 reúne uma extensa lista de publicações sobre a lei de Piotrowski.
-
-
-<!-- 
-linguistic phenomena which proceed in the “slow-fast-slow” fashion, i.e. drawing a sigmoid on a graph 
-
-They include the replacement of an old morphological form with a new one, lexical borrowing between languages, the growth of a child’s vocabulary, and many others. 
--->
-
----
-
-![Substituição de -{t} por -{st} na 2a pessoa do singular do presente do indicativo no verbo alemão 'wollen' (*wilt* → *willst*) [@best2006quantitative].](best_german_wollen.png){width=100%}
-
-<!-- http://lql.uni-trier.de/index.php/Change_in_language --> 
-
----
-
-![Variantes da lei Piotrowski-Altmann [@stachowski2020].](stachowski2020-fig1.png){width=70%}
-
-
-::: notes
-
-A variante da **mudança completa** é a mais básica, descrevendo a substituição completa de uma forma por outra.
-Exemplo: desaparecimento do sufixo -ov do plural genitivo dos nomes de unidades nos textos técnicos russos entre 1880 e 1920.
-A **mudança parcial** descreve mudanças que devem ser descritas pelo volume ao invés de percentual.
-Por exemplo: empréstimos de outras línguas no alemão.
-A variante de **mudança reversível** descreve uma mudança que se inicia, tem um pico e reverte-se.
-Por exemplo: epêntese do -e em verbos fortes no alemão.
-
-<!--
-The complete change variant is the original and most basic one. It describes a
-complete replacement of one form with another, e.g. the disappearance of the GEN.PL suffix -ov
-from the names of units in Russian technical texts between 1880 and 1920.
-
-The partial change variant describes a change whose volume it is more
-reasonable to count in units than as a percentage, e.g. the number of borrowings
-from various languages in German (Körner 2004).
-
-The reversible change variant describes a change which begins, peaks, and
-reverses as if cancelled mid-course, such as the epithesis of -e with strong verbs in
-German (Imsiepen 1983).
--->
-
-> Starke Verben haben in der 1. Person Singular Präteritum Indikativ keine Endung -e:
-> ich ging (gehen), sah (sehen), kam (kommen), nahm (nehmen), fand (finden), half (helfen), blieb (bleiben), ...
-> Die Ausnahme ist werden: ich wurde (veraltet: ward)
->
-> Die e-Epithese bei den starken Verben ist ein Sprachwandelprozeß, der sich nicht durchgesetzt hat. Im Verlauf des 17. Jahrhunderts erlangte sie ihre größte Beliebtheit, war jedoch nie obligatorisch. Man findet also auch in ihrer Hochzeit bei ein und demselben Autor Formen ohne -e neben solchen mit -e. Die Formen mit -e sind immer seltener als die ohne.
-([https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese](https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese))
-:::
-
-
-
 ## Lei de Frumkina
 
 ### Lei de Frumkina
@@ -921,6 +812,118 @@ set(gca,'xtick',[1:9]);
 xlabel('rank'); ylabel('observações');
 
 -->
+
+
+# Leis funcionais
+
+## Lei de Menzerath
+
+### Lei de Menzerath-Altmann
+
+@menzerath1954 observou a existência de uma relação inversa entre o tamanho de um construto e o tamanho de seus constituintes.
+
+![Frequência de tipo das palavras alemãs em relação ao número de sílabas ($z$) e o número de sons ($n$) [@menzerath1954].](menzerath-fig471.png){width=70%}
+
+---
+
+![Relação entre o comprimento das palavras e a duração de seus constituintes. Foram analisadas 10.086 palavras do inglês, com dados obtidos de dicionários online [@araujo2014menzerath].](leolca-menzerath.png){width=80%}
+
+---
+
+![Lei de Menzerath-Altmann. Relação entre o tamanho de grupo respiratório (número de palavas) versus tamanho médio das palavras (duração, número de fonemas, número de caracteres) [@Torre2019].](menzerath_bg.png){width=70%}
+
+---
+
+@altmann1980 observou que o conceito de \textit{tamanho} poderia referir-se também à complexidade e número de elementos utilizados na composição.
+@altmann1980 propôs o modelo matemático
+
+$$
+\frac{y'}{y} = \frac{b}{x} + c 
+$$
+
+para o qual a solução é 
+
+$$
+y = a x^b e^{cx}
+$$
+
+---
+
+Para @kohler1989menzerathsche, a lei de Menzerath-Altmann é uma manifestação característica de sistemas complexos.
+
+Outros estudos analisam a lei de Menzerath-Altmann em textos [@hrebicek1995;@andres2010;@araujo2020;@gtorre2021], 
+fala [@HernndezFernndez2019;@Torre2019], genoma [@ferrer2014menzerath], música [@boroda1991],
+comunicação gestual de chipanzés [@heesen2019], etc.
+
+
+# Leis de desenvolvimento
+
+## Lei de Piotrowski
+### Lei de Piotrowski-Altmann 
+
+As línguas mudam pela interação entre formas antigas e novas. 
+
+- Mudanças qualitativas: mudanças em entidades individuais, mudanças sonoras.
+- Mudanças em volume: crescimento/decaimento lexical.
+
+O influxo de novos elementos em uma língua, ao longo do tempo, é descrito por 
+$$
+p(t) = \frac{c}{1 + ae^{-bt}}
+$$
+
+[@altmann1983piotrowski;@altmann1983law;@best2016bibliography;@stachowski2020]
+
+@Best2016 reúne uma extensa lista de publicações sobre a lei de Piotrowski.
+
+
+<!-- 
+linguistic phenomena which proceed in the “slow-fast-slow” fashion, i.e. drawing a sigmoid on a graph 
+
+They include the replacement of an old morphological form with a new one, lexical borrowing between languages, the growth of a child’s vocabulary, and many others. 
+-->
+
+---
+
+![Substituição de -{t} por -{st} na 2a pessoa do singular do presente do indicativo no verbo alemão 'wollen' (*wilt* → *willst*) [@best2006quantitative].](best_german_wollen.png){width=100%}
+
+<!-- http://lql.uni-trier.de/index.php/Change_in_language --> 
+
+---
+
+![Variantes da lei Piotrowski-Altmann [@stachowski2020].](stachowski2020-fig1.png){width=70%}
+
+
+::: notes
+
+A variante da **mudança completa** é a mais básica, descrevendo a substituição completa de uma forma por outra.
+Exemplo: desaparecimento do sufixo -ov do plural genitivo dos nomes de unidades nos textos técnicos russos entre 1880 e 1920.
+A **mudança parcial** descreve mudanças que devem ser descritas pelo volume ao invés de percentual.
+Por exemplo: empréstimos de outras línguas no alemão.
+A variante de **mudança reversível** descreve uma mudança que se inicia, tem um pico e reverte-se.
+Por exemplo: epêntese do -e em verbos fortes no alemão.
+
+<!--
+The complete change variant is the original and most basic one. It describes a
+complete replacement of one form with another, e.g. the disappearance of the GEN.PL suffix -ov
+from the names of units in Russian technical texts between 1880 and 1920.
+
+The partial change variant describes a change whose volume it is more
+reasonable to count in units than as a percentage, e.g. the number of borrowings
+from various languages in German (Körner 2004).
+
+The reversible change variant describes a change which begins, peaks, and
+reverses as if cancelled mid-course, such as the epithesis of -e with strong verbs in
+German (Imsiepen 1983).
+-->
+
+> Starke Verben haben in der 1. Person Singular Präteritum Indikativ keine Endung -e:
+> ich ging (gehen), sah (sehen), kam (kommen), nahm (nehmen), fand (finden), half (helfen), blieb (bleiben), ...
+> Die Ausnahme ist werden: ich wurde (veraltet: ward)
+>
+> Die e-Epithese bei den starken Verben ist ein Sprachwandelprozeß, der sich nicht durchgesetzt hat. Im Verlauf des 17. Jahrhunderts erlangte sie ihre größte Beliebtheit, war jedoch nie obligatorisch. Man findet also auch in ihrer Hochzeit bei ein und demselben Autor Formen ohne -e neben solchen mit -e. Die Formen mit -e sind immer seltener als die ohne.
+([https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese](https://german.stackexchange.com/questions/48263/die-form-fande-als-1-person-singular-pr%c3%a4teritum-indikativ-e-epithese))
+:::
+
 
 
 
