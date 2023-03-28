@@ -56,7 +56,7 @@ Meta-information
 ================
 extype: cloze
 exclozetype: num|num|num
-exsolution: `r fmt(nbits)`|`r Perr`|`r Cheby`
+exsolution: `r fmt(nbits, digits = 0)`|`r fmt(Perr, digits = 5)`|`r fmt(Cheby, digits = 5)`
 exname: PEA e codificação
 extol: 0.0001
 expoints: 1|1|1
