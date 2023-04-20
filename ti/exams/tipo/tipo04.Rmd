@@ -17,7 +17,7 @@ for (k in 0:n) {
   Perr <- Perr - choose(N, k) * p^k * (1-p)^(N-k) 
 }
 
-Cheby <- N*p*(1-p)/( (n+N*p)^2 )
+Cheby <- N*p*(1-p)/( ((n+1)-N*p)^2 )
 ## solution
 
 
