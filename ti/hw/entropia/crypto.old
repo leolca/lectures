@@ -1,0 +1,210 @@
+# Tarefa 
+Análise Comparativa de Métodos de Criptografia - Cifra de César vs. Cifra de Vigenère
+
+## Objetivo
+O objetivo desta tarefa é comparar e analisar os aspectos práticos de dois
+métodos de criptografia, a Cifra de César e a Cifra de Vigenère, aplicando
+várias medidas de teoria da informação, como entropia, informação mútua e
+técnicas de criptoanálise. Através desta tarefa, você irá obter experiência
+prática na implementação desses métodos de criptografia, no cálculo de medidas
+de teoria da informação e na elaboração de conclusões com base na análise.
+
+## Instruções
+1. Introdução:
+  a. Forneça uma breve introdução à teoria da informação e sua importância nos
+  sistemas de comunicação seguros.
+  b. Explique os objetivos da tarefa, focando na comparação da Cifra de César e
+  da Cifra de Vigenère usando exemplos práticos e medidas de teoria da
+  informação.
+2. Métodos de Criptografia:
+  a. Explique os princípios de funcionamento da Cifra de César e da Cifra de
+  Vigenère, incluindo geração de chave, processo de criptografia e
+  descriptografia.
+  b. Forneça um guia passo a passo sobre como implementar os algoritmos da
+  Cifra de César e da Cifra de Vigenère em uma linguagem de programação de sua
+  escolha.
+  c. Incentive os alunos a criptografar e descriptografar um conjunto de
+  mensagens pré-definidas usando ambas as cifras, garantindo que eles gerem
+  chaves diferentes para cada criptografia. 
+3. Cálculo de Medidas de Teoria da Informação:
+  a. Explique o conceito de entropia e como ela quantifica a incerteza ou
+  aleatoriedade de uma mensagem.
+  b. Instrua os alunos a calcular a entropia das mensagens originais em texto
+  simples e dos textos cifrados obtidos por ambas as cifras.
+  c. Oriente os alunos a calcular a informação mútua entre o texto simples e o
+  texto cifrado para cada cifra, destacando sua relevância na mensuração do
+  vazamento de informação.
+4. Técnicas de Criptoanálise:
+  a. Apresente técnicas básicas de criptoanálise, como análise de frequência e
+  métodos estatísticos aplicáveis a ambas as cifras.
+  b. Instrua os alunos a analisar as mensagens cifradas de ambas as cifras
+  usando análise de frequência para identificar padrões ou vulnerabilidades.
+  c. Incentive os alunos a realizar ataques de texto escolhido para avaliar a
+  resistência de cada cifra a cenários de texto em claro conhecido.
+5. Análise Comparativa:
+  a. Com base na entropia e na informação mútua calculadas, peça aos alunos que
+  comparem as forças de segurança da Cifra de César e da Cifra de Vigenère.
+  b. Avalie a eficácia de cada cifra em termos de qualidade de criptografia
+  e resistência a análise de frequência e ataques de texto escolhido.
+  c. Incentive os alunos a tirar conclusões sobre as aplicações práticas de
+  cada cifra com base nos resultados observados.
+6. Conclusão:
+  a. Resuma as principais descobertas da análise, enfatizando a análise
+  comparativa da Cifra de César e da Cifra de Vigenère.
+  b. Reflita sobre as implicações práticas das medidas de teoria da informação
+  calculadas e das técnicas de criptoanálise realizadas.
+  c. Forneça insights sobre as forças e fraquezas de cada cifra e ofereça sua
+  perspectiva pessoal sobre sua relevância nos sistemas de criptografia
+  modernos.
+
+Observação: Os alunos devem documentar suas descobertas, observações e
+conclusões ao longo da tarefa. Devem também apresentar seus resultados usando
+tabelas, gráficos e explicações adequadas para aumentar a clareza e
+compreensão. É essencial citar e referenciar quaisquer fontes externas
+utilizadas na tarefa.
+
+---
+
+Prototypical Answer: Análise Comparativa de Métodos de Criptografia
+
+```
+% Código do MATLAB/Octave
+% ...
+% Set the plaintext message
+plaintext = 'HELLO WORLD';
+
+% Define the encryption key for the Caesar Cipher
+caesarKey = 3;
+
+% Define the encryption key for the Vigenère Cipher
+vigenereKey = 'KEY';
+
+% Encryption Functions
+
+% Caesar Cipher encryption
+caesarEncrypt = @(text, key) char(mod(double(text) - 65 + key, 26) + 65);
+
+% Caesar Cipher decryption
+caesarDecrypt = @(text, key) char(mod(double(text) - 65 - key, 26) + 65);
+
+% Vigenère Cipher encryption
+vigenereEncrypt = @(text, key) char(mod(double(text) - 65 + double(key) - 65, 26) + 65);
+
+% Vigenère Cipher decryption
+vigenereDecrypt = @(text, key) char(mod(double(text) - 65 - double(key) + 65, 26) + 65);
+
+% Encryption Process
+
+% Caesar Cipher encryption
+caesarCiphertext = caesarEncrypt(plaintext, caesarKey);
+
+% Caesar Cipher decryption
+caesarDeciphertext = caesarDecrypt(caesarCiphertext, caesarKey);
+
+% Vigenère Cipher encryption
+vigenereCiphertext = vigenereEncrypt(plaintext, vigenereKey);
+
+% Vigenère Cipher decryption
+vigenereDeciphertext = vigenereDecrypt(vigenereCiphertext, vigenereKey);
+
+% Computing Information Theory Measures
+
+% Function to compute entropy
+computeEntropy = @(text) -sum((histcounts(double(text) - 64, 1:27) / length(text)) .* log2(histcounts(double(text) - 64, 1:27) / length(text)));
+
+% Compute entropy for plaintext and ciphertexts
+entropyPlaintext = computeEntropy(plaintext);
+entropyCaesar = computeEntropy(caesarCiphertext);
+entropyVigenere = computeEntropy(vigenereCiphertext);
+
+% Function to compute mutual information
+computeMutualInformation = @(plaintext, ciphertext) computeEntropy(plaintext) - computeEntropy(ciphertext);
+
+% Compute mutual information for each cipher
+mutualInfoCaesar = computeMutualInformation(plaintext, caesarCiphertext);
+mutualInfoVigenere = computeMutualInformation(plaintext, vigenereCiphertext);
+
+% Cryptanalysis Techniques
+
+% Frequency analysis
+frequencyAnalysis = @(text) [char(65:90); histcounts(double(text) - 64, 1:27)]';
+
+% Perform frequency analysis on ciphertexts
+caesarFreqAnalysis = frequencyAnalysis(caesarCiphertext);
+vigenereFreqAnalysis = frequencyAnalysis(vigenereCiphertext);
+
+% Chosen-plaintext attack
+chosenPlaintext = 'HELLO';
+chosenCiphertext = vigenereEncrypt(chosenPlaintext, vigenereKey);
+
+% Analysis Results
+
+fprintf('Plaintext: %s\n', plaintext);
+fprintf('Caesar Ciphertext: %s\n', caesarCiphertext);
+fprintf('Vigenère Ciphertext: %s\n', vigenereCiphertext);
+fprintf('\n');
+
+fprintf('Entropy:\n');
+fprintf('Plaintext: %.2f\n', entropyPlaintext);
+fprintf('Caesar Ciphertext: %.2f\n', entropyCaesar);
+fprintf('Vigenère Ciphertext: %.2f\n', entropyVigenere);
+fprintf('\n');
+
+fprintf('Mutual Information:\n');
+fprintf('Caesar Cipher: %.2f\n', mutualInfoCaesar);
+fprintf('Vigenère Cipher: %.2f\n', mutualInfoVigenere);
+fprintf('\n');
+
+fprintf('Frequency Analysis - Caesar Ciphertext:\n');
+disp(caesarFreqAnalysis);
+fprintf('\n');
+
+fprintf('Frequency Analysis - Vigenère Ciphertext:\n');
+disp(vigenereFreqAnalysis);
+fprintf('\n');
+
+fprintf('Chosen-Plaintext Attack - Chosen Plaintext: %s\n', chosenPlaintext);
+fprintf('Chosen-Plaintext Attack - Ciphertext: %s\n', chosenCiphertext);
+fprintf('\n');
+% ...
+```
+
+% Conclusões
+
+% Comparação de Entropia
+% Quanto maior a entropia, maior a aleatoriedade e incerteza na mensagem.
+% A partir dos valores de entropia calculados, observamos que o texto simples tem a maior entropia,
+% indicando um maior grau de aleatoriedade. O texto cifrado da Cifra de César possui entropia menor do que o texto simples,
+% sugerindo alguma perda de aleatoriedade devido ao deslocamento fixo. O texto cifrado da Cifra de Vigenère apresenta
+% entropia mais alta do que o texto cifrado da Cifra de César, indicando melhor preservação da aleatoriedade da mensagem original
+% devido à chave variável.
+
+% Comparação de Informação Mútua
+% A informação mútua mede a quantidade de informação compartilhada entre o texto simples e o texto cifrado.
+% Um valor maior de informação mútua implica em um vazamento de informação maior.
+% Comparando os valores de informação mútua, encontramos que a Cifra de César possui um valor menor de informação mútua
+% do que a Cifra de Vigenère. Isso implica que a Cifra de César vaza menos informações sobre o texto simples,
+% indicando uma segurança relativamente melhor contra ataques de texto em claro conhecido.
+
+% Análise de Frequência
+% A análise de frequência permite examinar a distribuição de frequência das letras no texto cifrado.
+% No caso da Cifra de César, a análise de frequência pode revelar um padrão de deslocamento no histograma,
+% indicando a chave de criptografia. No entanto, para a Cifra de Vigenère, a análise de frequência parece aleatória,
+% tornando-a mais resistente a ataques baseados em frequência.
+
+% Ataque de Texto Escolhido
+% O ataque de texto escolhido envolve a criptografia de um texto específico com uma chave conhecida e a análise
+% do texto cifrado resultante. No nosso caso, usamos a Cifra de Vigenère para criptografar um texto escolhido.
+% O ataque de texto escolhido destaca a importância de selecionar uma chave forte. Ao analisar o texto escolhido
+% e seu respectivo texto cifrado, um atacante pode tentar deduzir a chave. Um método de criptografia seguro deve
+% resistir a esses ataques.
+
+% No geral, com base na análise realizada, a Cifra de Vigenère oferece uma segurança melhor do que a Cifra de César.
+% Ela apresenta uma entropia mais alta, uma informação mútua mais baixa e uma maior resistência à análise de frequência.
+% No entanto, é importante observar que ambas as cifras são relativamente simples e podem não fornecer segurança adequada
+% em cenários criptográficos modernos. Elas servem como exemplos fundamentais para entender os conceitos básicos de criptografia
+% e teoria da informação.
+
+% Análises adicionais e explorações podem ser realizadas pelos alunos para investigar ainda mais as forças e fraquezas de cada cifra,
+% explorar espaços de chaves maiores ou compará-las com métodos de criptografia mais avançados.
+

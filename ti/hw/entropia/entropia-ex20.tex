@@ -1,0 +1,61 @@
+\subsection{One-time pad (OTP)}
+
+\begin{questions}
+\question{
+O One-time pad (OTP) é um esquema de criptografia simétrica que utiliza uma chave secreta tão longa quanto a mensagem e é usada apenas uma vez. A segurança do OTP baseia-se na propriedade de que, se a chave é verdadeiramente aleatória, não reutilizada e mantida em segredo, é matematicamente impossível derivar qualquer informação útil sobre a mensagem sem a chave.
+
+Cada bit da mensagem é combinado com o bit correspondente na chave usando a operação XOR (soma módulo 2).
+Para descriptografar, a mesma chave é usada novamente, e a operação XOR é aplicada. Como XOR é reversível ($X$ XOR $Y$ XOR $Y$ = $X$), a mensagem original é recuperada.
+
+Seja $X$ a mensagem da fonte e $Y$ a chave OTP, a mensagem cifrada $Z$ é dada por
+
+\begin{equation}
+Z = X \oplus Y, 
+\end{equation}
+ou seja, $Z$ é resultado do XOR entre $X$ e a chave $Y$.
+
+}
+
+\begin{solution}
+Um fato fundamental é que o resultado do XOR de uma sequência de bits 
+completamente aleatória com uma outra sequência de bits, com qualquer distribuição, 
+produz outra sequência de bits completamente aleatória.
+Ou seja, se a distribuição de $Y$ é uniforme, $P(Y=1)=P(Y=0)=\frac{1}{2}$,
+e $X$ tem uma distribuição qualquer, $P(X=1)=\theta$ e $P(X=0)=1-\theta$,
+então, como podemos observar da tabela do XOR (ver abaixo),
+\begin{align}
+  P(Z=1) &= P(X=1) P(Y=0) + P(X=0) P(Y=1) \\
+   & = \theta \frac{1}{2} + (1-\theta) \frac{1}{2} = \frac{1}{2}
+\end{align}
+e da mesma forma, $P(Z=0) = \frac{1}{2}$, ou seja, independente de 
+qual seja a distribuição em $X$, a aleatoriedade máxima em $Y$ garante
+que teremos também aleatoriedade máxima em $Z$. 
+
+\begin{center}
+\begin{tabular}{lll}
+X & Y & Z \\
+\hline
+0 & 0 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 1 \\
+1 & 1 & 0  
+\end{tabular}
+\end{center}
+
+Note ainda que, fixando $Z$, nada podemos saber sobre $X$, uma vez que $Y$ é uniforme.
+Para $Z=0$, $X$ pode assumir os valores $0$ ou $1$ com igual probabilidade, já que 
+$P(Y=0)=P(Y=1)=\frac{1}{2}$. O mesmo vale para $Z=1$. Desta forma 
+\begin{align}
+H(X|Z) =& \sum_z p(z) H(X|Z=z) = P(Z=0) H(X|Z=0) + P(Z=1) H(X|Z=1) \\
+  =& (P(X=0)P(Y=0)+P(X=1)P(Y=1)) H(X|Z=0) + \\
+  &(P(X=1)P(Y=0)+P(X=0)P(Y=1)) H(X|Z=1) \\
+  =& \frac{1}{2} H(X|Z=0) + \frac{1}{2} H(X|Z=1) \\
+  =& \frac{1}{2} H(X) + \frac{1}{2} H(X) = H(X).
+\end{align}
+Conhecer assim o valor de $Z$ nada nos diz sobre quem é $X$ (o mesmo vale para $Y$, ou seja, $Z$ não diz nada sobre $Y$).
+O OTP permanece seguro quando implementado corretamente com uma chave 
+verdadeiramente aleatória e usada apenas uma vez.
+
+\end{solution}
+
+\end{questions}
