@@ -146,7 +146,7 @@ Utiliza as letras da chave para selecionar a coluna e as letras da mensagem para
 \end{frame}
 
 
-
+\subsection{Princípio de Kerckhoff}
 \begin{frame}
 \frametitle{Princípio de Kerckhoff}
 \begin{itemize}
@@ -162,9 +162,10 @@ irá rapidamente obter familiaridade com eles.
 \end{quote}
 
 \fullcite{Shannon1949}
-
 \end{frame}
 
+
+\subsection{Criptografica clássica vs. moderna}
 \begin{frame}
 \frametitle{Problemas da criptografia clássica}
 \begin{itemize}
@@ -187,6 +188,492 @@ irá rapidamente obter familiaridade com eles.
 \end{frame}
 
 
+\subsection{Criptografia Simétrica}
+\begin{frame}
+\frametitle{Criptografia Simétrica}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{figures/simple_symmetric_encryption.png}
+\caption{Esquema de criptografia simétrica simples \cite{paar2014}.}
+\label{fig-simplesymmetric}
+\end{figure}
+\end{frame}
+
+\subsection{Aritmética Modular}
+\begin{frame}
+\frametitle{Aritmética Modular}
+\begin{equation}
+a \equiv r \mod m
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth,height=0.45\textheight,keepaspectratio]{figures/modulararithmetic.png}
+\caption{Exemplo $\mod 26$.}
+\label{fig-modulararithmetic}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cifra de César}
+\begin{itemize}
+\item $x$ : mensagem
+\item $k$ : chave
+\item $m = 26$ : módulo
+\item $y$ : mensagem recuperada
+\end{itemize}
+
+encriptação: 
+\begin{equation}
+e_k(x) \equiv x + k \mod 26
+\end{equation}
+
+desencriptação:
+\begin{equation}
+d_k(y) \equiv y - k \mod 26
+\end{equation}
+
+ROT-13: $\text{ROT}_{13}(\text{ROT}_{13}(x)) = x$
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.25\textwidth,height=0.15\textheight,keepaspectratio]{figures/rot13.png}
+\caption{ROT-13.}
+\label{fig-rot13}
+\end{figure}
+\end{frame}
+
+
+\subsection{Criptografia de fluxo vs. blocos}
+\begin{frame}[allowframebreaks]
+\frametitle{Stream Ciphers vs. Block Ciphers}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.5\textheight,keepaspectratio]{figures/stream_block.png}
+\caption{Criptografia de $b$ bits em uma cifra de fluxo e uma cifra de bloco \cite{paar2014}.}
+\label{fig-stream_block}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Algoritmos Simétricos:}
+    \begin{itemize}
+    \item Stream Ciphers:
+    \begin{itemize}
+        \item RC4 (Rivest Cipher 4) - Wi-Fi WEP e WPA.
+        \item Salsa20 / ChaCha20 - TLS (Transport Layer Security) e criptografia de disco.
+	\item A5/1 e A5/2 - celular GSM (criptografia de voz).
+    \end{itemize}
+    
+    \item Block Ciphers:
+    \begin{itemize}
+	\item AES (Advanced Encryption Standard) - TLS, criptografia de disco (e.g., BitLocker, LUKS), e segurança sem fio (ex., WPA2).
+	\item DES (Data Encryption Standard) - muito utilizado no passado, mas hoje considerado obsoleto (ex., versão antiga do SSL/TLS).
+	\item 3DES (Triple DES) - transações financeiras e VPNs.
+    \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Algoritmos Assimétricos:}
+    \begin{itemize}
+	\item RSA (Rivest-Shamir-Adleman) - SSL/TLS (Secure Sockets Layer/Transport Layer Security), assinatura digital, troca de chave, Autoridade de certificação (CA)
+	\item Elliptic Curve Cryptography (ECC)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Cifras de Fluxo}
+\begin{frame}[allowframebreaks]
+\frametitle{Criptografia de Cifras de Fluxo}
+A mensagem, a cifra e a chave são constituídos por bits individuais: $x_i$, $y_i$ e $s_i \in \{0,1\}$, respectivamente.
+
+Criptografia: $y_i = e_{si} (x_i) \equiv x_i + s_i \mod 2$
+
+Descriptografia: $x_i = d_{si} (y_i) \equiv y_i + s_i \mod 2$
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{figures/streamcipher.png}
+\caption{Criptografia de fluxo \cite{paar2014}.}
+\label{fig-streamcipher}
+\end{figure}
+\end{frame}
+
+
+\subsection{Números Aleatórios}
+\begin{frame}[allowframebreaks]
+\frametitle{Números Aleatórios}
+
+Tipos de geradores de número aleatório (RNG, \emph{random number generators}):
+\begin{enumerate}
+\item True Random Number Generators (TRNG)
+\item Pseudorandom Number Generators (PRNG)
+    ex.: \emph{linear congruential generator:}
+    \begin{align}
+    s_0 &= \text{seed} \\
+    s_{i+1} &\equiv a s_i + b \mod m, \quad i = 0, 1, \ldots
+    \end{align}
+    função \texttt{rand()} no ANSI C usa $s_0 = 12345$, $a = 1103515245$, $b = 12345$ e $m = 2^{31}$.
+\item Cryptographically Secure Pseudorandom Number Generators (CSPRNG)\\
+    exemplos:
+    \begin{itemize}
+	\item Fortuna (criado por Bruce Schneier e Niels Ferguson, utiliza uma piscina de entropia para 
+	    continuamente ressemear a si mesmo e gerar uma saída aleatória de alta qualidade.
+	    Utilizado no \texttt{/dev/random} do FreeBSD.
+        \item \texttt{/dev/random} e \texttt{/dev/urandom} no Linux.
+	\item ChaCha20 é uma criptografia de fluxo utilizada como PRNG no \texttt{/dev/urandom}.
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+
+\subsubsection{One-Time Pad}
+\begin{frame}
+\frametitle{The One-Time Pad}
+
+\textbf{Segurança incondicional} (\emph{unconditionally or information-theoretically secure}) é quando um sistema de criptografia não puder ser quebrado mesmo com recursos computacionais infinitos.
+
+\textbf{One-Time Pad (OTP)}\\
+Uma cifra de fluxo para a qual:
+\begin{enumerate}
+\item o fluxo de chaves $s_0$, $s_1$, $s_2$, $\ldots$ é gerado por um verdadeiro gerador de números aleatórios, 
+\item o fluxo de chaves é conhecido apenas pelas partes legítimas na comunicação, e
+\item cada bit de fluxo de chave $s_i$ é usado apenas uma vez,
+é chamada de \emph{One-Time Pad}.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Em busca de cifras de fluxo práticas}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{figures/practicalstream.png}
+\caption{Cifras de fluxo práticas \cite{paar2014}.}
+\label{fig-practicalstream}
+\end{figure}
+
+\begin{itemize}
+\item utilizar PRNG/CSPRNG para criar fluxo de chave
+\item linear feedback shift registers (LFSRs)
+\end{itemize}
+\end{frame}
+
+\subsubsection{LFSR}
+\begin{frame}[allowframebreaks]
+\frametitle{Linear feedback shift registers (LFSRs)}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.5\textheight,keepaspectratio]{figures/lfsr3.png}
+\caption{Linear feedback shift register de grau 3 \cite{paar2014}.}
+\label{fig-lfsr3}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.5\textheight,keepaspectratio]{figures/lfsrp.png}
+\caption{Linear feedback shift register de grau $m$ \cite{paar2014}.}
+\label{fig-lfsrp}
+\end{figure}
+O comprimento máximo de uma sequência gerada por uma LFSR de grau $m$ é $2^{m}-1$.
+\end{frame}
+
+
+\subsection{Cifras de Bloco}
+\subsubsection{DES}
+
+\begin{frame}[allowframebreaks]
+\frametitle{DES}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{figures/DES01.png}
+\caption{Visão geral da cifra de bloco DES \cite{paar2014}.}
+\label{fig-DES01}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.25\textwidth,height=0.75\textheight,keepaspectratio]{figures/DES02.png}
+\caption{Estrutura iterativa do DES \cite{paar2014}.}
+\label{fig-DES02}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.25\textwidth,height=0.75\textheight,keepaspectratio]{figures/DES03.png}
+\caption{Estrutura Feistel no DES \cite{paar2014}.}
+\label{fig-DES03}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.25\textwidth,height=0.75\textheight,keepaspectratio]{figures/feistel.png}
+\caption{Estrututa Feistel \cite{paar2014}.}
+\label{fig-feistel}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-initialpermutation.png}
+\caption{Permutação inicial no DES \cite{paar2014}.}
+\label{fig-DES-initialpermutation}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-finalpermutation.png}
+\caption{Permutação final no DES \cite{paar2014}.}
+\label{fig-DES-finalpermutation}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-diagrama-funcaof.png}
+\caption{Diagrama da função $f$ no DES \cite{paar2014}.}
+\label{fig-DES-diagrama-funcaof}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-expansion.png}
+\caption{Permutação com expansão da função $f$ no DES \cite{paar2014}.}
+\label{fig-DES-expansion}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-S1box.png}
+\caption{Substituição realizada pela caixa $S_1$ da função $f$ no DES \cite{paar2014}.}
+\label{fig-DES-S1box}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-S1-8.png}
+\caption{Caixas $S_1$ a $S_8$ da função $f$ no DES \cite{paar2014}.}
+\label{fig-DES-S1-8}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-f_func-finalpermutation.png}
+\caption{Permutação final da função $f$ no DES \cite{paar2014}.}
+\label{fig-DES-f_func-finalpermutation}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-keyschedule.png}
+\caption{Cronograma de chaves no DES \cite{paar2014}.}
+\label{fig-DES-keyschedule}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-keyschedule-PC1.png}
+\caption{Permutação inicial do cronograma de chaves no DES (PC-1). Note que na saída temos apenas 56 dos 64 bits de entrada. Os outros 8 bits (8, 16, 24, 32, 40, 48, 56, 6) são especificados como bits de paridade \cite{wikides2023,paar2014}.}
+\label{fig-DES-keyschedule-PC1}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/DES-keyschedule-PC2.png}
+\caption{Permutação final em cada rodada do cronograma de chaves no DES (PC-2). Note que 8 bits são ignorados (9, 18, 22, 25, 35, 38, 43, 54) \cite{wikides2023, paar2014}.}
+\label{fig-DES-keyschedule-PC2}
+\end{figure}
+% https://en.wikipedia.org/wiki/DES_supplementary_material
+
+\end{frame}
+
+
+
+\subsubsection{AES}
+\begin{frame}[allowframebreaks]
+\frametitle{AES}
+Advanced Encryption Standard (AES)
+
+\begin{itemize}
+  \item 1997 - chamada para propostas para um novo código de bloco (NIST, \emph{US National Institute of Standards and Technology})
+  \item 1999 - DES $\rightarrow$ 3DES  (NIST)
+  \item 1999 - finalistas: Mars (IBM Corporation), RC6 (RSA Laboratories), Rijndael (Joan Daemen e Vincent Rijmen), Serpent (Ross Anderson, Eli Biham e Lars Knudsen), Twoﬁsh (Bruce Schneier, John Kelsey, Doug Whiting, David Wagner, Chris Hall e Niels Ferguson)
+  \item 2000 - Rijndael = AES
+  \item 2001 - AES tornou-se um padrão federal americano
+\end{itemize}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.55\textheight,keepaspectratio]{figures/AES.png}
+\caption{AES \cite{paar2014}.}
+\label{fig-AES}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.55\textwidth,height=0.7\textheight,keepaspectratio]{figures/AES-diagrama.png}
+\caption{Diagrama AES \cite{paar2014}.}
+\label{fig-AES-diagrama}
+\end{figure}
+
+\framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.7\textheight,keepaspectratio]{figures/AES-diagrama-z1.png}
+%\caption{Diagrama AES \cite{paar2014}.}
+\label{fig-AES-diagrama-z1}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.7\textheight,keepaspectratio]{figures/AES-diagrama-z2.png}
+%\caption{Diagrama AES \cite{paar2014}.}
+\label{fig-AES-diagrama-z2}
+\end{figure}
+
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-roundfunction.png}
+\caption{Diagrama do AES \cite{paar2014}.}
+\label{fig-AES-roundfunction}
+\end{figure}
+
+O AES é orientado a byte. Os 128 bits na entrada são divididos em 16 bytes: $A_0, \ldots, A_{15}$.
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-SBox.png}
+\caption{S-Box do AES. Valores de substituição para um byte de entrada xy \cite{paar2014}.}
+\label{fig-AES-SBox}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-SBox-operations.png}
+\caption{Diagrama do S-Box \cite{paar2014}. A segunda parte é chamada de função afim (uma transformação linear seguida por uma translação: $x \mapsto Ax + b$).}
+\label{fig-AES-SBox-operations}
+\end{figure}
+
+ \framebreak
+
+\begin{equation}
+A^{-1} (x) \cdot A(x) \equiv 1 \mod P(x)
+\end{equation}
+onde utilizamos $P(x) = x^8 + x^4 + x^3 + x + 1$. 
+Tal escolha se dá por se um polinômio irredutível em GF($2^8$) (ou seja, não pode ser
+fatorado em polinômios de menor grau). Além disso, tal polinômio possui termos de diferentes ordens (8, 4, 3, 1), 
+contribuindo para uma mistura equilibrada de difusão e confusão.
+
+Confusão: torna difícil discernir padrões estatísticos e relações entre a mensagem original e a mensagem cifrada.\\
+Difusão: a mudança em um único bit afeta vários bits, espalhando assim a influência de cada bit de entrada.
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-SBox-GFinv.png}
+\caption{Tabela de inversa multiplicativa em GF($2^8$) para bytes xy no S-Box do AES \cite{paar2014}.}
+\label{fig-AES-SBox-GFinv}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-shiftrow.png}
+\caption{Transformação Shiftrow do AES \cite{paar2014}.}
+\label{fig-AES-shiftrow}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{figures/AES-mixcolumns.png}
+\caption{Operação MixColum \cite{paar2014}.}
+\label{fig-AES-mixcolumns}
+\end{figure}
+Cada byte $C_i$ e $B_i$ é um valor de 8 bits representando um elemento em GF($2^8$). 
+Todas as contas envolvendo os coeficientes são realizadas no corpo finito GF($2^8$).
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-keyschedule.png}
+\caption{Cronograma de chaves do AES (chave de 128-bit) \cite{paar2014}.}
+\label{fig-AES-keyschedule}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-keyschedule-z.png}
+%\caption{Operação MixColum \cite{paar2014}.}
+%\label{fig-AES-mixcolumns-z}
+\end{figure}
+
+ \framebreak
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{figures/AES-keyschedule-g.png}
+\caption{Função $g$ da $i$-ésima rodada do cronograma de chaves do AES \cite{paar2014}.}
+\label{fig-AES-mixcolumns}
+\end{figure}
+A função $g()$ rotaciona os quatro bytes de entrada, aplica o S-Box aos bytes, e adiciona um coeficiente de arredondamento RC.
+Sendo tal coeficiente para cada rodada definido por:
+\begin{align}
+\text{RC}[1] &= x^0 = (0000 0001)_2 \\
+\text{RC}[2] &= x^1 = (0000 0010)_2 \\
+\text{RC}[3] &= x^2 = (0000 0100)_2 \\
+\ldots \\
+\text{RC}[10] &= x^9 = (0011 0110)_ 2
+\end{align}
+
+\end{frame}
+
+
+\subsection{Diffie-Hellman}
 \begin{frame}[allowframebreaks]
 \frametitle{Diffie-Hellman}
 O método proposto por Whitfield Diffie e Martin Hellman permite que duas partes,
@@ -229,6 +716,7 @@ Problemas:
 \end{frame}
 
 
+\subsection{RSA}
 \begin{frame}[allowframebreaks,fragile]
 \frametitle{Criptografia de chave pública - RSA}
 \begin{itemize}
@@ -451,7 +939,7 @@ gpg: sending key 07B6698B47C96DBF to hkp://keyserver.ubuntu.com:80
 
 
 
-\subsection{Números aleatórios}
+\subsection{Fonte de aleatoriedade}
 \begin{frame}[allowframebreaks,fragile]
   \frametitle{Números aleatórios}
 
