@@ -9,7 +9,12 @@ outertheme: tree
 colortheme: dove
 urlcolor: red
 aspectratio: 169
-header-includes: \usepackage{amsmath}\DeclareMathOperator*{\argmax}{arg\,max}\DeclareMathOperator*{\argmin}{arg\,min}
+header-includes: |
+    \usepackage{amsmath}
+    \DeclareMathOperator*{\argmax}{arg\,max}
+    \DeclareMathOperator*{\argmin}{arg\,min}
+    \usepackage{graphicx}
+    \titlegraphic{\includegraphics[width=0.2\textwidth]{qrcode-spellcheck.png}}
 ---
 
 # Spelling Correction
@@ -176,6 +181,47 @@ Operations are expensive and language dependent: e.g. as of version 16.0, Unicod
   - Words were represented by 16-bit machine words;\pause 
   - Bloom filter; 
   - False Positives.
+
+---
+
+- **Jaro similarity** (1989)
+
+\small
+The Jaro similarity $sim_j$ of two given strings $s_1$ and $s_2$ is
+
+$$
+sim_j = \left\{
+\begin{array}{l l}
+  0 & \text{if }m = 0\\
+  \frac{1}{3}\left(\frac{m}{|s_1|} + \frac{m}{|s_2|} + \frac{m-t}{m}\right) & \text{otherwise} \end{array} \right.
+$$
+
+where:
+
+  - $|s_i|$ is the length of the string $s_i$;
+  - $m$ is the number of ''matching characters'' (see below);
+  - $t$ is the number of ''transpositions'' (see below).
+
+Jaro similarity score is 0 if the strings do not match at all, and 1 if they
+are an exact match. In the first step, each character of $s_1$ is
+compared with all its matching characters in $s_2$. Two characters
+from $s_1$ and $s_2$ respectively, are considered
+**matching** only if they are the same and not farther than
+$\left\lfloor\frac{\max(|s_1|,|s_2|)}{2}\right\rfloor-1$ characters
+apart.
+**Transposition** is the number of matching characters that are not in the right order divided by two.
+
+---
+
+- **Jaro-Winkler similarity** (1990)
+
+  - Introduces Winkler modification.
+  - Prefix Length $\ell$: if two strings share a common prefix, they are likely to be more similar.
+  - scale factor $p$: enhances the Jaro similarity score based on the length of the common prefix (usually set to 0.1 and should not exceed 0.25).
+
+$$
+sim_w = sim_j + \ell p (1 - sim_j)
+$$
 
 ---
 
@@ -413,27 +459,37 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 
 ---
 
-- **Neural-Based Models**: Leverage deep learning for advanced error detection and correction.
+- **QWERTY Weighted Levenshtein Distance**: takes keyboard distance into account.
+
+![QWERTY keyboard and keyboard distance matrix.](keyboarddistance.png){ width=80% }
+
+  - Distance between keys are in [0,9]. They are multiplied by 2/9.
 
 ---
 
-## Key Techniques in Spelling Correction
+  - Deletion: weighted by the average of the distances to the adjacent characters in the string.
+  - Insertion: unchanged, weight 1. 
+  - Substitution: weighted according to the distance between the character that is removed and the character that is inserted.
+  - Transposition: unchanged, weight 1.
 
-### **The Noisy Channel Model**
-- **Bayesian Inference**:  
-  Finds the word \( w \) that maximizes \( P(w|x) \):
-  $$
-  \hat{w} = \arg\max_{w \in V} P(x|w)P(w)
-  $$
-- **Components**:  
-  - **Prior Probability**: \( P(w) \) (from n-grams like unigrams, bigrams, etc.)
-  - **Error Model**: \( P(x|w) \) (using confusion matrices).  
+[Samuelsson, 2017](https://www.diva-portal.org/smash/get/diva2:1116701/FULLTEXT01.pdf)
 
-#### Confusion Matrix Examples:
-- **Deletion**: \( del[x, y] \)
-- **Insertion**: \( ins[x, y] \)
-- **Substitution**: \( sub[x, y] \)
-- **Transposition**: \( trans[x, y] \)
+---
+
+- **Neural-Based Models**: Leverage deep learning for advanced error detection and correction.
+  - Utilize deep learning techniques to improve spellchecking:
+    - Recurrent Neural Networks (RNNs)
+    - Word Embeddings
+    - Transformers
+  - Contextual Awareness
+  - Learning from Data
+  - Handling Typos
+  
+### Examples:
+  - Google's Smart Compose
+  - Grammarly
+  - Microsoft Editor
+  - LanguageTool
 
 ---
 
@@ -446,30 +502,6 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
    Considers physical proximity of keys.
 4. **Phonetic Matching**:  
    Algorithms like Soundex and Metaphone to identify similar-sounding words.
-
----
-
-### **Probabilistic Models**
-- **Example**:  
-  Correction for real-word spelling errors.  
-  Input: `Only two of thew apples`  
-  Candidates: `two of the`, `two of threw`, `two of thaw`, etc.  
-  Use trigram probabilities (e.g., \( P(\text{the}|\text{two of}) = 0.476012 \)).
-
----
-
-### **Neural Networks and Deep Learning**
-- Models like RNNs, Transformers, and LSTMs learn patterns from large datasets.
-
----
-
-## Real-World Spelling Correction
-
-- Input: Sentence with an error.
-- Output: Highest-probability correction based on:
-  1. Language Model (\( P(W) \))
-  2. Channel Model (\( P(x|W) \)).
-
 
 ---
 
@@ -502,4 +534,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 - Kernighan, M. D. et al. (1990). *A spelling correction program based on a noisy channel model*.
 - Mays, E. et al. (1991). *Context based spelling correction*.
 - Jurafsky, D., & Martin, J. H. (2024). *Speech and Language Processing*.
+- Jaro, M. A. (1989). *Advances in Record-Linkage Methodology as Applied to Matching the 1985 Census of Tampa, Florida*.
+- Winkler, W. E. (1990). *String Comparator Metrics and Enhanced Decision Rules in the Fellegi-Sunter Model of Record Linkage*.
+- Samuelsson, A. (2017). *Weighting Edit Distance to Improve Spelling Correction in Music Entity Search*.
 
