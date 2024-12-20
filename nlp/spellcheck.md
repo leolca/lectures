@@ -113,6 +113,17 @@ Stefan  → S315, Price  → P620, Juiced → J230, Rubin  → R150
 ---
 
 - **Blair (1960)**: Early algorithm for spelling error correction.
+  - Blair introduced the concept of similarity keys to group words based on their likelihood of being confused with one another.
+  - r-letter abbreviation of an n-letter word
+    - Information conveyed is inversely proportional to its a priori probability of occurrence.
+    - eliminate $n-r$ letters in the order of their expected frequency
+    - eliminate by their frequency of their occurrence as errors (best approach)
+    - weight must also be given to the position of the letter in the word
+
+![Example of Blair's algorithm.](blair-example.png){ width=70% }
+
+---
+
 - **Damerau–Levenshtein** distance (1964, 1966): A string metric for measuring the edit distance between two sequences.
 
 ![How many operations does it take to turn Saturday into Sundat?](levenshtein.png){ width=30% }
@@ -170,15 +181,15 @@ Operations are expensive and language dependent: e.g. as of version 16.0, Unicod
 ---
 
 - **SPELL** (Unix, 1975)
-  - Error detection only.\pause 
+  - Error detection only. 
   - Prefix and suffix removal (reduces the list below 1/3); 
-    - `buzzed` → `buzz`, `mapping` → `map`, `possibly` → `possible`, `antisocial` → `social`, `metaphysics` → `physics`.\pause
+    - `buzzed` → `buzz`, `mapping` → `map`, `possibly` → `possible`, `antisocial` → `social`, `metaphysics` → `physics`.
   - Hashing (discarding 60% of the remaining bits); \newline
     Examples of hashing functions:
     1. Shift-and-Add: $h = ( h << 1) + \text{char} \% m$
     2. Multiplicative Hashing: $h = (a \cdot h + \text{char}) \% m$ (with a typically 31 or 33)
     3. XOR-based Hashing: $h = h \oplus (\text{char} << k)$
-  - Words were represented by 16-bit machine words;\pause 
+  - Words were represented by 16-bit machine words; 
   - Bloom filter; 
   - False Positives.
 
@@ -362,6 +373,22 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 
 ---
 
+- **Brill-Moore channel model** (2000): String to string edits.
+  - Let $\Sigma$ be an alphabet, the model allows all edit operations of the form $\alpha \rightarrow \beta$, where $\alpha,\beta \in \Sigma^\ast$.
+  - $P(\alpha \rightarrow \beta)$ is the probability that when users intends to type $\alpha$ and they typed $\beta$ instead.
+  - $P(\alpha \rightarrow \beta | PNS)$ probability conditioned by the position on the string
+    - P(e | a) does not vary greatly with position.
+    - P(ent | ant) is highly dependent upon position.
+    - People rarely mistype *antler* as *entler*, but often mistype *reluctant* as *reluctent*.
+
+---
+
+![String alignment (Brill and Moore, 2000).](spellbrill.png){ width=50% }
+
+[Brill, E. and Moore, R. C. (2000). *An Improved Error Model for Noisy Channel Spelling Correction*.](https://doi.org/10.3115/1075218.1075255)
+
+---
+
 - **Aspell** (2000): Combines spelling and phonetic correction.
   - Hashing for Spell Checking: Efficient candidate lookup using hash tables.
   - Metaphone Algorithm: Handles phonetic corrections by matching words that sound similar.
@@ -527,14 +554,19 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 
 ## References
 
+\footnotesize
 - Shannon, C. E. (1950). *Prediction and Entropy of Printed English*.
 - Blair, C. R. (1960). *A program for correcting spelling errors*.
 - Damerau, F. J. (1964). *A technique for computer detection and correction of spelling errors*.
 - Levenshtein, V. I. (1966). *Binary codes capable of correcting deletions, insertions, and reversals*.
-- Kernighan, M. D. et al. (1990). *A spelling correction program based on a noisy channel model*.
-- Mays, E. et al. (1991). *Context based spelling correction*.
-- Jurafsky, D., & Martin, J. H. (2024). *Speech and Language Processing*.
+- Burkhard W. and Keller R. (1973). *Some approaches to best-match file searching*.
 - Jaro, M. A. (1989). *Advances in Record-Linkage Methodology as Applied to Matching the 1985 Census of Tampa, Florida*.
 - Winkler, W. E. (1990). *String Comparator Metrics and Enhanced Decision Rules in the Fellegi-Sunter Model of Record Linkage*.
+- Kernighan, M. D. et al. (1990). *A spelling correction program based on a noisy channel model*.
+- Mays, E. et al. (1991). *Context based spelling correction*.
+- Atkinson, K. (2000). *GNU Aspell*. 
+- Németh, L. (2002). *Hunspell*.
 - Samuelsson, A. (2017). *Weighting Edit Distance to Improve Spelling Correction in Music Entity Search*.
+- Brill, E. and Moore, R. C. (2000). *An Improved Error Model for Noisy Channel Spelling Correction*.
+- Jurafsky, D., & Martin, J. H. (2024). *Speech and Language Processing*.
 
