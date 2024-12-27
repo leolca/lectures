@@ -88,7 +88,7 @@ header-includes: |
 
 ---
 
-![ASCII Table](ascii.png){ width=75% }
+![ASCII Table](ascii.png){ width=70% }
 
 ---
 
