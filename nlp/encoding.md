@@ -14,7 +14,7 @@ header-includes: |
     \DeclareMathOperator*{\argmax}{arg\,max}
     \DeclareMathOperator*{\argmin}{arg\,min}
     \usepackage{graphicx}
-    \titlegraphic{\includegraphics[width=0.2\textwidth]{qrcode-spellcheck.png}}
+    \titlegraphic{\includegraphics[width=0.2\textwidth]{qrcode-encoding.png}}
 ---
 
 # Introduction to Text Encoding
