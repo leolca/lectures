@@ -19,7 +19,7 @@ header-includes: |
 
 - Historical evolution of hyphenation:
   - Early texts: No hyphenation marks.
-  - Introduction of hyphenation for readability.
+  - Introduction of hyphenation for to manage line breaks and prevent overly wide gaps.
 - Importance:
   - Avoid large gaps in justified text.
   - Maintain aesthetic flow.
@@ -28,6 +28,14 @@ header-includes: |
   - Disrupt the reading flow and comprehension.
   - May lead to confusion.
   - Visually unappealing.
+
+---
+
+![Rivers and Lakes.](riversnlakes.png){ width=75% }
+
+---
+
+![Rivers, Lakes, Orphans and Widows.](rlow.png){ width=60% }
 
 ---
 
@@ -56,6 +64,7 @@ header-includes: |
 ---
 
 These criteria might differ or be weighted differently across languages:
+
 - Some languages might prioritize phonological rules over others, like Spanish and Portuguese.
 - In languages with complex compounding, like German, morphological considerations might be more prominent.
 
