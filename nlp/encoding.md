@@ -20,7 +20,7 @@ header-includes: |
     \titlegraphic{\includegraphics[width=0.2\textwidth]{qrcode-encoding.png}}
     \newfontfamily\Symbola{Symbola}
     \setbeamercovered{transparent}
-#classoption: "handout"
+classoption: "handout"
 ---
 
 # Introduction to Text Encoding
@@ -54,7 +54,7 @@ header-includes: |
 
 ---
 
-# Night Writing to Braille: Evolution in Tactile Encoding
+# Night Writing and Braille: Evolution in Tactile Encoding
 
 
 - **Night Writing:**
@@ -81,7 +81,7 @@ header-includes: |
 - **Mechanism:** Uses dots, dashes, and spaces for letters, numbers, and punctuation.
 - **Usage:** Primarily telegraphy, but also in radio communication.
 
-![Morse Code](morse_code.png){ width=35% }
+![Morse Code.](morse_code.png){ width=35% }
 
 ---
 
@@ -95,7 +95,7 @@ header-includes: |
   - Extension of Baudot, improved by Donald Murray.
   - Added lower case, more symbols.
 
-![ITA2 Baudot-Murray code](ita2code.png){ width=80% }
+![ITA2 Baudot-Murray code.](ita2code.png){ width=80% }
 
 ---
 
@@ -129,7 +129,7 @@ header-includes: |
 
 ---
 
-![ASCII Table](ascii.png){ width=70% }
+![ASCII Table.](ascii.png){ width=70% }
 
 ---
 
@@ -262,7 +262,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 ---
 
-![Ars Technica](arstechnica.png){ width=70% }
+![Ars Technica.](arstechnica.png){ width=70% }
 
 ---
 
@@ -276,7 +276,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
   - Series for 8-bit character encoding supporting multiple languages.
   - ISO-8859-1 (Western Europe), also known as ISO Latin 1. 
     - The first 128 characters are identical to ASCII.
-    - 0x00 to 1F and 0x80 to 0x9F (hex) used for C0 and C1 control codes.
+    - `0x00` to `1F` and `0x80` to `0x9F` (hex) used for C0 and C1 control codes.
     - C0 set was originally defined in ISO 646 (ASCII) (e.g., Start of Heading, Start of Text, End of Text, End of Transmission, ...).
     - C1 are additional control codes (e.g., Padding Character, High Octet Preset, Break Permitted Here, No Break Here, ...).
 
@@ -285,7 +285,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 ---
 
-![ISO-8859-1 code page](iso-8859-1.png){ width=50% }
+![ISO-8859-1 code page.](iso-8859-1.png){ width=50% }
 
 ---
 
@@ -344,13 +344,13 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 ---
 
-![UTF-8 Structure](utf8_structure.png)
+![UTF-8 Structure.](utf8_structure.png)
 
 ---
 
 # UTF-8 takes over
 
-![Declared character set for the 10 million most popular websites since 2010](utf-8_takes_over.png){ width=65% }
+![Declared character set for the 10 million most popular websites since 2010.](utf-8_takes_over.png){ width=65% }
 
 ---
 
@@ -360,11 +360,11 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
   - Byte order in memory representation.
   - Impacts how multi-byte characters are read.
 
-![Endianness](endianness.png){ width=80% }
+![Endianness.](endianness.png){ width=80% }
 
 ---
 
-![Big-Endian and Little-Endian](bigvslittleendian.png){ width=55% }
+![Big-Endian and Little-Endian.](bigvslittleendian.png){ width=55% }
 
 ---
 
@@ -538,6 +538,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 - **False Positives:** Sometimes, `file` might guess wrong due to patterns that mimic another encoding or due to an updated but not comprehensive magic database.
 
 ---
+
 # Conclusion
 
 - **Key Points:**
