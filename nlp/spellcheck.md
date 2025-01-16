@@ -15,6 +15,8 @@ header-includes: |
     \DeclareMathOperator*{\argmin}{arg\,min}
     \usepackage{graphicx}
     \titlegraphic{\includegraphics[width=0.2\textwidth]{qrcode-spellcheck.png}}
+    \setbeamercovered{transparent}
+#classoption: "handout"
 ---
 
 # Spelling Correction
@@ -26,13 +28,13 @@ scenarios.
 
 ---
 
-![Spell checker.](spellmobileemail.png)
+![Spell checker.](spellmobileemail.png){ width=80% }
 
 ---
 
 ## Applications of Spell Checking
 
-- Text Writing
+- Text Writing\pause
 - Automated and Information Systems
   - Data Entry Systems
   - Search and Information Retrieval
@@ -44,9 +46,9 @@ scenarios.
 
 ## Automatic Spelling Correction Task
 
-1. detection of an error;
-2. generation of correction candidates;
-3. ranking of candidate corrections;
+1. detection of an error;\pause
+2. generation of correction candidates;\pause
+3. ranking of candidate corrections;\pause
 4. perform automatic correction.
 
 ---
@@ -59,6 +61,7 @@ scenarios.
   - Input: `speling`
   - Correction: `spelling`
 
+\pause
 ### 2. Real-Word Spelling Correction
 - Detects and corrects errors where the **word exists** but is contextually wrong.
   Example:
@@ -76,14 +79,17 @@ scenarios.
    - Substitution: `spolling` → `spelling`  
    - Transposition: `spelilng` → `spelling`
    - Diacritical marking: `naive` → `naïve`
+\pause
 
 2. Homophone Errors:  
    - Homophones: `their` / `there`  
    - Near-homophones: `accept` / `except`
+\pause
 
 3. Grammatical Errors:
    - among / between
-   
+\pause
+
 4. Cross Word Boundary Errors:
    - maybe / may be
 
@@ -100,6 +106,10 @@ Stefan  → S315, Price  → P620, Juiced → J230, Rubin  → R150
 
 ---
 
+![Soundex algorithm.](soundex.png){ width=80% }
+
+---
+
 - **Shannon (1948)**: A Mathematical Theory of Communication.
 
 ![Noisy Channel.](NoisyChannel1948.png){ width=60% }
@@ -113,22 +123,34 @@ Stefan  → S315, Price  → P620, Juiced → J230, Rubin  → R150
 ---
 
 - **Blair (1960)**: Early algorithm for spelling error correction.
-  - Blair introduced the concept of similarity keys to group words based on their likelihood of being confused with one another.
+  - Blair introduced the concept of similarity keys to group words based on their likelihood of being confused with one another.\pause
   - r-letter abbreviation of an n-letter word
-    - Information conveyed is inversely proportional to its a priori probability of occurrence.
-    - eliminate $n-r$ letters in the order of their expected frequency
-    - eliminate by their frequency of their occurrence as errors (best approach)
+    - Information theory assumes that the information conveyed is inversely proportional to its a priori probability of occurrence.\pause
+    - 1st proposal: eliminate $n-r$ letters in the order of their expected frequency\pause
+    - 2nd proposal: eliminate by their frequency of their occurrence as errors (best approach)\pause
     - weight must also be given to the position of the letter in the word
 
 ![Example of Blair's algorithm.](blair-example.png){ width=70% }
 
 ---
 
+![](blair-table1.png){ width=70% }
+
+---
+
+![](blair-table2.png){ width=70% }
+
+---
+
 - **Damerau–Levenshtein** distance (1964, 1966): A string metric for measuring the edit distance between two sequences.
 
-![How many operations does it take to turn Saturday into Sundat?](levenshtein.png){ width=30% }
+![How many operations does it take to turn Saturday into Sunday?](levenshtein.png){ width=30% }
 
-<!-- https://phiresky.github.io/levenshtein-demo/ -->
+---
+
+Levenshtein Distance Calculator
+
+[https://phiresky.github.io/levenshtein-demo/](https://phiresky.github.io/levenshtein-demo/)
 
 ---
 
@@ -147,8 +169,10 @@ $$
 \end{cases}
 $$
 
+\pause
 Damerau-Levenshtein distance: also allows transposition of adjacent symbols.
 
+\pause
 Operations are expensive and language dependent: e.g. as of version 16.0, Unicode defines a total of 98682 Chinese characters.
 
 ---
@@ -164,7 +188,7 @@ Operations are expensive and language dependent: e.g. as of version 16.0, Unicod
 
 ### Search for $w=\text{'cool'}$
 
-![](bktree.png){ width=25% }
+![](bktree2.png){ width=50% }
 
 \small
 1. $d_u=d(w,u)=d(\text{'cool'},\text{'book'})=2$, set $d_{\text{best}} = 2$;
@@ -181,17 +205,17 @@ Operations are expensive and language dependent: e.g. as of version 16.0, Unicod
 ---
 
 - **SPELL** (Unix, 1975)
-  - Error detection only. 
+  - Error detection only.\pause 
   - Prefix and suffix removal (reduces the list below 1/3); 
-    - `buzzed` → `buzz`, `mapping` → `map`, `possibly` → `possible`, `antisocial` → `social`, `metaphysics` → `physics`.
+    - `buzzed` → `buzz`, `mapping` → `map`, `possibly` → `possible`, `antisocial` → `social`, `metaphysics` → `physics`.\pause
   - Hashing (discarding 60% of the remaining bits); \newline
     Examples of hashing functions:
     1. Shift-and-Add: $h = ( h << 1) + \text{char} \% m$
     2. Multiplicative Hashing: $h = (a \cdot h + \text{char}) \% m$ (with a typically 31 or 33)
-    3. XOR-based Hashing: $h = h \oplus (\text{char} << k)$
-  - Words were represented by 16-bit machine words; 
-  - Bloom filter; 
-  - False Positives.
+    3. XOR-based Hashing: $h = h \oplus (\text{char} << k)$\pause
+  - Words were represented by 16-bit machine words;\pause
+  - Bloom filter;\pause
+  - False positives.
 
 ---
 
@@ -213,6 +237,7 @@ where:
   - $m$ is the number of ''matching characters'' (see below);
   - $t$ is the number of ''transpositions'' (see below).
 
+\pause
 Jaro similarity score is 0 if the strings do not match at all, and 1 if they
 are an exact match. In the first step, each character of $s_1$ is
 compared with all its matching characters in $s_2$. Two characters
@@ -226,13 +251,17 @@ apart.
 
 - **Jaro-Winkler similarity** (1990)
 
-  - Introduces Winkler modification.
-  - Prefix Length $\ell$: if two strings share a common prefix, they are likely to be more similar.
-  - scale factor $p$: enhances the Jaro similarity score based on the length of the common prefix (usually set to 0.1 and should not exceed 0.25).
+  - Introduces Winkler modification.\pause
+  - Prefix length $\ell$: if two strings share a common prefix, they are likely to be more similar.\pause
+  - Scale factor $p$: enhances the Jaro similarity score based on the length of the common prefix (usually set to 0.1 and should not exceed 0.25).
 
 $$
 sim_w = sim_j + \ell p (1 - sim_j)
 $$
+
+\pause
+$1-sim_j$: This component adjusts the contribution of the prefix similarity term relative to the base Jaro similarity score ($sim_j$).
+If $sim_j$ already high, the impact of the prefix adjustment diminishes, but when $sim_j$ lower, the prefix similarity can significantly boost the final similarity score.
 
 ---
 
@@ -259,7 +288,7 @@ surface noisy word.* (Jurafsky and Martin, 2024)
 
 This noisy channel model is a kind of **Bayesian inference**.
 
-Out of all possible words in the vocabulary $V$ we want to find the word $w$ such that $P(w|x)$ is highest.
+Out of all possible words in the vocabulary $V$ we want to find the word $\hat{w}$ such that $P(w|x)$ is highest for a given observed string $x$.
 
 $$
 \hat{w} = \argmax_{w \in V} P(w|x)
@@ -296,8 +325,8 @@ $$
 ---
 
 ### Error model
-  - A perfect model would need all sorts of factors: who the typist was, whether the typist was left-handed or right-handed, and so on.
-  - We can get a pretty reasonable estimate of $P(x|w)$ just by looking at **local context**: the identity of the correct letter itself, the misspelling, and the surrounding letters.
+  - A perfect model would need all sorts of factors: who the typist was, whether the typist was left-handed or right-handed, and so on.\pause
+  - We can get a pretty reasonable estimate of $P(x|w)$ just by looking at **local context**: the identity of the correct letter itself, the misspelling, and the surrounding letters.\pause
   - Confusion Matrices:
     - `del[x, y]: count(xy typed as x)`
     - `ins[x, y]: count(x typed as xy)`
@@ -342,7 +371,7 @@ clear that actress and not across was the intended word.* (Jurafsky and Martin, 
 
 ---
 
-Using the *Corpus of Contemporary American English* to compute bigram probabilities for the words *actress* and *across* in their context using add-one
+Using the *Corpus of Contemporary American English* to compute **bigram** probabilities for the words *actress* and *across* in their context using add-one
 smoothing, we get the following probabilities:
 
 \begin{align*}
@@ -352,6 +381,7 @@ P(\text{whose}|\text{actress})     &= .0010 \\
 P(\text{whose}|\text{across})      &= .000006
 \end{align*}
 
+\pause
 Multiplying these out gives us the language model estimate for the two candidates in context:
 \begin{align*}
 P(\text{versatile actress whose}) &= .000021 \times .0010   = 210 \times 10^{-10}\\
@@ -374,8 +404,8 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 ---
 
 - **Brill-Moore channel model** (2000): String to string edits.
-  - Let $\Sigma$ be an alphabet, the model allows all edit operations of the form $\alpha \rightarrow \beta$, where $\alpha,\beta \in \Sigma^\ast$.
-  - $P(\alpha \rightarrow \beta)$ is the probability that when users intends to type $\alpha$ and they typed $\beta$ instead.
+  - Let $\Sigma$ be an alphabet, the model allows all edit operations of the form $\alpha \rightarrow \beta$, where $\alpha,\beta \in \Sigma^\ast$.\pause
+  - $P(\alpha \rightarrow \beta)$ is the probability that when users intends to type $\alpha$ and they typed $\beta$ instead.\pause
   - $P(\alpha \rightarrow \beta | PNS)$ probability conditioned by the position on the string
     - P(e | a) does not vary greatly with position.
     - P(ent | ant) is highly dependent upon position.
@@ -390,8 +420,8 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 ---
 
 - **Aspell** (2000): Combines spelling and phonetic correction.
-  - Hashing for Spell Checking: Efficient candidate lookup using hash tables.
-  - Metaphone Algorithm: Handles phonetic corrections by matching words that sound similar.
+  - Hashing for Spell Checking: Efficient candidate lookup using hash tables.\pause
+  - Metaphone Algorithm: Handles phonetic corrections by matching words that sound similar.\pause
   - Ispell's Near Miss Strategy:
     - Focuses on edit distance 1 to reduce the search space.
     - Early Dictionary Filtering: Prunes invalid candidates during generation.
@@ -400,8 +430,9 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 
 ## Example - Handling Homophones in Aspell
 
-   - Misspelled word `ther`
+   - Misspelled word: `ther`
    - Candidates: `there`, `their`, `they're` 
+\pause
 
 1. Metaphone
    - The Metaphone algorithm transforms words into phonetic codes based on pronunciation.
@@ -421,6 +452,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
      - Candidates phonetically similar to `ther` (`0R`) rank higher: `there`, `their`, `thor`, `they're`.
    - Step 3: Rank and suggest based on:
      - Word frequency, Edit distance, Phonetic Similarity, Error Likelihood.
+\pause
 
 3. Limitations:
    - Metaphone matches words by sound but lacks **contextual understanding**.
@@ -439,17 +471,21 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 - Morphological Analysis:
   - Supports complex languages with rich morphology (e.g., Hungarian, Turkish, Finnish).
   - Handles word roots, prefixes, and suffixes using affix rules.
+\pause
 
 - Dictionary System:
   - Two components:
     1. Dictionary File: Contains root forms of words.
     2. Affix File: Defines rules for combining roots with prefixes/suffixes.
+\pause
 
 - Levenshtein Distance:
   - Uses *edit distance* to generate and rank candidate corrections.
+\pause
 
 - Phonetic Matching:
-  - Uses a table-driven phonetic transcription algorithm borrowed from Aspell. It is useful for languages with not pronunciation based orthography.
+  - Uses a table-driven phonetic transcription algorithm borrowed from Aspell. It is useful for languages with orthographies that are not based on pronunciation.
+\pause
 
 - n-gram similarity:
   - Improve suggestions.
@@ -458,11 +494,14 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 
 - Multilingual Support:
   - Available for 98 languages with extensive dictionaries.
+\pause 
 
 ### Applications:
-- Integrated into tools like LibreOffice, Firefox, and Chrome for multilingual spell checking.
+- Integrated into tools like LibreOffice, Firefox, and Chrome for multilingual spell checking.\pause
 - Supports custom dictionaries for specialized fields (e.g., medical, legal).
+\pause
 
+\vspace{2ex}
 [Hunspell at GitHub](https://hunspell.github.io/)
 
 ---
@@ -470,19 +509,23 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 - **Norvig**'s Algorithm (2007): Uses Damerau-Levenshtein distance to generate candidates.
 
 ### Key Features:
-- Eit Distance:
+- Edit Distance:
   - Generates all possible words within a given edit distance (e.g., 1 or 2) from the misspelled word.
   - Handles insertion, deletion, substitution, and transposition.
+\pause
 
 - Dictionary Lookup:
   - Filters candidates by validating them against a word dictionary.
+\pause
 
 - Ranking:
   - Ranks valid candidates based on:
     - Word Frequency: More frequent words are prioritized.
     - Likelihood of Errors: Based on the Noisy Channel Model (optional).
+\pause
 
-[How to Write a Spelling Corrector](https://norvig.com/spell-correct.html)
+\vspace{2ex}
+How to Write a Spelling Corrector: [https://norvig.com/spell-correct.html](https://norvig.com/spell-correct.html)
 
 ---
 
@@ -490,7 +533,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 
 ![QWERTY keyboard and keyboard distance matrix.](keyboarddistance.png){ width=80% }
 
-  - Distance between keys are in [0,9]. They are multiplied by 2/9.
+  - Distance between keys are in [0,9] range. They are multiplied by 2/9.
 
 ---
 
@@ -499,6 +542,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
   - Substitution: weighted according to the distance between the character that is removed and the character that is inserted.
   - Transposition: unchanged, weight 1.
 
+\vspace{2ex}
 [Samuelsson, 2017](https://www.diva-portal.org/smash/get/diva2:1116701/FULLTEXT01.pdf)
 
 ---

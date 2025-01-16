@@ -13,17 +13,19 @@ header-includes: |
     \usepackage[utf8]{inputenc}
     \usepackage{graphicx}
     \titlegraphic{\includegraphics[width=0.2\textwidth]{qrcode-hyphenation.png}}
+    \setbeamercovered{transparent}
+#classoption: "handout"
 ---
 
 # Introduction
 
 - Historical evolution of hyphenation:
   - Early texts: No hyphenation marks.
-  - Introduction of hyphenation for to manage line breaks and prevent overly wide gaps.
+  - Introduction of hyphenation to manage line breaks and prevent overly wide gaps.\pause
 - Importance:
   - Avoid large gaps in justified text.
   - Maintain aesthetic flow.
-  - Short lines have few breakpoints between words - avoid rivers and lakes.
+  - Short lines have few breakpoints between words - avoid rivers and lakes.\pause
 - Drawbacks:
   - Disrupt the reading flow and comprehension.
   - May lead to confusion.
@@ -41,9 +43,11 @@ header-includes: |
 
 # TeX's role
   - Automatic hyphenation since 1977.
-  - Uses `patgen` for rule generation.
-  - Hunspell (LibreOffice, Mozilla Firefox, Mozilla Thunderbird, Google Chrome, macOS, InDesign, memoQ, Opera, Affinity Publisher)
-  - [tex-hyphen - central repository for all hyphenation patterns](https://github.com/hyphenation/tex-hyphen) - rules for 66 languages and other resources.
+    - Donald Ervin Knuth (1977).
+    - Franklin Mark Liang (1983).\pause
+  - Uses `patgen` for rule generation.\pause
+  - Hunspell (LibreOffice, Mozilla Firefox, Mozilla Thunderbird, Google Chrome, macOS, InDesign, memoQ, Opera, Affinity Publisher).\pause
+  - [tex-hyphen - central repository for all hyphenation patterns](https://github.com/hyphenation/tex-hyphen) - rules for 66 languages and other resources.\pause
   - TeX variables `\lefthyphenmin` and `\righthyphenmin`.
 
 ---
@@ -51,13 +55,13 @@ header-includes: |
 # Criteria for Hyphenation
 
 - Phonological: Based on spoken syllable division.
-  - Example: "com-pu-ter", showing syllable breaks.
+  - Example: "com-pu-ter", showing syllable breaks.\pause
 - Morphological (or Etymological): Focused on word parts that carry meaning (prefixes, roots, suffixes).
-  - Example: "un-happy", showing the prefix and root.
+  - Example: "un-happy", showing the prefix and root.\pause
 - Orthographic: Follows standard writing conventions.
-  - "week-end" in English, following writing conventions.
+  - "week-end" in English, following writing conventions.\pause
 - Semantic: Considers context to prevent ambiguous or inappropriate breaks.
-  - Avoiding "re-sign" when "resign" is intended to keep the meaning clear.
+  - Avoiding "re-sign" when "resign" is intended to keep the meaning clear.\pause
 - Style: Hyphenation can also be a matter of style, where some divisions sound better or are more elegant.
   - "coop-eration" is preferable over "co-operation".
 
@@ -67,6 +71,7 @@ These criteria might differ or be weighted differently across languages:
 
 - Some languages might prioritize phonological rules over others, like Spanish and Portuguese.
 - In languages with complex compounding, like German, morphological considerations might be more prominent.
+\pause
 
 These criteria have evolved or changed with language reforms or in specific linguistic contexts.
 

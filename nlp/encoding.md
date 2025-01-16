@@ -1,6 +1,6 @@
 ---
-title: Text File Coding
-author: Leonardo Araújo
+title: "Text File Coding"
+author: "Leonardo Araújo"
 institute: UFSJ
 lang: en-US
 beamer: true
@@ -11,7 +11,7 @@ urlcolor: red
 aspectratio: 169
 output:
   beamer_presentation:
-    pandoc_args: ["--pdf-engine=xelatex", "--output=encoding.pdf"]
+    pandoc_args: ["--pdf-engine=lualatex", "--output=encoding.pdf"]
 header-includes: |
     \usepackage{amsmath}
     \DeclareMathOperator*{\argmax}{arg\,max}
@@ -19,15 +19,17 @@ header-includes: |
     \usepackage{graphicx}
     \titlegraphic{\includegraphics[width=0.2\textwidth]{qrcode-encoding.png}}
     \newfontfamily\Symbola{Symbola}
+    \setbeamercovered{transparent}
+#classoption: "handout"
 ---
 
 # Introduction to Text Encoding
 
 - **Why Encoding Matters:**
-  - Human-Readable Format: Text encoding allows computers to store and exchange text in a format that is both human-readable and machine-processable.
-  - Standardization: Encodings like UTF-8 provide a standard way for computers and systems to interpret text, avoiding confusion that could arise from regional or proprietary encodings.
-  - Ensures data integrity across different systems.
-    - Proper encoding preserves the accuracy of text when shared across different platforms, preventing data corruption and ensuring consistent display of characters.
+  - Human-Readable Format: Text encoding allows computers to store and exchange text in a format that is both human-readable and machine-processable.\pause
+  - Standardization: Encodings like UTF-8 provide a standard way for computers and systems to interpret text, avoiding confusion that could arise from regional or proprietary encodings.\pause
+  - Ensures data integrity across different systems.\pause
+    - Proper encoding preserves the accuracy of text when shared across different platforms, preventing data corruption and ensuring consistent display of characters.\pause
 
 - **Overview:**
   - Evolution from simple to complex encoding systems.
@@ -58,11 +60,12 @@ header-includes: |
 - **Night Writing:**
   - Inventor: Charles Barbier, 1815, for silent military communication.
   - Structure: 12-dot cells for phonetic sounds, complex for practical use.
+\pause
 
 - **Braille:**
   - Creator: Louis Braille, 1824 (first published 1829), adapted from Night Writing.
   - Innovation: 6-dot cell, simpler, and more accessible for the blind.
-  - First Binary Encoding: Each cell represents binary combinations.
+  - Binary Encoding: Each cell represents binary combinations.
   - Universal Adoption: Braille became the standard for blind communication worldwide.
   - Expansion: Adapted for various languages, math, music, and more.
 
@@ -120,6 +123,7 @@ header-includes: |
   - Standardized in 1963 (ANSI).
   - Backward Compatibility: Despite its age, ASCII remains widely used today for compatibility reasons.
 
+\pause
 - **Extended ASCII:**
   - 8-bit code, 256 characters, allowing for additional symbols and characters.
 
@@ -176,10 +180,16 @@ ________________________
 
 ---
 
+Hidden messages in Bitcoin transactions are often embedded using the `OP_RETURN` opcode, which allows up to 80 bytes of data (typically ASCII text) to be stored in the transaction output. 
+This method is commonly used for non-financial purposes, like embedding small text or proof data.
+
+---
+
 # Base64
 
 Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format. Each Base64 digit represents exactly 6 bits of data, providing a way to encode binary data as text.
 
+\pause
 Base64 is used in:
 
 - email attachments,
@@ -214,13 +224,14 @@ Base64 is used in:
 - Char set: 1 2 3 4 5 6 7 8 9 A B C D E F G H J K L M N P Q R S T U V W X Y Z a b c d e f g h i j k m n o p q r s t u v w x y z.
   - a-z, A-Z, and 0-9, with visually ambiguous characters (0, O, I, l) removed.
 
+\pause
 ### example
 - 3 bytes: 0xFFFFFF
 - Base 58: 2UzHL
 - Steps:
-  - 0xFFFFFF = 16777215
-  - 16777215 mod 58 = 19 = L
-  - 289262 mod 58 = 16 = H
+  - 0xFFFFFF = 16 777 215
+  - 16 777 215 mod 58 = 19 = L
+  - 289 262 mod 58 = 16 = H
   - 4987 mod 58 = 57 = z
   - 85 mod 58 = 27 = U
   - 1 mod 58 = 1 = 2
@@ -230,10 +241,12 @@ Base64 is used in:
 ## Bech32
 
 - Char set: q p z r y 9 x 8 g f 2 t v d w 0 s 3 j n 5 4 k h c e 6 m u a 7 l.
-  - a-z, and 0-9, without the following characters: 1, b, i, and, o (b, i, and o can easily be confused with 8, 1, and 0, especially in handwriting or certain fonts).
-  - Commonly mistaken characters (e.g. 5 vs S, 2 vs Z, p vs q vs g, etc.) are always one bit different.
-  - BCH codes, GF(32), polynomial $g(x) = x^6 + 29x^5 + 22x^4 + 20x^3 + 21x^2 + 29x + 18$.
+  - a-z, and 0-9, without the following characters: 1, b, i, and, o (b, i, and o can easily be confused with 8, 1, and 0, especially in handwriting or certain fonts).\pause
+  - Commonly mistaken characters (e.g. 5 vs S, 2 vs Z, p vs q vs g, etc.) are always one bit different -- the BCH code is optimized for detecting and correcting single-bit errors.\pause
+  - BCH codes, GF(32), polynomial $g(x) = x^6 + 29x^5 + 22x^4 + 20x^3 + 21x^2 + 29x + 18$.\pause
   - Error detection of 4 errors in up to 89 characters.
+    - P2WPKH (Pay to Witness Public Key Hash): These addresses start with `bc1q` and are typically 42 characters long for the mainnet (including the `bc1` prefix).
+    - P2WSH (Pay to Witness Script Hash): These start with `bc1q` as well but are longer, typically 62 characters for the mainnet, due to the script hash being larger.
 
 \vspace{3em}
 
@@ -295,11 +308,13 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 - **UCS-2 (Unicode Character Set - 2 bytes):**
   - **Introduction:** Windows NT 3.1 (1993)
   - **Details:** 16-bit fixed-width encoding for the first 65,536 Unicode characters, used internally for Windows APIs.
+\pause
 
 - **UTF-16:**
   - **Adoption:** Windows 2000 (2000)
   - **Details:** An extension of UCS-2, accommodating all Unicode characters by using surrogate pairs for characters beyond the Basic Multilingual Plane (BMP).
     - Surrogate Pair Example: The emoji \Symbola 😊 (Unicode U+1F60A) would be represented as: U+D83D (High Surrogate) + U+DE0A (Low Surrogate).
+\pause
 
 - **UTF-8:**
   - **Support Added:** Windows 10 version 1803 (April 2018 Update)
@@ -309,10 +324,10 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 # Unicode
 
-  - Universal character set covering all scripts, supporting over 143,000 characters.
-  - It assigns a unique number (called a "code point") to each character, regardless of platform, program, or language.
-  - 1.112.064 valid code points within the codespace.
-  - As of Unicode 16.0, released in September 2024, 299,056 (27%) of these code points are allocated, 155,063 (14%) have been assigned characters, 137,468 (12%) are reserved for private use, 2,048 are used to enable the mechanism of surrogates, and 66 are designated as noncharacters, leaving the remaining 815,056 (73%) unallocated.
+  - Universal character set covering all scripts, supporting over 143,000 characters.\pause
+  - It assigns a unique number (called a "code point") to each character, regardless of platform, program, or language.\pause
+  - 1.112.064 valid code points within the codespace.\pause
+  - As of Unicode 16.0, released in September 2024, 299,056 (27%) of these code points are allocated, 155,063 (14%) have been assigned characters, 137,468 (12%) are reserved for private use, 2,048 are used to enable the mechanism of surrogates, and 66 are designated as noncharacters, leaving the remaining 815,056 (73%) unallocated.\pause
   - Unicode has different encoding forms: UTF-8, UTF-16, and UTF-32.
 
 ---
@@ -320,10 +335,10 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 # UTF
 
 - **UTF-8:**
-  - Variable-length encoding, backward compatible with ASCII, byte-order independent. 
+  - Variable-length encoding, backward compatible with ASCII, byte-order independent.\pause 
 - **UTF-16:**
   - Variable-length encoding (2 or 4 bytes per character).
-  - Latin and most commonly used CJK\footnote{Chinese, Japanese, and Korean.} characters are encoded in 2 bytes.
+  - Latin and most commonly used CJK\footnote{Chinese, Japanese, and Korean.} characters are encoded in 2 bytes.\pause
 - **UTF-32**:
   - Fixed-length encoding (4 bytes per character).
 
@@ -384,6 +399,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 - **Markdown:**
   - Lightweight markup language for formatting text.
   - Markdown itself doesn't have a built-in mechanism for declaring encoding in the file header.
+\pause
 
 - **TeX:**
   - Typesetting language for high-quality typography.
@@ -398,6 +414,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
   - Used for structured data storage and transmission.
   - Encoding: Declared in XML declaration, typically UTF-8 or UTF-16. Encoding declaration is crucial for correct parsing.
   - `<?xml version="1.0" encoding="UTF-8"?>`
+\pause
 
 - **HTML (HyperText Markup Language):**
   - Standard markup language for documents designed to be displayed in a web browser.
@@ -411,10 +428,13 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 - **iconv:** Converts text from one encoding to another.
   - Example: `iconv -f ISO-8859-1 -t UTF-8 input.txt > output.txt`
+\pause
 - **file:** Identifies file types and encodings.
   - Example: `file -i example.txt`
+\pause
 - **uconv (from ICU):** More advanced conversion with Unicode support.
   - Example: `uconv -f UTF-8 -t UTF-16 input.txt -o output.txt`
+\pause
 - **dos2unix / unix2dos:** Converts between Windows and Unix line endings.
   - Example: `dos2unix file.txt` (converts CRLF to LF)
   - Example: `unix2dos file.txt` (converts LF to CRLF)
@@ -424,9 +444,11 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 - **base64:**
   - Example: Used for encoding e-mail attachemets.
   - Usage: `echo "test" | base64` to encode, `echo "dGVzdA==" | base64 -d` to decode.
+\pause
 - **base58:**
   - Example: Useful for encoding addresses in cryptocurrencies (e.g., Bitcoin).
   - Usage: `echo "test" | base58` to encode, `echo "E8f4pE5" | base58 -d` to decode.
+\pause
 - **base32:**
   - Example: Used to encode addresses in Bitcoin's Segregated Witness (SegWit) protocol.
   - Usage: `echo "test" | base32` for encoding, `echo "ORSXG5A=" | base32 -d` for decoding.
@@ -436,9 +458,11 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 - **recode:**
   - Function: Similar to iconv but with additional capabilities.
   - Usage: `recode latin1..utf-8 file.txt`
+\pause
 - **xxd:**
   - Function: Create a hex dump of a binary file, useful for understanding byte-level data.
   - Usage: `xxd -p file.bin` for plain hex, `xxd -r -p hex.txt` to revert.
+\pause
 - **Use Cases:**
   - Data migration, cleaning, and internationalization.
 
@@ -446,9 +470,9 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 # File Extensions
 
-- **Just a Name:** Extensions don't define file content.
-- **Content Matters:** True type determined by data inside.
-- **Beware:** Misleading extensions can be risky.
+- **Just a Name:** Extensions don't define file content.\pause
+- **Content Matters:** True type determined by data inside.\pause
+- **Beware:** Misleading extensions can be risky.\pause
 - **Purpose:** Created to indicate file type for ease of use.
 
 ---
@@ -457,7 +481,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 ## Magic Numbers / File Signatures
 
-  - `file` looks for specific byte sequences at the start of files that uniquely identify file formats or types.
+  - `file` looks for specific byte sequences at the start of files that uniquely identify file formats or types.\pause
     - For text in UTF-8, looks for the BOM marker `EF BB BF`.
     - For JPEG images, it looks for `FF D8 FF`.
     - A PDF file starts with `%PDF`.
@@ -468,15 +492,15 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 ---
 
 ## Text Files - Encoding Detection
-  - **Heuristics:** When magic numbers aren't conclusive, `file` uses heuristics.
-    - **Character Analysis:** Examines byte sequences for patterns typical of specific encodings.
-    - **Frequency Analysis:** Looks at the frequency and distribution of characters to guess language and thus encoding.
+  - **Heuristics:** When magic numbers aren't conclusive, `file` uses heuristics.\pause
+    - **Character Analysis:** Examines byte sequences for patterns typical of specific encodings.\pause
+    - **Frequency Analysis:** Looks at the frequency and distribution of characters to guess language and thus encoding.\pause
     - **Control Characters:** Presence or absence of certain control characters can hint at encoding.
 
 ---
 
-## MIME Database
-  - Maps file content to MIME types and encodings.
+## MIME (Multipurpose Internet Mail Extension) Database
+  - Maps file content to MIME types and encodings.\pause
   - Location: `/usr/share/file/magic.mgc` or similar (compiled database).
     - The `magic.mgc` database is generated from a set of "magic" text files (e.g., /etc/magic) which define the rules for recognizing various file formats.
     - The rules consist of:
@@ -484,6 +508,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
       - Byte patterns
       - Regular expressions
       - Human-readable descriptions
+    \pause
     - Example:
       ```
       0   string  \x89PNG\r\n\x1a\n  PNG image data
@@ -499,12 +524,16 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 - **Ambiguity:** Some files can be interpreted as multiple encodings, especially if they contain only ASCII characters.
   - Example: A file with only ASCII might be reported as `us-ascii`, but could be `UTF-8` or `ISO-8859-1`.
+\pause
 
-- **Incomplete Information:** Short files or files with limited character sets might not provide enough data for accurate detection.
+- **Incomplete Information:** Short files or files with limited character set might not provide enough data for accurate detection.
+\pause
 
 - **Encoding Overlap:** Encodings that share a subset of characters (like ASCII in UTF-8) can lead to confusion.
+\pause
 
 - **Binary in Text:** Files with embedded binary data might confuse the tool into thinking it's a binary file rather than text with encoding.
+\pause
 
 - **False Positives:** Sometimes, `file` might guess wrong due to patterns that mimic another encoding or due to an updated but not comprehensive magic database.
 
