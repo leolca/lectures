@@ -189,6 +189,8 @@ This method is commonly used for non-financial purposes, like embedding small te
 
 Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format. Each Base64 digit represents exactly 6 bits of data, providing a way to encode binary data as text.
 
+- Char set: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 + /
+
 \pause
 Base64 is used in:
 
@@ -198,7 +200,41 @@ Base64 is used in:
 
 ---
 
-![Encoding of Tux image into base64.](base64.png)
+![Base64 alphabet defined in RFC 4648.](base64.png){ width=60% }
+
+---
+
+When the length of the unencoded input is not a multiple of three, the encoded output must have padding added so that its length is a multiple of four.
+
+![*Padding* in Base64.](base64padding.png)
+
+---
+
+\footnotesize
+
+```
+light w  len=7  bGlnaHQgdw==
+w (ascii) 0111 0111
+011101 110000 000000
+  d       w
+
+light wo  len=8  bGlnaHQgd28=
+w (ascii) 0111 0111
+o (ascii) 0110 1111
+011101 110110 111100
+   d      2      8
+
+light wor  len=9  bGlnaHQgd29y
+w (ascii) 0111 0111
+o (ascii) 0110 1111
+r (ascii) 0111 0010
+011101 110110 111101 110010
+   d      2      9      y
+```
+
+---
+
+![Encoding of Tux image into base64.](base64tux.png)
 
 ---
 
@@ -258,7 +294,7 @@ Base64 is used in:
 
 # ASCII Smuggling
 
-ASCII smuggling is a technique that leverages Unicode characters, which are invisible in user interfaces but can be interpreted by large language models (LLMs), to embed hidden instructions or data within text. This method allows attackers to manipulate AI responses or exfiltrate sensitive information without the user's awareness, by embedding these hidden Unicode tags within clickable hyperlinks or documents shared in chats.
+ASCII smuggling is a technique that leverages Unicode characters from a specific region known as the Tags Unicode Block. These characters are invisible in user interfaces but can be interpreted by large language models (LLMs). By converting ASCII characters into these Unicode tag equivalents, attackers can embed hidden instructions or data within seemingly innocuous text, making it appear as if no additional information is present while still being actionable by AI systems. This method allows attackers to manipulate AI responses, exfiltrate sensitive information, or alter clickable hyperlinks or documents, all without the user's awareness.
 
 ---
 
@@ -297,6 +333,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 - **Examples:**
   - CP1252 (Western Europe), CP932 (Japan)
+  - CP1252 was the successor of CP850 (used in DOS).
 
 - **Issues:**
   - Inconsistencies across different systems.
@@ -318,7 +355,7 @@ ASCII smuggling is a technique that leverages Unicode characters, which are invi
 
 - **UTF-8:**
   - **Support Added:** Windows 10 version 1803 (April 2018 Update)
-  - **Details:** Variable-width encoding, backward compatible with ASCII. Became more prominently supported for developers with the introduction of the `ActiveCodePage` property in Windows 10 1903 (May 2019 Update).
+  - **Details:** Variable-width encoding, backward compatible with ASCII. Became more prominently supported for developers with the introduction of the `ActiveCodePage` property in Windows 10 version 1903 (May 2019 Update).
 
 ---
 

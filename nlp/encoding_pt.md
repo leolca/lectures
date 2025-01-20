@@ -71,7 +71,7 @@ header-includes: |
 
 ---
 
-![Night writing and Braille.](nightwritting-braille.png){ width=90% }
+![Escrita Noturna e Braille.](nightwritting-braille.png){ width=90% }
 
 ---
 
@@ -89,7 +89,7 @@ header-includes: |
 
 - **Código Baudot:**
   - Inventado por Émile Baudot, código de 5 bits para telegrafia.
-  - Caracteres limitados, usava shift para números/letras.
+  - Caracteres limitados, usava *shift* para números/letras.
 
 - **Código Murray (ITA2):**
   - Extensão do Baudot, melhorado por Donald Murray.
@@ -189,6 +189,8 @@ Esse método é comumente usado para fins não financeiros, como inserir pequeno
 
 Base64 é um esquema de codificação de binário para texto que representa dados binários em um formato de string ASCII. Cada dígito Base64 representa exatamente 6 bits de dados, oferecendo uma forma de codificar dados binários como texto.
 
+- Conjunto de caracteres: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 + /
+
 \pause
 Base64 é utilizado em:
 
@@ -198,7 +200,41 @@ Base64 é utilizado em:
 
 ---
 
-![Codificação da imagem do Tux em base64.](base64.png)
+![Alfabeto Base64 definido na RFC 4648.](base64.png){ width=60% }
+
+---
+
+Quando o comprimento da entrada não codificada não for um múltiplo de três, a saída codificada deve ter preenchimento adicionado para que seu comprimento seja um múltiplo de quatro.
+
+![*Padding* no Base64.](base64padding.png)
+
+---
+
+\footnotesize
+
+```
+light w  len=7  bGlnaHQgdw==
+w (ascii) 0111 0111
+011101 110000 000000
+  d       w
+
+light wo  len=8  bGlnaHQgd28=
+w (ascii) 0111 0111
+o (ascii) 0110 1111
+011101 110110 111100
+   d      2      8
+
+light wor  len=9  bGlnaHQgd29y
+w (ascii) 0111 0111
+o (ascii) 0110 1111
+r (ascii) 0111 0010
+011101 110110 111101 110010
+   d      2      9      y
+```
+
+---
+
+![Codificação da imagem do Tux em base64.](base64tux.png)
 
 ---
 
@@ -258,8 +294,7 @@ Base64 é utilizado em:
 
 # ASCII Smuggling
 
-O ASCII *smuggling* é uma técnica que utiliza caracteres Unicode, invisíveis nas interfaces de usuário, mas interpretáveis por *large language models* (LLMs), para inserir instruções ou dados ocultos em textos.
-Esse método permite que atacantes manipulem respostas de IA ou extraiam informações sensíveis sem o conhecimento do usuário, inserindo essas etiquetas Unicode ocultas em links clicáveis ou documentos compartilhados em *chats*.
+O ASCII *smuggling* é uma técnica que utiliza caracteres Unicode de uma região específica conhecida como *Tags Unicode Block*. Esses caracteres são invisíveis nas interfaces de usuário, mas podem ser interpretados por modelos de linguagem grandes (LLMs). Ao converter caracteres ASCII em equivalentes de marca Unicode, os atacantes podem embutir instruções ou dados ocultos em um texto aparentemente inofensivo, fazendo parecer que não há informações adicionais, enquanto essas informações ainda são acionáveis por sistemas de IA. Esse método permite que atacantes manipulem respostas de IA, exfiltrem informações sensíveis ou alterem links clicáveis ou documentos, tudo sem o conhecimento do usuário.
 
 ---
 
@@ -298,6 +333,7 @@ Esse método permite que atacantes manipulem respostas de IA ou extraiam informa
 
 - **Exemplos:**
   - CP1252 (Europa Ocidental), CP932 (Japão)
+  - CP1252 foi o sucessor do CP850 (utilizado no DOS).
 
 - **Problemas:**
   - Inconsistências entre diferentes sistemas.
@@ -319,7 +355,7 @@ Esse método permite que atacantes manipulem respostas de IA ou extraiam informa
 
 - **UTF-8:**
   - **Suporte Adicionado:** Windows 10 versão 1803 (Atualização de Abril de 2018)
-  - **Detalhes:** Codificação de largura variável, compatível com ASCII. Tornou-se mais amplamente suportada para desenvolvedores com a introdução da propriedade `ActiveCodePage` no Windows 10 1903 (Atualização de Maio de 2019).
+  - **Detalhes:** Codificação de largura variável, compatível com ASCII. Tornou-se mais amplamente suportada para desenvolvedores com a introdução da propriedade `ActiveCodePage` no Windows 10 versão 1903 (Atualização de Maio de 2019).
 
 ---
 
@@ -385,8 +421,8 @@ Esse método permite que atacantes manipulem respostas de IA ou extraiam informa
 
 - **.txt:** Geralmente ASCII ou UTF-8.
 - **.csv:** Pode usar várias codificações; importante para troca de dados.
-- **.json:** Notação de Objetos JavaScript, para intercâmbio de dados.
-- **.yml:** YAML Não é Linguagem de Marcação, para serialização de dados.
+- **.json:** Notação de objetos JavaScript, para intercâmbio de dados.
+- **.yml:** YAML não é linguagem de marcação, para serialização de dados.
 - **.log:** Arquivos de log para registrar eventos, erros e atividades do sistema.
 - **.ini:** Arquivos de inicialização para configurações.
 - **.conf:** Arquivos de configuração, semelhantes aos .ini, usados por muitas aplicações.
