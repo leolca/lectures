@@ -87,11 +87,11 @@ scenarios.
 \pause
 
 3. Grammatical Errors:
-   - among / between
+   - `among` / `between`
 \pause
 
 4. Cross Word Boundary Errors:
-   - maybe / may be
+   - `maybe` / `may be`
 
 ---
 
@@ -134,11 +134,11 @@ Stefan  → S315, Price  → P620, Juiced → J230, Rubin  → R150
 
 ---
 
-![](blair-table1.png){ width=70% }
+![Letter score.](blair-table1.png){ width=70% }
 
 ---
 
-![](blair-table2.png){ width=70% }
+![Position score.](blair-table2.png){ width=70% }
 
 ---
 
@@ -178,9 +178,11 @@ Operations are expensive and language dependent: e.g. as of version 16.0, Unicod
 ---
 
 - **BK-Trees** (1973): Efficient search for near matches using Levenshtein distance.
-  - An arbitrary element $a$ is selected as root node.
+  - An arbitrary element $a$ is selected as root node, then as new elements are added, move to the child node where the absolute difference between the distance of the new element to the parent and the child node's distance to the parent is minimal. To insert a new node, find a leaf node or find that no child node's distance matches closely enough.
   - The k-th subtree is recursively built of all elements $b$ such that $d(a,b)=k$.
   - Search idea: restrict the exploration of the tree to nodes that can only improve the best candidate found so far (use triangle inequality).
+
+---
 
 ![Burkhard-Keller Tree.](bktree.png){ width=50% }
 
@@ -230,8 +232,6 @@ sim_j = \left\{
   0 & \text{if }m = 0\\
   \frac{1}{3}\left(\frac{m}{|s_1|} + \frac{m}{|s_2|} + \frac{m-t}{m}\right) & \text{otherwise} \end{array} \right.
 $$
-
-where:
 
   - $|s_i|$ is the length of the string $s_i$;
   - $m$ is the number of ''matching characters'' (see below);
@@ -424,7 +424,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
   - Metaphone Algorithm: Handles phonetic corrections by matching words that sound similar.\pause
   - Ispell's Near Miss Strategy:
     - Focuses on edit distance 1 to reduce the search space.
-    - Early Dictionary Filtering: Prunes invalid candidates during generation.
+    - Early dictionary filtering: Prunes invalid candidates during generation.
 
 ---
 
@@ -467,7 +467,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 
 - **Hunspell** (2002): Morphological analyzer with affix rules and phonetic matching.
 
-### Key Features:
+\small
 - Morphological Analysis:
   - Supports complex languages with rich morphology (e.g., Hungarian, Turkish, Finnish).
   - Handles word roots, prefixes, and suffixes using affix rules.
@@ -561,18 +561,6 @@ How to Write a Spelling Corrector: [https://norvig.com/spell-correct.html](https
   - Grammarly
   - Microsoft Editor
   - LanguageTool
-
----
-
-### **Lexical Similarity Metrics**
-1. **Levenshtein Distance** (Edit Distance):  
-   Minimal number of insertions, deletions, and replacements to transform one word into another.
-2. **Jaro Similarity**:  
-   Measures similarity based on matching characters and transpositions.
-3. **Keyboard Distance**:  
-   Considers physical proximity of keys.
-4. **Phonetic Matching**:  
-   Algorithms like Soundex and Metaphone to identify similar-sounding words.
 
 ---
 
