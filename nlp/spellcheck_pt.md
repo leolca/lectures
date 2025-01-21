@@ -224,7 +224,7 @@ As operações são caras e dependem da língua: por exemplo, a partir da versã
 - **Similaridade de Jaro** (1989)
 
 \small
-A similaridade de Jaro $sim_j$ de duas strings dadas $s_1$ e $s_2$ é
+A similaridade de Jaro $sim_j$ de duas *strings* dadas $s_1$ e $s_2$ é
 
 $$
 sim_j = \left\{
@@ -233,12 +233,12 @@ sim_j = \left\{
   \frac{1}{3}\left(\frac{m}{|s_1|} + \frac{m}{|s_2|} + \frac{m-t}{m}\right) & \text{otherwise} \end{array} \right.
 $$
 
-  - $|s_i|$ é o comprimento da string $s_i$;
+  - $|s_i|$ é o comprimento da *string* $s_i$;
   - $m$ é o número de ''caracteres correspondentes'' (veja abaixo);
   - $t$ é o número de ''transposições'' (veja abaixo).
 
 \pause
-A pontuação de similaridade de Jaro é 0 se as strings não corresponderem de forma alguma, e 1 se forem uma correspondência exata. Na primeira etapa, cada caractere de $s_1$ é comparado com todos os seus caracteres correspondentes em $s_2$. Dois caracteres de $s_1$ e $s_2$, respectivamente, são considerados **correspondentes** apenas se forem iguais e não estiverem a mais do que $\left\lfloor\frac{\max(|s_1|,|s_2|)}{2}\right\rfloor-1$ caracteres de distância.
+A pontuação de similaridade de Jaro é 0 se as *strings* não corresponderem de forma alguma, e 1 se forem uma correspondência exata. Na primeira etapa, cada caractere de $s_1$ é comparado com todos os seus caracteres correspondentes em $s_2$. Dois caracteres de $s_1$ e $s_2$, respectivamente, são considerados **correspondentes** apenas se forem iguais e não estiverem a mais do que $\left\lfloor\frac{\max(|s_1|,|s_2|)}{2}\right\rfloor-1$ caracteres de distância.
 **Transposição** é o número de caracteres correspondentes que não estão na ordem correta dividido por dois.
 
 ---
@@ -246,7 +246,7 @@ A pontuação de similaridade de Jaro é 0 se as strings não corresponderem de 
 - **Similaridade de Jaro-Winkler** (1990)
 
   - Introduz a modificação de Winkler.\pause
-  - Comprimento do prefixo $\ell$: se duas strings compartilham um prefixo comum, é provável que sejam mais semelhantes.\pause
+  - Comprimento do prefixo $\ell$: se duas *strings* compartilham um prefixo comum, é provável que sejam mais semelhantes.\pause
   - Fator de escala $p$: aumenta a pontuação de similaridade de Jaro com base no comprimento do prefixo comum (geralmente definido como 0,1 e não deve exceder 0,25).
 
 $$
@@ -278,7 +278,7 @@ $1-sim_j$: Este componente ajusta a contribuição do termo de similaridade do p
 
 Este modelo de canal ruidoso é uma forma de **inferência bayesiana**.
 
-Dentre todas as palavras possíveis no vocabulário $V$, queremos encontrar a palavra $\hat{w}$ tal que $P(w|x)$ seja a mais alta para uma dada string observada $x$.
+Dentre todas as palavras possíveis no vocabulário $V$, queremos encontrar a palavra $\hat{w}$ tal que $P(w|x)$ seja a mais alta para uma dada *string* observada $x$.
 
 $$
 \hat{w} = \argmax_{w \in V} P(w|x)
@@ -393,14 +393,14 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
 - **Modelo de canal Brill-Moore** (2000): Edições de *string* para *string*.
   - Seja $\Sigma$ um alfabeto, o modelo permite todas as operações de edição da forma $\alpha \rightarrow \beta$, onde $\alpha,\beta \in \Sigma^\ast$.\pause
   - $P(\alpha \rightarrow \beta)$ é a probabilidade de que, quando o usuário pretende digitar $\alpha$, ele digite $\beta$ em vez disso.\pause
-  - $P(\alpha \rightarrow \beta | PNS)$ é a probabilidade condicionada pela posição na string
+  - $P(\alpha \rightarrow \beta | PNS)$ é a probabilidade condicionada pela posição na *string*
     - P(e | a) não varia muito com a posição.
     - P(ent | ant) é altamente dependente da posição.
     - As pessoas raramente digitam *antler* como *entler*, mas frequentemente digitam *reluctant* como *reluctent*.
 
 ---
 
-![Alinhamento de String (Brill e Moore, 2000).](spellbrill.png){ width=50% }
+![Alinhamento de *String* (Brill e Moore, 2000).](spellbrill.png){ width=50% }
 
 [Brill, E. e Moore, R. C. (2000). *An Improved Error Model for Noisy Channel Spelling Correction*.](https://doi.org/10.3115/1075218.1075255)
 
@@ -524,7 +524,7 @@ How to Write a Spelling Corrector: [https://norvig.com/spell-correct.html](https
 
 ---
 
-  - Deleção: ponderada pela média das distâncias para os caracteres adjacentes na string.
+  - Deleção: ponderada pela média das distâncias para os caracteres adjacentes na *string*.
   - Inserção: inalterada, peso 1.
   - Substituição: ponderada de acordo com a distância entre o caractere que é removido e o caractere que é inserido.
   - Transposição: inalterada, peso 1.
