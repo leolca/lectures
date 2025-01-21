@@ -410,6 +410,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
     - P(e | a) does not vary greatly with position.
     - P(ent | ant) is highly dependent upon position.
     - People rarely mistype *antler* as *entler*, but often mistype *reluctant* as *reluctent*.
+  - It employs learned rules or transformations from a training corpus.
 
 ---
 

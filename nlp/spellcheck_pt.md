@@ -397,6 +397,7 @@ P(\text{versatile across whose})  &= .000021 \times .000006 = 1 \times 10^{-10}
     - P(e | a) não varia muito com a posição.
     - P(ent | ant) é altamente dependente da posição.
     - As pessoas raramente digitam *antler* como *entler*, mas frequentemente digitam *reluctant* como *reluctent*.
+  - Ele emprega regras ou transformações aprendidas de um corpus de treinamento.
 
 ---
 
