@@ -1,0 +1,465 @@
+\subsection{Teoria Algébrica da Codificação}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Teoria Algébrica da Codificação}
+
+  \begin{block}{Definição de Código}
+    Um código de comprimento $n$ sobre um alfabeto $\Sigma$, de tamanho $q = \vert \Sigma \vert$, é um subconjunto de $\Sigma^n$.
+  \end{block}
+
+  \begin{block}{Codificador}
+    Dado um código $C \subseteq \Sigma^n$ de tamanho $M = \vert C \vert$, um codificador é uma função $C$ que faz o seguinte mapeamento
+    \begin{equation}
+      C: \{1,2,\ldots,M\} \rightarrow \Sigma^n
+    \end{equation}
+  \end{block}
+
+  \begin{block}{Dimensionalidade de um código}
+    Dado um código $C \subseteq \Sigma^n$, sua dimensão é dada por
+    \begin{equation}
+      k \triangleq \log_q \vert C \vert .
+    \end{equation}
+  \end{block}
+
+  \begin{block}{Taxa de um código}
+    A taxa de um código com dimensionalidade $k$ é dada por
+    \begin{equation}
+      R \triangleq \frac{k}{n}
+    \end{equation}
+  \end{block}
+
+  \begin{block}{Código Linear}
+  Um código linear $C$ de dimensionalidade $k$ e tamanho de bloco $n$ sobre um corpo finito $\mathbf{F}$
+  é um subespaço $k$-dimensional de $\mathbf{F}^n$.
+  \end{block}
+
+  \begin{block}{Matriz Geradora}
+    A todo código linear $C \subseteq \mathbf{F}^n$ de dimensionalidade $k$ há a ele associada uma matriz geradora
+    $G \in \mathbf{F}^{n \times k}$ se 
+    \begin{equation} 
+      C = \text{Espaço-Coluna}(G) = \{G \cdot x: x \in \mathbf{F}^k\}.
+    \end{equation}
+  \end{block}
+  A matriz $G$ sempre poderá ser escrita na forma sistemática (permutando suas linhas).
+
+  \begin{block}{Matriz Verificação de Paridade}
+   Seja $C \subseteq \mathbf{F}^n$ um código linear de dimensionalidade $k$, a matriz $H \in \mathbf{F}^{n \times k}$
+   é a matriz verificação de paridade para $C$ se
+   \begin{equation}
+     C = \text{Núcleo}(H) = \{x \in \mathbf{F}^n: H\cdot x = 0\}.
+   \end{equation}
+  \end{block}
+
+  \begin{block}{Algumas propriedades}
+    Seja $C \subseteq \mathbf{F}^n$ um código linear de dimensionalidade $k$, matriz geradora $G$ e matriz verificadora de paridade $H$, teremos
+    \begin{itemize}
+      \item $H \cdot G = 0$
+      \item $C^{\perp}$ é o código linear dual com dimensionalidade $n-k$, matriz geradora $H^T$ e matriz verificadora de paridade $G^T$
+      \item a distância de $C$ é o peso mínimo de qualquer $c \in C$ não nulo
+      \item a distância de $C$ é o menor número $d$ tal que $H$ tenha $d$ colunas linearmente independentes
+    \end{itemize}
+  \end{block}
+
+  \framebreak
+  \begin{block}{Exemplo: código de paridade}
+    Considere o código de paridade $C_{\oplus}$. Dada uma mensagem $(x_1,x_2,x_3,x_4) \in \{0,1\}^4$, a palavra de código
+    a ela associada é
+    \begin{equation}
+    C_{\oplus}(x_1,x_2,x_3,x_4) = (x_1,x_2,x_3,x_4, x_1 \oplus x_2 \oplus x_3 \oplus x_4)
+    \end{equation}
+    onde utilizamos $\oplus$ para expressar o XOR (ou soma modulo 2).
+
+    Para este código temos $n=5$, $q=2$, $k=\log_2 \vert C \vert = \log_2 16 = 4$, $R=4/5$.
+    Este código de comprimento $n$ possui $n-k$ bits de redundância e $k$ bits de informação.
+
+    \noindent\begin{minipage}{.5\linewidth}
+      \begin{equation}
+        G =
+        \begin{pmatrix}
+          1 & 0 & 0 & 0 \\
+          0 & 1 & 0 & 0 \\
+          0 & 0 & 1 & 0 \\
+          0 & 0 & 0 & 1 \\
+          1 & 1 & 1 & 1 
+        \end{pmatrix}
+      \end{equation}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \begin{equation}
+        H =
+        \begin{pmatrix}
+          1 & 1 & 1 & 1 & 1
+        \end{pmatrix}
+      \end{equation}
+    \end{minipage}
+  \end{block}
+  Existe uma relação de compromisso entre a quantidade de redundância e o número de
+  erros que cada um desses códigos pode corrigir.
+  Uma maneira natural de definir redundância para um código com dimensão $k$ e comprimento de bloco $n$ 
+  é por sua diferença $n-k$.
+
+  \framebreak
+  \begin{block}{Código de repetição 3}
+    Considere o código de repetição $C_{3,\text{rep}}$ para o qual, dada uma mensagem $(x_1,x_2,x_3,x_4) \in \{0,1\}^4$,
+    a palavra de código associada é
+    \begin{equation}
+      C_{3,\text{rep}}(x_1,x_2,x_3,x_4) = (x_1,x_1,x_1,x_2,x_2,x_2,x_3,x_3,x_3,x_4,x_4,x_4).
+    \end{equation}
+    Para este código $n=12$, $q=2$, $k=4$, $R=4/12=1/3$.
+
+    \noindent\begin{minipage}{.5\linewidth}
+      \scriptsize
+      \begin{equation}
+        G =
+        \begin{pmatrix}
+          1 & 0 & 0 & 0 \\
+          1 & 0 & 0 & 0 \\
+          1 & 0 & 0 & 0 \\
+          0 & 1 & 0 & 0 \\
+          0 & 1 & 0 & 0 \\
+          0 & 1 & 0 & 0 \\
+          0 & 0 & 1 & 0 \\
+          0 & 0 & 1 & 0 \\
+          0 & 0 & 1 & 0 \\
+          0 & 0 & 0 & 1 \\
+          0 & 0 & 0 & 1 \\
+          0 & 0 & 0 & 1 
+        \end{pmatrix}
+      \end{equation}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \scriptsize
+      \begin{equation}
+        H =
+        \begin{pmatrix}
+          1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+          0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+          0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+          0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 
+        \end{pmatrix}
+      \end{equation}
+
+      Podemos observar que $H = G^{T}$.
+    \end{minipage}
+  \end{block}
+
+
+  \begin{block}{Distância}
+    A distância de Hamming entre dois vetores $u, v \in \Sigma^n$ é denotada $\Delta(u,v)$ e a distância de Hamming relativa é $\delta(u,v) = \frac{1}{n} \Delta(u,v)$.
+
+    \vspace{3ex}
+    A distância (mínima) de um código é definida como
+    \begin{equation}
+      \Delta(C) \triangleq \min_{c_1 \neq c_2 \in C} \Delta(c_1,c_2),
+    \end{equation}
+    e a distância (mínima) relativa de um código é
+    \begin{equation}
+      \delta(C) \triangleq \min_{c_1 \neq c_2 \in C} \delta(c_1,c_2).
+    \end{equation}
+  \end{block}
+  Para os exemplos dados anteriormente temos:
+  $\Delta(C_{3,\text{rep}}) = 3$ e $\Delta(C_{\oplus}) = 2$.
+
+  \framebreak
+  \begin{block}{Distância, detecção e correção de erros}
+    Dado um código $C$ com distância mínima $d \geq 2$,
+    \begin{itemize}
+      \item $C$ pode corrigir $\lfloor (d-1)/2 \rfloor$ erros.
+      \item $C$ é capaz de detectar $d-1$ erros (basta verificar se $y$ recebido é uma palavra válida de $C$).
+      \item $C$ é capaz de corrigir $d-1$ apagamentos.
+    \end{itemize}
+    A demonstração pode ser vista em \cite{guruswami2023} ou \cite{roth2006}.
+  \end{block}
+  %Para os exemplos dados anteriormente temos:
+  %$C_{3,\text{rep}}$ pode corrigir 1 erro e $C_{\oplus}$ pode detectar 1 erro, mas não corrigir.
+
+
+  \noindent\begin{minipage}{.5\linewidth}
+    \includegraphics[width=0.4\textwidth]{correrro/rep3code.pdf}
+
+    $C_{3,\text{rep}}$ pode corrigir 1 erro.
+  \end{minipage}%
+  \begin{minipage}{.5\linewidth}
+    \includegraphics[width=0.5\textwidth]{correrro/opluscode.pdf}
+
+    $C_{\oplus}$ pode detectar 1 erro, mas não corrigir.
+  \end{minipage}
+ 
+
+  \framebreak
+
+  \begin{block}{$C$ pode corrigir $\lfloor (d-1)/2 \rfloor$ erros}
+    Para um código $[n,k,d]_\Sigma$ existe um decodificador $\mathcal{D}: \Sigma^n \rightarrow C$ 
+    capaz de recuperar corretamente qualquer padrão com até $\lfloor (d-1)/2 \rfloor$ erros para
+    qualquer canal $(\Sigma, p(y|x), \Sigma)$. 
+  \end{block}
+
+  \framebreak
+  \begin{block}{demonstração}
+    Considere $\mathcal{D}$ o decodificador da palavra mais próxima, $\mathcal{D}(y)$ é a palavra
+    de código em $C$ mais próxima de $y$ (com respeito à distância de Hamming). Seja $x$ e $y$ a
+    palavra transmitida e recebida, respectivamente, onde $d(y,x) \leq (d-1)/2$. Suponha, para contradição,
+    que $x' = \mathcal{D}(y) \neq x$. Pela forma como $\mathcal{D}$ é definida,
+    \begin{equation}
+      d(y,x') \leq d(y,x) \leq (d-1)/2.
+    \end{equation}
+    Pela desigualdade trianular,
+    \begin{equation}
+      d \leq d(x,x') \leq d(y,x) + d(y,x') \leq d-1,
+    \end{equation}
+    o que é uma contradição. $\square$
+  \end{block}
+  \begin{center}
+    \includegraphics[width=0.35\textwidth]{correrro/xyxd.png}
+  \end{center}
+
+  \framebreak
+
+  \begin{block}{Hamming Ball}
+    Para todo vetor $\mathbf{x} \in [q]^n$,
+    \begin{equation}
+      B(\mathbf{x},e) = \{\mathbf{y} \in [q]^n | \Delta(\mathbf{x},\mathbf{y}) \leq e \}.
+    \end{equation}
+    Esta é a definição da esfera de Hamming de raio $e$ centrada em $\mathbf{x}$, ou seja, o conjunto de todos
+    vetores em $[q]^n$ que se distam no máximo de $e$ do vetor $\mathbf{x}$.
+  \end{block}
+  
+  \begin{block}{Teorema do limite de Hamming (para $d=3$)}
+    Todo código binário com tamanho de bloco $n$, dimensão $k$ e distância $d=3$ deve satisfazer
+    \begin{equation}
+      k \leq n - \log_2 (n+1) .
+    \end{equation}
+  \end{block}
+  
+  \framebreak
+  Um código $C \subseteq \Sigma^n$ com dimensão $k$ e distância $d$ será chamado de código $(n,k,d)_{\Sigma}$.
+  \begin{block}{Teorema do limite de Hamming generalizado}
+    Para todo código $(n,k,d)_{\Sigma}$
+    \begin{equation}
+      k \leq n - \log_q \left( \sum_{i=0}^{\lfloor \frac{(d-1)}{2} \rfloor} {n \choose i} (q-1)^i \right).
+    \end{equation}
+  \end{block}
+  A partir deste teorema podemos mostrar que um código com distância $d$ terá taxa limitada por
+  \begin{equation}
+    R \leq 1 - \frac{\log_q \left( \sum_{i=0}^{e} {n \choose i} (q-1)^i \right)}{n}
+  \end{equation}
+  onde utilizamos a definição $e = \lfloor \frac{(d-1)}{2} \rfloor$.
+  
+  \begin{block}{Teorema: tamanho do corpo}
+    Todo corpo possui tamanho $p^s$ para algum primo $p$ e inteiro $s \geq 1$.
+    Por outro lado, para cada primo $p$ e inteiro $s \geq 1$ existe um corpo finito $\mathbb{F}$ de tamanho $p^s$.
+  \end{block}
+
+  \begin{block}{Lemma}
+    Seja $p$ um primo, então $\mathbb{F}_p = (\{0,1,\ldots,p-1\}, +_p, \cdot_p)$ é um corpo, onde $+_p$ e $\cdot_p$ são
+    adição e multiplicação módulo $p$.
+  \end{block}
+
+  \begin{block}{Teorema}
+  Para cada potência de primo $q$, existe um único campo finito com $q$ elementos, desconsiderando isomorfismos.
+  \end{block}
+
+  \begin{block}{Definição de posto de uma matriz}
+    O posto de uma matriz em $\mathbb{F}_q^{k \times k}$ é o número máximo de linhas (ou colunas) linearmente independentes.
+    Uma matriz em $\mathbb{F}_q^{k \times n}$ com posto $\min(k,n)$ é dita matriz de posto cheio.
+  \end{block}
+
+  \begin{block}{Teorema}
+    \small
+    Se $S \subseteq \mathbb{F}_q^n$ é um subespaço linear então
+    \begin{enumerate}
+      \item $\vert S \vert = q^k$ para algum $k \geq 0$ ($k$ é chamado dimensionalidade de $S$.
+      \item Existe ao menos um conjunto de vetores linearmente independentes $\mathbf{v_1},\ldots,\mathbf{v_k} \in S$, chamado elementos de base,
+        tal que para qualquer $\mathbf{x} \in S$ podemos expressá-lo como $\mathbf{x} = a_1 \mathbf{v_1} + \ldots + a_k \mathbf{v_k}$ com
+        $a_i \in \mathbb{F}_q$ para $1 \leq i \leq k$. Em outras palavras, existe uma matriz $k \times n$ de posto cheio $G$ (conhecida como matriz geradora)
+        com valores em $\mathbb{F}_q$ tal que para todos $\mathbf{x} \in S$, $\mathbf{x} = (a_1,\ldots,a_k) \cdot G$, onde
+        \begin{equation}
+          G = \begin{pmatrix}
+            \mathbf{v_1} \\
+            \vdots \\
+            \mathbf{v_k}
+          \end{pmatrix}.
+        \end{equation}
+      \item Existe uma matriz $(n-k) \times n$ de posto cheio $H$ (chamada matriz de verificação de paridade) tal que para todo $\mathbf{x} \in S$, $H \mathbf{x}^T = 0$.
+      \item $G$ e $H$ são ortogonais, isto é, $G \cdot H^T = 0$.
+    \end{enumerate}
+  \end{block}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Código Linear} 
+  Seja $q$ uma potência de um primo (i.e. $q=p^s$ para algum primo $p$ e inteiro $s\geq 1$),
+  $C \subseteq \mathbb{F}^n_q$ é um código linear se ele for um subespaço linear de $\mathbb{F}^n_q$.
+  Se $C$ possui dimensionalidade $k$ e distância $d$, então será chamado de um código $[n,k,d]_q$ ou apenas
+  um código $[n,k]_q$.
+
+  \vspace{3ex}
+  Se $C$ é um código linear $[n,k]_q$ então existe uma matriz $G \in \mathbb{F}^{k \times n}_q$ de posto $k$ satisfazendo
+  \begin{equation}
+    C = \{ x \cdot G | x \in \mathbb{F}^k_q \}.
+  \end{equation}
+  $G$ é chamada matriz geradora de $C$. Em outras palavras, o código $C$ é o conjunto de todas possíveis combinações lineares das linhas de $G$.
+
+  Se $C$ é um código linear $[n,k]_q$ então exite matriz $H \in \mathbb{F}^{(n-k) \times n}_q$ de posto $n-k$ satisfazendo
+  \begin{equation}
+    C = \{y \in \mathbb{F}^n_q | H \cdot y^T = 0\}.
+  \end{equation}
+  $H$ é a matriz verificadora de paridade de $C$.
+
+
+  \framebreak
+  \begin{block}{Relação entre peso e distância em um código linear}
+    Para todo código $[n,k,d]_q$ $C$ temos
+    \begin{equation}
+      d = \min_{c\in C, c \neq 0} wt(c),
+    \end{equation}
+    onde $wt(c)$ representa o peso da palavra de código $c$.
+  \end{block}
+
+  \begin{block}{Relação entre distância e colunas de $H$}
+    Para todo código $[n,k,d]_q$ $C$ com matriz de paridade $H$, $d$ é igual ao tamanho do menor subconjunto das colunas de $H$ que são linearmente independentes.
+  \end{block}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks,fragile]
+  \frametitle{Código de Hamming}
+  Para um inteiro positivo qualquer $r$, defina a matriz $H_r \in \mathbb{F}_2^{r \times (2^r-1)}$ como a matriz $r \times (2^r-1)$ cuja $i$-ésima coluna
+  $h^i_r$ é a representação binária de $i$, para $1 \leq i \leq 2^r-1$. (Note que $h^i_r$ é um vetor em $\{0,1\}^r$.)
+
+  O código de Hamming $[2^r-1,2^r-r-1]_2$ denotado $C_{H,r}$ é o código com matriz verificadora de paridade $H_r$.
+
+  \vspace{3ex}
+  Exemplo ($r=3$)
+  \begin{equation}
+    H_3 =
+    \begin{pmatrix}
+      0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+      0 & 1 & 1 & 0 & 0 & 1 & 1 \\
+      1 & 0 & 1 & 0 & 1 & 0 & 1
+    \end{pmatrix}
+  \end{equation}
+
+  \framebreak
+  \begin{block}{Código de Hamming possui distância $d=3$}
+    O código de Hamming $[2^r-1,2^r-r-1]_2$ possui distância $d=3$.
+
+    Duas colunas quaisquer de $H_r$ não são linearmente dependentes. Se fossem, poderíamos ter $H^i_r + H^j_r = 0$, mas isto é impossível já que são
+    representações binárias de inteiros $i\neq j$ e diferem em ao menos um bit. Então teremos $d \geq 3$, já que $d$ deve ser o tamanho 
+    do menor subconjunto de colunas de $H$ linearmente dependentes. Por outro lado, $d \leq 3$, já que $H^1_r + H^2_r + H^3_r = 0$.
+  \end{block}
+
+  \framebreak
+  Para uma palavra recebida $y$, teremos $H_r \cdot y^T = 0$, se não houver erro.
+  Caso contrário, $y=c+e_i$, onde $c \in C$ e $e_i$ é o vetor com erro apenas na posição $i$.
+  \begin{equation}
+    H_r \cdot y^T = H_r \cdot c^T + H_r \cdot e_i^T = H_r \cdot e_i^T = H_r^i,
+  \end{equation}
+  onde $H_r^i$ é a $i$-ésima coluna de $H_r$, que é a representação binária do inteiro $i$.
+
+  \framebreak
+  \begin{block}{Algoritmo eficiente para decodificação do código de Hamming}
+    \begin{lstlisting}
+    Input: palavra recebida y
+    Output: c if dist(y,c) <= 1$ else Fail
+
+    b = H_r * y'
+    i = bin2dec(b)
+    x = y - e_i
+    if x in C_H then
+      return x
+    return Fail
+    \end{lstlisting}
+  \end{block}
+  Este algoritmo pode ser executado em $O(n \log n)$.
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Código Linear Dual}
+  Seja $H$ a matriz verificadora de paridade de um código linear $C$, então o código gerado por $H$ é chamado código dual de $C$ e denotado por $C^\perp$.
+
+  \vspace{3ex}
+  Para inteiro positivo $r$ 
+  \begin{itemize}  
+    \item o código simplex $C_{sim,r}$ é o código gerado por $H_r$ ($C_{sim,r} = C_{H,r}^\perp$);
+    \item o código Hadamard $C_{Had,r}$ é o código $[2^r,r]_2$ gerado pela matriz $r \times 2^r$ $H'_r$ obtida pela adição da coluna nula em $H_r$.
+  \end{itemize}
+
+  Os códigos $C_{sim,r}$ e $C_{Had,r}$ possuem distância $2^{r-1}$.
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{O que é possível?}
+  Existe uma relação de compromisso entre taxa $R$ e distância relativa $\delta$.
+  \begin{itemize}
+    \item Por um lado, queremos maximizar $R$ (que $R$ seja tão próxima de 1 quão possível).\\
+    \begin{small}Note que uma taxa $R=1$ implicaria não inserir redundâncias e assim não ser possível identificar e corrigir erros.\end{small}
+    \item Por outro lado, queremos fazer a distância relativa maior possível (tão próxima de 1 quão possível).
+    \begin{footnotesize}No limite, $\delta = 1$, não teremos bits de dados no código e assim a taxa seria nula.\end{footnotesize}
+  \end{itemize}
+  Para abordar o que é possível atingir em relação a $R$ e $\delta$ temos algumas desigualdades importantes. Que veremos a seguir.
+
+  \framebreak
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{correrro/R-vs-delta.pdf}
+  \caption{Os limites na taxa $R$ vs. distância relativa $\delta$ para códigos binários. O limite GV é um limite inferior em $R$ enquanto os outros três limites são limites superiores em $R$ \citep{guruswami2023}.}\label{fig-R-vs-delta}
+  \end{figure}
+
+  \framebreak
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.85\textwidth]{correrro/R-vs-delta-singleton.png}
+  \caption{Os limites na taxa $R$ vs. distância relativa $\delta$ para códigos binários. O limite Singleton é o único que independe de $q$ \citep{wootters2021}.}\label{fig-R-vs-delta-singleton}
+  \end{figure}
+
+  \framebreak
+  \begin{block}{Entropia $q$-ária}
+    Seja $q$ um inteiro e $p$ um número real, tais que $q \geq 2$ e $0 \leq p \leq 1$, então a função entropia $q$-ária é definida como
+    \begin{equation}
+      H_q(p) = p \log_q (q-1) - p \log_q (p) - (1-p) \log_q (1-p).
+    \end{equation}
+  \end{block}
+
+  \framebreak
+
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{correrro/Hq.pdf}
+    \caption{$H_q(p)$ para $q=2,3 \text{e} 4$. O máximo é atingido em $p=1-1/q$ \citep{guruswami2023}.}\label{fig-Hq}
+    \end{figure}
+
+  \framebreak
+  \begin{block}{Limites na relação $R$ vs $\delta$}
+    \begin{description}
+      \item[Limite de Hamming assintótico]
+        \begin{equation}
+          R \leq 1 - H_q\left( \frac{\delta}{2} \right).
+        \end{equation}
+      \item[Limite de Gilbert-Varshamov]
+        \begin{equation}
+          R \geq 1 - H_q(\delta)
+        \end{equation}
+      \item[Limite Singleton]
+        \begin{equation}
+          k \leq n - d + 1.
+        \end{equation}
+      \item[Limite Plotkin]
+        \begin{equation}
+          R \leq 1 - \left( \frac{q}{q-1} \right) \delta.
+        \end{equation}
+    \end{description}
+
+    As demonstrações podem ser vistas em \cite{guruswami2023}.
+  \end{block}
+\end{frame}
+
+
+%% /ms/downloads/library/information_theory/GuruswamiRudraSudan_Essential_Coding_Theory.pdf
+%% /ms/downloads/library/information_theory/CostelloDanielLinShu_Error_control_coding_fundamentals_and_applications.djvu
+%% /ms/downloads/library/information_theory/RonRoth_Introduction_to_coding_theory.pdf

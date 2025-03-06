@@ -1,0 +1,92 @@
+```{r, echo=FALSE, results="hide"}
+#set.seed(123)  # Para tornar os resultados reproduzíveis (opcional)
+m <- sample(0:9, 9, replace = TRUE)
+
+P <- matrix(m + 1, nrow = 3, byrow = TRUE)
+k <- sum(P)
+P <- P / k
+PX <- rowSums(P)
+PY <- colSums(P)
+HX <- -sum(PX * log2(PX))
+HY <- -sum(PY * log2(PY))
+HXY <- -sum(P * log2(P))
+H_X_given_Y <- HXY - HY
+I_XY <- HX - H_X_given_Y
+
+```
+
+Question
+========
+Considere a seguinte distribuição conjunta de probabilidade para as variáveis aleatórias $X$ e $Y$, onde os valores são derivados a partir da matrícula do aluno.
+
+Dado o número `r paste(m, collapse="")` com dígitos $m1, m2, \ldots, m9$, construa a seguinte matriz de probabilidade conjunta $P(X,Y)$:
+\[
+P(X, Y) = \begin{bmatrix}
+\frac{m1 + 1}{k} & \frac{m2 + 1}{k} & \frac{m3 + 1}{k} \\
+\frac{m4 + 1}{k} & \frac{m5 + 1}{k} & \frac{m6 + 1}{k} \\
+\frac{m7 + 1}{k} & \frac{m8 + 1}{k} & \frac{m9 + 1}{k}
+\end{bmatrix},
+\]
+onde $m1, m2, \ldots, m9$ são os nove dígitos da matrícula e $k$ é a soma dos nove elementos de $P(X,Y)$ para garantir que a soma das probabilidades seja 1.
+
+Answerlist
+---------------
+* Calcule a entropia $H(X)$.
+* Calcule a entropia $H(Y)$.
+* Calcule a entropia conjunta $H(X, Y)$.
+* Calcule a entropia condicional $H(X|Y)$.
+* Calcule a informação mútua $I(X;Y)$.
+
+
+Solution
+========
+**Passo 1: Distribuição conjunta $P(X, Y)$**
+
+O número aleatório de 9 dígitos define os valores para a matriz de probabilidades. 
+Usamos os dígitos de `r m` para formar a matriz $P(X,Y)$ e a soma dos valores para normalizar:
+
+`r P`
+
+**Passo 2: Calcular as distribuições marginais $P(X)$ e $P(Y)$**
+As marginais são calculadas somando as linhas e colunas da matriz $P(X, Y)$.
+
+`r PX`
+
+`r PY`
+
+**Passo 3: Calcular a entropia $H(X)$ e $H(Y)$**
+
+`r HX`
+
+`r HY`
+
+**Passo 4: Calcular a entropia conjunta $H(X, Y)$**
+
+`r HXY`
+
+**Passo 5: Calcular a entropia condicional $H(X|Y)$**
+
+`r H_X_given_Y`
+
+**Passo 6: Calcular a informação mútua $I(X; Y)$**
+
+`r I_XY`
+
+
+Answerlist
+----------
+* $H(X) = `r round(HX, 2)`$ bits
+* $H(Y) = `r round(HY, 2)`$ bits
+* $H(X, Y) = `r round(HXY, 2)`$ bits
+* $H(X|Y) = `r round(H_X_given_Y, 2)`$ bits
+* $I(X; Y) = `r round(I_XY, 2)`$ bits
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num|num|num
+exsolution: `r fmt(HX)`|`r fmt(HY)`|`r fmt(HXY)`|`r fmt(H_X_given_Y)`|`r fmt(I_XY)`
+exname: entropia-rand
+extol: 0.01
+expoints: 1|1|1|1|1
+

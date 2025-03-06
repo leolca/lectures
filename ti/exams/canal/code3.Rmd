@@ -1,0 +1,249 @@
+```{r data generation, echo = FALSE, results = "hide"}
+# código Golay ternário
+set.seed(123)
+
+# Generator matrix G for Ternary Golay Code
+G <- matrix(c(
+  1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+  0, 1, 0, 0, 0, 0, 1, 1, 2, 2, 2, 0,
+  0, 0, 1, 0, 0, 0, 1, 2, 1, 0, 2, 2,
+  0, 0, 0, 1, 0, 0, 2, 1, 0, 1, 2, 2,
+  0, 0, 0, 0, 1, 0, 2, 0, 1, 2, 1, 1,
+  0, 0, 0, 0, 0, 1, 0, 2, 2, 1, 1, 1
+), nrow = 6, byrow = TRUE)
+
+# Parity-check matrix H for Ternary Golay Code
+H <- matrix(c(
+  2, 2, 2, 1, 1, 0, 1, 0, 0, 0, 0,
+  2, 2, 1, 2, 0, 1, 0, 1, 0, 0, 0,
+  2, 1, 2, 0, 2, 1, 0, 0, 1, 0, 0,
+  2, 1, 0, 2, 1, 2, 0, 0, 0, 1, 0,
+  2, 0, 1, 1, 2, 2, 0, 0, 0, 0, 1
+), nrow = 5, byrow = TRUE)
+
+# Function to calculate the syndrome
+calculate_syndrome <- function(r, H, m) {
+  s <- (r %*% H) %% m
+  return(s)
+}
+
+# Function to introduce an error at a random position
+introduce_error <- function(u, m) {
+  r <- u
+  position <- sample(1:length(u), 1)
+  r[position] <- (r[position] + sample(1:2, 1)) %% m
+  return(r)
+}
+
+# Function to correct the received vector
+correct_error <- function(r, H, m) {
+  s <- calculate_syndrome(r, H, m)
+
+  if (all(s == 0)) {
+    cat("No error detected.\n")
+    return(r)
+  }
+
+  # Find matching column in H
+  for (i in 1:ncol(H)) {
+    if (all(s == H[, i])) {
+      cat("Error detected at position", i, "\n")
+      r[i] <- (r[i] + 1) %% m
+      return(r)
+    }
+  }
+
+  cat("Syndrome does not match any column, more complex error.\n")
+  return(r)
+}
+
+x <- c(1, 0, 2, 1, 0, 2)
+u <- (x %*% G) %% 3
+
+# Introduce an error
+r <- introduce_error(u, 3)
+cat("Received vector with error:", r, "\n")
+
+# Calculate syndrome
+s <- calculate_syndrome(r, H, 3)
+cat("Syndrome:", s, "\n")
+
+# Correct the error
+corrected_r <- correct_error(r, H, 3)
+cat("Corrected vector:", corrected_r, "\n")
+
+
+
+
+G <- matrix(c(
+  1, 1, 1, 1, 1, 1, 1, 1,
+  1, 0, 1, 0, 1, 0, 1, 0,
+  1, 1, 0, 0, 1, 1, 0, 0,
+  1, 1, 1, 1, 0, 0, 0, 0,
+  1, 0, 0, 0, 1, 0, 0, 0,
+  1, 0, 1, 0, 0, 0, 0, 0,
+  1, 1, 0, 0, 0, 0, 0, 0
+), nrow = 7, byrow = TRUE)
+
+
+G <- matrix(c(
+  1, 0, 0, 0, 0, 0, 0, 0,
+  0, 1, 0, 0, 0, 0, 0, 0,
+  0, 0, 1, 0, 0, 0, 0, 0,
+  0, 0, 0, 1, 0, 0, 0, 0,
+  0, 0, 0, 0, 1, 0, 0, 0,
+  0, 0, 0, 0, 0, 1, 0, 0,
+  0, 0, 0, 0, 0, 0, 1, 1,
+  0, 0, 0, 0, 1, 1, 1, 0,
+  0, 0, 0, 1, 1, 0, 1, 0,
+  0, 0, 1, 1, 0, 1, 1, 1,
+  0, 1, 1, 0, 1, 1, 1, 1,
+  1, 1, 1, 1, 1, 1, 1, 1
+), nrow = 12, byrow = TRUE)
+
+P <- matrix(c(
+  0, 0, 0, 0, 1, 1, 1,
+  1, 0, 1, 0, 1, 1, 1,
+  1, 1, 1, 1, 1, 1, 1
+), nrow = 7, byrow = TRUE)
+
+G <- cbind(diag(7), P)
+H <- rbind(t(P), diag(7))
+
+x <- sample(0:1, 7, replace = TRUE)
+u <- (x %*% G) %% 2
+
+# Introduce an error
+r <- introduce_error(u, 2)
+cat("Received vector with error:", r, "\n")
+
+# Calculate syndrome
+s <- calculate_syndrome(r, H, 2)
+cat("Syndrome:", s, "\n")
+
+# Correct the error
+corrected_r <- correct_error(r, H, 2)
+cat("Corrected vector:", corrected_r, "\n")
+
+
+
+
+
+
+
+
+
+
+
+i <- sample(1:6, 1)
+H <- matrix(c(
+  1, 1, 1, 0, 0, 0,
+  0, 1, 2, 1, 0, 0,
+  2, 0, 1, 0, 1, 0,
+  0, 2, 0, 0, 0, 1
+), nrow = 4, byrow = TRUE)
+
+e <- rep(0, 6)
+e[i] <- sample(1:2, 1)
+r <- (u + e) %% 3
+s <- (H %*% matrix(r, ncol = 1)) %% 3
+
+cat("Vetor de código recebido:", r, "\n")
+cat("Síndrome calculada:", s, "\n")
+cat("Posição do erro sorteada:", i, "\n")
+```
+
+Question
+========
+
+Imagine um código de correção de erro em um campo com 3 elementos \({0, 1, 2}\).
+Este código possui três símbolos de verificação de paridade e a matriz de
+verificação de paridade \(H\) é dada por:
+
+\[
+H = \begin{pmatrix}
+0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 2 & 2 & 2 \\
+1 & 0 & 1 & 2 & 0 & 1 & 2 & 0 & 1 & 2 & 0 & 1 & 2
+\end{pmatrix}
+\]
+
+Considerando essa matriz, responda as seguintes questões:
+
+1. **Síndromes de Erro:**
+
+   Dado um vetor de código recebido \(r = (r_1, r_2, \ldots, r_{13})\), a
+   síndrome \(s\) é calculada como \(s = Hr^T\). Se \(r = (0, 1, 2, 0, 1, 2, 1,
+   0, 1, 0, 2, 1, 0)\), qual é a síndrome \(s\) associada?
+
+2. **Identificação de Erro:**
+
+   Se um erro ocorre na posição \(i\), a síndrome resultante \(s\) pode ser
+   usada para identificar a posição do erro. Considerando que a síndrome \(s\)
+   é \((1, 0, 2)\), qual a posição do erro no vetor de código?
+
+3. **Correção de Erro:**
+
+   Após identificar a posição do erro, corrija o vetor de código \(r\). Se o
+   vetor de código recebido é \(r = (0, 1, 2, 0, 1, 2, 1, 0, 1, 0, 2, 1, 0)\) e
+   a posição do erro é 5, qual é o vetor de código corrigido?
+
+Answerlist
+---------------
+* (1, 0, 2)
+* Posição 5
+* (0, 1, 2, 0, 0, 2, 1, 0, 1, 0, 2, 1, 0)
+
+Solution
+========
+Para resolver as questões acima, seguimos os seguintes passos:
+
+1. **Síndrome de Erro:**
+
+   Calculamos a síndrome \( s \) multiplicando \( H \) pelo vetor de código transposto \( r^T \):
+
+   \[
+   s = H \cdot r^T \mod 3
+   \]
+
+   Para \( r = (0, 1, 2, 0, 1, 2, 1, 0, 1, 0, 2, 1, 0) \):
+
+   \[
+   s = \begin{pmatrix}
+   0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+   0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 2 & 2 & 2 \\
+   1 & 0 & 1 & 2 & 0 & 1 & 2 & 0 & 1 & 2 & 0 & 1 & 2
+   \end{pmatrix}
+   \cdot
+   \begin{pmatrix}
+   0 \\ 1 \\ 2 \\ 0 \\ 1 \\ 2 \\ 1 \\ 0 \\ 1 \\ 0 \\ 2 \\ 1 \\ 0
+   \end{pmatrix}
+   \mod 3
+   \]
+
+   A síndrome calculada é \( s = (1, 0, 2) \).
+
+2. **Identificação de Erro:**
+
+   Usamos a síndrome \( s \) para identificar a posição do erro. Para \( s = (1, 0, 2) \), a posição do erro é 5.
+
+3. **Correção de Erro:**
+
+   Corrigimos o vetor de código invertendo o erro na posição identificada. O vetor de código corrigido é:
+
+   \[
+   r = (0, 1, 2, 0, 0, 2, 1, 0, 1, 0, 2, 1, 0)
+   \]
+
+Meta-information
+================
+extype: cloze
+exclozetype: num
+exsolution: 101
+exname: Código de Correção de Erro
+extol: 0.01
+expoints: 1
+
+### Respostas Aleatórias
+
+
